@@ -1,133 +1,123 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, CheckCircle2, Play } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Zap } from "lucide-react";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-background overflow-hidden">
-      {/* Animated gradient orbs */}
-      <div className="absolute top-20 right-1/4 w-[500px] h-[500px] bg-primary/30 rounded-full blur-[150px] animate-glow-pulse" />
-      <div className="absolute bottom-20 left-1/4 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[150px] animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
-      
-      {/* Subtle grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_80%)]" />
+    <section className="relative bg-background">
+      {/* Navigation */}
+      <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="text-xl font-bold">LinkedIn<span className="text-primary">Operator</span></div>
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Results</a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+              <Button variant="default" size="sm">Get Started</Button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-      <div className="container relative mx-auto px-6 pt-20 pb-16">
-        {/* Centered Content Layout */}
-        <div className="max-w-5xl mx-auto text-center space-y-12 animate-fade-in">
+      {/* Hero Content */}
+      <div className="container mx-auto px-6 py-24">
+        <div className="max-w-6xl mx-auto">
           
-          {/* Top Badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">The Center of LinkedIn Education</span>
-          </div>
-
-          {/* Main Headline - Larger and More Impactful */}
-          <div className="space-y-6">
-            <h1 className="text-6xl md:text-8xl font-bold leading-[1.05] tracking-tight">
-              Building the Best
-              <br />
-              <span className="text-gradient glow-text">
-                Business Model
-              </span>
-              <br />
-              of 2026
-            </h1>
-            <p className="text-2xl md:text-3xl text-muted-foreground max-w-3xl mx-auto font-light">
-              Start, scale, and dominate with your own LinkedIn Agency
-            </p>
-          </div>
-
-          {/* Social Proof Stats - Horizontal */}
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 pt-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <CheckCircle2 className="w-6 h-6 text-primary" />
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+            
+            {/* Left: Text Content */}
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 w-fit">
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-sm font-medium text-foreground">Proven System for 2026</span>
               </div>
-              <div className="text-left">
-                <p className="text-3xl font-bold">30M+</p>
-                <p className="text-sm text-muted-foreground">Organic Views</p>
+
+              <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                Build a Six-Figure
+                <br />
+                <span className="text-primary">LinkedIn Agency</span>
+              </h1>
+
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                The complete framework to start, scale, and run a profitable LinkedIn agency—from zero to consistent high-ticket clients.
+              </p>
+
+              {/* Stats Row */}
+              <div className="grid grid-cols-3 gap-6 py-6 border-y border-border/50">
+                <div>
+                  <div className="text-2xl font-bold text-foreground">30M+</div>
+                  <div className="text-sm text-muted-foreground">Organic Views</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground">2,500+</div>
+                  <div className="text-sm text-muted-foreground">Meetings Booked</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-foreground">6-Fig</div>
+                  <div className="text-sm text-muted-foreground">Revenue Scale</div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button size="lg" className="group">
+                  Start Your Agency
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                <Button variant="outline" size="lg">
+                  View Case Studies
+                </Button>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <CheckCircle2 className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-left">
-                <p className="text-3xl font-bold">2,500+</p>
-                <p className="text-sm text-muted-foreground">B2B Meetings</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <CheckCircle2 className="w-6 h-6 text-primary" />
-              </div>
-              <div className="text-left">
-                <p className="text-3xl font-bold">6-Fig</p>
-                <p className="text-sm text-muted-foreground">Agencies Built</p>
-              </div>
-            </div>
-          </div>
 
-          {/* Value Prop */}
-          <p className="text-lg md:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            We used the <span className="text-primary font-semibold">LinkedIn Secrets</span> to generate 30M+ organic views, book 2,500+ high-ticket meetings, and build multiple 6-figure agencies from zero.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-            <Button 
-              variant="hero" 
-              size="xl"
-              className="group min-w-[280px]"
-            >
-              Start Your Agency Journey
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              variant="hero-outline" 
-              size="xl"
-              className="min-w-[280px]"
-            >
-              <Play className="mr-2 w-5 h-5" />
-              Watch Success Stories
-            </Button>
-          </div>
-
-          {/* Dashboard Mockup - Full Width */}
-          <div className="relative pt-16 animate-slide-up">
-            <div className="relative max-w-6xl mx-auto">
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-3xl" />
-              
-              {/* Main image container */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+            {/* Right: Dashboard Preview */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl" />
+              <div className="relative rounded-xl overflow-hidden border border-border shadow-2xl">
                 <img 
                   src={heroDashboard} 
-                  alt="LinkedIn Operator Dashboard showing analytics and successful agency metrics"
+                  alt="LinkedIn agency dashboard showcasing performance metrics and analytics"
                   className="w-full h-auto"
                 />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               </div>
             </div>
           </div>
 
-          {/* Trust Bar */}
-          <div className="pt-16 space-y-6">
-            <p className="text-sm text-muted-foreground">
-              Trusted by LinkedIn Operators Worldwide
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-50">
-              <span className="text-base font-medium">LinkedIn Agencies</span>
-              <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-              <span className="text-base font-medium">B2B Founders</span>
-              <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-              <span className="text-base font-medium">Marketing Teams</span>
-              <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-              <span className="text-base font-medium">Content Creators</span>
+          {/* Value Props */}
+          <div className="grid md:grid-cols-3 gap-8 pt-16 border-t border-border/50">
+            <div className="space-y-3">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold">Scalable System</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Proven processes to grow from your first client to a full agency with recurring revenue.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold">High-Ticket Clients</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Learn the exact methods we use to consistently book qualified B2B meetings.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Zap className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold">LinkedIn Mastery</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                The secrets behind generating 30M+ organic views and building authority fast.
+              </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
