@@ -86,39 +86,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Value Props */}
-          <div className="grid md:grid-cols-3 gap-8 pt-16 border-t border-border/50">
-            <div className="space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold">Scalable System</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Proven processes to grow from your first client to a full agency with recurring revenue.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Users className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold">High-Ticket Clients</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Learn the exact methods we use to consistently book qualified B2B meetings.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold">LinkedIn Mastery</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                The secrets behind generating 30M+ organic views and building authority fast.
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
