@@ -69,48 +69,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* What We Hated */}
-        <div className="mb-32 relative">
-          <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-destructive via-destructive/50 to-transparent" />
-          <div className="pl-12">
-            <h3 className="text-4xl font-bold mb-8">What We Couldn't Stand Anymore</h3>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-destructive/50 transition-all">
-                <X className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Inexperienced "Experts" Running the Show</h4>
-                  <p className="text-muted-foreground">
-                    First movers who stumbled into the LinkedIn space without understanding agency fundamentals. 
-                    No clue about fulfillment, acquisition, or scaling. Result? Bottlenecked operations and churned clients.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-destructive/50 transition-all">
-                <X className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Churn and Burn Mentality</h4>
-                  <p className="text-muted-foreground">
-                    Agencies promising hundreds of calls and delivering zero. Ruining LinkedIn's reputation 
-                    and wasting the potential of people who genuinely want to succeed.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-destructive/50 transition-all">
-                <X className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">Spray and Pray Tactics</h4>
-                  <p className="text-muted-foreground">
-                    Spamming every connection with generic messages. Chasing vanity metrics instead of revenue. 
-                    Building big followings that convert to nothing.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Myths We're Destroying */}
         <div className="mb-32">
           <div className="text-center mb-16">
