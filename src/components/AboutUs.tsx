@@ -21,42 +21,6 @@ const AboutUs = () => {
           </p>
         </div>
 
-        {/* Three Value Props */}
-        <div className="grid md:grid-cols-3 gap-8 mb-32">
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-              <Target className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Strategic Positioning</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              We craft your LinkedIn presence to attract the right opportunities, 
-              whether that's clients, partnerships, or your dream job.
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-              <TrendingUp className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Consistent Growth</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Daily content creation, engagement, and network expansion designed 
-              to build your authority and reach on autopilot.
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-              <Users className="w-8 h-8 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Real conversations, real connections, real revenue. 
-              Our clients see tangible ROI from their LinkedIn presence.
-            </p>
-          </div>
-        </div>
-
         {/* Who Is This For */}
         <div>
           <div className="text-center mb-16">
