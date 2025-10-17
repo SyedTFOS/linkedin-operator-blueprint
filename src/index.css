@@ -8,47 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* LinkedIn Operator Brand Colors */
-    --background: 220 25% 7%;
-    --foreground: 0 0% 100%;
+    /* Clean Dark Theme with Orange Accent */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    /* LinkedIn Blue Primary */
-    --primary: 211 100% 50%;
+    /* Vibrant Orange Primary */
+    --primary: 14 100% 57%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 211 100% 65%;
+    --primary-glow: 14 100% 65%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 211 100% 50%;
+    /* Subtle Blue Accent */
+    --accent: 211 50% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 211 100% 50%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 14 100% 57%;
 
     --radius: 0.75rem;
 
     /* Hero Gradient Colors */
-    --gradient-start: 220 25% 7%;
-    --gradient-mid: 220 25% 9%;
-    --gradient-end: 220 30% 5%;
+    --gradient-start: 0 0% 8%;
+    --gradient-mid: 0 0% 10%;
+    --gradient-end: 0 0% 6%;
     
     /* Glow Effects */
-    --glow-primary: 211 100% 50%;
-    --glow-secondary: 211 80% 40%;
+    --glow-primary: 14 100% 57%;
+    --glow-secondary: 14 80% 50%;
   }
 }
 
