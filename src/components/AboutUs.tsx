@@ -69,51 +69,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Myths We're Destroying */}
-        <div className="mb-32">
-          <div className="text-center mb-16">
-            <h3 className="text-5xl font-bold mb-6">
-              Myths We're <span className="text-gradient">Destroying</span>
-            </h3>
-            <p className="text-xl text-muted-foreground">The lies keeping people broke and frustrated</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {[
-              "LinkedIn is a cringe platform",
-              "You need 100k followers to make money",
-              "TikTok and IG are the only real money makers",
-              "LinkedIn is super hard to grow",
-              "More messages = More clients",
-              "Viral content = Revenue"
-            ].map((myth, index) => (
-              <div key={index} className="flex items-center gap-4 p-6 rounded-xl bg-card border border-border">
-                <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                  <X className="w-5 h-5 text-destructive" />
-                </div>
-                <p className="text-lg font-medium line-through text-muted-foreground">{myth}</p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-primary/20 via-primary/10 to-background border-2 border-primary/30 glow-effect">
-            <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="text-2xl font-bold mb-4 text-foreground">The Real LinkedIn Strategy</h4>
-                <p className="text-lg text-foreground/90 leading-relaxed mb-4">
-                  We reveal the middle ground: content that's <span className="text-primary font-semibold">niche-focused but viral-ready</span>. 
-                  Not chasing vanity metrics, but optimizing for actual revenue.
-                </p>
-                <p className="text-lg text-foreground/90 leading-relaxed">
-                  Stop messaging everyone. Start converting a <span className="text-primary font-semibold">targeted segment</span> of 
-                  your audience using our proven LinkedIn secrets.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* The Vision */}
         <div className="mb-32">
           <div className="text-center mb-16">
@@ -209,17 +164,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Energy Statement */}
-        <div className="mt-32 text-center">
-          <div className="inline-block p-12 rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/50 glow-effect">
-            <p className="text-3xl font-bold text-gradient mb-4">
-              When you join LinkedIn Operator, you don't just learn.
-            </p>
-            <p className="text-2xl text-foreground/90">
-              You BECOME an operator who's already scaled, grown, and dominated.
-            </p>
-          </div>
-        </div>
 
       </div>
     </section>
