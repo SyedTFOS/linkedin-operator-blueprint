@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Zap } from "lucide-react";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
-import logo from "@/assets/logo-white.png";
+import logo from "@/assets/logo-transparent.png";
 
 const Hero = () => {
   return (
