@@ -68,7 +68,7 @@ const Hero = () => {
               {/* Stats Row */}
               <div className="grid grid-cols-3 gap-6 py-6 border-y border-border/50">
                 <div>
-                  <div className="text-2xl font-bold text-foreground">30M+</div>
+                  <div className="text-2xl font-bold text-foreground">50M+</div>
                   <div className="text-sm text-muted-foreground">Organic Views</div>
                 </div>
                 <div>
