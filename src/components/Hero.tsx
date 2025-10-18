@@ -104,10 +104,17 @@ const Hero = () => {
                 Check Out Our <span className="text-primary">Results</span>
               </h3>
               
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {/* Testimonial 1 */}
-                  <CarouselItem>
+              <div className="relative">
+                {/* Top gradient shadow */}
+                <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-background to-transparent z-10 pointer-events-none" />
+                
+                {/* Bottom gradient shadow */}
+                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+                
+                <Carousel className="w-full" opts={{ axis: "y", loop: true }}>
+                  <CarouselContent className="-mt-4 h-[600px]">
+                    {/* Testimonial 1 */}
+                    <CarouselItem className="pt-4">
                     <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                       <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden group cursor-pointer">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -135,7 +142,7 @@ const Hero = () => {
                   </CarouselItem>
 
                   {/* Testimonial 2 */}
-                  <CarouselItem>
+                  <CarouselItem className="pt-4">
                     <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                       <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg overflow-hidden group cursor-pointer">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -163,7 +170,7 @@ const Hero = () => {
                   </CarouselItem>
 
                   {/* Testimonial 3 */}
-                  <CarouselItem>
+                  <CarouselItem className="pt-4">
                     <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                       <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden group cursor-pointer">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -190,9 +197,10 @@ const Hero = () => {
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
+                  <CarouselPrevious className="left-1/2 -translate-x-1/2 -top-2" />
+                  <CarouselNext className="left-1/2 -translate-x-1/2 -bottom-2" />
+                </Carousel>
+              </div>
             </div>
           </div>
 
