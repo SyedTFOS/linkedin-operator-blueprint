@@ -197,10 +197,10 @@ const Hero = () => {
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                  <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg">
+                  <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                     <ChevronUp className="h-4 w-4" />
                   </CarouselPrevious>
-                  <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg">
+                  <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                     <ChevronDown className="h-4 w-4" />
                   </CarouselNext>
                 </Carousel>
