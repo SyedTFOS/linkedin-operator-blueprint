@@ -16,7 +16,7 @@ const Hero = () => {
       <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <img src={logo} alt="LinkedIn Operator" className="h-8" />
+            <img src={logo} alt="LinkedIn Operator" className="h-10" />
             <div className="flex items-center gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Results</a>
