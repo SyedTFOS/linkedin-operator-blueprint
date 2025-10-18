@@ -8,9 +8,9 @@ const WhopWidget = () => {
       href="https://whop.com/linkedin-operator/"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 group"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] group"
     >
-      <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 p-4 sm:p-5 w-[280px] sm:max-w-xs backdrop-blur-sm relative overflow-hidden">
+      <div className="bg-card/95 border-2 border-primary/30 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 p-4 sm:p-5 w-[280px] sm:w-[300px] backdrop-blur-md relative overflow-hidden">
 
         {/* Free Course Ribbon - Tilted Top Right */}
         <div className="absolute -right-8 -top-2 bg-primary text-primary-foreground px-10 py-1.5 shadow-lg text-xs font-bold rotate-12">
