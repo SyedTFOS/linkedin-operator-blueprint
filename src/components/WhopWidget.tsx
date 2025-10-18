@@ -1,5 +1,6 @@
-import { ArrowRight, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import whopLogo from "@/assets/whop-logo.png";
 
 const WhopWidget = () => {
   return (
@@ -12,10 +13,7 @@ const WhopWidget = () => {
       <div className="bg-card border-2 border-primary/20 rounded-2xl shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105 p-5 max-w-xs backdrop-blur-sm">
         {/* Header with Whop branding */}
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">W</span>
-          </div>
-          <span className="text-sm font-semibold text-muted-foreground">Whop Community</span>
+          <img src={whopLogo} alt="Whop" className="h-6" />
         </div>
         
         {/* Main message */}
