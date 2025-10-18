@@ -30,26 +30,26 @@ const Hero = () => {
             
             {/* Left: Text Content */}
             <div className="space-y-8">
-              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 w-fit">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span className="text-sm font-medium text-foreground">Proven System for 2026</span>
                 </div>
                 
                 {/* Social Proof */}
-                <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-muted/50 border border-border/50 w-fit">
+                <div className="inline-flex items-center gap-2.5 px-3 py-2 rounded-full bg-muted/50 border border-border/50 w-fit">
                   <div className="flex -space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-background" />
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-accent/60 border-2 border-background" />
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/80 to-accent/80 border-2 border-background" />
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-background" />
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-accent to-accent/60 border-2 border-background" />
+                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary/80 to-accent/80 border-2 border-background" />
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5">
                     <div className="flex gap-0.5">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />
+                        <Star key={i} className="w-3 h-3 fill-primary text-primary" />
                       ))}
                     </div>
-                    <span className="text-sm font-medium text-foreground">Join 500+ students</span>
+                    <span className="text-sm font-medium text-foreground whitespace-nowrap">Join 500+ students</span>
                   </div>
                 </div>
               </div>
