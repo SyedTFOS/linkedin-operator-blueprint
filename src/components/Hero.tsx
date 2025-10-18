@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+import { ArrowRight, Star, Play } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import logo from "@/assets/logo-transparent.png";
 
 const Hero = () => {
@@ -92,16 +98,101 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right: Dashboard Preview */}
+            {/* Right: Results Carousel */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl" />
-              <div className="relative rounded-xl overflow-hidden border border-border shadow-2xl">
-                <img 
-                  src={heroDashboard} 
-                  alt="LinkedIn agency dashboard showcasing performance metrics and analytics"
-                  className="w-full h-auto"
-                />
-              </div>
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                Check Out Our <span className="text-primary">Results</span>
+              </h3>
+              
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {/* Testimonial 1 */}
+                  <CarouselItem>
+                    <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
+                      <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden group cursor-pointer">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent" />
+                            <div>
+                              <p className="font-semibold text-sm">Sarah Chen</p>
+                              <p className="text-xs text-muted-foreground">San Francisco, USA</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="font-bold text-lg">From Zero to $15K/Month in 90 Days</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          "The LinkedIn Operator course gave me everything I needed. I landed my first client in week 2 and scaled to <span className="text-primary font-semibold">$15,000 MRR</span> within 3 months."
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+
+                  {/* Testimonial 2 */}
+                  <CarouselItem>
+                    <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
+                      <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg overflow-hidden group cursor-pointer">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary" />
+                            <div>
+                              <p className="font-semibold text-sm">Marcus Johnson</p>
+                              <p className="text-xs text-muted-foreground">London, UK</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="font-bold text-lg">Built a Team of 5 in 6 Months</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          "Started solo, now I run a <span className="text-primary font-semibold">full agency with 5 team members</span>. The systems taught here are incredible for scaling fast."
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+
+                  {/* Testimonial 3 */}
+                  <CarouselItem>
+                    <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
+                      <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden group cursor-pointer">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
+                          </div>
+                        </div>
+                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/80 to-accent/80" />
+                            <div>
+                              <p className="font-semibold text-sm">Emma Rodriguez</p>
+                              <p className="text-xs text-muted-foreground">Toronto, Canada</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="font-bold text-lg">Replaced My 9-5 Income</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          "I was skeptical at first, but within 4 months I was making <span className="text-primary font-semibold">more than my corporate salary</span>. Now I work from anywhere."
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
             </div>
           </div>
 
