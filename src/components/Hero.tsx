@@ -37,11 +37,6 @@ const Hero = () => {
             {/* Left: Text Content */}
             <div className="space-y-8">
               <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 w-fit">
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-sm font-medium text-foreground">Proven System for 2026</span>
-                </div>
-                
                 {/* Social Proof */}
                 <div className="inline-flex items-center gap-2.5 px-3 py-2 rounded-full bg-muted/50 border border-border/50 w-fit">
                   <div className="flex -space-x-2">
