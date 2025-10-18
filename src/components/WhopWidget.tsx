@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import whopLogo from "@/assets/whop-logo-white.png";
+import whopLogo from "@/assets/whop-logo-light.png";
 
 const WhopWidget = () => {
   return (
