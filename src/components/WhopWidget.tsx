@@ -14,7 +14,7 @@ const WhopWidget = () => {
 
         {/* Free Course Ribbon - Tilted Top Right */}
         <div className="absolute -right-8 -top-2 bg-primary text-primary-foreground px-10 py-1.5 shadow-lg text-xs font-bold rotate-12">
-          Free 20+ Hour Course
+          Free Course Incl.
         </div>
         
         {/* Header with Whop branding */}
