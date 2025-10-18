@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import whopLogo from "@/assets/whop-logo.png";
+import whopLogo from "@/assets/whop-logo-white.png";
 
 const WhopWidget = () => {
   return (
@@ -17,8 +17,11 @@ const WhopWidget = () => {
         </div>
         
         {/* Main message */}
-        <p className="text-foreground font-medium mb-4 leading-snug">
-          Join <span className="text-primary font-bold">500 others</span> starting a LinkedIn agency on Whop
+        <p className="text-foreground font-medium mb-1 leading-snug">
+          #1 LinkedIn Agency Community on Whop
+        </p>
+        <p className="text-sm text-muted-foreground mb-4">
+          Join <span className="text-primary font-bold">500 others</span> starting their agency
         </p>
         
         {/* CTA Button */}
