@@ -100,9 +100,14 @@ const Hero = () => {
 
             {/* Right: Results Carousel */}
             <div className="relative">
-              <h3 className="text-2xl font-bold mb-6 text-center">
-                Check Out Our <span className="text-primary">Results</span>
-              </h3>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">
+                  Check Out Our <span className="text-primary">Results</span>
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Over 500 Students & 50+ Businesses Transformed
+                </p>
+              </div>
               
               <div className="relative">
                 {/* Top gradient shadow */}
