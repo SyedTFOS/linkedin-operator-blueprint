@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import ResultsProof from "@/components/ResultsProof";
+import WhopWidget from "@/components/WhopWidget";
 
 const Index = () => {
   return (
@@ -8,6 +9,7 @@ const Index = () => {
       <Hero />
       <AboutUs />
       <ResultsProof />
+      <WhopWidget />
     </div>
   );
 };
