@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import logo from "@/assets/logo-transparent.png";
+import logo from "@/assets/logo-text.png";
 
 const Hero = () => {
   return (
