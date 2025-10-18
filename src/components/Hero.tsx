@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Play } from "lucide-react";
+import { ArrowRight, Star, Play, ChevronUp, ChevronDown } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -106,15 +106,15 @@ const Hero = () => {
               
               <div className="relative">
                 {/* Top gradient shadow */}
-                <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-background to-transparent z-10 pointer-events-none" />
+                <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
                 
                 {/* Bottom gradient shadow */}
-                <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
                 
-                <Carousel className="w-full" opts={{ axis: "y", loop: true }}>
-                  <CarouselContent className="-mt-4 h-[600px]">
+                <Carousel orientation="vertical" className="w-full" opts={{ loop: true }}>
+                  <CarouselContent className="-mt-4 h-[500px]">
                     {/* Testimonial 1 */}
-                    <CarouselItem className="pt-4">
+                    <CarouselItem className="pt-4 basis-full">
                     <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                       <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden group cursor-pointer">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -142,7 +142,7 @@ const Hero = () => {
                   </CarouselItem>
 
                   {/* Testimonial 2 */}
-                  <CarouselItem className="pt-4">
+                  <CarouselItem className="pt-4 basis-full">
                     <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                       <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg overflow-hidden group cursor-pointer">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -170,7 +170,7 @@ const Hero = () => {
                   </CarouselItem>
 
                   {/* Testimonial 3 */}
-                  <CarouselItem className="pt-4">
+                  <CarouselItem className="pt-4 basis-full">
                     <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                       <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden group cursor-pointer">
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -197,8 +197,12 @@ const Hero = () => {
                     </div>
                   </CarouselItem>
                 </CarouselContent>
-                  <CarouselPrevious className="left-1/2 -translate-x-1/2 -top-2" />
-                  <CarouselNext className="left-1/2 -translate-x-1/2 -bottom-2" />
+                  <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg">
+                    <ChevronUp className="h-4 w-4" />
+                  </CarouselPrevious>
+                  <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg">
+                    <ChevronDown className="h-4 w-4" />
+                  </CarouselNext>
                 </Carousel>
               </div>
             </div>
