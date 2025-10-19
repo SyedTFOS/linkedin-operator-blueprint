@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Play, ChevronUp, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ClientCarousel } from "@/components/ClientCarousel";
 import logo from "@/assets/logo-text.png";
+import robertoLuna from "@/assets/roberto-luna.png";
+import craigCecilio from "@/assets/craig-cecilio.png";
+import samAramiVideo from "@/assets/sam-arami-video.mp4";
 
 const Hero = () => {
   return (
@@ -249,9 +251,183 @@ const Hero = () => {
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
                     <Carousel orientation="vertical" className="w-full" opts={{ loop: true }}>
-                      <CarouselContent className="-mt-4 h-[520px]">
+                      <CarouselContent className="-mt-4 h-[500px]">
+                        {/* Roberto H. Luna */}
                         <CarouselItem className="pt-4 basis-full">
-                          <ClientCarousel />
+                          <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
+                            <div 
+                              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                              style={{ backgroundImage: `url(/src/assets/roberto-luna.png)` }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                            <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                              <Star className="w-4 h-4 text-primary-foreground fill-current" />
+                              <span className="text-sm font-bold text-primary-foreground">Featured in Forbes</span>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                              <h4 className="text-2xl font-bold text-foreground mb-1">Roberto H. Luna</h4>
+                              <p className="text-base text-primary font-semibold mb-2">Lunivate</p>
+                              <p className="text-sm text-muted-foreground">Business Consulting</p>
+                            </div>
+                            <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                              <div className="space-y-4">
+                                <div className="mb-6">
+                                  <h4 className="text-xl font-bold text-foreground mb-1">Roberto H. Luna</h4>
+                                  <p className="text-sm text-primary font-semibold">Lunivate • 120 Days</p>
+                                </div>
+                                <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">The Results:</p>
+                                <div className="space-y-3">
+                                  <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                      <Star className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-sm font-semibold text-foreground">Featured in Forbes</p>
+                                      <p className="text-xs text-muted-foreground">Direct result of LinkedIn strategy</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                      <Eye className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-sm font-semibold text-foreground">15M+ LinkedIn views</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                      <ArrowRight className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-base font-bold text-primary">$500,000+ revenue</p>
+                                      <p className="text-xs text-muted-foreground">In just 120 days</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CarouselItem>
+
+                        {/* Sam Arami */}
+                        <CarouselItem className="pt-4 basis-full">
+                          <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
+                            <video 
+                              className="absolute inset-0 w-full h-full object-cover"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source src="/src/assets/sam-arami-video.mp4" type="video/mp4" />
+                            </video>
+                            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                            <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                              <Star className="w-4 h-4 text-primary-foreground fill-current" />
+                              <span className="text-sm font-bold text-primary-foreground">7-Figure Agency</span>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                              <h4 className="text-2xl font-bold text-foreground mb-1">Sam Arami</h4>
+                              <p className="text-base text-primary font-semibold mb-2">Arami AI</p>
+                              <p className="text-sm text-muted-foreground">AI Voice Agents Platform • 2x Exited Founder</p>
+                            </div>
+                            <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                              <div className="space-y-4">
+                                <div className="mb-6">
+                                  <h4 className="text-xl font-bold text-foreground mb-1">Sam Arami</h4>
+                                  <p className="text-sm text-primary font-semibold">Arami AI • 2x Exited Founder</p>
+                                </div>
+                                <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">The Sprint:</p>
+                                <div className="space-y-3">
+                                  <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                      <Star className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-sm font-semibold text-foreground">3,000+ waitlist signups</p>
+                                      <p className="text-xs text-muted-foreground">In just 21 days</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                      <Star className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-sm font-semibold text-foreground">800 → 7,000 LinkedIn followers</p>
+                                      <p className="text-xs text-muted-foreground">21 days growth</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                      <ArrowRight className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-base font-bold text-primary">Multiple 7-figures/year</p>
+                                      <p className="text-xs text-muted-foreground">LinkedIn agency revenue</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </CarouselItem>
+
+                        {/* Craig Cecilio */}
+                        <CarouselItem className="pt-4 basis-full">
+                          <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
+                            <div 
+                              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                              style={{ backgroundImage: `url(/src/assets/craig-cecilio.png)` }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                            <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                              <Star className="w-4 h-4 text-primary-foreground fill-current" />
+                              <span className="text-sm font-bold text-primary-foreground">$1B+ Raised</span>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                              <h4 className="text-2xl font-bold text-foreground mb-1">Craig Cecilio</h4>
+                              <p className="text-base text-primary font-semibold mb-2">DiversyFund</p>
+                              <p className="text-sm text-muted-foreground">Real Estate Investment</p>
+                            </div>
+                            <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                              <div className="space-y-4">
+                                <div className="mb-6">
+                                  <h4 className="text-xl font-bold text-foreground mb-1">Craig Cecilio</h4>
+                                  <p className="text-sm text-primary font-semibold">DiversyFund • Fortune 500 Level</p>
+                                </div>
+                                <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">The Empire:</p>
+                                <div className="space-y-3">
+                                  <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                      <Star className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-sm font-semibold text-foreground">$1 Billion+ capital raised</p>
+                                      <p className="text-xs text-muted-foreground">From 40,000+ investors</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start gap-3">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                      <Star className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-sm font-semibold text-foreground">500,000+ participants</p>
+                                      <p className="text-xs text-muted-foreground">30,000+ active users</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                                    <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                      <ArrowRight className="w-3.5 h-3.5 text-primary" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <p className="text-base font-bold text-primary">LinkedIn fueled growth</p>
+                                      <p className="text-xs text-muted-foreground">Exponential reach</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </CarouselItem>
                       </CarouselContent>
                       <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
