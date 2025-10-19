@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StudentCard from "./StudentCard";
+import aryanShahPhoto from "@/assets/aryan-shah.png";
 
 const ExperimentSection = () => {
   return (
@@ -142,6 +143,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Aryan Shah"
                 role="Industry Expert (Tech)"
+                photoUrl={aryanShahPhoto}
                 background="Previously exited LIA (Bambo) for multi 5-figures. Worked with 50+ agencies and 7-figure creators including Beehive and Smartlead."
                 whatTheyDoing="→ 5,500 followers\n→ Productized his service\n→ Building first AI LinkedIn companion\n→ In talks with multiple investors for funding"
                 results={[
