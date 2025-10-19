@@ -56,10 +56,17 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To Sign Clients Like this
-                </p>
+              <div className="space-y-3 relative">
+                <div className="relative">
+                  <p className="text-sm md:text-base text-muted-foreground font-medium">
+                    <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To Sign Clients Like this
+                  </p>
+                  {/* Curved Arrow */}
+                  <svg className="absolute hidden lg:block left-full top-1/2 -translate-y-1/2 ml-4 w-[200px] h-[60px]" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0 30 Q 100 10, 180 25" stroke="hsl(var(--primary))" strokeWidth="3" fill="none" />
+                    <path d="M 180 25 L 170 20 L 175 25 L 170 30 Z" fill="hsl(var(--primary))" />
+                  </svg>
+                </div>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
                   Build A LinkedIn Agency<br />
                   That Works With <span className="text-primary">REAL Businesses</span>
