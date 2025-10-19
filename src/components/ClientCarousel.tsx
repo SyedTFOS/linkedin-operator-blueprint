@@ -34,7 +34,7 @@ export const ClientCarousel = () => {
     <div className="mt-24">
       <div className="text-center mb-12">
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-          Our Client Results Across All Tiers
+          Our Client's Across All Industries
         </h3>
 
         {/* Tier Toggle Buttons */}
