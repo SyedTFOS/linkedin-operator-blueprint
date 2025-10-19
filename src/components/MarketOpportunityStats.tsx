@@ -1,185 +1,136 @@
-import { Globe, Briefcase, Building2, BarChart3, Target, Zap, X, Check } from "lucide-react";
-
 const MarketOpportunityStats = () => {
-  const platformCards = [
-    {
-      icon: Globe,
-      stat: "1.2 Billion Users",
-      description: "Record engagement. Every industry. Every market."
-    },
-    {
-      icon: Briefcase,
-      stat: "960M Decision-Makers",
-      description: "4 in 5 have budget authority and can sign contracts"
-    },
-    {
-      icon: Building2,
-      stat: "60 Million Companies",
-      description: "SaaS, fintech, healthcare, consulting, B2B—all looking for LinkedIn expertise"
-    }
-  ];
-
-  const gapCards = [
-    {
-      icon: BarChart3,
-      stat: "<1% Post Weekly",
-      description: "1.2 billion users. Only ~12 million creating content consistently."
-    },
-    {
-      icon: Target,
-      stat: "Zero Competition",
-      description: "Almost no one is targeting Fortune 500s and decision-makers correctly"
-    },
-    {
-      icon: Zap,
-      stat: "First-Mover Window",
-      description: "The market hasn't caught on yet. You're early."
-    }
-  ];
-
-  const redOceanPoints = [
-    "Fighting for $500/month local clients",
-    "Competing with 10,000 SMMA clones",
-    "Building agencies that feel like a grind"
-  ];
-
-  const blueOceanPoints = [
-    "Signing $36K/year retainers with Fortune 500s",
-    "Working with Y Combinator startups and venture-backed companies",
-    "Building real authority in a blue ocean with almost zero competition"
-  ];
-
   return (
-    <section className="py-20 md:py-32 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-7xl">
-        {/* Headline Area */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4 leading-tight tracking-tight">
-            A $120 Billion Blue Ocean
-          </h2>
-          <p className="text-lg md:text-2xl font-medium text-muted-foreground">
-            And You're One of the First 1,000 People to Know About It
-          </p>
-        </div>
-
-        {/* Row 1: Platform Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {platformCards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-            >
-              <card.icon className="w-12 h-12 text-orange-500 mb-4" />
-              <div className="text-3xl md:text-4xl font-bold text-orange-500 mb-2 leading-tight">
-                {card.stat}
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {card.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Row 2: Gap Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {gapCards.map((card, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-            >
-              <card.icon className="w-12 h-12 text-orange-500 mb-4" />
-              <div className="text-3xl md:text-4xl font-bold text-orange-500 mb-2 leading-tight">
-                {card.stat}
-              </div>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {card.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Row 3: Large Opportunity Box */}
-        <div className="bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-orange-500 rounded-2xl p-8 md:p-12 mb-12">
-          <div className="text-center mb-8">
-            <div className="text-5xl md:text-7xl font-black text-orange-500 mb-4 leading-none">
-              $12B–$120B
-            </div>
-            <div className="text-xl md:text-2xl font-semibold text-foreground mb-8">
-              Conservative to Aggressive Market Estimate
-            </div>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-lg font-bold text-foreground mb-4">
-              Here's the math:
-            </h3>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
-                <span className="text-base text-gray-700 leading-relaxed">
-                  500K–2M companies need LinkedIn growth services
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
-                <span className="text-base text-gray-700 leading-relaxed">
-                  Average spend: $36K/year on strategy, content, ghostwriting, positioning
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
-                <span className="text-base text-gray-700 leading-relaxed">
-                  Market size: $12B–$120B in serviceable demand
-                </span>
-              </li>
-            </ul>
-            <p className="text-sm italic text-gray-600 leading-relaxed">
-              (For context: LinkedIn's total revenue in 2024 was $16B—this is a SEPARATE services layer)
+    <section className="relative py-32 md:py-48 bg-white overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8 max-w-6xl">
+        
+        {/* Hero Statement */}
+        <div className="mb-32 md:mb-48">
+          <div className="max-w-4xl">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 leading-[0.95] tracking-tight">
+              A $120 billion
+              <br />
+              <span className="text-orange-500">blue ocean.</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
+              And you're one of the first 1,000 people to know about it.
             </p>
           </div>
         </div>
 
-        {/* Bottom Contrast Section */}
-        <div className="bg-gray-900 rounded-2xl p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-10">
-            {/* Left Column */}
+        {/* The Platform - Flowing Stats */}
+        <div className="mb-48 grid md:grid-cols-3 gap-16 md:gap-24">
+          <div className="space-y-4">
+            <div className="text-7xl md:text-8xl font-bold text-foreground tracking-tight">1.2B</div>
+            <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium">Users</div>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Record engagement. Every industry. Every market.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="text-7xl md:text-8xl font-bold text-foreground tracking-tight">960M</div>
+            <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium">Decision-Makers</div>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              4 in 5 have budget authority and can sign contracts.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="text-7xl md:text-8xl font-bold text-foreground tracking-tight">60M</div>
+            <div className="text-sm uppercase tracking-wider text-muted-foreground font-medium">Companies</div>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              All looking for LinkedIn expertise.
+            </p>
+          </div>
+        </div>
+
+        {/* The Gap - Editorial Layout */}
+        <div className="mb-48">
+          <div className="max-w-3xl mb-20">
+            <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+              The gap is staggering.
+            </h3>
+            <p className="text-xl text-muted-foreground leading-relaxed font-light">
+              While 1.2 billion professionals are on LinkedIn, less than 1% post weekly. 
+              Almost no one is targeting Fortune 500s correctly. The market hasn't caught on yet.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 border-t border-border pt-16">
             <div>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-6">
-                While everyone else is stuck in the 'online money' space:
-              </h3>
-              <ul className="space-y-4">
-                {redOceanPoints.map((point, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <X className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                    <span className="text-base text-gray-300 leading-relaxed">
-                      {point}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <div className="text-6xl md:text-7xl font-bold text-orange-500 mb-6">&lt;1%</div>
+              <p className="text-lg text-foreground leading-relaxed">
+                Only 12 million out of 1.2 billion users create content consistently.
+              </p>
+            </div>
+            
+            <div>
+              <div className="text-6xl md:text-7xl font-bold text-orange-500 mb-6">0</div>
+              <p className="text-lg text-foreground leading-relaxed">
+                Virtually zero competition targeting high-value enterprise clients correctly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* The Math - Clean Callout */}
+        <div className="mb-48 bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-12 md:p-16 border border-orange-200/50">
+          <div className="max-w-3xl">
+            <div className="mb-12">
+              <div className="text-6xl md:text-8xl font-bold text-foreground mb-4 tracking-tight">
+                $12B–$120B
+              </div>
+              <div className="text-xl text-muted-foreground">
+                Conservative to aggressive market estimate
+              </div>
             </div>
 
-            {/* Right Column */}
-            <div>
-              <h3 className="text-lg md:text-xl font-bold text-white mb-6">
-                You could be here:
-              </h3>
-              <ul className="space-y-4">
-                {blueOceanPoints.map((point, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
-                    <span className="text-base text-gray-300 leading-relaxed">
-                      {point}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-8 text-lg text-foreground/80 leading-relaxed">
+              <p>
+                <span className="font-semibold text-foreground">500K–2M companies</span> need LinkedIn growth services right now.
+              </p>
+              <p>
+                <span className="font-semibold text-foreground">Average annual spend:</span> $36K on strategy, content, ghostwriting, and positioning.
+              </p>
+              <p>
+                <span className="font-semibold text-foreground">Total serviceable market:</span> Between $12B and $120B in demand.
+              </p>
+              <p className="text-base text-muted-foreground pt-4 border-t border-orange-200">
+                For context: LinkedIn's total revenue in 2024 was $16B. This is a completely separate services layer on top of the platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* The Choice - Minimal Contrast */}
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24">
+          <div className="space-y-8">
+            <h4 className="text-2xl md:text-3xl font-bold text-foreground">
+              The saturated space
+            </h4>
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p className="opacity-60">Fighting for $500/month local clients</p>
+              <p className="opacity-60">Competing with 10,000 SMMA clones</p>
+              <p className="opacity-60">Building agencies that feel like a grind</p>
             </div>
           </div>
 
-          {/* Closing Line */}
-          <p className="text-lg md:text-xl font-semibold text-orange-500 text-center">
-            The window is open. But it won't be forever.
+          <div className="space-y-8">
+            <h4 className="text-2xl md:text-3xl font-bold text-foreground">
+              The blue ocean
+            </h4>
+            <div className="space-y-6 text-lg text-foreground leading-relaxed">
+              <p className="font-medium">Signing $36K/year retainers with Fortune 500s</p>
+              <p className="font-medium">Working with YC startups and venture-backed companies</p>
+              <p className="font-medium">Building real authority with almost zero competition</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Closing Statement */}
+        <div className="mt-32 pt-16 border-t border-border">
+          <p className="text-2xl md:text-3xl text-center text-foreground font-light leading-relaxed max-w-3xl mx-auto">
+            The window is open. <span className="font-semibold text-orange-500">But it won't be forever.</span>
           </p>
         </div>
       </div>
