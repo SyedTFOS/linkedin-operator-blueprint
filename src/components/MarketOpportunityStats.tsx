@@ -218,7 +218,7 @@ const MarketOpportunityStats = () => {
         <div 
           ref={closingRef}
           data-section="closing"
-          className={`mt-16 pt-16 border-t border-border transition-all duration-1000 ${
+          className={`mt-12 pt-12 border-t border-border transition-all duration-1000 ${
             isVisible.closing 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
