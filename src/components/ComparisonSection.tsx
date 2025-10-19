@@ -23,12 +23,36 @@ const ComparisonSection = () => {
     <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-16 md:mb-24">
-          While Everyone Else Is Stuck Here...
-        </h2>
+        <div className="relative mb-16 md:mb-24">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground">
+            While Everyone Else Is Stuck Here...
+          </h2>
+          
+          {/* Arrow pointing to Red Ocean */}
+          <svg 
+            className="absolute left-1/4 -bottom-16 md:-bottom-20 w-32 md:w-40 h-20 md:h-24 hidden lg:block"
+            viewBox="0 0 160 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 10 Q40 20, 80 50 T150 85"
+              stroke="#ef4444"
+              strokeWidth="3"
+              fill="none"
+              strokeLinecap="round"
+            />
+            <path
+              d="M150 85 L140 75 M150 85 L145 95"
+              stroke="#ef4444"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
 
         {/* Split Screen Comparison */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16 relative">
           {/* LEFT SIDE - Red Ocean */}
           <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950 via-red-900 to-gray-900 border-2 border-red-800/50 p-8 md:p-12">
             {/* Background Pattern */}
@@ -115,12 +139,34 @@ const ComparisonSection = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto relative">
           <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed">
             <span className="text-foreground">The choice is simple.</span>{" "}
             <span className="text-muted-foreground">Stop fighting for scraps.</span>{" "}
             <span className="text-orange-500 drop-shadow-[0_0_12px_rgba(249,115,22,0.6)]">Enter the blue ocean.</span>
           </p>
+          
+          {/* Arrow pointing to Blue Ocean */}
+          <svg 
+            className="absolute right-0 -top-24 md:-top-28 w-32 md:w-40 h-24 md:h-28 hidden lg:block"
+            viewBox="0 0 160 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 110 Q50 90, 90 60 T150 20"
+              stroke="#f97316"
+              strokeWidth="3"
+              fill="none"
+              strokeLinecap="round"
+            />
+            <path
+              d="M150 20 L140 25 M150 20 L147 30"
+              stroke="#f97316"
+              strokeWidth="3"
+              strokeLinecap="round"
+            />
+          </svg>
         </div>
       </div>
     </section>
