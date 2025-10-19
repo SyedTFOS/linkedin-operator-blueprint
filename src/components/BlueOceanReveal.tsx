@@ -1,4 +1,4 @@
-import { Sparkles, Pickaxe, Briefcase } from "lucide-react";
+import { Sparkles, Pickaxe, Briefcase, TrendingUp, MessageCircle, Users, DollarSign, Eye } from "lucide-react";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
@@ -215,6 +215,134 @@ const BlueOceanReveal = () => {
               <p className="text-lg text-muted-foreground">
                 Before we turned it into a system, we used it to land the clients everyone else dreams about.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Client Hero Cards Section */}
+        <div className="mt-24">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+              <TrendingUp className="w-4 h-4 text-primary" />
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                Tier 1: Ultra-Whales
+              </span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              The Results Speak For Themselves
+            </h3>
+          </div>
+
+          {/* Hero Cards Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* CARD 1: Roberto H. Luna */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300"></div>
+              <div className="relative bg-background border-2 border-primary/30 rounded-2xl p-6 h-full hover:border-primary/60 transition-all duration-300">
+                {/* Header with Image & Badge */}
+                <div className="flex items-start gap-4 mb-6 pb-6 border-b border-border/40">
+                  <div className="relative">
+                    <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                      <Users className="w-10 h-10 text-primary" />
+                    </div>
+                    {/* Forbes Badge Overlay */}
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-2 border-background">
+                      <span className="text-[10px] font-bold text-primary-foreground">F</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-foreground mb-1">
+                      Roberto H. Luna
+                    </h4>
+                    <p className="text-sm text-primary font-semibold">Lunivate</p>
+                  </div>
+                </div>
+
+                {/* Industry & Timeline */}
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">Industry:</span>
+                    <span className="font-semibold text-foreground">Business Consulting</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">Timeline:</span>
+                    <span className="font-semibold text-primary">120 Days</span>
+                  </div>
+                </div>
+
+                {/* Results */}
+                <div className="space-y-3">
+                  <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-4">
+                    The Results:
+                  </p>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <TrendingUp className="w-4 h-4 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-foreground">Featured in Forbes</p>
+                      <p className="text-xs text-muted-foreground">Direct result of LinkedIn strategy</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Eye className="w-4 h-4 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-foreground">15M+ LinkedIn views</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MessageCircle className="w-4 h-4 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-foreground">100,000+ comments</p>
+                      <p className="text-xs text-muted-foreground">Across content</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Users className="w-4 h-4 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-foreground">50,000+ followers</p>
+                      <p className="text-xs text-muted-foreground">Built from zero</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                    <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <DollarSign className="w-4 h-4 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-base font-bold text-primary">$500,000+ revenue</p>
+                      <p className="text-xs text-muted-foreground">In just 120 days</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Placeholder for Card 2 */}
+            <div className="group relative opacity-40">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-md"></div>
+              <div className="relative bg-background border-2 border-border/30 rounded-2xl p-6 h-full flex items-center justify-center">
+                <p className="text-muted-foreground text-sm">Card 2 Coming Soon</p>
+              </div>
+            </div>
+
+            {/* Placeholder for Card 3 */}
+            <div className="group relative opacity-40">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-md"></div>
+              <div className="relative bg-background border-2 border-border/30 rounded-2xl p-6 h-full flex items-center justify-center">
+                <p className="text-muted-foreground text-sm">Card 3 Coming Soon</p>
+              </div>
             </div>
           </div>
         </div>
