@@ -22,31 +22,33 @@ const ComparisonSection = () => {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header */}
+        {/* Header with Red Arrow */}
         <div className="relative mb-16 md:mb-24">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground">
             While Everyone Else Is Stuck Here...
           </h2>
           
-          {/* Arrow pointing to Red Ocean */}
+          {/* Red Arrow from "Here..." to Red Ocean */}
           <svg 
-            className="absolute left-1/4 -bottom-16 md:-bottom-20 w-32 md:w-40 h-20 md:h-24 hidden lg:block"
-            viewBox="0 0 160 100"
+            className="absolute top-16 left-[45%] md:left-[48%] w-48 md:w-64 h-32 md:h-40 hidden lg:block pointer-events-none"
+            viewBox="0 0 200 150"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M10 10 Q40 20, 80 50 T150 85"
+              d="M180 10 Q150 40, 120 70 Q90 100, 50 130"
               stroke="#ef4444"
-              strokeWidth="3"
+              strokeWidth="4"
               fill="none"
               strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
-              d="M150 85 L140 75 M150 85 L145 95"
+              d="M50 130 L65 125 M50 130 L55 115"
               stroke="#ef4444"
-              strokeWidth="3"
+              strokeWidth="4"
               strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </div>
@@ -135,6 +137,30 @@ const ComparisonSection = () => {
                 ))}
               </div>
             </div>
+
+            {/* Orange Arrow from Blue Ocean to CTA */}
+            <svg 
+              className="absolute -bottom-20 right-12 md:right-24 w-48 md:w-56 h-32 md:h-36 hidden lg:block pointer-events-none z-20"
+              viewBox="0 0 220 140"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M200 10 Q180 40, 150 70 Q120 100, 80 125"
+                stroke="#f97316"
+                strokeWidth="5"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M80 125 L95 122 M80 125 L83 110"
+                stroke="#f97316"
+                strokeWidth="5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
         </div>
 
@@ -145,28 +171,6 @@ const ComparisonSection = () => {
             <span className="text-muted-foreground">Stop fighting for scraps.</span>{" "}
             <span className="text-orange-500 drop-shadow-[0_0_12px_rgba(249,115,22,0.6)]">Enter the blue ocean.</span>
           </p>
-          
-          {/* Arrow pointing to Blue Ocean */}
-          <svg 
-            className="absolute right-0 -top-24 md:-top-28 w-32 md:w-40 h-24 md:h-28 hidden lg:block"
-            viewBox="0 0 160 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 110 Q50 90, 90 60 T150 20"
-              stroke="#f97316"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M150 20 L140 25 M150 20 L147 30"
-              stroke="#f97316"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-          </svg>
         </div>
       </div>
     </section>
