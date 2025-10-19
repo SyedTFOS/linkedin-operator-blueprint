@@ -59,8 +59,7 @@ const Hero = () => {
               <div className="space-y-3 relative">
                 <div className="relative">
                   <p className="text-sm md:text-base text-muted-foreground font-medium">
-                    <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To
-                    Sign Clients Like this
+                    The Only Business Model That Allows You To Sign Clients Like this
                   </p>
                   {/* Curved Arrow */}
                   <svg
