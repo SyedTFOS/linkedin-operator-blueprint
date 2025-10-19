@@ -4,6 +4,7 @@ import aryanShahPhoto from "@/assets/aryan-shah.png";
 import vasilijeSimicPhoto from "@/assets/vasilije-simic.png";
 import komailGillaniPhoto from "@/assets/komail-gillani.png";
 import ethanClouserPhoto from "@/assets/ethan-clouser.png";
+import walterChungPhoto from "@/assets/walter-chung.png";
 
 const ExperimentSection = () => {
   return (
@@ -113,6 +114,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Walter Chung"
                 role="Ex-Agency Owner"
+                photoUrl={walterChungPhoto}
                 situation="Failing business. Struggling with fulfillment. Joined us 3 months ago."
                 results={[
                   "Now: $15K/month agency",
