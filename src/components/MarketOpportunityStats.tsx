@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Hash } from "lucide-react";
 
 const MarketOpportunityStats = () => {
   const [isVisible, setIsVisible] = useState({
@@ -53,6 +54,18 @@ const MarketOpportunityStats = () => {
     <section className="relative py-32 md:py-48 bg-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-8 max-w-6xl">
         
+        {/* The Numbers Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
+            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+              <Hash className="w-3 h-3 text-primary" />
+            </div>
+            <span className="text-sm font-semibold text-foreground">
+              <span className="text-primary mr-1.5">iiii.</span>The Numbers
+            </span>
+          </div>
+        </div>
+
         {/* Hero Statement */}
         <div 
           ref={heroRef}
