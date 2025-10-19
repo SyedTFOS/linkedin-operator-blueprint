@@ -61,7 +61,7 @@ const BlueOceanReveal = () => {
                 <Pickaxe className="w-3 h-3 text-primary" />
               </div>
               <span className="text-sm font-semibold text-foreground">
-                The Discovery
+                <span className="text-primary mr-1.5">i.</span>The Discovery
               </span>
             </div>
             
@@ -204,7 +204,7 @@ const BlueOceanReveal = () => {
                   <Briefcase className="w-3 h-3 text-primary" />
                 </div>
                 <span className="text-sm font-semibold text-foreground">
-                  The Proof
+                  <span className="text-primary mr-1.5">ii.</span>The Proof
                 </span>
               </div>
 
