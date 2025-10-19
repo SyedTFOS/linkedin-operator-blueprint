@@ -7,6 +7,9 @@ import logo from "@/assets/logo-text.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
 import samAramiVideo from "@/assets/sam-arami-video.mp4";
+import ethanClouserPhoto from "@/assets/ethan-clouser.png";
+import aryanShahPhoto from "@/assets/aryan-shah.png";
+import walterChungPhoto from "@/assets/walter-chung.png";
 
 const Hero = () => {
   const [studentsApi, setStudentsApi] = useState<CarouselApi>();
@@ -181,91 +184,79 @@ const Hero = () => {
 
                     <Carousel orientation="vertical" className="w-full" opts={{ loop: true }} setApi={setStudentsApi}>
                       <CarouselContent className="-mt-4 h-[500px]">
-                        {/* Testimonial 1 */}
+                        {/* Ethan Clouser */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
-                            <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden group cursor-pointer">
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                                </div>
-                              </div>
+                            <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
+                              <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-cover" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
-                                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent" />
+                                  <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
+                                    <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-cover" />
+                                  </div>
                                   <div>
-                                    <p className="font-semibold text-sm">Sarah Chen</p>
-                                    <p className="text-xs text-muted-foreground">San Francisco, USA</p>
+                                    <p className="font-semibold text-sm">Ethan Clouser</p>
+                                    <p className="text-xs text-muted-foreground">Ex-Agency Owner</p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div className="space-y-2">
-                              <h4 className="font-bold text-lg">From Zero to $15K/Month in 90 Days</h4>
+                              <h4 className="font-bold text-lg">From $1K to $27K/Month → 5-Figure Exit</h4>
                               <p className="text-sm text-muted-foreground leading-relaxed">
-                                "The LinkedIn Operator course gave me everything I needed. I landed my first client in
-                                week 2 and scaled to <span className="text-primary font-semibold">$15,000 MRR</span>{" "}
-                                within 3 months."
+                                Running LinkedIn ads part-time, making just $1K/month. We positioned him as a category owner and showed him how to scale with systems. Result: <span className="text-primary font-semibold">$27K/month in 6 months</span>, exited for a healthy 5-figure deal with <span className="text-primary font-semibold">75-80% profit margins</span>.
                               </p>
                             </div>
                           </div>
                         </CarouselItem>
 
-                        {/* Testimonial 2 */}
+                        {/* Aryan Shah */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
-                            <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg overflow-hidden group cursor-pointer">
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                                </div>
-                              </div>
+                            <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
+                              <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-cover" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
-                                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary" />
+                                  <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
+                                    <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-cover" />
+                                  </div>
                                   <div>
-                                    <p className="font-semibold text-sm">Marcus Johnson</p>
-                                    <p className="text-xs text-muted-foreground">London, UK</p>
+                                    <p className="font-semibold text-sm">Aryan Shah</p>
+                                    <p className="text-xs text-muted-foreground">Industry Expert (Tech)</p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div className="space-y-2">
-                              <h4 className="font-bold text-lg">Built a Team of 5 in 6 Months</h4>
+                              <h4 className="font-bold text-lg">Exited Founder → AI LinkedIn Companion</h4>
                               <p className="text-sm text-muted-foreground leading-relaxed">
-                                "Started solo, now I run a{" "}
-                                <span className="text-primary font-semibold">full agency with 5 team members</span>. The
-                                systems taught here are incredible for scaling fast."
+                                Previously exited LIA (Bambo) for multi 5-figures. Worked with 50+ agencies and 7-figure creators. Now with <span className="text-primary font-semibold">5,500 followers</span>, he's productized his service and is <span className="text-primary font-semibold">building the first AI LinkedIn companion</span> with investor backing.
                               </p>
                             </div>
                           </div>
                         </CarouselItem>
 
-                        {/* Testimonial 3 */}
+                        {/* Walter Chung */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
-                            <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden group cursor-pointer">
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                                </div>
-                              </div>
+                            <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
+                              <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-cover" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
-                                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/80 to-accent/80" />
+                                  <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
+                                    <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-cover" />
+                                  </div>
                                   <div>
-                                    <p className="font-semibold text-sm">Emma Rodriguez</p>
-                                    <p className="text-xs text-muted-foreground">Toronto, Canada</p>
+                                    <p className="font-semibold text-sm">Walter Chung</p>
+                                    <p className="text-xs text-muted-foreground">Ex-Agency Owner</p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                             <div className="space-y-2">
-                              <h4 className="font-bold text-lg">Replaced My 9-5 Income</h4>
+                              <h4 className="font-bold text-lg">Failing Business → $15K/Month Agency</h4>
                               <p className="text-sm text-muted-foreground leading-relaxed">
-                                "I was skeptical at first, but within 4 months I was making{" "}
-                                <span className="text-primary font-semibold">more than my corporate salary</span>. Now I
-                                work from anywhere."
+                                Struggling with fulfillment. Joined us 3 months ago. Now running a <span className="text-primary font-semibold">$15K/month agency</span> with <span className="text-primary font-semibold">1M impressions in 90 days</span> built on a brand new account with profitable fulfillment systems in place.
                               </p>
                             </div>
                           </div>
