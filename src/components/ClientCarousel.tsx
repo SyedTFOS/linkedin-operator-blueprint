@@ -372,7 +372,101 @@ export const ClientCarousel = () => {
             {/* TIER 2 CARDS */}
             {activeTier === "tier2" && (
               <>
-                {[1, 2, 3].map((i) => (
+                {/* Card 1 - Sam Arami */}
+                <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
+                  <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
+                    {/* Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Rocket className="w-32 h-32 text-primary/30" />
+                      </div>
+                    </div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                    
+                    {/* Major Win Badge */}
+                    <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                      <TrendingUp className="w-4 h-4 text-primary-foreground" />
+                      <span className="text-sm font-bold text-primary-foreground">7-Figure Agency</span>
+                    </div>
+                    
+                    {/* Basic Info */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h4 className="text-2xl font-bold text-foreground mb-1">Sam Arami</h4>
+                      <p className="text-base text-primary font-semibold mb-2">Arami AI</p>
+                      <p className="text-sm text-muted-foreground">AI Voice Agents Platform • 2x Exited Founder</p>
+                    </div>
+
+                    {/* Detailed Results - Show on Hover */}
+                    <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                      <div className="space-y-4">
+                        <div className="mb-6">
+                          <h4 className="text-xl font-bold text-foreground mb-1">Sam Arami</h4>
+                          <p className="text-sm text-primary font-semibold">Arami AI • 2x Exited Founder</p>
+                        </div>
+
+                        <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
+                          The Sprint:
+                        </p>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Rocket className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">3,000+ waitlist signups</p>
+                              <p className="text-xs text-muted-foreground">In just 21 days</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <TrendingUp className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">800 → 7,000 LinkedIn followers</p>
+                              <p className="text-xs text-muted-foreground">21 days growth</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Users className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">60,000+ Instagram followers</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Briefcase className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">Pivoted to LinkedIn Agency</p>
+                              <p className="text-xs text-muted-foreground">For AI companies</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                            <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                              <DollarSign className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-base font-bold text-primary">Multiple 7-figures/year</p>
+                              <p className="text-xs text-muted-foreground">LinkedIn agency revenue</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Placeholder Cards */}
+                {[2, 3].map((i) => (
                   <div key={`tier2-${i}`} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
                     <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
                       <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/10">
