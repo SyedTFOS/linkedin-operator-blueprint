@@ -102,31 +102,6 @@ const MarketOpportunityStats = () => {
           </div>
         </div>
 
-        {/* The Choice - Minimal Contrast */}
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-          <div className="space-y-8">
-            <h4 className="text-2xl md:text-3xl font-bold text-foreground">
-              The saturated space
-            </h4>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p className="opacity-60">Fighting for $500/month local clients</p>
-              <p className="opacity-60">Competing with 10,000 SMMA clones</p>
-              <p className="opacity-60">Building agencies that feel like a grind</p>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <h4 className="text-2xl md:text-3xl font-bold text-foreground">
-              The blue ocean
-            </h4>
-            <div className="space-y-6 text-lg text-foreground leading-relaxed">
-              <p className="font-medium">Signing $36K/year retainers with Fortune 500s</p>
-              <p className="font-medium">Working with YC startups and venture-backed companies</p>
-              <p className="font-medium">Building real authority with almost zero competition</p>
-            </div>
-          </div>
-        </div>
-
         {/* Closing Statement */}
         <div className="mt-32 pt-16 border-t border-border">
           <p className="text-2xl md:text-3xl text-center text-foreground font-light leading-relaxed max-w-3xl mx-auto">
