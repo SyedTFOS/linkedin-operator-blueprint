@@ -80,7 +80,7 @@ const MarketOpportunityStats = () => {
             <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 leading-[0.95] tracking-tight">
               A $120 billion
               <br />
-              <span className="text-orange-500">blue ocean.</span>
+              <span className="text-primary">blue ocean.</span>
             </h2>
             <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
               And you're one of the first 1,000 people to know about it.
@@ -157,7 +157,7 @@ const MarketOpportunityStats = () => {
                 }`}
                 style={{ transitionDelay: `${stat.delay}ms` }}
               >
-                <div className={`text-6xl md:text-7xl font-bold text-orange-500 mb-6 transition-all duration-700 ${
+                <div className={`text-6xl md:text-7xl font-bold text-primary mb-6 transition-all duration-700 ${
                   isVisible.gap ? 'scale-100' : 'scale-75'
                 }`}
                 style={{ transitionDelay: `${stat.delay + 200}ms` }}>
@@ -225,7 +225,7 @@ const MarketOpportunityStats = () => {
           }`}
         >
           <p className="text-2xl md:text-3xl text-center text-foreground font-light leading-relaxed max-w-3xl mx-auto">
-            The window is open. <span className="font-semibold text-orange-500">But it won't be forever.</span>
+            The window is open. <span className="font-semibold text-primary">But it won't be forever.</span>
           </p>
         </div>
       </div>
