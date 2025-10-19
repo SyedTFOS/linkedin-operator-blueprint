@@ -220,26 +220,25 @@ const BlueOceanReveal = () => {
         </div>
 
         {/* Client Hero Cards Section */}
-        <div className="mt-24">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
-              <TrendingUp className="w-4 h-4 text-primary" />
-              <span className="text-sm font-bold text-primary uppercase tracking-wider">
-                Tier 1: Ultra-Whales
-              </span>
+        <div className="mt-24 space-y-16">
+          {/* TIER 1: WHALES */}
+          <div>
+            {/* Section Header */}
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+                <TrendingUp className="w-4 h-4 text-primary" />
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                  Tier 1: Whales
+                </span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+                The Ultra-High-Value Clients
+              </h3>
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-              The Results Speak For Themselves
-            </h3>
-          </div>
 
-          {/* Hero Cards Horizontal Scroll */}
-          <div className="relative">
             {/* Scroll container */}
             <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
               <div className="flex gap-8 min-w-max px-4">
-                {/* Tier 1 Cards */}
             {/* CARD 1: Roberto H. Luna */}
             <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
               {/* Background Image */}
@@ -527,7 +526,83 @@ const BlueOceanReveal = () => {
               </div>
             </div>
           </div>
-        </div>
+
+          {/* TIER 2: SMBs */}
+          <div>
+            {/* Section Header */}
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-4">
+                <Building2 className="w-4 h-4 text-primary" />
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                  Tier 2: SMBs
+                </span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+                Small & Medium Business Success Stories
+              </h3>
+            </div>
+
+            {/* Scroll container */}
+            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+              <div className="flex gap-8 min-w-max px-4">
+                {/* Placeholder cards for Tier 2 */}
+                {[1, 2, 3].map((i) => (
+                  <div key={`tier2-${i}`} className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/10">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Building2 className="w-32 h-32 text-primary/20" />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h4 className="text-2xl font-bold text-foreground mb-1">SMB Client {i}</h4>
+                      <p className="text-base text-primary font-semibold mb-2">Coming Soon</p>
+                      <p className="text-sm text-muted-foreground">Success story placeholder</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* TIER 3: ENTERPRISE */}
+          <div>
+            {/* Section Header */}
+            <div className="mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-4">
+                <Briefcase className="w-4 h-4 text-primary" />
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                  Tier 3: Enterprise
+                </span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+                Fortune 500 & Enterprise Clients
+              </h3>
+            </div>
+
+            {/* Scroll container */}
+            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+              <div className="flex gap-8 min-w-max px-4">
+                {/* Placeholder cards for Tier 3 */}
+                {[1, 2, 3].map((i) => (
+                  <div key={`tier3-${i}`} className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/20 to-primary/10">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Briefcase className="w-32 h-32 text-primary/20" />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h4 className="text-2xl font-bold text-foreground mb-1">Enterprise Client {i}</h4>
+                      <p className="text-base text-primary font-semibold mb-2">Coming Soon</p>
+                      <p className="text-sm text-muted-foreground">Success story placeholder</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+         </div>
       </div>
     </section>
   );
