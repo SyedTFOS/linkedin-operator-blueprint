@@ -4,8 +4,9 @@ import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import markopoloLogo from "@/assets/markopolo-logo.png";
-import aramiLogo from "@/assets/arami-logo.png";
 import forbesLogo from "@/assets/forbes-logo.png";
+import whopLogo from "@/assets/whop-logo.png";
+import heygenLogo from "@/assets/heygen-logo.png";
 
 const BlueOceanReveal = () => {
   const logos = [
@@ -14,8 +15,9 @@ const BlueOceanReveal = () => {
     { src: yCombinatorLogo, alt: "Y Combinator" },
     { src: diversyfundLogo, alt: "Diversyfund" },
     { src: markopoloLogo, alt: "Markopolo AI" },
-    { src: aramiLogo, alt: "ARAMI.ai" },
     { src: forbesLogo, alt: "Forbes" },
+    { src: whopLogo, alt: "Whop" },
+    { src: heygenLogo, alt: "HeyGen" },
   ];
 
   return (
@@ -32,7 +34,7 @@ const BlueOceanReveal = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 md:h-16 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
               </div>
             ))}
