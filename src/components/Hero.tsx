@@ -241,7 +241,27 @@ const Hero = () => {
 
                 {/* Business Tab */}
                 <TabsContent value="business">
-                  <ClientCarousel />
+                  <div className="relative">
+                    {/* Top gradient shadow */}
+                    <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
+
+                    {/* Bottom gradient shadow */}
+                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
+
+                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }}>
+                      <CarouselContent className="-mt-4 h-[520px]">
+                        <CarouselItem className="pt-4 basis-full">
+                          <ClientCarousel />
+                        </CarouselItem>
+                      </CarouselContent>
+                      <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                        <ChevronUp className="h-4 w-4" />
+                      </CarouselPrevious>
+                      <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                        <ChevronDown className="h-4 w-4" />
+                      </CarouselNext>
+                    </Carousel>
+                  </div>
                 </TabsContent>
               </Tabs>
             </div>
