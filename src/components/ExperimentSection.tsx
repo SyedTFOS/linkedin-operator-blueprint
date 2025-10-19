@@ -6,28 +6,32 @@ const ExperimentSection = () => {
     <section className="py-24 px-6 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
             <span className="text-sm font-medium">V The Experiment</span>
           </div>
         </div>
 
         {/* Headline */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-center leading-tight">
           Then We Proved It Wasn't Luck
         </h2>
 
         {/* Subheadline */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            After landing Mastercard and Forbes-featured founders ourselves, we asked: 
-            <span className="italic"> "Can regular people replicate this?"</span>
+        <div className="max-w-3xl mx-auto text-center mb-16 space-y-6">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            After landing Mastercard and Forbes-featured founders ourselves, we asked:
           </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-4">
-            So we took agency owners, first-time founders, and industry experts—people with 
-            zero LinkedIn presence—and guided them through the exact same system.
+          
+          <p className="text-xl md:text-2xl text-foreground font-medium italic leading-relaxed">
+            "Can regular people replicate this?"
           </p>
-          <p className="text-lg md:text-xl font-semibold text-foreground mt-6">
+          
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            So we took agency owners, first-time founders, and industry experts—people with zero LinkedIn presence—and guided them through the exact same system.
+          </p>
+          
+          <p className="text-lg md:text-xl font-bold text-foreground pt-4">
             Here's what happened.
           </p>
         </div>
