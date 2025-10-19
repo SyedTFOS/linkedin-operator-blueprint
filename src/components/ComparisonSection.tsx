@@ -22,41 +22,13 @@ const ComparisonSection = () => {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header with Red Arrow */}
-        <div className="relative mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground">
-            While Everyone Else Is Stuck Here...
-          </h2>
-          
-          {/* Red Arrow from "Here..." curving down to Red Ocean */}
-          <svg 
-            className="absolute top-12 right-[5%] md:right-[15%] w-72 md:w-96 h-40 md:h-48 hidden lg:block pointer-events-none"
-            viewBox="0 0 400 200"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Curved line */}
-            <path
-              d="M350 20 Q300 40, 250 80 Q200 120, 100 160"
-              stroke="#ef4444"
-              strokeWidth="5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            {/* Arrowhead */}
-            <path
-              d="M100 160 L120 155 M100 160 L105 140"
-              stroke="#ef4444"
-              strokeWidth="5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
+        {/* Header */}
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-16 md:mb-24">
+          While Everyone Else Is Stuck Here...
+        </h2>
 
         {/* Split Screen Comparison */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16 relative">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16">
           {/* LEFT SIDE - Red Ocean */}
           <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950 via-red-900 to-gray-900 border-2 border-red-800/50 p-8 md:p-12">
             {/* Background Pattern */}
@@ -139,37 +111,11 @@ const ComparisonSection = () => {
                 ))}
               </div>
             </div>
-
-            {/* Orange Arrow from bottom-right of Blue Ocean curving to CTA */}
-            <svg 
-              className="absolute -bottom-16 -right-8 md:-right-4 w-80 md:w-[420px] h-40 md:h-48 hidden lg:block pointer-events-none z-20"
-              viewBox="0 0 420 200"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Curved line */}
-              <path
-                d="M380 20 Q340 60, 280 100 Q220 140, 120 170"
-                stroke="#f97316"
-                strokeWidth="5"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              {/* Arrowhead */}
-              <path
-                d="M120 170 L135 162 M120 170 L128 155"
-                stroke="#f97316"
-                strokeWidth="5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center max-w-3xl mx-auto relative">
+        <div className="text-center max-w-3xl mx-auto">
           <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed">
             <span className="text-foreground">The choice is simple.</span>{" "}
             <span className="text-muted-foreground">Stop fighting for scraps.</span>{" "}
