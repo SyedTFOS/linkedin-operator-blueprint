@@ -1,4 +1,4 @@
-import { Sparkles, Pickaxe, Briefcase, TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket } from "lucide-react";
+import { Sparkles, Pickaxe, Briefcase, TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket, Building2, Tv } from "lucide-react";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
@@ -422,11 +422,102 @@ const BlueOceanReveal = () => {
               </div>
             </div>
 
-            {/* Placeholder for Card 3 */}
-            <div className="group relative opacity-40">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-md"></div>
-              <div className="relative bg-background border-2 border-border/30 rounded-2xl p-6 h-full flex items-center justify-center">
-                <p className="text-muted-foreground text-sm">Card 3 Coming Soon</p>
+            {/* CARD 3: Craig Cecilio */}
+            <div className="group relative overflow-hidden rounded-2xl h-[500px]">
+              {/* Background Image */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/30 to-accent/30">
+                {/* Placeholder for photo - will be replaced with actual image */}
+                <div className="w-full h-full flex items-center justify-center">
+                  <Building2 className="w-32 h-32 text-primary/30" />
+                </div>
+              </div>
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+
+              {/* Major Win Badge - Always Visible */}
+              <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                <DollarSign className="w-4 h-4 text-primary-foreground" />
+                <span className="text-sm font-bold text-primary-foreground">$1B+ Raised</span>
+              </div>
+
+              {/* Basic Info - Always Visible */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-all duration-300">
+                <h4 className="text-2xl font-bold text-foreground mb-1">
+                  Craig Cecilio
+                </h4>
+                <p className="text-base text-primary font-semibold mb-2">DiversyFund</p>
+                <p className="text-sm text-muted-foreground">Real Estate Investment Platform</p>
+              </div>
+
+              {/* Detailed Results - Show on Hover */}
+              <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                <div className="space-y-4">
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h4 className="text-xl font-bold text-foreground mb-1">
+                      Craig Cecilio
+                    </h4>
+                    <p className="text-sm text-primary font-semibold">DiversyFund • Fortune 500 Level</p>
+                  </div>
+
+                  {/* The Empire */}
+                  <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
+                    The Empire:
+                  </p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <DollarSign className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">$1 Billion+ capital raised</p>
+                        <p className="text-xs text-muted-foreground">From 40,000+ investors</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Users className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">500,000+ participants</p>
+                        <p className="text-xs text-muted-foreground">30,000+ active users</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <TrendingUp className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">300% annual growth</p>
+                        <p className="text-xs text-muted-foreground">Over 3 years</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Tv className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">Forbes, CNBC, Bloomberg</p>
+                        <p className="text-xs text-muted-foreground">Major media features</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                      <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <MessageCircle className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-base font-bold text-primary">143,000+ social following</p>
+                        <p className="text-xs text-muted-foreground">27K LinkedIn + 116K Instagram</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
