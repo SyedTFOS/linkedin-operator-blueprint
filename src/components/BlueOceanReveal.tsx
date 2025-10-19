@@ -20,7 +20,7 @@ const BlueOceanReveal = () => {
     <section className="-mt-16 md:-mt-20 pb-8 md:pb-12 bg-background">
       <div className="container mx-auto px-4">
         {/* Scrolling Logo Bar */}
-        <div className="mb-12 overflow-hidden">
+        <div className="mb-20 md:mb-24 overflow-hidden">
           <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
             {[...logos, ...logos].map((logo, index) => (
               <div
