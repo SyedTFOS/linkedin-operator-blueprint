@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket, Building2, Tv, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+import robertoLuna from "@/assets/roberto-luna.png";
 
 type TierType = "tier1" | "tier2" | "tier3";
 
@@ -82,10 +83,10 @@ export const ClientCarousel = () => {
                 {/* Card 1 - Roberto */}
                 <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
                   <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Users className="w-32 h-32 text-primary/30" />
-                      </div>
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                      style={{ backgroundImage: `url(${robertoLuna})` }}
+                    >
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
                     <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
