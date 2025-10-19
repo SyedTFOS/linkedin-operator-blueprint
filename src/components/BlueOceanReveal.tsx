@@ -52,19 +52,39 @@ const BlueOceanReveal = () => {
         </div>
 
         {/* Blue Ocean Story Section */}
-        <div className="max-w-4xl mx-auto text-center space-y-6 mt-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            We Found The Last Blue Ocean By Accident
-          </h2>
-          <div className="text-lg md:text-xl text-muted-foreground leading-relaxed space-y-4">
-            <p>
-              In 6 months, we went from running LinkedIn agencies to signing contracts most people only dream about.
-              We weren't signing local businesses or churn and burn Agencies, we were getting Forbes featured founders.
-              Y Combinator backed companies. Fortune 500s. Royal government contracts. $1B+ investment firms.
-            </p>
-            <p className="text-xl md:text-2xl font-semibold text-foreground">
-              And we realized: No other business model gives you access to clients like this.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-20">
+          {/* Left Side - Content */}
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              We Found The Last{" "}
+              <span className="text-primary border-b-4 border-primary/40">Blue Ocean</span>{" "}
+              By Accident
+            </h2>
+            
+            <div className="text-base md:text-lg text-muted-foreground leading-relaxed space-y-6 pt-4">
+              <p className="text-lg">
+                In <span className="font-bold text-primary">6 months</span>, we went from running LinkedIn agencies
+                to signing contracts most people only dream about.
+              </p>
+              
+              <p className="text-lg">
+                We weren't signing local businesses or churn and burn Agencies, we were getting{" "}
+                <span className="font-bold text-foreground">Forbes featured founders</span>.{" "}
+                <span className="font-bold text-foreground">Y Combinator backed companies</span>.{" "}
+                <span className="font-bold text-foreground">Fortune 500s</span>.{" "}
+                <span className="font-bold text-foreground">Royal government contracts</span>.{" "}
+                <span className="font-bold text-foreground">$1B+ investment firms</span>.
+              </p>
+              
+              <p className="text-xl md:text-2xl font-bold text-foreground pt-4 leading-relaxed border-l-4 border-primary pl-6">
+                And we realized: No other business model gives you access to clients like this.
+              </p>
+            </div>
+          </div>
+          
+          {/* Right Side - Reserved for images/widgets */}
+          <div className="hidden lg:block">
+            {/* Space reserved for future content */}
           </div>
         </div>
       </div>
