@@ -1,4 +1,4 @@
-import { Sparkles, Pickaxe } from "lucide-react";
+import { Sparkles, Pickaxe, Briefcase } from "lucide-react";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
@@ -95,16 +95,19 @@ const BlueOceanReveal = () => {
             </div>
 
             {/* The Proof Section */}
-            <div className="space-y-4 mt-12 pt-8 border-t border-border/40">
+            <div className="space-y-4 mt-20 pt-12 border-t border-border/40">
               {/* The Proof Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
+                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Briefcase className="w-3 h-3 text-primary" />
+                </div>
                 <span className="text-sm font-semibold text-foreground">
-                  💼 The Proof
+                  The Proof
                 </span>
               </div>
 
               <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                We Started Helping Major Whales With LinkedIn
+                We Started Helping <span className="text-primary">Major Whales</span> With LinkedIn
               </h3>
 
               <p className="text-lg text-muted-foreground">
