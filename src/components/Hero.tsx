@@ -57,9 +57,11 @@ const Hero = () => {
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
-                Build a Six-Figure
-                <br />
-                <span className="text-primary">LinkedIn Agency</span>
+                <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To Sign Clients{" "}
+                <span className="inline-flex items-center gap-2">
+                  Like this
+                  <ArrowRight className="w-8 h-8 text-primary hidden lg:inline animate-pulse" />
+                </span>
               </h1>
 
               <p className="text-xl text-muted-foreground leading-relaxed">
