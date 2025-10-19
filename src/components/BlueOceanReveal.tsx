@@ -93,6 +93,24 @@ const BlueOceanReveal = () => {
                 And we realized: No other business model gives you access to clients like this.
               </p>
             </div>
+
+            {/* The Proof Section */}
+            <div className="space-y-4 mt-12 pt-8 border-t border-border/40">
+              {/* The Proof Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
+                <span className="text-sm font-semibold text-foreground">
+                  💼 The Proof
+                </span>
+              </div>
+
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
+                We Started Helping Major Whales With LinkedIn
+              </h3>
+
+              <p className="text-lg text-muted-foreground">
+                Before we turned it into a system, we used it to land the clients everyone else dreams about.
+              </p>
+            </div>
           </div>
           
           {/* Right Side - 12 Month Progression */}
