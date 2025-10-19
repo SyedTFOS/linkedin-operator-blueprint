@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card } from "@/components/ui/card";
+import StudentCard from "./StudentCard";
 
 const ExperimentSection = () => {
   return (
@@ -60,48 +60,98 @@ const ExperimentSection = () => {
           </TabsList>
 
           <TabsContent value="beginners" className="mt-8">
-            <Card className="p-8 bg-card/50 backdrop-blur border-primary/20">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4">Starting From Zero</h3>
-                <p className="text-muted-foreground mb-6">
-                  Complete newcomers with no LinkedIn presence or network
-                </p>
-                {/* Student results will go here */}
-                <div className="min-h-[400px] flex items-center justify-center border-2 border-dashed border-muted-foreground/20 rounded-lg">
-                  <p className="text-muted-foreground">Student results coming soon...</p>
-                </div>
-              </div>
-            </Card>
+            <div className="space-y-6">
+              <StudentCard
+                name="Komail Gillani"
+                role="Complete Beginner"
+                situation="Zero online business experience. Corporate recruiting background. Came to us 4 months ago."
+                results={[
+                  "$14K deal closed in first 3 weeks",
+                  "Now an established coach inside LIOP",
+                  "Positioned in corporate recruiting niche",
+                  "Built authority from scratch"
+                ]}
+              />
+              <StudentCard
+                name="Vasilije Simic"
+                role="Complete Beginner"
+                results={[
+                  "$25K/month LinkedIn agency built",
+                  "7,800 followers",
+                  "20+ active clients",
+                  "20+ LinkedIn endorsements",
+                  "Dominating Agencies & SaaS space",
+                  "Guarantees booked meetings in 60 days"
+                ]}
+              />
+            </div>
           </TabsContent>
 
           <TabsContent value="agency-owners" className="mt-8">
-            <Card className="p-8 bg-card/50 backdrop-blur border-primary/20">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4">Experienced Operators</h3>
-                <p className="text-muted-foreground mb-6">
-                  Agency owners looking to scale their client acquisition
-                </p>
-                {/* Student results will go here */}
-                <div className="min-h-[400px] flex items-center justify-center border-2 border-dashed border-muted-foreground/20 rounded-lg">
-                  <p className="text-muted-foreground">Student results coming soon...</p>
-                </div>
-              </div>
-            </Card>
+            <div className="space-y-6">
+              <StudentCard
+                name="Ethan Clouser"
+                role="Ex-Agency Owner"
+                situation="Running LinkedIn ads part-time, making just $1K/month. He was good—but stuck."
+                transformation="We positioned him as a category owner, built a client acquisition engine, and showed him how to scale with systems."
+                results={[
+                  "4 Weeks: $10K/month",
+                  "Fully booked ghostwriting agency",
+                  "6 Months: $27K/month",
+                  "Exited for healthy 5-figure deal",
+                  "75-80% profit margins"
+                ]}
+                hasInterview={true}
+              />
+              <StudentCard
+                name="Walter Chung"
+                role="Ex-Agency Owner"
+                situation="Failing business. Struggling with fulfillment. Joined us 3 months ago."
+                results={[
+                  "Now: $15K/month agency",
+                  "1M impressions in 90 days",
+                  "Built on a brand new account",
+                  "Profitable fulfillment systems in place"
+                ]}
+                hasInterview={true}
+              />
+              <StudentCard
+                name="Sam Beck"
+                role="Ex-Agency Owner"
+                results={[
+                  "Transformation details coming soon"
+                ]}
+              />
+            </div>
           </TabsContent>
 
           <TabsContent value="experts" className="mt-8">
-            <Card className="p-8 bg-card/50 backdrop-blur border-primary/20">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4">Industry Veterans</h3>
-                <p className="text-muted-foreground mb-6">
-                  Founders and experts expanding their LinkedIn reach
-                </p>
-                {/* Student results will go here */}
-                <div className="min-h-[400px] flex items-center justify-center border-2 border-dashed border-muted-foreground/20 rounded-lg">
-                  <p className="text-muted-foreground">Student results coming soon...</p>
-                </div>
-              </div>
-            </Card>
+            <div className="space-y-6">
+              <StudentCard
+                name="Sam Arami"
+                role="Industry Expert (AI)"
+                background="2x exited founder. Knew AI inside and out. Wanted to build a LinkedIn business."
+                results={[
+                  "$40K/month in 6 months",
+                  "15 active clients",
+                  "Built 7-figure agency",
+                  "Dominates AI Agency niche",
+                  "Now provides content services for top AI companies"
+                ]}
+              />
+              <StudentCard
+                name="Aryan Shah"
+                role="Industry Expert (Tech)"
+                background="Previously exited LIA (Bambo) for multi 5-figures. Worked with 50+ agencies and 7-figure creators including Beehive and Smartlead."
+                whatTheyDoing="→ 5,500 followers\n→ Productized his service\n→ Building first AI LinkedIn companion\n→ In talks with multiple investors for funding"
+                results={[
+                  "5,500 followers",
+                  "Productized his service",
+                  "Building first AI LinkedIn companion",
+                  "In talks with multiple investors for funding"
+                ]}
+              />
+            </div>
           </TabsContent>
         </Tabs>
       </div>
