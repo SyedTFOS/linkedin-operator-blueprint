@@ -17,7 +17,7 @@ const BlueOceanReveal = () => {
   ];
 
   return (
-    <section className="pb-8 md:pb-12 bg-background">
+    <section className="-mt-16 md:-mt-20 pb-8 md:pb-12 bg-background">
       <div className="container mx-auto px-4">
         {/* Scrolling Logo Bar */}
         <div className="mb-12 overflow-hidden">
