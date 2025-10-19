@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket, Building2, Tv, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import robertoLuna from "@/assets/roberto-luna.png";
@@ -13,6 +13,7 @@ type TierType = "tier1" | "tier2" | "tier3";
 export const ClientCarousel = () => {
   const [activeTier, setActiveTier] = useState<TierType>("tier1");
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
+  const [isArrowHovered, setIsArrowHovered] = useState(false);
 
   const scrollPrev = () => {
     setActiveTier(prev => {
@@ -29,6 +30,17 @@ export const ClientCarousel = () => {
       return "tier1";
     });
   };
+
+  // Auto-scroll every 4 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (!isArrowHovered) {
+        scrollNext();
+      }
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [isArrowHovered, activeTier]);
 
   return (
     <div className="mt-24">
@@ -77,6 +89,8 @@ export const ClientCarousel = () => {
         {/* Left Arrow */}
         <button
           onClick={scrollPrev}
+          onMouseEnter={() => setIsArrowHovered(true)}
+          onMouseLeave={() => setIsArrowHovered(false)}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
           aria-label="Previous"
         >
@@ -86,6 +100,8 @@ export const ClientCarousel = () => {
         {/* Right Arrow */}
         <button
           onClick={scrollNext}
+          onMouseEnter={() => setIsArrowHovered(true)}
+          onMouseLeave={() => setIsArrowHovered(false)}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
           aria-label="Next"
         >

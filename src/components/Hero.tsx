@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import logo from "@/assets/logo-text.png";
 import robertoLuna from "@/assets/roberto-luna.png";
@@ -8,6 +9,37 @@ import craigCecilio from "@/assets/craig-cecilio.png";
 import samAramiVideo from "@/assets/sam-arami-video.mp4";
 
 const Hero = () => {
+  const [studentsApi, setStudentsApi] = useState<CarouselApi>();
+  const [businessApi, setBusinessApi] = useState<CarouselApi>();
+  const [isStudentsHovered, setIsStudentsHovered] = useState(false);
+  const [isBusinessHovered, setIsBusinessHovered] = useState(false);
+
+  // Auto-scroll for Agency Students carousel
+  useEffect(() => {
+    if (!studentsApi) return;
+
+    const intervalId = setInterval(() => {
+      if (!isStudentsHovered) {
+        studentsApi.scrollNext();
+      }
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [studentsApi, isStudentsHovered]);
+
+  // Auto-scroll for Business carousel
+  useEffect(() => {
+    if (!businessApi) return;
+
+    const intervalId = setInterval(() => {
+      if (!isBusinessHovered) {
+        businessApi.scrollNext();
+      }
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [businessApi, isBusinessHovered]);
+
   return (
     <section className="relative bg-background">
       {/* Navigation */}
@@ -147,7 +179,7 @@ const Hero = () => {
                     {/* Bottom gradient shadow */}
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
-                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }}>
+                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }} setApi={setStudentsApi}>
                       <CarouselContent className="-mt-4 h-[500px]">
                         {/* Testimonial 1 */}
                         <CarouselItem className="pt-4 basis-full">
@@ -239,10 +271,18 @@ const Hero = () => {
                           </div>
                         </CarouselItem>
                       </CarouselContent>
-                      <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                      <CarouselPrevious 
+                        className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
+                        onMouseEnter={() => setIsStudentsHovered(true)}
+                        onMouseLeave={() => setIsStudentsHovered(false)}
+                      >
                         <ChevronUp className="h-4 w-4" />
                       </CarouselPrevious>
-                      <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                      <CarouselNext 
+                        className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
+                        onMouseEnter={() => setIsStudentsHovered(true)}
+                        onMouseLeave={() => setIsStudentsHovered(false)}
+                      >
                         <ChevronDown className="h-4 w-4" />
                       </CarouselNext>
                     </Carousel>
@@ -258,7 +298,7 @@ const Hero = () => {
                     {/* Bottom gradient shadow */}
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
-                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }}>
+                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }} setApi={setBusinessApi}>
                       <CarouselContent className="-mt-4 h-[500px]">
                         {/* Roberto H. Luna */}
                         <CarouselItem className="pt-4 basis-full">
@@ -438,10 +478,18 @@ const Hero = () => {
                           </div>
                         </CarouselItem>
                       </CarouselContent>
-                      <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                      <CarouselPrevious 
+                        className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
+                        onMouseEnter={() => setIsBusinessHovered(true)}
+                        onMouseLeave={() => setIsBusinessHovered(false)}
+                      >
                         <ChevronUp className="h-4 w-4" />
                       </CarouselPrevious>
-                      <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                      <CarouselNext 
+                        className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
+                        onMouseEnter={() => setIsBusinessHovered(true)}
+                        onMouseLeave={() => setIsBusinessHovered(false)}
+                      >
                         <ChevronDown className="h-4 w-4" />
                       </CarouselNext>
                     </Carousel>
