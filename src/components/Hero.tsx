@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Play, ChevronUp, ChevronDown } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ClientCarousel } from "@/components/ClientCarousel";
 import logo from "@/assets/logo-text.png";
 
 const Hero = () => {
@@ -240,83 +241,7 @@ const Hero = () => {
 
                 {/* Business Tab */}
                 <TabsContent value="business">
-                  <div className="relative">
-                    {/* Top gradient shadow */}
-                    <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
-
-                    {/* Bottom gradient shadow */}
-                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
-
-                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }}>
-                      <CarouselContent className="-mt-4 h-[500px]">
-                        {/* Business Testimonial 1 */}
-                        <CarouselItem className="pt-4 basis-full">
-                          <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
-                            <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden group cursor-pointer">
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                                </div>
-                              </div>
-                              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent" />
-                                  <div>
-                                    <p className="font-semibold text-sm">TechStart Inc.</p>
-                                    <p className="text-xs text-muted-foreground">New York, USA</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <h4 className="font-bold text-lg">3X Our Lead Generation</h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed">
-                                "Working with this team transformed our LinkedIn presence. We went from{" "}
-                                <span className="text-primary font-semibold">50 to 150+ qualified leads per month</span>{" "}
-                                in just 2 quarters."
-                              </p>
-                            </div>
-                          </div>
-                        </CarouselItem>
-
-                        {/* Business Testimonial 2 */}
-                        <CarouselItem className="pt-4 basis-full">
-                          <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
-                            <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg overflow-hidden group cursor-pointer">
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                                </div>
-                              </div>
-                              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary" />
-                                  <div>
-                                    <p className="font-semibold text-sm">Global Solutions Ltd</p>
-                                    <p className="text-xs text-muted-foreground">Singapore</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <h4 className="font-bold text-lg">$500K in Pipeline Revenue</h4>
-                              <p className="text-sm text-muted-foreground leading-relaxed">
-                                "Their LinkedIn strategies generated{" "}
-                                <span className="text-primary font-semibold">over $500,000 in pipeline</span> for our
-                                B2B business. Best ROI we've seen from any channel."
-                              </p>
-                            </div>
-                          </div>
-                        </CarouselItem>
-                      </CarouselContent>
-                      <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
-                        <ChevronUp className="h-4 w-4" />
-                      </CarouselPrevious>
-                      <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
-                        <ChevronDown className="h-4 w-4" />
-                      </CarouselNext>
-                    </Carousel>
-                  </div>
+                  <ClientCarousel />
                 </TabsContent>
               </Tabs>
             </div>
