@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StudentCard from "./StudentCard";
 import aryanShahPhoto from "@/assets/aryan-shah.png";
 import vasilijeSimicPhoto from "@/assets/vasilije-simic.png";
+import komailGillaniPhoto from "@/assets/komail-gillani.png";
 
 const ExperimentSection = () => {
   return (
@@ -66,6 +67,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Komail Gillani"
                 role="Complete Beginner"
+                photoUrl={komailGillaniPhoto}
                 situation="Zero online business experience. Corporate recruiting background. Came to us 4 months ago."
                 results={[
                   "$14K deal closed in first 3 weeks",
