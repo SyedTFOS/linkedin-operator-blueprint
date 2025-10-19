@@ -16,12 +16,10 @@ const Hero = () => {
 
   // Auto-scroll for Agency Students carousel
   useEffect(() => {
-    if (!studentsApi) return;
+    if (!studentsApi || isStudentsHovered) return;
 
     const intervalId = setInterval(() => {
-      if (!isStudentsHovered) {
-        studentsApi.scrollNext();
-      }
+      studentsApi.scrollNext();
     }, 4000);
 
     return () => clearInterval(intervalId);
@@ -29,12 +27,10 @@ const Hero = () => {
 
   // Auto-scroll for Business carousel
   useEffect(() => {
-    if (!businessApi) return;
+    if (!businessApi || isBusinessHovered) return;
 
     const intervalId = setInterval(() => {
-      if (!isBusinessHovered) {
-        businessApi.scrollNext();
-      }
+      businessApi.scrollNext();
     }, 4000);
 
     return () => clearInterval(intervalId);

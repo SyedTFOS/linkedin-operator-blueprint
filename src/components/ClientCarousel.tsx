@@ -33,14 +33,18 @@ export const ClientCarousel = () => {
 
   // Auto-scroll every 4 seconds
   useEffect(() => {
+    if (isArrowHovered) return;
+
     const intervalId = setInterval(() => {
-      if (!isArrowHovered) {
-        scrollNext();
-      }
+      setActiveTier(prev => {
+        if (prev === "tier1") return "tier2";
+        if (prev === "tier2") return "tier3";
+        return "tier1";
+      });
     }, 4000);
 
     return () => clearInterval(intervalId);
-  }, [isArrowHovered, activeTier]);
+  }, [isArrowHovered]);
 
   return (
     <div className="mt-24">
