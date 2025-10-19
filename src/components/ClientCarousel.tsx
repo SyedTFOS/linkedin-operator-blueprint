@@ -8,6 +8,7 @@ import samAramiVideo from "@/assets/sam-arami-video.mp4";
 import benAlistor from "@/assets/ben-alistor.png";
 import jessicaGreen from "@/assets/jessica-green.png";
 import lianLim from "@/assets/lian-lim.png";
+import stevanPetrusic from "@/assets/stevan-petrusic.png";
 
 type TierType = "tier1" | "tier2" | "tier3";
 
@@ -818,6 +819,67 @@ export const ClientCarousel = () => {
                             </div>
                             <div className="flex-1">
                               <p className="text-base font-bold text-primary">Created HeyGen ($30M+ ARR)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stevan Petrusic */}
+                <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
+                  <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
+                    {/* Background Image */}
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                      style={{ backgroundImage: `url(${stevanPetrusic})` }}
+                    />
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                    
+                    {/* Major Win Badge */}
+                    <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                      <Briefcase className="w-4 h-4 text-primary-foreground" />
+                      <span className="text-sm font-bold text-primary-foreground">GTM Expert 🎯</span>
+                    </div>
+                    
+                    {/* Basic Info */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h4 className="text-2xl font-bold text-foreground mb-1">Stevan Petrusic</h4>
+                      <p className="text-base text-primary font-semibold mb-2">Player Two</p>
+                      <p className="text-sm text-muted-foreground">LinkedIn Systems Expert</p>
+                    </div>
+
+                    {/* Detailed Results - Show on Hover */}
+                    <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                      <div className="space-y-4">
+                        <div className="mb-6">
+                          <h4 className="text-xl font-bold text-foreground mb-1">Stevan Petrusic</h4>
+                          <p className="text-sm text-primary font-semibold">Player Two</p>
+                        </div>
+
+                        <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
+                          The Expertise:
+                        </p>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Briefcase className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">LinkedIn GTM Systems 🎯</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                            <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                              <Building2 className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-base font-bold text-primary">🔧 Enterprise Systems Setup</p>
                             </div>
                           </div>
                         </div>
