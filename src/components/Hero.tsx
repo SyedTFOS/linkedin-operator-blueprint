@@ -56,12 +56,11 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <p className="text-lg md:text-xl text-muted-foreground flex items-center gap-2">
+              <div className="space-y-3">
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
                   <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To Sign Clients Like this
-                  <ArrowRight className="w-5 h-5 text-primary hidden lg:inline animate-pulse" />
                 </p>
-                <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
                   Build A LinkedIn Agency<br />
                   That Works With <span className="text-primary">REAL Businesses</span>
                 </h1>
