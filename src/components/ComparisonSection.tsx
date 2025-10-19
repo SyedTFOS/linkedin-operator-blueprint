@@ -67,7 +67,17 @@ const ComparisonSection = () => {
           </div>
 
           {/* RIGHT SIDE - Blue Ocean */}
-          <div className="relative overflow-hidden rounded-3xl lg:rounded-l-none bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 border-2 border-blue-700/50 p-8 md:p-12">
+          <div className="relative overflow-visible rounded-3xl lg:rounded-l-none bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 p-8 md:p-12 transform transition-all duration-500 hover:scale-[1.02] lg:hover:scale-105 hover:z-10">
+            {/* Animated Glowing Border */}
+            <div className="absolute inset-0 rounded-3xl lg:rounded-l-none">
+              <div className="absolute inset-0 rounded-3xl lg:rounded-l-none border-4 border-orange-500/60 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-3xl lg:rounded-l-none border-2 border-orange-400"></div>
+            </div>
+
+            {/* Pulsing Glow Effects */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-400 rounded-3xl lg:rounded-l-none blur-xl opacity-40 animate-pulse"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-pulse"></div>
+
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -76,13 +86,10 @@ const ComparisonSection = () => {
               }} />
             </div>
 
-            {/* Glow Effect */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
-
             <div className="relative z-10">
               {/* Header */}
               <div className="mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-orange-400 mb-2 drop-shadow-[0_0_8px_rgba(251,146,60,0.5)]">
                   The LinkedIn Blue Ocean
                 </h3>
                 <p className="text-orange-300 text-sm md:text-base font-medium">
@@ -93,11 +100,11 @@ const ComparisonSection = () => {
               {/* Points */}
               <div className="space-y-4">
                 {blueOceanPoints.map((point, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/40 flex items-center justify-center mt-0.5">
-                      <Check className="w-3.5 h-3.5 text-orange-300" strokeWidth={3} />
+                  <div key={index} className="flex items-start gap-3 group/item">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/60 flex items-center justify-center mt-0.5 shadow-[0_0_10px_rgba(249,115,22,0.5)]">
+                      <Check className="w-3.5 h-3.5 text-orange-200" strokeWidth={3} />
                     </div>
-                    <p className="text-white text-sm md:text-base leading-relaxed font-medium">
+                    <p className="text-white text-sm md:text-base leading-relaxed font-medium group-hover/item:text-orange-50 transition-colors">
                       {point}
                     </p>
                   </div>
@@ -112,7 +119,7 @@ const ComparisonSection = () => {
           <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed">
             <span className="text-foreground">The choice is simple.</span>{" "}
             <span className="text-muted-foreground">Stop fighting for scraps.</span>{" "}
-            <span className="text-orange-500">Enter the blue ocean.</span>
+            <span className="text-orange-500 drop-shadow-[0_0_12px_rgba(249,115,22,0.6)]">Enter the blue ocean.</span>
           </p>
         </div>
       </div>
