@@ -5,8 +5,6 @@ import yCombinatorLogo from "@/assets/y-combinator-logo.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import forbesLogo from "@/assets/forbes-logo.png";
-import whopLogo from "@/assets/whop-logo.png";
-import heygenLogo from "@/assets/heygen-logo.png";
 
 const BlueOceanReveal = () => {
   const logos = [
@@ -16,8 +14,6 @@ const BlueOceanReveal = () => {
     { src: diversyfundLogo, alt: "Diversyfund" },
     { src: playertwoLogo, alt: "Player Two" },
     { src: forbesLogo, alt: "Forbes" },
-    { src: whopLogo, alt: "Whop" },
-    { src: heygenLogo, alt: "HeyGen" },
   ];
 
   return (
