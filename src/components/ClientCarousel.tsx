@@ -11,8 +11,21 @@ export const ClientCarousel = () => {
   const [activeTier, setActiveTier] = useState<TierType>("tier1");
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
 
-  const scrollPrev = () => emblaApi?.scrollPrev();
-  const scrollNext = () => emblaApi?.scrollNext();
+  const scrollPrev = () => {
+    setActiveTier(prev => {
+      if (prev === "tier1") return "tier3";
+      if (prev === "tier2") return "tier1";
+      return "tier2";
+    });
+  };
+  
+  const scrollNext = () => {
+    setActiveTier(prev => {
+      if (prev === "tier1") return "tier2";
+      if (prev === "tier2") return "tier3";
+      return "tier1";
+    });
+  };
 
   return (
     <div className="mt-24">
