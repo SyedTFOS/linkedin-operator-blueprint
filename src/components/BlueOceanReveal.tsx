@@ -69,7 +69,7 @@ const BlueOceanReveal = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               We Found The Last{" "}
               <span className="inline-block">
-                <span className="text-primary">$100M Blue Ocean</span>
+                <span className="text-primary">$120B Blue Ocean</span>
                 <div className="h-1 bg-primary/40 mt-1"></div>
               </span>{" "}
               By Accident...
