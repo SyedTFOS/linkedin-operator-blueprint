@@ -3,6 +3,7 @@ import { TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket, Build
 import useEmblaCarousel from "embla-carousel-react";
 import robertoLuna from "@/assets/roberto-luna.png";
 import rubaiyatHossain from "@/assets/rubaiyat-hossain.png";
+import craigCecilio from "@/assets/craig-cecilio.png";
 
 type TierType = "tier1" | "tier2" | "tier3";
 
@@ -262,11 +263,11 @@ export const ClientCarousel = () => {
                 {/* Card 3 - Craig */}
                 <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
                   <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                    {/* Background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/30 to-accent/30">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Building2 className="w-32 h-32 text-primary/30" />
-                      </div>
+                    {/* Background Image */}
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                      style={{ backgroundImage: `url(${craigCecilio})` }}
+                    >
                     </div>
                     
                     {/* Gradient Overlay */}
