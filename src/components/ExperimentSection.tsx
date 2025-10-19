@@ -6,6 +6,7 @@ import komailGillaniPhoto from "@/assets/komail-gillani.png";
 import ethanClouserPhoto from "@/assets/ethan-clouser.png";
 import walterChungPhoto from "@/assets/walter-chung.png";
 import samBeckPhoto from "@/assets/sam-beck.png";
+import samAramiPhoto from "@/assets/sam-arami-photo.png";
 
 const ExperimentSection = () => {
   return (
@@ -141,6 +142,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Sam Arami"
                 role="Industry Expert (AI)"
+                photoUrl={samAramiPhoto}
                 background="2x exited founder. Knew AI inside and out. Wanted to build a LinkedIn business."
                 results={[
                   "$40K/month in 6 months",
