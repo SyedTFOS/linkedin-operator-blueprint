@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Sparkles, Pickaxe } from "lucide-react";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
@@ -58,7 +58,7 @@ const BlueOceanReveal = () => {
             {/* Discovery Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
               <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                <Sparkles className="w-3 h-3 text-primary" />
+                <Pickaxe className="w-3 h-3 text-primary" />
               </div>
               <span className="text-sm font-semibold text-foreground">
                 The Discovery
