@@ -219,28 +219,30 @@ const BlueOceanReveal = () => {
           </div>
         </div>
 
-        {/* Client Hero Cards Section */}
-        <div className="mt-24 space-y-16">
-          {/* TIER 1: WHALES */}
-          <div>
-            {/* Section Header */}
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+        {/* Client Hero Cards Section - Horizontal Tiers */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              Our Client Results Across All Tiers
+            </h3>
+          </div>
+
+          {/* Horizontal Tier Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* TIER 1: WHALES */}
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full">
                 <TrendingUp className="w-4 h-4 text-primary" />
                 <span className="text-sm font-bold text-primary uppercase tracking-wider">
                   Tier 1: Whales
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                The Ultra-High-Value Clients
-              </h3>
-            </div>
-
-            {/* Scroll container */}
-            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-              <div className="flex gap-8 min-w-max px-4">
-            {/* CARD 1: Roberto H. Luna */}
-            <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+              
+              {/* Scrollable cards for Tier 1 */}
+              <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+                <div className="flex flex-col gap-6 min-h-[1600px]">
+                {/* CARD 1: Roberto H. Luna */}
+                <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full flex-shrink-0">
               {/* Background Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20">
                 {/* Placeholder for photo - will be replaced with actual image */}
@@ -337,8 +339,8 @@ const BlueOceanReveal = () => {
               </div>
             </div>
 
-            {/* CARD 2: Rubaiyat Hossain */}
-            <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+                {/* CARD 2: Rubaiyat Hossain */}
+                <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full flex-shrink-0">
               {/* Background Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent/40 via-primary/30 to-accent/20">
                 {/* Placeholder for photo - will be replaced with actual image */}
@@ -425,8 +427,8 @@ const BlueOceanReveal = () => {
               </div>
             </div>
 
-            {/* CARD 3: Craig Cecilio */}
-            <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+                {/* CARD 3: Craig Cecilio */}
+                <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full flex-shrink-0">
               {/* Background Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/30 to-accent/30">
                 {/* Placeholder for photo - will be replaced with actual image */}
@@ -521,33 +523,26 @@ const BlueOceanReveal = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* TIER 2: SMBs */}
-          <div>
-            {/* Section Header */}
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-4">
-                <Building2 className="w-4 h-4 text-primary" />
-                <span className="text-sm font-bold text-primary uppercase tracking-wider">
-                  Tier 2: SMBs
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                Small & Medium Business Success Stories
-              </h3>
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+              <Building2 className="w-4 h-4 text-primary" />
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                Tier 2: SMBs
+              </span>
             </div>
-
-            {/* Scroll container */}
-            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-              <div className="flex gap-8 min-w-max px-4">
-                {/* Placeholder cards for Tier 2 */}
+            
+            {/* Scrollable cards for Tier 2 */}
+            <div className="overflow-y-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent max-h-[1600px]">
+              <div className="flex flex-col gap-6">
                 {[1, 2, 3].map((i) => (
-                  <div key={`tier2-${i}`} className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+                  <div key={`tier2-${i}`} className="group relative overflow-hidden rounded-2xl h-[500px] w-full flex-shrink-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/10">
                       <div className="w-full h-full flex items-center justify-center">
                         <Building2 className="w-32 h-32 text-primary/20" />
@@ -566,26 +561,19 @@ const BlueOceanReveal = () => {
           </div>
 
           {/* TIER 3: ENTERPRISE */}
-          <div>
-            {/* Section Header */}
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-4">
-                <Briefcase className="w-4 h-4 text-primary" />
-                <span className="text-sm font-bold text-primary uppercase tracking-wider">
-                  Tier 3: Enterprise
-                </span>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                Fortune 500 & Enterprise Clients
-              </h3>
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
+              <Briefcase className="w-4 h-4 text-primary" />
+              <span className="text-sm font-bold text-primary uppercase tracking-wider">
+                Tier 3: Enterprise
+              </span>
             </div>
-
-            {/* Scroll container */}
-            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-              <div className="flex gap-8 min-w-max px-4">
-                {/* Placeholder cards for Tier 3 */}
+            
+            {/* Scrollable cards for Tier 3 */}
+            <div className="overflow-y-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent max-h-[1600px]">
+              <div className="flex flex-col gap-6">
                 {[1, 2, 3].map((i) => (
-                  <div key={`tier3-${i}`} className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
+                  <div key={`tier3-${i}`} className="group relative overflow-hidden rounded-2xl h-[500px] w-full flex-shrink-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/20 to-primary/10">
                       <div className="w-full h-full flex items-center justify-center">
                         <Briefcase className="w-32 h-32 text-primary/20" />
@@ -602,7 +590,8 @@ const BlueOceanReveal = () => {
               </div>
             </div>
           </div>
-         </div>
+          </div>
+        </div>
       </div>
     </section>
   );
