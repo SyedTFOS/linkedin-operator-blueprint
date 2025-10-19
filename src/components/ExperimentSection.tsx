@@ -3,6 +3,7 @@ import StudentCard from "./StudentCard";
 import aryanShahPhoto from "@/assets/aryan-shah.png";
 import vasilijeSimicPhoto from "@/assets/vasilije-simic.png";
 import komailGillaniPhoto from "@/assets/komail-gillani.png";
+import ethanClouserPhoto from "@/assets/ethan-clouser.png";
 
 const ExperimentSection = () => {
   return (
@@ -97,6 +98,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Ethan Clouser"
                 role="Ex-Agency Owner"
+                photoUrl={ethanClouserPhoto}
                 situation="Running LinkedIn ads part-time, making just $1K/month. He was good—but stuck."
                 transformation="We positioned him as a category owner, built a client acquisition engine, and showed him how to scale with systems."
                 results={[
