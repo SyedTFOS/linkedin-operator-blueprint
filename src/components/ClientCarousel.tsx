@@ -470,8 +470,101 @@ export const ClientCarousel = () => {
                   </div>
                 </div>
 
-                {/* Placeholder Cards */}
-                {[2, 3].map((i) => (
+                {/* Card 2 - Ben Alistor */}
+                <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
+                  <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
+                    {/* Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <TrendingUp className="w-32 h-32 text-primary/30" />
+                      </div>
+                    </div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                    
+                    {/* Major Win Badge */}
+                    <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                      <DollarSign className="w-4 h-4 text-primary-foreground" />
+                      <span className="text-sm font-bold text-primary-foreground">7-Figure Business</span>
+                    </div>
+                    
+                    {/* Basic Info */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h4 className="text-2xl font-bold text-foreground mb-1">Ben Alistor</h4>
+                      <p className="text-base text-primary font-semibold mb-2">Creator Coach</p>
+                      <p className="text-sm text-muted-foreground">Creator Coaching • 58,000+ Instagram Following</p>
+                    </div>
+
+                    {/* Detailed Results - Show on Hover */}
+                    <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                      <div className="space-y-4">
+                        <div className="mb-6">
+                          <h4 className="text-xl font-bold text-foreground mb-1">Ben Alistor</h4>
+                          <p className="text-sm text-primary font-semibold">Creator Coach • Instagram → LinkedIn</p>
+                        </div>
+
+                        <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
+                          The Pivot:
+                        </p>
+                        
+                        <div className="space-y-3">
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Users className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">58,000+ Instagram followers</p>
+                              <p className="text-xs text-muted-foreground">Pre-LinkedIn platform</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <TrendingUp className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">2,700 LinkedIn followers</p>
+                              <p className="text-xs text-muted-foreground">Started from scratch with us</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Rocket className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">30-50 leads/month on autopilot</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3">
+                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Award className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-sm font-semibold text-foreground">Blue ocean pioneer</p>
+                              <p className="text-xs text-muted-foreground">Recognized LinkedIn's potential early</p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                            <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                              <DollarSign className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-base font-bold text-primary">7-figure+ creator coaching business</p>
+                              <p className="text-xs text-muted-foreground">Built via LinkedIn</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Placeholder Card */}
+                {[3].map((i) => (
                   <div key={`tier2-${i}`} className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
                     <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
                       <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/10">
