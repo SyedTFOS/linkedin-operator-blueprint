@@ -85,7 +85,7 @@ const Hero = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="group">
-                  Start Your Agency
+                  Choose Your Program
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Button variant="outline" size="lg">
