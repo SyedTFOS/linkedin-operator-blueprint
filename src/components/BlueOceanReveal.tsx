@@ -237,92 +237,97 @@ const BlueOceanReveal = () => {
           {/* Hero Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* CARD 1: Roberto H. Luna */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300"></div>
-              <div className="relative bg-background border-2 border-primary/30 rounded-2xl p-6 h-full hover:border-primary/60 transition-all duration-300">
-                {/* Header with Image & Badge */}
-                <div className="flex items-start gap-4 mb-6 pb-6 border-b border-border/40">
-                  <div className="relative">
-                    <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <Users className="w-10 h-10 text-primary" />
-                    </div>
-                    {/* Forbes Badge Overlay */}
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-2 border-background">
-                      <span className="text-[10px] font-bold text-primary-foreground">F</span>
-                    </div>
-                  </div>
-                  <div className="flex-1">
+            <div className="group relative overflow-hidden rounded-2xl h-[500px]">
+              {/* Background Image */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20">
+                {/* Placeholder for photo - will be replaced with actual image */}
+                <div className="w-full h-full flex items-center justify-center">
+                  <Users className="w-32 h-32 text-primary/30" />
+                </div>
+              </div>
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+
+              {/* Major Win Badge - Always Visible */}
+              <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
+                <TrendingUp className="w-4 h-4 text-primary-foreground" />
+                <span className="text-sm font-bold text-primary-foreground">Featured in Forbes</span>
+              </div>
+
+              {/* Basic Info - Always Visible */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-all duration-300">
+                <h4 className="text-2xl font-bold text-foreground mb-1">
+                  Roberto H. Luna
+                </h4>
+                <p className="text-base text-primary font-semibold mb-2">Lunivate</p>
+                <p className="text-sm text-muted-foreground">Business Consulting & Leadership</p>
+              </div>
+
+              {/* Detailed Results - Show on Hover */}
+              <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
+                <div className="space-y-4">
+                  {/* Header */}
+                  <div className="mb-6">
                     <h4 className="text-xl font-bold text-foreground mb-1">
                       Roberto H. Luna
                     </h4>
-                    <p className="text-sm text-primary font-semibold">Lunivate</p>
+                    <p className="text-sm text-primary font-semibold">Lunivate • 120 Days</p>
                   </div>
-                </div>
 
-                {/* Industry & Timeline */}
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Industry:</span>
-                    <span className="font-semibold text-foreground">Business Consulting</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Timeline:</span>
-                    <span className="font-semibold text-primary">120 Days</span>
-                  </div>
-                </div>
-
-                {/* Results */}
-                <div className="space-y-3">
-                  <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-4">
+                  {/* Results */}
+                  <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
                     The Results:
                   </p>
                   
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <TrendingUp className="w-4 h-4 text-primary" />
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <TrendingUp className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">Featured in Forbes</p>
+                        <p className="text-xs text-muted-foreground">Direct result of LinkedIn strategy</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-semibold text-foreground">Featured in Forbes</p>
-                      <p className="text-xs text-muted-foreground">Direct result of LinkedIn strategy</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Eye className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Eye className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">15M+ LinkedIn views</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-semibold text-foreground">15M+ LinkedIn views</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <MessageCircle className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">100,000+ comments</p>
+                        <p className="text-xs text-muted-foreground">Across content</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-semibold text-foreground">100,000+ comments</p>
-                      <p className="text-xs text-muted-foreground">Across content</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Users className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Users className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-foreground">50,000+ followers</p>
+                        <p className="text-xs text-muted-foreground">Built from zero</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-semibold text-foreground">50,000+ followers</p>
-                      <p className="text-xs text-muted-foreground">Built from zero</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
-                    <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <DollarSign className="w-4 h-4 text-primary" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-base font-bold text-primary">$500,000+ revenue</p>
-                      <p className="text-xs text-muted-foreground">In just 120 days</p>
+                    <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
+                      <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <DollarSign className="w-3.5 h-3.5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-base font-bold text-primary">$500,000+ revenue</p>
+                        <p className="text-xs text-muted-foreground">In just 120 days</p>
+                      </div>
                     </div>
                   </div>
                 </div>
