@@ -96,7 +96,7 @@ const BlueOceanReveal = () => {
           </div>
           
           {/* Right Side - 12 Month Progression + The Proof */}
-          <div className="space-y-12">
+          <div className="space-y-16">
             {/* 12 Month Progression */}
             <div className="hidden lg:flex items-center justify-center">
               <div className="grid grid-cols-3 gap-4 w-full max-w-2xl">
@@ -197,7 +197,7 @@ const BlueOceanReveal = () => {
             </div>
 
             {/* The Proof Section */}
-            <div className="space-y-4">
+            <div className="space-y-4 pt-8 border-t border-border/30">
               {/* The Proof Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
                 <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
