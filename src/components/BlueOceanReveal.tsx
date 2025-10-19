@@ -66,7 +66,7 @@ const BlueOceanReveal = () => {
             
             <div className="text-base md:text-lg text-muted-foreground leading-relaxed space-y-6 pt-4">
               <p className="text-lg">
-                In <span className="font-bold text-primary">6 months</span>, we went from running LinkedIn agencies
+                In <span className="font-bold text-primary">12 months</span>, we went from running LinkedIn agencies
                 to signing contracts most people only dream about.
               </p>
               
