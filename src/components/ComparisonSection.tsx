@@ -28,25 +28,27 @@ const ComparisonSection = () => {
             While Everyone Else Is Stuck Here...
           </h2>
           
-          {/* Red Arrow from "Here..." to Red Ocean */}
+          {/* Red Arrow from "Here..." curving down to Red Ocean */}
           <svg 
-            className="absolute top-16 left-[45%] md:left-[48%] w-48 md:w-64 h-32 md:h-40 hidden lg:block pointer-events-none"
-            viewBox="0 0 200 150"
+            className="absolute top-12 right-[5%] md:right-[15%] w-72 md:w-96 h-40 md:h-48 hidden lg:block pointer-events-none"
+            viewBox="0 0 400 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
+            {/* Curved line */}
             <path
-              d="M180 10 Q150 40, 120 70 Q90 100, 50 130"
+              d="M350 20 Q300 40, 250 80 Q200 120, 100 160"
               stroke="#ef4444"
-              strokeWidth="4"
+              strokeWidth="5"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
+            {/* Arrowhead */}
             <path
-              d="M50 130 L65 125 M50 130 L55 115"
+              d="M100 160 L120 155 M100 160 L105 140"
               stroke="#ef4444"
-              strokeWidth="4"
+              strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
@@ -138,23 +140,25 @@ const ComparisonSection = () => {
               </div>
             </div>
 
-            {/* Orange Arrow from Blue Ocean to CTA */}
+            {/* Orange Arrow from bottom-right of Blue Ocean curving to CTA */}
             <svg 
-              className="absolute -bottom-20 right-12 md:right-24 w-48 md:w-56 h-32 md:h-36 hidden lg:block pointer-events-none z-20"
-              viewBox="0 0 220 140"
+              className="absolute -bottom-16 -right-8 md:-right-4 w-80 md:w-[420px] h-40 md:h-48 hidden lg:block pointer-events-none z-20"
+              viewBox="0 0 420 200"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+              {/* Curved line */}
               <path
-                d="M200 10 Q180 40, 150 70 Q120 100, 80 125"
+                d="M380 20 Q340 60, 280 100 Q220 140, 120 170"
                 stroke="#f97316"
                 strokeWidth="5"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
+              {/* Arrowhead */}
               <path
-                d="M80 125 L95 122 M80 125 L83 110"
+                d="M120 170 L135 162 M120 170 L128 155"
                 stroke="#f97316"
                 strokeWidth="5"
                 strokeLinecap="round"
