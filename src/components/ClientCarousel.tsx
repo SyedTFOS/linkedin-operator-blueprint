@@ -143,7 +143,7 @@ export const ClientCarousel = () => {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Roberto H. Luna</h4>
                       <p className="text-base text-primary font-semibold mb-2">Lunivate</p>
-                      <p className="text-sm text-muted-foreground">Business Consulting</p>
+                      <p className="text-sm text-muted-foreground">$500K Revenue • 15M+ LinkedIn Views • 120 Days</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
@@ -238,7 +238,7 @@ export const ClientCarousel = () => {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Rubaiyat Hossain</h4>
                       <p className="text-base text-primary font-semibold mb-2">MarkaPolo AI</p>
-                      <p className="text-sm text-muted-foreground">AI Marketing Platform</p>
+                      <p className="text-sm text-muted-foreground">Forbes 30 Under 30 • $7.7M+ Revenue</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
@@ -321,7 +321,7 @@ export const ClientCarousel = () => {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Craig Cecilio</h4>
                       <p className="text-base text-primary font-semibold mb-2">DiversyFund</p>
-                      <p className="text-sm text-muted-foreground">Real Estate Investment</p>
+                      <p className="text-sm text-muted-foreground">$1B+ Raised • 40,000+ Investors • Real Estate Empire</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
@@ -703,7 +703,7 @@ export const ClientCarousel = () => {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Lian Lim</h4>
                       <p className="text-base text-primary font-semibold mb-2">Dashboard Lim</p>
-                      <p className="text-sm text-muted-foreground">LinkedIn Growth Specialist</p>
+                      <p className="text-sm text-muted-foreground">$300K+ Pipeline • 7.7K+ LinkedIn • 19K+ X Followers</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
@@ -770,7 +770,7 @@ export const ClientCarousel = () => {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Aanin Mahmodul</h4>
                       <p className="text-base text-primary font-semibold mb-2">RoyalXCode & AIDevelop</p>
-                      <p className="text-sm text-muted-foreground">Developer & Entrepreneur</p>
+                      <p className="text-sm text-muted-foreground">Royal Backed 👑 • Created HeyGen ($30M+ ARR) • 200+ Dev Team</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
@@ -849,7 +849,7 @@ export const ClientCarousel = () => {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Stevan Petrusic</h4>
                       <p className="text-base text-primary font-semibold mb-2">Player Two</p>
-                      <p className="text-sm text-muted-foreground">LinkedIn Systems Expert</p>
+                      <p className="text-sm text-muted-foreground">LinkedIn GTM Systems 🎯 • Enterprise Setup Expert</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
