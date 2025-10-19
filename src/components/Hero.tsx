@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo-text.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
@@ -140,17 +146,34 @@ const Hero = () => {
                   Choose Your Program
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => {
-                    const clientSection = document.getElementById('clients-section');
-                    clientSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }}
-                >
-                  View All Results
-                  <ChevronDown className="ml-2 w-4 h-4" />
-                </Button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" size="lg">
+                      View All Results
+                      <ChevronDown className="ml-2 w-4 h-4" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-56 bg-background border-border z-50">
+                    <DropdownMenuItem 
+                      className="cursor-pointer"
+                      onClick={() => {
+                        const businessSection = document.getElementById('clients-section');
+                        businessSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                    >
+                      Business Results
+                    </DropdownMenuItem>
+                    <DropdownMenuItem 
+                      className="cursor-pointer"
+                      onClick={() => {
+                        const agencySection = document.getElementById('clients-section');
+                        agencySection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                    >
+                      Agency Results
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
 
