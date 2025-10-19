@@ -221,7 +221,9 @@ const BlueOceanReveal = () => {
         </div>
 
         {/* Client Hero Cards Carousel */}
-        <ClientCarousel />
+        <div id="clients-section">
+          <ClientCarousel />
+        </div>
       </div>
     </section>
   );

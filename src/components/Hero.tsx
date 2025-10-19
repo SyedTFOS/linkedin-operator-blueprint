@@ -109,8 +109,16 @@ const Hero = () => {
                   Choose Your Program
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="lg">
-                  View Case Studies
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => {
+                    const clientSection = document.getElementById('clients-section');
+                    clientSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }}
+                >
+                  View All Results
+                  <ChevronDown className="ml-2 w-4 h-4" />
                 </Button>
               </div>
             </div>
