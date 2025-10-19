@@ -7,7 +7,9 @@ const ComparisonSection = () => {
     "Price wars with 1,000 competitors",
     'Associated with "online money" scams',
     "No real credibility or authority",
-    'Stuck pitching broke "aspiring entrepreneurs"'
+    'Stuck pitching broke "aspiring entrepreneurs"',
+    "Competing with 10,000 SMMA clones",
+    "Building agencies that feel like a grind"
   ];
 
   const blueOceanPoints = [
@@ -16,7 +18,8 @@ const ComparisonSection = () => {
     "Less than 1% of users posting = zero competition",
     "Real business positioning & credibility",
     "Authority that opens doors to Forbes, YC, etc.",
-    "Access to decision-makers in ANY industry"
+    "Access to decision-makers in ANY industry",
+    "Signing $36K/year retainers with Fortune 500s"
   ];
 
   return (
