@@ -73,16 +73,16 @@ const Hero = () => {
                     <path d="M 180 25 L 170 20 L 175 25 L 170 30 Z" fill="hsl(var(--primary))" />
                   </svg>
                 </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   Start Your LinkedIn Agency
-                  <br />
-                  <span className="text-primary">A Real Business Model for Real Founders</span>
                 </h1>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+                  A Real Business Model for Real Founders
+                </p>
               </div>
 
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                The complete framework to start, scale, and run a profitable LinkedIn agency—from zero to consistent
-                high-ticket clients.
+              <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                Whether you're starting a LinkedIn agency or scaling your business—we have the programs, systems, and strategies to get you working with Fortune 500s, Y Combinator startups, and real companies in a blue ocean outside the saturated "online money" space.
               </p>
 
               {/* Stats Row */}
