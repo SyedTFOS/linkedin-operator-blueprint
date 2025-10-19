@@ -56,13 +56,16 @@ const Hero = () => {
                 </div>
               </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
-                <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To Sign Clients{" "}
-                <span className="inline-flex items-center gap-2">
-                  Like this
-                  <ArrowRight className="w-8 h-8 text-primary hidden lg:inline animate-pulse" />
-                </span>
-              </h1>
+              <div className="space-y-4">
+                <p className="text-lg md:text-xl text-muted-foreground flex items-center gap-2">
+                  <span className="text-primary">LinkedIn Agency</span> - The Only Business Model That Allows You To Sign Clients Like this
+                  <ArrowRight className="w-5 h-5 text-primary hidden lg:inline animate-pulse" />
+                </p>
+                <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+                  Build A LinkedIn Agency<br />
+                  That Works With <span className="text-primary">REAL Businesses</span>
+                </h1>
+              </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed">
                 The complete framework to start, scale, and run a profitable LinkedIn agency—from zero to consistent high-ticket clients.
