@@ -1,4 +1,4 @@
-import { X, Check } from "lucide-react";
+import { X, Check, Scale } from "lucide-react";
 
 const ComparisonSection = () => {
   const redOceanPoints = [
@@ -22,6 +22,18 @@ const ComparisonSection = () => {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
+        {/* Comparison Badge */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
+            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+              <Scale className="w-3 h-3 text-primary" />
+            </div>
+            <span className="text-sm font-semibold text-foreground">
+              <span className="text-primary mr-1.5">iii.</span>Comparison
+            </span>
+          </div>
+        </div>
+
         {/* Header */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-16 md:mb-24">
           While Everyone Else Is Stuck Here...
