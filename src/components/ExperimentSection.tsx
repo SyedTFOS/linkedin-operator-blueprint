@@ -5,6 +5,7 @@ import vasilijeSimicPhoto from "@/assets/vasilije-simic.png";
 import komailGillaniPhoto from "@/assets/komail-gillani.png";
 import ethanClouserPhoto from "@/assets/ethan-clouser.png";
 import walterChungPhoto from "@/assets/walter-chung.png";
+import samBeckPhoto from "@/assets/sam-beck.png";
 
 const ExperimentSection = () => {
   return (
@@ -127,6 +128,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Sam Beck"
                 role="Ex-Agency Owner"
+                photoUrl={samBeckPhoto}
                 results={[
                   "Transformation details coming soon"
                 ]}
