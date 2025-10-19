@@ -22,6 +22,7 @@ const Hero = () => {
   const [businessApi, setBusinessApi] = useState<CarouselApi>();
   const [isStudentsHovered, setIsStudentsHovered] = useState(false);
   const [isBusinessHovered, setIsBusinessHovered] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Auto-scroll for Agency Students carousel
   useEffect(() => {
@@ -146,28 +147,40 @@ const Hero = () => {
                   Choose Your Program
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <DropdownMenu>
+                <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="lg">
+                    <Button 
+                      variant="outline" 
+                      size="lg" 
+                      className="group"
+                      onMouseEnter={() => setIsDropdownOpen(true)}
+                      onMouseLeave={() => setIsDropdownOpen(false)}
+                    >
                       View All Results
-                      <ChevronDown className="ml-2 w-4 h-4" />
+                      <ChevronDown className="ml-2 w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56 bg-background border-border z-50">
+                  <DropdownMenuContent 
+                    className="w-56 bg-background border-border z-50"
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                    onMouseLeave={() => setIsDropdownOpen(false)}
+                  >
                     <DropdownMenuItem 
-                      className="cursor-pointer"
+                      className="cursor-pointer hover:bg-accent focus:bg-accent"
                       onClick={() => {
-                        const businessSection = document.getElementById('clients-section');
+                        const businessSection = document.getElementById('business-results-section');
                         businessSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setIsDropdownOpen(false);
                       }}
                     >
                       Business Results
                     </DropdownMenuItem>
                     <DropdownMenuItem 
-                      className="cursor-pointer"
+                      className="cursor-pointer hover:bg-accent focus:bg-accent"
                       onClick={() => {
-                        const agencySection = document.getElementById('clients-section');
+                        const agencySection = document.getElementById('agency-results-section');
                         agencySection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setIsDropdownOpen(false);
                       }}
                     >
                       Agency Results

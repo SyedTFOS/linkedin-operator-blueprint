@@ -10,7 +10,7 @@ import samAramiPhoto from "@/assets/sam-arami-photo.png";
 
 const ExperimentSection = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-background to-muted/20">
+    <section id="agency-results-section" className="py-24 px-6 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-12">
