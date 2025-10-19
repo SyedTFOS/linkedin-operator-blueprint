@@ -30,7 +30,7 @@ const ComparisonSection = () => {
         {/* Split Screen Comparison */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16">
           {/* LEFT SIDE - Red Ocean */}
-          <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950/40 via-red-900/20 to-gray-900/40 border-2 border-red-900/30 p-8 md:p-12">
+          <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950/60 via-red-900/40 to-gray-900/60 border-2 border-red-900/30 p-8 md:p-12">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
               <div className="absolute inset-0" style={{
@@ -42,10 +42,10 @@ const ComparisonSection = () => {
             <div className="relative z-10">
               {/* Header */}
               <div className="mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-red-400 mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-red-300 mb-2">
                   The Saturated Red Ocean
                 </h3>
-                <p className="text-red-300/80 text-sm md:text-base font-medium">
+                <p className="text-red-200/90 text-sm md:text-base font-medium">
                   SMMA / Dropshipping / AI Agencies / Guru Space
                 </p>
               </div>
@@ -54,10 +54,10 @@ const ComparisonSection = () => {
               <div className="space-y-4">
                 {redOceanPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center mt-0.5">
-                      <X className="w-3.5 h-3.5 text-red-400" strokeWidth={3} />
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/30 flex items-center justify-center mt-0.5">
+                      <X className="w-3.5 h-3.5 text-red-300" strokeWidth={3} />
                     </div>
-                    <p className="text-red-100/90 text-sm md:text-base leading-relaxed">
+                    <p className="text-red-50 text-sm md:text-base leading-relaxed">
                       {point}
                     </p>
                   </div>
@@ -67,7 +67,7 @@ const ComparisonSection = () => {
           </div>
 
           {/* RIGHT SIDE - Blue Ocean */}
-          <div className="relative overflow-hidden rounded-3xl lg:rounded-l-none bg-gradient-to-br from-blue-950/40 via-blue-900/20 to-background border-2 border-primary/40 p-8 md:p-12">
+          <div className="relative overflow-hidden rounded-3xl lg:rounded-l-none bg-gradient-to-br from-blue-950/60 via-blue-900/40 to-background border-2 border-primary/40 p-8 md:p-12">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
               <div className="absolute inset-0" style={{
@@ -82,10 +82,10 @@ const ComparisonSection = () => {
             <div className="relative z-10">
               {/* Header */}
               <div className="mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">
                   The LinkedIn Blue Ocean
                 </h3>
-                <p className="text-primary/80 text-sm md:text-base font-medium">
+                <p className="text-orange-300 text-sm md:text-base font-medium">
                   LinkedIn Agency (LIA)
                 </p>
               </div>
@@ -94,10 +94,10 @@ const ComparisonSection = () => {
               <div className="space-y-4">
                 {blueOceanPoints.map((point, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                      <Check className="w-3.5 h-3.5 text-primary" strokeWidth={3} />
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/30 flex items-center justify-center mt-0.5">
+                      <Check className="w-3.5 h-3.5 text-orange-400" strokeWidth={3} />
                     </div>
-                    <p className="text-foreground text-sm md:text-base leading-relaxed font-medium">
+                    <p className="text-white text-sm md:text-base leading-relaxed font-medium">
                       {point}
                     </p>
                   </div>
@@ -109,10 +109,10 @@ const ComparisonSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground leading-relaxed">
-            The choice is simple.{" "}
+          <p className="text-xl md:text-2xl lg:text-3xl font-bold leading-relaxed">
+            <span className="text-foreground">The choice is simple.</span>{" "}
             <span className="text-muted-foreground">Stop fighting for scraps.</span>{" "}
-            <span className="text-primary">Enter the blue ocean.</span>
+            <span className="text-orange-500">Enter the blue ocean.</span>
           </p>
         </div>
       </div>
