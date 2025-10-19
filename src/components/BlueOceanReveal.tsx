@@ -234,10 +234,14 @@ const BlueOceanReveal = () => {
             </h3>
           </div>
 
-          {/* Hero Cards Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Hero Cards Horizontal Scroll */}
+          <div className="relative">
+            {/* Scroll container */}
+            <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+              <div className="flex gap-8 min-w-max px-4">
+                {/* Tier 1 Cards */}
             {/* CARD 1: Roberto H. Luna */}
-            <div className="group relative overflow-hidden rounded-2xl h-[500px]">
+            <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
               {/* Background Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20">
                 {/* Placeholder for photo - will be replaced with actual image */}
@@ -335,7 +339,7 @@ const BlueOceanReveal = () => {
             </div>
 
             {/* CARD 2: Rubaiyat Hossain */}
-            <div className="group relative overflow-hidden rounded-2xl h-[500px]">
+            <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
               {/* Background Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-accent/40 via-primary/30 to-accent/20">
                 {/* Placeholder for photo - will be replaced with actual image */}
@@ -423,7 +427,7 @@ const BlueOceanReveal = () => {
             </div>
 
             {/* CARD 3: Craig Cecilio */}
-            <div className="group relative overflow-hidden rounded-2xl h-[500px]">
+            <div className="group relative overflow-hidden rounded-2xl h-[500px] w-[350px] flex-shrink-0">
               {/* Background Image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/30 to-accent/30">
                 {/* Placeholder for photo - will be replaced with actual image */}
@@ -518,6 +522,8 @@ const BlueOceanReveal = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
               </div>
             </div>
           </div>
