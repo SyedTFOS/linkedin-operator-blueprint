@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StudentCard from "./StudentCard";
 import aryanShahPhoto from "@/assets/aryan-shah.png";
+import vasilijeSimicPhoto from "@/assets/vasilije-simic.png";
 
 const ExperimentSection = () => {
   return (
@@ -76,6 +77,7 @@ const ExperimentSection = () => {
               <StudentCard
                 name="Vasilije Simic"
                 role="Complete Beginner"
+                photoUrl={vasilijeSimicPhoto}
                 results={[
                   "$25K/month LinkedIn agency built",
                   "7,800 followers",
