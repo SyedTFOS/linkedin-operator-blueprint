@@ -89,12 +89,14 @@ export const ClientCarousel = () => {
       </div>
 
       {/* Carousel Container */}
-      <div className="relative">
+      <div 
+        className="relative"
+        onMouseEnter={() => setIsArrowHovered(true)}
+        onMouseLeave={() => setIsArrowHovered(false)}
+      >
         {/* Left Arrow */}
         <button
           onClick={scrollPrev}
-          onMouseEnter={() => setIsArrowHovered(true)}
-          onMouseLeave={() => setIsArrowHovered(false)}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
           aria-label="Previous"
         >
@@ -104,8 +106,6 @@ export const ClientCarousel = () => {
         {/* Right Arrow */}
         <button
           onClick={scrollNext}
-          onMouseEnter={() => setIsArrowHovered(true)}
-          onMouseLeave={() => setIsArrowHovered(false)}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
           aria-label="Next"
         >

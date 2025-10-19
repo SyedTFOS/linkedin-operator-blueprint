@@ -168,7 +168,11 @@ const Hero = () => {
 
                 {/* Agency Students Tab */}
                 <TabsContent value="students">
-                  <div className="relative">
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setIsStudentsHovered(true)}
+                    onMouseLeave={() => setIsStudentsHovered(false)}
+                  >
                     {/* Top gradient shadow */}
                     <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
@@ -269,15 +273,11 @@ const Hero = () => {
                       </CarouselContent>
                       <CarouselPrevious 
                         className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                        onMouseEnter={() => setIsStudentsHovered(true)}
-                        onMouseLeave={() => setIsStudentsHovered(false)}
                       >
                         <ChevronUp className="h-4 w-4" />
                       </CarouselPrevious>
                       <CarouselNext 
                         className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                        onMouseEnter={() => setIsStudentsHovered(true)}
-                        onMouseLeave={() => setIsStudentsHovered(false)}
                       >
                         <ChevronDown className="h-4 w-4" />
                       </CarouselNext>
@@ -287,7 +287,11 @@ const Hero = () => {
 
                 {/* Business Tab */}
                 <TabsContent value="business">
-                  <div className="relative">
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => setIsBusinessHovered(true)}
+                    onMouseLeave={() => setIsBusinessHovered(false)}
+                  >
                     {/* Top gradient shadow */}
                     <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
@@ -476,15 +480,11 @@ const Hero = () => {
                       </CarouselContent>
                       <CarouselPrevious 
                         className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                        onMouseEnter={() => setIsBusinessHovered(true)}
-                        onMouseLeave={() => setIsBusinessHovered(false)}
                       >
                         <ChevronUp className="h-4 w-4" />
                       </CarouselPrevious>
                       <CarouselNext 
                         className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                        onMouseEnter={() => setIsBusinessHovered(true)}
-                        onMouseLeave={() => setIsBusinessHovered(false)}
                       >
                         <ChevronDown className="h-4 w-4" />
                       </CarouselNext>
