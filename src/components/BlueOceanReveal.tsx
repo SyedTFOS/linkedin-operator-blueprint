@@ -224,6 +224,44 @@ const BlueOceanReveal = () => {
         <div id="clients-section">
           <ClientCarousel />
         </div>
+
+        {/* Stats Section */}
+        <div className="mt-12 flex justify-center">
+          <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 md:gap-12 text-center sm:text-left">
+            <div className="flex items-start gap-2">
+              <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center mt-0.5">
+                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span className="text-sm md:text-base font-semibold text-foreground">
+                100M+ LinkedIn Views
+              </span>
+            </div>
+            
+            <div className="flex items-start gap-2">
+              <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center mt-0.5">
+                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span className="text-sm md:text-base font-semibold text-foreground">
+                $15M+ Generated For Clients From LinkedIn
+              </span>
+            </div>
+            
+            <div className="flex items-start gap-2">
+              <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center mt-0.5">
+                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span className="text-sm md:text-base font-semibold text-foreground">
+                Lifetime Partnerships, Connections & Network Secured
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
