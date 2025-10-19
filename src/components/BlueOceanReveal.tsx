@@ -34,7 +34,11 @@ const BlueOceanReveal = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 w-auto object-contain"
+                  className={`w-auto object-contain ${
+                    logo.alt === "Diversyfund" || logo.alt === "Markopolo AI" 
+                      ? "h-20" 
+                      : "h-12"
+                  }`}
                 />
               </div>
             ))}
