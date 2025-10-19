@@ -29,16 +29,12 @@ const BlueOceanReveal = () => {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 mx-8 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className={`w-auto object-contain ${
-                    logo.alt === "Diversyfund" || logo.alt === "Markopolo AI" 
-                      ? "h-20" 
-                      : "h-12"
-                  }`}
+                  className="h-12 w-auto object-contain"
                 />
               </div>
             ))}
