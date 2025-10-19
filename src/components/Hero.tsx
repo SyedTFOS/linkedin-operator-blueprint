@@ -7,7 +7,6 @@ import logo from "@/assets/logo-text.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
 import samAramiVideo from "@/assets/sam-arami-video.mp4";
-import lianLim from "@/assets/lian-lim.png";
 
 const Hero = () => {
   const [studentsApi, setStudentsApi] = useState<CarouselApi>();
@@ -268,49 +267,6 @@ const Hero = () => {
                                 <span className="text-primary font-semibold">more than my corporate salary</span>. Now I
                                 work from anywhere."
                               </p>
-                            </div>
-                          </div>
-                        </CarouselItem>
-
-                        {/* Testimonial 4 - Lian Lim */}
-                        <CarouselItem className="pt-4 basis-full">
-                          <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
-                            <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden group cursor-pointer">
-                              <div 
-                                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                                style={{ backgroundImage: `url(${lianLim})` }}
-                              />
-                              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                                </div>
-                              </div>
-                              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
-                                <div className="flex items-center gap-3">
-                                  <div 
-                                    className="w-12 h-12 rounded-full bg-cover bg-center"
-                                    style={{ backgroundImage: `url(${lianLim})` }}
-                                  />
-                                  <div>
-                                    <p className="font-semibold text-sm">Lian Lim</p>
-                                    <p className="text-xs text-muted-foreground">Dashboard Lim</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <h4 className="font-bold text-lg">$300K+ Pipeline Added</h4>
-                              <div className="space-y-1.5">
-                                <p className="text-sm text-muted-foreground leading-relaxed flex items-center gap-2">
-                                  💰 <span className="text-primary font-semibold">$300K+ Pipeline Added</span>
-                                </p>
-                                <p className="text-sm text-muted-foreground leading-relaxed flex items-center gap-2">
-                                  👥 <span>7.7K+ LinkedIn Followers Added</span>
-                                </p>
-                                <p className="text-sm text-muted-foreground leading-relaxed flex items-center gap-2">
-                                  🐦 <span>19K+ X Followers</span>
-                                </p>
-                              </div>
                             </div>
                           </div>
                         </CarouselItem>
