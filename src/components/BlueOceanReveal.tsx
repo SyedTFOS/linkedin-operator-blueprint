@@ -3,7 +3,7 @@ import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
-import markopoloLogo from "@/assets/markopolo-logo.png";
+import playertwoLogo from "@/assets/playertwo-logo.png";
 import forbesLogo from "@/assets/forbes-logo.png";
 import whopLogo from "@/assets/whop-logo.png";
 import heygenLogo from "@/assets/heygen-logo.png";
@@ -14,7 +14,7 @@ const BlueOceanReveal = () => {
     { src: forbes30Logo, alt: "Forbes 30 Under 30" },
     { src: yCombinatorLogo, alt: "Y Combinator" },
     { src: diversyfundLogo, alt: "Diversyfund" },
-    { src: markopoloLogo, alt: "Markopolo AI" },
+    { src: playertwoLogo, alt: "Player Two" },
     { src: forbesLogo, alt: "Forbes" },
     { src: whopLogo, alt: "Whop" },
     { src: heygenLogo, alt: "HeyGen" },
