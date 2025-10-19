@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import BlueOceanReveal from "@/components/BlueOceanReveal";
 import ComparisonSection from "@/components/ComparisonSection";
 import MarketOpportunityStats from "@/components/MarketOpportunityStats";
+import ExperimentSection from "@/components/ExperimentSection";
 import WhopWidget from "@/components/WhopWidget";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <BlueOceanReveal />
       <MarketOpportunityStats />
       <ComparisonSection />
+      <ExperimentSection />
       <WhopWidget />
     </div>
   );
