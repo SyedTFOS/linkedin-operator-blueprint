@@ -32,7 +32,7 @@ const ComparisonSection = () => {
               <Scale className="w-3 h-3 text-primary" />
             </div>
             <span className="text-sm font-semibold text-foreground">
-              <span className="text-primary mr-1.5">iii.</span>Comparison
+              <span className="text-primary mr-1.5">iiii.</span>Comparison
             </span>
           </div>
         </div>
