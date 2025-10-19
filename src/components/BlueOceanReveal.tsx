@@ -50,6 +50,23 @@ const BlueOceanReveal = () => {
             </span>
           </div>
         </div>
+
+        {/* Blue Ocean Story Section */}
+        <div className="max-w-4xl mx-auto text-center space-y-6 mt-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            We Found The Last Blue Ocean By Accident
+          </h2>
+          <div className="text-lg md:text-xl text-muted-foreground leading-relaxed space-y-4">
+            <p>
+              In 6 months, we went from running LinkedIn agencies to signing contracts most people only dream about.
+              We weren't signing local businesses or churn and burn Agencies, we were getting Forbes featured founders.
+              Y Combinator backed companies. Fortune 500s. Royal government contracts. $1B+ investment firms.
+            </p>
+            <p className="text-xl md:text-2xl font-semibold text-foreground">
+              And we realized: No other business model gives you access to clients like this.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
