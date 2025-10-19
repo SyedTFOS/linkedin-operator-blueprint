@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import BlueOceanReveal from "@/components/BlueOceanReveal";
+import ComparisonSection from "@/components/ComparisonSection";
 import WhopWidget from "@/components/WhopWidget";
 
 const Index = () => {
@@ -7,6 +8,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Hero />
       <BlueOceanReveal />
+      <ComparisonSection />
       <WhopWidget />
     </div>
   );
