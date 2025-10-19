@@ -85,9 +85,103 @@ const BlueOceanReveal = () => {
             </div>
           </div>
           
-          {/* Right Side - Reserved for images/widgets */}
-          <div className="hidden lg:block">
-            {/* Space reserved for future content */}
+          {/* Right Side - 12 Month Progression */}
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-4 w-full max-w-2xl">
+              {/* Month 1-6 */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
+                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
+                    Month 1-6
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    We Built Our Agencies
+                  </h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Signed:</p>
+                    <ul className="space-y-1.5 list-none">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Mastercard</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Forbes Startups</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>YC Cos</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>$1B+ AUM Firms</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Month 7-12 */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
+                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
+                    Month 7-12
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    We Replicated It For Others
+                  </h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Trained:</p>
+                    <ul className="space-y-1.5 list-none">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>500+ Operators</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>First-time founders</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Industry experts</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* TODAY */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg blur-md group-hover:blur-lg transition-all duration-300 animate-glow-pulse"></div>
+                <div className="relative bg-background border-2 border-primary/50 rounded-lg p-6 h-full hover:border-primary transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/30">
+                    TODAY
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    We Built The System
+                  </h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Created:</p>
+                    <ul className="space-y-1.5 list-none">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span className="font-semibold text-primary">LinkedIn Operator</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Complete Framework</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Blue Ocean Blueprint</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
