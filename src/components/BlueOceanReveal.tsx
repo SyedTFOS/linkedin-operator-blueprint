@@ -57,8 +57,11 @@ const BlueOceanReveal = () => {
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               We Found The Last{" "}
-              <span className="text-primary border-b-4 border-primary/40">Blue Ocean</span>{" "}
-              By Accident
+              <span className="inline-block">
+                <span className="text-primary">$100M Blue Ocean</span>
+                <div className="h-1 bg-primary/40 mt-1"></div>
+              </span>{" "}
+              By Accident...
             </h2>
             
             <div className="text-base md:text-lg text-muted-foreground leading-relaxed space-y-6 pt-4">
