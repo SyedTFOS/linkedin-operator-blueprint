@@ -7,10 +7,8 @@ import aryanPhoto from "@/assets/aryan-shah.png";
 import komailPhoto from "@/assets/komail-gillani.png";
 import vasilijePhoto from "@/assets/vasilije-simic.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
-import aramiLogo from "@/assets/arami-logo.png";
-import heygenLogo from "@/assets/heygen-logo.png";
-import mastercardLogo from "@/assets/mastercard-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
+import lunivateLogo from "@/assets/lunivate-logo.png";
 
 const ExploringSection = () => {
   return (
@@ -188,12 +186,11 @@ const ExploringSection = () => {
             {/* Trusted By */}
             <div className="mt-6 pt-6 border-t">
               <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
-              <div className="flex items-center gap-3 flex-wrap">
+              <div className="flex items-center gap-4 flex-wrap">
+                <img src={lunivateLogo} alt="Lunivate" className="h-7 opacity-70 hover:opacity-100 transition-opacity" />
                 <img src={diversyfundLogo} alt="DiversyFund" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
-                <img src={aramiLogo} alt="Arami AI" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
-                <img src={heygenLogo} alt="HeyGen" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
-                <img src={mastercardLogo} alt="Mastercard" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
-                <img src={playertwoLogo} alt="PlayerTwo" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={playertwoLogo} alt="PlayerTwo" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
+                <span className="text-sm font-medium text-foreground">Markapolo AI</span>
                 <span className="text-sm text-muted-foreground">+50 more companies</span>
               </div>
             </div>
