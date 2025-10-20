@@ -265,6 +265,15 @@ const MarketOpportunityStats = () => {
           }`}
         >
           <div className="max-w-5xl mx-auto">
+            {/* Mini Title */}
+            <div className={`mb-8 text-center transition-all duration-1000 ${
+              isVisible.math ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              <p className="text-lg md:text-xl text-muted-foreground font-light">
+                Find What That Looks Like Across Different Industries:
+              </p>
+            </div>
+
             {/* Industry Selector Pills */}
             <div className={`mb-12 flex flex-wrap gap-3 justify-center transition-all duration-1000 ${
               isVisible.math ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -350,15 +359,6 @@ const MarketOpportunityStats = () => {
                 <h4 className="text-base font-semibold text-foreground mb-2">Real Example:</h4>
                 <p className="text-base text-muted-foreground">{currentIndustry.example}</p>
               </div>
-            </div>
-
-            {/* Bottom Stats Bar */}
-            <div className="mt-8 flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm text-muted-foreground">
-              <span className="font-semibold">900M LinkedIn Users</span>
-              <span className="text-border">|</span>
-              <span className="font-semibold">&lt;1% Post Consistently</span>
-              <span className="text-border">|</span>
-              <span className="font-semibold text-primary">$100M+ Untapped Value</span>
             </div>
           </div>
         </div>
