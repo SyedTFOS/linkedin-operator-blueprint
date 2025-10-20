@@ -8,6 +8,9 @@ import komailPhoto from "@/assets/komail-gillani.png";
 import vasilijePhoto from "@/assets/vasilije-simic.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import aramiLogo from "@/assets/arami-logo.png";
+import heygenLogo from "@/assets/heygen-logo.png";
+import mastercardLogo from "@/assets/mastercard-logo.png";
+import playertwoLogo from "@/assets/playertwo-logo.png";
 
 const ExploringSection = () => {
   return (
@@ -188,6 +191,9 @@ const ExploringSection = () => {
               <div className="flex items-center gap-3 flex-wrap">
                 <img src={diversyfundLogo} alt="DiversyFund" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
                 <img src={aramiLogo} alt="Arami AI" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={heygenLogo} alt="HeyGen" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={mastercardLogo} alt="Mastercard" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={playertwoLogo} alt="PlayerTwo" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm text-muted-foreground">+50 more companies</span>
               </div>
             </div>
