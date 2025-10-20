@@ -1,5 +1,13 @@
 import { Route, ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ethanPhoto from "@/assets/ethan-clouser.png";
+import walterPhoto from "@/assets/walter-chung.png";
+import samPhoto from "@/assets/sam-beck.png";
+import aryanPhoto from "@/assets/aryan-shah.png";
+import komailPhoto from "@/assets/komail-gillani.png";
+import vasilijePhoto from "@/assets/vasilije-simic.png";
+import diversyfundLogo from "@/assets/diversyfund-logo.png";
+import aramiLogo from "@/assets/arami-logo.png";
 
 const ExploringSection = () => {
   return (
@@ -97,26 +105,29 @@ const ExploringSection = () => {
 
             {/* Trusted By */}
             <div className="mt-6 pt-6 border-t">
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-2">Trusted By:</p>
-              <p className="text-sm text-foreground">Ethan C, Walter C, Sam B, Aryan S, Komail G, Vasilije S</p>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  <img src={ethanPhoto} alt="Ethan C" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={walterPhoto} alt="Walter C" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={samPhoto} alt="Sam B" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={aryanPhoto} alt="Aryan S" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={komailPhoto} alt="Komail G" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={vasilijePhoto} alt="Vasilije S" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                </div>
+                <span className="text-sm text-muted-foreground ml-2">+100 more</span>
+              </div>
             </div>
           </div>
 
           {/* Card 2 - Business & Founders */}
-          <div className="bg-card border-2 border-primary/30 rounded-2xl p-8 relative hover:border-primary transition-all duration-300 shadow-lg">
-            {/* Premium Badge */}
-            <div className="absolute top-6 right-6">
-              <div className="px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full uppercase tracking-wide">
-                Premium
-              </div>
-            </div>
-
+          <div className="bg-card border-2 border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
             {/* Header */}
             <div className="mb-6">
               <div className="inline-block px-3 py-1 bg-primary/10 rounded-full mb-4">
                 <span className="text-xs font-bold text-primary uppercase tracking-wide">For Businesses & Founders</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 pr-20">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 "I want LinkedIn to turn me into the GO-TO authority in my niche & drive pipeline for my business"
               </h3>
             </div>
@@ -173,8 +184,12 @@ const ExploringSection = () => {
 
             {/* Trusted By */}
             <div className="mt-6 pt-6 border-t">
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-2">Trusted By:</p>
-              <p className="text-sm text-foreground">Lunivate, Markapolo AI, DiversyFund, Arami AI, Creator Coach</p>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
+              <div className="flex items-center gap-3 flex-wrap">
+                <img src={diversyfundLogo} alt="DiversyFund" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={aramiLogo} alt="Arami AI" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <span className="text-sm text-muted-foreground">+50 more companies</span>
+              </div>
             </div>
           </div>
         </div>
