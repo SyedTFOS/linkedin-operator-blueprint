@@ -28,12 +28,12 @@ const ExploringSection = () => {
 
         {/* Headline */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-center">
-          Choose Your Path
+          Two Paths. Same Blue Ocean. Choose Your Entry Point.
         </h2>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-16 text-center">
-          Whether you're building your own LinkedIn agency or scaling your business on LinkedIn—we have the exact roadmap for you.
+          The LinkedIn opportunity is massive. Your approach depends on your goal: Build an agency empire, or become the authority in your niche.
         </p>
 
         {/* Two Path Cards */}
@@ -45,9 +45,12 @@ const ExploringSection = () => {
               <div className="inline-block px-3 py-1 bg-primary/10 rounded-full mb-4">
                 <span className="text-xs font-bold text-primary uppercase tracking-wide">LinkedIn Agency</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                "I want to build & scale a LinkedIn Agency"
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Build A 6-7 Figure LinkedIn Agency
               </h3>
+              <p className="text-base text-muted-foreground">
+                Turn LinkedIn into a predictable client acquisition engine and build a real agency—not another churn-and-burn operation.
+              </p>
             </div>
 
             {/* What You Need */}
@@ -128,9 +131,12 @@ const ExploringSection = () => {
               <div className="inline-block px-3 py-1 bg-primary/10 rounded-full mb-4">
                 <span className="text-xs font-bold text-primary uppercase tracking-wide">For Businesses & Founders</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                "I want LinkedIn to turn me into the GO-TO authority in my niche & drive pipeline for my business"
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+                Become The #1 Authority In Your Industry
               </h3>
+              <p className="text-base text-muted-foreground">
+                Turn LinkedIn into your primary client acquisition channel. Book high-ticket sales calls, attract partnerships, and position yourself as the go-to expert in your niche.
+              </p>
             </div>
 
             {/* What You Need */}
