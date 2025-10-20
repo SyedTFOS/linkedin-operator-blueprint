@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { Hash } from "lucide-react";
+import { Hash, Target, Megaphone, Headphones, TrendingUp, Briefcase } from "lucide-react";
 
 const MarketOpportunityStats = () => {
+  const [selectedIndustry, setSelectedIndustry] = useState("marketing");
   const [isVisible, setIsVisible] = useState({
     hero: false,
     platform: false,
@@ -9,6 +10,16 @@ const MarketOpportunityStats = () => {
     math: false,
     closing: false
   });
+
+  const industries = [
+    { id: "research", label: "Research", icon: Target, marketSize: "$18B–$25B", companies: "120K–350K", avgSpend: "$42K" },
+    { id: "marketing", label: "Marketing", icon: Megaphone, marketSize: "$12B–$120B", companies: "500K–2M", avgSpend: "$36K" },
+    { id: "support", label: "Support", icon: Headphones, marketSize: "$8B–$15B", companies: "200K–450K", avgSpend: "$28K" },
+    { id: "sales", label: "Sales", icon: TrendingUp, marketSize: "$22B–$85B", companies: "800K–1.8M", avgSpend: "$32K" },
+    { id: "operations", label: "Operations", icon: Briefcase, marketSize: "$10B–$20B", companies: "300K–600K", avgSpend: "$30K" },
+  ];
+
+  const currentIndustry = industries.find(i => i.id === selectedIndustry) || industries[1];
 
   const heroRef = useRef<HTMLDivElement>(null);
   const platformRef = useRef<HTMLDivElement>(null);
@@ -171,41 +182,66 @@ const MarketOpportunityStats = () => {
           </div>
         </div>
 
-        {/* The Math - Clean Callout */}
+        {/* The Math - Clean Callout with Industry Tabs */}
         <div 
           ref={mathRef}
           data-section="math"
-          className={`mb-48 bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-12 md:p-16 border border-orange-200/50 transition-all duration-1000 ${
+          className={`mb-48 bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-8 md:p-16 border border-orange-200/50 transition-all duration-1000 ${
             isVisible.math 
               ? 'opacity-100 scale-100' 
               : 'opacity-0 scale-95'
           }`}
         >
           <div className="max-w-3xl">
+            {/* Industry Selector */}
+            <div className={`mb-8 flex flex-wrap gap-2 justify-center transition-all duration-1000 ${
+              isVisible.math ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}>
+              {industries.map((industry) => {
+                const Icon = industry.icon;
+                return (
+                  <button
+                    key={industry.id}
+                    onClick={() => setSelectedIndustry(industry.id)}
+                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                      selectedIndustry === industry.id
+                        ? 'bg-primary text-primary-foreground shadow-md'
+                        : 'bg-background/60 text-foreground hover:bg-background/80'
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {industry.label}
+                  </button>
+                );
+              })}
+            </div>
+
             <div className="mb-12">
-              <div className={`text-6xl md:text-8xl font-bold text-foreground mb-4 tracking-tight transition-all duration-1000 ${
+              <div className={`text-6xl md:text-8xl font-bold text-foreground mb-4 tracking-tight transition-all duration-500 ${
                 isVisible.math ? 'scale-100' : 'scale-90'
               }`}
-              style={{ transitionDelay: '200ms' }}>
-                $12B–$120B
+              style={{ transitionDelay: '200ms' }}
+              key={currentIndustry.marketSize}>
+                {currentIndustry.marketSize}
               </div>
               <div className="text-xl text-muted-foreground">
-                Conservative to aggressive market estimate
+                Conservative to aggressive market estimate for {currentIndustry.label.toLowerCase()}
               </div>
             </div>
 
             <div className={`space-y-8 text-lg text-foreground/80 leading-relaxed transition-all duration-1000 ${
               isVisible.math ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
-            style={{ transitionDelay: '400ms' }}>
+            style={{ transitionDelay: '400ms' }}
+            key={currentIndustry.id}>
               <p>
-                <span className="font-semibold text-foreground">500K–2M companies</span> need LinkedIn growth services right now.
+                <span className="font-semibold text-foreground">{currentIndustry.companies} companies</span> need LinkedIn growth services in {currentIndustry.label.toLowerCase()} right now.
               </p>
               <p>
-                <span className="font-semibold text-foreground">Average annual spend:</span> $36K on strategy, content, ghostwriting, and positioning.
+                <span className="font-semibold text-foreground">Average annual spend:</span> {currentIndustry.avgSpend} on strategy, content, ghostwriting, and positioning.
               </p>
               <p>
-                <span className="font-semibold text-foreground">Total serviceable market:</span> Between $12B and $120B in demand.
+                <span className="font-semibold text-foreground">Total serviceable market:</span> {currentIndustry.marketSize} in demand for {currentIndustry.label.toLowerCase()}.
               </p>
               <p className="text-base text-muted-foreground pt-4 border-t border-orange-200">
                 For context: LinkedIn's total revenue in 2024 was $16B. This is a completely separate services layer on top of the platform.
