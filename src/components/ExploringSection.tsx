@@ -38,12 +38,12 @@ const ExploringSection = () => {
 
         {/* Two Path Cards */}
         <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-6xl mx-auto">
-          {/* Card 1 - LinkedIn Agency */}
-          <div className="bg-card border-2 border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+          {/* Card 1 - LinkedIn Agency - ORANGE/WARM THEME */}
+          <div className="bg-card border-2 border-orange-500/30 rounded-2xl p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-orange-500/10 hover:shadow-xl">
             {/* Header */}
             <div className="mb-6">
-              <div className="inline-block px-3 py-1 bg-primary/10 rounded-full mb-4">
-                <span className="text-xs font-bold text-primary uppercase tracking-wide">LinkedIn Agency</span>
+              <div className="inline-block px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full mb-4">
+                <span className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wide">LinkedIn Agency</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
                 Build A 6-7 Figure LinkedIn Agency
@@ -58,38 +58,38 @@ const ExploringSection = () => {
               <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">You need:</p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-orange-500 mt-1">→</span>
                   <span className="text-foreground">The complete LinkedIn Operator framework</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-orange-500 mt-1">→</span>
                   <span className="text-foreground">Templates, SOPs, and positioning strategies</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-orange-500 mt-1">→</span>
                   <span className="text-foreground">Client acquisition systems that work</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-orange-500 mt-1">→</span>
                   <span className="text-foreground">Community + coaching to go from $5K to $50K+/mo</span>
                 </div>
               </div>
             </div>
 
             {/* Results */}
-            <div className="mb-6 p-4 bg-muted/30 rounded-lg">
+            <div className="mb-6 p-4 bg-orange-500/5 border border-orange-500/10 rounded-lg">
               <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground">First client in 30-60 days</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground">$10K-$50K/month within 90-180 days</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground">Real companies, real budgets, real authority</span>
                 </div>
               </div>
@@ -102,7 +102,7 @@ const ExploringSection = () => {
             </div>
 
             {/* CTA */}
-            <Button size="lg" className="w-full text-base font-bold group">
+            <Button size="lg" className="w-full text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white">
               Explore LIA Programs
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -124,12 +124,12 @@ const ExploringSection = () => {
             </div>
           </div>
 
-          {/* Card 2 - Business & Founders */}
-          <div className="bg-card border-2 border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+          {/* Card 2 - Business & Founders - BLUE/PROFESSIONAL THEME */}
+          <div className="bg-card border-2 border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/60 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl">
             {/* Header */}
             <div className="mb-6">
-              <div className="inline-block px-3 py-1 bg-primary/10 rounded-full mb-4">
-                <span className="text-xs font-bold text-primary uppercase tracking-wide">For Businesses & Founders</span>
+              <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4">
+                <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide">For Businesses & Founders</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
                 Become The #1 Authority In Your Industry
@@ -144,34 +144,34 @@ const ExploringSection = () => {
               <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">You need:</p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-blue-500 mt-1">→</span>
                   <span className="text-foreground">Done-for-you content creation</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-blue-500 mt-1">→</span>
                   <span className="text-foreground">Content that books sales calls & drives leads</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-primary mt-1">→</span>
+                  <span className="text-blue-500 mt-1">→</span>
                   <span className="text-foreground">A system that turns LinkedIn into your top acquisition channel</span>
                 </div>
               </div>
             </div>
 
             {/* Results */}
-            <div className="mb-6 p-4 bg-primary/5 border border-primary/10 rounded-lg">
+            <div className="mb-6 p-4 bg-blue-500/5 border border-blue-500/10 rounded-lg">
               <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results You Can Expect:</p>
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground">Forbes-level positioning</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground">Inbound pipeline from decision-makers</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-foreground">Partnership & funding opportunities</span>
                 </div>
               </div>
@@ -184,7 +184,7 @@ const ExploringSection = () => {
             </div>
 
             {/* CTA */}
-            <Button size="lg" className="w-full text-base font-bold group">
+            <Button size="lg" className="w-full text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white">
               Explore B2B Programs
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
