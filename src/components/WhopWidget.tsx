@@ -1,10 +1,28 @@
-import { ArrowRight, X, ChevronUp } from "lucide-react";
+import { ArrowRight, X, ChevronUp, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 import whopLogo from "@/assets/whop-logo-light.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const WhopWidget = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(4 * 60 * 60 + 10 * 60 + 57); // 4:10:57 in seconds
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const hours = Math.floor(timeLeft / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
+  const seconds = timeLeft % 60;
+
+  const claimed = 473;
+  const spotsLeft = 27;
+  const total = claimed + spotsLeft;
+  const progressValue = (claimed / total) * 100;
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999]">
@@ -28,6 +46,26 @@ const WhopWidget = () => {
                 <img src={whopLogo} alt="Whop" className="h-6" />
               </div>
               
+              {/* Urgency Timer Section */}
+              <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 mb-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-xs font-semibold text-foreground">Ends in</span>
+                  </div>
+                  <span className="text-sm font-bold text-primary tabular-nums">
+                    {String(hours).padStart(2, '0')}:{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+                  </span>
+                </div>
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">{claimed} claimed</span>
+                    <span className="font-bold text-destructive">{spotsLeft} spots left</span>
+                  </div>
+                  <Progress value={progressValue} className="h-1.5" />
+                </div>
+              </div>
+
               {/* Main message */}
               <p className="text-foreground font-medium mb-1 leading-snug">
                 #1 LinkedIn Agency Community on Whop
