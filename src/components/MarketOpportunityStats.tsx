@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { Hash, Target, Megaphone, Headphones, TrendingUp, Briefcase } from "lucide-react";
+import { Hash, Rocket, Bot, Cross, DollarSign, Landmark, Briefcase, Building } from "lucide-react";
 
 const MarketOpportunityStats = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState("marketing");
+  const [selectedIndustry, setSelectedIndustry] = useState("saas");
   const [isVisible, setIsVisible] = useState({
     hero: false,
     platform: false,
@@ -13,63 +13,85 @@ const MarketOpportunityStats = () => {
 
   const industries = [
     { 
-      id: "research", 
-      label: "Research", 
-      icon: Target, 
-      marketSize: "$18B–$25B", 
-      companies: "120K–350K", 
-      avgSpend: "$42K",
-      competition: "<2% of researchers actively building LinkedIn presence",
-      opportunity: "98% of research firms not leveraging LinkedIn for thought leadership",
-      example: "McKinsey generates 40% of inbound leads via LinkedIn content"
+      id: "saas", 
+      label: "SaaS", 
+      icon: Rocket, 
+      marketSize: "$8B–$12B", 
+      companies: "200K–400K", 
+      avgSpend: "$28K",
+      competition: "<1% of SaaS founders post on LinkedIn consistently",
+      opportunity: "99% of SaaS companies not using LinkedIn properly",
+      example: "Pluto AI (SaaS) → 60% of pipeline from LinkedIn"
     },
     { 
-      id: "marketing", 
-      label: "Marketing", 
-      icon: Megaphone, 
-      marketSize: "$12B–$120B", 
-      companies: "500K–2M", 
-      avgSpend: "$36K",
-      competition: "<1% of marketing agencies post consistently on LinkedIn",
+      id: "ai", 
+      label: "AI", 
+      icon: Bot, 
+      marketSize: "$15B–$30B", 
+      companies: "50K–150K", 
+      avgSpend: "$45K",
+      competition: "<2% of AI companies building thought leadership on LinkedIn",
+      opportunity: "98% of AI startups missing enterprise buyer engagement opportunities",
+      example: "Anthropic drives 40% of enterprise deals through LinkedIn presence"
+    },
+    { 
+      id: "medtech", 
+      label: "MedTech", 
+      icon: Cross, 
+      marketSize: "$12B–$20B", 
+      companies: "80K–200K", 
+      avgSpend: "$38K",
+      competition: "<1% of MedTech leaders visible on LinkedIn",
+      opportunity: "Healthcare decision-makers spend 20+ minutes per session on LinkedIn",
+      example: "Philips Healthcare generates 35% of B2B leads via LinkedIn"
+    },
+    { 
+      id: "fintech", 
+      label: "FinTech", 
+      icon: DollarSign, 
+      marketSize: "$18B–$35B", 
+      companies: "150K–300K", 
+      avgSpend: "$42K",
+      competition: "<1% of FinTech executives posting consistently",
+      opportunity: "Financial decision-makers 4x more active than other industries",
+      example: "Stripe attributes $100M+ in pipeline to LinkedIn strategy"
+    },
+    { 
+      id: "invest", 
+      label: "Invest", 
+      icon: Landmark, 
+      marketSize: "$10B–$18B", 
+      companies: "100K–250K", 
+      avgSpend: "$35K",
+      competition: "<2% of investment firms leveraging LinkedIn for deal flow",
+      opportunity: "92% of LPs and investors actively research on LinkedIn before meetings",
+      example: "Sequoia Capital generates 50% of warm intros via LinkedIn"
+    },
+    { 
+      id: "agencies", 
+      label: "Agencies", 
+      icon: Briefcase, 
+      marketSize: "$12B–$25B", 
+      companies: "500K–1M", 
+      avgSpend: "$30K",
+      competition: "<1% of agencies post consistently on LinkedIn",
       opportunity: "99% of agencies missing LinkedIn as a primary lead channel",
       example: "HubSpot attributes $50M+ in pipeline to LinkedIn strategy"
     },
     { 
-      id: "support", 
-      label: "Support", 
-      icon: Headphones, 
-      marketSize: "$8B–$15B", 
-      companies: "200K–450K", 
-      avgSpend: "$28K",
-      competition: "<1% of support leaders share expertise on LinkedIn",
-      opportunity: "Decision-makers spend 17+ minutes per session on LinkedIn",
-      example: "Zendesk increased brand visibility 300% via LinkedIn content"
-    },
-    { 
-      id: "sales", 
-      label: "Sales", 
-      icon: TrendingUp, 
-      marketSize: "$22B–$85B", 
-      companies: "800K–1.8M", 
-      avgSpend: "$32K",
-      competition: "<2% of sales professionals use LinkedIn strategically",
-      opportunity: "B2B decision-makers 3x more active than other platforms",
+      id: "otherb2b", 
+      label: "Other B2B", 
+      icon: Building, 
+      marketSize: "$20B–$50B", 
+      companies: "1M–3M", 
+      avgSpend: "$25K",
+      competition: "<1% of B2B companies building LinkedIn presence strategically",
+      opportunity: "B2B buyers spend 80% of research time on LinkedIn vs other platforms",
       example: "Salesforce reports 65% of enterprise deals touch LinkedIn"
-    },
-    { 
-      id: "operations", 
-      label: "Operations", 
-      icon: Briefcase, 
-      marketSize: "$10B–$20B", 
-      companies: "300K–600K", 
-      avgSpend: "$30K",
-      competition: "<1% of operations leaders visible on LinkedIn",
-      opportunity: "Operations content gets 5x engagement vs. other topics",
-      example: "Amazon Ops leaders drive recruitment via LinkedIn presence"
     },
   ];
 
-  const currentIndustry = industries.find(i => i.id === selectedIndustry) || industries[1];
+  const currentIndustry = industries.find(i => i.id === selectedIndustry) || industries[0];
 
   const heroRef = useRef<HTMLDivElement>(null);
   const platformRef = useRef<HTMLDivElement>(null);
