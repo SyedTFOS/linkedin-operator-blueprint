@@ -96,128 +96,127 @@ const BlueOceanReveal = () => {
             </div>
           </div>
           
-          {/* Right Side - 12 Month Progression + The Proof */}
-          <div className="space-y-16">
-            {/* 12 Month Progression */}
-            <div className="hidden lg:flex items-center justify-center">
-              <div className="grid grid-cols-3 gap-4 w-full max-w-2xl">
-                {/* Month 1-6 */}
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
-                  <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
-                      Month 1-6
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground mb-4">
-                      We Built Our Agencies
-                    </h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <p className="font-semibold text-foreground">Signed:</p>
-                      <ul className="space-y-1.5 list-none">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>Mastercard</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>Forbes Startups</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>YC Cos</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>$1B+ AUM Firms</span>
-                        </li>
-                      </ul>
-                    </div>
+          {/* Right Side - 3 Visual Roadmap Cards */}
+          <div className="flex items-center justify-center">
+            <div className="grid grid-cols-3 gap-4 w-full max-w-2xl">
+              {/* Month 1-6 */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
+                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
+                    Month 1-6
                   </div>
-                </div>
-
-                {/* Month 7-12 */}
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
-                  <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
-                      Month 7-12
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground mb-4">
-                      We Replicated It For Others
-                    </h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <p className="font-semibold text-foreground">Trained:</p>
-                      <ul className="space-y-1.5 list-none">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>500+ Operators</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>First-time founders</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>Industry experts</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                {/* TODAY */}
-                <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg blur-md group-hover:blur-lg transition-all duration-300 animate-glow-pulse"></div>
-                  <div className="relative bg-background border-2 border-primary/50 rounded-lg p-6 h-full hover:border-primary transition-all duration-300">
-                    <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/30">
-                      TODAY
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground mb-4">
-                      We Built The System
-                    </h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <p className="font-semibold text-foreground">Created:</p>
-                      <ul className="space-y-1.5 list-none">
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span className="font-semibold text-primary">LinkedIn Operator</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>Complete Framework</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
-                          <span>Blue Ocean Blueprint</span>
-                        </li>
-                      </ul>
-                    </div>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    We Built Our Agencies
+                  </h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Signed:</p>
+                    <ul className="space-y-1.5 list-none">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Mastercard</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Forbes Startups</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>YC Cos</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>$1B+ AUM Firms</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* The Proof Section */}
-            <div className="space-y-4 pt-8 border-t border-border/30">
-              {/* The Proof Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
-                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Briefcase className="w-3 h-3 text-primary" />
+              {/* Month 7-12 */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
+                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
+                    Month 7-12
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    We Replicated It For Others
+                  </h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Trained:</p>
+                    <ul className="space-y-1.5 list-none">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>500+ Operators</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>First-time founders</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Industry experts</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <span className="text-sm font-semibold text-foreground">
-                  <span className="text-primary mr-1.5">ii.</span>The Proof
-                </span>
               </div>
 
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                We Started Helping <span className="text-primary">Major Whales</span> With LinkedIn
-              </h3>
-
-              <p className="text-lg text-muted-foreground">
-                Before we turned it into a system, we used it to land the clients everyone else dreams about.
-              </p>
+              {/* TODAY */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg blur-md group-hover:blur-lg transition-all duration-300 animate-glow-pulse"></div>
+                <div className="relative bg-background border-2 border-primary/50 rounded-lg p-6 h-full hover:border-primary transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/30">
+                    TODAY
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-4">
+                    We Built The System
+                  </h3>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Created:</p>
+                    <ul className="space-y-1.5 list-none">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span className="font-semibold text-primary">LinkedIn Operator</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Complete Framework</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Blue Ocean Blueprint</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* The Proof Section - Full Width, Centered */}
+        <div className="mt-24 text-center max-w-4xl mx-auto">
+          {/* The Proof Badge */}
+          <div className="flex justify-center mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
+              <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+                <Briefcase className="w-3 h-3 text-primary" />
+              </div>
+              <span className="text-sm font-semibold text-foreground">
+                <span className="text-primary mr-1.5">ii.</span>The Proof
+              </span>
+            </div>
+          </div>
+
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
+            We Started Helping <span className="text-primary">Major Whales</span> With LinkedIn
+          </h3>
+
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Before we turned it into a system, we used it to land the clients everyone else dreams about.
+          </p>
         </div>
 
         {/* Client Hero Cards Carousel */}
