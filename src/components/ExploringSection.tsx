@@ -53,25 +53,25 @@ const ExploringSection = () => {
               </p>
             </div>
 
-            {/* What You Need */}
+            {/* What You Will Get */}
             <div className="mb-6">
-              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">You need:</p>
+              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">→</span>
-                  <span className="text-foreground">The complete LinkedIn Operator framework</span>
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">The Complete LinkedIn Operator Framework</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">→</span>
-                  <span className="text-foreground">Templates, SOPs, and positioning strategies</span>
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Done-For-You Templates & Systems</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">→</span>
-                  <span className="text-foreground">Client acquisition systems that work</span>
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Proven Client Acquisition System</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-orange-500 mt-1">→</span>
-                  <span className="text-foreground">Community + coaching to go from $5K to $50K+/mo</span>
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Community + Weekly Coaching</span>
                 </div>
               </div>
             </div>
@@ -82,15 +82,19 @@ const ExploringSection = () => {
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">First client in 30-60 days</span>
+                  <span className="text-sm text-foreground">First Client: 30-60 days (avg. $3K-$8K contract)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">$10K-$50K/month within 90-180 days</span>
+                  <span className="text-sm text-foreground">90-Day Milestone: $10K-$15K/month MRR with 3-5 active clients</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">Real companies, real budgets, real authority</span>
+                  <span className="text-sm text-foreground">6-Month Goal: $25K-$50K+/month with systemized delivery (75-80% margins)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-foreground">12-Month Vision: Scalable agency with team, recurring revenue, and enterprise pipeline</span>
                 </div>
               </div>
             </div>
@@ -103,8 +107,7 @@ const ExploringSection = () => {
 
             {/* CTA */}
             <Button size="lg" className="w-full text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white">
-              Explore LIA Programs
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              Apply for LIA Programs →
             </Button>
 
             {/* Trusted By */}
@@ -139,40 +142,48 @@ const ExploringSection = () => {
               </p>
             </div>
 
-            {/* What You Need */}
+            {/* What You Will Get */}
             <div className="mb-6">
-              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">You need:</p>
+              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">→</span>
-                  <span className="text-foreground">Done-for-you content creation</span>
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Strategic LinkedIn Positioning System (forbes level)</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">→</span>
-                  <span className="text-foreground">Content that books sales calls & drives leads</span>
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">High-Converting Content Engine</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">→</span>
-                  <span className="text-foreground">A system that turns LinkedIn into your top acquisition channel</span>
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">White-Glove Execution</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">Dedicated Account Manager</span>
                 </div>
               </div>
             </div>
 
             {/* Results */}
             <div className="mb-6 p-4 bg-blue-500/5 border border-blue-500/10 rounded-lg">
-              <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results You Can Expect:</p>
+              <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">Forbes-level positioning</span>
+                  <span className="text-sm text-foreground">30-60 Days: 10-20 inbound inquiries/month from qualified prospects</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">Inbound pipeline from decision-makers</span>
+                  <span className="text-sm text-foreground">90 Days: Positioned as a top voice in your industry (verified by engagement + DMs)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">Partnership & funding opportunities</span>
+                  <span className="text-sm text-foreground">6 Months: Consistent pipeline of high-ticket opportunities, partnerships, or funding conversations</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-foreground">12 Months: LinkedIn as your #1 client acquisition channel (5-10X ROI on investment)</span>
                 </div>
               </div>
             </div>
@@ -185,8 +196,7 @@ const ExploringSection = () => {
 
             {/* CTA */}
             <Button size="lg" className="w-full text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white">
-              Explore B2B Programs
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              Get Your Custom LinkedIn Roadmap →
             </Button>
 
             {/* Trusted By */}
