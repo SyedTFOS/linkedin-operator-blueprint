@@ -206,15 +206,11 @@ const ExploringSection = () => {
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">
-                    30-60 Days: 10-20 inbound inquiries/month from qualified prospects
-                  </span>
+                  <span className="text-sm text-foreground">60 Days: 10-20 inbound inquiries/month from qualified prospects</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">
-                    90 Days: Positioned as a top voice in your industry (verified by engagement + DMs)
-                  </span>
+                  <span className="text-sm text-foreground">90 Days: Positioned as a top voice in your industry</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
@@ -224,9 +220,7 @@ const ExploringSection = () => {
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">
-                    12 Months: LinkedIn as your #1 client acquisition channel (5-10X ROI on investment)
-                  </span>
+                  <span className="text-sm text-foreground">12 Months: LinkedIn as your #1 client acquisition channel</span>
                 </div>
               </div>
             </div>
