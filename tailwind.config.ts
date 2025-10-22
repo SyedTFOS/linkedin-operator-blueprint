@@ -90,7 +90,34 @@ export default {
         "slide-up": "slide-up 0.6s ease-out",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      backfaceVisibility: {
+        'hidden': 'hidden',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function({ addUtilities }: any) {
+      addUtilities({
+        '.perspective-1000': {
+          perspective: '1000px',
+        },
+        '.preserve-3d': {
+          'transform-style': 'preserve-3d',
+        },
+        '.backface-hidden': {
+          'backface-visibility': 'hidden',
+        },
+        '.rotate-y-180': {
+          transform: 'rotateY(180deg)',
+        },
+      });
+    },
+  ],
 } satisfies Config;
