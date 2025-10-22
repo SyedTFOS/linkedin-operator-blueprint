@@ -19,6 +19,7 @@ const EmbeddedChatbot = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showQuickReplies, setShowQuickReplies] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
@@ -131,6 +132,18 @@ const EmbeddedChatbot = () => {
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
+    setShowQuickReplies(false);
+
+    await streamChat(userMessage);
+  };
+
+  const handleQuickReply = async (text: string) => {
+    if (isLoading) return;
+
+    const userMessage: Message = { role: "user", content: text };
+    setMessages((prev) => [...prev, userMessage]);
+    setIsLoading(true);
+    setShowQuickReplies(false);
 
     await streamChat(userMessage);
   };
@@ -160,21 +173,60 @@ const EmbeddedChatbot = () => {
         <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
           <div className="space-y-4">
             {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`flex ${
-                  message.role === "user" ? "justify-end" : "justify-start"
-                }`}
-              >
+              <div key={index}>
                 <div
-                  className={`max-w-[80%] rounded-2xl px-5 py-3 ${
-                    message.role === "user"
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-foreground"
+                  className={`flex ${
+                    message.role === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                  <div
+                    className={`max-w-[80%] rounded-2xl px-5 py-3 ${
+                      message.role === "user"
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-foreground"
+                    }`}
+                  >
+                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                  </div>
                 </div>
+                
+                {/* Quick Reply Buttons - Show only after first assistant message */}
+                {index === 0 && message.role === "assistant" && showQuickReplies && (
+                  <div className="mt-4 space-y-2">
+                    <Button
+                      onClick={() => handleQuickReply("🏢 I want to build an agency")}
+                      variant="outline"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      disabled={isLoading}
+                    >
+                      🏢 I want to build an agency
+                    </Button>
+                    <Button
+                      onClick={() => handleQuickReply("👔 I want to grow my business")}
+                      variant="outline"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      disabled={isLoading}
+                    >
+                      👔 I want to grow my business
+                    </Button>
+                    <Button
+                      onClick={() => handleQuickReply("💬 I have a specific question")}
+                      variant="outline"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      disabled={isLoading}
+                    >
+                      💬 I have a specific question
+                    </Button>
+                    <Button
+                      onClick={() => handleQuickReply("🤔 Just browsing")}
+                      variant="outline"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      disabled={isLoading}
+                    >
+                      🤔 Just browsing
+                    </Button>
+                  </div>
+                )}
               </div>
             ))}
             {isLoading && (
