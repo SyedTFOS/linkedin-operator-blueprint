@@ -51,22 +51,8 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <img src={logo} alt="LinkedIn Operator" className="h-10" />
-            <div className="flex items-center gap-6">
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Features
-              </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Results
-              </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Pricing
-              </a>
-              <Button variant="default" size="sm">
-                Get Started
-              </Button>
-            </div>
           </div>
         </div>
       </nav>
