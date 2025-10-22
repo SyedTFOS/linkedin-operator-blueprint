@@ -39,9 +39,9 @@ const ExploringSection = () => {
         </p>
 
         {/* Two Path Cards */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12 max-w-6xl mx-auto">
           {/* Card 1 - LinkedIn Agency - ORANGE/WARM THEME */}
-          <div className="bg-card border-2 border-orange-500/30 rounded-2xl p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-orange-500/10 hover:shadow-xl">
+          <div className="bg-card border-2 border-orange-500/30 rounded-2xl p-5 md:p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-orange-500/10 hover:shadow-xl">
             {/* Header */}
             <div className="mb-6">
               <div className="inline-block px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full mb-4">
@@ -49,10 +49,10 @@ const ExploringSection = () => {
                   LinkedIn Agency
                 </span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
                 Build A 6-7 Figure LinkedIn Agency
               </h3>
-              <p className="text-base text-muted-foreground">
+              <p className="text-sm md:text-base text-muted-foreground">
                 Turn LinkedIn into a predictable client acquisition engine and build a real agency—not another
                 churn-and-burn operation.
               </p>
@@ -60,48 +60,48 @@ const ExploringSection = () => {
 
             {/* What You Will Get */}
             <div className="mb-6">
-              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
+              <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">The Complete LinkedIn Operator Framework</span>
+                  <span className="text-sm md:text-base text-foreground">The Complete LinkedIn Operator Framework</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Done-For-You Templates & Systems</span>
+                  <span className="text-sm md:text-base text-foreground">Done-For-You Templates & Systems</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Proven Client Acquisition System</span>
+                  <span className="text-sm md:text-base text-foreground">Proven Client Acquisition System</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Community + Weekly Coaching</span>
+                  <span className="text-sm md:text-base text-foreground">Community + Weekly Coaching</span>
                 </div>
               </div>
             </div>
 
             {/* Results */}
-            <div className="mb-6 p-4 bg-orange-500/5 border border-orange-500/10 rounded-lg">
-              <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
+            <div className="mb-6 p-3 md:p-4 bg-orange-500/5 border border-orange-500/10 rounded-lg">
+              <p className="text-xs md:text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">First Client: 30-60 days (avg. $3K-$8K contract)</span>
+                  <span className="text-xs md:text-sm text-foreground">First Client: 30-60 days (avg. $3K-$8K contract)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">90-Days: $10K-$15K/month MRR</span>
+                  <span className="text-xs md:text-sm text-foreground">90-Days: $10K-$15K/month MRR</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">
+                  <span className="text-xs md:text-sm text-foreground">
                     6-Month Goal: $25K-$50K+/month with systemized delivery
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">
+                  <span className="text-xs md:text-sm text-foreground">
                     12-Month Vision: Scalable agency with team, recurring revenue, and enterprise pipeline
                   </span>
                 </div>
@@ -110,12 +110,12 @@ const ExploringSection = () => {
 
             {/* Best For */}
             <div className="mb-6">
-              <p className="text-sm font-bold text-foreground mb-2">Best For:</p>
-              <p className="text-sm text-muted-foreground">Beginners, agency owners, industry experts, founders</p>
+              <p className="text-xs md:text-sm font-bold text-foreground mb-2">Best For:</p>
+              <p className="text-xs md:text-sm text-muted-foreground">Beginners, agency owners, industry experts, founders</p>
             </div>
 
             {/* CTA */}
-            <Button size="lg" className="w-full text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white">
+            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white">
               Apply for LIA Programs →
             </Button>
 
@@ -161,7 +161,7 @@ const ExploringSection = () => {
           </div>
 
           {/* Card 2 - Business & Founders - BLUE/PROFESSIONAL THEME */}
-          <div className="bg-card border-2 border-blue-500/30 rounded-2xl p-8 hover:border-blue-500/60 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl">
+          <div className="bg-card border-2 border-blue-500/30 rounded-2xl p-5 md:p-8 hover:border-blue-500/60 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl">
             {/* Header */}
             <div className="mb-6">
               <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4">
@@ -169,10 +169,10 @@ const ExploringSection = () => {
                   For Businesses & Founders
                 </span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
                 Become The #1 Authority In Your Industry
               </h3>
-              <p className="text-base text-muted-foreground">
+              <p className="text-sm md:text-base text-muted-foreground">
                 Turn LinkedIn into your primary client acquisition channel. Book high-ticket sales calls, attract
                 partnerships, and position yourself as the go-to expert in your niche.
               </p>
@@ -180,60 +180,60 @@ const ExploringSection = () => {
 
             {/* What You Will Get */}
             <div className="mb-6">
-              <p className="text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
+              <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Strategic LinkedIn Positioning System (forbes level)</span>
+                  <span className="text-sm md:text-base text-foreground">Strategic LinkedIn Positioning System (forbes level)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">High-Converting Content Engine</span>
+                  <span className="text-sm md:text-base text-foreground">High-Converting Content Engine</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">White-Glove Execution</span>
+                  <span className="text-sm md:text-base text-foreground">White-Glove Execution</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground">Dedicated Account Manager</span>
+                  <span className="text-sm md:text-base text-foreground">Dedicated Account Manager</span>
                 </div>
               </div>
             </div>
 
             {/* Results */}
-            <div className="mb-6 p-4 bg-blue-500/5 border border-blue-500/10 rounded-lg">
-              <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
+            <div className="mb-6 p-3 md:p-4 bg-blue-500/5 border border-blue-500/10 rounded-lg">
+              <p className="text-xs md:text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">60 Days: 10-20 inbound inquiries/month from qualified prospects</span>
+                  <span className="text-xs md:text-sm text-foreground">60 Days: 10-20 inbound inquiries/month from qualified prospects</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">90 Days: Positioned as a top voice in your industry</span>
+                  <span className="text-xs md:text-sm text-foreground">90 Days: Positioned as a top voice in your industry</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">
+                  <span className="text-xs md:text-sm text-foreground">
                     6 Months: Consistent pipeline of high-ticket opportunities, partnerships, or funding conversations
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-foreground">12 Months: LinkedIn as your #1 client acquisition channel</span>
+                  <span className="text-xs md:text-sm text-foreground">12 Months: LinkedIn as your #1 client acquisition channel</span>
                 </div>
               </div>
             </div>
 
             {/* Best For */}
             <div className="mb-6">
-              <p className="text-sm font-bold text-foreground mb-2">Best For:</p>
-              <p className="text-sm text-muted-foreground">SaaS, AI, B2B service companies, consultants, executives</p>
+              <p className="text-xs md:text-sm font-bold text-foreground mb-2">Best For:</p>
+              <p className="text-xs md:text-sm text-muted-foreground">SaaS, AI, B2B service companies, consultants, executives</p>
             </div>
 
             {/* CTA */}
-            <Button size="lg" className="w-full text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white">
+            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white">
               Get Your Custom LinkedIn Roadmap →
             </Button>
 

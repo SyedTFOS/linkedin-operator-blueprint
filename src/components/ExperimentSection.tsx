@@ -51,22 +51,22 @@ const ExperimentSection = () => {
 
         {/* Tabs Section */}
         <Tabs defaultValue="beginners" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-12 h-auto p-1 bg-muted/50">
+          <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-0 mb-12 h-auto p-1 bg-muted/50">
             <TabsTrigger 
               value="beginners" 
-              className="text-sm md:text-base py-3 data-[state=active]:bg-background data-[state=active]:text-primary"
+              className="text-xs sm:text-sm md:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:text-primary whitespace-nowrap"
             >
               Beginners
             </TabsTrigger>
             <TabsTrigger 
               value="agency-owners" 
-              className="text-sm md:text-base py-3 data-[state=active]:bg-background data-[state=active]:text-primary"
+              className="text-xs sm:text-sm md:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:text-primary whitespace-nowrap"
             >
               Ex. Agency Owners
             </TabsTrigger>
             <TabsTrigger 
               value="experts" 
-              className="text-sm md:text-base py-3 data-[state=active]:bg-background data-[state=active]:text-primary"
+              className="text-xs sm:text-sm md:text-base py-2.5 sm:py-3 data-[state=active]:bg-background data-[state=active]:text-primary whitespace-nowrap"
             >
               Industry Experts & Founders
             </TabsTrigger>

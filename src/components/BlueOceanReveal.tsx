@@ -98,18 +98,18 @@ const BlueOceanReveal = () => {
           
           {/* Right Side - 3 Visual Roadmap Cards */}
           <div className="flex items-center justify-center">
-            <div className="grid grid-cols-3 gap-4 w-full max-w-2xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full max-w-2xl">
               {/* Month 1-6 */}
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
-                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
-                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
+                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-4 md:p-6 h-full hover:border-primary/60 transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-3 md:mb-4 pb-2 border-b border-primary/20">
                     Month 1-6
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-4">
+                  <h3 className="text-base md:text-lg font-bold text-foreground mb-3 md:mb-4">
                     We Built Our Agencies
                   </h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+                  <div className="space-y-2 text-xs md:text-sm text-muted-foreground">
                     <p className="font-semibold text-foreground">Signed:</p>
                     <ul className="space-y-1.5 list-none">
                       <li className="flex items-start gap-2">
@@ -136,14 +136,14 @@ const BlueOceanReveal = () => {
               {/* Month 7-12 */}
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
-                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-6 h-full hover:border-primary/60 transition-all duration-300">
-                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/20">
+                <div className="relative bg-background border-2 border-primary/30 rounded-lg p-4 md:p-6 h-full hover:border-primary/60 transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-3 md:mb-4 pb-2 border-b border-primary/20">
                     Month 7-12
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-4">
+                  <h3 className="text-base md:text-lg font-bold text-foreground mb-3 md:mb-4">
                     We Replicated It For Others
                   </h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+                  <div className="space-y-2 text-xs md:text-sm text-muted-foreground">
                     <p className="font-semibold text-foreground">Trained:</p>
                     <ul className="space-y-1.5 list-none">
                       <li className="flex items-start gap-2">
@@ -166,14 +166,14 @@ const BlueOceanReveal = () => {
               {/* TODAY */}
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg blur-md group-hover:blur-lg transition-all duration-300 animate-glow-pulse"></div>
-                <div className="relative bg-background border-2 border-primary/50 rounded-lg p-6 h-full hover:border-primary transition-all duration-300">
-                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-4 pb-2 border-b border-primary/30">
+                <div className="relative bg-background border-2 border-primary/50 rounded-lg p-4 md:p-6 h-full hover:border-primary transition-all duration-300">
+                  <div className="text-xs font-bold text-primary uppercase tracking-wider mb-3 md:mb-4 pb-2 border-b border-primary/30">
                     TODAY
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-4">
+                  <h3 className="text-base md:text-lg font-bold text-foreground mb-3 md:mb-4">
                     We Built The System
                   </h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
+                  <div className="space-y-2 text-xs md:text-sm text-muted-foreground">
                     <p className="font-semibold text-foreground">Created:</p>
                     <ul className="space-y-1.5 list-none">
                       <li className="flex items-start gap-2">
