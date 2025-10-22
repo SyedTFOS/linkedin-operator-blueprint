@@ -221,10 +221,10 @@ const Hero = () => {
                 <p className="text-sm text-muted-foreground">Over 500 Students & 50+ Businesses Transformed</p>
               </div>
 
-              <Tabs defaultValue="students" className="w-full">
+              <Tabs defaultValue="business" className="w-full">
                 <TabsList className="grid w-full grid-cols-2 mb-6">
-                  <TabsTrigger value="students">Agency Students</TabsTrigger>
                   <TabsTrigger value="business">Business</TabsTrigger>
+                  <TabsTrigger value="students">Agency Students</TabsTrigger>
                 </TabsList>
 
                 {/* Agency Students Tab */}
