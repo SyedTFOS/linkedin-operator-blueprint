@@ -157,21 +157,21 @@ const EmbeddedChatbot = () => {
       <AnimatedChatHeader />
       <div className="bg-card rounded-2xl shadow-xl border border-border glow-effect overflow-hidden">
         {/* Input at Top */}
-        <div className="p-6 border-b border-border bg-muted/20">
+        <div className="p-6 border-b border-border bg-gradient-to-br from-muted/30 to-muted/10">
           <div className="flex gap-3 mb-4">
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Type your message here..."
+              placeholder="Leo is waiting..."
               disabled={isLoading}
-              className="flex-1 h-12 text-base"
+              className="flex-1 h-14 text-base rounded-2xl border-2 border-border/50 focus:border-primary/50 bg-background/50 backdrop-blur-sm shadow-sm transition-all duration-200 placeholder:text-muted-foreground/60"
             />
             <Button
               onClick={handleSend}
               disabled={isLoading || !input.trim()}
               size="lg"
-              className="bg-primary hover:bg-primary/90 px-6"
+              className="bg-[#FF6B35] hover:bg-[#FF6B35]/90 px-6 h-14 rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50"
             >
               <Send className="h-5 w-5" />
             </Button>
@@ -179,42 +179,42 @@ const EmbeddedChatbot = () => {
 
           {/* Quick Reply Buttons - Show only initially */}
           {showQuickReplies && (
-            <div className="space-y-2">
+            <div className="space-y-3">
               <Button
                 onClick={() => handleQuickReply("I want to build an agency")}
                 variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                className="w-full justify-start text-left h-auto py-4 px-5 hover:bg-primary/5 hover:border-primary/50 gap-3 bg-background/80 backdrop-blur-sm rounded-2xl border-2 transition-all duration-200 hover:shadow-md"
                 disabled={isLoading}
               >
-                <Building2 className="h-4 w-4" />
-                I want to build an agency
+                <Building2 className="h-5 w-5 text-primary" />
+                <span className="font-medium">I want to build an agency</span>
               </Button>
               <Button
                 onClick={() => handleQuickReply("I want to grow my business")}
                 variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                className="w-full justify-start text-left h-auto py-4 px-5 hover:bg-primary/5 hover:border-primary/50 gap-3 bg-background/80 backdrop-blur-sm rounded-2xl border-2 transition-all duration-200 hover:shadow-md"
                 disabled={isLoading}
               >
-                <Briefcase className="h-4 w-4" />
-                I want to grow my business
+                <Briefcase className="h-5 w-5 text-primary" />
+                <span className="font-medium">I want to grow my business</span>
               </Button>
               <Button
                 onClick={() => handleQuickReply("I have a specific question")}
                 variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                className="w-full justify-start text-left h-auto py-4 px-5 hover:bg-primary/5 hover:border-primary/50 gap-3 bg-background/80 backdrop-blur-sm rounded-2xl border-2 transition-all duration-200 hover:shadow-md"
                 disabled={isLoading}
               >
-                <MessageSquare className="h-4 w-4" />
-                I have a specific question
+                <MessageSquare className="h-5 w-5 text-primary" />
+                <span className="font-medium">I have a specific question</span>
               </Button>
               <Button
                 onClick={() => handleQuickReply("Just browsing")}
                 variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                className="w-full justify-start text-left h-auto py-4 px-5 hover:bg-primary/5 hover:border-primary/50 gap-3 bg-background/80 backdrop-blur-sm rounded-2xl border-2 transition-all duration-200 hover:shadow-md"
                 disabled={isLoading}
               >
-                <Eye className="h-4 w-4" />
-                Just browsing
+                <Eye className="h-5 w-5 text-primary" />
+                <span className="font-medium">Just browsing</span>
               </Button>
             </div>
           )}
