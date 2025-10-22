@@ -264,7 +264,7 @@ const ExploringSection = () => {
         </div>
 
         {/* Chat Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 mt-20">
           <h3 className="text-3xl md:text-4xl font-bold text-foreground">
             Get All Of Your Questions Answered
           </h3>
