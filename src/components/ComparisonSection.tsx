@@ -43,11 +43,11 @@ const ComparisonSection = () => {
         </h2>
 
         {/* Split Screen Comparison */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16 mt-12">
           {/* LEFT SIDE - Red Ocean */}
-          <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950 via-red-900 to-gray-900 border-2 border-red-800/50 p-8 md:p-12">
+          <div className="relative overflow-visible rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950 via-red-900 to-gray-900 border-2 border-red-800/50 p-8 md:p-12 pt-16 md:pt-20">
             {/* Stuck Here Label */}
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-20">
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
               <div className="bg-red-500 px-8 py-3 rounded-full shadow-[0_0_30px_rgba(239,68,68,0.8)] border-2 border-red-400">
                 <span className="text-white font-bold text-lg md:text-xl">Stuck Here</span>
               </div>
@@ -88,7 +88,7 @@ const ComparisonSection = () => {
           </div>
 
           {/* RIGHT SIDE - Blue Ocean */}
-          <div className="relative overflow-visible rounded-3xl lg:rounded-l-none bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 p-8 md:p-12 transform transition-all duration-500 hover:scale-[1.02] lg:hover:scale-105 hover:z-10">
+          <div className="relative overflow-visible rounded-3xl lg:rounded-l-none bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900 p-8 md:p-12 pb-16 md:pb-20 transform transition-all duration-500 hover:scale-[1.02] lg:hover:scale-105 hover:z-10">
             {/* Animated Glowing Border */}
             <div className="absolute inset-0 rounded-3xl lg:rounded-l-none">
               <div className="absolute inset-0 rounded-3xl lg:rounded-l-none border-4 border-orange-500/60 animate-pulse"></div>
@@ -134,7 +134,7 @@ const ComparisonSection = () => {
             </div>
 
             {/* Enter the Blue Ocean Label */}
-            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-20">
+            <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 z-20">
               <div className="bg-gradient-to-r from-orange-500 to-orange-400 px-10 py-4 rounded-full shadow-[0_0_40px_rgba(249,115,22,0.9)] border-2 border-orange-300 animate-pulse">
                 <span className="text-white font-bold text-lg md:text-2xl whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Enter the blue ocean</span>
               </div>
