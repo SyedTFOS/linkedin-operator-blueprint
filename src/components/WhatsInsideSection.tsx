@@ -58,20 +58,20 @@ const WhatsInsideSection = () => {
               
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
-                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="mb-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <Target className="w-6 h-6 text-primary" />
+                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-10 overflow-y-auto">
+                  <div className="mb-4">
+                    <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Target className="w-7 h-7 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
                     7-Week Operator Framework
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                     The exact playbook that signed Mastercard and Forbes founders—systematized into 50+ video modules.
                   </p>
-                  <div className="space-y-2.5 mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
+                  <div className="space-y-3 mb-6">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
                       "50+ Video Modules (7 comprehensive weeks)",
                       "Client Acquisition Systems (attract real companies)",
@@ -80,13 +80,13 @@ const WhatsInsideSection = () => {
                       "Personal Branding Blueprint (authority positioning)",
                       "LinkedIn Outbound System (predictable pipeline)"
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                      <div key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground/80 italic mt-auto">
+                  <p className="text-sm text-muted-foreground/80 italic mt-auto">
                     Lifetime access. Updated quarterly.
                   </p>
                 </div>
@@ -118,20 +118,20 @@ const WhatsInsideSection = () => {
               
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
-                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="mb-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <FileText className="w-6 h-6 text-primary" />
+                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-10 overflow-y-auto">
+                  <div className="mb-4">
+                    <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <FileText className="w-7 h-7 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
                     Templates & SOP Library
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                     Copy-paste everything. Every template, script, and SOP we use to run 6-7 figure agencies.
                   </p>
-                  <div className="space-y-2.5 mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
+                  <div className="space-y-3 mb-6">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
                       "50+ Content Templates (hooks, posts, lead magnets)",
                       "DM & Outreach Scripts (connection requests, InMails)",
@@ -141,13 +141,13 @@ const WhatsInsideSection = () => {
                       "Personal Brand Assets (profiles, banners, bios)",
                       "Automation Workflows (AI agents, content systems)"
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                      <div key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground/80 italic mt-auto">
+                  <p className="text-sm text-muted-foreground/80 italic mt-auto">
                     Updated monthly with new templates.
                   </p>
                 </div>
@@ -179,29 +179,29 @@ const WhatsInsideSection = () => {
               
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
-                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="mb-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <Users className="w-6 h-6 text-primary" />
+                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-10 overflow-y-auto">
+                  <div className="mb-4">
+                    <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Users className="w-7 h-7 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-3xl font-bold text-foreground mb-6">
                     Coaching & Operator Community
                   </h3>
                   
                   {/* Mid Ticket Section */}
-                  <div className="mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2.5">Mid Ticket Includes:</p>
-                    <div className="space-y-2.5">
+                  <div className="mb-6">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">Mid Ticket Includes:</p>
+                    <div className="space-y-3">
                       {[
                         "60 Days Community Access (full member benefits)",
                         "Peer Network (collaborate, share strategies)",
                         "Resource Library (playbooks, case studies)",
                         "Option to extend: $97/month (LIA) or $127/month (B2B)"
                       ].map((item, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                        <div key={idx} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -209,8 +209,8 @@ const WhatsInsideSection = () => {
 
                   {/* High Ticket Section */}
                   <div>
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2.5">High Ticket Adds:</p>
-                    <div className="space-y-2.5">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide mb-3">High Ticket Adds:</p>
+                    <div className="space-y-3">
                       {[
                         "Lifetime Community Access (never expires)",
                         "Weekly Live Coaching Calls (strategy, Q&A, hot seats)",
@@ -218,9 +218,9 @@ const WhatsInsideSection = () => {
                         "24/7 Text/Chat Access to founders (6 months)",
                         "In-Person Events (exclusive operator meetups)"
                       ].map((item, idx) => (
-                        <div key={idx} className="flex items-start gap-2">
-                          <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                        <div key={idx} className="flex items-start gap-3">
+                          <Crown className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -254,20 +254,20 @@ const WhatsInsideSection = () => {
               
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
-                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="mb-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <Lock className="w-6 h-6 text-primary" />
+                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-10 overflow-y-auto">
+                  <div className="mb-4">
+                    <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Lock className="w-7 h-7 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
                     The LinkedIn Secrets
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                     Strategies too powerful to share publicly. Separates $10K/month from $100K/month agencies.
                   </p>
-                  <div className="space-y-2.5 mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
+                  <div className="space-y-3 mb-6">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
                       "Brand Equity Engineering (belief installation, positioning)",
                       "Viral Content Science (predictable 1M+ view posts)",
@@ -277,13 +277,13 @@ const WhatsInsideSection = () => {
                       "AI & Automation Mastery (custom agents, batch systems)",
                       "Mystery Module (join to find out)"
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                      <div key={idx} className="flex items-start gap-3">
+                        <Crown className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground/80 italic mt-auto">
+                  <p className="text-sm text-muted-foreground/80 italic mt-auto">
                     Unlocked in Week 7 only.
                   </p>
                 </div>
@@ -315,20 +315,20 @@ const WhatsInsideSection = () => {
               
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
-                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="mb-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <Building2 className="w-6 h-6 text-primary" />
+                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-10 overflow-y-auto">
+                  <div className="mb-4">
+                    <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Building2 className="w-7 h-7 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
                     Industry Playbooks
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                     No generic advice. Tailored positioning strategies for AI, SaaS, Med-Tech, Finance, and more.
                   </p>
-                  <div className="space-y-2.5 mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
+                  <div className="space-y-3 mb-6">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
                       "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, etc.)",
                       "Niche Positioning Guides (stand out in your vertical)",
@@ -337,13 +337,13 @@ const WhatsInsideSection = () => {
                       "ICP Mapping (find ideal clients)",
                       "Competitive Analysis Frameworks (beat incumbents)"
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                      <div key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground/80 italic mt-auto">
+                  <p className="text-sm text-muted-foreground/80 italic mt-auto">
                     Works for ANY B2B industry.
                   </p>
                 </div>
@@ -375,20 +375,20 @@ const WhatsInsideSection = () => {
               
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
-                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="mb-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <Link2 className="w-6 h-6 text-primary" />
+                <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-10 overflow-y-auto">
+                  <div className="mb-4">
+                    <div className="w-14 h-14 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Link2 className="w-7 h-7 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-3xl font-bold text-foreground mb-4">
                     Exclusive Operator Network
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
+                  <p className="text-base text-muted-foreground mb-6 leading-relaxed">
                     Access our private rolodex of vetted service providers and resources to build your success.
                   </p>
-                  <div className="space-y-2.5 mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
+                  <div className="space-y-3 mb-6">
+                    <p className="text-sm font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
                       "Tax Optimization Solutions (operator-friendly accountants)",
                       "Payment Processing (high-risk merchants, international)",
@@ -397,13 +397,13 @@ const WhatsInsideSection = () => {
                       "Legal Protection Resources (contracts, entity setup)",
                       "Scaling Infrastructure (hiring, ops, systems beyond $50K/month)"
                     ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                      <div key={idx} className="flex items-start gap-3">
+                        <Crown className="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
-                  <p className="text-xs text-muted-foreground/80 italic mt-auto">
+                  <p className="text-sm text-muted-foreground/80 italic mt-auto">
                     Worth more than the program itself.
                   </p>
                 </div>
