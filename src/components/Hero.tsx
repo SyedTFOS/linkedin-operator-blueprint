@@ -100,12 +100,12 @@ const Hero = () => {
                     <path d="M 180 25 L 170 20 L 175 25 L 170 30 Z" fill="hsl(var(--primary))" />
                   </svg>
                 </div>
+                <p className="text-sm text-muted-foreground font-medium">
+                  A business model for true founders
+                </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   Start Your LinkedIn Agency
                 </h1>
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary leading-tight">
-                  A Real Business Model for Real Founders
-                </p>
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed font-medium">
