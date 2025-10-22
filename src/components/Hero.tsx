@@ -156,7 +156,7 @@ const Hero = () => {
                       }}
                     >
                       <div className="flex flex-col gap-1">
-                        <span className="font-semibold text-foreground">Building An Agency</span>
+                        <span className="font-semibold text-foreground">Building A LinkedIn Agency</span>
                         <span className="text-xs text-muted-foreground">Start from scratch</span>
                       </div>
                     </DropdownMenuItem>
