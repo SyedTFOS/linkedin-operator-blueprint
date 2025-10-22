@@ -15,7 +15,8 @@ import {
   TrendingUp,
   MessageSquare,
   FileCheck,
-  Phone
+  Phone,
+  Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import frameworkDashboard from "@/assets/framework-dashboard.png";
@@ -315,6 +316,30 @@ const WhatsInsideSection = () => {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
+        {/* About Badge */}
+        <div className="flex justify-center mb-6">
+          <div className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full border transition-all ${
+            activePath === 'lia' 
+              ? 'bg-orange-50 border-orange-200 hover:border-orange-300' 
+              : 'bg-blue-50 border-blue-200 hover:border-blue-300'
+          }`}>
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+              activePath === 'lia'
+                ? 'bg-orange-100'
+                : 'bg-blue-100'
+            }`}>
+              <Sparkles className={`w-4 h-4 ${
+                activePath === 'lia' ? 'text-orange-600' : 'text-blue-600'
+              }`} />
+            </div>
+            <span className={`text-sm font-semibold ${
+              activePath === 'lia' ? 'text-orange-900' : 'text-blue-900'
+            }`}>
+              About {activePath === 'lia' ? 'LinkedIn Operator' : 'LinkedIn B2B'} Programs
+            </span>
+          </div>
+        </div>
+
         {/* Badge */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
