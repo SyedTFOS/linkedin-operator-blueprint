@@ -47,9 +47,9 @@ const ComparisonSection = () => {
           {/* LEFT SIDE - Red Ocean */}
           <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950 via-red-900 to-gray-900 border-2 border-red-800/50 p-8 md:p-12">
             {/* Stuck Here Label */}
-            <div className="absolute -top-3 left-8 z-20">
-              <div className="bg-red-500 px-4 py-1.5 rounded-full">
-                <span className="text-white font-bold text-sm">Stuck Here</span>
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-20">
+              <div className="bg-red-500 px-8 py-3 rounded-full shadow-[0_0_30px_rgba(239,68,68,0.8)] border-2 border-red-400">
+                <span className="text-white font-bold text-lg md:text-xl">Stuck Here</span>
               </div>
             </div>
             {/* Background Pattern */}
@@ -134,9 +134,9 @@ const ComparisonSection = () => {
             </div>
 
             {/* Enter the Blue Ocean Label */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20">
-              <div className="bg-orange-500 px-6 py-2 rounded-full shadow-[0_0_20px_rgba(249,115,22,0.6)]">
-                <span className="text-white font-bold text-sm md:text-base whitespace-nowrap">Enter the blue ocean</span>
+            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-20">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-400 px-10 py-4 rounded-full shadow-[0_0_40px_rgba(249,115,22,0.9)] border-2 border-orange-300 animate-pulse">
+                <span className="text-white font-bold text-lg md:text-2xl whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Enter the blue ocean</span>
               </div>
             </div>
           </div>
