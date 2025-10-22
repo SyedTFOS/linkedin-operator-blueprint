@@ -13,12 +13,7 @@ type Message = {
 };
 
 const EmbeddedChatbot = () => {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "assistant",
-      content: "Hey there! I'm here to help you find the perfect path at LinkedIn Operator.\n\n**What brings you here today?**",
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showQuickReplies, setShowQuickReplies] = useState(true);
@@ -225,39 +220,41 @@ const EmbeddedChatbot = () => {
           )}
         </div>
 
-        {/* Messages */}
-        <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
-          <div className="space-y-4">
-            {messages.map((message, index) => (
-              <div key={index}>
-                <div
-                  className={`flex ${
-                    message.role === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
+        {/* Messages - Only show when there are messages */}
+        {messages.length > 0 && (
+          <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
+            <div className="space-y-4">
+              {messages.map((message, index) => (
+                <div key={index}>
                   <div
-                    className={`max-w-[80%] rounded-2xl px-5 py-3 ${
-                      message.role === "user"
-                        ? "bg-[#FF6B35] text-white shadow-md"
-                        : "text-foreground"
+                    className={`flex ${
+                      message.role === "user" ? "justify-end" : "justify-start"
                     }`}
                   >
-                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content.split('**').map((part, i) => 
-                      i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
-                    )}</p>
+                    <div
+                      className={`max-w-[80%] rounded-2xl px-5 py-3 ${
+                        message.role === "user"
+                          ? "bg-[#FF6B35] text-white shadow-md"
+                          : "text-foreground"
+                      }`}
+                    >
+                      <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content.split('**').map((part, i) => 
+                        i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
+                      )}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            {isLoading && (
-              <div className="flex justify-start items-center gap-2">
-                <div className="text-sm text-muted-foreground italic">
-                  Leo is typing...
+              ))}
+              {isLoading && (
+                <div className="flex justify-start items-center gap-2">
+                  <div className="text-sm text-muted-foreground italic">
+                    Leo is typing...
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
-        </ScrollArea>
+              )}
+            </div>
+          </ScrollArea>
+        )}
       </div>
     </div>
   );
