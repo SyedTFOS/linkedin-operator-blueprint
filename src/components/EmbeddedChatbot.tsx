@@ -9,7 +9,7 @@ import AnimatedChatHeader from "@/components/AnimatedChatHeader";
 type Message = {
   role: "user" | "assistant";
   content: string;
-  buttons?: Array<{ label: string; action: string }>;
+  buttons?: Array<{ label: string }>;
 };
 
 const EmbeddedChatbot = () => {
@@ -66,6 +66,7 @@ const EmbeddedChatbot = () => {
       let textBuffer = "";
       let streamDone = false;
       let assistantContent = "";
+      let suggestedButtons: Array<{ label: string }> = [];
 
       setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
 
@@ -91,6 +92,14 @@ const EmbeddedChatbot = () => {
 
           try {
             const parsed = JSON.parse(jsonStr);
+            
+            // Check for custom button event
+            if (parsed.type === 'buttons') {
+              suggestedButtons = parsed.buttons || [];
+              continue;
+            }
+            
+            // Regular content
             const content = parsed.choices?.[0]?.delta?.content as string | undefined;
             if (content) {
               assistantContent += content;
@@ -108,6 +117,19 @@ const EmbeddedChatbot = () => {
             break;
           }
         }
+      }
+
+      // Update final message with buttons
+      if (suggestedButtons.length > 0) {
+        setMessages((prev) => {
+          const newMessages = [...prev];
+          newMessages[newMessages.length - 1] = {
+            role: "assistant",
+            content: assistantContent,
+            buttons: suggestedButtons,
+          };
+          return newMessages;
+        });
       }
 
       setIsLoading(false);
@@ -227,18 +249,37 @@ const EmbeddedChatbot = () => {
           <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
             <div className="space-y-6">
               {messages.map((message, index) => (
-                <div key={index}>
+                <div key={index} className="space-y-3">
                   {message.role === "assistant" ? (
-                    <div className="flex gap-3 items-start">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-xl">
-                        🦁
+                    <>
+                      <div className="flex gap-3 items-start">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-xl">
+                          🦁
+                        </div>
+                        <div className="flex-1 bg-white dark:bg-card border border-border rounded-2xl px-5 py-4 shadow-sm">
+                          <p className="text-base text-foreground leading-relaxed whitespace-pre-wrap">
+                            {message.content}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex-1 bg-white dark:bg-card border border-border rounded-2xl px-5 py-4 shadow-sm">
-                        <p className="text-base text-foreground leading-relaxed whitespace-pre-wrap">
-                          {message.content}
-                        </p>
-                      </div>
-                    </div>
+                      
+                      {/* Show buttons only for the most recent assistant message */}
+                      {message.buttons && index === messages.length - 1 && !isLoading && (
+                        <div className="ml-14 space-y-2">
+                          {message.buttons.map((button, btnIdx) => (
+                            <Button
+                              key={btnIdx}
+                              onClick={() => handleQuickReply(button.label)}
+                              variant="outline"
+                              className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/5 hover:border-primary/50 gap-2 bg-background/80 backdrop-blur-sm rounded-xl border transition-all duration-200"
+                              disabled={isLoading}
+                            >
+                              <span className="text-sm font-medium">{button.label}</span>
+                            </Button>
+                          ))}
+                        </div>
+                      )}
+                    </>
                   ) : (
                     <div className="flex justify-end">
                       <div className="bg-[#FF6B35] text-white rounded-2xl px-5 py-3 shadow-lg max-w-[80%]">

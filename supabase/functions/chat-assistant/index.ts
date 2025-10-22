@@ -5,6 +5,52 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+async function generateButtons(messages: any[], lastResponse: string, apiKey: string) {
+  try {
+    const conversationContext = messages.slice(-3).map(m => `${m.role}: ${m.content}`).join('\n');
+    
+    const buttonPrompt = `Based on this conversation, suggest 2-3 relevant follow-up questions or actions the user might want to take next.
+
+Conversation:
+${conversationContext}
+Leo: ${lastResponse}
+
+Return ONLY a JSON array of button objects with "label" fields. Keep labels short (5-7 words max).
+Example: [{"label": "Tell me about pricing"}, {"label": "What experience do I need?"}]`;
+
+    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash",
+        messages: [
+          { role: "system", content: "You are a helpful assistant that generates contextual button suggestions. Return only valid JSON arrays." },
+          { role: "user", content: buttonPrompt }
+        ],
+        temperature: 0.7,
+      }),
+    });
+
+    if (!response.ok) return [];
+
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content || "[]";
+    
+    // Extract JSON from response
+    const jsonMatch = content.match(/\[[\s\S]*\]/);
+    if (!jsonMatch) return [];
+    
+    const buttons = JSON.parse(jsonMatch[0]);
+    return buttons.slice(0, 3); // Max 3 buttons
+  } catch (error) {
+    console.error('Button generation error:', error);
+    return [];
+  }
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -210,7 +256,58 @@ Remember: You're a helpful guide, not a pushy salesperson. If someone isn't read
       });
     }
 
-    return new Response(response.body, {
+    // Stream the AI response and then add suggested buttons
+    const reader = response.body!.getReader();
+    const encoder = new TextEncoder();
+    const decoder = new TextDecoder();
+    
+    const stream = new ReadableStream({
+      async start(controller) {
+        let fullResponse = "";
+        
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            
+            // Forward the chunk to the client
+            controller.enqueue(value);
+            
+            // Collect response for button generation
+            const chunk = decoder.decode(value, { stream: true });
+            const lines = chunk.split('\n');
+            for (const line of lines) {
+              if (line.startsWith('data: ') && line !== 'data: [DONE]') {
+                try {
+                  const json = JSON.parse(line.slice(6));
+                  const content = json.choices?.[0]?.delta?.content;
+                  if (content) fullResponse += content;
+                } catch {}
+              }
+            }
+          }
+          
+          // Generate contextual buttons based on conversation
+          const buttonSuggestions = await generateButtons(messages, fullResponse, LOVABLE_API_KEY);
+          
+          // Send buttons as a custom event
+          if (buttonSuggestions.length > 0) {
+            const buttonEvent = `data: ${JSON.stringify({
+              type: 'buttons',
+              buttons: buttonSuggestions
+            })}\n\n`;
+            controller.enqueue(encoder.encode(buttonEvent));
+          }
+          
+          controller.close();
+        } catch (error) {
+          console.error('Stream error:', error);
+          controller.error(error);
+        }
+      }
+    });
+
+    return new Response(stream, {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (e) {
