@@ -39,13 +39,19 @@ const ComparisonSection = () => {
 
         {/* Header */}
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-16 md:mb-24">
-          While Everyone Else Is Stuck Here...
+          While Everyone Else Is...
         </h2>
 
         {/* Split Screen Comparison */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16">
           {/* LEFT SIDE - Red Ocean */}
           <div className="relative overflow-hidden rounded-3xl lg:rounded-r-none bg-gradient-to-br from-red-950 via-red-900 to-gray-900 border-2 border-red-800/50 p-8 md:p-12">
+            {/* Stuck Here Label */}
+            <div className="absolute -top-3 left-8 z-20">
+              <div className="bg-red-500 px-4 py-1.5 rounded-full">
+                <span className="text-white font-bold text-sm">Stuck Here</span>
+              </div>
+            </div>
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
@@ -124,6 +130,13 @@ const ComparisonSection = () => {
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Enter the Blue Ocean Label */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20">
+              <div className="bg-orange-500 px-6 py-2 rounded-full shadow-[0_0_20px_rgba(249,115,22,0.6)]">
+                <span className="text-white font-bold text-sm md:text-base whitespace-nowrap">Enter the blue ocean</span>
               </div>
             </div>
           </div>
