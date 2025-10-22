@@ -23,6 +23,7 @@ const Hero = () => {
   const [isStudentsHovered, setIsStudentsHovered] = useState(false);
   const [isBusinessHovered, setIsBusinessHovered] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isPathDropdownOpen, setIsPathDropdownOpen] = useState(false);
 
   // Auto-scroll for Agency Students carousel
   useEffect(() => {
@@ -129,10 +130,45 @@ const Hero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="group">
-                  Choose Your Program
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <DropdownMenu open={isPathDropdownOpen} onOpenChange={setIsPathDropdownOpen}>
+                  <DropdownMenuTrigger asChild>
+                    <Button 
+                      size="lg" 
+                      className="group"
+                      onMouseEnter={() => setIsPathDropdownOpen(true)}
+                      onMouseLeave={() => setIsPathDropdownOpen(false)}
+                    >
+                      Choose Your Path
+                      <ChevronDown className="ml-2 w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent 
+                    className="w-56 bg-background border-border z-50"
+                    onMouseEnter={() => setIsPathDropdownOpen(true)}
+                    onMouseLeave={() => setIsPathDropdownOpen(false)}
+                  >
+                    <DropdownMenuItem 
+                      className="cursor-pointer hover:bg-accent focus:bg-accent"
+                      onClick={() => {
+                        const programsSection = document.getElementById('about-programs');
+                        programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setIsPathDropdownOpen(false);
+                      }}
+                    >
+                      Building An Agency
+                    </DropdownMenuItem>
+                    <DropdownMenuItem 
+                      className="cursor-pointer hover:bg-accent focus:bg-accent"
+                      onClick={() => {
+                        const programsSection = document.getElementById('about-programs');
+                        programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setIsPathDropdownOpen(false);
+                      }}
+                    >
+                      Growing My Business
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
                   <DropdownMenuTrigger asChild>
                     <Button 
