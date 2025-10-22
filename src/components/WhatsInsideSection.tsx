@@ -17,9 +17,14 @@ const WhatsInsideSection = () => {
         </div>
 
         {/* Header */}
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-16 md:mb-24">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-6">
           What's Inside LinkedIn Operator
         </h2>
+
+        {/* Subheadline */}
+        <p className="text-lg md:text-xl text-center text-muted-foreground max-w-4xl mx-auto mb-16 md:mb-24 leading-relaxed">
+          Everything you need to turn LinkedIn into a predictable revenue engine—whether you're building an agency empire or becoming the #1 authority in your industry.
+        </p>
 
         {/* Content will be added here */}
         <div className="max-w-5xl mx-auto">
