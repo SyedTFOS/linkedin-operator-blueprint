@@ -1,4 +1,4 @@
-import { Package } from "lucide-react";
+import { Package, Target, FileText, Users, Lock, Building2, Link2, CheckCircle2, Crown } from "lucide-react";
 import frameworkDashboard from "@/assets/framework-dashboard.png";
 import masterDocument from "@/assets/master-document.png";
 import coachingEvent from "@/assets/coaching-event.png";
@@ -43,9 +43,13 @@ const WhatsInsideSection = () => {
                   <img src={frameworkDashboard} alt="Framework Dashboard" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="text-5xl mb-4">🎯</div>
+                    <div className="mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                        <Target className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
                     <h3 className="text-3xl font-bold text-white mb-3">
-                      The Complete 7-Week Operator Framework
+                      7-Week Operator Framework
                     </h3>
                     <p className="text-gray-200 text-sm">Hover to see what's inside →</p>
                   </div>
@@ -55,9 +59,13 @@ const WhatsInsideSection = () => {
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
                 <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="text-4xl mb-3">🎯</div>
+                  <div className="mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Target className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">
-                    The Complete Framework
+                    7-Week Operator Framework
                   </h3>
                   <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
                     The exact playbook that signed Mastercard and Forbes founders—systematized into 50+ video modules.
@@ -65,16 +73,15 @@ const WhatsInsideSection = () => {
                   <div className="space-y-2.5 mb-5">
                     <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
-                      "50+ Video Modules across 7 weeks",
-                      "Client Acquisition Systems",
-                      "Fulfillment SOPs for scaling",
-                      "Sales Masterclass ($5K-$50K+ deals)",
-                      "Personal Branding Blueprint",
-                      "LinkedIn Outbound System",
-                      "Progress Tracking Dashboard"
+                      "50+ Video Modules (7 comprehensive weeks)",
+                      "Client Acquisition Systems (attract real companies)",
+                      "Fulfillment SOPs (scale without quality loss)",
+                      "Sales Masterclass (close $5K-$50K+ contracts)",
+                      "Personal Branding Blueprint (authority positioning)",
+                      "LinkedIn Outbound System (predictable pipeline)"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                         <span className="text-xs text-muted-foreground leading-tight">{item}</span>
                       </div>
                     ))}
@@ -96,9 +103,13 @@ const WhatsInsideSection = () => {
                   <img src={masterDocument} alt="Master Document" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="text-5xl mb-4">📋</div>
+                    <div className="mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                        <FileText className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
                     <h3 className="text-3xl font-bold text-white mb-3">
-                      Done-For-You Templates & SOP Library
+                      Templates & SOP Library
                     </h3>
                     <p className="text-gray-200 text-sm">Hover to explore the vault →</p>
                   </div>
@@ -108,7 +119,11 @@ const WhatsInsideSection = () => {
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
                 <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="text-4xl mb-3">📋</div>
+                  <div className="mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <FileText className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">
                     Templates & SOP Library
                   </h3>
@@ -118,16 +133,16 @@ const WhatsInsideSection = () => {
                   <div className="space-y-2.5 mb-5">
                     <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
-                      "50+ Content Templates",
-                      "DM & Outreach Scripts",
-                      "Proposal Templates ($5K-$50K+)",
-                      "Onboarding SOPs",
-                      "Fulfillment Playbooks",
-                      "Personal Brand Assets",
-                      "Automation Workflows"
+                      "50+ Content Templates (hooks, posts, lead magnets)",
+                      "DM & Outreach Scripts (connection requests, InMails)",
+                      "Proposal Templates ($5K-$50K+ closing docs)",
+                      "Onboarding SOPs (client intake, KPI tracking)",
+                      "Fulfillment Playbooks (delivery, reporting, scaling)",
+                      "Personal Brand Assets (profiles, banners, bios)",
+                      "Automation Workflows (AI agents, content systems)"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                         <span className="text-xs text-muted-foreground leading-tight">{item}</span>
                       </div>
                     ))}
@@ -149,9 +164,13 @@ const WhatsInsideSection = () => {
                   <img src={coachingEvent} alt="Coaching Event" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="text-5xl mb-4">👥</div>
+                    <div className="mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                        <Users className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
                     <h3 className="text-3xl font-bold text-white mb-3">
-                      Weekly Coaching + Operator Community
+                      Coaching & Operator Community
                     </h3>
                     <p className="text-gray-200 text-sm">Hover to see the network →</p>
                   </div>
@@ -161,31 +180,51 @@ const WhatsInsideSection = () => {
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
                 <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="text-4xl mb-3">👥</div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">
-                    Coaching + Community
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
-                    Join 500+ operators building real agencies. Live coaching, hot seats, and direct founder access.
-                  </p>
-                  <div className="space-y-2.5 mb-5">
-                    <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
-                    {[
-                      "Weekly Group Coaching Calls",
-                      "Monthly Founder Calls",
-                      "Private Operator Community",
-                      "In-Person Events",
-                      "Peer Network"
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">✅</span>
-                        <span className="text-xs text-muted-foreground leading-tight">{item}</span>
-                      </div>
-                    ))}
+                  <div className="mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-primary" />
+                    </div>
                   </div>
-                  <p className="text-xs text-muted-foreground/80 italic mt-auto">
-                    You're joining an operator network.
-                  </p>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                    Coaching & Operator Community
+                  </h3>
+                  
+                  {/* Mid Ticket Section */}
+                  <div className="mb-5">
+                    <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2.5">Mid Ticket Includes:</p>
+                    <div className="space-y-2.5">
+                      {[
+                        "60 Days Community Access (full member benefits)",
+                        "Peer Network (collaborate, share strategies)",
+                        "Resource Library (playbooks, case studies)",
+                        "Option to extend: $97/month (LIA) or $127/month (B2B)"
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* High Ticket Section */}
+                  <div>
+                    <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2.5">High Ticket Adds:</p>
+                    <div className="space-y-2.5">
+                      {[
+                        "Lifetime Community Access (never expires)",
+                        "Weekly Live Coaching Calls (strategy, Q&A, hot seats)",
+                        "Monthly Founder Calls with Syed & Freddie",
+                        "24/7 Text/Chat Access to founders (6 months)",
+                        "In-Person Events (exclusive operator meetups)"
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2">
+                          <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-xs text-muted-foreground leading-tight">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -200,9 +239,13 @@ const WhatsInsideSection = () => {
                   <img src={guidesTemplates} alt="Guides & Templates" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="text-5xl mb-4">🔒</div>
+                    <div className="mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                        <Lock className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
                     <h3 className="text-3xl font-bold text-white mb-3">
-                      Advanced Operator Secrets (Week 7)
+                      The LinkedIn Secrets
                     </h3>
                     <p className="text-gray-200 text-sm">Hover to unlock the secrets →</p>
                   </div>
@@ -212,9 +255,13 @@ const WhatsInsideSection = () => {
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
                 <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="text-4xl mb-3">🔒</div>
+                  <div className="mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Lock className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">
-                    Advanced Secrets
+                    The LinkedIn Secrets
                   </h3>
                   <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
                     Strategies too powerful to share publicly. Separates $10K/month from $100K/month agencies.
@@ -222,16 +269,16 @@ const WhatsInsideSection = () => {
                   <div className="space-y-2.5 mb-5">
                     <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
-                      "Brand Equity Engineering",
-                      "Viral Content Science",
-                      "Client Retention Mastery",
-                      "Account Protection Protocols",
-                      "Competitive Domination",
-                      "AI & Automation Mastery",
-                      "Mystery Module"
+                      "Brand Equity Engineering (belief installation, positioning)",
+                      "Viral Content Science (predictable 1M+ view posts)",
+                      "Client Retention Mastery (upsell frameworks, 0% churn)",
+                      "Account Protection Protocols (never get banned)",
+                      "Competitive Domination (be #1 in your niche)",
+                      "AI & Automation Mastery (custom agents, batch systems)",
+                      "Mystery Module (join to find out)"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">✅</span>
+                        <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
                         <span className="text-xs text-muted-foreground leading-tight">{item}</span>
                       </div>
                     ))}
@@ -253,9 +300,13 @@ const WhatsInsideSection = () => {
                   <img src={masterClasses} alt="Master Classes" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="text-5xl mb-4">🏢</div>
+                    <div className="mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                        <Building2 className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
                     <h3 className="text-3xl font-bold text-white mb-3">
-                      Playbooks For Every Industry
+                      Industry Playbooks
                     </h3>
                     <p className="text-gray-200 text-sm">Hover to see industries →</p>
                   </div>
@@ -265,7 +316,11 @@ const WhatsInsideSection = () => {
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
                 <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="text-4xl mb-3">🏢</div>
+                  <div className="mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Building2 className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">
                     Industry Playbooks
                   </h3>
@@ -275,15 +330,15 @@ const WhatsInsideSection = () => {
                   <div className="space-y-2.5 mb-5">
                     <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
-                      "8+ Industry Playbooks",
-                      "Niche Positioning Guides",
-                      "Vertical-Specific Templates",
-                      "Industry Case Studies",
-                      "ICP Mapping",
-                      "Competitive Analysis"
+                      "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, etc.)",
+                      "Niche Positioning Guides (stand out in your vertical)",
+                      "Vertical-Specific Templates (content, DM scripts, offers)",
+                      "Industry Case Studies (real operators, real results)",
+                      "ICP Mapping (find ideal clients)",
+                      "Competitive Analysis Frameworks (beat incumbents)"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">✅</span>
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                         <span className="text-xs text-muted-foreground leading-tight">{item}</span>
                       </div>
                     ))}
@@ -305,7 +360,11 @@ const WhatsInsideSection = () => {
                   <img src={communityChat} alt="Community Chat" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <div className="text-5xl mb-4">🔗</div>
+                    <div className="mb-4">
+                      <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                        <Link2 className="w-7 h-7 text-primary" />
+                      </div>
+                    </div>
                     <h3 className="text-3xl font-bold text-white mb-3">
                       Exclusive Operator Network
                     </h3>
@@ -317,9 +376,13 @@ const WhatsInsideSection = () => {
               {/* Back Side */}
               <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl overflow-hidden border border-primary/50 shadow-2xl">
                 <div className="h-full bg-gradient-to-br from-muted/95 via-muted/90 to-muted/95 backdrop-blur-sm p-8 overflow-y-auto">
-                  <div className="text-4xl mb-3">🔗</div>
+                  <div className="mb-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
+                      <Link2 className="w-6 h-6 text-primary" />
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">
-                    Operator Network
+                    Exclusive Operator Network
                   </h3>
                   <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
                     Access our private rolodex of vetted service providers and resources to build your success.
@@ -327,15 +390,15 @@ const WhatsInsideSection = () => {
                   <div className="space-y-2.5 mb-5">
                     <p className="text-xs font-bold text-foreground uppercase tracking-wide">What's Included:</p>
                     {[
-                      "Tax Optimization Solutions",
-                      "Payment Processing",
-                      "OTC Trading Connections",
-                      "Social Media Insiders",
-                      "Legal Protection Resources",
-                      "Scaling Infrastructure"
+                      "Tax Optimization Solutions (operator-friendly accountants)",
+                      "Payment Processing (high-risk merchants, international)",
+                      "OTC Trading Connections (scaling past $100K/month)",
+                      "Social Media Insiders (LinkedIn/X troubleshooting contacts)",
+                      "Legal Protection Resources (contracts, entity setup)",
+                      "Scaling Infrastructure (hiring, ops, systems beyond $50K/month)"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">✅</span>
+                        <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
                         <span className="text-xs text-muted-foreground leading-tight">{item}</span>
                       </div>
                     ))}
