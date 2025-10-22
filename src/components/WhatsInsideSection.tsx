@@ -563,7 +563,9 @@ const WhatsInsideSection = () => {
                           <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
                             <div className="flex items-center gap-2 mb-3">
                               <CheckCircle2 className="w-5 h-5 text-green-500" />
-                              <span className="text-sm font-bold text-white uppercase">Mid Ticket</span>
+                              <span className="text-sm font-bold text-white uppercase">
+                                {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'}
+                              </span>
                             </div>
                             <div className="space-y-2">
                               {card.midTicket?.slice(0, 2).map((item, idx) => (
@@ -579,7 +581,9 @@ const WhatsInsideSection = () => {
                           <div className="bg-gradient-to-br from-amber-500/10 to-yellow-500/10 rounded-xl p-4 border border-amber-500/30">
                             <div className="flex items-center gap-2 mb-3">
                               <Crown className="w-5 h-5 text-amber-500" />
-                              <span className="text-sm font-bold text-white uppercase">High Ticket</span>
+                              <span className="text-sm font-bold text-white uppercase">
+                                {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'}
+                              </span>
                             </div>
                             <div className="space-y-2">
                               {card.highTicket?.slice(0, 2).map((item, idx) => (
@@ -596,7 +600,9 @@ const WhatsInsideSection = () => {
                         {isExpanded && (
                           <div className="mt-4 space-y-4 animate-fade-in">
                             <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
-                              <p className="text-xs font-bold text-white uppercase mb-2">Mid Ticket (Full List):</p>
+                              <p className="text-xs font-bold text-white uppercase mb-2">
+                                {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'} (Full List):
+                              </p>
                               <div className="space-y-2">
                                 {card.midTicket?.map((item, idx) => (
                                   <div key={idx} className="flex items-start gap-2">
@@ -607,7 +613,9 @@ const WhatsInsideSection = () => {
                               </div>
                             </div>
                             <div className="bg-gradient-to-br from-amber-500/10 to-yellow-500/10 rounded-xl p-4 border border-amber-500/30">
-                              <p className="text-xs font-bold text-white uppercase mb-2">High Ticket (Full List):</p>
+                              <p className="text-xs font-bold text-white uppercase mb-2">
+                                {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'} (Full List):
+                              </p>
                               <div className="space-y-2">
                                 {card.highTicket?.map((item, idx) => (
                                   <div key={idx} className="flex items-start gap-2">
@@ -712,7 +720,9 @@ const WhatsInsideSection = () => {
               <div className="bg-card rounded-xl p-6 border-2 border-primary/30">
                 <div className="flex items-center gap-3 mb-6">
                   <CheckCircle2 className="w-8 h-8 text-primary" />
-                  <h3 className="text-2xl font-bold text-foreground">Mid Ticket Includes</h3>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'} Includes
+                  </h3>
                 </div>
                 <div className="space-y-4">
                   {cardsData.filter(c => c.tier === "both" || c.tier === "split").map(card => (
@@ -745,7 +755,9 @@ const WhatsInsideSection = () => {
               <div className="bg-gradient-to-br from-amber-500/10 to-yellow-500/10 rounded-xl p-6 border-2 border-amber-500/50 animate-pulse-glow">
                 <div className="flex items-center gap-3 mb-6">
                   <Crown className="w-8 h-8 text-amber-500" />
-                  <h3 className="text-2xl font-bold text-foreground">High Ticket Adds</h3>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'} Adds
+                  </h3>
                 </div>
                 <div className="space-y-4">
                   {cardsData.map(card => {
