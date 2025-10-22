@@ -1,5 +1,22 @@
 import { useState } from "react";
-import { Package, Target, FileText, Users, Lock, Building2, Link2, CheckCircle2, Crown, ArrowRight, LockKeyhole } from "lucide-react";
+import { 
+  Package, 
+  Target, 
+  FileText, 
+  Users, 
+  Lock, 
+  Building2, 
+  Link2,
+  CheckCircle2,
+  Crown,
+  LockKeyhole,
+  ArrowRight,
+  Briefcase,
+  TrendingUp,
+  MessageSquare,
+  FileCheck,
+  Phone
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import frameworkDashboard from "@/assets/framework-dashboard.png";
 import masterDocument from "@/assets/master-document.png";
@@ -10,9 +27,11 @@ import masterClasses from "@/assets/master-classes.png";
 
 const WhatsInsideSection = () => {
   const [viewMode, setViewMode] = useState<"all" | "compare">("all");
+  const [activePath, setActivePath] = useState<'lia' | 'b2b'>('lia');
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
-  const cardsData = [
+  // LIA Cards Data (Building An Agency)
+  const liaCardsData = [
     {
       id: 1,
       tier: "both",
@@ -81,6 +100,28 @@ const WhatsInsideSection = () => {
     },
     {
       id: 4,
+      tier: "both",
+      icon: Building2,
+      title: "Industry Playbooks",
+      image: masterClasses,
+      shortDescription: "No generic advice. Tailored positioning strategies for AI, SaaS, Med-Tech, Finance, and more.",
+      previewBullets: [
+        "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, etc.)",
+        "Niche Positioning Guides (stand out in your vertical)",
+        "Vertical-Specific Templates (content, DM scripts, offers)"
+      ],
+      allBullets: [
+        "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, etc.)",
+        "Niche Positioning Guides (stand out in your vertical)",
+        "Vertical-Specific Templates (content, DM scripts, offers)",
+        "Industry Case Studies (real operators, real results)",
+        "ICP Mapping (find ideal clients)",
+        "Competitive Analysis Frameworks (beat incumbents)"
+      ],
+      footer: "Works for ANY B2B industry."
+    },
+    {
+      id: 5,
       tier: "high",
       icon: Lock,
       title: "The LinkedIn Secrets",
@@ -102,28 +143,6 @@ const WhatsInsideSection = () => {
         "Mystery Module (join to find out)"
       ],
       footer: "Unlocked ONLY for elite operators"
-    },
-    {
-      id: 5,
-      tier: "both",
-      icon: Building2,
-      title: "Industry Playbooks",
-      image: masterClasses,
-      shortDescription: "No generic advice. Tailored positioning strategies for AI, SaaS, Med-Tech, Finance, and more.",
-      previewBullets: [
-        "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, etc.)",
-        "Niche Positioning Guides (stand out in your vertical)",
-        "Vertical-Specific Templates (content, DM scripts, offers)"
-      ],
-      allBullets: [
-        "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, etc.)",
-        "Niche Positioning Guides (stand out in your vertical)",
-        "Vertical-Specific Templates (content, DM scripts, offers)",
-        "Industry Case Studies (real operators, real results)",
-        "ICP Mapping (find ideal clients)",
-        "Competitive Analysis Frameworks (beat incumbents)"
-      ],
-      footer: "Works for ANY B2B industry."
     },
     {
       id: 6,
@@ -149,6 +168,145 @@ const WhatsInsideSection = () => {
       footer: "Worth more than the program itself."
     }
   ];
+
+  // B2B Cards Data (Growing My Business)
+  const b2bCardsData = [
+    {
+      id: 1,
+      tier: "both",
+      icon: TrendingUp,
+      title: "LinkedIn Growth Fundamentals",
+      image: frameworkDashboard,
+      shortDescription: "Master the fundamentals of LinkedIn personal branding, positioning, and content that attracts decision-makers in your industry.",
+      previewBullets: [
+        "Fundamentals Module (mindset, infrastructure, setup)",
+        "Personal Branding Blueprint (Forbes-level positioning)",
+        "Profile Optimization System (conversion-focused)"
+      ],
+      allBullets: [
+        "Fundamentals Module (mindset, infrastructure, setup)",
+        "Personal Branding Blueprint (Forbes-level positioning)",
+        "Profile Optimization System (conversion-focused)",
+        "Content Strategy Framework (authority-building)"
+      ],
+      footer: "Lifetime access. Updated quarterly."
+    },
+    {
+      id: 2,
+      tier: "both",
+      icon: MessageSquare,
+      title: "LinkedIn Outbound & Sales",
+      image: masterDocument,
+      shortDescription: "Learn the art of LinkedIn DM selling that actually works. No spam—just surgical outreach that books qualified calls with decision-makers.",
+      previewBullets: [
+        "LinkedIn Outbound System (DM frameworks, follow-ups)",
+        "Sales Masterclass (discovery calls, closing)",
+        "Lead List Building (Sales Navigator mastery)"
+      ],
+      allBullets: [
+        "LinkedIn Outbound System (DM frameworks, follow-ups)",
+        "Sales Masterclass (discovery calls, closing)",
+        "Lead List Building (Sales Navigator mastery)",
+        "Conversion Optimization (booking rate improvement)"
+      ],
+      footer: "Updated monthly with proven scripts."
+    },
+    {
+      id: 3,
+      tier: "split",
+      icon: Users,
+      title: "LinkedIn Founder Community",
+      image: coachingEvent,
+      shortDescription: "",
+      midTicket: [
+        "60 Days Access",
+        "Founder peer network",
+        "Strategy resources",
+        "Extend for $127/month"
+      ],
+      highTicket: [
+        "Lifetime Access + White-Glove Support",
+        "Never expires",
+        "Weekly strategy calls",
+        "Dedicated account manager",
+        "Priority support"
+      ]
+    },
+    {
+      id: 4,
+      tier: "both",
+      icon: FileCheck,
+      title: "Templates & Content Assets",
+      image: masterClasses,
+      shortDescription: "Done-for-you templates for content, outreach, and positioning. Skip the trial-and-error phase.",
+      previewBullets: [
+        "Content Templates (hooks, posts, lead magnets)",
+        "Profile Templates (headlines, about sections, banners)",
+        "Outreach Scripts (DM frameworks, InMails)"
+      ],
+      allBullets: [
+        "Content Templates (hooks, posts, lead magnets)",
+        "Profile Templates (headlines, about sections, banners)",
+        "Outreach Scripts (DM frameworks, InMails)",
+        "Lead Magnet Templates"
+      ],
+      footer: "Updated monthly."
+    },
+    {
+      id: 5,
+      tier: "high",
+      icon: Lock,
+      title: "The LinkedIn Secrets",
+      image: guidesTemplates,
+      shortDescription: "Advanced strategies for predictable virality, brand equity engineering, and positioning that makes competitors irrelevant.",
+      isPremium: true,
+      isDFY: true,
+      previewBullets: [
+        "Brand Equity Engineering",
+        "Viral Content Science (predictable 1M+ views)",
+        "Algorithm Mastery"
+      ],
+      allBullets: [
+        "Brand Equity Engineering",
+        "Viral Content Science (predictable 1M+ views)",
+        "Algorithm Mastery",
+        "Account Protection Protocols",
+        "Competitive Domination",
+        "[REDACTED]",
+        "Mystery Module"
+      ],
+      testimonial: {
+        quote: "LinkedIn became our #1 client acquisition channel. 5-10X ROI.",
+        author: "Craig C., DiversyFund"
+      },
+      footer: "Available only with Done-For-You service."
+    },
+    {
+      id: 6,
+      tier: "high",
+      icon: Phone,
+      title: "Done-For-You Execution",
+      image: communityChat,
+      shortDescription: "We handle everything. You show up for sales calls. Our team manages strategy, content creation, posting, and optimization.",
+      isPremium: true,
+      isDFY: true,
+      previewBullets: [
+        "White-Glove Content Creation (ghostwritten for you)",
+        "Strategic Positioning (Forbes-level authority)",
+        "Profile Optimization (done for you)"
+      ],
+      allBullets: [
+        "White-Glove Content Creation (ghostwritten for you)",
+        "Strategic Positioning (Forbes-level authority)",
+        "Profile Optimization (done for you)",
+        "Dedicated Account Manager (weekly strategy calls)",
+        "Performance Reporting (monthly ROI tracking)"
+      ],
+      footer: "Limited to 10 DFY clients at a time."
+    }
+  ];
+
+  const cardsData = activePath === 'lia' ? liaCardsData : b2bCardsData;
 
   const toggleCardExpansion = (cardId: number) => {
     setExpandedCard(expandedCard === cardId ? null : cardId);
@@ -178,6 +336,74 @@ const WhatsInsideSection = () => {
         <p className="text-lg md:text-xl text-center text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed">
           Everything you need to turn LinkedIn into a predictable revenue engine—whether you're building an agency empire or becoming the #1 authority in your industry.
         </p>
+
+        {/* Path Selector Tabs */}
+        <div className="max-w-2xl mx-auto mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-2 bg-card/50 rounded-xl border border-border/50">
+            <button
+              onClick={() => setActivePath('lia')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
+                activePath === 'lia'
+                  ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                  : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                <Briefcase className="w-5 h-5" />
+                <div className="text-left">
+                  <div className="text-sm font-bold">Building An Agency</div>
+                  <div className="text-xs opacity-80">(LIA)</div>
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setActivePath('b2b')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
+                activePath === 'b2b'
+                  ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                  : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                <TrendingUp className="w-5 h-5" />
+                <div className="text-left">
+                  <div className="text-sm font-bold">Growing My Business</div>
+                  <div className="text-xs opacity-80">(B2B)</div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Product Name Callout */}
+        <div className="max-w-4xl mx-auto mb-12 space-y-4">
+          <div className="bg-card/30 border border-border/50 rounded-xl p-6">
+            <div className="flex items-start gap-4">
+              <div className="text-2xl">📦</div>
+              <div>
+                <div className="font-bold text-lg mb-1">
+                  {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'} (Mid Ticket)
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Complete framework + 60 days community
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-xl p-6">
+            <div className="flex items-start gap-4">
+              <div className="text-2xl">👑</div>
+              <div>
+                <div className="font-bold text-lg mb-1">
+                  {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'} (High Ticket)
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {activePath === 'lia' ? 'Everything + Elite access + Secrets' : 'Done-for-you execution + strategy'}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Tier Comparison Toggle */}
         <div className="flex justify-center mb-16">
@@ -213,7 +439,7 @@ const WhatsInsideSection = () => {
               const isExpanded = expandedCard === card.id;
               const animationDelay = `${index * 150}ms`;
 
-              // Premium card (LinkedIn Secrets & Network)
+              // Premium card (LinkedIn Secrets & Network / DFY cards for B2B)
               if (card.isPremium) {
                 return (
                   <div
@@ -225,7 +451,9 @@ const WhatsInsideSection = () => {
                     <div className="absolute top-4 right-4 z-20">
                       <div className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-lg">
                         <Crown className="w-4 h-4 text-white" />
-                        <span className="text-xs font-bold text-white uppercase tracking-wide">High Ticket Only</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-wide">
+                          {'isDFY' in card && card.isDFY ? 'DFY Exclusive' : 'High Ticket Only'}
+                        </span>
                       </div>
                     </div>
 
@@ -250,31 +478,43 @@ const WhatsInsideSection = () => {
                           {card.shortDescription}
                         </p>
 
-                        {/* Preview bullets (partially visible) */}
+                        {/* Preview bullets */}
                         <div className="space-y-2 mb-4">
-                          {card.previewBullets?.slice(0, 3).map((bullet, idx) => (
+                          {card.previewBullets?.map((bullet, idx) => (
                             <div key={idx} className="flex items-start gap-2 text-gray-300">
                               <Crown className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
                               <span className="text-sm">{bullet}</span>
                             </div>
                           ))}
-                          {/* Redacted items */}
-                          <div className="flex items-start gap-2 text-gray-500">
-                            <Crown className="w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm blur-sm select-none">[REDACTED]</span>
-                          </div>
-                          <div className="flex items-start gap-2 text-gray-500">
-                            <Crown className="w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm blur-sm select-none">[REDACTED]</span>
-                          </div>
+                          {/* Redacted items for secrets */}
+                          {card.allBullets && card.allBullets.length > 3 && (
+                            <>
+                              {card.allBullets.slice(3).map((bullet, idx) => (
+                                <div key={idx} className="flex items-start gap-2 text-gray-500">
+                                  <Crown className="w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0" />
+                                  <span className="text-sm blur-sm select-none">{bullet}</span>
+                                </div>
+                              ))}
+                            </>
+                          )}
                         </div>
+
+                        {/* Testimonial for B2B Secrets */}
+                        {'testimonial' in card && card.testimonial && typeof card.testimonial === 'object' && 'quote' in card.testimonial && 'author' in card.testimonial && (
+                          <div className="mb-4 p-4 bg-white/5 rounded-lg border border-white/10">
+                            <p className="text-sm italic text-gray-300 mb-2">"{String(card.testimonial.quote)}"</p>
+                            <p className="text-xs text-gray-400">— {String(card.testimonial.author)}</p>
+                          </div>
+                        )}
 
                         {/* Premium CTA */}
                         <Button 
                           className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-bold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
                         >
                           <LockKeyhole className="w-5 h-5 mr-2" />
-                          Unlock High Ticket Access
+                          {'isDFY' in card && card.isDFY && activePath === 'b2b' && card.id === 5 ? '🔓 Unlock DFY + Secrets' : 
+                           'isDFY' in card && card.isDFY && activePath === 'b2b' && card.id === 6 ? '📞 Book Strategy Call' :
+                           'Unlock High Ticket Access'}
                         </Button>
 
                         <p className="text-center text-xs text-gray-400 mt-4 italic">
