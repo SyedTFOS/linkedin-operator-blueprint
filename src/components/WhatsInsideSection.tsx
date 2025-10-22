@@ -871,10 +871,6 @@ const WhatsInsideSection = () => {
               <Crown className="w-5 h-5 text-primary" />
               <span className="text-sm md:text-base font-semibold text-foreground">$1M+ Student Revenue</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-primary" />
-              <span className="text-sm md:text-base font-semibold text-foreground">15+ Industries Dominated</span>
-            </div>
           </div>
         </div>
       </div>
