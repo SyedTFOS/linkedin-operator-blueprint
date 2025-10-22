@@ -34,7 +34,9 @@ const AnimatedChatHeader = () => {
   return (
     <div className="text-center py-8 px-4 max-w-5xl mx-auto">
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight">
-        <span className="text-foreground">Ask Leo </span>
+        <span className="text-foreground">Ask </span>
+        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px]">🦁</span>
+        <span className="text-foreground"> Leo </span>
         <span
           className={`text-[#FF6B35] transition-all duration-500 inline-block ${
             isAnimating
