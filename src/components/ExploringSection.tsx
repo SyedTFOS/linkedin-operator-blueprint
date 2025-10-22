@@ -1,5 +1,6 @@
-import { Route, ArrowRight, Check } from "lucide-react";
+import { Route, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import EmbeddedChatbot from "@/components/EmbeddedChatbot";
 import ethanPhoto from "@/assets/ethan-clouser.png";
 import walterPhoto from "@/assets/walter-chung.png";
 import samPhoto from "@/assets/sam-beck.png";
@@ -262,13 +263,8 @@ const ExploringSection = () => {
           </div>
         </div>
 
-        {/* Footer */}
-        <p className="text-center text-lg text-muted-foreground">
-          Not sure which path?{" "}
-          <a href="#" className="text-primary hover:underline font-bold transition-colors">
-            Chat with us in our Whop →
-          </a>
-        </p>
+        {/* AI Chat Assistant */}
+        <EmbeddedChatbot />
       </div>
     </section>
   );
