@@ -225,37 +225,38 @@ const EmbeddedChatbot = () => {
         {/* Messages - Only show when there are messages */}
         {messages.length > 0 && (
           <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
-            <div className="space-y-4">
+            <div className="space-y-6">
               {messages.map((message, index) => (
                 <div key={index}>
-                  <div
-                    className={`flex ${
-                      message.role === "user" ? "justify-end" : "justify-start"
-                    }`}
-                  >
-                    <div
-                      className={`max-w-[80%] rounded-2xl px-5 py-3 ${
-                        message.role === "user"
-                          ? "bg-[#FF6B35] text-white shadow-lg"
-                          : "bg-muted/50 text-foreground"
-                      }`}
-                    >
-                      <p className="text-sm whitespace-pre-wrap leading-relaxed">
-                        {message.role === "assistant" 
-                          ? message.content.split('**').map((part, i) => 
-                              i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
-                            )
-                          : message.content
-                        }
-                      </p>
+                  {message.role === "assistant" ? (
+                    <div className="flex gap-3 items-start">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-xl">
+                        🦁
+                      </div>
+                      <div className="flex-1 bg-white dark:bg-card border border-border rounded-2xl px-5 py-4 shadow-sm">
+                        <p className="text-base text-foreground leading-relaxed whitespace-pre-wrap">
+                          {message.content}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div className="flex justify-end">
+                      <div className="bg-[#FF6B35] text-white rounded-2xl px-5 py-3 shadow-lg max-w-[80%]">
+                        <p className="text-base leading-relaxed">
+                          {message.content}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
               {isLoading && (
-                <div className="flex justify-start items-center gap-2">
+                <div className="flex gap-3 items-center">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-xl">
+                    🦁
+                  </div>
                   <div className="text-sm text-muted-foreground italic">
-                    🦁 Leo is typing...
+                    Leo is typing...
                   </div>
                 </div>
               )}
