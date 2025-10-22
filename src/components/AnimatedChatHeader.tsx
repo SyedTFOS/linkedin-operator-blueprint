@@ -32,21 +32,21 @@ const AnimatedChatHeader = () => {
   }, []);
 
   return (
-    <div className="text-center py-8 px-4 max-w-5xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight">
-        <span className="text-foreground">Ask </span>
-        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px]">🦁</span>
-        <span className="text-foreground"> Leo </span>
-        <span
-          className={`text-[#FF6B35] transition-all duration-500 inline-block ${
-            isAnimating
-              ? "opacity-0 translate-y-[-10px]"
-              : "opacity-100 translate-y-0"
-          }`}
-        >
-          {rotatingPhrases[currentPhraseIndex]}
-        </span>
-      </h1>
+    <div className="text-center py-8 px-4 w-full mx-auto">
+      <div className="flex flex-col items-center justify-center gap-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap items-center justify-center gap-2">
+          <span className="text-foreground whitespace-nowrap">Ask 🦁 Leo</span>
+          <span
+            className={`text-[#FF6B35] transition-all duration-500 inline-block ${
+              isAnimating
+                ? "opacity-0 translate-y-[-10px]"
+                : "opacity-100 translate-y-0"
+            }`}
+          >
+            {rotatingPhrases[currentPhraseIndex]}
+          </span>
+        </h1>
+      </div>
       <p className="text-muted-foreground text-base md:text-lg mt-4">
         Get instant answers about LinkedIn Operator programs 24/7
       </p>
