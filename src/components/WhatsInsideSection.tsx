@@ -869,7 +869,7 @@ const WhatsInsideSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <Crown className="w-5 h-5 text-primary" />
-              <span className="text-sm md:text-base font-semibold text-foreground">$10M+ Student Revenue</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">$1M+ Student Revenue</span>
             </div>
             <div className="flex items-center gap-2">
               <Building2 className="w-5 h-5 text-primary" />
