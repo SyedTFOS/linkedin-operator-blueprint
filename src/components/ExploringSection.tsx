@@ -1,4 +1,4 @@
-import { Route, Check } from "lucide-react";
+import { Route, Check, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EmbeddedChatbot from "@/components/EmbeddedChatbot";
 import ethanPhoto from "@/assets/ethan-clouser.png";
@@ -265,15 +265,12 @@ const ExploringSection = () => {
 
         {/* Not Sure Transition */}
         <div className="text-center mb-8 mt-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Not Sure?
           </h3>
-          <p className="text-lg text-muted-foreground mb-4">
-            Ask <span className="inline-block">🦁</span> Leo <span className="text-orange-600 dark:text-orange-400 font-semibold">if you need experience</span>
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Get instant answers about LinkedIn Operator programs 24/7
-          </p>
+          <div className="flex justify-center">
+            <ArrowDown className="w-8 h-8 text-primary animate-bounce" />
+          </div>
         </div>
 
         {/* AI Chat Assistant */}
