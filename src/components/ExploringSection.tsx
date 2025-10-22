@@ -21,7 +21,7 @@ const ExploringSection = () => {
               <Route className="w-3 h-3 text-primary" />
             </div>
             <span className="text-sm font-semibold text-foreground">
-              <span className="text-primary mr-1.5">vi.</span>Your Next Step
+              <span className="text-primary mr-1.5">vii.</span>Your Next Step
             </span>
           </div>
         </div>

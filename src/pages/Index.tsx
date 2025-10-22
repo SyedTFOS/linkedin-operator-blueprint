@@ -3,6 +3,7 @@ import BlueOceanReveal from "@/components/BlueOceanReveal";
 import ComparisonSection from "@/components/ComparisonSection";
 import MarketOpportunityStats from "@/components/MarketOpportunityStats";
 import ExperimentSection from "@/components/ExperimentSection";
+import WhatsInsideSection from "@/components/WhatsInsideSection";
 import ExploringSection from "@/components/ExploringSection";
 import WhopWidget from "@/components/WhopWidget";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <MarketOpportunityStats />
       <ComparisonSection />
       <ExperimentSection />
+      <WhatsInsideSection />
       <ExploringSection />
       <WhopWidget />
     </div>
