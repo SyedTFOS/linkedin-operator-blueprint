@@ -5,50 +5,78 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-async function generateButtons(messages: any[], lastResponse: string, apiKey: string) {
-  try {
-    const conversationContext = messages.slice(-3).map(m => `${m.role}: ${m.content}`).join('\n');
-    
-    const buttonPrompt = `Based on this conversation, suggest 2-3 relevant follow-up questions or actions the user might want to take next.
-
-Conversation:
-${conversationContext}
-Leo: ${lastResponse}
-
-Return ONLY a JSON array of button objects with "label" fields. Keep labels short (5-7 words max).
-Example: [{"label": "Tell me about pricing"}, {"label": "What experience do I need?"}]`;
-
-    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [
-          { role: "system", content: "You are a helpful assistant that generates contextual button suggestions. Return only valid JSON arrays." },
-          { role: "user", content: buttonPrompt }
-        ],
-        temperature: 0.7,
-      }),
-    });
-
-    if (!response.ok) return [];
-
-    const data = await response.json();
-    const content = data.choices?.[0]?.message?.content || "[]";
-    
-    // Extract JSON from response
-    const jsonMatch = content.match(/\[[\s\S]*\]/);
-    if (!jsonMatch) return [];
-    
-    const buttons = JSON.parse(jsonMatch[0]);
-    return buttons.slice(0, 3); // Max 3 buttons
-  } catch (error) {
-    console.error('Button generation error:', error);
-    return [];
+function generateButtons(messages: any[], lastResponse: string): Array<{ label: string }> {
+  const response = lastResponse.toLowerCase();
+  const lastUserMessage = messages[messages.length - 1]?.content.toLowerCase() || '';
+  
+  // Agency path buttons
+  if (response.includes('agency') || lastUserMessage.includes('agency') || lastUserMessage.includes('build')) {
+    if (response.includes('price') || response.includes('cost') || response.includes('investment')) {
+      return [
+        { label: "What results can I expect?" },
+        { label: "Do I need experience?" },
+        { label: "What's the difference between tiers?" }
+      ];
+    }
+    if (response.includes('experience') || response.includes('beginner')) {
+      return [
+        { label: "How much does it cost?" },
+        { label: "How long until first client?" },
+        { label: "What support do I get?" }
+      ];
+    }
+    if (response.includes('tier') || response.includes('academy') || response.includes('secrets')) {
+      return [
+        { label: "Show me the Academy option" },
+        { label: "Tell me about Secrets tier" },
+        { label: "Which one is right for me?" }
+      ];
+    }
+    return [
+      { label: "Tell me about pricing" },
+      { label: "What experience do I need?" },
+      { label: "How does it work?" }
+    ];
   }
+  
+  // B2B/Founder path buttons
+  if (response.includes('business') || response.includes('founder') || lastUserMessage.includes('grow') || lastUserMessage.includes('business')) {
+    if (response.includes('price') || response.includes('cost')) {
+      return [
+        { label: "What results can I expect?" },
+        { label: "Is this done-for-me?" },
+        { label: "How long does it take?" }
+      ];
+    }
+    if (response.includes('dfy') || response.includes('done')) {
+      return [
+        { label: "How much is DFY service?" },
+        { label: "Can I do it myself instead?" },
+        { label: "What's included?" }
+      ];
+    }
+    return [
+      { label: "Tell me about pricing" },
+      { label: "Do you have done-for-you?" },
+      { label: "How long until results?" }
+    ];
+  }
+  
+  // General exploration buttons
+  if (lastUserMessage.includes('browsing') || lastUserMessage.includes('question')) {
+    return [
+      { label: "How is this different?" },
+      { label: "Show me success stories" },
+      { label: "Is LinkedIn saturated?" }
+    ];
+  }
+  
+  // Default buttons
+  return [
+    { label: "Tell me about building an agency" },
+    { label: "Help me grow my business" },
+    { label: "What makes this different?" }
+  ];
 }
 
 serve(async (req) => {
@@ -288,7 +316,9 @@ Remember: You're a helpful guide, not a pushy salesperson. If someone isn't read
           }
           
           // Generate contextual buttons based on conversation
-          const buttonSuggestions = await generateButtons(messages, fullResponse, LOVABLE_API_KEY);
+          console.log('Generating buttons for response:', fullResponse.substring(0, 100));
+          const buttonSuggestions = generateButtons(messages, fullResponse);
+          console.log('Generated buttons:', buttonSuggestions);
           
           // Send buttons as a custom event
           if (buttonSuggestions.length > 0) {
@@ -297,8 +327,11 @@ Remember: You're a helpful guide, not a pushy salesperson. If someone isn't read
               buttons: buttonSuggestions
             })}\n\n`;
             controller.enqueue(encoder.encode(buttonEvent));
+            console.log('Sent button event');
           }
           
+          // Send final DONE message
+          controller.enqueue(encoder.encode('data: [DONE]\n\n'));
           controller.close();
         } catch (error) {
           console.error('Stream error:', error);

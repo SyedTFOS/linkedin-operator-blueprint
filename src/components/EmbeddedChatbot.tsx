@@ -95,6 +95,7 @@ const EmbeddedChatbot = () => {
             
             // Check for custom button event
             if (parsed.type === 'buttons') {
+              console.log('Received buttons:', parsed.buttons);
               suggestedButtons = parsed.buttons || [];
               continue;
             }
@@ -121,6 +122,7 @@ const EmbeddedChatbot = () => {
 
       // Update final message with buttons
       if (suggestedButtons.length > 0) {
+        console.log('Adding buttons to message:', suggestedButtons);
         setMessages((prev) => {
           const newMessages = [...prev];
           newMessages[newMessages.length - 1] = {
@@ -130,6 +132,8 @@ const EmbeddedChatbot = () => {
           };
           return newMessages;
         });
+      } else {
+        console.log('No buttons to add');
       }
 
       setIsLoading(false);
