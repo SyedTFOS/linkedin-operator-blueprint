@@ -1,6 +1,5 @@
-import { Route, Check, ArrowDown, ChevronDown } from "lucide-react";
+import { Route, Check, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import EmbeddedChatbot from "@/components/EmbeddedChatbot";
 import ethanPhoto from "@/assets/ethan-clouser.png";
 import walterPhoto from "@/assets/walter-chung.png";
@@ -13,13 +12,6 @@ import playertwoLogo from "@/assets/playertwo-logo.png";
 import lunivateLogo from "@/assets/lunivate-logo.png";
 
 const ExploringSection = () => {
-  const scrollToWhatsInside = () => {
-    const element = document.getElementById("about-programs");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -46,60 +38,229 @@ const ExploringSection = () => {
           authority in your niche.
         </p>
 
-        {/* Choose Your Path Dropdown */}
-        <div className="flex justify-center mb-16">
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Choose Your Path
-                <ChevronDown className="ml-2 h-5 w-5" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-80 p-0 bg-card border-border shadow-2xl" align="center">
-              <div className="divide-y divide-border">
-                <button
-                  onClick={scrollToWhatsInside}
-                  className="w-full p-6 text-left hover:bg-muted/50 transition-colors duration-200 group"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/20 transition-colors">
-                      <Check className="w-5 h-5 text-orange-500" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-foreground mb-1 group-hover:text-orange-500 transition-colors">
-                        Building An Agency
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        Build a 6-7 figure LinkedIn agency
-                      </p>
-                    </div>
-                  </div>
-                </button>
-                
-                <button
-                  onClick={scrollToWhatsInside}
-                  className="w-full p-6 text-left hover:bg-muted/50 transition-colors duration-200 group"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500/20 transition-colors">
-                      <Check className="w-5 h-5 text-blue-500" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg text-foreground mb-1 group-hover:text-blue-500 transition-colors">
-                        Growing My Business
-                      </h4>
-                      <p className="text-sm text-muted-foreground">
-                        Become the #1 authority in your industry
-                      </p>
-                    </div>
-                  </div>
-                </button>
+        {/* Two Path Cards */}
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-12 max-w-6xl mx-auto">
+          {/* Card 1 - LinkedIn Agency - ORANGE/WARM THEME */}
+          <div className="bg-card border-2 border-orange-500/30 rounded-2xl p-5 md:p-8 hover:border-orange-500/60 transition-all duration-300 hover:shadow-orange-500/10 hover:shadow-xl">
+            {/* Header */}
+            <div className="mb-6">
+              <div className="inline-block px-3 py-1 bg-orange-500/10 border border-orange-500/20 rounded-full mb-4">
+                <span className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wide">
+                  LinkedIn Agency
+                </span>
               </div>
-            </PopoverContent>
-          </Popover>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
+                Build A 6-7 Figure LinkedIn Agency
+              </h3>
+              <p className="text-sm md:text-base text-muted-foreground">
+                Turn LinkedIn into a predictable client acquisition engine and build a real agency—not another
+                churn-and-burn operation.
+              </p>
+            </div>
+
+            {/* What You Will Get */}
+            <div className="mb-6">
+              <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">The Complete LinkedIn Operator Framework</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">Done-For-You Templates & Systems</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">Proven Client Acquisition System</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">Community + Weekly Coaching</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Results */}
+            <div className="mb-6 p-3 md:p-4 bg-orange-500/5 border border-orange-500/10 rounded-lg">
+              <p className="text-xs md:text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
+              <div className="grid grid-cols-1 gap-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">First Client: 30-60 days (avg. $3K-$8K contract)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">90-Days: $10K-$15K/month MRR</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">
+                    6-Month Goal: $25K-$50K+/month with systemized delivery
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">
+                    12-Month Vision: Scalable agency with team, recurring revenue, and enterprise pipeline
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Best For */}
+            <div className="mb-6">
+              <p className="text-xs md:text-sm font-bold text-foreground mb-2">Best For:</p>
+              <p className="text-xs md:text-sm text-muted-foreground">Beginners, agency owners, industry experts, founders</p>
+            </div>
+
+            {/* CTA */}
+            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white">
+              Apply for LIA Programs →
+            </Button>
+
+            {/* Trusted By */}
+            <div className="mt-6 pt-6 border-t">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  <img
+                    src={ethanPhoto}
+                    alt="Ethan C"
+                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
+                  />
+                  <img
+                    src={walterPhoto}
+                    alt="Walter C"
+                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
+                  />
+                  <img
+                    src={samPhoto}
+                    alt="Sam B"
+                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
+                  />
+                  <img
+                    src={aryanPhoto}
+                    alt="Aryan S"
+                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
+                  />
+                  <img
+                    src={komailPhoto}
+                    alt="Komail G"
+                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
+                  />
+                  <img
+                    src={vasilijePhoto}
+                    alt="Vasilije S"
+                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
+                  />
+                </div>
+                <span className="text-sm text-muted-foreground ml-2">+100 more</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2 - Business & Founders - BLUE/PROFESSIONAL THEME */}
+          <div className="bg-card border-2 border-blue-500/30 rounded-2xl p-5 md:p-8 hover:border-blue-500/60 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl">
+            {/* Header */}
+            <div className="mb-6">
+              <div className="inline-block px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4">
+                <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
+                  For Businesses & Founders
+                </span>
+              </div>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
+                Become The #1 Authority In Your Industry
+              </h3>
+              <p className="text-sm md:text-base text-muted-foreground">
+                Turn LinkedIn into your primary client acquisition channel. Book high-ticket sales calls, attract
+                partnerships, and position yourself as the go-to expert in your niche.
+              </p>
+            </div>
+
+            {/* What You Will Get */}
+            <div className="mb-6">
+              <p className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-wide mb-4">What you will get:</p>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">Strategic LinkedIn Positioning System (forbes level)</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">High-Converting Content Engine</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">White-Glove Execution</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-sm md:text-base text-foreground">Dedicated Account Manager</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Results */}
+            <div className="mb-6 p-3 md:p-4 bg-blue-500/5 border border-blue-500/10 rounded-lg">
+              <p className="text-xs md:text-sm font-bold text-foreground uppercase tracking-wide mb-3">Results you can expect:</p>
+              <div className="grid grid-cols-1 gap-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">60 Days: 10-20 inbound inquiries/month from qualified prospects</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">90 Days: Positioned as a top voice in your industry</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">
+                    6 Months: Consistent pipeline of high-ticket opportunities, partnerships, or funding conversations
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-xs md:text-sm text-foreground">12 Months: LinkedIn as your #1 client acquisition channel</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Best For */}
+            <div className="mb-6">
+              <p className="text-xs md:text-sm font-bold text-foreground mb-2">Best For:</p>
+              <p className="text-xs md:text-sm text-muted-foreground">SaaS, AI, B2B service companies, consultants, executives</p>
+            </div>
+
+            {/* CTA */}
+            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white">
+              Get Your Custom LinkedIn Roadmap →
+            </Button>
+
+            {/* Trusted By */}
+            <div className="mt-6 pt-6 border-t">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
+              <div className="flex items-center gap-4 flex-wrap">
+                <img
+                  src={lunivateLogo}
+                  alt="Lunivate"
+                  className="h-7 opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                  src={diversyfundLogo}
+                  alt="DiversyFund"
+                  className="h-6 opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                  src={playertwoLogo}
+                  alt="PlayerTwo"
+                  className="h-8 opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <span className="text-sm font-medium text-foreground">Markapolo AI</span>
+                <span className="text-sm text-muted-foreground">+50 more companies</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Not Sure Transition */}
