@@ -236,13 +236,18 @@ const EmbeddedChatbot = () => {
                     <div
                       className={`max-w-[80%] rounded-2xl px-5 py-3 ${
                         message.role === "user"
-                          ? "bg-[#FF6B35] text-white shadow-md"
-                          : "text-foreground"
+                          ? "bg-[#FF6B35] text-white shadow-lg"
+                          : "bg-muted/50 text-foreground"
                       }`}
                     >
-                      <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content.split('**').map((part, i) => 
-                        i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
-                      )}</p>
+                      <p className="text-sm whitespace-pre-wrap leading-relaxed">
+                        {message.role === "assistant" 
+                          ? message.content.split('**').map((part, i) => 
+                              i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
+                            )
+                          : message.content
+                        }
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -250,7 +255,7 @@ const EmbeddedChatbot = () => {
               {isLoading && (
                 <div className="flex justify-start items-center gap-2">
                   <div className="text-sm text-muted-foreground italic">
-                    Leo is typing...
+                    🦁 Leo is typing...
                   </div>
                 </div>
               )}
