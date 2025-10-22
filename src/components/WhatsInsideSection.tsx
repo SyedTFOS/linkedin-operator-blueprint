@@ -26,9 +26,216 @@ const WhatsInsideSection = () => {
           Everything you need to turn LinkedIn into a predictable revenue engine—whether you're building an agency empire or becoming the #1 authority in your industry.
         </p>
 
-        {/* Content will be added here */}
-        <div className="max-w-5xl mx-auto">
-          {/* Placeholder for content */}
+        {/* 2x3 Grid of Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
+          {/* Card 1: The Complete Framework */}
+          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="text-4xl mb-4">🎯</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              The Complete 7-Week Operator Framework
+            </h3>
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              The exact playbook that signed Mastercard and Forbes founders—systematized into 50+ video modules. From positioning to fulfillment, everything you need to build a 6-7 figure LinkedIn agency.
+            </p>
+            <div className="space-y-3 mb-6">
+              <p className="text-sm font-semibold text-foreground">What's Included:</p>
+              {[
+                "50+ Video Modules across 7 comprehensive weeks",
+                "Client Acquisition Systems that attract real companies with real budgets",
+                "Fulfillment SOPs for scaling without quality loss",
+                "Sales Masterclass for closing $5K-$50K+ contracts",
+                "Personal Branding Blueprint for authority positioning",
+                "LinkedIn Outbound System for predictable pipeline",
+                "Progress Tracking Dashboard with organized, sequential learning"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">✅</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              Lifetime access. Updated quarterly with new strategies.
+            </p>
+          </div>
+
+          {/* Card 2: Swipe Vault + Templates */}
+          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="text-4xl mb-4">📋</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Done-For-You Templates & SOP Library
+            </h3>
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              Copy-paste everything. Every template, script, and SOP we use to run 6-7 figure agencies. No starting from scratch—just plug in your details and execute.
+            </p>
+            <div className="space-y-3 mb-6">
+              <p className="text-sm font-semibold text-foreground">What's Included:</p>
+              {[
+                "50+ Content Templates (hooks, posts, lead magnets)",
+                "DM & Outreach Scripts (connection requests, follow-ups, InMails)",
+                "Proposal Templates ($5K-$50K+ closing docs)",
+                "Onboarding SOPs (client intake, account setup, KPI tracking)",
+                "Fulfillment Playbooks (weekly delivery, reporting, scaling)",
+                "Personal Brand Assets (profile templates, banner designs, bio frameworks)",
+                "Automation Workflows (AI agents, content systems, lead generation)"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">✅</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              Updated monthly with new high-performing templates.
+            </p>
+          </div>
+
+          {/* Card 3: Weekly Live Coaching + Inner Circle */}
+          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="text-4xl mb-4">👥</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Weekly Coaching + 24/7 Founder Access
+            </h3>
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              Join 500+ operators building real agencies across 15+ industries. Get live coaching, hot seats, and 6 months of direct access to Syed & Freddie—so you're never stuck.
+            </p>
+            <div className="space-y-3 mb-6">
+              <p className="text-sm font-semibold text-foreground">What's Included:</p>
+              {[
+                "Weekly Group Coaching Calls (live strategy, Q&A, hot seats)",
+                "Monthly Founder Calls with Syed & Freddie (advanced tactics)",
+                "24/7 Text/Chat Access to founders for 6 months",
+                "Private Operator Community (no low-ticket lurkers—real builders only)",
+                "In-Person Events (exclusive meetups around the world)",
+                "Peer Network (collaborate, share wins, solve problems together)"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">✅</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              You're not just buying a course. You're joining an operator network.
+            </p>
+          </div>
+
+          {/* Card 4: The LinkedIn Secrets */}
+          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Advanced Operator Secrets (Week 7)
+            </h3>
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              The strategies too powerful to share publicly. Engineer virality, dominate competitors, protect your accounts, and retain clients indefinitely. This separates $10K/month from $100K/month agencies.
+            </p>
+            <div className="space-y-3 mb-6">
+              <p className="text-sm font-semibold text-foreground">What's Included:</p>
+              {[
+                "Brand Equity Engineering (belief installation, authority positioning)",
+                "Viral Content Science (algorithm mastery, predictable 1M+ view posts)",
+                "Client Retention Mastery (upsell frameworks, 0% churn systems)",
+                "Account Protection Protocols (never get banned, stay in LinkedIn's good graces)",
+                "Competitive Domination (how to be #1 and stay #1 in your niche)",
+                "AI & Automation Mastery (custom agents, batch content creation)",
+                "Mystery Module (you'll have to join to find out)"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">✅</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              Unlocked in Week 7 for committed operators only.
+            </p>
+          </div>
+
+          {/* Card 5: Industry-Specific Playbooks */}
+          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="text-4xl mb-4">🏢</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Playbooks For Every Industry
+            </h3>
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              No generic advice. Tailored positioning strategies, content frameworks, and client acquisition systems for AI, SaaS, Med-Tech, Finance, Real Estate, Consulting, and more—with real case studies.
+            </p>
+            <div className="space-y-3 mb-6">
+              <p className="text-sm font-semibold text-foreground">What's Included:</p>
+              {[
+                "8+ Industry Playbooks (AI, SaaS, Finance, Real Estate, Med-Tech, etc.)",
+                "Niche Positioning Guides (how to stand out in your vertical)",
+                "Vertical-Specific Templates (content angles, DM scripts, offers)",
+                "Industry Case Studies (real operators, real results)",
+                "ICP Mapping (where to find ideal clients in each industry)",
+                "Competitive Analysis Frameworks (how to beat incumbents)"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">✅</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              Works for ANY B2B industry—we've proven it.
+            </p>
+          </div>
+
+          {/* Card 6: Private Network + Resources */}
+          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
+            <div className="text-4xl mb-4">🔗</div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Exclusive Operator Network
+            </h3>
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
+              Access our private rolodex of vetted service providers. Tax solutions, payment processors, legal protection, and every resource to build and protect your online success.
+            </p>
+            <div className="space-y-3 mb-6">
+              <p className="text-sm font-semibold text-foreground">What's Included:</p>
+              {[
+                "Tax Optimization Solutions (operator-friendly accountants)",
+                "Payment Processing (high-risk merchant accounts, international solutions)",
+                "OTC Trading Connections (for those scaling past $100K/month)",
+                "Social Media Insiders (LinkedIn, Twitter/X contacts for troubleshooting)",
+                "Legal Protection Resources (contract templates, entity setup guidance)",
+                "Scaling Infrastructure (hiring, ops, systems beyond $50K/month)"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-2">
+                  <span className="text-primary mt-1 flex-shrink-0">✅</span>
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted-foreground italic">
+              These connections are worth more than the program itself.
+            </p>
+          </div>
+        </div>
+
+        {/* Stats Bar */}
+        <div className="bg-muted/30 border border-border rounded-xl py-8 px-6 max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-center">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">📚</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">50+ Video Modules</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">📋</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">100+ Templates & SOPs</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">👥</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">500+ Active Operators</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">💰</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">$10M+ Student Revenue</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🏆</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">15+ Industries Dominated</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
