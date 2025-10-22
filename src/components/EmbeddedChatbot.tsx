@@ -21,29 +21,8 @@ const EmbeddedChatbot = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showQuickReplies, setShowQuickReplies] = useState(true);
-  const [rotatingText, setRotatingText] = useState("build an agency");
   const scrollRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
-
-  const rotatingPhrases = [
-    "build an agency",
-    "grow my business", 
-    "get my first client",
-    "scale on LinkedIn",
-    "generate more leads",
-    "become an authority"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRotatingText(prev => {
-        const currentIndex = rotatingPhrases.indexOf(prev);
-        const nextIndex = (currentIndex + 1) % rotatingPhrases.length;
-        return rotatingPhrases[nextIndex];
-      });
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat-assistant`;
 
@@ -181,13 +160,13 @@ const EmbeddedChatbot = () => {
     <div className="w-full max-w-4xl mx-auto mt-12">
       <div className="bg-card rounded-2xl shadow-xl border border-border glow-effect overflow-hidden">
         {/* Header */}
-        <div className="p-6 border-b border-border bg-gradient-to-r from-primary/10 to-accent/10">
-          <h3 className="font-bold text-xl text-foreground mb-2">Ask LinkedIn Operator</h3>
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <span className="text-sm">how to</span>
-            <span className="text-sm font-medium text-primary transition-all duration-500 animate-fade-in">
-              {rotatingText}
-            </span>
+        <div className="flex items-center gap-3 p-6 border-b border-border bg-gradient-to-r from-primary/10 to-accent/10">
+          <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-2xl">
+            🦁
+          </div>
+          <div>
+            <h3 className="font-bold text-xl text-foreground">Talk To Leo</h3>
+            <p className="text-sm text-muted-foreground">LinkedIn Operator's AI Agent • Here to help 24/7</p>
           </div>
         </div>
 
@@ -197,13 +176,10 @@ const EmbeddedChatbot = () => {
             {messages.map((message, index) => (
               <div key={index}>
                 <div
-                  className={`flex gap-2 ${
-                    message.role === "user" ? "justify-end" : "justify-start items-start"
+                  className={`flex ${
+                    message.role === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
-                  {message.role === "assistant" && (
-                    <div className="text-2xl flex-shrink-0 mt-1">🦁</div>
-                  )}
                   <div
                     className={`max-w-[80%] rounded-2xl px-5 py-3 ${
                       message.role === "user"
@@ -211,11 +187,9 @@ const EmbeddedChatbot = () => {
                         : "text-foreground"
                     }`}
                   >
-                    <p className="text-base whitespace-pre-wrap leading-relaxed">
-                      {message.content.split('**').map((part, i) => 
-                        i % 2 === 1 ? <strong key={i} className="font-bold">{part}</strong> : part
-                      )}
-                    </p>
+                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content.split('**').map((part, i) => 
+                      i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
+                    )}</p>
                   </div>
                 </div>
                 
@@ -281,7 +255,6 @@ const EmbeddedChatbot = () => {
             ))}
             {isLoading && (
               <div className="flex justify-start items-center gap-2">
-                <div className="text-2xl flex-shrink-0">🦁</div>
                 <div className="text-sm text-muted-foreground italic">
                   Leo is typing...
                 </div>
