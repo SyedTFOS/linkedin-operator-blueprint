@@ -134,38 +134,44 @@ const Hero = () => {
                   <DropdownMenuTrigger asChild>
                     <Button 
                       size="lg" 
-                      className="group"
+                      className="group shadow-lg hover:shadow-xl transition-all duration-300 border-glow"
                       onMouseEnter={() => setIsPathDropdownOpen(true)}
                       onMouseLeave={() => setIsPathDropdownOpen(false)}
                     >
                       Choose Your Path
-                      <ChevronDown className="ml-2 w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
+                      <ChevronDown className="ml-2 w-4 h-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent 
-                    className="w-56 bg-background border-border z-50"
+                    className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm"
                     onMouseEnter={() => setIsPathDropdownOpen(true)}
                     onMouseLeave={() => setIsPathDropdownOpen(false)}
                   >
                     <DropdownMenuItem 
-                      className="cursor-pointer hover:bg-accent focus:bg-accent"
+                      className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200 mb-1.5"
                       onClick={() => {
                         const programsSection = document.getElementById('about-programs');
                         programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         setIsPathDropdownOpen(false);
                       }}
                     >
-                      Building An Agency
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-foreground">Building An Agency</span>
+                        <span className="text-xs text-muted-foreground">Start from scratch</span>
+                      </div>
                     </DropdownMenuItem>
                     <DropdownMenuItem 
-                      className="cursor-pointer hover:bg-accent focus:bg-accent"
+                      className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200"
                       onClick={() => {
                         const programsSection = document.getElementById('about-programs');
                         programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         setIsPathDropdownOpen(false);
                       }}
                     >
-                      Growing My Business
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-foreground">Growing My Business</span>
+                        <span className="text-xs text-muted-foreground">Scale your existing company</span>
+                      </div>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -174,38 +180,44 @@ const Hero = () => {
                     <Button 
                       variant="outline" 
                       size="lg" 
-                      className="group"
+                      className="group shadow-md hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30 bg-card/50 backdrop-blur-sm"
                       onMouseEnter={() => setIsDropdownOpen(true)}
                       onMouseLeave={() => setIsDropdownOpen(false)}
                     >
                       View All Results
-                      <ChevronDown className="ml-2 w-4 h-4 transition-transform group-data-[state=open]:rotate-180" />
+                      <ChevronDown className="ml-2 w-4 h-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent 
-                    className="w-56 bg-background border-border z-50"
+                    className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
                   >
                     <DropdownMenuItem 
-                      className="cursor-pointer hover:bg-accent focus:bg-accent"
+                      className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200 mb-1.5"
                       onClick={() => {
                         const businessSection = document.getElementById('business-results-section');
                         businessSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         setIsDropdownOpen(false);
                       }}
                     >
-                      Business Results
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-foreground">Business Results</span>
+                        <span className="text-xs text-muted-foreground">Fortune 500 & YC startups</span>
+                      </div>
                     </DropdownMenuItem>
                     <DropdownMenuItem 
-                      className="cursor-pointer hover:bg-accent focus:bg-accent"
+                      className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200"
                       onClick={() => {
                         const agencySection = document.getElementById('agency-results-section');
                         agencySection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         setIsDropdownOpen(false);
                       }}
                     >
-                      Agency Results
+                      <div className="flex flex-col gap-1">
+                        <span className="font-semibold text-foreground">Agency Results</span>
+                        <span className="text-xs text-muted-foreground">500+ student success stories</span>
+                      </div>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
