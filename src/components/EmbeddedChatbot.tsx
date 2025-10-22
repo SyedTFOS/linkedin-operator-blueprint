@@ -160,8 +160,8 @@ const EmbeddedChatbot = () => {
       <div className="bg-card rounded-2xl shadow-xl border border-border glow-effect overflow-hidden">
         {/* Header */}
         <div className="flex items-center gap-3 p-6 border-b border-border bg-gradient-to-r from-primary/10 to-accent/10">
-          <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center">
-            <MessageCircle className="h-6 w-6 text-primary-foreground" />
+          <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-2xl">
+            🦁
           </div>
           <div>
             <h3 className="font-bold text-xl text-foreground">Talk To Leo</h3>
