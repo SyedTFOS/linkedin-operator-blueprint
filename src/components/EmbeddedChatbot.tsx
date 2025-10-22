@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageCircle, Send, Loader2 } from "lucide-react";
+import { MessageCircle, Send, Loader2, Building2, Briefcase, MessageSquare, Eye } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 type Message = {
@@ -14,7 +14,7 @@ const EmbeddedChatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "👋 Hey there! I'm here to help you find the perfect path at LinkedIn Operator. What brings you here today?",
+      content: "👋 Hey there! I'm here to help you find the perfect path at LinkedIn Operator.\n\n**What brings you here today?**",
     },
   ]);
   const [input, setInput] = useState("");
@@ -183,10 +183,12 @@ const EmbeddedChatbot = () => {
                     className={`max-w-[80%] rounded-2xl px-5 py-3 ${
                       message.role === "user"
                         ? "bg-primary text-primary-foreground"
-                        : "bg-muted text-foreground"
+                        : "text-foreground"
                     }`}
                   >
-                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content.split('**').map((part, i) => 
+                      i % 2 === 1 ? <strong key={i} className="text-base font-semibold">{part}</strong> : part
+                    )}</p>
                   </div>
                 </div>
                 
@@ -194,36 +196,40 @@ const EmbeddedChatbot = () => {
                 {index === 0 && message.role === "assistant" && showQuickReplies && (
                   <div className="mt-4 space-y-2">
                     <Button
-                      onClick={() => handleQuickReply("🏢 I want to build an agency")}
+                      onClick={() => handleQuickReply("I want to build an agency")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
                       disabled={isLoading}
                     >
-                      🏢 I want to build an agency
+                      <Building2 className="h-4 w-4" />
+                      I want to build an agency
                     </Button>
                     <Button
-                      onClick={() => handleQuickReply("👔 I want to grow my business")}
+                      onClick={() => handleQuickReply("I want to grow my business")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
                       disabled={isLoading}
                     >
-                      👔 I want to grow my business
+                      <Briefcase className="h-4 w-4" />
+                      I want to grow my business
                     </Button>
                     <Button
-                      onClick={() => handleQuickReply("💬 I have a specific question")}
+                      onClick={() => handleQuickReply("I have a specific question")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
                       disabled={isLoading}
                     >
-                      💬 I have a specific question
+                      <MessageSquare className="h-4 w-4" />
+                      I have a specific question
                     </Button>
                     <Button
-                      onClick={() => handleQuickReply("🤔 Just browsing")}
+                      onClick={() => handleQuickReply("Just browsing")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
                       disabled={isLoading}
                     >
-                      🤔 Just browsing
+                      <Eye className="h-4 w-4" />
+                      Just browsing
                     </Button>
                   </div>
                 )}
