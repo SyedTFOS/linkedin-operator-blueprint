@@ -65,31 +65,44 @@ export function NavigationSidebar() {
   };
 
   return (
-    <aside className="hidden lg:block fixed left-4 top-24 h-[calc(100vh-8rem)] w-56 rounded-xl border border-border/50 bg-background/80 backdrop-blur-md shadow-lg z-40 overflow-hidden">
-      <div className="flex flex-col h-full py-6 px-4">
-        {/* Logo */}
-        <div className="mb-6">
-          <h2 className="text-sm font-bold text-foreground uppercase tracking-wide">Sections</h2>
+    <aside className="hidden lg:block fixed left-8 top-32 h-[calc(100vh-12rem)] w-64 z-40">
+      <div className="flex h-full py-6">
+        {/* Timeline line */}
+        <div className="relative w-px bg-border/30 mr-6">
+          {navigationItems.map((item) => (
+            <div
+              key={item.id}
+              className={cn(
+                "absolute w-2 h-2 rounded-full -left-[3px] transition-all duration-300",
+                activeSection === item.id
+                  ? "bg-primary scale-150"
+                  : "bg-border/50"
+              )}
+              style={{
+                top: `${(navigationItems.indexOf(item) / (navigationItems.length - 1)) * 100}%`
+              }}
+            />
+          ))}
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 overflow-y-auto scrollbar-thin">
-          <ul className="space-y-0.5">
+        <nav className="flex-1 flex flex-col justify-between overflow-y-auto">
+          <ul className="flex flex-col justify-between h-full">
             {navigationItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
-                    "w-full text-left py-2 px-3 rounded-md transition-all duration-200 text-xs",
-                    item.isSubItem && "pl-5",
-                    !item.isSubItem && "font-semibold mt-3 first:mt-0 text-xs",
+                    "w-full text-left transition-all duration-200 text-sm group",
+                    item.isSubItem && "pl-4 text-xs",
+                    !item.isSubItem && "font-semibold text-base",
                     activeSection === item.id
-                      ? "bg-primary/10 text-primary font-medium"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                      ? "text-primary font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {item.roman && (
-                    <span className="text-primary mr-1.5 text-[10px]">{item.roman}</span>
+                    <span className="text-primary/70 mr-2 text-xs font-normal">{item.roman}</span>
                   )}
                   {item.label}
                 </button>
