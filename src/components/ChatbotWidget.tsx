@@ -21,8 +21,29 @@ const ChatbotWidget = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [rotatingText, setRotatingText] = useState("build an agency");
   const scrollRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
+
+  const rotatingPhrases = [
+    "build an agency",
+    "grow my business",
+    "get my first client", 
+    "scale on LinkedIn",
+    "generate more leads",
+    "become an authority"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotatingText(prev => {
+        const currentIndex = rotatingPhrases.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % rotatingPhrases.length;
+        return rotatingPhrases[nextIndex];
+      });
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat-assistant`;
 
@@ -163,13 +184,13 @@ const ChatbotWidget = () => {
         <div className="fixed bottom-6 right-6 w-[400px] h-[600px] bg-card rounded-2xl shadow-2xl border border-border flex flex-col z-50 glow-effect">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border bg-gradient-to-r from-primary/10 to-accent/10 rounded-t-2xl">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
-                <MessageCircle className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground">LinkedIn Operator AI</h3>
-                <p className="text-xs text-muted-foreground">Here to help 24/7</p>
+            <div className="flex-1">
+              <h3 className="font-semibold text-foreground">Ask LinkedIn Operator</h3>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <span className="text-xs">how to</span>
+                <span className="text-xs font-medium text-primary transition-all duration-500">
+                  {rotatingText}
+                </span>
               </div>
             </div>
             <Button
@@ -188,10 +209,13 @@ const ChatbotWidget = () => {
               {messages.map((message, index) => (
                 <div
                   key={index}
-                  className={`flex ${
-                    message.role === "user" ? "justify-end" : "justify-start"
+                  className={`flex gap-2 ${
+                    message.role === "user" ? "justify-end" : "justify-start items-start"
                   }`}
                 >
+                  {message.role === "assistant" && (
+                    <div className="text-xl flex-shrink-0 mt-1">🦁</div>
+                  )}
                   <div
                     className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                       message.role === "user"
@@ -199,12 +223,17 @@ const ChatbotWidget = () => {
                         : "bg-muted text-foreground"
                     }`}
                   >
-                    <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                    <p className="text-sm whitespace-pre-wrap leading-relaxed">
+                      {message.content.split('**').map((part, i) => 
+                        i % 2 === 1 ? <strong key={i} className="font-semibold">{part}</strong> : part
+                      )}
+                    </p>
                   </div>
                 </div>
               ))}
               {isLoading && (
                 <div className="flex justify-start items-center gap-2">
+                  <div className="text-xl flex-shrink-0">🦁</div>
                   <div className="text-sm text-muted-foreground italic">
                     Leo is typing...
                   </div>
