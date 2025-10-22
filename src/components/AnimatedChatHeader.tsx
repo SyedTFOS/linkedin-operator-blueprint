@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const rotatingPhrases = [
   "about pricing",
-  "which program is right for you",
+  "which program fits you",
   "how to get started",
   "about building an agency",
   "how this is different",
@@ -11,8 +11,8 @@ const rotatingPhrases = [
   "which tier to choose",
   "about the guarantee",
   "how long until results",
-  "if LinkedIn works for your industry",
-  "anything about LinkedIn Operator"
+  "if LinkedIn works for you",
+  "anything you want"
 ];
 
 const AnimatedChatHeader = () => {
@@ -32,8 +32,8 @@ const AnimatedChatHeader = () => {
   }, []);
 
   return (
-    <div className="text-center py-8 px-4">
-      <h1 className="text-3xl md:text-4xl lg:text-[56px] font-bold leading-tight whitespace-nowrap overflow-hidden">
+    <div className="text-center py-8 px-4 max-w-5xl mx-auto">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight">
         <span className="text-foreground">Ask Leo </span>
         <span
           className={`text-[#FF6B35] transition-all duration-500 inline-block ${
