@@ -101,7 +101,7 @@ const Hero = () => {
                   </svg>
                 </div>
                 <p className="text-sm text-primary font-semibold uppercase tracking-wider italic">
-                  A business model for true founders
+                  For True Founders
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   Start Your LinkedIn Agency
