@@ -151,8 +151,8 @@ const EmbeddedChatbot = () => {
             <MessageCircle className="h-6 w-6 text-primary-foreground" />
           </div>
           <div>
-            <h3 className="font-bold text-xl text-foreground">LinkedIn Operator AI Assistant</h3>
-            <p className="text-sm text-muted-foreground">Here to help you find the perfect path • Instant responses 24/7</p>
+            <h3 className="font-bold text-xl text-foreground">Talk To Leo</h3>
+            <p className="text-sm text-muted-foreground">LinkedIn Operator's AI Agent • Here to help 24/7</p>
           </div>
         </div>
 
