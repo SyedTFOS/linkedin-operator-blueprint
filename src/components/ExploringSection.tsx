@@ -263,6 +263,13 @@ const ExploringSection = () => {
           </div>
         </div>
 
+        {/* Chat Header */}
+        <div className="text-center mb-8">
+          <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+            Get All Of Your Questions Answered
+          </h3>
+        </div>
+
         {/* AI Chat Assistant */}
         <EmbeddedChatbot />
       </div>
