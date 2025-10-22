@@ -344,7 +344,7 @@ const WhatsInsideSection = () => {
               onClick={() => setActivePath('lia')}
               className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
                 activePath === 'lia'
-                  ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                  ? 'bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg scale-105'
                   : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
               }`}
             >
@@ -360,7 +360,7 @@ const WhatsInsideSection = () => {
               onClick={() => setActivePath('b2b')}
               className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
                 activePath === 'b2b'
-                  ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg scale-105'
                   : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
               }`}
             >
@@ -377,12 +377,18 @@ const WhatsInsideSection = () => {
 
         {/* Product Name Callout */}
         <div className="max-w-4xl mx-auto mb-12 space-y-4">
-          <div className="bg-card/30 border border-border/50 rounded-xl p-6">
+          <div className={`border rounded-xl p-6 ${
+            activePath === 'lia' 
+              ? 'bg-orange-500/5 border-orange-500/30' 
+              : 'bg-blue-500/5 border-blue-500/30'
+          }`}>
             <div className="flex items-start gap-4">
               <div className="text-2xl">📦</div>
               <div>
-                <div className="font-bold text-lg mb-1">
-                  {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'} (Mid Ticket)
+                <div className={`font-bold text-lg mb-1 ${
+                  activePath === 'lia' ? 'text-orange-600' : 'text-blue-600'
+                }`}>
+                  {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'}
                 </div>
                 <div className="text-sm text-muted-foreground">
                   Complete framework + 60 days community
@@ -395,7 +401,7 @@ const WhatsInsideSection = () => {
               <div className="text-2xl">👑</div>
               <div>
                 <div className="font-bold text-lg mb-1">
-                  {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'} (High Ticket)
+                  {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'}
                 </div>
                 <div className="text-sm text-muted-foreground">
                   {activePath === 'lia' ? 'Everything + Elite access + Secrets' : 'Done-for-you execution + strategy'}
@@ -536,7 +542,11 @@ const WhatsInsideSection = () => {
                   >
                     {/* Split Badge */}
                     <div className="absolute top-4 right-4 z-20">
-                      <div className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-green-500/90 to-amber-500/90 rounded-full shadow-lg">
+                      <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full shadow-lg ${
+                        activePath === 'lia'
+                          ? 'bg-gradient-to-r from-orange-500/90 to-orange-400/90'
+                          : 'bg-gradient-to-r from-blue-500/90 to-blue-400/90'
+                      }`}>
                         <CheckCircle2 className="w-4 h-4 text-white" />
                         <span className="text-xs font-bold text-white uppercase tracking-wide">Both Tiers</span>
                       </div>
@@ -548,8 +558,14 @@ const WhatsInsideSection = () => {
                       
                       <div className="relative p-6">
                         <div className="mb-4">
-                          <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
-                            <Icon className="w-6 h-6 text-primary" />
+                          <div className={`w-12 h-12 rounded-xl backdrop-blur-sm flex items-center justify-center border ${
+                            activePath === 'lia'
+                              ? 'bg-orange-500/20 border-orange-500/30'
+                              : 'bg-blue-500/20 border-blue-500/30'
+                          }`}>
+                            <Icon className={`w-6 h-6 ${
+                              activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'
+                            }`} />
                           </div>
                         </div>
 
@@ -630,7 +646,11 @@ const WhatsInsideSection = () => {
 
                         <button
                           onClick={() => toggleCardExpansion(card.id)}
-                          className="w-full mt-4 text-sm text-primary hover:text-primary-glow transition-colors flex items-center justify-center gap-2"
+                          className={`w-full mt-4 text-sm transition-colors flex items-center justify-center gap-2 ${
+                            activePath === 'lia' 
+                              ? 'text-orange-500 hover:text-orange-400' 
+                              : 'text-blue-500 hover:text-blue-400'
+                          }`}
                         >
                           {isExpanded ? "Show less" : "See all details"} <ArrowRight className="w-4 h-4" />
                         </button>
@@ -649,20 +669,30 @@ const WhatsInsideSection = () => {
                 >
                   {/* Both Tiers Badge */}
                   <div className="absolute top-4 right-4 z-20">
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-green-500/90 backdrop-blur-sm rounded-full shadow-md">
+                    <div className={`flex items-center gap-1.5 px-3 py-1.5 backdrop-blur-sm rounded-full shadow-md ${
+                      activePath === 'lia' 
+                        ? 'bg-orange-500/90' 
+                        : 'bg-blue-500/90'
+                    }`}>
                       <CheckCircle2 className="w-4 h-4 text-white" />
                       <span className="text-xs font-bold text-white uppercase tracking-wide">Included in Both</span>
                     </div>
                   </div>
 
-                  <div className="relative h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    <div className="relative h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                     <img src={card.image} alt={card.title} className="w-full h-48 object-cover opacity-70" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                     
                     <div className="relative p-6">
                       <div className="mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
-                          <Icon className="w-6 h-6 text-primary" />
+                        <div className={`w-12 h-12 rounded-xl backdrop-blur-sm flex items-center justify-center border ${
+                          activePath === 'lia'
+                            ? 'bg-orange-500/20 border-orange-500/30'
+                            : 'bg-blue-500/20 border-blue-500/30'
+                        }`}>
+                          <Icon className={`w-6 h-6 ${
+                            activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'
+                          }`} />
                         </div>
                       </div>
 
@@ -678,7 +708,9 @@ const WhatsInsideSection = () => {
                       <div className="space-y-2 mb-4">
                         {card.previewBullets?.map((bullet, idx) => (
                           <div key={idx} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                            <CheckCircle2 className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                              activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'
+                            }`} />
                             <span className="text-sm text-gray-300">{bullet}</span>
                           </div>
                         ))}
@@ -689,7 +721,9 @@ const WhatsInsideSection = () => {
                         <div className="space-y-2 mb-4 animate-fade-in">
                           {card.allBullets.slice(3).map((bullet, idx) => (
                             <div key={idx} className="flex items-start gap-2">
-                              <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                              <CheckCircle2 className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                                activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'
+                              }`} />
                               <span className="text-sm text-gray-300">{bullet}</span>
                             </div>
                           ))}
@@ -698,7 +732,11 @@ const WhatsInsideSection = () => {
 
                       <button
                         onClick={() => toggleCardExpansion(card.id)}
-                        className="text-sm text-primary hover:text-primary-glow transition-colors flex items-center gap-2"
+                        className={`text-sm transition-colors flex items-center gap-2 ${
+                          activePath === 'lia' 
+                            ? 'text-orange-500 hover:text-orange-400' 
+                            : 'text-blue-500 hover:text-blue-400'
+                        }`}
                       >
                         {isExpanded ? "Show less" : `See all ${card.allBullets?.length || 0} included resources`} <ArrowRight className="w-4 h-4" />
                       </button>
