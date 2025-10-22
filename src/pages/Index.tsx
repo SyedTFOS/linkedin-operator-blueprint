@@ -6,18 +6,38 @@ import ExperimentSection from "@/components/ExperimentSection";
 import WhatsInsideSection from "@/components/WhatsInsideSection";
 import ExploringSection from "@/components/ExploringSection";
 import WhopWidget from "@/components/WhopWidget";
+import { NavigationSidebar } from "@/components/NavigationSidebar";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Hero />
-      <BlueOceanReveal />
-      <MarketOpportunityStats />
-      <ComparisonSection />
-      <ExperimentSection />
-      <WhatsInsideSection />
-      <ExploringSection />
-      <WhopWidget />
+      <NavigationSidebar />
+      <div className="lg:ml-64">
+        <div id="about-linkedin-operator">
+          <Hero />
+        </div>
+        <div id="discovery">
+          <BlueOceanReveal />
+        </div>
+        <div id="numbers">
+          <MarketOpportunityStats />
+        </div>
+        <div id="comparison">
+          <ComparisonSection />
+        </div>
+        <div id="experiment">
+          <ExperimentSection />
+        </div>
+        <div id="about-programs" className="pt-12">
+          <WhatsInsideSection />
+        </div>
+        <div id="next-step">
+          <ExploringSection />
+        </div>
+        <div id="chat-leo">
+          <WhopWidget />
+        </div>
+      </div>
     </div>
   );
 };

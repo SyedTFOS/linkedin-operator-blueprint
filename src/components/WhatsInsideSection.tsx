@@ -315,7 +315,7 @@ const WhatsInsideSection = () => {
 
   return (
     <section className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+      <div id="whats-inside" className="container mx-auto px-4">
         {/* About Badge */}
         <div className="flex justify-center mb-6">
           <div className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full border transition-all ${

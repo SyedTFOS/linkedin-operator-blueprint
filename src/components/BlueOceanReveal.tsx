@@ -197,7 +197,7 @@ const BlueOceanReveal = () => {
         </div>
 
         {/* The Proof Section - Full Width, Centered */}
-        <div className="mt-24 text-center max-w-4xl mx-auto">
+        <div id="proof" className="mt-24 text-center max-w-4xl mx-auto">
           {/* The Proof Badge */}
           <div className="flex justify-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full">
