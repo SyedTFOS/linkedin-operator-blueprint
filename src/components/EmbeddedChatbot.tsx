@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { MessageCircle, Send, Loader2, Building2, Briefcase, MessageSquare, Eye } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import AnimatedChatHeader from "@/components/AnimatedChatHeader";
 
 type Message = {
   role: "user" | "assistant";
@@ -158,17 +159,8 @@ const EmbeddedChatbot = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto mt-12">
+      <AnimatedChatHeader />
       <div className="bg-card rounded-2xl shadow-xl border border-border glow-effect overflow-hidden">
-        {/* Header */}
-        <div className="flex items-center gap-3 p-6 border-b border-border bg-gradient-to-r from-primary/10 to-accent/10">
-          <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-2xl">
-            🦁
-          </div>
-          <div>
-            <h3 className="font-bold text-xl text-foreground">Talk To Leo</h3>
-            <p className="text-sm text-muted-foreground">LinkedIn Operator's AI Agent • Here to help 24/7</p>
-          </div>
-        </div>
 
         {/* Messages */}
         <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
