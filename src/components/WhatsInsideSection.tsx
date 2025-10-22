@@ -373,11 +373,23 @@ const WhatsInsideSection = () => {
                   : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
               }`}
             >
-              <div className="flex items-center justify-center gap-2">
-                <Briefcase className="w-5 h-5" />
-                <div className="text-left">
-                  <div className="text-sm font-bold">Building An Agency</div>
-                  <div className="text-xs opacity-80">(LIA)</div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <Briefcase className="w-5 h-5" />
+                  <div className="text-left">
+                    <div className="text-sm font-bold">Building An Agency</div>
+                    <div className="text-xs opacity-80">(LIA)</div>
+                  </div>
+                </div>
+                <div className={`flex items-center gap-3 text-xs ${activePath === 'lia' ? 'opacity-90' : 'opacity-50'}`}>
+                  <div className="flex items-center gap-1">
+                    <Package className="w-3 h-3" />
+                    <span>Academy</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Crown className="w-3 h-3" />
+                    <span>Secrets</span>
+                  </div>
                 </div>
               </div>
             </button>
@@ -389,50 +401,26 @@ const WhatsInsideSection = () => {
                   : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
               }`}
             >
-              <div className="flex items-center justify-center gap-2">
-                <TrendingUp className="w-5 h-5" />
-                <div className="text-left">
-                  <div className="text-sm font-bold">Growing My Business</div>
-                  <div className="text-xs opacity-80">(B2B)</div>
+              <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5" />
+                  <div className="text-left">
+                    <div className="text-sm font-bold">Growing My Business</div>
+                    <div className="text-xs opacity-80">(B2B)</div>
+                  </div>
+                </div>
+                <div className={`flex items-center gap-3 text-xs ${activePath === 'b2b' ? 'opacity-90' : 'opacity-50'}`}>
+                  <div className="flex items-center gap-1">
+                    <Package className="w-3 h-3" />
+                    <span>Founder</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Crown className="w-3 h-3" />
+                    <span>DFY</span>
+                  </div>
                 </div>
               </div>
             </button>
-          </div>
-        </div>
-
-        {/* Product Name Callout */}
-        <div className="max-w-4xl mx-auto mb-12 space-y-4">
-          <div className={`border rounded-xl p-6 ${
-            activePath === 'lia' 
-              ? 'bg-orange-500/5 border-orange-500/30' 
-              : 'bg-blue-500/5 border-blue-500/30'
-          }`}>
-            <div className="flex items-start gap-4">
-              <div className="text-2xl">📦</div>
-              <div>
-                <div className={`font-bold text-lg mb-1 ${
-                  activePath === 'lia' ? 'text-orange-600' : 'text-blue-600'
-                }`}>
-                  {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Complete framework + 60 days community
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-xl p-6">
-            <div className="flex items-start gap-4">
-              <div className="text-2xl">👑</div>
-              <div>
-                <div className="font-bold text-lg mb-1">
-                  {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {activePath === 'lia' ? 'Everything + Elite access + Secrets' : 'Done-for-you execution + strategy'}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
