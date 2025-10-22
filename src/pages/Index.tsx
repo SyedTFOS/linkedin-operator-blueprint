@@ -6,6 +6,7 @@ import ExperimentSection from "@/components/ExperimentSection";
 import WhatsInsideSection from "@/components/WhatsInsideSection";
 import ExploringSection from "@/components/ExploringSection";
 import WhopWidget from "@/components/WhopWidget";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <WhatsInsideSection />
       <ExploringSection />
       <WhopWidget />
+      <ChatbotWidget />
     </div>
   );
 };
