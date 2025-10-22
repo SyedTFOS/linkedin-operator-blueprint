@@ -15,7 +15,7 @@ const ChatbotWidget = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "👋 Hey there! I'm here to help you find the perfect path at LinkedIn Operator. What brings you here today?",
+      content: "Hey there! I'm here to help you find the perfect path at LinkedIn Operator. What brings you here today?",
     },
   ]);
   const [input, setInput] = useState("");
