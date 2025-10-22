@@ -8,6 +8,7 @@ import { useToast } from "@/components/ui/use-toast";
 type Message = {
   role: "user" | "assistant";
   content: string;
+  buttons?: Array<{ label: string; action: string }>;
 };
 
 const EmbeddedChatbot = () => {
@@ -182,7 +183,7 @@ const EmbeddedChatbot = () => {
                   <div
                     className={`max-w-[80%] rounded-2xl px-5 py-3 ${
                       message.role === "user"
-                        ? "bg-primary text-primary-foreground"
+                        ? "bg-[#FF6B35] text-white shadow-md"
                         : "text-foreground"
                     }`}
                   >
@@ -192,13 +193,30 @@ const EmbeddedChatbot = () => {
                   </div>
                 </div>
                 
-                {/* Quick Reply Buttons - Show only after first assistant message */}
+                {/* Button Options - Show after any assistant message with buttons */}
+                {message.role === "assistant" && message.buttons && message.buttons.length > 0 && index === messages.length - 1 && !isLoading && (
+                  <div className="mt-4 space-y-2">
+                    {message.buttons.map((button, btnIndex) => (
+                      <Button
+                        key={btnIndex}
+                        onClick={() => handleQuickReply(button.label)}
+                        variant="outline"
+                        className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary bg-white"
+                        disabled={isLoading}
+                      >
+                        {button.label}
+                      </Button>
+                    ))}
+                  </div>
+                )}
+                
+                {/* Initial Quick Reply Buttons - Show only after first assistant message */}
                 {index === 0 && message.role === "assistant" && showQuickReplies && (
                   <div className="mt-4 space-y-2">
                     <Button
                       onClick={() => handleQuickReply("I want to build an agency")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
                       disabled={isLoading}
                     >
                       <Building2 className="h-4 w-4" />
@@ -207,7 +225,7 @@ const EmbeddedChatbot = () => {
                     <Button
                       onClick={() => handleQuickReply("I want to grow my business")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
                       disabled={isLoading}
                     >
                       <Briefcase className="h-4 w-4" />
@@ -216,7 +234,7 @@ const EmbeddedChatbot = () => {
                     <Button
                       onClick={() => handleQuickReply("I have a specific question")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
                       disabled={isLoading}
                     >
                       <MessageSquare className="h-4 w-4" />
@@ -225,7 +243,7 @@ const EmbeddedChatbot = () => {
                     <Button
                       onClick={() => handleQuickReply("Just browsing")}
                       variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2"
+                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
                       disabled={isLoading}
                     >
                       <Eye className="h-4 w-4" />

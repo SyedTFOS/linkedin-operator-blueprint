@@ -8,6 +8,7 @@ import { useToast } from "@/components/ui/use-toast";
 type Message = {
   role: "user" | "assistant";
   content: string;
+  buttons?: Array<{ label: string; action: string }>;
 };
 
 const ChatbotWidget = () => {
@@ -194,7 +195,7 @@ const ChatbotWidget = () => {
                   <div
                     className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                       message.role === "user"
-                        ? "bg-primary text-primary-foreground"
+                        ? "bg-[#FF6B35] text-white shadow-md"
                         : "bg-muted text-foreground"
                     }`}
                   >
