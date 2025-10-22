@@ -33,18 +33,16 @@ const AnimatedChatHeader = () => {
 
   return (
     <div className="text-center py-8 px-4">
-      <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight">
+      <h1 className="text-3xl md:text-4xl lg:text-[56px] font-bold leading-tight whitespace-nowrap overflow-hidden">
         <span className="text-foreground">Ask Leo </span>
-        <span className="relative inline-block min-w-[300px] md:min-w-[400px]">
-          <span
-            className={`text-[#FF6B35] transition-all duration-500 inline-block ${
-              isAnimating
-                ? "opacity-0 translate-y-[-10px]"
-                : "opacity-100 translate-y-0"
-            }`}
-          >
-            {rotatingPhrases[currentPhraseIndex]}
-          </span>
+        <span
+          className={`text-[#FF6B35] transition-all duration-500 inline-block ${
+            isAnimating
+              ? "opacity-0 translate-y-[-10px]"
+              : "opacity-100 translate-y-0"
+          }`}
+        >
+          {rotatingPhrases[currentPhraseIndex]}
         </span>
       </h1>
       <p className="text-muted-foreground text-base md:text-lg mt-4">
