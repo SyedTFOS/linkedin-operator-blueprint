@@ -100,7 +100,7 @@ const Hero = () => {
                     <path d="M 180 25 L 170 20 L 175 25 L 170 30 Z" fill="hsl(var(--primary))" />
                   </svg>
                 </div>
-                <p className="text-sm text-muted-foreground font-medium">
+                <p className="text-sm text-primary font-semibold uppercase tracking-wider italic">
                   A business model for true founders
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
