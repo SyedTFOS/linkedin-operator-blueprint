@@ -65,31 +65,31 @@ export function NavigationSidebar() {
   };
 
   return (
-    <aside className="hidden lg:block fixed left-0 top-0 h-screen w-64 border-r border-border/50 bg-background/95 backdrop-blur-sm z-40">
-      <div className="flex flex-col h-full py-8 px-6">
+    <aside className="hidden lg:block fixed left-4 top-24 h-[calc(100vh-8rem)] w-56 rounded-xl border border-border/50 bg-background/80 backdrop-blur-md shadow-lg z-40 overflow-hidden">
+      <div className="flex flex-col h-full py-6 px-4">
         {/* Logo */}
-        <div className="mb-8">
-          <h2 className="text-lg font-bold text-foreground">Navigation</h2>
+        <div className="mb-6">
+          <h2 className="text-sm font-bold text-foreground uppercase tracking-wide">Sections</h2>
         </div>
 
         {/* Navigation Items */}
-        <nav className="flex-1 overflow-y-auto">
-          <ul className="space-y-1">
+        <nav className="flex-1 overflow-y-auto scrollbar-thin">
+          <ul className="space-y-0.5">
             {navigationItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
-                    "w-full text-left py-2 px-3 rounded-md transition-all duration-200 text-sm",
-                    item.isSubItem && "pl-6",
-                    !item.isSubItem && "font-semibold mt-4 first:mt-0",
+                    "w-full text-left py-2 px-3 rounded-md transition-all duration-200 text-xs",
+                    item.isSubItem && "pl-5",
+                    !item.isSubItem && "font-semibold mt-3 first:mt-0 text-xs",
                     activeSection === item.id
                       ? "bg-primary/10 text-primary font-medium"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   )}
                 >
                   {item.roman && (
-                    <span className="text-primary mr-2">{item.roman}</span>
+                    <span className="text-primary mr-1.5 text-[10px]">{item.roman}</span>
                   )}
                   {item.label}
                 </button>
