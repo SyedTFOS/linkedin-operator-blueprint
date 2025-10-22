@@ -29,8 +29,10 @@ const WhatsInsideSection = () => {
         {/* 2x3 Grid of Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-16">
           {/* Card 1: The Complete Framework */}
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🎯</div>
+          <div className="group relative bg-gradient-to-br from-muted/60 via-muted/40 to-muted/20 border border-border/50 rounded-2xl p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all duration-500 overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+            <div className="relative z-10">
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🎯</div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               The Complete 7-Week Operator Framework
             </h3>
@@ -54,14 +56,17 @@ const WhatsInsideSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground italic">
-              Lifetime access. Updated quarterly with new strategies.
-            </p>
+              <p className="text-xs text-muted-foreground italic">
+                Lifetime access. Updated quarterly with new strategies.
+              </p>
+            </div>
           </div>
 
           {/* Card 2: Swipe Vault + Templates */}
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
-            <div className="text-4xl mb-4">📋</div>
+          <div className="group relative bg-gradient-to-br from-muted/60 via-muted/40 to-muted/20 border border-border/50 rounded-2xl p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all duration-500 overflow-hidden">
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+            <div className="relative z-10">
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">📋</div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Done-For-You Templates & SOP Library
             </h3>
@@ -85,17 +90,20 @@ const WhatsInsideSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground italic">
-              Updated monthly with new high-performing templates.
-            </p>
+              <p className="text-xs text-muted-foreground italic">
+                Updated monthly with new high-performing templates.
+              </p>
+            </div>
           </div>
 
           {/* Card 3: Weekly Live Coaching + Inner Circle */}
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
-            <div className="text-4xl mb-4">👥</div>
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Weekly Coaching + 24/7 Founder Access
-            </h3>
+          <div className="group relative bg-gradient-to-br from-muted/60 via-muted/40 to-muted/20 border border-border/50 rounded-2xl p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all duration-500 overflow-hidden">
+            <div className="absolute top-0 left-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+            <div className="relative z-10">
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">👥</div>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Weekly Coaching + Operator Community
+              </h3>
             <p className="text-base text-muted-foreground mb-6 leading-relaxed">
               Join 500+ operators building real agencies across 15+ industries. Get live coaching, hot seats, and 6 months of direct access to Syed & Freddie—so you're never stuck.
             </p>
@@ -104,7 +112,6 @@ const WhatsInsideSection = () => {
               {[
                 "Weekly Group Coaching Calls (live strategy, Q&A, hot seats)",
                 "Monthly Founder Calls with Syed & Freddie (advanced tactics)",
-                "24/7 Text/Chat Access to founders for 6 months",
                 "Private Operator Community (no low-ticket lurkers—real builders only)",
                 "In-Person Events (exclusive meetups around the world)",
                 "Peer Network (collaborate, share wins, solve problems together)"
@@ -115,14 +122,17 @@ const WhatsInsideSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground italic">
-              You're not just buying a course. You're joining an operator network.
-            </p>
+              <p className="text-xs text-muted-foreground italic">
+                You're not just buying a course. You're joining an operator network.
+              </p>
+            </div>
           </div>
 
           {/* Card 4: The LinkedIn Secrets */}
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🔒</div>
+          <div className="group relative bg-gradient-to-br from-muted/60 via-muted/40 to-muted/20 border border-border/50 rounded-2xl p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all duration-500 overflow-hidden">
+            <div className="absolute bottom-0 right-0 w-40 h-40 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+            <div className="relative z-10">
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🔒</div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Advanced Operator Secrets (Week 7)
             </h3>
@@ -146,14 +156,17 @@ const WhatsInsideSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground italic">
-              Unlocked in Week 7 for committed operators only.
-            </p>
+              <p className="text-xs text-muted-foreground italic">
+                Unlocked in Week 7 for committed operators only.
+              </p>
+            </div>
           </div>
 
           {/* Card 5: Industry-Specific Playbooks */}
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🏢</div>
+          <div className="group relative bg-gradient-to-br from-muted/60 via-muted/40 to-muted/20 border border-border/50 rounded-2xl p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all duration-500 overflow-hidden">
+            <div className="absolute top-0 right-0 w-36 h-36 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+            <div className="relative z-10">
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🏢</div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Playbooks For Every Industry
             </h3>
@@ -176,14 +189,17 @@ const WhatsInsideSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground italic">
-              Works for ANY B2B industry—we've proven it.
-            </p>
+              <p className="text-xs text-muted-foreground italic">
+                Works for ANY B2B industry—we've proven it.
+              </p>
+            </div>
           </div>
 
           {/* Card 6: Private Network + Resources */}
-          <div className="bg-gradient-to-br from-muted/50 to-muted/20 border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300">
-            <div className="text-4xl mb-4">🔗</div>
+          <div className="group relative bg-gradient-to-br from-muted/60 via-muted/40 to-muted/20 border border-border/50 rounded-2xl p-8 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.15)] transition-all duration-500 overflow-hidden">
+            <div className="absolute bottom-0 left-0 w-36 h-36 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500"></div>
+            <div className="relative z-10">
+              <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">🔗</div>
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Exclusive Operator Network
             </h3>
@@ -206,15 +222,17 @@ const WhatsInsideSection = () => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground italic">
-              These connections are worth more than the program itself.
-            </p>
+              <p className="text-xs text-muted-foreground italic">
+                These connections are worth more than the program itself.
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Stats Bar */}
-        <div className="bg-muted/30 border border-border rounded-xl py-8 px-6 max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-center">
+        <div className="relative bg-gradient-to-r from-muted/40 via-muted/30 to-muted/40 border border-border/50 rounded-xl py-8 px-6 max-w-6xl mx-auto overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5"></div>
+          <div className="relative z-10 flex flex-wrap justify-center items-center gap-8 md:gap-12 text-center">
             <div className="flex items-center gap-2">
               <span className="text-2xl">📚</span>
               <span className="text-sm md:text-base font-semibold text-foreground">50+ Video Modules</span>
