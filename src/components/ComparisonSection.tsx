@@ -1,26 +1,63 @@
-import { X, Check, Scale } from "lucide-react";
+import { useState } from "react";
+import { X, Check, Scale, Briefcase, TrendingUp } from "lucide-react";
 
 const ComparisonSection = () => {
-  const redOceanPoints = [
-    "Fighting for $500/month local businesses",
-    "Clients constantly churn",
-    "Price wars with 1,000 competitors",
-    'Associated with "online money" scams',
-    "No real credibility or authority",
-    'Stuck pitching broke "aspiring entrepreneurs"',
-    "Competing with 10,000 SMMA clones",
-    "Building agencies that feel like a grind"
-  ];
+  const [activePath, setActivePath] = useState<'lia' | 'b2b'>('lia');
 
-  const blueOceanPoints = [
-    "Fortune 500s with $50K+ budgets",
-    "Long-term, high-value partnerships",
-    "Less than 1% of users posting = zero competition",
-    "Real business positioning & credibility",
-    "Authority that opens doors to Forbes, YC, etc.",
-    "Access to decision-makers in ANY industry",
-    "Signing $36K/year retainers with Fortune 500s"
-  ];
+  // LIA (Building An Agency) content
+  const liaContent = {
+    redOcean: [
+      "Fighting for $500/month local businesses",
+      "Clients constantly churn",
+      "Price wars with 1,000 competitors",
+      'Associated with "online money" scams',
+      "No real credibility or authority",
+      'Stuck pitching broke "aspiring entrepreneurs"',
+      "Competing with 10,000 SMMA clones",
+      "Building agencies that feel like a grind"
+    ],
+    blueOcean: [
+      "Fortune 500s with $50K+ budgets",
+      "Long-term, high-value partnerships",
+      "Less than 1% of users posting = zero competition",
+      "Real business positioning & credibility",
+      "Authority that opens doors to Forbes, YC, etc.",
+      "Access to decision-makers in ANY industry",
+      "Signing $36K/year retainers with Fortune 500s"
+    ],
+    subtitle: "LinkedIn Operator Academy (LIA)",
+    redOceanTitle: "SMMA / Dropshipping / AI Agencies / Guru Space"
+  };
+
+  // B2B (Growing My Business) content
+  const b2bContent = {
+    redOcean: [
+      "Posting random content that goes nowhere",
+      "No strategy, just hoping for engagement",
+      "Can't figure out LinkedIn algorithm",
+      "Profile looks like everyone else's",
+      "Wasting time on content that doesn't convert",
+      "No system for consistent lead generation",
+      "Networking feels awkward and forced",
+      "LinkedIn feels like a waste of time"
+    ],
+    blueOcean: [
+      "Strategic content that positions you as THE authority",
+      "Predictable inbound leads from decision-makers",
+      "Algorithm mastery = consistent reach",
+      "Profile optimized for conversion",
+      "Content that builds brand equity & drives sales",
+      "Systematic approach to qualified meetings",
+      "Natural networking through value-first positioning",
+      "LinkedIn becomes your #1 revenue channel"
+    ],
+    subtitle: "LinkedIn Founder (B2B)",
+    redOceanTitle: "Random Posting / No Strategy / Generic Advice"
+  };
+
+  const content = activePath === 'lia' ? liaContent : b2bContent;
+  const redOceanPoints = content.redOcean;
+  const blueOceanPoints = content.blueOcean;
 
   return (
     <section className="py-20 md:py-32 bg-background">
@@ -38,9 +75,47 @@ const ComparisonSection = () => {
         </div>
 
         {/* Header */}
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-16 md:mb-24">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-foreground mb-12">
           While Everyone Else Is...
         </h2>
+
+        {/* Path Selector Tabs */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-2 bg-card/50 rounded-xl border border-border/50">
+            <button
+              onClick={() => setActivePath('lia')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
+                activePath === 'lia'
+                  ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                  : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                <Briefcase className="w-5 h-5" />
+                <div className="text-left">
+                  <div className="text-sm font-bold">Building An Agency</div>
+                  <div className="text-xs opacity-80">(LIA)</div>
+                </div>
+              </div>
+            </button>
+            <button
+              onClick={() => setActivePath('b2b')}
+              className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
+                activePath === 'b2b'
+                  ? 'bg-primary text-primary-foreground shadow-lg scale-105'
+                  : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                <TrendingUp className="w-5 h-5" />
+                <div className="text-left">
+                  <div className="text-sm font-bold">Growing My Business</div>
+                  <div className="text-xs opacity-80">(B2B)</div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
 
         {/* Split Screen Comparison */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 max-w-7xl mx-auto mb-16 mt-12">
@@ -67,7 +142,7 @@ const ComparisonSection = () => {
                   The Saturated Red Ocean
                 </h3>
                 <p className="text-white/80 text-sm md:text-base font-medium">
-                  SMMA / Dropshipping / AI Agencies / Guru Space
+                  {content.redOceanTitle}
                 </p>
               </div>
 
@@ -114,7 +189,7 @@ const ComparisonSection = () => {
                   The LinkedIn Blue Ocean
                 </h3>
                 <p className="text-orange-300 text-sm md:text-base font-medium">
-                  LinkedIn Agency (LIA)
+                  {content.subtitle}
                 </p>
               </div>
 
