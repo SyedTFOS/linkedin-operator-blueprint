@@ -236,9 +236,9 @@ const EmbeddedChatbot = () => {
               </div>
             ))}
             {isLoading && (
-              <div className="flex justify-start">
-                <div className="bg-muted rounded-2xl px-5 py-3">
-                  <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+              <div className="flex justify-start items-center gap-2">
+                <div className="text-sm text-muted-foreground italic">
+                  Leo is typing...
                 </div>
               </div>
             )}

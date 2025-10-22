@@ -203,9 +203,9 @@ const ChatbotWidget = () => {
                 </div>
               ))}
               {isLoading && (
-                <div className="flex justify-start">
-                  <div className="bg-muted rounded-2xl px-4 py-2">
-                    <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+                <div className="flex justify-start items-center gap-2">
+                  <div className="text-sm text-muted-foreground italic">
+                    Leo is typing...
                   </div>
                 </div>
               )}
