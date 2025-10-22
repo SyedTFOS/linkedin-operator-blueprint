@@ -161,6 +161,69 @@ const EmbeddedChatbot = () => {
     <div className="w-full max-w-4xl mx-auto mt-12">
       <AnimatedChatHeader />
       <div className="bg-card rounded-2xl shadow-xl border border-border glow-effect overflow-hidden">
+        {/* Input at Top */}
+        <div className="p-6 border-b border-border bg-muted/20">
+          <div className="flex gap-3 mb-4">
+            <Input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder="Type your message here..."
+              disabled={isLoading}
+              className="flex-1 h-12 text-base"
+            />
+            <Button
+              onClick={handleSend}
+              disabled={isLoading || !input.trim()}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 px-6"
+            >
+              <Send className="h-5 w-5" />
+            </Button>
+          </div>
+
+          {/* Quick Reply Buttons - Show only initially */}
+          {showQuickReplies && (
+            <div className="space-y-2">
+              <Button
+                onClick={() => handleQuickReply("I want to build an agency")}
+                variant="outline"
+                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                disabled={isLoading}
+              >
+                <Building2 className="h-4 w-4" />
+                I want to build an agency
+              </Button>
+              <Button
+                onClick={() => handleQuickReply("I want to grow my business")}
+                variant="outline"
+                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                disabled={isLoading}
+              >
+                <Briefcase className="h-4 w-4" />
+                I want to grow my business
+              </Button>
+              <Button
+                onClick={() => handleQuickReply("I have a specific question")}
+                variant="outline"
+                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                disabled={isLoading}
+              >
+                <MessageSquare className="h-4 w-4" />
+                I have a specific question
+              </Button>
+              <Button
+                onClick={() => handleQuickReply("Just browsing")}
+                variant="outline"
+                className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
+                disabled={isLoading}
+              >
+                <Eye className="h-4 w-4" />
+                Just browsing
+              </Button>
+            </div>
+          )}
+        </div>
 
         {/* Messages */}
         <ScrollArea className="h-[500px] p-6" ref={scrollRef}>
@@ -184,65 +247,6 @@ const EmbeddedChatbot = () => {
                     )}</p>
                   </div>
                 </div>
-                
-                {/* Button Options - Show after any assistant message with buttons */}
-                {message.role === "assistant" && message.buttons && message.buttons.length > 0 && index === messages.length - 1 && !isLoading && (
-                  <div className="mt-4 space-y-2">
-                    {message.buttons.map((button, btnIndex) => (
-                      <Button
-                        key={btnIndex}
-                        onClick={() => handleQuickReply(button.label)}
-                        variant="outline"
-                        className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary bg-white"
-                        disabled={isLoading}
-                      >
-                        {button.label}
-                      </Button>
-                    ))}
-                  </div>
-                )}
-                
-                {/* Initial Quick Reply Buttons - Show only after first assistant message */}
-                {index === 0 && message.role === "assistant" && showQuickReplies && (
-                  <div className="mt-4 space-y-2">
-                    <Button
-                      onClick={() => handleQuickReply("I want to build an agency")}
-                      variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
-                      disabled={isLoading}
-                    >
-                      <Building2 className="h-4 w-4" />
-                      I want to build an agency
-                    </Button>
-                    <Button
-                      onClick={() => handleQuickReply("I want to grow my business")}
-                      variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
-                      disabled={isLoading}
-                    >
-                      <Briefcase className="h-4 w-4" />
-                      I want to grow my business
-                    </Button>
-                    <Button
-                      onClick={() => handleQuickReply("I have a specific question")}
-                      variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
-                      disabled={isLoading}
-                    >
-                      <MessageSquare className="h-4 w-4" />
-                      I have a specific question
-                    </Button>
-                    <Button
-                      onClick={() => handleQuickReply("Just browsing")}
-                      variant="outline"
-                      className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:border-primary gap-2 bg-white"
-                      disabled={isLoading}
-                    >
-                      <Eye className="h-4 w-4" />
-                      Just browsing
-                    </Button>
-                  </div>
-                )}
               </div>
             ))}
             {isLoading && (
@@ -254,28 +258,6 @@ const EmbeddedChatbot = () => {
             )}
           </div>
         </ScrollArea>
-
-        {/* Input */}
-        <div className="p-6 border-t border-border bg-muted/20">
-          <div className="flex gap-3">
-            <Input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder="Type your message here..."
-              disabled={isLoading}
-              className="flex-1 h-12 text-base"
-            />
-            <Button
-              onClick={handleSend}
-              disabled={isLoading || !input.trim()}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 px-6"
-            >
-              <Send className="h-5 w-5" />
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );
