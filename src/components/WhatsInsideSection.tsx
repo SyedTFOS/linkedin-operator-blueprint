@@ -1,7 +1,7 @@
 import { Package } from "lucide-react";
 import frameworkDashboard from "@/assets/framework-dashboard.png";
 import masterDocument from "@/assets/master-document.png";
-import coachingCall from "@/assets/coaching-call.png";
+import coachingEvent from "@/assets/coaching-event.png";
 import guidesTemplates from "@/assets/guides-templates.png";
 import communityChat from "@/assets/community-chat.png";
 import masterClasses from "@/assets/master-classes.png";
@@ -146,7 +146,7 @@ const WhatsInsideSection = () => {
               {/* Front Side */}
               <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-border/50 shadow-lg">
                 <div className="relative h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-                  <img src={coachingCall} alt="Coaching Call" className="w-full h-full object-cover opacity-80" />
+                  <img src={coachingEvent} alt="Coaching Event" className="w-full h-full object-cover opacity-80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <div className="text-5xl mb-4">👥</div>
