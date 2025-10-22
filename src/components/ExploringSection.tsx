@@ -263,6 +263,19 @@ const ExploringSection = () => {
           </div>
         </div>
 
+        {/* Not Sure Transition */}
+        <div className="text-center mb-8 mt-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+            Not Sure?
+          </h3>
+          <p className="text-lg text-muted-foreground mb-4">
+            Ask <span className="inline-block">🦁</span> Leo <span className="text-orange-600 dark:text-orange-400 font-semibold">if you need experience</span>
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Get instant answers about LinkedIn Operator programs 24/7
+          </p>
+        </div>
+
         {/* AI Chat Assistant */}
         <EmbeddedChatbot />
       </div>
