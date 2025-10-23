@@ -23,11 +23,6 @@ const AgencyTiers = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Your Path to a $50K/Month LinkedIn Agency
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Both include the complete system + weekly coaching.<br />
-            The difference? <span className="text-foreground font-semibold">Academy = group support.</span><br />
-            <span className="text-foreground font-semibold">Secrets = group + 1-on-1 + lifetime access.</span>
-          </p>
         </div>
 
         {/* Tier Cards */}
