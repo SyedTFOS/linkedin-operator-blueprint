@@ -23,9 +23,18 @@ const navigationItems: NavItem[] = [
 
 export function NavigationSidebar() {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const heroSection = document.getElementById("about-linkedin-operator");
+      
+      // Check if we've scrolled past the hero section
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setShowSidebar(heroBottom < 0);
+      }
+
       const sections = navigationItems.map(item => ({
         id: item.id,
         element: document.getElementById(item.id)
@@ -63,6 +72,8 @@ export function NavigationSidebar() {
       });
     }
   };
+
+  if (!showSidebar) return null;
 
   return (
     <aside className="hidden lg:block fixed left-8 top-32 h-[calc(100vh-12rem)] w-64 z-40">
