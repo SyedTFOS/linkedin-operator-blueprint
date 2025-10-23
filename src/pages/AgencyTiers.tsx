@@ -1,4 +1,4 @@
-import { Check, Crown, Package, ArrowRight, X } from "lucide-react";
+import { Crown, Package, ArrowRight, X, BookOpen, Users, Clock, Target, User, Infinity, Flame, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -43,32 +43,32 @@ const AgencyTiers = () => {
                 </div>
               </div>
 
-              {/* Feature Cards */}
+               {/* Feature Cards */}
               <div className="grid grid-cols-1 gap-4">
                 {/* Feature 1 */}
                 <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">📚</div>
+                  <BookOpen className="h-12 w-12 mx-auto text-primary" />
                   <div className="font-bold text-sm">THE COMPLETE SYSTEM</div>
                   <div className="text-xs text-muted-foreground">7 weeks • 50+ modules</div>
                 </div>
 
                 {/* Feature 2 */}
                 <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">👥</div>
+                  <Users className="h-12 w-12 mx-auto text-primary" />
                   <div className="font-bold text-sm">GROUP COACHING</div>
                   <div className="text-xs text-muted-foreground">Weekly calls with founders</div>
                 </div>
 
                 {/* Feature 3 */}
                 <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">⏱️</div>
+                  <Clock className="h-12 w-12 mx-auto text-primary" />
                   <div className="font-bold text-sm">60-DAY ACCESS</div>
                   <div className="text-xs text-muted-foreground">Community + support</div>
                 </div>
 
                 {/* Feature 4 */}
                 <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">🎯</div>
+                  <Target className="h-12 w-12 mx-auto text-primary" />
                   <div className="font-bold text-sm">FIRST CLIENT IN 60 DAYS</div>
                   <div className="text-xs text-muted-foreground">$10K/month by day 90</div>
                 </div>
@@ -89,12 +89,12 @@ const AgencyTiers = () => {
           </Card>
 
           {/* Secrets Tier */}
-          <Card className="p-8 border-[3px] border-[#FF6B35] bg-gradient-to-br from-background to-primary/5 relative overflow-hidden transform scale-[1.03] shadow-[0_8px_24px_rgba(255,107,53,0.15)]">
+          <Card className="p-8 border-[3px] border-[#FFB800] bg-gradient-to-br from-background to-[#FFB800]/5 relative overflow-hidden transform scale-[1.03] shadow-[0_8px_24px_rgba(255,184,0,0.15)]">
             <div className="absolute top-4 left-4">
-              <Badge className="bg-[#FF6B35] text-white">🔥 MOST POPULAR</Badge>
+              <Badge className="bg-[#FFB800] text-black font-semibold">MOST POPULAR</Badge>
             </div>
             <div className="absolute top-4 right-4">
-              <Badge className="bg-primary text-primary-foreground animate-pulse">📍 8 SPOTS LEFT</Badge>
+              <Badge className="bg-[#FFB800] text-black font-semibold animate-pulse">8 SPOTS LEFT</Badge>
             </div>
             
             <div className="space-y-6 mt-8">
@@ -112,9 +112,9 @@ const AgencyTiers = () => {
               </div>
 
               {/* Everything in Academy Plus */}
-              <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
+              <div className="bg-[#FFB800]/5 border border-[#FFB800]/20 rounded-lg p-3 text-center">
                 <p className="text-sm font-semibold flex items-center justify-center gap-2">
-                  <Crown className="h-4 w-4 text-primary" />
+                  <Crown className="h-4 w-4 text-[#FFB800]" />
                   Everything in Academy PLUS:
                 </p>
               </div>
@@ -122,43 +122,46 @@ const AgencyTiers = () => {
               {/* Feature Cards */}
               <div className="grid grid-cols-1 gap-4">
                 {/* Feature 1 */}
-                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">👤</div>
+                <div className="bg-[#FFB800]/5 border border-[#FFB800]/20 rounded-lg p-4 text-center space-y-2">
+                  <User className="h-12 w-12 mx-auto text-[#FFB800]" />
                   <div className="font-bold text-sm">1-ON-1 COACHING</div>
                   <div className="text-xs text-muted-foreground">Personal founder calls</div>
                 </div>
 
                 {/* Feature 2 */}
-                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">♾️</div>
+                <div className="bg-[#FFB800]/5 border border-[#FFB800]/20 rounded-lg p-4 text-center space-y-2">
+                  <Infinity className="h-12 w-12 mx-auto text-[#FFB800]" />
                   <div className="font-bold text-sm">LIFETIME ACCESS</div>
                   <div className="text-xs text-muted-foreground">Never expires</div>
                 </div>
 
                 {/* Feature 3 */}
-                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">🔥</div>
+                <div className="bg-[#FFB800]/5 border border-[#FFB800]/20 rounded-lg p-4 text-center space-y-2">
+                  <Flame className="h-12 w-12 mx-auto text-[#FFB800]" />
                   <div className="font-bold text-sm">THE SECRETS VAULT</div>
                   <div className="text-xs text-muted-foreground">Strategies we don't teach publicly</div>
                 </div>
 
                 {/* Feature 4 */}
-                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
-                  <div className="text-4xl">⚡</div>
+                <div className="bg-[#FFB800]/5 border border-[#FFB800]/20 rounded-lg p-4 text-center space-y-2">
+                  <Zap className="h-12 w-12 mx-auto text-[#FFB800]" />
                   <div className="font-bold text-sm">FIRST CLIENT IN 30 DAYS</div>
                   <div className="text-xs text-muted-foreground">$40K/month by month 4</div>
                 </div>
               </div>
 
               {/* Testimonial */}
-              <div className="bg-[#FF6B35]/10 rounded-lg p-4 border-l-4 border-[#FF6B35]">
+              <div className="bg-[#FFB800]/10 rounded-lg p-4 border-l-4 border-[#FFB800]">
                 <p className="text-sm italic">"Hit $40K in 4 months with 1-on-1"</p>
                 <p className="text-xs font-medium mt-1">— Sarah K.</p>
               </div>
 
               {/* Urgency Callout */}
-              <div className="bg-[#FF6B35]/10 border-l-4 border-[#FF6B35] rounded-lg p-4 space-y-1">
-                <p className="font-bold text-sm">⚡ ONLY 8 SPOTS LEFT THIS MONTH</p>
+              <div className="bg-[#FFB800]/10 border-l-4 border-[#FFB800] rounded-lg p-4 space-y-1">
+                <p className="font-bold text-sm flex items-center justify-center gap-2">
+                  <Zap className="h-4 w-4 text-[#FFB800]" />
+                  ONLY 8 SPOTS LEFT THIS MONTH
+                </p>
                 <p className="text-xs text-muted-foreground">(We limit enrollment to maintain quality)</p>
                 <p className="text-xs text-muted-foreground">Last cohort filled in 6 days.</p>
               </div>
