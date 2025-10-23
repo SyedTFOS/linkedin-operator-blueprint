@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye } from "lucide-react";
+import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye, Menu, X } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -24,6 +24,7 @@ const Hero = () => {
   const [isBusinessHovered, setIsBusinessHovered] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPathDropdownOpen, setIsPathDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Auto-scroll for Agency Students carousel
   useEffect(() => {
@@ -49,14 +50,48 @@ const Hero = () => {
 
   return (
     <section className="relative bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+      {/* Desktop Navigation */}
+      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-center">
             <img src={logo} alt="LinkedIn Operator" className="h-10" />
           </div>
         </div>
       </nav>
+
+      {/* Mobile Navigation - Sliding Header */}
+      <div className="md:hidden">
+        {/* Mobile Header Toggle Button - Only show when menu is closed */}
+        {!isMobileMenuOpen && (
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform"
+            aria-label="Open menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        )}
+
+        {/* Mobile Sliding Header */}
+        <div
+          className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${
+            isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}
+        >
+          <div className="container mx-auto px-6 py-3 relative">
+            <div className="flex items-center justify-between">
+              <img src={logo} alt="LinkedIn Operator" className="h-8" />
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform"
+                aria-label="Close menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Content */}
       <div className="container mx-auto px-6 py-24">
@@ -221,10 +256,10 @@ const Hero = () => {
                 <p className="text-sm text-muted-foreground">Over 500 Students & 50+ Businesses Transformed</p>
               </div>
 
-              <Tabs defaultValue="business" className="w-full">
+              <Tabs defaultValue="students" className="w-full">
                 <TabsList className="grid w-full grid-cols-2 mb-6">
-                  <TabsTrigger value="business">Business</TabsTrigger>
                   <TabsTrigger value="students">Agency Students</TabsTrigger>
+                  <TabsTrigger value="business">Business</TabsTrigger>
                 </TabsList>
 
                 {/* Agency Students Tab */}
