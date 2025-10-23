@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check, X, ArrowRight, MessageCircle, User, FileText, Mail, DollarSign, TrendingUp, Users, Rocket } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Check, X, ArrowRight, User, FileText, Mail, DollarSign, TrendingUp, Users, Rocket, Building2, Briefcase, Target, Zap, Award, Play } from "lucide-react";
 
 const LinkedInAgencySection = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -10,91 +9,104 @@ const LinkedInAgencySection = () => {
   const steps = [
     {
       id: 0,
-      emoji: "👋",
+      icon: Target,
       title: "Think of it like this...",
       subtitle: "A simple analogy",
       content: (
-        <div className="space-y-6">
-          <p className="text-2xl md:text-3xl font-bold text-center">
+        <div className="space-y-8">
+          <p className="text-2xl md:text-3xl font-bold text-center leading-relaxed">
             You know how some businesses need help getting customers on <span className="text-primary">LinkedIn</span>?
           </p>
-          <div className="flex justify-center gap-8 my-8">
+          <div className="flex justify-center gap-12 my-12">
             <div className="text-center">
-              <div className="w-20 h-20 bg-muted rounded-full flex items-center justify-center mx-auto mb-3 text-4xl">
-                🏢
+              <div className="w-24 h-24 bg-gradient-to-br from-muted to-muted/50 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <Building2 className="w-12 h-12 text-foreground" />
               </div>
-              <p className="text-sm text-muted-foreground">Businesses need<br/>customers</p>
+              <p className="text-base font-medium text-muted-foreground">Businesses need<br/>customers</p>
             </div>
-            <div className="flex items-center text-4xl text-primary">→</div>
+            <div className="flex items-center">
+              <ArrowRight className="w-8 h-8 text-primary" />
+            </div>
             <div className="text-center">
-              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 text-4xl">
-                💼
+              <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-primary/20">
+                <Briefcase className="w-12 h-12 text-primary" />
               </div>
-              <p className="text-sm text-muted-foreground">LinkedIn is where<br/>they find them</p>
+              <p className="text-base font-medium text-muted-foreground">LinkedIn is where<br/>they find them</p>
             </div>
           </div>
-          <p className="text-xl text-center text-muted-foreground">
-            A LinkedIn Agency <span className="font-bold text-foreground">helps these businesses</span> get more customers from LinkedIn.
-          </p>
+          <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
+            <p className="text-xl text-center text-foreground font-medium">
+              A LinkedIn Agency <span className="font-bold text-primary">helps these businesses</span> get more customers from LinkedIn.
+            </p>
+          </div>
         </div>
       )
     },
     {
       id: 1,
-      emoji: "🎯",
+      icon: Zap,
       title: "What You Actually Do",
       subtitle: "3 simple services",
       content: (
-        <div className="space-y-6">
-          <p className="text-xl text-center mb-8">You provide 3 services that help businesses win on LinkedIn:</p>
+        <div className="space-y-8">
+          <p className="text-2xl text-center font-semibold mb-12">You provide 3 services that help businesses win on LinkedIn:</p>
           
           <div className="grid gap-6">
-            <Card className="p-6 border-2 hover:border-primary/50 transition-all hover:scale-105 cursor-pointer">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <User className="w-6 h-6 text-primary" />
+            <Card className="group p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/20">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                  <User className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2">1. Profile Makeover 🎨</h4>
-                  <p className="text-muted-foreground text-lg">
-                    Make their LinkedIn profile look professional and attract the right people
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">SERVICE 1</span>
+                  </div>
+                  <h4 className="text-2xl font-bold mb-3">Profile Optimization</h4>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Transform their LinkedIn profile into a professional, high-converting presence that attracts ideal clients
                   </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Like giving their online business card a glow-up!
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 border-2 hover:border-primary/50 transition-all hover:scale-105 cursor-pointer">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2">2. Create Posts ✍️</h4>
-                  <p className="text-muted-foreground text-lg">
-                    Write interesting posts that make people want to work with them
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Think of it like being their social media manager, but for business!
+                  <p className="text-sm text-muted-foreground mt-3 italic">
+                    Position them as the go-to expert in their industry
                   </p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6 border-2 hover:border-primary/50 transition-all hover:scale-105 cursor-pointer">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary" />
+            <Card className="group p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/20">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                  <FileText className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-2">3. Send Messages 📨</h4>
-                  <p className="text-muted-foreground text-lg">
-                    Reach out to potential customers and start conversations
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">SERVICE 2</span>
+                  </div>
+                  <h4 className="text-2xl font-bold mb-3">Content Creation</h4>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Create engaging, strategic posts that build authority and attract their target audience
                   </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Like making new friends, but for business deals!
+                  <p className="text-sm text-muted-foreground mt-3 italic">
+                    Turn them into a thought leader their clients want to work with
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="group p-8 border-2 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-background to-muted/20">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                  <Mail className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">SERVICE 3</span>
+                  </div>
+                  <h4 className="text-2xl font-bold mb-3">LinkedIn Outreach</h4>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    Send personalized messages to connect with decision-makers and book sales calls
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-3 italic">
+                    Fill their calendar with qualified leads ready to buy
                   </p>
                 </div>
               </div>
@@ -105,61 +117,79 @@ const LinkedInAgencySection = () => {
     },
     {
       id: 2,
-      emoji: "💰",
+      icon: DollarSign,
       title: "How You Get Paid",
       subtitle: "The money part",
       content: (
         <div className="space-y-8">
-          <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-2 border-primary/20">
-            <div className="text-center space-y-4">
-              <DollarSign className="w-16 h-16 text-primary mx-auto" />
-              <h3 className="text-2xl font-bold">You Charge Monthly</h3>
-              <div className="text-5xl font-bold text-primary my-4">
-                $3K-$50K
-                <span className="text-xl text-muted-foreground">/month</span>
+          <Card className="p-12 bg-gradient-to-br from-primary/10 via-primary/5 to-background border-2 border-primary/30 shadow-xl">
+            <div className="text-center space-y-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                <DollarSign className="w-10 h-10 text-primary-foreground" />
               </div>
-              <p className="text-lg text-muted-foreground">
-                That's <span className="font-bold text-foreground">per client!</span> Most students have 3-10 clients.
-              </p>
+              <h3 className="text-3xl font-bold">You Charge Monthly Retainers</h3>
+              <div className="space-y-2">
+                <div className="text-6xl font-bold text-primary">
+                  $3K-$50K
+                </div>
+                <p className="text-2xl text-muted-foreground">/month per client</p>
+              </div>
+              <div className="bg-background/80 rounded-xl p-6 border border-primary/20">
+                <p className="text-lg text-foreground font-medium">
+                  Most students maintain <span className="font-bold text-primary">3-10 active clients</span>
+                </p>
+              </div>
             </div>
           </Card>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-6 border-2">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Users className="w-5 h-5 text-primary" />
-                What They Get:
-              </h4>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-primary" />
-                  <span>10-20 sales calls per month</span>
+            <Card className="p-8 border-2 border-border hover:border-primary/30 transition-all bg-gradient-to-br from-background to-muted/10">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-primary" />
                 </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-primary" />
-                  <span>Professional LinkedIn presence</span>
+                <h4 className="text-xl font-bold">Client Results:</h4>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-base">10-20 qualified sales calls monthly</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-primary" />
-                  <span>More customers & revenue</span>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-base">Professional LinkedIn presence</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-primary" />
+                  </div>
+                  <span className="text-base">Consistent new customer pipeline</span>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6 border-2 bg-primary/5">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-primary" />
-                Simple Math:
-              </h4>
-              <div className="space-y-3">
-                <p className="text-base">
-                  3 clients × $3,500 = <span className="font-bold text-xl text-primary">$10,500/mo</span>
-                </p>
-                <p className="text-base">
-                  5 clients × $5,000 = <span className="font-bold text-xl text-primary">$25,000/mo</span>
-                </p>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Just a few clients = full-time income!
+            <Card className="p-8 border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10 shadow-lg">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <h4 className="text-xl font-bold text-primary">Your Income:</h4>
+              </div>
+              <div className="space-y-5">
+                <div className="bg-background/80 rounded-lg p-4 border border-primary/20">
+                  <p className="text-base text-muted-foreground mb-1">3 clients × $3,500</p>
+                  <p className="font-bold text-2xl text-primary">$10,500/month</p>
+                </div>
+                <div className="bg-background/80 rounded-lg p-4 border border-primary/20">
+                  <p className="text-base text-muted-foreground mb-1">5 clients × $5,000</p>
+                  <p className="font-bold text-2xl text-primary">$25,000/month</p>
+                </div>
+                <p className="text-sm text-center text-muted-foreground pt-2 italic">
+                  Just a few clients = full-time income
                 </p>
               </div>
             </Card>
@@ -169,77 +199,152 @@ const LinkedInAgencySection = () => {
     },
     {
       id: 3,
-      emoji: "🚀",
+      icon: Award,
       title: "Why This Is Special",
       subtitle: "Better than other online businesses",
       content: (
         <div className="space-y-8">
-          <p className="text-xl text-center">Compare this to starting other online businesses:</p>
+          <p className="text-2xl text-center font-semibold mb-12">Compare this to starting other online businesses:</p>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-6 border-2 border-destructive/30 bg-destructive/5">
-              <h4 className="text-xl font-bold mb-6 text-center">Most Online Businesses</h4>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <X className="w-6 h-6 text-destructive mt-1 flex-shrink-0" />
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8 border-2 border-destructive/30 bg-gradient-to-br from-destructive/5 to-background relative">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-destructive/30"></div>
+              <h4 className="text-2xl font-bold mb-8 text-center">Most Online Businesses</h4>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <X className="w-5 h-5 text-destructive" />
+                  </div>
                   <div>
-                    <p className="font-semibold">Need followers first</p>
-                    <p className="text-sm text-muted-foreground">Build audience for months before earning</p>
+                    <p className="font-bold text-lg mb-1">Need followers first</p>
+                    <p className="text-sm text-muted-foreground">Build audience for months before earning anything</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <X className="w-6 h-6 text-destructive mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <X className="w-5 h-5 text-destructive" />
+                  </div>
                   <div>
-                    <p className="font-semibold">Takes 12-24 months</p>
-                    <p className="text-sm text-muted-foreground">Long wait before making good money</p>
+                    <p className="font-bold text-lg mb-1">Takes 12-24 months</p>
+                    <p className="text-sm text-muted-foreground">Long wait before making substantial income</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <X className="w-6 h-6 text-destructive mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <X className="w-5 h-5 text-destructive" />
+                  </div>
                   <div>
-                    <p className="font-semibold">Hard to charge high prices</p>
-                    <p className="text-sm text-muted-foreground">Competition keeps prices low</p>
+                    <p className="font-bold text-lg mb-1">Hard to charge premium</p>
+                    <p className="text-sm text-muted-foreground">Heavy competition keeps prices low</p>
                   </div>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6 border-2 border-primary/50 bg-gradient-to-br from-primary/10 to-primary/5 relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
-                BETTER! ⭐
+            <Card className="p-8 border-2 border-primary/50 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden shadow-xl">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/50"></div>
+              <div className="absolute top-6 right-6 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">
+                <Award className="w-4 h-4" />
+                SUPERIOR
               </div>
-              <h4 className="text-xl font-bold mb-6 text-center text-primary">LinkedIn Agency</h4>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+              <h4 className="text-2xl font-bold mb-8 text-center text-primary">LinkedIn Agency</h4>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Check className="w-5 h-5 text-primary-foreground" />
+                  </div>
                   <div>
-                    <p className="font-semibold">Get paid immediately</p>
-                    <p className="text-sm text-muted-foreground">First client = first paycheck</p>
+                    <p className="font-bold text-lg mb-1">Get paid immediately</p>
+                    <p className="text-sm text-muted-foreground">First client = first paycheck, no waiting</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Check className="w-5 h-5 text-primary-foreground" />
+                  </div>
                   <div>
-                    <p className="font-semibold">Takes 30-60 days</p>
-                    <p className="text-sm text-muted-foreground">Get your first client in weeks</p>
+                    <p className="font-bold text-lg mb-1">Takes 30-60 days</p>
+                    <p className="text-sm text-muted-foreground">Land your first client within weeks</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Check className="w-5 h-5 text-primary-foreground" />
+                  </div>
                   <div>
-                    <p className="font-semibold">Charge $3K-$50K/client</p>
-                    <p className="text-sm text-muted-foreground">Premium prices, premium results</p>
+                    <p className="font-bold text-lg mb-1">Charge $3K-$50K/client</p>
+                    <p className="text-sm text-muted-foreground">Premium pricing for premium results</p>
                   </div>
                 </div>
               </div>
             </Card>
           </div>
 
-          <Card className="p-6 bg-primary/5 border-2 border-primary/20">
-            <p className="text-center text-lg">
-              <span className="font-bold text-primary text-xl">Bottom line:</span> You can start earning real money way faster with a LinkedIn agency than almost any other online business.
+          <Card className="p-10 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-2 border-primary/30 shadow-lg">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Rocket className="w-6 h-6 text-primary" />
+              <span className="font-bold text-primary text-2xl">Bottom Line</span>
+            </div>
+            <p className="text-center text-xl leading-relaxed">
+              You can start earning <span className="font-bold text-primary">real money way faster</span> with a LinkedIn agency than almost any other online business model.
             </p>
           </Card>
+        </div>
+      )
+    },
+    {
+      id: 4,
+      icon: Play,
+      title: "Watch The Full Explanation",
+      subtitle: "7-minute deep dive",
+      content: (
+        <div className="space-y-8">
+          <div className="text-center mb-8">
+            <p className="text-xl text-muted-foreground mb-4">
+              See the complete system explained in detail
+            </p>
+            <div className="flex items-center justify-center gap-4 flex-wrap">
+              <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-lg">
+                <Check className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Real examples</span>
+              </div>
+              <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-lg">
+                <Check className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Client case studies</span>
+              </div>
+              <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-lg">
+                <Check className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Step-by-step breakdown</span>
+              </div>
+            </div>
+          </div>
+
+          <Card className="p-4 bg-gradient-to-br from-background to-muted/20 border-2 border-primary/20 shadow-xl">
+            <div className="relative w-full rounded-xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/[insert-video-id]"
+                title="What Is A LinkedIn Agency - Full Explanation"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </Card>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            <Card className="p-6 text-center border-2 hover:border-primary/30 transition-all">
+              <div className="text-4xl font-bold text-primary mb-2">7:00</div>
+              <p className="text-sm text-muted-foreground">Minutes</p>
+            </Card>
+            <Card className="p-6 text-center border-2 hover:border-primary/30 transition-all">
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <p className="text-sm text-muted-foreground">Transparent</p>
+            </Card>
+            <Card className="p-6 text-center border-2 hover:border-primary/30 transition-all">
+              <div className="text-4xl font-bold text-primary mb-2">Free</div>
+              <p className="text-sm text-muted-foreground">No credit card</p>
+            </Card>
+          </div>
         </div>
       )
     }
@@ -249,11 +354,11 @@ const LinkedInAgencySection = () => {
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         {/* Main Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
             What Is A <span className="text-primary">LinkedIn Agency?</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl md:text-2xl text-muted-foreground font-medium">
             Let's break it down super simple...
           </p>
         </div>
@@ -261,62 +366,73 @@ const LinkedInAgencySection = () => {
         {/* Interactive Stepper */}
         <div className="mb-12">
           {/* Step Navigation */}
-          <div className="flex justify-center gap-2 mb-8 flex-wrap">
-            {steps.map((step, idx) => (
-              <button
-                key={step.id}
-                onClick={() => setActiveStep(idx)}
-                className={`px-4 py-2 rounded-full font-semibold transition-all ${
-                  activeStep === idx
-                    ? 'bg-primary text-primary-foreground scale-110'
-                    : 'bg-muted hover:bg-muted/80'
-                }`}
-              >
-                <span className="mr-2">{step.emoji}</span>
-                <span className="hidden sm:inline">Step {idx + 1}</span>
-              </button>
-            ))}
+          <div className="flex justify-center gap-3 mb-10 flex-wrap">
+            {steps.map((step, idx) => {
+              const IconComponent = step.icon;
+              return (
+                <button
+                  key={step.id}
+                  onClick={() => setActiveStep(idx)}
+                  className={`group px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 shadow-md ${
+                    activeStep === idx
+                      ? 'bg-primary text-primary-foreground scale-105 shadow-lg'
+                      : 'bg-background border-2 border-border hover:border-primary/50 hover:shadow-lg'
+                  }`}
+                >
+                  <IconComponent className={`w-5 h-5 transition-transform group-hover:scale-110 ${
+                    activeStep === idx ? '' : 'text-primary'
+                  }`} />
+                  <span className="hidden sm:inline">Step {idx + 1}</span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Progress Bar */}
-          <div className="w-full bg-muted rounded-full h-2 mb-8">
+          <div className="w-full bg-muted/50 rounded-full h-3 mb-12 overflow-hidden shadow-inner">
             <div
-              className="bg-primary h-2 rounded-full transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-primary/80 h-3 rounded-full transition-all duration-500 shadow-lg"
               style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
             />
           </div>
 
           {/* Step Content */}
-          <div className="min-h-[500px]">
-            {steps.map((step, idx) => (
-              <div
-                key={step.id}
-                className={`transition-all duration-500 ${
-                  activeStep === idx
-                    ? 'opacity-100 translate-x-0'
-                    : 'opacity-0 absolute translate-x-full pointer-events-none'
-                }`}
-              >
-                <div className="text-center mb-8">
-                  <div className="text-6xl mb-4">{step.emoji}</div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-lg text-muted-foreground">{step.subtitle}</p>
-                </div>
+          <div className="min-h-[600px] relative">
+            {steps.map((step, idx) => {
+              const IconComponent = step.icon;
+              return (
+                <div
+                  key={step.id}
+                  className={`transition-all duration-500 ${
+                    activeStep === idx
+                      ? 'opacity-100 translate-x-0 relative'
+                      : 'opacity-0 absolute translate-x-full pointer-events-none'
+                  }`}
+                >
+                  <div className="text-center mb-12">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl mb-6">
+                      <IconComponent className="w-10 h-10 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-3xl md:text-5xl font-bold mb-3">{step.title}</h3>
+                    <p className="text-lg md:text-xl text-muted-foreground font-medium">{step.subtitle}</p>
+                  </div>
 
-                <Card className="p-8 md:p-12 bg-gradient-to-br from-background to-muted/20">
-                  {step.content}
-                </Card>
-              </div>
-            ))}
+                  <Card className="p-8 md:p-12 bg-gradient-to-br from-background via-background to-muted/20 border-2 shadow-xl">
+                    {step.content}
+                  </Card>
+                </div>
+              );
+            })}
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex justify-between items-center mt-12">
             <Button
               variant="outline"
+              size="lg"
               onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
               disabled={activeStep === 0}
-              className="group"
+              className="group border-2 disabled:opacity-50"
             >
               <ArrowRight className="mr-2 rotate-180 group-hover:-translate-x-1 transition-transform" />
               Previous
@@ -324,37 +440,20 @@ const LinkedInAgencySection = () => {
 
             {activeStep < steps.length - 1 ? (
               <Button
+                size="lg"
                 onClick={() => setActiveStep(Math.min(steps.length - 1, activeStep + 1))}
-                className="group"
+                className="group shadow-lg"
               >
                 Next Step
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             ) : (
-              <Button className="group bg-primary text-primary-foreground">
-                <Rocket className="mr-2 w-4 h-4" />
+              <Button size="lg" className="group bg-gradient-to-r from-primary to-primary/80 shadow-lg">
+                <Rocket className="mr-2 w-5 h-5" />
                 Got It! Show Me How
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             )}
-          </div>
-        </div>
-
-        {/* Video Section */}
-        <div className="mt-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6">
-            Watch The Full Explanation (7 minutes)
-          </h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-xl" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/[insert-video-id]"
-                title="What Is A LinkedIn Agency"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
           </div>
         </div>
       </div>
