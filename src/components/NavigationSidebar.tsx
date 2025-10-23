@@ -27,12 +27,12 @@ export function NavigationSidebar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById("about-linkedin-operator");
+      const aboutSection = document.getElementById("about-linkedin-operator");
       
-      // Check if we've scrolled past the hero section
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setShowSidebar(heroBottom < 0);
+      // Show sidebar when "About LinkedIn Operator" section is in view or has been scrolled past
+      if (aboutSection) {
+        const aboutTop = aboutSection.getBoundingClientRect().top;
+        setShowSidebar(aboutTop <= 150);
       }
 
       const sections = navigationItems.map(item => ({
