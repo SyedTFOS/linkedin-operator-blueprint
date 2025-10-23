@@ -10,10 +10,8 @@ import vasilijePhoto from "@/assets/vasilije-simic.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import lunivateLogo from "@/assets/lunivate-logo.png";
-
 const ExploringSection = () => {
-  return (
-    <section className="py-20 px-4 bg-background">
+  return <section className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Badge */}
         <div className="flex justify-center mb-8">
@@ -22,7 +20,7 @@ const ExploringSection = () => {
               <Route className="w-3 h-3 text-primary" />
             </div>
             <span className="text-sm font-semibold text-foreground">
-              <span className="text-primary mr-1.5">vii.</span>Your Next Step
+              <span className="text-primary mr-1.5">Vii.</span>Your Next Step
             </span>
           </div>
         </div>
@@ -124,36 +122,12 @@ const ExploringSection = () => {
               <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
-                  <img
-                    src={ethanPhoto}
-                    alt="Ethan C"
-                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
-                  />
-                  <img
-                    src={walterPhoto}
-                    alt="Walter C"
-                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
-                  />
-                  <img
-                    src={samPhoto}
-                    alt="Sam B"
-                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
-                  />
-                  <img
-                    src={aryanPhoto}
-                    alt="Aryan S"
-                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
-                  />
-                  <img
-                    src={komailPhoto}
-                    alt="Komail G"
-                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
-                  />
-                  <img
-                    src={vasilijePhoto}
-                    alt="Vasilije S"
-                    className="w-10 h-10 rounded-full border-2 border-background object-cover"
-                  />
+                  <img src={ethanPhoto} alt="Ethan C" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={walterPhoto} alt="Walter C" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={samPhoto} alt="Sam B" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={aryanPhoto} alt="Aryan S" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={komailPhoto} alt="Komail G" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
+                  <img src={vasilijePhoto} alt="Vasilije S" className="w-10 h-10 rounded-full border-2 border-background object-cover" />
                 </div>
                 <span className="text-sm text-muted-foreground ml-2">+100 more</span>
               </div>
@@ -241,21 +215,9 @@ const ExploringSection = () => {
             <div className="mt-6 pt-6 border-t">
               <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-3">Trusted By:</p>
               <div className="flex items-center gap-4 flex-wrap">
-                <img
-                  src={lunivateLogo}
-                  alt="Lunivate"
-                  className="h-7 opacity-70 hover:opacity-100 transition-opacity"
-                />
-                <img
-                  src={diversyfundLogo}
-                  alt="DiversyFund"
-                  className="h-6 opacity-70 hover:opacity-100 transition-opacity"
-                />
-                <img
-                  src={playertwoLogo}
-                  alt="PlayerTwo"
-                  className="h-8 opacity-70 hover:opacity-100 transition-opacity"
-                />
+                <img src={lunivateLogo} alt="Lunivate" className="h-7 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={diversyfundLogo} alt="DiversyFund" className="h-6 opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={playertwoLogo} alt="PlayerTwo" className="h-8 opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-foreground">Markapolo AI</span>
                 <span className="text-sm text-muted-foreground">+50 more companies</span>
               </div>
@@ -276,8 +238,6 @@ const ExploringSection = () => {
         {/* AI Chat Assistant */}
         <EmbeddedChatbot />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ExploringSection;
