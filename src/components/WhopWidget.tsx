@@ -35,14 +35,9 @@ const WhopWidget = () => {
             className="block"
           >
             <div className="bg-card/95 border-2 border-primary/30 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 p-4 sm:p-5 w-[280px] sm:w-[300px] backdrop-blur-md relative overflow-hidden">
-
-              {/* Free Course Ribbon - Tilted Top Right */}
-              <div className="absolute -right-6 top-0 bg-primary text-primary-foreground px-8 py-1.5 shadow-lg text-xs font-bold rotate-12">
-                Free Course Incl.
-              </div>
               
               {/* Header with Whop branding */}
-              <div className="flex items-center gap-2 mb-3 mt-2">
+              <div className="flex items-center gap-2 mb-3">
                 <img src={whopLogo} alt="Whop" className="h-6" />
               </div>
               
