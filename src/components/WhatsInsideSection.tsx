@@ -40,8 +40,8 @@ const WhatsInsideSection = () => {
     title: "Coaching & Operator Community",
     image: coachingEvent,
     shortDescription: "",
-    midTicket: ["60 Days Community Access (full member benefits)", "Peer Network (collaborate, share strategies)", "Resource Library (playbooks, case studies)", "Option to extend: $97/month (LIA) or $127/month (B2B)"],
-    highTicket: ["Lifetime Community Access (never expires)", "Weekly Live Coaching Calls (strategy, Q&A, hot seats)", "Monthly Founder Calls with Syed & Freddie", "24/7 Text/Chat Access to founders (6 months)", "In-Person Events (exclusive operator meetups)"]
+    midTicket: ["Weekly GROUP Coaching Calls (strategy, Q&A, hot seats)", "60 Days Community Access", "Peer Network (collaborate & share strategies)", "Option to extend: $97/month (LIA) or $127/month (B2B)"],
+    highTicket: ["Everything in Academy PLUS:", "1-on-1 Coaching with Founders (personal guidance)", "Access to Group Calls Too (2X support)", "Lifetime Community (never expires)", "DM Access with Founders (6 months)", "In-Person Events (exclusive operator meetups)"]
   }, {
     id: 4,
     tier: "both",
@@ -104,8 +104,8 @@ const WhatsInsideSection = () => {
     title: "LinkedIn Founder Community",
     image: coachingEvent,
     shortDescription: "",
-    midTicket: ["60 Days Access", "Founder peer network", "Strategy resources", "Extend for $127/month"],
-    highTicket: ["Lifetime Access + White-Glove Support", "Never expires", "Weekly strategy calls", "Dedicated account manager", "Priority support"]
+    midTicket: ["Weekly GROUP Coaching Calls (with other founders)", "60 Days Community Access", "Founder Peer Network", "Extend for $127/month"],
+    highTicket: ["Everything in Founder PLUS:", "Lifetime Community Access (never expires)", "White-Glove DFY Support", "Dedicated Account Manager", "Priority Support & Direct Access"]
   }, {
     id: 4,
     tier: "both",
@@ -517,8 +517,8 @@ const WhatsInsideSection = () => {
                   </div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
                     {activePath === 'lia' 
-                      ? 'Everything you need to build and scale a LinkedIn agency. Learn the systems, get the templates, join the community.' 
-                      : 'Master LinkedIn to grow your business. Build authority, generate leads, and close deals with proven frameworks.'}
+                      ? 'Everything you need to build and scale a LinkedIn agency. Learn the systems, get the templates, join weekly GROUP coaching calls, and connect with the community.' 
+                      : 'Master LinkedIn to grow your business with weekly GROUP coaching calls, proven frameworks, and founder peer support.'}
                   </p>
                 </div>
 
@@ -558,6 +558,16 @@ const WhatsInsideSection = () => {
                         </div>
                       </div>
                     ))}
+                  </div>
+
+                  {/* Best For */}
+                  <div className="bg-primary/5 rounded-lg p-4 mb-4 border border-primary/20">
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Best For:</p>
+                    <p className="text-sm text-foreground font-medium">
+                      {activePath === 'lia' 
+                        ? 'Operators comfortable with group support and peer learning' 
+                        : 'Founders comfortable with group coaching and self-implementation'}
+                    </p>
                   </div>
 
                   {/* Outcome */}
@@ -605,8 +615,8 @@ const WhatsInsideSection = () => {
                   </div>
                   <p className="text-sm text-foreground/90 leading-relaxed font-medium">
                     {activePath === 'lia' 
-                      ? 'Never Build Alone. We Don\'t Let You Fail. Get everything in Academy PLUS the unfair advantages that 10X your results.' 
-                      : 'We Do It FOR You. Show up for sales calls while our team handles everything—strategy, content, posting, optimization.'}
+                      ? 'Never Build Alone. We Don\'t Let You Fail. Get everything in Academy (including group calls) PLUS personal 1-on-1 coaching with founders, lifetime access, and elite advantages.' 
+                      : 'We Do It FOR You. Get everything in Founder (including group calls) PLUS our team handles all execution—strategy, content creation, posting, and optimization.'}
                   </p>
                 </div>
 
@@ -677,6 +687,16 @@ const WhatsInsideSection = () => {
                     })}
                   </div>
 
+                  {/* Best For */}
+                  <div className="bg-amber-100 rounded-lg p-4 mb-4 border border-amber-400">
+                    <p className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-2">Best For:</p>
+                    <p className="text-sm text-foreground font-bold">
+                      {activePath === 'lia' 
+                        ? 'Operators who want personal 1-on-1 attention from founders' 
+                        : 'Founders who want us to handle everything (done-for-you)'}
+                    </p>
+                  </div>
+
                   {/* Outcome */}
                   <div className="bg-amber-100 rounded-lg p-4 mb-4 border border-amber-400">
                     <p className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-2">Expected Results:</p>
@@ -687,7 +707,7 @@ const WhatsInsideSection = () => {
                     </p>
                     <p className="text-xs text-foreground/80 leading-relaxed">
                       {activePath === 'lia' 
-                        ? 'With weekly coaching, founder access, and the secret playbooks, operators scale 3-5X faster than Academy alone.' 
+                        ? 'With group calls + personal 1-on-1 coaching, lifetime community, founder DM access, and secret playbooks, operators scale 3-5X faster than Academy alone.' 
                         : 'Our team creates your content, optimizes your profile, and fills your calendar while you focus on closing.'}
                     </p>
                   </div>
