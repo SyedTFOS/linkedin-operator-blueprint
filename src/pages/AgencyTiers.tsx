@@ -48,59 +48,46 @@ const AgencyTiers = () => {
                 </div>
               </div>
 
-              {/* Features */}
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Complete 7-week framework</span>
+              {/* Feature Cards */}
+              <div className="grid grid-cols-1 gap-4">
+                {/* Feature 1 */}
+                <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">📚</div>
+                  <div className="font-bold text-sm">THE COMPLETE SYSTEM</div>
+                  <div className="text-xs text-muted-foreground">7 weeks • 50+ modules</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>All templates & SOPs</span>
+
+                {/* Feature 2 */}
+                <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">👥</div>
+                  <div className="font-bold text-sm">GROUP COACHING</div>
+                  <div className="text-xs text-muted-foreground">Weekly calls with founders</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="font-semibold">Weekly GROUP coaching calls</span>
+
+                {/* Feature 3 */}
+                <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">⏱️</div>
+                  <div className="font-bold text-sm">60-DAY ACCESS</div>
+                  <div className="text-xs text-muted-foreground">Community + support</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>60-day community access</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Industry playbooks</span>
+
+                {/* Feature 4 */}
+                <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">🎯</div>
+                  <div className="font-bold text-sm">FIRST CLIENT IN 60 DAYS</div>
+                  <div className="text-xs text-muted-foreground">$10K/month by day 90</div>
                 </div>
               </div>
 
-              {/* Best For */}
-              <div className="bg-muted/50 rounded-lg p-4 space-y-3">
-                <p className="font-semibold text-sm uppercase tracking-wide">Best for:</p>
-                <ul className="space-y-1 text-sm">
-                  <li>• You learn well in group settings</li>
-                  <li>• You don't need constant 1-on-1 attention</li>
-                  <li>• You're comfortable asking questions in groups</li>
-                </ul>
-                <div className="pt-2 border-t border-border/50">
-                  <p className="text-xs italic text-muted-foreground">"The group calls alone were worth it. Got my first client in week 8."</p>
-                  <p className="text-xs font-medium mt-1">— Marcus T., Agency Owner</p>
-                </div>
-              </div>
-
-              {/* Expected Results */}
-              <div className="bg-muted/30 rounded-lg p-4 space-y-2">
-                <p className="font-semibold text-sm uppercase tracking-wide flex items-center gap-2">
-                  ⏱️ Expected Results:
-                </p>
-                <ul className="space-y-1 text-sm">
-                  <li>• First client: <span className="font-semibold">60 days</span></li>
-                  <li>• $10K/month: <span className="font-semibold">90 days</span></li>
-                  <li>• $25K/month: <span className="font-semibold">6 months</span></li>
-                </ul>
+              {/* Testimonial */}
+              <div className="bg-muted/20 rounded-lg p-4 border-l-4 border-primary/30">
+                <p className="text-sm italic text-muted-foreground">"Got my first client in week 8"</p>
+                <p className="text-xs font-medium mt-1">— Marcus T.</p>
               </div>
 
               {/* CTA */}
               <Button className="w-full" size="lg" variant="hero">
-                Join LinkedIn Operator Academy
+                Join Academy
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
@@ -112,7 +99,7 @@ const AgencyTiers = () => {
               <Badge className="bg-[#FF6B35] text-white">🔥 MOST POPULAR</Badge>
             </div>
             <div className="absolute top-4 right-4">
-              <Badge className="bg-primary text-primary-foreground animate-pulse">LIMITED SPOTS</Badge>
+              <Badge className="bg-primary text-primary-foreground animate-pulse">📍 8 SPOTS LEFT</Badge>
             </div>
             
             <div className="space-y-6 mt-8">
@@ -129,70 +116,49 @@ const AgencyTiers = () => {
                 </div>
               </div>
 
-              {/* Features */}
-              <div className="space-y-3">
-                <p className="font-bold text-primary flex items-center gap-2">
-                  <Crown className="h-5 w-5" />
+              {/* Everything in Academy Plus */}
+              <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
+                <p className="text-sm font-semibold flex items-center justify-center gap-2">
+                  <Crown className="h-4 w-4 text-primary" />
                   Everything in Academy PLUS:
                 </p>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="font-semibold">1-on-1 coaching with founders</span>
+              </div>
+
+              {/* Feature Cards */}
+              <div className="grid grid-cols-1 gap-4">
+                {/* Feature 1 */}
+                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">👤</div>
+                  <div className="font-bold text-sm">1-ON-1 COACHING</div>
+                  <div className="text-xs text-muted-foreground">Personal founder calls</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Access to Academy group calls too <span className="text-primary font-semibold">(double the coaching)</span></span>
+
+                {/* Feature 2 */}
+                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">♾️</div>
+                  <div className="font-bold text-sm">LIFETIME ACCESS</div>
+                  <div className="text-xs text-muted-foreground">Never expires</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="font-semibold">Lifetime community (never expires)</span>
+
+                {/* Feature 3 */}
+                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">🔥</div>
+                  <div className="font-bold text-sm">THE SECRETS VAULT</div>
+                  <div className="text-xs text-muted-foreground">Strategies we don't teach publicly</div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>24/7 founder access (6 months)</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>The LinkedIn Secrets vault</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>LinkedIn Operator Secrets</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Elite operator network</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>In-person events</span>
+
+                {/* Feature 4 */}
+                <div className="bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-lg p-4 text-center space-y-2">
+                  <div className="text-4xl">⚡</div>
+                  <div className="font-bold text-sm">FIRST CLIENT IN 30 DAYS</div>
+                  <div className="text-xs text-muted-foreground">$40K/month by month 4</div>
                 </div>
               </div>
 
-              {/* Best For */}
-              <div className="bg-primary/10 rounded-lg p-4 space-y-3 border border-primary/20">
-                <p className="font-semibold text-sm uppercase tracking-wide">Best for:</p>
-                <ul className="space-y-1 text-sm">
-                  <li>• You want the fastest results possible</li>
-                  <li>• You need personal attention and guidance</li>
-                  <li>• You're building a 6-7 figure agency</li>
-                </ul>
-                <div className="pt-2 border-t border-primary/20">
-                  <p className="text-xs italic">"Having Sam on call changed everything. Hit $40K/mo in 4 months."</p>
-                  <p className="text-xs font-medium mt-1">— Sarah K., Secrets Member</p>
-                </div>
-              </div>
-
-              {/* Expected Results */}
-              <div className="bg-muted/30 rounded-lg p-4 space-y-2">
-                <p className="font-semibold text-sm uppercase tracking-wide flex items-center gap-2">
-                  ⏱️ Expected Results:
-                </p>
-                <ul className="space-y-1 text-sm">
-                  <li>• First client: <span className="font-semibold text-primary">30 days</span></li>
-                  <li>• $15K/month: <span className="font-semibold text-primary">60 days</span></li>
-                  <li>• $50K/month: <span className="font-semibold text-primary">6 months</span></li>
-                </ul>
+              {/* Testimonial */}
+              <div className="bg-[#FF6B35]/10 rounded-lg p-4 border-l-4 border-[#FF6B35]">
+                <p className="text-sm italic">"Hit $40K in 4 months with 1-on-1"</p>
+                <p className="text-xs font-medium mt-1">— Sarah K.</p>
               </div>
 
               {/* Urgency Callout */}
@@ -200,10 +166,6 @@ const AgencyTiers = () => {
                 <p className="font-bold text-sm">⚡ ONLY 8 SPOTS LEFT THIS MONTH</p>
                 <p className="text-xs text-muted-foreground">(We limit enrollment to maintain quality)</p>
                 <p className="text-xs text-muted-foreground">Last cohort filled in 6 days.</p>
-              </div>
-
-              <div className="bg-primary/5 border border-primary/30 rounded-lg p-3 text-center">
-                <p className="text-sm font-semibold">✅ Guarantee Included</p>
               </div>
 
               {/* CTA */}
