@@ -31,7 +31,7 @@ const AgencyTiers = () => {
         </div>
 
         {/* Tier Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 items-start">
           {/* Academy Tier */}
           <Card className="p-8 border-2 hover:border-primary/50 transition-all duration-300">
             <div className="space-y-6">
@@ -42,7 +42,10 @@ const AgencyTiers = () => {
                   <Badge variant="outline" className="text-sm">Do It Yourself</Badge>
                 </div>
                 <h2 className="text-2xl font-bold">LinkedIn Operator Academy</h2>
-                <p className="text-3xl font-bold text-primary">Investment Required</p>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-4xl font-bold text-primary">$$$</p>
+                  <span className="text-sm text-muted-foreground">Investment</span>
+                </div>
               </div>
 
               {/* Features */}
@@ -70,12 +73,28 @@ const AgencyTiers = () => {
               </div>
 
               {/* Best For */}
-              <div className="bg-muted/50 rounded-lg p-4 space-y-2">
+              <div className="bg-muted/50 rounded-lg p-4 space-y-3">
                 <p className="font-semibold text-sm uppercase tracking-wide">Best for:</p>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>• Budget-conscious operators</li>
-                  <li>• Comfortable learning in group setting</li>
-                  <li>• Don't need 1-on-1 attention</li>
+                <ul className="space-y-1 text-sm">
+                  <li>• You learn well in group settings</li>
+                  <li>• You don't need constant 1-on-1 attention</li>
+                  <li>• You're comfortable asking questions in groups</li>
+                </ul>
+                <div className="pt-2 border-t border-border/50">
+                  <p className="text-xs italic text-muted-foreground">"The group calls alone were worth it. Got my first client in week 8."</p>
+                  <p className="text-xs font-medium mt-1">— Marcus T., Agency Owner</p>
+                </div>
+              </div>
+
+              {/* Expected Results */}
+              <div className="bg-muted/30 rounded-lg p-4 space-y-2">
+                <p className="font-semibold text-sm uppercase tracking-wide flex items-center gap-2">
+                  ⏱️ Expected Results:
+                </p>
+                <ul className="space-y-1 text-sm">
+                  <li>• First client: <span className="font-semibold">60 days</span></li>
+                  <li>• $10K/month: <span className="font-semibold">90 days</span></li>
+                  <li>• $25K/month: <span className="font-semibold">6 months</span></li>
                 </ul>
               </div>
 
@@ -88,12 +107,15 @@ const AgencyTiers = () => {
           </Card>
 
           {/* Secrets Tier */}
-          <Card className="p-8 border-2 border-primary bg-gradient-to-br from-background to-primary/5 relative overflow-hidden premium-card-glow">
+          <Card className="p-8 border-[3px] border-[#FF6B35] bg-gradient-to-br from-background to-primary/5 relative overflow-hidden transform scale-[1.03] shadow-[0_8px_24px_rgba(255,107,53,0.15)]">
+            <div className="absolute top-4 left-4">
+              <Badge className="bg-[#FF6B35] text-white">🔥 MOST POPULAR</Badge>
+            </div>
             <div className="absolute top-4 right-4">
-              <Badge className="bg-primary text-primary-foreground">LIMITED SPOTS</Badge>
+              <Badge className="bg-primary text-primary-foreground animate-pulse">LIMITED SPOTS</Badge>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 mt-8">
               {/* Header */}
               <div className="space-y-2">
                 <div className="flex items-center gap-3 mb-3">
@@ -101,7 +123,10 @@ const AgencyTiers = () => {
                   <Badge variant="outline" className="text-sm border-primary">Elite Support + Access</Badge>
                 </div>
                 <h2 className="text-2xl font-bold">LinkedIn Operator SECRETS</h2>
-                <p className="text-3xl font-bold text-primary">Premium Investment</p>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-4xl font-bold text-primary">$$$$</p>
+                  <span className="text-sm text-muted-foreground">Premium Investment</span>
+                </div>
               </div>
 
               {/* Features */}
@@ -145,13 +170,36 @@ const AgencyTiers = () => {
               </div>
 
               {/* Best For */}
-              <div className="bg-primary/10 rounded-lg p-4 space-y-2 border border-primary/20">
+              <div className="bg-primary/10 rounded-lg p-4 space-y-3 border border-primary/20">
                 <p className="font-semibold text-sm uppercase tracking-wide">Best for:</p>
                 <ul className="space-y-1 text-sm">
-                  <li>• Want fastest results</li>
-                  <li>• Need personal attention</li>
-                  <li>• Building 6-7 figure agency</li>
+                  <li>• You want the fastest results possible</li>
+                  <li>• You need personal attention and guidance</li>
+                  <li>• You're building a 6-7 figure agency</li>
                 </ul>
+                <div className="pt-2 border-t border-primary/20">
+                  <p className="text-xs italic">"Having Sam on call changed everything. Hit $40K/mo in 4 months."</p>
+                  <p className="text-xs font-medium mt-1">— Sarah K., Secrets Member</p>
+                </div>
+              </div>
+
+              {/* Expected Results */}
+              <div className="bg-muted/30 rounded-lg p-4 space-y-2">
+                <p className="font-semibold text-sm uppercase tracking-wide flex items-center gap-2">
+                  ⏱️ Expected Results:
+                </p>
+                <ul className="space-y-1 text-sm">
+                  <li>• First client: <span className="font-semibold text-primary">30 days</span></li>
+                  <li>• $15K/month: <span className="font-semibold text-primary">60 days</span></li>
+                  <li>• $50K/month: <span className="font-semibold text-primary">6 months</span></li>
+                </ul>
+              </div>
+
+              {/* Urgency Callout */}
+              <div className="bg-[#FF6B35]/10 border-l-4 border-[#FF6B35] rounded-lg p-4 space-y-1">
+                <p className="font-bold text-sm">⚡ ONLY 8 SPOTS LEFT THIS MONTH</p>
+                <p className="text-xs text-muted-foreground">(We limit enrollment to maintain quality)</p>
+                <p className="text-xs text-muted-foreground">Last cohort filled in 6 days.</p>
               </div>
 
               <div className="bg-primary/5 border border-primary/30 rounded-lg p-3 text-center">
