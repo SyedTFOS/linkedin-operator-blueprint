@@ -20,26 +20,6 @@ const BlueOceanReveal = () => {
   return (
     <section className="-mt-16 md:-mt-20 pb-8 md:pb-12 bg-background">
       <div className="container mx-auto px-4">
-        {/* Scrolling Logo Bar */}
-        <div className="mb-20 md:mb-24 overflow-hidden">
-          <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
-            {[...logos, ...logos].map((logo, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className={`w-auto object-contain ${
-                    logo.alt === "Player Two" ? "h-16" : "h-12"
-                  }`}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Badge Widget */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-accent/10 border border-accent/20 rounded-full">
