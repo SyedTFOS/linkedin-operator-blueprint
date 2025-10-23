@@ -717,64 +717,6 @@ const WhatsInsideSection = () => {
 
             </div>
 
-            {/* Bottom Comparison Table */}
-            <div className="mt-12 bg-slate-900 rounded-xl p-8 border border-border/50">
-              <h4 className="text-xl font-bold text-white mb-6 text-center">Quick Comparison</h4>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="text-left py-3 px-4 font-bold text-gray-400 uppercase text-xs">Feature</th>
-                      <th className="text-center py-3 px-4 font-bold text-gray-300">{activePath === 'lia' ? 'Academy' : 'Founder'}</th>
-                      <th className="text-center py-3 px-4 font-bold text-amber-400">{activePath === 'lia' ? 'Secrets' : 'DFY'}</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border/30">
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">Framework & System</td>
-                      <td className="py-3 px-4 text-center"><CheckCircle2 className={`w-5 h-5 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'} mx-auto`} /></td>
-                      <td className="py-3 px-4 text-center"><CheckCircle2 className="w-5 h-5 text-amber-500 mx-auto" /></td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">Templates & SOPs</td>
-                      <td className="py-3 px-4 text-center"><CheckCircle2 className={`w-5 h-5 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'} mx-auto`} /></td>
-                      <td className="py-3 px-4 text-center"><CheckCircle2 className="w-5 h-5 text-amber-500 mx-auto" /></td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">Industry Playbooks</td>
-                      <td className="py-3 px-4 text-center"><CheckCircle2 className={`w-5 h-5 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'} mx-auto`} /></td>
-                      <td className="py-3 px-4 text-center"><CheckCircle2 className="w-5 h-5 text-amber-500 mx-auto" /></td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">Community Access</td>
-                      <td className="py-3 px-4 text-center text-gray-400 text-xs">60 Days</td>
-                      <td className="py-3 px-4 text-center text-amber-400 font-bold text-xs">♾️ LIFETIME</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">Live Coaching</td>
-                      <td className="py-3 px-4 text-center text-gray-400 text-xs">—</td>
-                      <td className="py-3 px-4 text-center text-amber-400 font-bold text-xs">✅ WEEKLY</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">Founder Access</td>
-                      <td className="py-3 px-4 text-center text-gray-400 text-xs">—</td>
-                      <td className="py-3 px-4 text-center text-amber-400 font-bold text-xs">✅ 24/7 (6mo)</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">LinkedIn Secrets</td>
-                      <td className="py-3 px-4 text-center text-gray-400 text-xs">—</td>
-                      <td className="py-3 px-4 text-center text-amber-400 font-bold text-xs">🔒 EXCLUSIVE</td>
-                    </tr>
-                    <tr>
-                      <td className="py-3 px-4 text-gray-300">{activePath === 'lia' ? 'Elite Network' : 'Done-For-You'}</td>
-                      <td className="py-3 px-4 text-center text-gray-400 text-xs">—</td>
-                      <td className="py-3 px-4 text-center text-amber-400 font-bold text-xs">🔒 EXCLUSIVE</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
           </div>)}
 
         {/* Stats Bar */}
