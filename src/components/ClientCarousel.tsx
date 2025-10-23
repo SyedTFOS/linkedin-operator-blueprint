@@ -8,6 +8,7 @@ import samAramiVideo from "@/assets/sam-arami-video.mp4";
 import benAlistor from "@/assets/ben-alistor.png";
 import jessicaGreen from "@/assets/jessica-green.png";
 import lianLim from "@/assets/lian-lim.png";
+import aaninMahmodul from "@/assets/aanin-mahmodul.png";
 import stevanPetrusic from "@/assets/stevan-petrusic.png";
 
 type TierType = "tier1" | "tier2" | "tier3";
@@ -754,8 +755,11 @@ export const ClientCarousel = () => {
                 {/* Aanin Mahmodul */}
                 <div className="flex-[0_0_100%] min-w-0 md:flex-[0_0_calc(50%-16px)] lg:flex-[0_0_calc(33.333%-22px)]">
                   <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                    {/* Background - Using gradient placeholder until image is provided */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+                    {/* Background Image */}
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                      style={{ backgroundImage: `url(${aaninMahmodul})` }}
+                    />
                     
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
