@@ -2,18 +2,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, X, ArrowRight, User, FileText, Mail, DollarSign, TrendingUp, Users, Rocket, Building2, Briefcase, Target, Zap, Award, Play } from "lucide-react";
-
 const LinkedInAgencySection = () => {
   const [activeStep, setActiveStep] = useState(0);
-
-  const steps = [
-    {
-      id: 0,
-      icon: Target,
-      title: "Think of it like this...",
-      subtitle: "A simple analogy",
-      content: (
-        <div className="space-y-6 md:space-y-8">
+  const steps = [{
+    id: 0,
+    icon: Target,
+    title: "Think of it like this...",
+    subtitle: "A simple analogy",
+    content: <div className="space-y-6 md:space-y-8">
           <p className="text-xl md:text-2xl lg:text-3xl font-bold text-center leading-relaxed px-2">
             You know how some businesses need help getting customers on <span className="text-primary">LinkedIn</span>?
           </p>
@@ -22,7 +18,7 @@ const LinkedInAgencySection = () => {
               <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-muted to-muted/50 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg">
                 <Building2 className="w-10 h-10 md:w-12 md:h-12 text-foreground" />
               </div>
-              <p className="text-sm md:text-base font-medium text-muted-foreground">Businesses need<br/>customers</p>
+              <p className="text-sm md:text-base font-medium text-muted-foreground">Businesses need<br />customers</p>
             </div>
             <div className="flex items-center justify-center">
               <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-primary rotate-90 sm:rotate-0" />
@@ -31,7 +27,7 @@ const LinkedInAgencySection = () => {
               <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg border border-primary/20">
                 <Briefcase className="w-10 h-10 md:w-12 md:h-12 text-primary" />
               </div>
-              <p className="text-sm md:text-base font-medium text-muted-foreground">LinkedIn is where<br/>they find them</p>
+              <p className="text-sm md:text-base font-medium text-muted-foreground">LinkedIn is where<br />they find them</p>
             </div>
           </div>
           <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-xl md:rounded-2xl p-6 md:p-8 border border-primary/20">
@@ -40,15 +36,12 @@ const LinkedInAgencySection = () => {
             </p>
           </div>
         </div>
-      )
-    },
-    {
-      id: 1,
-      icon: Zap,
-      title: "What You Actually Do",
-      subtitle: "3 simple services",
-      content: (
-        <div className="space-y-6 md:space-y-8">
+  }, {
+    id: 1,
+    icon: Zap,
+    title: "What You Actually Do",
+    subtitle: "3 simple services",
+    content: <div className="space-y-6 md:space-y-8">
           <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-8 md:mb-12 px-2">You provide 3 services that help businesses win on LinkedIn:</p>
           
           <div className="grid gap-4 md:gap-6">
@@ -113,15 +106,12 @@ const LinkedInAgencySection = () => {
             </Card>
           </div>
         </div>
-      )
-    },
-    {
-      id: 2,
-      icon: DollarSign,
-      title: "How You Get Paid",
-      subtitle: "The money part",
-      content: (
-        <div className="space-y-6 md:space-y-8">
+  }, {
+    id: 2,
+    icon: DollarSign,
+    title: "How You Get Paid",
+    subtitle: "The money part",
+    content: <div className="space-y-6 md:space-y-8">
           <Card className="p-8 md:p-12 bg-gradient-to-br from-primary/10 via-primary/5 to-background border-2 border-primary/30 shadow-xl">
             <div className="text-center space-y-4 md:space-y-6">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
@@ -195,15 +185,12 @@ const LinkedInAgencySection = () => {
             </Card>
           </div>
         </div>
-      )
-    },
-    {
-      id: 3,
-      icon: Award,
-      title: "Why This Is Special",
-      subtitle: "Better than other online businesses",
-      content: (
-        <div className="space-y-6 md:space-y-8">
+  }, {
+    id: 3,
+    icon: Award,
+    title: "Why This Is Special",
+    subtitle: "Better than other online businesses",
+    content: <div className="space-y-6 md:space-y-8">
           <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-8 md:mb-12 px-2">Compare this to starting other online businesses:</p>
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
@@ -290,15 +277,12 @@ const LinkedInAgencySection = () => {
             </p>
           </Card>
         </div>
-      )
-    },
-    {
-      id: 4,
-      icon: Play,
-      title: "Watch The Full Explanation",
-      subtitle: "7-minute deep dive",
-      content: (
-        <div className="space-y-6 md:space-y-8">
+  }, {
+    id: 4,
+    icon: Play,
+    title: "Watch The Full Explanation",
+    subtitle: "7-minute deep dive",
+    content: <div className="space-y-6 md:space-y-8">
           <div className="text-center mb-6 md:mb-8">
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-3 md:mb-4 px-2">
               See the complete system explained in detail
@@ -320,15 +304,10 @@ const LinkedInAgencySection = () => {
           </div>
 
           <Card className="p-3 md:p-4 bg-gradient-to-br from-background to-muted/20 border-2 border-primary/20 shadow-xl">
-            <div className="relative w-full rounded-lg md:rounded-xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/AVkV4OLi2vk"
-                title="The High Ticket Agency Model for 2026"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
+            <div className="relative w-full rounded-lg md:rounded-xl overflow-hidden shadow-2xl" style={{
+          paddingBottom: '56.25%'
+        }}>
+              <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/AVkV4OLi2vk" title="The High Ticket Agency Model for 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
             </div>
           </Card>
 
@@ -347,12 +326,8 @@ const LinkedInAgencySection = () => {
             </Card>
           </div>
         </div>
-      )
-    }
-  ];
-
-  return (
-    <section className="py-12 md:py-20 px-4 bg-background">
+  }];
+  return <section className="py-12 md:py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         {/* Main Title */}
         <div className="text-center mb-8 md:mb-16">
@@ -369,47 +344,26 @@ const LinkedInAgencySection = () => {
           {/* Step Navigation */}
           <div className="flex justify-center gap-2 md:gap-3 mb-6 md:mb-10 flex-wrap px-2">
             {steps.map((step, idx) => {
-              const IconComponent = step.icon;
-              return (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(idx)}
-                  className={`group px-3 py-2 md:px-6 md:py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 md:gap-3 shadow-md ${
-                    activeStep === idx
-                      ? 'bg-primary text-primary-foreground scale-105 shadow-lg'
-                      : 'bg-background border-2 border-border hover:border-primary/50 hover:shadow-lg'
-                  }`}
-                >
-                  <IconComponent className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-110 ${
-                    activeStep === idx ? '' : 'text-primary'
-                  }`} />
+            const IconComponent = step.icon;
+            return <button key={step.id} onClick={() => setActiveStep(idx)} className={`group px-3 py-2 md:px-6 md:py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 md:gap-3 shadow-md ${activeStep === idx ? 'bg-primary text-primary-foreground scale-105 shadow-lg' : 'bg-background border-2 border-border hover:border-primary/50 hover:shadow-lg'}`}>
+                  <IconComponent className={`w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-110 ${activeStep === idx ? '' : 'text-primary'}`} />
                   <span className="hidden sm:inline text-sm md:text-base">Step {idx + 1}</span>
-                </button>
-              );
-            })}
+                </button>;
+          })}
           </div>
 
           {/* Progress Bar */}
           <div className="w-full bg-muted/50 rounded-full h-2 md:h-3 mb-8 md:mb-12 overflow-hidden shadow-inner">
-            <div
-              className="bg-gradient-to-r from-primary to-primary/80 h-2 md:h-3 rounded-full transition-all duration-500 shadow-lg"
-              style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
-            />
+            <div className="bg-gradient-to-r from-primary to-primary/80 h-2 md:h-3 rounded-full transition-all duration-500 shadow-lg" style={{
+            width: `${(activeStep + 1) / steps.length * 100}%`
+          }} />
           </div>
 
           {/* Step Content */}
           <div className="min-h-[500px] md:min-h-[600px] relative">
             {steps.map((step, idx) => {
-              const IconComponent = step.icon;
-              return (
-                <div
-                  key={step.id}
-                  className={`transition-all duration-500 ${
-                    activeStep === idx
-                      ? 'opacity-100 translate-x-0 relative'
-                      : 'opacity-0 absolute translate-x-full pointer-events-none'
-                  }`}
-                >
+            const IconComponent = step.icon;
+            return <div key={step.id} className={`transition-all duration-500 ${activeStep === idx ? 'opacity-100 translate-x-0 relative' : 'opacity-0 absolute translate-x-full pointer-events-none'}`}>
                   <div className="text-center mb-8 md:mb-12">
                     <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl shadow-xl mb-4 md:mb-6">
                       <IconComponent className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground" />
@@ -421,49 +375,31 @@ const LinkedInAgencySection = () => {
                   <Card className="p-6 md:p-10 lg:p-12 bg-gradient-to-br from-background via-background to-muted/20 border-2 shadow-xl">
                     {step.content}
                   </Card>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
 
           {/* Navigation Buttons */}
           <div className="flex justify-between items-center mt-8 md:mt-12 gap-2 md:gap-4">
-            <Button
-              variant="outline"
-              size="default"
-              onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
-              disabled={activeStep === 0}
-              className="group border-2 disabled:opacity-50 text-sm md:text-base px-3 md:px-4"
-            >
+            <Button variant="outline" size="default" onClick={() => setActiveStep(Math.max(0, activeStep - 1))} disabled={activeStep === 0} className="group border-2 disabled:opacity-50 text-sm md:text-base px-3 md:px-4">
               <ArrowRight className="mr-1 md:mr-2 w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
               <span className="hidden sm:inline">Previous</span>
               <span className="sm:hidden">Prev</span>
             </Button>
 
-            {activeStep < steps.length - 1 ? (
-              <Button
-                size="default"
-                onClick={() => setActiveStep(Math.min(steps.length - 1, activeStep + 1))}
-                className="group shadow-lg text-sm md:text-base px-3 md:px-4"
-              >
+            {activeStep < steps.length - 1 ? <Button size="default" onClick={() => setActiveStep(Math.min(steps.length - 1, activeStep + 1))} className="group shadow-lg text-sm md:text-base px-3 md:px-4">
                 <span className="hidden sm:inline">Next Step</span>
                 <span className="sm:hidden">Next</span>
                 <ArrowRight className="ml-1 md:ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            ) : (
-              <Button size="default" className="group bg-gradient-to-r from-primary to-primary/80 shadow-lg text-sm md:text-base px-3 md:px-4">
+              </Button> : <Button size="default" className="group bg-gradient-to-r from-primary to-primary/80 shadow-lg text-sm md:text-base px-3 md:px-4">
                 <Rocket className="mr-1 md:mr-2 w-4 h-4 md:w-5 md:h-5" />
                 <span className="hidden md:inline">Got It! Show Me How</span>
                 <span className="md:hidden">Got It!</span>
                 <ArrowRight className="ml-1 md:ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            )}
+              </Button>}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LinkedInAgencySection;
-
