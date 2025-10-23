@@ -3,12 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye, Menu, X } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo-text.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
@@ -22,7 +17,6 @@ import yCombinatorLogo from "@/assets/y-combinator-logo.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import forbesLogo from "@/assets/forbes-logo.png";
-
 const Hero = () => {
   const [studentsApi, setStudentsApi] = useState<CarouselApi>();
   const [businessApi, setBusinessApi] = useState<CarouselApi>();
@@ -31,40 +25,44 @@ const Hero = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPathDropdownOpen, setIsPathDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const logos = [
-    { src: mastercardLogo, alt: "Mastercard" },
-    { src: forbes30Logo, alt: "Forbes 30 Under 30" },
-    { src: yCombinatorLogo, alt: "Y Combinator" },
-    { src: diversyfundLogo, alt: "Diversyfund" },
-    { src: playertwoLogo, alt: "Player Two" },
-    { src: forbesLogo, alt: "Forbes" },
-  ];
+  const logos = [{
+    src: mastercardLogo,
+    alt: "Mastercard"
+  }, {
+    src: forbes30Logo,
+    alt: "Forbes 30 Under 30"
+  }, {
+    src: yCombinatorLogo,
+    alt: "Y Combinator"
+  }, {
+    src: diversyfundLogo,
+    alt: "Diversyfund"
+  }, {
+    src: playertwoLogo,
+    alt: "Player Two"
+  }, {
+    src: forbesLogo,
+    alt: "Forbes"
+  }];
 
   // Auto-scroll for Agency Students carousel
   useEffect(() => {
     if (!studentsApi || isStudentsHovered) return;
-
     const intervalId = setInterval(() => {
       studentsApi.scrollNext();
     }, 4000);
-
     return () => clearInterval(intervalId);
   }, [studentsApi, isStudentsHovered]);
 
   // Auto-scroll for Business carousel
   useEffect(() => {
     if (!businessApi || isBusinessHovered) return;
-
     const intervalId = setInterval(() => {
       businessApi.scrollNext();
     }, 4000);
-
     return () => clearInterval(intervalId);
   }, [businessApi, isBusinessHovered]);
-
-  return (
-    <section className="relative bg-background">
+  return <section className="relative bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
@@ -77,30 +75,16 @@ const Hero = () => {
       {/* Mobile Navigation - Sliding Header */}
       <div className="md:hidden">
         {/* Mobile Header Toggle Button - Only show when menu is closed */}
-        {!isMobileMenuOpen && (
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform"
-            aria-label="Open menu"
-          >
+        {!isMobileMenuOpen && <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform" aria-label="Open menu">
             <Menu className="w-6 h-6" />
-          </button>
-        )}
+          </button>}
 
         {/* Mobile Sliding Header */}
-        <div
-          className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${
-            isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
-          }`}
-        >
+        <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
           <div className="container mx-auto px-6 py-3 relative">
             <div className="flex items-center justify-between">
               <img src={logo} alt="LinkedIn Operator" className="h-8" />
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform"
-                aria-label="Close menu"
-              >
+              <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -125,9 +109,7 @@ const Hero = () => {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <div className="flex gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-primary text-primary" />
-                      ))}
+                      {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-primary text-primary" />)}
                     </div>
                     <span className="text-sm font-medium text-foreground whitespace-nowrap">Join 500+ students</span>
                   </div>
@@ -170,42 +152,33 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <DropdownMenu open={isPathDropdownOpen} onOpenChange={setIsPathDropdownOpen}>
                   <DropdownMenuTrigger asChild>
-                    <Button 
-                      size="lg" 
-                      className="group shadow-lg hover:shadow-xl transition-all duration-300 border-glow"
-                      onMouseEnter={() => setIsPathDropdownOpen(true)}
-                      onMouseLeave={() => setIsPathDropdownOpen(false)}
-                    >
+                    <Button size="lg" className="group shadow-lg hover:shadow-xl transition-all duration-300 border-glow" onMouseEnter={() => setIsPathDropdownOpen(true)} onMouseLeave={() => setIsPathDropdownOpen(false)}>
                       Choose Your Path
                       <ChevronDown className="ml-2 w-4 h-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent 
-                    className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm"
-                    onMouseEnter={() => setIsPathDropdownOpen(true)}
-                    onMouseLeave={() => setIsPathDropdownOpen(false)}
-                  >
-                    <DropdownMenuItem 
-                      className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200 mb-1.5"
-                      onClick={() => {
-                        const programsSection = document.getElementById('about-programs');
-                        programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        setIsPathDropdownOpen(false);
-                      }}
-                    >
+                  <DropdownMenuContent className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm" onMouseEnter={() => setIsPathDropdownOpen(true)} onMouseLeave={() => setIsPathDropdownOpen(false)}>
+                    <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200 mb-1.5" onClick={() => {
+                    const programsSection = document.getElementById('about-programs');
+                    programsSection?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                    setIsPathDropdownOpen(false);
+                  }}>
                       <div className="flex flex-col gap-1">
-                        <span className="font-semibold text-foreground">Building A LinkedIn Agency</span>
+                        <span className="font-semibold text-foreground">dBuilding A LinkedIn Agency</span>
                         <span className="text-xs text-muted-foreground">Start from scratch</span>
                       </div>
                     </DropdownMenuItem>
-                    <DropdownMenuItem 
-                      className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200"
-                      onClick={() => {
-                        const programsSection = document.getElementById('about-programs');
-                        programsSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        setIsPathDropdownOpen(false);
-                      }}
-                    >
+                    <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200" onClick={() => {
+                    const programsSection = document.getElementById('about-programs');
+                    programsSection?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                    setIsPathDropdownOpen(false);
+                  }}>
                       <div className="flex flex-col gap-1">
                         <span className="font-semibold text-foreground">Growing My Business</span>
                         <span className="text-xs text-muted-foreground">Scale your existing company</span>
@@ -215,43 +188,33 @@ const Hero = () => {
                 </DropdownMenu>
                 <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
                   <DropdownMenuTrigger asChild>
-                    <Button 
-                      variant="outline" 
-                      size="lg" 
-                      className="group shadow-md hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30 bg-card/50 backdrop-blur-sm"
-                      onMouseEnter={() => setIsDropdownOpen(true)}
-                      onMouseLeave={() => setIsDropdownOpen(false)}
-                    >
+                    <Button variant="outline" size="lg" className="group shadow-md hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/30 bg-card/50 backdrop-blur-sm" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
                       View All Results
                       <ChevronDown className="ml-2 w-4 h-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent 
-                    className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm"
-                    onMouseEnter={() => setIsDropdownOpen(true)}
-                    onMouseLeave={() => setIsDropdownOpen(false)}
-                  >
-                    <DropdownMenuItem 
-                      className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200 mb-1.5"
-                      onClick={() => {
-                        const businessSection = document.getElementById('business-results-section');
-                        businessSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        setIsDropdownOpen(false);
-                      }}
-                    >
+                  <DropdownMenuContent className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
+                    <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200 mb-1.5" onClick={() => {
+                    const businessSection = document.getElementById('business-results-section');
+                    businessSection?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                    setIsDropdownOpen(false);
+                  }}>
                       <div className="flex flex-col gap-1">
                         <span className="font-semibold text-foreground">Business Results</span>
                         <span className="text-xs text-muted-foreground">Fortune 500 & YC startups</span>
                       </div>
                     </DropdownMenuItem>
-                    <DropdownMenuItem 
-                      className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200"
-                      onClick={() => {
-                        const agencySection = document.getElementById('agency-results-section');
-                        agencySection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        setIsDropdownOpen(false);
-                      }}
-                    >
+                    <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200" onClick={() => {
+                    const agencySection = document.getElementById('agency-results-section');
+                    agencySection?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                    setIsDropdownOpen(false);
+                  }}>
                       <div className="flex flex-col gap-1">
                         <span className="font-semibold text-foreground">Agency Results</span>
                         <span className="text-xs text-muted-foreground">500+ student success stories</span>
@@ -279,18 +242,16 @@ const Hero = () => {
 
                 {/* Agency Students Tab */}
                 <TabsContent value="students">
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setIsStudentsHovered(true)}
-                    onMouseLeave={() => setIsStudentsHovered(false)}
-                  >
+                  <div className="relative" onMouseEnter={() => setIsStudentsHovered(true)} onMouseLeave={() => setIsStudentsHovered(false)}>
                     {/* Top gradient shadow */}
                     <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
                     {/* Bottom gradient shadow */}
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
-                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }} setApi={setStudentsApi}>
+                    <Carousel orientation="vertical" className="w-full" opts={{
+                    loop: true
+                  }} setApi={setStudentsApi}>
                       <CarouselContent className="-mt-4 h-[500px]">
                         {/* Ethan Clouser */}
                         <CarouselItem className="pt-4 basis-full">
@@ -370,14 +331,10 @@ const Hero = () => {
                           </div>
                         </CarouselItem>
                       </CarouselContent>
-                      <CarouselPrevious 
-                        className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                      >
+                      <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                         <ChevronUp className="h-4 w-4" />
                       </CarouselPrevious>
-                      <CarouselNext 
-                        className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                      >
+                      <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                         <ChevronDown className="h-4 w-4" />
                       </CarouselNext>
                     </Carousel>
@@ -386,26 +343,23 @@ const Hero = () => {
 
                 {/* Business Tab */}
                 <TabsContent value="business">
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => setIsBusinessHovered(true)}
-                    onMouseLeave={() => setIsBusinessHovered(false)}
-                  >
+                  <div className="relative" onMouseEnter={() => setIsBusinessHovered(true)} onMouseLeave={() => setIsBusinessHovered(false)}>
                     {/* Top gradient shadow */}
                     <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
                     {/* Bottom gradient shadow */}
                     <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/60 to-transparent z-10 pointer-events-none" />
 
-                    <Carousel orientation="vertical" className="w-full" opts={{ loop: true }} setApi={setBusinessApi}>
+                    <Carousel orientation="vertical" className="w-full" opts={{
+                    loop: true
+                  }} setApi={setBusinessApi}>
                       <CarouselContent className="-mt-4 h-[500px]">
                         {/* Roberto H. Luna */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                            <div 
-                              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                              style={{ backgroundImage: `url(/src/assets/roberto-luna.png)` }}
-                            />
+                            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+                            backgroundImage: `url(/src/assets/roberto-luna.png)`
+                          }} />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                             <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
                               <Star className="w-4 h-4 text-primary-foreground fill-current" />
@@ -459,13 +413,7 @@ const Hero = () => {
                         {/* Sam Arami */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                            <video 
-                              className="absolute inset-0 w-full h-full object-contain"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                            >
+                            <video className="absolute inset-0 w-full h-full object-contain" autoPlay loop muted playsInline>
                               <source src="/src/assets/sam-arami-video.mp4" type="video/mp4" />
                             </video>
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -522,10 +470,9 @@ const Hero = () => {
                         {/* Craig Cecilio */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                            <div 
-                              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                              style={{ backgroundImage: `url(/src/assets/craig-cecilio.png)` }}
-                            />
+                            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+                            backgroundImage: `url(/src/assets/craig-cecilio.png)`
+                          }} />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                             <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
                               <Star className="w-4 h-4 text-primary-foreground fill-current" />
@@ -577,14 +524,10 @@ const Hero = () => {
                           </div>
                         </CarouselItem>
                       </CarouselContent>
-                      <CarouselPrevious 
-                        className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                      >
+                      <CarouselPrevious className="left-1/2 -translate-x-1/2 top-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                         <ChevronUp className="h-4 w-4" />
                       </CarouselPrevious>
-                      <CarouselNext 
-                        className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90"
-                      >
+                      <CarouselNext className="left-1/2 -translate-x-1/2 bottom-2 h-8 w-8 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
                         <ChevronDown className="h-4 w-4" />
                       </CarouselNext>
                     </Carousel>
@@ -598,27 +541,14 @@ const Hero = () => {
           <div className="mt-8">
             <div className="overflow-hidden">
               <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
-                {[...logos, ...logos].map((logo, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                  >
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      className={`w-auto object-contain ${
-                        logo.alt === "Player Two" ? "h-16" : "h-12"
-                      }`}
-                    />
-                  </div>
-                ))}
+                {[...logos, ...logos].map((logo, index) => <div key={index} className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                    <img src={logo.src} alt={logo.alt} className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} />
+                  </div>)}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
