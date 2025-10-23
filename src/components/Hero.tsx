@@ -281,7 +281,7 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
-                              <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-cover" />
+                              <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-contain" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
                                   <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
@@ -307,7 +307,7 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
-                              <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-cover" />
+                              <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-contain" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
                                   <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
@@ -333,7 +333,7 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
-                              <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-cover" />
+                              <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-contain" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
                                   <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
@@ -445,7 +445,7 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
                             <video 
-                              className="absolute inset-0 w-full h-full object-cover"
+                              className="absolute inset-0 w-full h-full object-contain"
                               autoPlay
                               loop
                               muted
