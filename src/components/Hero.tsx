@@ -180,7 +180,7 @@ const Hero = () => {
                     setIsPathDropdownOpen(false);
                   }}>
                       <div className="flex flex-col gap-1">
-                        <span className="font-semibold text-foreground">Growing My Business</span>
+                        <span className="font-semibold text-foreground">I'm Growing My Business</span>
                         <span className="text-xs text-muted-foreground">Scale your existing company</span>
                       </div>
                     </DropdownMenuItem>
