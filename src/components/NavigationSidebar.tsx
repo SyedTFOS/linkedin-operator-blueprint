@@ -93,7 +93,7 @@ export function NavigationSidebar() {
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
-                    "w-full text-left transition-all duration-200 text-sm group",
+                    "w-full text-left transition-all duration-300 text-sm group",
                     item.isSubItem && "pl-4 text-xs",
                     !item.isSubItem && "font-semibold text-base",
                     activeSection === item.id
@@ -101,10 +101,15 @@ export function NavigationSidebar() {
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
-                  {item.roman && (
-                    <span className="text-primary/70 mr-2 text-xs font-normal">{item.roman}</span>
-                  )}
-                  {item.label}
+                  <span className={cn(
+                    "transition-all duration-300",
+                    activeSection === item.id ? "opacity-100" : "opacity-0"
+                  )}>
+                    {item.roman && (
+                      <span className="text-primary/70 mr-2 text-xs font-normal">{item.roman}</span>
+                    )}
+                    {item.label}
+                  </span>
                 </button>
               </li>
             ))}
