@@ -27,12 +27,12 @@ export function NavigationSidebar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById("about-linkedin-operator");
+      const discoverySection = document.getElementById("discovery");
       
-      // Show sidebar only after scrolling past the entire Hero section
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setShowSidebar(heroBottom <= 0);
+      // Show sidebar only when we reach "The Discovery" section (after Hero)
+      if (discoverySection) {
+        const discoveryTop = discoverySection.getBoundingClientRect().top;
+        setShowSidebar(discoveryTop <= 200);
       }
 
       const sections = navigationItems.map(item => ({
