@@ -16,14 +16,8 @@ const TrustBarSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-background">
+    <section className="py-6 md:py-8 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <p className="text-lg md:text-xl font-semibold text-foreground">
-            Learn the exact system to start your LinkedIn agency in 30 days
-          </p>
-        </div>
-        
         {/* Scrolling Logo Bar */}
         <div className="overflow-hidden">
           <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
