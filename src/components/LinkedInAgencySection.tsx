@@ -357,21 +357,6 @@ const LinkedInAgencySection = () => {
             </div>
           </div>
         </div>
-
-        {/* Final CTAs */}
-        <div className="mt-16 text-center space-y-6">
-          <p className="text-xl text-muted-foreground">Ready to learn the exact system?</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="group text-lg font-semibold px-8">
-              🚀 Get The Free Framework
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="group text-lg font-semibold px-8">
-              <MessageCircle className="mr-2 w-5 h-5" />
-              Ask Leo Questions
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
