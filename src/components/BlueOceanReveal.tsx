@@ -18,7 +18,7 @@ const BlueOceanReveal = () => {
   ];
 
   return (
-    <section className="-mt-16 md:-mt-20 pb-8 md:pb-12 bg-background">
+    <section className="pt-12 md:pt-16 pb-8 md:pb-12 bg-background">
       <div className="container mx-auto px-4">
         {/* Badge Widget */}
         <div className="flex justify-center mb-8">
