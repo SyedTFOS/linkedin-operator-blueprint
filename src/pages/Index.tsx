@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import LinkedInAgencySection from "@/components/LinkedInAgencySection";
 import BlueOceanReveal from "@/components/BlueOceanReveal";
 import ComparisonSection from "@/components/ComparisonSection";
 import MarketOpportunityStats from "@/components/MarketOpportunityStats";
@@ -15,6 +16,9 @@ const Index = () => {
       <div>
         <div id="about-linkedin-operator">
           <Hero />
+        </div>
+        <div id="what-is-linkedin-agency">
+          <LinkedInAgencySection />
         </div>
         <div id="discovery">
           <BlueOceanReveal />
