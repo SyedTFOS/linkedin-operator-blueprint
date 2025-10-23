@@ -323,9 +323,10 @@ const LinkedInAgencySection = () => {
             <div className="relative w-full rounded-xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/[insert-video-id]"
-                title="What Is A LinkedIn Agency - Full Explanation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                src="https://www.youtube.com/embed/AVkV4OLi2vk"
+                title="The High Ticket Agency Model for 2026"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               />
             </div>
