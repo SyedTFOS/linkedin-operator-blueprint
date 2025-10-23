@@ -19,9 +19,9 @@ const AgencyTiers = () => {
       <div className="container mx-auto px-4 py-12 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12 space-y-4">
-          <Badge className="mb-4 text-base px-4 py-2">Choose Your Path</Badge>
+          <Badge className="mb-4 text-base px-4 py-2">Choose Your Agency Path</Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Build Your LinkedIn Agency: Choose Your Tier
+            Your Path to a $50K/Month LinkedIn Agency
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Both include the complete system + weekly coaching.<br />
