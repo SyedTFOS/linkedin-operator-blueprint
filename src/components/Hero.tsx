@@ -52,8 +52,25 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <img src={logo} alt="LinkedIn Operator" className="h-10" />
+            
+            {/* Navigation Links - Desktop Only */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#about-programs" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                Programs
+              </a>
+              <a href="#business-results-section" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                Results
+              </a>
+              <a href="#" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                About
+              </a>
+              <Button size="sm" className="shadow-md">
+                Get Started
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
