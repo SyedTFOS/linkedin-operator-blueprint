@@ -183,6 +183,11 @@ const WhatsInsideSection = () => {
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-center text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed">Everything you need to turn LinkedIn into a predictable revenue engine—whether you're building an agency empire or becoming the #1 authority in your industry.</p>
 
+        {/* Path Label */}
+        <p className="text-center text-muted-foreground font-medium mb-4">
+          I'm using LinkedIn for...
+        </p>
+
         {/* Path Selector Tabs */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-2 bg-card/50 rounded-xl border border-border/50">
