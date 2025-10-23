@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <NavigationSidebar />
-      <div className="lg:ml-64">
+      <div>
         <div id="about-linkedin-operator">
           <Hero />
         </div>
