@@ -481,15 +481,15 @@ const WhatsInsideSection = () => {
                   </div>
                 </div>;
         })}
-          </div> : (/* Compare Tiers View - Premium Design */
+          </div> : (/* Compare Tiers View - Clean & Readable */
       <div className="max-w-7xl mx-auto mb-16">
             
             {/* Tier Comparison Header */}
-            <div className="text-center mb-8">
-              <p className="text-lg text-muted-foreground mb-4">
+            <div className="text-center mb-12">
+              <p className="text-base text-muted-foreground mb-3">
                 {activePath === 'lia' ? 'Academy vs Secrets' : 'Founder vs DFY'}: What's The Difference?
               </p>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
                 {activePath === 'lia' 
                   ? 'Secrets = Academy + Elite Operator Status' 
                   : 'DFY = Founder + White-Glove Execution'}
@@ -497,56 +497,58 @@ const WhatsInsideSection = () => {
             </div>
 
             {/* Comparison Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               
-              {/* ACADEMY/FOUNDER Column - Clean & Professional */}
-              <div className="relative group">
-                <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 border-2 border-border/50 hover:border-primary/50 transition-all">
-                  
-                  {/* Header */}
-                  <div className="mb-8">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className={`w-12 h-12 rounded-xl ${activePath === 'lia' ? 'bg-orange-500/20' : 'bg-blue-500/20'} flex items-center justify-center`}>
-                        <Package className={`w-6 h-6 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'}`} />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">
-                          {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'}
-                        </h3>
-                        <p className="text-sm text-gray-400">The Complete Foundation</p>
-                      </div>
+              {/* ACADEMY/FOUNDER Column */}
+              <div className="bg-card rounded-xl border-2 border-border shadow-lg">
+                
+                {/* Header */}
+                <div className="p-6 border-b border-border">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className={`w-10 h-10 rounded-lg ${activePath === 'lia' ? 'bg-orange-100' : 'bg-blue-100'} flex items-center justify-center`}>
+                      <Package className={`w-5 h-5 ${activePath === 'lia' ? 'text-orange-600' : 'text-blue-600'}`} />
                     </div>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      {activePath === 'lia' 
-                        ? 'Everything you need to build and scale a LinkedIn agency. Learn the systems, get the templates, join the community.' 
-                        : 'Master LinkedIn to grow your business. Build authority, generate leads, and close deals with proven frameworks.'}
-                    </p>
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground">
+                        {activePath === 'lia' ? 'LinkedIn Operator Academy' : 'LinkedIn Founder'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">The Complete Foundation</p>
+                    </div>
                   </div>
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    {activePath === 'lia' 
+                      ? 'Everything you need to build and scale a LinkedIn agency. Learn the systems, get the templates, join the community.' 
+                      : 'Master LinkedIn to grow your business. Build authority, generate leads, and close deals with proven frameworks.'}
+                  </p>
+                </div>
 
-                  {/* What You Get */}
+                {/* Content */}
+                <div className="p-6">
                   <div className="space-y-4 mb-6">
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">What You Get:</p>
+                    <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">What's Included:</p>
                     
                     {cardsData.filter(c => c.tier === "both" || c.tier === "split").map(card => (
-                      <div key={card.id} className="bg-slate-800/50 rounded-lg p-4 border border-slate-700/50">
-                        <div className="flex items-start gap-3 mb-2">
-                          <card.icon className={`w-5 h-5 mt-0.5 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'}`} />
-                          <div className="flex-1">
-                            <h4 className="font-bold text-white text-sm mb-1">{card.title}</h4>
+                      <div key={card.id} className="bg-muted/50 rounded-lg p-4">
+                        <div className="flex items-start gap-3">
+                          <div className={`w-8 h-8 rounded-lg ${activePath === 'lia' ? 'bg-orange-100' : 'bg-blue-100'} flex items-center justify-center flex-shrink-0`}>
+                            <card.icon className={`w-4 h-4 ${activePath === 'lia' ? 'text-orange-600' : 'text-blue-600'}`} />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-foreground text-sm mb-2">{card.title}</h4>
                             {card.tier === "split" ? (
-                              <ul className="space-y-1">
+                              <ul className="space-y-1.5">
                                 {card.midTicket?.slice(0, 2).map((item, idx) => (
-                                  <li key={idx} className="text-xs text-gray-400 flex items-start gap-2">
-                                    <CheckCircle2 className={`w-3 h-3 mt-0.5 flex-shrink-0 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'}`} />
+                                  <li key={idx} className="text-xs text-muted-foreground flex items-start gap-2">
+                                    <span className="text-primary mt-0.5">•</span>
                                     <span>{item}</span>
                                   </li>
                                 ))}
                               </ul>
                             ) : (
-                              <ul className="space-y-1">
+                              <ul className="space-y-1.5">
                                 {card.previewBullets?.slice(0, 2).map((item, idx) => (
-                                  <li key={idx} className="text-xs text-gray-400 flex items-start gap-2">
-                                    <CheckCircle2 className={`w-3 h-3 mt-0.5 flex-shrink-0 ${activePath === 'lia' ? 'text-orange-500' : 'text-blue-500'}`} />
+                                  <li key={idx} className="text-xs text-muted-foreground flex items-start gap-2">
+                                    <span className="text-primary mt-0.5">•</span>
                                     <span>{item}</span>
                                   </li>
                                 ))}
@@ -559,63 +561,60 @@ const WhatsInsideSection = () => {
                   </div>
 
                   {/* Outcome */}
-                  <div className="bg-slate-800/80 rounded-lg p-4 border border-slate-700/50 mb-6">
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Expected Outcome:</p>
-                    <p className="text-sm text-gray-300">
+                  <div className="bg-primary/5 rounded-lg p-4 mb-6 border border-primary/20">
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Expected Results:</p>
+                    <p className="text-sm text-foreground font-medium">
                       {activePath === 'lia' 
-                        ? '✅ Land your first 3-5 clients ($5K-$15K/mo) within 60-90 days' 
-                        : '✅ Generate qualified inbound leads and close deals consistently'}
+                        ? 'Land your first 3-5 clients ($5K-$15K/mo) within 60-90 days' 
+                        : 'Generate qualified inbound leads and close deals consistently'}
                     </p>
                   </div>
 
                   {/* CTA */}
-                  <Button className={`w-full ${activePath === 'lia' ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'}`}>
+                  <Button className={`w-full ${activePath === 'lia' ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}>
                     Get Started
                   </Button>
                 </div>
               </div>
 
-              {/* SECRETS/DFY Column - PREMIUM & ELITE */}
-              <div className="relative group">
-                {/* Glow Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 animate-pulse"></div>
+              {/* SECRETS/DFY Column - Premium */}
+              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl border-2 border-amber-400 shadow-xl relative">
                 
-                <div className="relative bg-gradient-to-br from-amber-950 via-yellow-950 to-amber-950 rounded-2xl p-8 border-2 border-amber-500/50">
-                  
-                  {/* Premium Badge */}
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-amber-500 to-yellow-500 px-6 py-2 rounded-full shadow-xl">
-                      <span className="text-xs font-black text-white uppercase tracking-widest flex items-center gap-2">
-                        <Crown className="w-4 h-4" />
-                        {activePath === 'lia' ? 'Elite Operators Only' : 'White-Glove Exclusive'}
-                        <Sparkles className="w-4 h-4" />
-                      </span>
+                {/* Premium Badge */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-2 rounded-full shadow-lg">
+                    <span className="text-xs font-bold text-white uppercase tracking-wide flex items-center gap-2">
+                      <Crown className="w-4 h-4" />
+                      {activePath === 'lia' ? 'Elite Tier' : 'Premium'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Header */}
+                <div className="p-6 border-b border-amber-200 mt-2">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-amber-200 flex items-center justify-center">
+                      <Crown className="w-5 h-5 text-amber-700" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground">
+                        {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'}
+                      </h3>
+                      <p className="text-sm text-amber-800">Academy + Premium Advantages</p>
                     </div>
                   </div>
+                  <p className="text-sm text-foreground/90 leading-relaxed font-medium">
+                    {activePath === 'lia' 
+                      ? 'Never Build Alone. We Don\'t Let You Fail. Get everything in Academy PLUS the unfair advantages that 10X your results.' 
+                      : 'We Do It FOR You. Show up for sales calls while our team handles everything—strategy, content, posting, optimization.'}
+                  </p>
+                </div>
 
-                  {/* Header */}
-                  <div className="mt-4 mb-8">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-12 h-12 rounded-xl bg-amber-500/30 flex items-center justify-center ring-2 ring-amber-500/50">
-                        <Crown className="w-6 h-6 text-amber-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">
-                          {activePath === 'lia' ? 'LinkedIn Operator Secrets' : 'LinkedIn DFY'}
-                        </h3>
-                        <p className="text-sm text-amber-400/90">Academy + Premium Advantages</p>
-                      </div>
-                    </div>
-                    <p className="text-amber-100/90 text-sm leading-relaxed font-medium">
-                      {activePath === 'lia' 
-                        ? '🔥 Never Build Alone. We Don\'t Let You Fail. Elite operators get everything in Academy PLUS the unfair advantages that 10X your results.' 
-                        : '🔥 We Do It FOR You. Show up for sales calls while our team handles everything else—strategy, content, posting, optimization.'}
-                    </p>
-                  </div>
-
-                  {/* Everything in Academy + */}
-                  <div className="bg-amber-900/30 rounded-lg p-4 border border-amber-500/30 mb-6">
-                    <p className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                {/* Content */}
+                <div className="p-6">
+                  {/* Everything Included */}
+                  <div className="bg-white/60 rounded-lg p-4 border border-amber-300 mb-6">
+                    <p className="text-xs font-bold text-amber-800 uppercase tracking-wider flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4" />
                       Everything in {activePath === 'lia' ? 'Academy' : 'Founder'} +
                     </p>
@@ -623,26 +622,26 @@ const WhatsInsideSection = () => {
 
                   {/* Premium Additions */}
                   <div className="space-y-4 mb-6">
-                    <p className="text-xs font-bold text-amber-400 uppercase tracking-wider">Exclusive Additions:</p>
+                    <p className="text-xs font-bold text-amber-800 uppercase tracking-wider">Premium Additions:</p>
                     
                     {cardsData.filter(c => c.tier === "high" || c.tier === "split").map(card => {
                       if (card.tier === "high") {
                         return (
-                          <div key={card.id} className="bg-amber-900/40 rounded-lg p-4 border border-amber-500/40">
-                            <div className="flex items-start gap-3 mb-2">
-                              <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0">
-                                <card.icon className="w-5 h-5 text-amber-400" />
+                          <div key={card.id} className="bg-white rounded-lg p-4 border border-amber-300 shadow-sm">
+                            <div className="flex items-start gap-3">
+                              <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                                <card.icon className="w-4 h-4 text-amber-700" />
                               </div>
-                              <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <h4 className="font-bold text-white text-sm">{card.title}</h4>
-                                  <span className="text-xs font-black text-amber-400 uppercase">🔒 Exclusive</span>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-start justify-between gap-2 mb-1">
+                                  <h4 className="font-semibold text-foreground text-sm">{card.title}</h4>
+                                  <span className="text-xs font-bold text-amber-700 uppercase whitespace-nowrap">Exclusive</span>
                                 </div>
-                                <p className="text-xs text-amber-100/80 mb-2">{card.shortDescription}</p>
-                                <ul className="space-y-1">
+                                <p className="text-xs text-muted-foreground mb-2 leading-relaxed">{card.shortDescription}</p>
+                                <ul className="space-y-1.5">
                                   {card.previewBullets?.slice(0, 2).map((item, idx) => (
-                                    <li key={idx} className="text-xs text-amber-200/70 flex items-start gap-2">
-                                      <Sparkles className="w-3 h-3 mt-0.5 flex-shrink-0 text-amber-400" />
+                                    <li key={idx} className="text-xs text-muted-foreground flex items-start gap-2">
+                                      <span className="text-amber-600 mt-0.5">•</span>
                                       <span>{item}</span>
                                     </li>
                                   ))}
@@ -654,17 +653,17 @@ const WhatsInsideSection = () => {
                       }
                       if (card.tier === "split") {
                         return (
-                          <div key={card.id} className="bg-amber-900/40 rounded-lg p-4 border border-amber-500/40">
+                          <div key={card.id} className="bg-white rounded-lg p-4 border border-amber-300 shadow-sm">
                             <div className="flex items-start gap-3">
-                              <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0">
-                                <card.icon className="w-5 h-5 text-amber-400" />
+                              <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                                <card.icon className="w-4 h-4 text-amber-700" />
                               </div>
-                              <div className="flex-1">
-                                <h4 className="font-bold text-white text-sm mb-1">{card.title} Upgrades</h4>
-                                <ul className="space-y-1">
+                              <div className="flex-1 min-w-0">
+                                <h4 className="font-semibold text-foreground text-sm mb-2">{card.title} Upgrades</h4>
+                                <ul className="space-y-1.5">
                                   {card.highTicket?.slice(0, 2).map((item, idx) => (
-                                    <li key={idx} className="text-xs text-amber-200/70 flex items-start gap-2">
-                                      <Crown className="w-3 h-3 mt-0.5 flex-shrink-0 text-amber-400" />
+                                    <li key={idx} className="text-xs text-muted-foreground flex items-start gap-2">
+                                      <span className="text-amber-600 mt-0.5">•</span>
                                       <span>{item}</span>
                                     </li>
                                   ))}
@@ -678,15 +677,15 @@ const WhatsInsideSection = () => {
                     })}
                   </div>
 
-                  {/* Outcome - SPECIFIC */}
-                  <div className="bg-gradient-to-r from-amber-900/60 to-yellow-900/60 rounded-lg p-4 border-2 border-amber-500/50 mb-6">
-                    <p className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Expected Outcome:</p>
-                    <p className="text-sm text-white font-bold mb-2">
+                  {/* Outcome */}
+                  <div className="bg-amber-100 rounded-lg p-4 mb-4 border border-amber-400">
+                    <p className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-2">Expected Results:</p>
+                    <p className="text-sm text-foreground font-bold mb-2">
                       {activePath === 'lia' 
-                        ? '🎯 $50K/month by month 6 (We guide you every step)' 
-                        : '🎯 10+ qualified calls/month + closed deals (We do the work)'}
+                        ? '$50K/month by month 6 (We guide you every step)' 
+                        : '10+ qualified calls/month + closed deals (We do the work)'}
                     </p>
-                    <p className="text-xs text-amber-200/80">
+                    <p className="text-xs text-foreground/80 leading-relaxed">
                       {activePath === 'lia' 
                         ? 'With weekly coaching, founder access, and the secret playbooks, operators scale 3-5X faster than Academy alone.' 
                         : 'Our team creates your content, optimizes your profile, and fills your calendar while you focus on closing.'}
@@ -694,23 +693,23 @@ const WhatsInsideSection = () => {
                   </div>
 
                   {/* Social Proof */}
-                  <div className="bg-slate-900/50 rounded-lg p-4 border border-amber-500/30 mb-6">
-                    <p className="text-xs text-amber-200/90 italic mb-2">
+                  <div className="bg-white/80 rounded-lg p-4 border border-amber-200 mb-6">
+                    <p className="text-xs text-foreground/90 italic mb-2 leading-relaxed">
                       {activePath === 'lia' 
                         ? '"Secrets gave me the unfair advantages I needed. Went from $0 to $40K/mo in 4 months."' 
                         : '"DFY took everything off my plate. I just show up to close deals now."'}
                     </p>
-                    <p className="text-xs text-amber-400 font-bold">
+                    <p className="text-xs text-amber-700 font-semibold">
                       {activePath === 'lia' ? '— Ethan C., LIO Secrets' : '— Eden H., DFY Client'}
                     </p>
                   </div>
 
-                  {/* CTA - Compelling */}
-                  <Button className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-black font-bold text-base py-6 shadow-2xl">
-                    {activePath === 'lia' ? 'Apply For Secrets →' : 'Apply For DFY →'}
+                  {/* CTA */}
+                  <Button className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold">
+                    {activePath === 'lia' ? 'Apply For Secrets' : 'Apply For DFY'}
                   </Button>
-                  <p className="text-center text-xs text-amber-400/80 mt-2">
-                    {activePath === 'lia' ? '⚡ Limited to 50 operators per cohort' : '⚡ Only 10 DFY slots available'}
+                  <p className="text-center text-xs text-amber-700 mt-3 font-medium">
+                    {activePath === 'lia' ? 'Limited to 50 operators per cohort' : 'Only 10 DFY slots available'}
                   </p>
                 </div>
               </div>
