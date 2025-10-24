@@ -16,7 +16,6 @@ import lunivateLogo from "@/assets/lunivate-logo.png";
 const ExploringSection = () => {
   const [isAgencyDialogOpen, setIsAgencyDialogOpen] = useState(false);
   const [isBusinessDialogOpen, setIsBusinessDialogOpen] = useState(false);
-  
   return <section className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Badge */}
@@ -119,11 +118,7 @@ const ExploringSection = () => {
             </div>
 
             {/* CTA */}
-            <Button 
-              size="lg" 
-              className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white"
-              onClick={() => setIsAgencyDialogOpen(true)}
-            >
+            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white" onClick={() => setIsAgencyDialogOpen(true)}>
               Apply for LIA Programs →
             </Button>
 
@@ -217,13 +212,7 @@ const ExploringSection = () => {
             </div>
 
             {/* CTA */}
-            <Button 
-              size="lg" 
-              className="w-full text-sm md:text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={() => setIsBusinessDialogOpen(true)}
-            >
-              Get Your Custom LinkedIn Roadmap →
-            </Button>
+            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white" onClick={() => setIsBusinessDialogOpen(true)}>Get Your LinkedIn Roadmap →</Button>
 
             {/* Trusted By */}
             <div className="mt-6 pt-6 border-t">
