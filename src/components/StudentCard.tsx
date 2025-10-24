@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PlayCircle } from "lucide-react";
+import { useState } from "react";
+import VideoTestimonialDialog from "./VideoTestimonialDialog";
 
 interface StudentCardProps {
   name: string;
@@ -12,6 +14,7 @@ interface StudentCardProps {
   whatTheyDoing?: string;
   results: string[];
   hasInterview?: boolean;
+  videoUrl?: string;
 }
 
 const StudentCard = ({
@@ -24,8 +27,19 @@ const StudentCard = ({
   whatTheyDoing,
   results,
   hasInterview = false,
+  videoUrl,
 }: StudentCardProps) => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
+    <>
+      <VideoTestimonialDialog
+        open={isVideoOpen}
+        onOpenChange={setIsVideoOpen}
+        name={name}
+        role={role}
+        videoUrl={videoUrl || ""}
+      />
     <Card className="p-6 bg-card/50 backdrop-blur border-primary/20 hover:border-primary/40 transition-all">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Photo */}
@@ -89,8 +103,12 @@ const StudentCard = ({
             </ul>
           </div>
 
-          {hasInterview && (
-            <Button variant="outline" className="mt-4 gap-2">
+          {hasInterview && videoUrl && (
+            <Button 
+              variant="outline" 
+              className="mt-4 gap-2"
+              onClick={() => setIsVideoOpen(true)}
+            >
               <PlayCircle className="w-4 h-4" />
               Watch Full Interview
             </Button>
@@ -98,6 +116,7 @@ const StudentCard = ({
         </div>
       </div>
     </Card>
+    </>
   );
 };
 
