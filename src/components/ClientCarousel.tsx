@@ -16,7 +16,12 @@ type TierType = "tier1" | "tier2" | "tier3";
 
 export const ClientCarousel = () => {
   const [activeTier, setActiveTier] = useState<TierType>("tier1");
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: false, 
+    align: "start",
+    containScroll: "trimSnaps",
+    slidesToScroll: 1
+  });
   const [isArrowHovered, setIsArrowHovered] = useState(false);
   const [showRobertoLinkedIn, setShowRobertoLinkedIn] = useState(false);
 
@@ -102,24 +107,24 @@ export const ClientCarousel = () => {
         {/* Left Arrow */}
         <button
           onClick={scrollPrev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+          className="absolute left-0 md:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
           aria-label="Previous"
         >
-          <ChevronLeft className="w-6 h-6 text-primary-foreground" />
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
         </button>
 
         {/* Right Arrow */}
         <button
           onClick={scrollNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+          className="absolute right-0 md:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
           aria-label="Next"
         >
-          <ChevronRight className="w-6 h-6 text-primary-foreground" />
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
         </button>
 
         {/* Embla Carousel */}
-        <div className="overflow-hidden px-16" ref={emblaRef}>
-          <div className="flex gap-8">
+        <div className="overflow-hidden px-12 md:px-16" ref={emblaRef}>
+          <div className="flex gap-4 md:gap-6 lg:gap-8">
             {/* TIER 1 CARDS */}
             {activeTier === "tier1" && (
               <>
