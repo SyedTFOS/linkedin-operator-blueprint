@@ -11,7 +11,7 @@ interface StudentCardProps {
   background?: string;
   whatTheyDoing?: string;
   results: string[];
-  hasInterview?: boolean;
+  videoUrl?: string;
 }
 
 const StudentCard = ({
@@ -23,8 +23,19 @@ const StudentCard = ({
   background,
   whatTheyDoing,
   results,
-  hasInterview = false,
+  videoUrl,
 }: StudentCardProps) => {
+  // Function to get embed URL for YouTube videos
+  const getEmbedUrl = (url: string) => {
+    if (url.includes('youtube.com/watch?v=')) {
+      const videoId = url.split('v=')[1]?.split('&')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    } else if (url.includes('youtu.be/')) {
+      const videoId = url.split('youtu.be/')[1]?.split('?')[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    return url; // Return as-is for direct video files
+  };
   return (
     <Card className="p-6 bg-card/50 backdrop-blur border-primary/20 hover:border-primary/40 transition-all">
       <div className="flex flex-col md:flex-row gap-6">
@@ -89,11 +100,25 @@ const StudentCard = ({
             </ul>
           </div>
 
-          {hasInterview && (
-            <Button variant="outline" className="mt-4 gap-2">
-              <PlayCircle className="w-4 h-4" />
-              Watch Full Interview
-            </Button>
+          {videoUrl && (
+            <div className="mt-6">
+              <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+                {videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be') ? (
+                  <iframe
+                    src={getEmbedUrl(videoUrl)}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <video
+                    src={videoUrl}
+                    controls
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+            </div>
           )}
         </div>
       </div>

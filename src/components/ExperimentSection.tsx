@@ -117,7 +117,7 @@ const ExperimentSection = () => {
                   "Exited for healthy 5-figure deal",
                   "75-80% profit margins"
                 ]}
-                hasInterview={true}
+                videoUrl="PASTE_ETHAN_VIDEO_URL_HERE"
               />
               <StudentCard
                 name="Walter Chung"
@@ -130,7 +130,7 @@ const ExperimentSection = () => {
                   "Built on a brand new account",
                   "Profitable fulfillment systems in place"
                 ]}
-                hasInterview={true}
+                videoUrl="PASTE_WALTER_VIDEO_URL_HERE"
               />
               <StudentCard
                 name="Sam Beck"
