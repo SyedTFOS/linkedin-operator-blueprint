@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import LinkedInAgencySection from "@/components/LinkedInAgencySection";
 import BlueOceanReveal from "@/components/BlueOceanReveal";
-import ComparisonSection from "@/components/ComparisonSection";
 import MarketOpportunityStats from "@/components/MarketOpportunityStats";
 import ExperimentSection from "@/components/ExperimentSection";
 import WhatsInsideSection from "@/components/WhatsInsideSection";
@@ -25,9 +24,6 @@ const Index = () => {
         </div>
         <div id="numbers">
           <MarketOpportunityStats />
-        </div>
-        <div id="comparison">
-          <ComparisonSection />
         </div>
         <div id="experiment">
           <ExperimentSection />
