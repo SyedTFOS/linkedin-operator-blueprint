@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket, Building2, Tv, Briefcase, ChevronLeft, ChevronRight } from "lucide-react";
+import { TrendingUp, MessageCircle, Users, DollarSign, Eye, Award, Rocket, Building2, Tv, Briefcase, ChevronLeft, ChevronRight, Linkedin, ChevronDown } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import robertoLuna from "@/assets/roberto-luna.png";
+import robertoLunaLinkedin from "@/assets/roberto-luna-linkedin.png";
 import rubaiyatHossain from "@/assets/rubaiyat-hossain.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
 import samAramiVideo from "@/assets/sam-arami-video.mp4";
@@ -17,6 +18,7 @@ export const ClientCarousel = () => {
   const [activeTier, setActiveTier] = useState<TierType>("tier1");
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, align: "start" });
   const [isArrowHovered, setIsArrowHovered] = useState(false);
+  const [showRobertoLinkedIn, setShowRobertoLinkedIn] = useState(false);
 
   const scrollPrev = () => {
     setActiveTier(prev => {
@@ -148,23 +150,23 @@ export const ClientCarousel = () => {
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
-                    <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-center">
-                      <div className="space-y-4">
+                    <div className="absolute inset-0 bg-background/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 p-6 flex flex-col justify-between overflow-y-auto">
+                      <div className="space-y-3">
                         {/* Header */}
-                        <div className="mb-6">
+                        <div className="mb-4">
                           <h4 className="text-xl font-bold text-foreground mb-1">Roberto H. Luna</h4>
                           <p className="text-sm text-primary font-semibold">Lunivate • 120 Days</p>
                         </div>
 
                         {/* Results */}
-                        <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
+                        <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2">
                           The Results:
                         </p>
                         
-                        <div className="space-y-3">
-                          <div className="flex items-start gap-3">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                              <TrendingUp className="w-3.5 h-3.5 text-primary" />
+                        <div className="space-y-2">
+                          <div className="flex items-start gap-2">
+                            <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <TrendingUp className="w-3 h-3 text-primary" />
                             </div>
                             <div className="flex-1">
                               <p className="text-sm font-semibold text-foreground">Featured in Forbes</p>
@@ -172,18 +174,18 @@ export const ClientCarousel = () => {
                             </div>
                           </div>
 
-                          <div className="flex items-start gap-3">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                              <Eye className="w-3.5 h-3.5 text-primary" />
+                          <div className="flex items-start gap-2">
+                            <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Eye className="w-3 h-3 text-primary" />
                             </div>
                             <div className="flex-1">
                               <p className="text-sm font-semibold text-foreground">15M+ LinkedIn views</p>
                             </div>
                           </div>
 
-                          <div className="flex items-start gap-3">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                              <MessageCircle className="w-3.5 h-3.5 text-primary" />
+                          <div className="flex items-start gap-2">
+                            <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <MessageCircle className="w-3 h-3 text-primary" />
                             </div>
                             <div className="flex-1">
                               <p className="text-sm font-semibold text-foreground">100,000+ comments</p>
@@ -191,9 +193,9 @@ export const ClientCarousel = () => {
                             </div>
                           </div>
 
-                          <div className="flex items-start gap-3">
-                            <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                              <Users className="w-3.5 h-3.5 text-primary" />
+                          <div className="flex items-start gap-2">
+                            <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Users className="w-3 h-3 text-primary" />
                             </div>
                             <div className="flex-1">
                               <p className="text-sm font-semibold text-foreground">50,000+ followers</p>
@@ -201,9 +203,9 @@ export const ClientCarousel = () => {
                             </div>
                           </div>
 
-                          <div className="flex items-start gap-3 pt-2 border-t border-primary/20">
-                            <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                              <DollarSign className="w-3.5 h-3.5 text-primary" />
+                          <div className="flex items-start gap-2 pt-2 border-t border-primary/20">
+                            <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                              <DollarSign className="w-3 h-3 text-primary" />
                             </div>
                             <div className="flex-1">
                               <p className="text-base font-bold text-primary">$500,000+ revenue</p>
@@ -211,6 +213,45 @@ export const ClientCarousel = () => {
                             </div>
                           </div>
                         </div>
+                      </div>
+
+                      {/* LinkedIn Preview Button */}
+                      <div className="mt-4 pt-4 border-t border-primary/20">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setShowRobertoLinkedIn(!showRobertoLinkedIn);
+                          }}
+                          className="w-full py-2 px-4 bg-primary/10 hover:bg-primary/20 rounded-lg flex items-center justify-center gap-2 transition-all duration-200"
+                        >
+                          <Linkedin className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-semibold text-foreground">
+                            {showRobertoLinkedIn ? "Hide" : "Preview"} LinkedIn Profile
+                          </span>
+                          <ChevronDown className={`w-4 h-4 text-primary transition-transform ${showRobertoLinkedIn ? "rotate-180" : ""}`} />
+                        </button>
+                        
+                        {showRobertoLinkedIn && (
+                          <div className="mt-3 animate-in slide-in-from-top-2">
+                            <div className="rounded-lg overflow-hidden border-2 border-primary/30">
+                              <img 
+                                src={robertoLunaLinkedin} 
+                                alt="Roberto Luna LinkedIn Profile"
+                                className="w-full h-auto"
+                              />
+                            </div>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                window.open('https://www.linkedin.com/in/roberto-luna-linkedinforgrowth/', '_blank');
+                              }}
+                              className="mt-2 w-full py-2 px-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg flex items-center justify-center gap-2 transition-all duration-200"
+                            >
+                              <Linkedin className="w-4 h-4" />
+                              <span className="text-sm font-semibold">View Full Profile</span>
+                            </button>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

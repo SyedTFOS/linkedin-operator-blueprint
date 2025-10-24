@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { PlayCircle, Linkedin } from "lucide-react";
+import { PlayCircle, Linkedin, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 interface StudentCardProps {
   name: string;
@@ -15,6 +16,7 @@ interface StudentCardProps {
   videoQuote?: string;
   linkedinImageUrl?: string;
   linkedinProfileUrl?: string;
+  linkedinPreviewMode?: "static" | "interactive";
 }
 
 const StudentCard = ({
@@ -30,7 +32,9 @@ const StudentCard = ({
   videoQuote,
   linkedinImageUrl,
   linkedinProfileUrl,
+  linkedinPreviewMode = "static",
 }: StudentCardProps) => {
+  const [showLinkedInPreview, setShowLinkedInPreview] = useState(false);
   // Function to get embed URL for YouTube videos
   const getEmbedUrl = (url: string) => {
     if (url.includes('youtube.com/watch?v=')) {
@@ -136,7 +140,44 @@ const StudentCard = ({
             </div>
           )}
 
-          {linkedinImageUrl && (
+          {linkedinImageUrl && linkedinPreviewMode === "interactive" && (
+            <div className="mt-6">
+              <Button
+                onClick={() => setShowLinkedInPreview(!showLinkedInPreview)}
+                variant="outline"
+                className="w-full gap-2"
+              >
+                <Linkedin className="w-4 h-4" />
+                {showLinkedInPreview ? "Hide" : "Preview"} LinkedIn Profile
+                {showLinkedInPreview ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              </Button>
+              
+              {showLinkedInPreview && (
+                <div className="mt-4 animate-in slide-in-from-top-2">
+                  <div className="rounded-lg overflow-hidden border-2 border-primary/20">
+                    <img 
+                      src={linkedinImageUrl} 
+                      alt={`${name} LinkedIn Profile`}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  {linkedinProfileUrl && (
+                    <div className="mt-4 flex justify-center">
+                      <Button
+                        onClick={() => window.open(linkedinProfileUrl, '_blank')}
+                        className="gap-2"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                        View Full LinkedIn Profile
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          {linkedinImageUrl && linkedinPreviewMode === "static" && (
             <div className="mt-6">
               <div className="rounded-lg overflow-hidden border-2 border-primary/20">
                 <img 
