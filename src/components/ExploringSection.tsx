@@ -3,6 +3,7 @@ import { Route, Check, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EmbeddedChatbot from "@/components/EmbeddedChatbot";
 import AgencyTiersDialog from "@/components/AgencyTiersDialog";
+import BusinessTiersDialog from "@/components/BusinessTiersDialog";
 import ethanPhoto from "@/assets/ethan-clouser.png";
 import walterPhoto from "@/assets/walter-chung.png";
 import samPhoto from "@/assets/sam-beck.png";
@@ -13,7 +14,8 @@ import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import lunivateLogo from "@/assets/lunivate-logo.png";
 const ExploringSection = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isAgencyDialogOpen, setIsAgencyDialogOpen] = useState(false);
+  const [isBusinessDialogOpen, setIsBusinessDialogOpen] = useState(false);
   
   return <section className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -120,7 +122,7 @@ const ExploringSection = () => {
             <Button 
               size="lg" 
               className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white"
-              onClick={() => setIsDialogOpen(true)}
+              onClick={() => setIsAgencyDialogOpen(true)}
             >
               Apply for LIA Programs →
             </Button>
@@ -215,7 +217,11 @@ const ExploringSection = () => {
             </div>
 
             {/* CTA */}
-            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white">
+            <Button 
+              size="lg" 
+              className="w-full text-sm md:text-base font-bold group bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsBusinessDialogOpen(true)}
+            >
               Get Your Custom LinkedIn Roadmap →
             </Button>
 
@@ -247,8 +253,9 @@ const ExploringSection = () => {
         <EmbeddedChatbot />
       </div>
       
-      {/* Agency Tiers Dialog */}
-      <AgencyTiersDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
+      {/* Dialogs */}
+      <AgencyTiersDialog open={isAgencyDialogOpen} onOpenChange={setIsAgencyDialogOpen} />
+      <BusinessTiersDialog open={isBusinessDialogOpen} onOpenChange={setIsBusinessDialogOpen} />
     </section>;
 };
 export default ExploringSection;
