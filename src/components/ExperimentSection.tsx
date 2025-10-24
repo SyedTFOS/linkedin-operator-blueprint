@@ -50,7 +50,7 @@ const ExperimentSection = () => {
         </div>
 
         {/* Tabs Section */}
-        <Tabs defaultValue="beginners" className="w-full">
+        <Tabs defaultValue="agency-owners" className="w-full">
           <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-0 mb-12 h-auto p-1 bg-muted/50">
             <TabsTrigger 
               value="beginners" 
