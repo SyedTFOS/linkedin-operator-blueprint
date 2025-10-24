@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Route, Check, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import EmbeddedChatbot from "@/components/EmbeddedChatbot";
+import AgencyTiersDialog from "@/components/AgencyTiersDialog";
 import ethanPhoto from "@/assets/ethan-clouser.png";
 import walterPhoto from "@/assets/walter-chung.png";
 import samPhoto from "@/assets/sam-beck.png";
@@ -11,6 +13,8 @@ import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import lunivateLogo from "@/assets/lunivate-logo.png";
 const ExploringSection = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  
   return <section className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Badge */}
@@ -113,7 +117,11 @@ const ExploringSection = () => {
             </div>
 
             {/* CTA */}
-            <Button size="lg" className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white">
+            <Button 
+              size="lg" 
+              className="w-full text-sm md:text-base font-bold group bg-orange-600 hover:bg-orange-700 text-white"
+              onClick={() => setIsDialogOpen(true)}
+            >
               Apply for LIA Programs →
             </Button>
 
@@ -238,6 +246,9 @@ const ExploringSection = () => {
         {/* AI Chat Assistant */}
         <EmbeddedChatbot />
       </div>
+      
+      {/* Agency Tiers Dialog */}
+      <AgencyTiersDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>;
 };
 export default ExploringSection;
