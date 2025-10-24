@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
-import logoTransparent from "@/assets/logo-transparent.png";
+import logo from "@/assets/logo-text.png";
 
 const DoneForYou = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const DoneForYou = () => {
       <div className="container mx-auto px-4 pt-8">
         <div className="flex justify-center mb-8">
           <img 
-            src={logoTransparent} 
+            src={logo} 
             alt="LinkedIn Operator" 
             className="h-16 md:h-20 w-auto"
           />
