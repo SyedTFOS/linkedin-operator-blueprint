@@ -8,6 +8,7 @@ import ethanClouserPhoto from "@/assets/ethan-clouser.png";
 import walterChungPhoto from "@/assets/walter-chung.png";
 import samBeckPhoto from "@/assets/sam-beck.png";
 import samAramiPhoto from "@/assets/sam-arami-photo.png";
+import samAramiLinkedin from "@/assets/sam-arami-linkedin.png";
 
 const ExperimentSection = () => {
   return (
@@ -158,6 +159,8 @@ const ExperimentSection = () => {
                   "Dominates AI Agency niche",
                   "Now provides content services for top AI companies"
                 ]}
+                linkedinImageUrl={samAramiLinkedin}
+                linkedinProfileUrl="https://www.linkedin.com/in/sam-arami/"
               />
               <StudentCard
                 name="Aryan Shah"

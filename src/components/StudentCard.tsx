@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { PlayCircle } from "lucide-react";
+import { PlayCircle, Linkedin } from "lucide-react";
 
 interface StudentCardProps {
   name: string;
@@ -13,6 +13,8 @@ interface StudentCardProps {
   results: string[];
   videoUrl?: string;
   videoQuote?: string;
+  linkedinImageUrl?: string;
+  linkedinProfileUrl?: string;
 }
 
 const StudentCard = ({
@@ -26,6 +28,8 @@ const StudentCard = ({
   results,
   videoUrl,
   videoQuote,
+  linkedinImageUrl,
+  linkedinProfileUrl,
 }: StudentCardProps) => {
   // Function to get embed URL for YouTube videos
   const getEmbedUrl = (url: string) => {
@@ -129,6 +133,29 @@ const StudentCard = ({
                   )}
                 </div>
               </div>
+            </div>
+          )}
+
+          {linkedinImageUrl && (
+            <div className="mt-6">
+              <div className="rounded-lg overflow-hidden border-2 border-primary/20">
+                <img 
+                  src={linkedinImageUrl} 
+                  alt={`${name} LinkedIn Profile`}
+                  className="w-full h-auto"
+                />
+              </div>
+              {linkedinProfileUrl && (
+                <div className="mt-4 flex justify-center">
+                  <Button
+                    onClick={() => window.open(linkedinProfileUrl, '_blank')}
+                    className="gap-2"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    View Full LinkedIn Profile
+                  </Button>
+                </div>
+              )}
             </div>
           )}
         </div>
