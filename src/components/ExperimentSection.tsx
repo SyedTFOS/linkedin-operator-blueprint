@@ -117,7 +117,7 @@ const ExperimentSection = () => {
                   "Exited for healthy 5-figure deal",
                   "75-80% profit margins"
                 ]}
-                videoUrl="PASTE_ETHAN_VIDEO_URL_HERE"
+                videoUrl="https://www.youtube.com/watch?v=sWl4ya3xlME"
               />
               <StudentCard
                 name="Walter Chung"
