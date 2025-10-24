@@ -12,6 +12,7 @@ interface StudentCardProps {
   whatTheyDoing?: string;
   results: string[];
   videoUrl?: string;
+  videoQuote?: string;
 }
 
 const StudentCard = ({
@@ -24,6 +25,7 @@ const StudentCard = ({
   whatTheyDoing,
   results,
   videoUrl,
+  videoQuote,
 }: StudentCardProps) => {
   // Function to get embed URL for YouTube videos
   const getEmbedUrl = (url: string) => {
@@ -102,21 +104,30 @@ const StudentCard = ({
 
           {videoUrl && (
             <div className="mt-6">
-              <div className="aspect-video rounded-lg overflow-hidden bg-muted">
-                {videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be') ? (
-                  <iframe
-                    src={getEmbedUrl(videoUrl)}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <video
-                    src={videoUrl}
-                    controls
-                    className="w-full h-full object-cover"
-                  />
-                )}
+              {videoQuote && (
+                <div className="mb-4 text-center">
+                  <p className="text-xl md:text-2xl font-bold text-foreground italic">
+                    "{videoQuote}"
+                  </p>
+                </div>
+              )}
+              <div className="p-3 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30">
+                <div className="aspect-video rounded-lg overflow-hidden bg-background shadow-lg">
+                  {videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be') ? (
+                    <iframe
+                      src={getEmbedUrl(videoUrl)}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      src={videoUrl}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
               </div>
             </div>
           )}

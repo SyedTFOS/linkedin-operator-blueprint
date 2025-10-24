@@ -118,6 +118,7 @@ const ExperimentSection = () => {
                   "75-80% profit margins"
                 ]}
                 videoUrl="https://www.youtube.com/watch?v=sWl4ya3xlME"
+                videoQuote="I just hit the $10K / month mark, in the first month"
               />
               <StudentCard
                 name="Walter Chung"
