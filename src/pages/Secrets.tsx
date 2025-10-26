@@ -4,13 +4,18 @@ import { useState } from "react";
 import logo from "@/assets/logo-text.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import ethanImage from "@/assets/ethan-clouser.png";
-import student1 from "@/assets/student-1.png";
-import student2 from "@/assets/student-2.png";
-import student3 from "@/assets/student-3.png";
-import student4 from "@/assets/student-4.png";
-import student5 from "@/assets/student-5.png";
-import student6 from "@/assets/student-6.png";
-import student7 from "@/assets/student-7.png";
+import aaninImage from "@/assets/aanin-mahmodul.png";
+import aryanImage from "@/assets/aryan-shah.png";
+import benImage from "@/assets/ben-alistor.png";
+import craigImage from "@/assets/craig-cecilio.png";
+import jessicaImage from "@/assets/jessica-green.png";
+import komailImage from "@/assets/komail-gillani.png";
+import lianImage from "@/assets/lian-lim.png";
+import rubaiyatImage from "@/assets/rubaiyat-hossain.png";
+import samBeckImage from "@/assets/sam-beck.png";
+import stevanImage from "@/assets/stevan-petrusic.png";
+import vasilijeImage from "@/assets/vasilije-simic.png";
+import walterImage from "@/assets/walter-chung.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,14 +68,7 @@ const Secrets = () => {
             {/* Social Proof Avatars with Real Student Photos */}
             <div className="flex flex-col items-center gap-4 mt-6">
               <div className="flex items-center justify-center -space-x-3">
-                {[student1, student2, student3, student4, student5, student6].map((img, i) => (
-                  <img 
-                    key={i}
-                    src={img}
-                    alt={`Student ${i + 1}`}
-                    className="w-14 h-14 rounded-full border-3 border-white hover:scale-110 transition-transform shadow-lg object-cover"
-                  />
-                ))}
+                {[aaninImage, aryanImage, benImage, jessicaImage, komailImage, lianImage].map((img, i) => <img key={i} src={img} alt={`Student ${i + 1}`} className="w-14 h-14 rounded-full border-3 border-white hover:scale-110 transition-transform shadow-lg object-cover" />)}
               </div>
               <p className="text-sm font-medium text-[#4a4a4a]">For True Founders, Looking To Build A Real Online Business.</p>
             </div>
@@ -94,8 +92,13 @@ const Secrets = () => {
 
             {/* VSL Video Player */}
             <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] mt-12">
-              <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}></div>
-              <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
+              <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{
+              width: '100%',
+              position: 'relative',
+              paddingTop: '56.25%'
+            }}></div>
+              <script type="text/javascript" dangerouslySetInnerHTML={{
+              __html: `
                 (function (v, i, d, a, l, y, t, c, s) {
                     y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
                     if (!vsl){vsl=function(u,cb){
@@ -105,29 +108,18 @@ const Secrets = () => {
                     };}
                     vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
                 })(window, document, 'Vidalytics', 'vidalytics_embed_KASel7JVLpBW35b6', 'https://fast.vidalytics.com/embeds/BNMw3AeC/KASel7JVLpBW35b6/');
-              `}} />
+              `
+            }} />
             </div>
 
             {/* Review Stars */}
-            <div className="flex flex-col items-center gap-3 mt-10">
-              <div className="flex items-center gap-1">
-                {Array.from({
-                length: 5
-              }).map((_, i) => <span key={i} className="text-[#FF6B35] text-2xl">⭐</span>)}
-              </div>
-              <p className="text-sm font-semibold text-[#1a1a1a]">
-                Excellent | <span className="text-[#FF6B35]">4.9/5</span>
-              </p>
-            </div>
+            
 
             {/* CTA Button with Integrated Urgency and Timer */}
             <div className="flex flex-col items-center justify-center mt-10">
-              <button 
-                onClick={() => document.getElementById('application-form')?.scrollIntoView({
-                  behavior: 'smooth'
-                })} 
-                className="group relative w-full max-w-md"
-              >
+              <button onClick={() => document.getElementById('application-form')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="group relative w-full max-w-md">
                 {/* Only 5 Spots Left Badge */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF6B35] text-white rounded-full text-xs font-bold shadow-lg">
                   <span>⚡</span>
@@ -152,11 +144,7 @@ const Secrets = () => {
             {/* Testimonial Quote with Photo */}
             <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/60 border border-[#FF6B35]/20 backdrop-blur-sm mt-16 shadow-lg">
               <div className="flex items-start gap-4">
-                <img 
-                  src={ethanImage} 
-                  alt="Ethan C." 
-                  className="w-16 h-16 rounded-full object-cover border-2 border-[#FF6B35] flex-shrink-0"
-                />
+                <img src={ethanImage} alt="Ethan C." className="w-16 h-16 rounded-full object-cover border-2 border-[#FF6B35] flex-shrink-0" />
                 <div className="flex-1">
                   <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-3">&quot;I Hit $10K in month 1 and exited for $50K+ in less then 4 months with the 1-on-1 support. Worth every penny.&quot;</p>
                   <p className="text-sm font-semibold text-[#FF6B35]">— Ethan C. Secrets Member</p>
@@ -302,16 +290,7 @@ const Secrets = () => {
           <div className="text-center space-y-8 mb-24">
             <h3 className="text-3xl font-bold mb-8">LinkedIn Operator Students</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {[
-                student1, student2, student3, student4, student5, student6, student7
-              ].map((img, i) => (
-                <img 
-                  key={i}
-                  src={img}
-                  alt={`LinkedIn Operator Student ${i + 1}`}
-                  className="w-20 h-20 rounded-full border-2 border-primary/50 hover:scale-110 transition-transform shadow-lg object-cover"
-                />
-              ))}
+              {[aaninImage, aryanImage, benImage, craigImage, ethanImage, jessicaImage, komailImage, lianImage, rubaiyatImage, samBeckImage, stevanImage, vasilijeImage, walterImage].map((img, i) => <img key={i} src={img} alt={`LinkedIn Operator Student ${i + 1}`} className="w-20 h-20 rounded-full border-2 border-primary/50 hover:scale-110 transition-transform shadow-lg object-cover" />)}
             </div>
             <p className="text-xl font-semibold">Join 20+ elite operators building 6-7 figure agencies</p>
           </div>
