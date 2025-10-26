@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "@/assets/logo-text.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import ethanImage from "@/assets/ethan-clouser.png";
@@ -14,6 +14,28 @@ import student7 from "@/assets/student-7.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Load Vidalytics script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.text = `
+      (function (v, i, d, a, l, y, t, c, s) {
+          y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+          if (!vsl){vsl=function(u,cb){
+              if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+              if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+              i.getElementsByTagName("head")[0].appendChild(s);
+          };}
+          vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+      })(window, document, 'Vidalytics', 'vidalytics_embed_KASel7JVLpBW35b6', 'https://fast.vidalytics.com/embeds/BNMw3AeC/KASel7JVLpBW35b6/');
+    `;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
@@ -88,23 +110,10 @@ const Secrets = () => {
             {/* VSL Video Player */}
             <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] mt-12">
               <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{
-              width: '100%',
-              position: 'relative',
-              paddingTop: '56.25%'
-            }}></div>
-              <script type="text/javascript" dangerouslySetInnerHTML={{
-              __html: `
-                (function (v, i, d, a, l, y, t, c, s) {
-                    y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
-                    if (!vsl){vsl=function(u,cb){
-                        if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
-                        if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
-                        i.getElementsByTagName("head")[0].appendChild(s);
-                    };}
-                    vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
-                })(window, document, 'Vidalytics', 'vidalytics_embed_KASel7JVLpBW35b6', 'https://fast.vidalytics.com/embeds/BNMw3AeC/KASel7JVLpBW35b6/');
-              `
-            }} />
+                width: '100%',
+                position: 'relative',
+                paddingTop: '56.25%'
+              }}></div>
             </div>
 
             {/* Review Stars */}
