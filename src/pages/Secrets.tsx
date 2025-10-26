@@ -487,7 +487,7 @@ const Secrets = () => {
                 <h3 className="text-2xl font-bold border-b border-border pb-4">INVESTMENT</h3>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-semibold">Ready to invest $5,000+? *</label>
+                  <label className="text-sm font-semibold">This is a minimum multi 4-figure investment, are you ready to invest that amount?</label>
                   {["Yes, pay in full", "Yes, need payment plan", "Want to discuss first"].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
                       <input type="radio" name="investment" className="w-5 h-5" />
                       <span>{option}</span>
