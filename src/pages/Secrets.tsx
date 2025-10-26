@@ -49,9 +49,9 @@ const Secrets = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#1a1f3a] via-[#0f1420] to-[#000000] overflow-hidden py-24 md:py-32">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#FFF9F0] via-[#FFE8D6] to-[#FFD7B8] overflow-hidden py-24 md:py-32">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,140,50,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-10">
@@ -59,7 +59,7 @@ const Secrets = () => {
             {/* Video Sound Badge */}
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-[#FF6B35]/10 border border-[#FF6B35]/40 rounded-full backdrop-blur-sm">
               <div className="w-2 h-2 bg-[#FF6B35] rounded-full animate-pulse" />
-              <span className="text-xs md:text-sm font-semibold text-white/90 uppercase tracking-wide">
+              <span className="text-xs md:text-sm font-semibold text-[#1a1a1a] uppercase tracking-wide">
                 Watch the video to turn on sound
               </span>
             </div>
@@ -70,39 +70,39 @@ const Secrets = () => {
                 {Array.from({ length: 6 }).map((_, i) => (
                   <div 
                     key={i} 
-                    className="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF6B35]/30 to-[#FF6B35]/10 border-3 border-[#1a1f3a] flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg"
+                    className="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF6B35]/30 to-[#FFB88C]/20 border-3 border-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg"
                   >
                     👤
                   </div>
                 ))}
               </div>
-              <p className="text-sm font-medium text-white/70">
+              <p className="text-sm font-medium text-[#4a4a4a]">
                 147+ Operators scaled past $50K/month
               </p>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-4 mt-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-[#1a1a1a]">
                 The Fastest Way to Build a<br />
                 <span className="text-[#FF6B35]">$50K+/Month B2B Agency</span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg md:text-xl lg:text-2xl text-white/60 font-medium leading-relaxed mt-6">
+              <p className="text-lg md:text-xl lg:text-2xl text-[#5a5a5a] font-medium leading-relaxed mt-6">
                 (Without Paid Ads, Cold Calling,<br className="hidden sm:block" /> 
                 or Hiring a Sales Team)
               </p>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-white/50 max-w-3xl mx-auto leading-relaxed mt-6">
+              <p className="text-base md:text-lg text-[#6a6a6a] max-w-3xl mx-auto leading-relaxed mt-6">
                 Get everything you need to sign $5K-$50K clients on LinkedIn—plus 1-on-1 founder coaching every week.
               </p>
             </div>
 
             {/* VSL Video Player */}
-            <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.6)] bg-white/5 group cursor-pointer mt-12">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm group-hover:backdrop-blur-none transition-all duration-300">
+            <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] bg-white group cursor-pointer mt-12 border-2 border-[#FF6B35]/20">
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#FFE8D6]/90 to-[#FFF9F0]/80 backdrop-blur-sm group-hover:backdrop-blur-none transition-all duration-300">
                 <div className="relative">
                   <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#FF6B35] flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-[0_10px_40px_rgba(255,107,53,0.5)]">
                     <div className="w-0 h-0 border-t-[18px] md:border-t-[24px] border-t-transparent border-l-[28px] md:border-l-[36px] border-l-white border-b-[18px] md:border-b-[24px] border-b-transparent ml-2" />
@@ -110,7 +110,7 @@ const Secrets = () => {
                 </div>
               </div>
               {/* Placeholder for video thumbnail */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1f3a]/60 to-[#000000]/80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FFE8D6]/40 to-[#FFD7B8]/60" />
             </div>
 
             {/* Review Stars */}
@@ -120,7 +120,7 @@ const Secrets = () => {
                   <span key={i} className="text-[#FF6B35] text-2xl">⭐</span>
                 ))}
               </div>
-              <p className="text-sm font-semibold text-white">
+              <p className="text-sm font-semibold text-[#1a1a1a]">
                 Excellent | <span className="text-[#FF6B35]">4.9/5</span>
               </p>
             </div>
@@ -140,14 +140,14 @@ const Secrets = () => {
                 <span className="text-xl">⚡</span>
                 <div className="text-left">
                   <p className="font-bold text-[#FF6B35] text-base leading-tight">Only 8 spots available</p>
-                  <p className="text-xs text-white/60 leading-tight mt-1">Last cohort filled in 6 days</p>
+                  <p className="text-xs text-[#6a6a6a] leading-tight mt-1">Last cohort filled in 6 days</p>
                 </div>
               </div>
             </div>
 
             {/* Testimonial Quote */}
-            <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm mt-12">
-              <p className="text-base md:text-lg italic text-white/90 leading-relaxed mb-4">
+            <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/60 border border-[#FF6B35]/20 backdrop-blur-sm mt-12 shadow-lg">
+              <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-4">
                 "Hit $40K in 4 months with the 1-on-1 support. Worth every penny."
               </p>
               <p className="text-sm font-semibold text-[#FF6B35]">
