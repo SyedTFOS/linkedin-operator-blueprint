@@ -11,6 +11,16 @@ import student4 from "@/assets/student-4.png";
 import student5 from "@/assets/student-5.png";
 import student6 from "@/assets/student-6.png";
 import student7 from "@/assets/student-7.png";
+import proofLinkedInPost from "@/assets/proof-linkedin-post.png";
+import proofAnalytics from "@/assets/proof-analytics.png";
+import proofDiscoveryCalls from "@/assets/proof-discovery-calls.png";
+import proofViralPosts from "@/assets/proof-viral-posts.png";
+import proofRevenue27k from "@/assets/proof-revenue-27k.png";
+import proofBookingCalls from "@/assets/proof-booking-calls.png";
+import proofClientGrowth from "@/assets/proof-client-growth.png";
+import proofZellePayment from "@/assets/proof-zelle-payment.png";
+import proofStripeDashboard from "@/assets/proof-stripe-dashboard.png";
+import proofTestimonial from "@/assets/proof-testimonial.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -230,7 +240,31 @@ const Secrets = () => {
           {/* Screenshot Gallery */}
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-center mb-12">Wall Of Proof</h3>
-            {/* Screenshots will be added here */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                proofLinkedInPost,
+                proofAnalytics,
+                proofDiscoveryCalls,
+                proofViralPosts,
+                proofRevenue27k,
+                proofBookingCalls,
+                proofClientGrowth,
+                proofZellePayment,
+                proofStripeDashboard,
+                proofTestimonial
+              ].map((proof, i) => (
+                <div
+                  key={i}
+                  className="premium-card-glow rounded-xl overflow-hidden hover:scale-105 transition-transform shadow-lg"
+                >
+                  <img
+                    src={proof}
+                    alt={`Proof ${i + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Written Testimonials */}
