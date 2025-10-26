@@ -21,6 +21,16 @@ import proofClientGrowth from "@/assets/proof-client-growth.png";
 import proofZellePayment from "@/assets/proof-zelle-payment.png";
 import proofStripeDashboard from "@/assets/proof-stripe-dashboard.png";
 import proofTestimonial from "@/assets/proof-testimonial.png";
+import proofRahulPosts from "@/assets/proof-rahul-posts.png";
+import proofDavidProfile from "@/assets/proof-david-profile.png";
+import proofCreativeEngine from "@/assets/proof-creative-engine.png";
+import proofColdEmail from "@/assets/proof-cold-email.png";
+import proofTopPosts from "@/assets/proof-top-posts.png";
+import proofRobertoProfile from "@/assets/proof-roberto-profile.png";
+import proofOutreachAgent from "@/assets/proof-outreach-agent.png";
+import proofKnowledgeHub from "@/assets/proof-knowledge-hub.png";
+import proofDashboard1 from "@/assets/proof-dashboard-1.png";
+import proofDashboard2 from "@/assets/proof-dashboard-2.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -251,16 +261,26 @@ const Secrets = () => {
                 proofClientGrowth,
                 proofZellePayment,
                 proofStripeDashboard,
-                proofTestimonial
+                proofTestimonial,
+                proofRahulPosts,
+                proofDavidProfile,
+                proofCreativeEngine,
+                proofColdEmail,
+                proofTopPosts,
+                proofRobertoProfile,
+                proofOutreachAgent,
+                proofKnowledgeHub,
+                proofDashboard1,
+                proofDashboard2
               ].map((proof, i) => (
                 <div
                   key={i}
-                  className="premium-card-glow rounded-xl overflow-hidden hover:scale-105 transition-transform shadow-lg"
+                  className="premium-card-glow rounded-xl overflow-hidden hover:scale-105 transition-transform shadow-lg bg-white"
                 >
                   <img
                     src={proof}
                     alt={`Proof ${i + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               ))}
