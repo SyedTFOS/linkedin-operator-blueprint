@@ -31,6 +31,16 @@ import proofOutreachAgent from "@/assets/proof-outreach-agent.png";
 import proofKnowledgeHub from "@/assets/proof-knowledge-hub.png";
 import proofDashboard1 from "@/assets/proof-dashboard-1.png";
 import proofDashboard2 from "@/assets/proof-dashboard-2.png";
+import proofLinkedInBlueprint from "@/assets/proof-linkedin-blueprint.png";
+import proofSyedProfile from "@/assets/proof-syed-profile.png";
+import proofContentPerformance from "@/assets/proof-content-performance.png";
+import proofTopPerforming from "@/assets/proof-top-performing.png";
+import proofSlackTraining from "@/assets/proof-slack-training.png";
+import proofWhatsapp5Calls from "@/assets/proof-whatsapp-5calls.png";
+import proofSlack12Calls from "@/assets/proof-slack-12calls.png";
+import proofWhatsappBooked from "@/assets/proof-whatsapp-booked.png";
+import proofCalendarMeetings from "@/assets/proof-calendar-meetings.png";
+import proofEventData from "@/assets/proof-event-data.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -271,7 +281,17 @@ const Secrets = () => {
                 proofOutreachAgent,
                 proofKnowledgeHub,
                 proofDashboard1,
-                proofDashboard2
+                proofDashboard2,
+                proofLinkedInBlueprint,
+                proofSyedProfile,
+                proofContentPerformance,
+                proofTopPerforming,
+                proofSlackTraining,
+                proofWhatsapp5Calls,
+                proofSlack12Calls,
+                proofWhatsappBooked,
+                proofCalendarMeetings,
+                proofEventData
               ].map((proof, i) => (
                 <div
                   key={i}
