@@ -70,10 +70,10 @@ const DoneForYou = () => {
           {/* Calendar Embed */}
           <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
             <iframe 
-              src="https://os.linkedinoperator.com/widget/booking/BFjTWz9wLiIwfnMKaOYD" 
+              src="https://os.linkedinoperator.com/widget/booking/bLcTcJ95FqgTJUYZeNoe" 
               style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', height: '800px' }} 
-              scrolling="yes" 
-              id="BFjTWz9wLiIwfnMKaOYD_1761497987766"
+              scrolling="no" 
+              id="bLcTcJ95FqgTJUYZeNoe_1761499154641"
               title="Booking Calendar"
             />
           </div>
