@@ -406,7 +406,7 @@ const Secrets = () => {
                   className={`px-6 py-3 rounded-full font-semibold transition-all ${
                     activeFilter === filter.id
                       ? "bg-[#FF6B35] text-white shadow-lg scale-105"
-                      : "bg-white/10 text-white hover:bg-white/20"
+                      : "bg-secondary/50 text-foreground hover:bg-secondary border border-border"
                   }`}
                 >
                   {filter.label}
