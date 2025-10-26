@@ -54,16 +54,16 @@ const Book = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <p className="text-sm text-muted-foreground uppercase tracking-wide mb-4">
-              APPLICATION
+              ✅ Application Approved!
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Book Your Call To Achieve X
+              Book Your Strategy Call With Syed & Freddie
             </h1>
             <p className="text-xl text-muted-foreground mb-2">
-              With Unique Solution
+              Let's map out your path to $50K/month and see if
             </p>
-            <p className="text-sm text-muted-foreground">
-              Find a time that suits you below
+            <p className="text-xl text-muted-foreground">
+              Secrets is the right fit for you.
             </p>
           </div>
 
@@ -71,8 +71,8 @@ const Book = () => {
           <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
             <iframe 
               src="https://os.linkedinoperator.com/widget/booking/BFjTWz9wLiIwfnMKaOYD" 
-              style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }} 
-              scrolling="no" 
+              style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', height: '800px' }} 
+              scrolling="yes" 
               id="BFjTWz9wLiIwfnMKaOYD_1761497987766"
               title="Booking Calendar"
             />
