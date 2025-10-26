@@ -44,6 +44,8 @@ import proofEventData from "@/assets/proof-event-data.png";
 import proofInboundStrategy from "@/assets/proof-inbound-strategy.png";
 import proofPlayerTwoDeal from "@/assets/proof-playertwo-deal.png";
 import proof3rdClientSigned from "@/assets/proof-3rd-client-signed.png";
+import proofTopCustomers from "@/assets/proof-top-customers.png";
+import proofCustomerSpend from "@/assets/proof-customer-spend.png";
 
 const Secrets = () => {
   const navigate = useNavigate();
@@ -86,7 +88,9 @@ const Secrets = () => {
     proofEventData,
     proofInboundStrategy,
     proofPlayerTwoDeal,
-    proof3rdClientSigned
+    proof3rdClientSigned,
+    proofTopCustomers,
+    proofCustomerSpend
   ];
 
   const proofCategories = {
@@ -96,7 +100,9 @@ const Secrets = () => {
       proofZellePayment,
       proofStripeDashboard,
       proofClientGrowth,
-      proof3rdClientSigned
+      proof3rdClientSigned,
+      proofTopCustomers,
+      proofCustomerSpend
     ],
     posts: [
       proofLinkedInPost,
