@@ -374,19 +374,6 @@ const Secrets = () => {
               </div>
             </div>}
 
-          {/* Written Testimonials */}
-          <div className="max-w-5xl mx-auto space-y-8 mb-24">
-            {[{
-            quote: "The 1-on-1 calls are worth the price alone. Syed helped me close my first $5K client on our second call.",
-            author: "Alex M., Secrets Member"
-          }, {
-            quote: "Hit $40K in 4 months. Would've taken a year with Academy alone. The Secrets vault changed everything.",
-            author: "Sarah K., Secrets Member"
-          }, {
-            quote: "The elite network is insane. Got connected to a CPA who saved me $18K in taxes first year.",
-            author: "James L., Secrets Member"
-          }].map((testimonial, i) => {})}
-          </div>
 
           {/* LinkedIn Operator Student Photos */}
           <div className="text-center space-y-8 mb-24">
