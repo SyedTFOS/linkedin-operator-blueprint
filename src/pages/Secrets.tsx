@@ -229,46 +229,8 @@ const Secrets = () => {
 
           {/* Screenshot Gallery */}
           <div className="mb-24">
-            <h3 className="text-3xl font-bold text-center mb-12">Revenue Proof</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[{
-              type: "Stripe",
-              amount: "$15K MRR"
-            }, {
-              type: "Bank",
-              amount: "$8,729"
-            }, {
-              type: "Invoice",
-              amount: "$5,000"
-            }, {
-              type: "LinkedIn",
-              amount: "1M Views"
-            }, {
-              type: "Calendar",
-              amount: "8 Calls"
-            }, {
-              type: "DM Reply",
-              amount: "Yes!"
-            }, {
-              type: "Stripe",
-              amount: "$22K MRR"
-            }, {
-              type: "Wire",
-              amount: "$12,500"
-            }].map((proof, i) => <div key={i} className="premium-card-glow rounded-xl p-6 text-center space-y-3 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-2">
-                    {proof.type.includes('Stripe') && '💳'}
-                    {proof.type.includes('Bank') && '🏦'}
-                    {proof.type.includes('Invoice') && '📄'}
-                    {proof.type.includes('LinkedIn') && '📊'}
-                    {proof.type.includes('Calendar') && '📅'}
-                    {proof.type.includes('DM') && '💬'}
-                    {proof.type.includes('Wire') && '💰'}
-                  </div>
-                  <p className="text-sm text-muted-foreground font-semibold">{proof.type}</p>
-                  <p className="text-2xl font-bold text-primary">{proof.amount}</p>
-                </div>)}
-            </div>
+            <h3 className="text-3xl font-bold text-center mb-12">Wall Of Proof</h3>
+            {/* Screenshots will be added here */}
           </div>
 
           {/* Written Testimonials */}
