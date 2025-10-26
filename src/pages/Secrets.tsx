@@ -2,6 +2,20 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo-text.png";
+import { CountdownTimer } from "@/components/CountdownTimer";
+import ethanImage from "@/assets/ethan-clouser.png";
+import aaninImage from "@/assets/aanin-mahmodul.png";
+import aryanImage from "@/assets/aryan-shah.png";
+import benImage from "@/assets/ben-alistor.png";
+import craigImage from "@/assets/craig-cecilio.png";
+import jessicaImage from "@/assets/jessica-green.png";
+import komailImage from "@/assets/komail-gillani.png";
+import lianImage from "@/assets/lian-lim.png";
+import rubaiyatImage from "@/assets/rubaiyat-hossain.png";
+import samBeckImage from "@/assets/sam-beck.png";
+import stevanImage from "@/assets/stevan-petrusic.png";
+import vasilijeImage from "@/assets/vasilije-simic.png";
+import walterImage from "@/assets/walter-chung.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -51,14 +65,17 @@ const Secrets = () => {
               </span>
             </div>
 
-            {/* Social Proof Avatars */}
+            {/* Social Proof Avatars with Real Student Photos */}
             <div className="flex flex-col items-center gap-4 mt-6">
               <div className="flex items-center justify-center -space-x-3">
-                {Array.from({
-                length: 6
-              }).map((_, i) => <div key={i} className="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF6B35]/30 to-[#FFB88C]/20 border-3 border-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg">
-                    👤
-                  </div>)}
+                {[aaninImage, aryanImage, benImage, jessicaImage, komailImage, lianImage].map((img, i) => (
+                  <img 
+                    key={i}
+                    src={img}
+                    alt={`Student ${i + 1}`}
+                    className="w-14 h-14 rounded-full border-3 border-white hover:scale-110 transition-transform shadow-lg object-cover"
+                  />
+                ))}
               </div>
               <p className="text-sm font-medium text-[#4a4a4a]">For True Founders, Looking To Build A Real Online Business.</p>
             </div>
@@ -108,29 +125,48 @@ const Secrets = () => {
               </p>
             </div>
 
-            {/* CTA Button & Urgency Side by Side on Desktop */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mt-10">
-              <button onClick={() => document.getElementById('application-form')?.scrollIntoView({
-              behavior: 'smooth'
-            })} className="group relative px-10 py-5 bg-[#FF6B35] text-white rounded-xl text-lg font-bold overflow-hidden transition-all hover:scale-105 shadow-[0_10px_40px_rgba(255,107,53,0.4)] hover:shadow-[0_15px_50px_rgba(255,107,53,0.6)] inline-flex items-center gap-3 w-full md:w-auto justify-center">
-                <span className="relative z-10">APPLY NOW (2-Minute Application)</span>
-                <span className="relative z-10 transition-transform group-hover:translate-y-1">↓</span>
-              </button>
-
-              {/* Urgency Badge */}
-              <div className="inline-flex items-center gap-3 px-6 py-5 bg-[#FF6B35]/10 border-2 border-[#FF6B35] rounded-xl backdrop-blur-sm w-full md:w-auto justify-center">
-                <span className="text-xl">⚡</span>
-                <div className="text-left">
-                  <p className="font-bold text-[#FF6B35] text-base leading-tight">Only 8 spots available</p>
-                  <p className="text-xs text-[#6a6a6a] leading-tight mt-1">Last cohort filled in 6 days</p>
+            {/* CTA Button with Integrated Urgency and Timer */}
+            <div className="flex flex-col items-center justify-center mt-10">
+              <button 
+                onClick={() => document.getElementById('application-form')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} 
+                className="group relative w-full max-w-md"
+              >
+                {/* Only 5 Spots Left Badge */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF6B35] text-white rounded-full text-xs font-bold shadow-lg">
+                  <span>⚡</span>
+                  <span>Only 5 spots left</span>
                 </div>
-              </div>
+
+                {/* Main Button */}
+                <div className="relative px-10 py-5 bg-[#FF6B35] text-white rounded-xl text-lg font-bold overflow-hidden transition-all hover:scale-105 shadow-[0_10px_40px_rgba(255,107,53,0.4)] hover:shadow-[0_15px_50px_rgba(255,107,53,0.6)] flex flex-col items-center gap-2 pt-6 pb-6">
+                  <span className="relative z-10 flex items-center gap-3">
+                    APPLY NOW (2-Minute Application)
+                    <span className="transition-transform group-hover:translate-y-1">↓</span>
+                  </span>
+                </div>
+
+                {/* Countdown Timer at Bottom */}
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20 px-4 py-1.5 bg-white border-2 border-[#FF6B35] rounded-full shadow-lg">
+                  <CountdownTimer className="text-xs font-bold text-[#FF6B35]" />
+                </div>
+              </button>
             </div>
 
-            {/* Testimonial Quote */}
-            <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/60 border border-[#FF6B35]/20 backdrop-blur-sm mt-12 shadow-lg">
-              <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-4">&quot;I Hit $10K in month 1 and exited for $50K+ in less then 4 months with the 1-on-1 support. Worth every penny.&quot;</p>
-              <p className="text-sm font-semibold text-[#FF6B35]">— Ethan C. Secrets Member</p>
+            {/* Testimonial Quote with Photo */}
+            <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/60 border border-[#FF6B35]/20 backdrop-blur-sm mt-16 shadow-lg">
+              <div className="flex items-start gap-4">
+                <img 
+                  src={ethanImage} 
+                  alt="Ethan C." 
+                  className="w-16 h-16 rounded-full object-cover border-2 border-[#FF6B35] flex-shrink-0"
+                />
+                <div className="flex-1">
+                  <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-3">&quot;I Hit $10K in month 1 and exited for $50K+ in less then 4 months with the 1-on-1 support. Worth every penny.&quot;</p>
+                  <p className="text-sm font-semibold text-[#FF6B35]">— Ethan C. Secrets Member</p>
+                </div>
+              </div>
             </div>
 
             {/* Scroll Arrow */}
@@ -267,14 +303,22 @@ const Secrets = () => {
               </div>)}
           </div>
 
-          {/* Member Photos */}
+          {/* LinkedIn Operator Student Photos */}
           <div className="text-center space-y-8 mb-24">
+            <h3 className="text-3xl font-bold mb-8">LinkedIn Operator Students</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {Array.from({
-              length: 16
-            }).map((_, i) => <div key={i} className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/50 flex items-center justify-center text-2xl hover:scale-110 transition-transform">
-                  👤
-                </div>)}
+              {[
+                aaninImage, aryanImage, benImage, craigImage, ethanImage, 
+                jessicaImage, komailImage, lianImage, rubaiyatImage, 
+                samBeckImage, stevanImage, vasilijeImage, walterImage
+              ].map((img, i) => (
+                <img 
+                  key={i}
+                  src={img}
+                  alt={`LinkedIn Operator Student ${i + 1}`}
+                  className="w-20 h-20 rounded-full border-2 border-primary/50 hover:scale-110 transition-transform shadow-lg object-cover"
+                />
+              ))}
             </div>
             <p className="text-xl font-semibold">Join 20+ elite operators building 6-7 figure agencies</p>
           </div>
