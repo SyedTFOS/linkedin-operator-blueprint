@@ -337,63 +337,14 @@ const Secrets = () => {
         </div>
       </section>
 
-      {/* Apply Now Button Section */}
-      <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold">Ready to Build With Us?</h2>
-
-            <button
-              onClick={() =>
-                document.getElementById("application-form")?.scrollIntoView({
-                  behavior: "smooth"
-                })
-              }
-              className="group relative px-16 py-8 bg-primary text-primary-foreground rounded-2xl text-2xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow mx-auto block"
-            >
-              <span className="relative z-10 flex items-center gap-3 justify-center">
-                APPLY NOW (2-Minute Application)
-                <span className="transition-transform group-hover:translate-x-2">→</span>
-              </span>
-              <div className="absolute inset-0 bg-primary-glow opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
-
-            <p className="text-sm text-muted-foreground">Clicking this scrolls to application form below</p>
-          </div>
-        </div>
-      </section>
-
       {/* Social Proof Wall */}
-      <section className="py-32 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center space-y-4 mb-20">
+          <div className="text-center space-y-4 mb-12">
             <h2 className="text-5xl md:text-6xl font-bold">Proof From 147+ Operators</h2>
             <p className="text-xl md:text-2xl text-muted-foreground italic">
               "We don't just teach this. Our students are living it."
             </p>
-          </div>
-
-          {/* Video Testimonials */}
-          <div className="grid md:grid-cols-3 gap-8 mb-24">
-            {[
-              { name: "Sarah K.", result: "$0→$40K/mo", time: "in 4 months" },
-              { name: "Eden R.", result: "$10→$27K", time: "in 90 days" },
-              { name: "Marcus T.", result: "$15K client", time: "in month 2" }
-            ].map((testimonial, i) => (
-              <div
-                key={i}
-                className="group relative aspect-video rounded-2xl overflow-hidden border-2 border-border bg-secondary/50 hover:border-primary transition-all cursor-pointer"
-              >
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-primary border-b-[12px] border-b-transparent ml-1" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">{testimonial.name}</h3>
-                  <p className="text-3xl font-bold text-primary mb-1">{testimonial.result}</p>
-                  <p className="text-muted-foreground">{testimonial.time}</p>
-                </div>
-              </div>
-            ))}
           </div>
 
           {/* Screenshot Gallery */}
