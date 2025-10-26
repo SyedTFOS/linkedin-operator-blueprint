@@ -82,13 +82,8 @@ const Secrets = () => {
 
             {/* VSL Video Player */}
             <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] mt-12">
-              <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{
-              width: '100%',
-              position: 'relative',
-              paddingTop: '56.25%'
-            }}></div>
-              <script type="text/javascript" dangerouslySetInnerHTML={{
-              __html: `
+              <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}></div>
+              <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
                 (function (v, i, d, a, l, y, t, c, s) {
                     y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
                     if (!vsl){vsl=function(u,cb){
@@ -98,12 +93,20 @@ const Secrets = () => {
                     };}
                     vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
                 })(window, document, 'Vidalytics', 'vidalytics_embed_KASel7JVLpBW35b6', 'https://fast.vidalytics.com/embeds/BNMw3AeC/KASel7JVLpBW35b6/');
-              `
-            }} />
+              `}} />
             </div>
 
             {/* Review Stars */}
-            
+            <div className="flex flex-col items-center gap-3 mt-10">
+              <div className="flex items-center gap-1">
+                {Array.from({
+                length: 5
+              }).map((_, i) => <span key={i} className="text-[#FF6B35] text-2xl">⭐</span>)}
+              </div>
+              <p className="text-sm font-semibold text-[#1a1a1a]">
+                Excellent | <span className="text-[#FF6B35]">4.9/5</span>
+              </p>
+            </div>
 
             {/* CTA Button & Urgency Side by Side on Desktop */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mt-10">
