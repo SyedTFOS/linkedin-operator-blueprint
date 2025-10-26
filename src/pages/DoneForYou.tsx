@@ -49,8 +49,39 @@ const DoneForYou = () => {
       </div>
 
       {/* Page Content */}
-      <div className="container mx-auto px-6 py-24">
+      <div className="pt-24 pb-16">
+        <div className="container mx-auto px-4 max-w-4xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="text-sm text-muted-foreground uppercase tracking-wide mb-4">
+              ✅ Application Approved!
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Book Your Strategy Call With Our Team
+            </h1>
+            <p className="text-xl text-muted-foreground mb-2">
+              Let's discuss how we can build your LinkedIn presence and
+            </p>
+            <p className="text-xl text-muted-foreground">
+              grow your business with our Done-For-You service.
+            </p>
+          </div>
+
+          {/* Calendar Embed */}
+          <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
+            <iframe 
+              src="https://os.linkedinoperator.com/widget/booking/BFjTWz9wLiIwfnMKaOYD" 
+              style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '800px', height: '800px' }} 
+              scrolling="yes" 
+              id="BFjTWz9wLiIwfnMKaOYD_1761497987766"
+              title="Booking Calendar"
+            />
+          </div>
+        </div>
       </div>
+
+      {/* Calendar Script */}
+      <script src="https://os.linkedinoperator.com/js/form_embed.js" type="text/javascript"></script>
     </div>
   );
 };
