@@ -9,57 +9,44 @@ const Book = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <img 
-              src={logo} 
-              alt="LinkedIn Operator" 
-              className="h-8 cursor-pointer"
-              onClick={() => navigate("/")}
-            />
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              <button onClick={() => navigate("/")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Home
-              </button>
-              <button onClick={() => navigate("/agency")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Agency
-              </button>
-              <button onClick={() => navigate("/business")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Business
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+      {/* Desktop Navigation */}
+      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-center">
+            <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" />
           </div>
-
-          {/* Mobile Menu */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
-              <div className="flex flex-col gap-4">
-                <button onClick={() => navigate("/")} className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  Home
-                </button>
-                <button onClick={() => navigate("/agency")} className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  Agency
-                </button>
-                <button onClick={() => navigate("/business")} className="text-left text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  Business
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </nav>
+
+      {/* Mobile Navigation - Sliding Header */}
+      <div className="md:hidden">
+        {/* Mobile Header Toggle Button - Only show when menu is closed */}
+        {!isMobileMenuOpen && (
+          <button 
+            onClick={() => setIsMobileMenuOpen(true)} 
+            className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform" 
+            aria-label="Open menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        )}
+
+        {/* Mobile Sliding Header */}
+        <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}>
+          <div className="container mx-auto px-6 py-3 relative">
+            <div className="flex items-center justify-between">
+              <img src={logo} alt="LinkedIn Operator" className="h-8" />
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" 
+                aria-label="Close menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Main Content */}
       <div className="pt-24 pb-16">
