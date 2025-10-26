@@ -49,59 +49,113 @@ const Secrets = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-30" />
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[hsl(222,47%,11%)] to-[hsl(0,0%,0%)] overflow-hidden">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px]" />
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            {/* Crown Badge */}
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/20 border border-primary/30 rounded-full backdrop-blur-sm animate-pulse-glow">
-              <span className="text-2xl">👑</span>
-              <span className="font-bold text-primary text-lg">LinkedIn Operator SECRETS</span>
+        <div className="container mx-auto px-6 py-20 relative z-10">
+          <div className="max-w-5xl mx-auto text-center space-y-6 md:space-y-8">
+            
+            {/* Video Sound Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-destructive/10 border border-destructive/30 rounded-lg backdrop-blur-sm animate-pulse">
+              <div className="w-2 h-2 bg-destructive rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-foreground">WATCH THE VIDEO TO TURN ON SOUND</span>
             </div>
 
-            {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
-              Build Your{" "}
-              <span className="text-gradient">$50K/Month</span>
-              <br />
-              LinkedIn Agency Using The LinkedIn Secrets
+            {/* Social Proof Avatars */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex items-center justify-center -space-x-3">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div 
+                    key={i} 
+                    className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/40 to-primary/20 border-3 border-background flex items-center justify-center text-lg hover:scale-110 transition-transform"
+                  >
+                    👤
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm font-semibold text-muted-foreground">
+                147+ Operators scaled past $50K/month
+              </p>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+              The Fastest Way to Build a<br />
+              <span className="text-primary">$50K+/Month B2B Agency</span>
             </h1>
 
-            {/* Subheading */}
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              + with us by your side 1 to 1 coaching, lifetime community access, inner circle, 
-              scaling past $100k/month, strategies we <span className="font-bold text-foreground">NEVER</span> teach 
-              publicly or in academy.
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl text-muted-foreground font-medium leading-relaxed">
+              (Without Paid Ads, Cold Calling,<br className="hidden md:block" /> or Hiring a Sales Team)
             </p>
 
-            {/* VSL Frame */}
-            <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden border-4 border-primary/30 shadow-2xl bg-black/50 backdrop-blur-sm">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
-                    <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-primary border-b-[12px] border-b-transparent ml-1" />
+            {/* Description */}
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Get everything you need to sign $5K-$50K clients on LinkedIn—plus 1-on-1 founder coaching every week.
+            </p>
+
+            {/* VSL Video Player */}
+            <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.5)] bg-black group cursor-pointer">
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-sm group-hover:backdrop-blur-none transition-all duration-300">
+                <div className="relative">
+                  <div className="w-28 h-28 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary transition-all duration-300 shadow-[0_8px_32px_rgba(var(--primary-rgb),0.4)]">
+                    <div className="w-0 h-0 border-t-[20px] border-t-transparent border-l-[32px] border-l-primary-foreground border-b-[20px] border-b-transparent ml-2" />
                   </div>
-                  <p className="text-muted-foreground text-lg">Watch Success Stories</p>
                 </div>
               </div>
+              {/* Placeholder for video thumbnail - in real implementation, this would be the actual video */}
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-background/40" />
             </div>
 
-            {/* Urgency Badge */}
-            <div className="inline-flex flex-col items-center gap-3 px-8 py-5 bg-destructive/20 border-2 border-destructive rounded-2xl backdrop-blur-sm animate-breathe">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">⚡</span>
-                <span className="font-bold text-destructive text-2xl">ONLY 8 SPOTS LEFT THIS MONTH</span>
+            {/* Review Stars */}
+            <div className="flex flex-col items-center gap-2">
+              <div className="flex items-center gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="text-primary text-2xl">⭐</span>
+                ))}
               </div>
-              <p className="text-muted-foreground text-sm">Last cohort filled in 6 days</p>
+              <p className="text-sm font-semibold text-foreground">
+                Excellent | <span className="text-primary">4.9/5</span> from 127 members
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <button 
+              onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative px-12 py-6 bg-primary text-primary-foreground rounded-xl text-xl font-bold overflow-hidden transition-all hover:scale-105 shadow-[0_8px_32px_rgba(var(--primary-rgb),0.4)] hover:shadow-[0_12px_48px_rgba(var(--primary-rgb),0.6)] mx-auto inline-flex items-center gap-3"
+            >
+              <span className="relative z-10">APPLY NOW (2-Minute Application)</span>
+              <span className="relative z-10 transition-transform group-hover:translate-x-1">↓</span>
+              <div className="absolute inset-0 bg-primary-glow opacity-0 group-hover:opacity-100 transition-opacity" />
+            </button>
+
+            {/* Urgency Badge */}
+            <div className="inline-flex flex-col items-center gap-2 px-6 py-4 bg-primary/10 border-2 border-primary rounded-3xl backdrop-blur-sm animate-pulse">
+              <div className="flex items-center gap-2">
+                <span className="text-xl">⚡</span>
+                <span className="font-bold text-primary text-lg">Only 8 spots available this month</span>
+              </div>
+              <p className="text-sm text-muted-foreground">Last cohort filled in 6 days.</p>
+            </div>
+
+            {/* Testimonial Quote */}
+            <div className="max-w-2xl mx-auto p-6 rounded-xl bg-secondary/30 border border-border/50">
+              <p className="text-base md:text-lg italic text-foreground leading-relaxed mb-3">
+                "Hit $40K in 4 months with the 1-on-1 support. Worth every penny."
+              </p>
+              <p className="text-sm font-semibold text-primary">
+                — Sarah K., Secrets Member
+              </p>
             </div>
 
             {/* Scroll Arrow */}
-            <div className="pt-12 animate-bounce">
+            <div className="pt-8 animate-bounce">
               <div className="w-6 h-10 border-2 border-primary/50 rounded-full mx-auto flex items-start justify-center p-2">
                 <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
               </div>
             </div>
+
           </div>
         </div>
       </section>
