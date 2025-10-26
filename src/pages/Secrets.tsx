@@ -41,9 +41,87 @@ import proofSlack12Calls from "@/assets/proof-slack-12calls.png";
 import proofWhatsappBooked from "@/assets/proof-whatsapp-booked.png";
 import proofCalendarMeetings from "@/assets/proof-calendar-meetings.png";
 import proofEventData from "@/assets/proof-event-data.png";
+import proofInboundStrategy from "@/assets/proof-inbound-strategy.png";
+import proofPlayerTwoDeal from "@/assets/proof-playertwo-deal.png";
+import proof3rdClientSigned from "@/assets/proof-3rd-client-signed.png";
+
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  // Define all proof images
+  const allProofs = [
+    proofLinkedInPost,
+    proofAnalytics,
+    proofDiscoveryCalls,
+    proofViralPosts,
+    proofRevenue27k,
+    proofBookingCalls,
+    proofClientGrowth,
+    proofZellePayment,
+    proofStripeDashboard,
+    proofTestimonial,
+    proofRahulPosts,
+    proofDavidProfile,
+    proofCreativeEngine,
+    proofColdEmail,
+    proofTopPosts,
+    proofRobertoProfile,
+    proofOutreachAgent,
+    proofKnowledgeHub,
+    proofDashboard1,
+    proofDashboard2,
+    proofLinkedInBlueprint,
+    proofSyedProfile,
+    proofContentPerformance,
+    proofTopPerforming,
+    proofSlackTraining,
+    proofWhatsapp5Calls,
+    proofSlack12Calls,
+    proofWhatsappBooked,
+    proofCalendarMeetings,
+    proofEventData,
+    proofInboundStrategy,
+    proofPlayerTwoDeal,
+    proof3rdClientSigned
+  ];
+
+  const proofCategories = {
+    all: allProofs,
+    revenue: [
+      proofRevenue27k,
+      proofZellePayment,
+      proofStripeDashboard,
+      proofClientGrowth,
+      proof3rdClientSigned
+    ],
+    posts: [
+      proofLinkedInPost,
+      proofRahulPosts,
+      proofViralPosts,
+      proofTopPosts,
+      proofContentPerformance,
+      proofTopPerforming
+    ],
+    results: [
+      proofAnalytics,
+      proofDiscoveryCalls,
+      proofBookingCalls,
+      proofWhatsapp5Calls,
+      proofSlack12Calls,
+      proofWhatsappBooked,
+      proofCalendarMeetings,
+      proofEventData,
+      proofDashboard1,
+      proofDashboard2
+    ]
+  };
+
+  const displayedProofs = activeFilter === "all" ? allProofs.slice(0, 20) : proofCategories[activeFilter as keyof typeof proofCategories];
+  const totalCount = allProofs.length;
 
   useEffect(() => {
     // Load Vidalytics script
@@ -66,7 +144,28 @@ const Secrets = () => {
       document.body.removeChild(script);
     };
   }, []);
-  return <div className="min-h-screen bg-background">
+
+  // Handle ESC key to close overlay or lightbox
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        if (lightboxIndex !== null) {
+          setLightboxIndex(null);
+        } else if (showOverlay) {
+          setShowOverlay(false);
+        }
+      } else if (e.key === "ArrowLeft" && lightboxIndex !== null) {
+        setLightboxIndex((lightboxIndex - 1 + totalCount) % totalCount);
+      } else if (e.key === "ArrowRight" && lightboxIndex !== null) {
+        setLightboxIndex((lightboxIndex + 1) % totalCount);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxIndex, showOverlay, totalCount]);
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
@@ -79,16 +178,30 @@ const Secrets = () => {
       {/* Mobile Navigation - Sliding Header */}
       <div className="md:hidden">
         {/* Mobile Header Toggle Button - Only show when menu is closed */}
-        {!isMobileMenuOpen && <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform" aria-label="Open menu">
+        {!isMobileMenuOpen && (
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform"
+            aria-label="Open menu"
+          >
             <Menu className="w-6 h-6" />
-          </button>}
+          </button>
+        )}
 
         {/* Mobile Sliding Header */}
-        <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div
+          className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${
+            isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
+        >
           <div className="container mx-auto px-6 py-3 relative">
             <div className="flex items-center justify-between">
               <img src={logo} alt="LinkedIn Operator" className="h-8" />
-              <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform"
+                aria-label="Close menu"
+              >
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -100,10 +213,9 @@ const Secrets = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#FFF9F0] via-[#FFE8D6] to-[#FFD7B8] overflow-hidden py-24 md:py-32">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,140,50,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-10">
-            
             {/* Video Sound Badge */}
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-[#FF6B35]/10 border border-[#FF6B35]/40 rounded-full backdrop-blur-sm">
               <div className="w-2 h-2 bg-[#FF6B35] rounded-full animate-pulse" />
@@ -115,7 +227,14 @@ const Secrets = () => {
             {/* Social Proof Avatars with Real Student Photos */}
             <div className="flex flex-col items-center gap-4 mt-6">
               <div className="flex items-center justify-center -space-x-3">
-                {[student1, student2, student3, student4, student5, student6].map((img, i) => <img key={i} src={img} alt={`Student ${i + 1}`} className="w-14 h-14 rounded-full border-3 border-white hover:scale-110 transition-transform shadow-lg object-cover" />)}
+                {[student1, student2, student3, student4, student5, student6].map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={`Student ${i + 1}`}
+                    className="w-14 h-14 rounded-full border-3 border-white hover:scale-110 transition-transform shadow-lg object-cover"
+                  />
+                ))}
               </div>
               <p className="text-sm font-medium text-[#4a4a4a]">For True Founders, Looking To Build A Real Online Business.</p>
             </div>
@@ -129,34 +248,41 @@ const Secrets = () => {
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl lg:text-2xl text-[#5a5a5a] font-medium leading-relaxed mt-6">
-                (Without Paid Ads, Cold Calling,<br className="hidden sm:block" /> 
+                (Without Paid Ads, Cold Calling,<br className="hidden sm:block" />
                 or Hiring a Sales Team)
               </p>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-[#6a6a6a] max-w-3xl mx-auto leading-relaxed mt-6">Get everything you need to sign $5K-$50K clients on LinkedIn + 1-on-1 founder coaching</p>
+              <p className="text-base md:text-lg text-[#6a6a6a] max-w-3xl mx-auto leading-relaxed mt-6">
+                Get everything you need to sign $5K-$50K clients on LinkedIn + 1-on-1 founder coaching
+              </p>
             </div>
 
             {/* VSL Video Player */}
             <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] mt-12">
-              <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{
-                width: '100%',
-                position: 'relative',
-                paddingTop: '56.25%'
-              }}></div>
+              <div
+                id="vidalytics_embed_KASel7JVLpBW35b6"
+                style={{
+                  width: "100%",
+                  position: "relative",
+                  paddingTop: "56.25%"
+                }}
+              ></div>
             </div>
 
             {/* Review Stars */}
-            <div className="flex flex-col items-center gap-3 mt-10">
-              
-              
-            </div>
+            <div className="flex flex-col items-center gap-3 mt-10"></div>
 
             {/* CTA Button with Integrated Urgency and Timer */}
             <div className="flex flex-col items-center justify-center mt-10">
-              <button onClick={() => document.getElementById('application-form')?.scrollIntoView({
-              behavior: 'smooth'
-            })} className="group relative w-full max-w-md">
+              <button
+                onClick={() =>
+                  document.getElementById("application-form")?.scrollIntoView({
+                    behavior: "smooth"
+                  })
+                }
+                className="group relative w-full max-w-md"
+              >
                 {/* Only 5 Spots Left Badge */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 inline-flex items-center gap-2 px-4 py-1.5 bg-[#FF6B35] text-white rounded-full text-xs font-bold shadow-lg">
                   <span>⚡</span>
@@ -181,9 +307,15 @@ const Secrets = () => {
             {/* Testimonial Quote with Photo */}
             <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/60 border border-[#FF6B35]/20 backdrop-blur-sm mt-16 shadow-lg">
               <div className="flex items-start gap-4">
-                <img src={ethanImage} alt="Ethan C." className="w-16 h-16 rounded-full object-cover border-2 border-[#FF6B35] flex-shrink-0" />
+                <img
+                  src={ethanImage}
+                  alt="Ethan C."
+                  className="w-16 h-16 rounded-full object-cover border-2 border-[#FF6B35] flex-shrink-0"
+                />
                 <div className="flex-1">
-                  <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-3">&quot;I Hit $10K in month 1 and exited for $50K+ in less then 4 months with the 1-on-1 support. Worth every penny.&quot;</p>
+                  <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-3">
+                    &quot;I Hit $10K in month 1 and exited for $50K+ in less then 4 months with the 1-on-1 support. Worth every penny.&quot;
+                  </p>
                   <p className="text-sm font-semibold text-[#FF6B35]">— Ethan C. Secrets Member</p>
                 </div>
               </div>
@@ -195,7 +327,6 @@ const Secrets = () => {
                 <div className="w-1.5 h-1.5 bg-[#FF6B35] rounded-full animate-pulse" />
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -205,10 +336,15 @@ const Secrets = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold">Ready to Build With Us?</h2>
-            
-            <button onClick={() => document.getElementById('application-form')?.scrollIntoView({
-            behavior: 'smooth'
-          })} className="group relative px-16 py-8 bg-primary text-primary-foreground rounded-2xl text-2xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow mx-auto block">
+
+            <button
+              onClick={() =>
+                document.getElementById("application-form")?.scrollIntoView({
+                  behavior: "smooth"
+                })
+              }
+              className="group relative px-16 py-8 bg-primary text-primary-foreground rounded-2xl text-2xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow mx-auto block"
+            >
               <span className="relative z-10 flex items-center gap-3 justify-center">
                 APPLY NOW (2-Minute Application)
                 <span className="transition-transform group-hover:translate-x-2">→</span>
@@ -225,7 +361,7 @@ const Secrets = () => {
       <section className="py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center space-y-4 mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold">Real Results From Real Operators</h2>
+            <h2 className="text-5xl md:text-6xl font-bold">Proof From 147+ Operators</h2>
             <p className="text-xl md:text-2xl text-muted-foreground italic">
               "We don't just teach this. Our students are living it."
             </p>
@@ -233,19 +369,15 @@ const Secrets = () => {
 
           {/* Video Testimonials */}
           <div className="grid md:grid-cols-3 gap-8 mb-24">
-            {[{
-            name: "Sarah K.",
-            result: "$0→$40K/mo",
-            time: "in 4 months"
-          }, {
-            name: "Eden R.",
-            result: "$10→$27K",
-            time: "in 90 days"
-          }, {
-            name: "Marcus T.",
-            result: "$15K client",
-            time: "in month 2"
-          }].map((testimonial, i) => <div key={i} className="group relative aspect-video rounded-2xl overflow-hidden border-2 border-border bg-secondary/50 hover:border-primary transition-all cursor-pointer">
+            {[
+              { name: "Sarah K.", result: "$0→$40K/mo", time: "in 4 months" },
+              { name: "Eden R.", result: "$10→$27K", time: "in 90 days" },
+              { name: "Marcus T.", result: "$15K client", time: "in month 2" }
+            ].map((testimonial, i) => (
+              <div
+                key={i}
+                className="group relative aspect-video rounded-2xl overflow-hidden border-2 border-border bg-secondary/50 hover:border-primary transition-all cursor-pointer"
+              >
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                   <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-primary border-b-[12px] border-b-transparent ml-1" />
@@ -254,71 +386,245 @@ const Secrets = () => {
                   <p className="text-3xl font-bold text-primary mb-1">{testimonial.result}</p>
                   <p className="text-muted-foreground">{testimonial.time}</p>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           {/* Screenshot Gallery */}
           <div className="mb-24">
-            <h3 className="text-3xl font-bold text-center mb-12">Wall Of Proof</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap justify-center gap-3 mb-12">
               {[
-                proofLinkedInPost,
-                proofAnalytics,
-                proofDiscoveryCalls,
-                proofViralPosts,
-                proofRevenue27k,
-                proofBookingCalls,
-                proofClientGrowth,
-                proofZellePayment,
-                proofStripeDashboard,
-                proofTestimonial,
-                proofRahulPosts,
-                proofDavidProfile,
-                proofCreativeEngine,
-                proofColdEmail,
-                proofTopPosts,
-                proofRobertoProfile,
-                proofOutreachAgent,
-                proofKnowledgeHub,
-                proofDashboard1,
-                proofDashboard2,
-                proofLinkedInBlueprint,
-                proofSyedProfile,
-                proofContentPerformance,
-                proofTopPerforming,
-                proofSlackTraining,
-                proofWhatsapp5Calls,
-                proofSlack12Calls,
-                proofWhatsappBooked,
-                proofCalendarMeetings,
-                proofEventData
-              ].map((proof, i) => (
+                { id: "all", label: `All (${totalCount})` },
+                { id: "revenue", label: `Revenue (${proofCategories.revenue.length})` },
+                { id: "posts", label: `Posts (${proofCategories.posts.length})` },
+                { id: "results", label: `Results (${proofCategories.results.length})` }
+              ].map((filter) => (
+                <button
+                  key={filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
+                  className={`px-6 py-3 rounded-full font-semibold transition-all ${
+                    activeFilter === filter.id
+                      ? "bg-[#FF6B35] text-white shadow-lg scale-105"
+                      : "bg-white/10 text-white hover:bg-white/20"
+                  }`}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Masonry Grid */}
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+              {displayedProofs.map((proof, i) => (
                 <div
                   key={i}
-                  className="premium-card-glow rounded-xl overflow-hidden hover:scale-105 transition-transform shadow-lg bg-white"
+                  className="break-inside-avoid cursor-pointer group"
+                  onClick={() => setLightboxIndex(allProofs.indexOf(proof))}
                 >
-                  <img
-                    src={proof}
-                    alt={`Proof ${i + 1}`}
-                    className="w-full h-auto object-contain"
-                  />
+                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <img
+                      src={proof}
+                      alt={`Proof ${i + 1}`}
+                      className="w-full h-auto object-contain max-h-[600px]"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* Load More Section */}
+            {activeFilter === "all" && displayedProofs.length < totalCount && (
+              <div className="text-center mt-16">
+                <button
+                  onClick={() => setShowOverlay(true)}
+                  className="bg-[#FF6B35] text-white px-12 py-6 rounded-full text-xl font-bold hover:scale-105 hover:shadow-[0_0_30px_rgba(255,107,53,0.5)] transition-all duration-300 w-full max-w-[240px]"
+                >
+                  VIEW ALL {totalCount} PROOFS →
+                </button>
+                <p className="text-gray-400 mt-4">Organized gallery with easy navigation</p>
+              </div>
+            )}
           </div>
+
+          {/* Fullscreen Overlay */}
+          {showOverlay && (
+            <div className="fixed inset-0 bg-black/95 z-50 overflow-y-auto">
+              <div className="min-h-screen p-8">
+                {/* Header */}
+                <div className="sticky top-0 bg-black/95 pb-6 z-10">
+                  <div className="flex justify-between items-center mb-6">
+                    <p className="text-white text-lg">Showing 1-{totalCount}</p>
+                    <button
+                      onClick={() => setShowOverlay(false)}
+                      className="text-white text-4xl hover:scale-110 transition-transform w-12 h-12 flex items-center justify-center"
+                      aria-label="Close overlay"
+                    >
+                      ✕
+                    </button>
+                  </div>
+
+                  {/* Filter Tabs in Overlay */}
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {[
+                      { id: "all", label: `All (${totalCount})` },
+                      { id: "revenue", label: `Revenue (${proofCategories.revenue.length})` },
+                      { id: "posts", label: `Posts (${proofCategories.posts.length})` },
+                      { id: "results", label: `Results (${proofCategories.results.length})` }
+                    ].map((filter) => (
+                      <button
+                        key={filter.id}
+                        onClick={() => setActiveFilter(filter.id)}
+                        className={`px-6 py-3 rounded-full font-semibold transition-all ${
+                          activeFilter === filter.id
+                            ? "bg-[#FF6B35] text-white shadow-lg scale-105"
+                            : "bg-white/10 text-white hover:bg-white/20"
+                        }`}
+                      >
+                        {filter.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Full Grid */}
+                <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+                  {(activeFilter === "all" ? allProofs : proofCategories[activeFilter as keyof typeof proofCategories]).map((proof, i) => (
+                    <div
+                      key={i}
+                      className="break-inside-avoid cursor-pointer group"
+                      onClick={() => {
+                        setLightboxIndex(allProofs.indexOf(proof));
+                        setShowOverlay(false);
+                      }}
+                    >
+                      <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                        <img
+                          src={proof}
+                          alt={`Proof ${i + 1}`}
+                          className="w-full h-auto object-contain max-h-[600px]"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Lightbox */}
+          {lightboxIndex !== null && (
+            <div
+              className="fixed inset-0 bg-black/95 z-[60] flex items-center justify-center"
+              onClick={() => setLightboxIndex(null)}
+              role="dialog"
+              aria-modal="true"
+              aria-label={`Image ${lightboxIndex + 1} of ${totalCount}`}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setLightboxIndex(null)}
+                className="absolute top-8 right-8 text-white text-5xl hover:scale-110 transition-transform z-10"
+                aria-label="Close lightbox"
+              >
+                ✕
+              </button>
+
+              {/* Image Counter */}
+              <div className="absolute top-8 left-8 text-white text-xl font-semibold z-10">
+                {lightboxIndex + 1} / {totalCount}
+              </div>
+
+              {/* Previous Arrow */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLightboxIndex((lightboxIndex - 1 + totalCount) % totalCount);
+                }}
+                className="absolute left-8 text-white text-6xl hover:scale-110 transition-transform z-10"
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+
+              {/* Main Image */}
+              <div className="max-w-[90vw] max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+                <img
+                  src={allProofs[lightboxIndex]}
+                  alt={`Proof ${lightboxIndex + 1}`}
+                  className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                />
+              </div>
+
+              {/* Next Arrow */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setLightboxIndex((lightboxIndex + 1) % totalCount);
+                }}
+                className="absolute right-8 text-white text-6xl hover:scale-110 transition-transform z-10"
+                aria-label="Next image"
+              >
+                ›
+              </button>
+
+              {/* Thumbnail Strip */}
+              <div
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 overflow-x-auto max-w-[90vw] px-4"
+                onClick={(e) => e.stopPropagation()}
+                role="list"
+                aria-label="Thumbnail navigation"
+              >
+                {allProofs
+                  .slice(Math.max(0, lightboxIndex - 2), Math.min(totalCount, lightboxIndex + 3))
+                  .map((proof, i) => {
+                    const actualIndex = Math.max(0, lightboxIndex - 2) + i;
+                    return (
+                      <img
+                        key={actualIndex}
+                        src={proof}
+                        alt={`Thumbnail ${actualIndex + 1}`}
+                        className={`h-20 w-20 object-cover rounded cursor-pointer transition-all ${
+                          actualIndex === lightboxIndex ? "ring-4 ring-[#FF6B35] scale-110" : "opacity-50 hover:opacity-100"
+                        }`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setLightboxIndex(actualIndex);
+                        }}
+                        role="listitem"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            setLightboxIndex(actualIndex);
+                          }
+                        }}
+                      />
+                    );
+                  })}
+              </div>
+            </div>
+          )}
 
           {/* Written Testimonials */}
           <div className="max-w-5xl mx-auto space-y-8 mb-24">
-            {[{
-            quote: "The 1-on-1 calls are worth the price alone. Syed helped me close my first $5K client on our second call.",
-            author: "Alex M., Secrets Member"
-          }, {
-            quote: "Hit $40K in 4 months. Would've taken a year with Academy alone. The Secrets vault changed everything.",
-            author: "Sarah K., Secrets Member"
-          }, {
-            quote: "The elite network is insane. Got connected to a CPA who saved me $18K in taxes first year.",
-            author: "James L., Secrets Member"
-          }].map((testimonial, i) => <div key={i} className="flex gap-6 p-8 rounded-2xl bg-secondary/50 border border-border hover:border-primary transition-colors">
+            {[
+              {
+                quote: "The 1-on-1 calls are worth the price alone. Syed helped me close my first $5K client on our second call.",
+                author: "Alex M., Secrets Member"
+              },
+              {
+                quote: "Hit $40K in 4 months. Would've taken a year with Academy alone. The Secrets vault changed everything.",
+                author: "Sarah K., Secrets Member"
+              },
+              {
+                quote: "The elite network is insane. Got connected to a CPA who saved me $18K in taxes first year.",
+                author: "James L., Secrets Member"
+              }
+            ].map((testimonial, i) => (
+              <div key={i} className="flex gap-6 p-8 rounded-2xl bg-secondary/50 border border-border hover:border-primary transition-colors">
                 <div className="w-16 h-16 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-2xl">
                   👤
                 </div>
@@ -326,14 +632,22 @@ const Secrets = () => {
                   <p className="text-lg md:text-xl leading-relaxed italic">"{testimonial.quote}"</p>
                   <p className="text-sm font-semibold text-primary">— {testimonial.author}</p>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           {/* LinkedIn Operator Student Photos */}
           <div className="text-center space-y-8 mb-24">
             <h3 className="text-3xl font-bold mb-8">LinkedIn Operator Students</h3>
             <div className="flex flex-wrap justify-center gap-4">
-              {[student1, student2, student3, student4, student5, student6, student7].map((img, i) => <img key={i} src={img} alt={`LinkedIn Operator Student ${i + 1}`} className="w-20 h-20 rounded-full border-2 border-primary/50 hover:scale-110 transition-transform shadow-lg object-cover" />)}
+              {[student1, student2, student3, student4, student5, student6, student7].map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  alt={`LinkedIn Operator Student ${i + 1}`}
+                  className="w-20 h-20 rounded-full border-2 border-primary/50 hover:scale-110 transition-transform shadow-lg object-cover"
+                />
+              ))}
             </div>
             <p className="text-xl font-semibold">Join 20+ elite operators building 6-7 figure agencies</p>
           </div>
@@ -345,22 +659,17 @@ const Secrets = () => {
               SECRETS MEMBER RESULTS (LAST 90 DAYS)
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
-              {[{
-              label: "Average time to first client",
-              value: "32 days"
-            }, {
-              label: "Average MRR after 90 days",
-              value: "$18,400"
-            }, {
-              label: "Members who hit $10K+",
-              value: "78%"
-            }, {
-              label: "Average deal size",
-              value: "$4,200"
-            }].map((stat, i) => <div key={i} className="text-center space-y-2">
+              {[
+                { label: "Average time to first client", value: "32 days" },
+                { label: "Average MRR after 90 days", value: "$18,400" },
+                { label: "Members who hit $10K+", value: "78%" },
+                { label: "Average deal size", value: "$4,200" }
+              ].map((stat, i) => (
+                <div key={i} className="text-center space-y-2">
                   <p className="text-4xl font-bold text-primary">{stat.value}</p>
                   <p className="text-muted-foreground">{stat.label}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -381,39 +690,60 @@ const Secrets = () => {
               {/* Your Information */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold border-b border-border pb-4">YOUR INFORMATION</h3>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold">First Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors"
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold">Last Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors"
+                      required
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Email *</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors"
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Phone *</label>
-                  <input type="tel" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                  <input
+                    type="tel"
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors"
+                    required
+                  />
                 </div>
               </div>
 
               {/* About You */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold border-b border-border pb-4">ABOUT YOU</h3>
-                
+
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Current situation? *</label>
-                  {['Complete beginner', 'Running an agency', 'Freelancer/consultant', 'Other'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {["Complete beginner", "Running an agency", "Freelancer/consultant", "Other"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors"
+                    >
                       <input type="radio" name="situation" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>)}
+                    </label>
+                  ))}
                 </div>
 
                 <div className="space-y-2">
@@ -429,41 +759,66 @@ const Secrets = () => {
 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Monthly revenue goal? *</label>
-                  {['$10K/month', '$25K/month', '$50K+/month'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {["$10K/month", "$25K/month", "$50K+/month"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors"
+                    >
                       <input type="radio" name="goal" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>)}
+                    </label>
+                  ))}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Why Secrets over Academy? *</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none" placeholder="2-3 sentences" required />
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none"
+                    placeholder="2-3 sentences"
+                    required
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Biggest challenge right now? *</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none" placeholder="2-3 sentences" required />
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none"
+                    placeholder="2-3 sentences"
+                    required
+                  />
                 </div>
               </div>
 
               {/* Investment */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold border-b border-border pb-4">INVESTMENT</h3>
-                
+
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Ready to invest $5,000+? *</label>
-                  {['Yes, pay in full', 'Yes, need payment plan', 'Want to discuss first'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {["Yes, pay in full", "Yes, need payment plan", "Want to discuss first"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors"
+                    >
                       <input type="radio" name="investment" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>)}
+                    </label>
+                  ))}
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">When can you start? *</label>
-                  {['This week', 'Next 2 weeks', 'This month', 'Just exploring'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {["This week", "Next 2 weeks", "This month", "Just exploring"].map((option) => (
+                    <label
+                      key={option}
+                      className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors"
+                    >
                       <input type="radio" name="start" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>)}
+                    </label>
+                  ))}
                 </div>
               </div>
 
@@ -476,7 +831,10 @@ const Secrets = () => {
               </label>
 
               {/* Submit Button */}
-              <button type="submit" className="group relative w-full px-12 py-6 bg-primary text-primary-foreground rounded-2xl text-xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow">
+              <button
+                type="submit"
+                className="group relative w-full px-12 py-6 bg-primary text-primary-foreground rounded-2xl text-xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow"
+              >
                 <span className="relative z-10 flex items-center gap-3 justify-center">
                   Submit Application
                   <span className="transition-transform group-hover:translate-x-2">→</span>
@@ -492,6 +850,8 @@ const Secrets = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Secrets;
