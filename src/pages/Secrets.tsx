@@ -81,16 +81,19 @@ const Secrets = () => {
             </div>
 
             {/* VSL Video Player */}
-            <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] bg-white group cursor-pointer mt-12 border-2 border-[#FF6B35]/20">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#FFE8D6]/90 to-[#FFF9F0]/80 backdrop-blur-sm group-hover:backdrop-blur-none transition-all duration-300">
-                <div className="relative">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#FF6B35] flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-[0_10px_40px_rgba(255,107,53,0.5)]">
-                    <div className="w-0 h-0 border-t-[18px] md:border-t-[24px] border-t-transparent border-l-[28px] md:border-l-[36px] border-l-white border-b-[18px] md:border-b-[24px] border-b-transparent ml-2" />
-                  </div>
-                </div>
-              </div>
-              {/* Placeholder for video thumbnail */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FFE8D6]/40 to-[#FFD7B8]/60" />
+            <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_80px_rgba(255,107,53,0.3)] mt-12">
+              <div id="vidalytics_embed_KASel7JVLpBW35b6" style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}></div>
+              <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
+                (function (v, i, d, a, l, y, t, c, s) {
+                    y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+                    if (!vsl){vsl=function(u,cb){
+                        if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+                        if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.onreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+                        i.getElementsByTagName("head")[0].appendChild(s);
+                    };}
+                    vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+                })(window, document, 'Vidalytics', 'vidalytics_embed_KASel7JVLpBW35b6', 'https://fast.vidalytics.com/embeds/BNMw3AeC/KASel7JVLpBW35b6/');
+              `}} />
             </div>
 
             {/* Review Stars */}
