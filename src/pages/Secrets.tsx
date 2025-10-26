@@ -4,18 +4,13 @@ import { useState } from "react";
 import logo from "@/assets/logo-text.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import ethanImage from "@/assets/ethan-clouser.png";
-import aaninImage from "@/assets/aanin-mahmodul.png";
-import aryanImage from "@/assets/aryan-shah.png";
-import benImage from "@/assets/ben-alistor.png";
-import craigImage from "@/assets/craig-cecilio.png";
-import jessicaImage from "@/assets/jessica-green.png";
-import komailImage from "@/assets/komail-gillani.png";
-import lianImage from "@/assets/lian-lim.png";
-import rubaiyatImage from "@/assets/rubaiyat-hossain.png";
-import samBeckImage from "@/assets/sam-beck.png";
-import stevanImage from "@/assets/stevan-petrusic.png";
-import vasilijeImage from "@/assets/vasilije-simic.png";
-import walterImage from "@/assets/walter-chung.png";
+import student1 from "@/assets/student-1.png";
+import student2 from "@/assets/student-2.png";
+import student3 from "@/assets/student-3.png";
+import student4 from "@/assets/student-4.png";
+import student5 from "@/assets/student-5.png";
+import student6 from "@/assets/student-6.png";
+import student7 from "@/assets/student-7.png";
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,7 +63,7 @@ const Secrets = () => {
             {/* Social Proof Avatars with Real Student Photos */}
             <div className="flex flex-col items-center gap-4 mt-6">
               <div className="flex items-center justify-center -space-x-3">
-                {[aaninImage, aryanImage, benImage, jessicaImage, komailImage, lianImage].map((img, i) => (
+                {[student1, student2, student3, student4, student5, student6].map((img, i) => (
                   <img 
                     key={i}
                     src={img}
@@ -308,9 +303,7 @@ const Secrets = () => {
             <h3 className="text-3xl font-bold mb-8">LinkedIn Operator Students</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                aaninImage, aryanImage, benImage, craigImage, ethanImage, 
-                jessicaImage, komailImage, lianImage, rubaiyatImage, 
-                samBeckImage, stevanImage, vasilijeImage, walterImage
+                student1, student2, student3, student4, student5, student6, student7
               ].map((img, i) => (
                 <img 
                   key={i}
