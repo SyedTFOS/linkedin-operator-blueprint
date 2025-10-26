@@ -2,13 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo-text.png";
-
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
@@ -21,26 +18,16 @@ const Secrets = () => {
       {/* Mobile Navigation - Sliding Header */}
       <div className="md:hidden">
         {/* Mobile Header Toggle Button - Only show when menu is closed */}
-        {!isMobileMenuOpen && (
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform"
-            aria-label="Open menu"
-          >
+        {!isMobileMenuOpen && <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform" aria-label="Open menu">
             <Menu className="w-6 h-6" />
-          </button>
-        )}
+          </button>}
 
         {/* Mobile Sliding Header */}
         <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
           <div className="container mx-auto px-6 py-3 relative">
             <div className="flex items-center justify-between">
               <img src={logo} alt="LinkedIn Operator" className="h-8" />
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform"
-                aria-label="Close menu"
-              >
+              <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -67,18 +54,13 @@ const Secrets = () => {
             {/* Social Proof Avatars */}
             <div className="flex flex-col items-center gap-4 mt-6">
               <div className="flex items-center justify-center -space-x-3">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div 
-                    key={i} 
-                    className="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF6B35]/30 to-[#FFB88C]/20 border-3 border-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg"
-                  >
+                {Array.from({
+                length: 6
+              }).map((_, i) => <div key={i} className="w-14 h-14 rounded-full bg-gradient-to-br from-[#FF6B35]/30 to-[#FFB88C]/20 border-3 border-white flex items-center justify-center text-xl hover:scale-110 transition-transform shadow-lg">
                     👤
-                  </div>
-                ))}
+                  </div>)}
               </div>
-              <p className="text-sm font-medium text-[#4a4a4a]">
-                147+ Operators scaled past $50K/month
-              </p>
+              <p className="text-sm font-medium text-[#4a4a4a]">For True Founders, Looking To Build A Real Online Business.</p>
             </div>
 
             {/* Main Headline */}
@@ -95,9 +77,7 @@ const Secrets = () => {
               </p>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-[#6a6a6a] max-w-3xl mx-auto leading-relaxed mt-6">
-                Get everything you need to sign $5K-$50K clients on LinkedIn—plus 1-on-1 founder coaching every week.
-              </p>
+              <p className="text-base md:text-lg text-[#6a6a6a] max-w-3xl mx-auto leading-relaxed mt-6">Get everything you need to sign $5K-$50K clients on LinkedIn + 1-on-1 founder coaching</p>
             </div>
 
             {/* VSL Video Player */}
@@ -116,9 +96,9 @@ const Secrets = () => {
             {/* Review Stars */}
             <div className="flex flex-col items-center gap-3 mt-10">
               <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className="text-[#FF6B35] text-2xl">⭐</span>
-                ))}
+                {Array.from({
+                length: 5
+              }).map((_, i) => <span key={i} className="text-[#FF6B35] text-2xl">⭐</span>)}
               </div>
               <p className="text-sm font-semibold text-[#1a1a1a]">
                 Excellent | <span className="text-[#FF6B35]">4.9/5</span>
@@ -127,10 +107,9 @@ const Secrets = () => {
 
             {/* CTA Button & Urgency Side by Side on Desktop */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mt-10">
-              <button 
-                onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative px-10 py-5 bg-[#FF6B35] text-white rounded-xl text-lg font-bold overflow-hidden transition-all hover:scale-105 shadow-[0_10px_40px_rgba(255,107,53,0.4)] hover:shadow-[0_15px_50px_rgba(255,107,53,0.6)] inline-flex items-center gap-3 w-full md:w-auto justify-center"
-              >
+              <button onClick={() => document.getElementById('application-form')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="group relative px-10 py-5 bg-[#FF6B35] text-white rounded-xl text-lg font-bold overflow-hidden transition-all hover:scale-105 shadow-[0_10px_40px_rgba(255,107,53,0.4)] hover:shadow-[0_15px_50px_rgba(255,107,53,0.6)] inline-flex items-center gap-3 w-full md:w-auto justify-center">
                 <span className="relative z-10">APPLY NOW (2-Minute Application)</span>
                 <span className="relative z-10 transition-transform group-hover:translate-y-1">↓</span>
               </button>
@@ -147,12 +126,8 @@ const Secrets = () => {
 
             {/* Testimonial Quote */}
             <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-white/60 border border-[#FF6B35]/20 backdrop-blur-sm mt-12 shadow-lg">
-              <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-4">
-                "Hit $40K in 4 months with the 1-on-1 support. Worth every penny."
-              </p>
-              <p className="text-sm font-semibold text-[#FF6B35]">
-                — Sarah K., Secrets Member
-              </p>
+              <p className="text-base md:text-lg italic text-[#2a2a2a] leading-relaxed mb-4">&quot;I Hit $10K in month 1 and exited for $50K+ in less then 4 months with the 1-on-1 support. Worth every penny.&quot;</p>
+              <p className="text-sm font-semibold text-[#FF6B35]">— Ethan C. Secrets Member</p>
             </div>
 
             {/* Scroll Arrow */}
@@ -172,10 +147,9 @@ const Secrets = () => {
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold">Ready to Build With Us?</h2>
             
-            <button 
-              onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group relative px-16 py-8 bg-primary text-primary-foreground rounded-2xl text-2xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow mx-auto block"
-            >
+            <button onClick={() => document.getElementById('application-form')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="group relative px-16 py-8 bg-primary text-primary-foreground rounded-2xl text-2xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow mx-auto block">
               <span className="relative z-10 flex items-center gap-3 justify-center">
                 APPLY NOW (2-Minute Application)
                 <span className="transition-transform group-hover:translate-x-2">→</span>
@@ -200,12 +174,19 @@ const Secrets = () => {
 
           {/* Video Testimonials */}
           <div className="grid md:grid-cols-3 gap-8 mb-24">
-            {[
-              { name: "Sarah K.", result: "$0→$40K/mo", time: "in 4 months" },
-              { name: "Eden R.", result: "$10→$27K", time: "in 90 days" },
-              { name: "Marcus T.", result: "$15K client", time: "in month 2" }
-            ].map((testimonial, i) => (
-              <div key={i} className="group relative aspect-video rounded-2xl overflow-hidden border-2 border-border bg-secondary/50 hover:border-primary transition-all cursor-pointer">
+            {[{
+            name: "Sarah K.",
+            result: "$0→$40K/mo",
+            time: "in 4 months"
+          }, {
+            name: "Eden R.",
+            result: "$10→$27K",
+            time: "in 90 days"
+          }, {
+            name: "Marcus T.",
+            result: "$15K client",
+            time: "in month 2"
+          }].map((testimonial, i) => <div key={i} className="group relative aspect-video rounded-2xl overflow-hidden border-2 border-border bg-secondary/50 hover:border-primary transition-all cursor-pointer">
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                   <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-primary border-b-[12px] border-b-transparent ml-1" />
@@ -214,25 +195,38 @@ const Secrets = () => {
                   <p className="text-3xl font-bold text-primary mb-1">{testimonial.result}</p>
                   <p className="text-muted-foreground">{testimonial.time}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Screenshot Gallery */}
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-center mb-12">Revenue Proof</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { type: "Stripe", amount: "$15K MRR" },
-                { type: "Bank", amount: "$8,729" },
-                { type: "Invoice", amount: "$5,000" },
-                { type: "LinkedIn", amount: "1M Views" },
-                { type: "Calendar", amount: "8 Calls" },
-                { type: "DM Reply", amount: "Yes!" },
-                { type: "Stripe", amount: "$22K MRR" },
-                { type: "Wire", amount: "$12,500" }
-              ].map((proof, i) => (
-                <div key={i} className="premium-card-glow rounded-xl p-6 text-center space-y-3 hover:scale-105 transition-transform">
+              {[{
+              type: "Stripe",
+              amount: "$15K MRR"
+            }, {
+              type: "Bank",
+              amount: "$8,729"
+            }, {
+              type: "Invoice",
+              amount: "$5,000"
+            }, {
+              type: "LinkedIn",
+              amount: "1M Views"
+            }, {
+              type: "Calendar",
+              amount: "8 Calls"
+            }, {
+              type: "DM Reply",
+              amount: "Yes!"
+            }, {
+              type: "Stripe",
+              amount: "$22K MRR"
+            }, {
+              type: "Wire",
+              amount: "$12,500"
+            }].map((proof, i) => <div key={i} className="premium-card-glow rounded-xl p-6 text-center space-y-3 hover:scale-105 transition-transform">
                   <div className="text-4xl mb-2">
                     {proof.type.includes('Stripe') && '💳'}
                     {proof.type.includes('Bank') && '🏦'}
@@ -244,28 +238,22 @@ const Secrets = () => {
                   </div>
                   <p className="text-sm text-muted-foreground font-semibold">{proof.type}</p>
                   <p className="text-2xl font-bold text-primary">{proof.amount}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
           {/* Written Testimonials */}
           <div className="max-w-5xl mx-auto space-y-8 mb-24">
-            {[
-              {
-                quote: "The 1-on-1 calls are worth the price alone. Syed helped me close my first $5K client on our second call.",
-                author: "Alex M., Secrets Member"
-              },
-              {
-                quote: "Hit $40K in 4 months. Would've taken a year with Academy alone. The Secrets vault changed everything.",
-                author: "Sarah K., Secrets Member"
-              },
-              {
-                quote: "The elite network is insane. Got connected to a CPA who saved me $18K in taxes first year.",
-                author: "James L., Secrets Member"
-              }
-            ].map((testimonial, i) => (
-              <div key={i} className="flex gap-6 p-8 rounded-2xl bg-secondary/50 border border-border hover:border-primary transition-colors">
+            {[{
+            quote: "The 1-on-1 calls are worth the price alone. Syed helped me close my first $5K client on our second call.",
+            author: "Alex M., Secrets Member"
+          }, {
+            quote: "Hit $40K in 4 months. Would've taken a year with Academy alone. The Secrets vault changed everything.",
+            author: "Sarah K., Secrets Member"
+          }, {
+            quote: "The elite network is insane. Got connected to a CPA who saved me $18K in taxes first year.",
+            author: "James L., Secrets Member"
+          }].map((testimonial, i) => <div key={i} className="flex gap-6 p-8 rounded-2xl bg-secondary/50 border border-border hover:border-primary transition-colors">
                 <div className="w-16 h-16 rounded-full bg-primary/20 flex-shrink-0 flex items-center justify-center text-2xl">
                   👤
                 </div>
@@ -273,18 +261,17 @@ const Secrets = () => {
                   <p className="text-lg md:text-xl leading-relaxed italic">"{testimonial.quote}"</p>
                   <p className="text-sm font-semibold text-primary">— {testimonial.author}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Member Photos */}
           <div className="text-center space-y-8 mb-24">
             <div className="flex flex-wrap justify-center gap-4">
-              {Array.from({ length: 16 }).map((_, i) => (
-                <div key={i} className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/50 flex items-center justify-center text-2xl hover:scale-110 transition-transform">
+              {Array.from({
+              length: 16
+            }).map((_, i) => <div key={i} className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/50 flex items-center justify-center text-2xl hover:scale-110 transition-transform">
                   👤
-                </div>
-              ))}
+                </div>)}
             </div>
             <p className="text-xl font-semibold">Join 20+ elite operators building 6-7 figure agencies</p>
           </div>
@@ -296,17 +283,22 @@ const Secrets = () => {
               SECRETS MEMBER RESULTS (LAST 90 DAYS)
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
-              {[
-                { label: "Average time to first client", value: "32 days" },
-                { label: "Average MRR after 90 days", value: "$18,400" },
-                { label: "Members who hit $10K+", value: "78%" },
-                { label: "Average deal size", value: "$4,200" }
-              ].map((stat, i) => (
-                <div key={i} className="text-center space-y-2">
+              {[{
+              label: "Average time to first client",
+              value: "32 days"
+            }, {
+              label: "Average MRR after 90 days",
+              value: "$18,400"
+            }, {
+              label: "Members who hit $10K+",
+              value: "78%"
+            }, {
+              label: "Average deal size",
+              value: "$4,200"
+            }].map((stat, i) => <div key={i} className="text-center space-y-2">
                   <p className="text-4xl font-bold text-primary">{stat.value}</p>
                   <p className="text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -356,12 +348,10 @@ const Secrets = () => {
                 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Current situation? *</label>
-                  {['Complete beginner', 'Running an agency', 'Freelancer/consultant', 'Other'].map((option) => (
-                    <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {['Complete beginner', 'Running an agency', 'Freelancer/consultant', 'Other'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
                       <input type="radio" name="situation" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>
-                  ))}
+                    </label>)}
                 </div>
 
                 <div className="space-y-2">
@@ -377,12 +367,10 @@ const Secrets = () => {
 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Monthly revenue goal? *</label>
-                  {['$10K/month', '$25K/month', '$50K+/month'].map((option) => (
-                    <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {['$10K/month', '$25K/month', '$50K+/month'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
                       <input type="radio" name="goal" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>
-                  ))}
+                    </label>)}
                 </div>
 
                 <div className="space-y-2">
@@ -402,22 +390,18 @@ const Secrets = () => {
                 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Ready to invest $5,000+? *</label>
-                  {['Yes, pay in full', 'Yes, need payment plan', 'Want to discuss first'].map((option) => (
-                    <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {['Yes, pay in full', 'Yes, need payment plan', 'Want to discuss first'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
                       <input type="radio" name="investment" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>
-                  ))}
+                    </label>)}
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">When can you start? *</label>
-                  {['This week', 'Next 2 weeks', 'This month', 'Just exploring'].map((option) => (
-                    <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                  {['This week', 'Next 2 weeks', 'This month', 'Just exploring'].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
                       <input type="radio" name="start" className="w-5 h-5" />
                       <span>{option}</span>
-                    </label>
-                  ))}
+                    </label>)}
                 </div>
               </div>
 
@@ -430,10 +414,7 @@ const Secrets = () => {
               </label>
 
               {/* Submit Button */}
-              <button 
-                type="submit"
-                className="group relative w-full px-12 py-6 bg-primary text-primary-foreground rounded-2xl text-xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow"
-              >
+              <button type="submit" className="group relative w-full px-12 py-6 bg-primary text-primary-foreground rounded-2xl text-xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow">
                 <span className="relative z-10 flex items-center gap-3 justify-center">
                   Submit Application
                   <span className="transition-transform group-hover:translate-x-2">→</span>
@@ -449,8 +430,6 @@ const Secrets = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Secrets;
