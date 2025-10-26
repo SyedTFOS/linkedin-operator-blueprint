@@ -17,6 +17,9 @@ import yCombinatorLogo from "@/assets/y-combinator-logo.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import forbesLogo from "@/assets/forbes-logo.png";
+import student1 from "@/assets/student-1.png";
+import student2 from "@/assets/student-2.png";
+import student3 from "@/assets/student-3.png";
 const Hero = () => {
   const [studentsApi, setStudentsApi] = useState<CarouselApi>();
   const [businessApi, setBusinessApi] = useState<CarouselApi>();
@@ -103,9 +106,9 @@ const Hero = () => {
                 {/* Social Proof */}
                 <div className="inline-flex items-center gap-2.5 px-3 py-2 rounded-full bg-muted/50 border border-border/50 w-fit">
                   <div className="flex -space-x-2">
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-background" />
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-accent to-accent/60 border-2 border-background" />
-                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-primary/80 to-accent/80 border-2 border-background" />
+                    <img src={student1} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" />
+                    <img src={student2} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" />
+                    <img src={student3} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" />
                   </div>
                   <div className="flex items-center gap-1.5">
                     <div className="flex gap-0.5">

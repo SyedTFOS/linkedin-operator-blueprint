@@ -2,6 +2,9 @@ import { ArrowRight, X, ChevronUp, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import whopLogo from "@/assets/whop-logo-light.png";
+import student4 from "@/assets/student-4.png";
+import student5 from "@/assets/student-5.png";
+import student6 from "@/assets/student-6.png";
 import { useState, useEffect } from "react";
 
 const WhopWidget = () => {
@@ -78,9 +81,9 @@ const WhopWidget = () => {
               {/* Social proof indicator */}
               <div className="flex items-center gap-2 mt-3 justify-center">
                 <div className="flex -space-x-2">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary to-primary/60 border-2 border-card" />
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-accent to-accent/60 border-2 border-card" />
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary/80 to-accent/80 border-2 border-card" />
+                  <img src={student4} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
+                  <img src={student5} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
+                  <img src={student6} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
                 </div>
                 <span className="text-xs text-muted-foreground font-medium">Active now</span>
               </div>
