@@ -746,7 +746,10 @@ const WhatsInsideSection = () => {
                   {/* CTA */}
                   <Button 
                     className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold"
-                    onClick={() => navigate(activePath === 'lia' ? '/agency/secrets' : '/business/done-for-you')}
+                    onClick={() => {
+                      navigate(activePath === 'lia' ? '/agency/secrets' : '/business/done-for-you');
+                      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+                    }}
                   >
                     {activePath === 'lia' ? 'Apply For Secrets' : 'Apply For DFY'}
                   </Button>

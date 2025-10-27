@@ -53,6 +53,11 @@ const Secrets = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   // Define all proof images
   const allProofs = [proofLinkedInPost, proofAnalytics, proofDiscoveryCalls, proofViralPosts, proofRevenue27k, proofBookingCalls, proofClientGrowth, proofZellePayment, proofStripeDashboard, proofTestimonial, proofRahulPosts, proofDavidProfile, proofCreativeEngine, proofColdEmail, proofTopPosts, proofRobertoProfile, proofOutreachAgent, proofKnowledgeHub, proofDashboard1, proofDashboard2, proofLinkedInBlueprint, proofSyedProfile, proofContentPerformance, proofTopPerforming, proofSlackTraining, proofWhatsapp5Calls, proofSlack12Calls, proofWhatsappBooked, proofCalendarMeetings, proofEventData, proofInboundStrategy, proofPlayerTwoDeal, proof3rdClientSigned, proofTopCustomers, proofCustomerSpend];
   const proofCategories = {

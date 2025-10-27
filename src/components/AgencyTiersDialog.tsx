@@ -181,7 +181,10 @@ const AgencyTiersDialog = ({ open, onOpenChange }: AgencyTiersDialogProps) => {
                 className="w-full" 
                 size="lg" 
                 variant="hero"
-                onClick={() => navigate('/agency/secrets')}
+                onClick={() => {
+                  navigate('/agency/secrets');
+                  setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
+                }}
               >
                 Apply for Secrets
                 <ArrowRight className="ml-2 h-5 w-5" />
