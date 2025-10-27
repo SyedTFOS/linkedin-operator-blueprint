@@ -6,9 +6,11 @@ import student4 from "@/assets/student-4.png";
 import student5 from "@/assets/student-5.png";
 import student6 from "@/assets/student-6.png";
 import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const WhopWidget = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const isMobile = useIsMobile();
+  const [isVisible, setIsVisible] = useState(!isMobile);
   const [timeLeft, setTimeLeft] = useState(4 * 60 * 60 + 10 * 60 + 57); // 4:10:57 in seconds
 
   useEffect(() => {
@@ -103,13 +105,13 @@ const WhopWidget = () => {
           </button>
         </div>
       ) : (
-        <button
+        <Button
           onClick={() => setIsVisible(true)}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full p-3 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-scale-in"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-scale-in font-semibold"
           aria-label="Show widget"
         >
-          <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
+          {isMobile ? "Join Our Free Whop" : <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />}
+        </Button>
       )}
     </div>
   );
