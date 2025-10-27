@@ -2,9 +2,11 @@ import { Crown, Package, ArrowRight, X, BookOpen, Users, Clock, Target, User, In
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AgencyTiers = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       {/* Close Button */}
@@ -81,7 +83,12 @@ const AgencyTiers = () => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full" size="lg" variant="hero">
+              <Button 
+                className="w-full" 
+                size="lg" 
+                variant="hero"
+                onClick={() => navigate('/agency/academy')}
+              >
                 Join Academy
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -167,7 +174,12 @@ const AgencyTiers = () => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full" size="lg" variant="hero">
+              <Button 
+                className="w-full" 
+                size="lg" 
+                variant="hero"
+                onClick={() => navigate('/agency/secrets')}
+              >
                 Apply for Secrets
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -186,7 +198,17 @@ const AgencyTiers = () => {
                 See Full Comparison
               </Button>
             </Link>
-            <Button variant="hero-outline" size="lg">
+            <Button 
+              variant="hero-outline" 
+              size="lg"
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const chatSection = document.getElementById('chat-leo');
+                  chatSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }}
+            >
               Ask Leo to Recommend
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

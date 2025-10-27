@@ -2,9 +2,11 @@ import { Crown, Package, ArrowRight, X, BookOpen, Users, Target, Headphones, Inf
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const BusinessTiers = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-blue-500/5">
       {/* Close Button */}
@@ -81,7 +83,11 @@ const BusinessTiers = () => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+              <Button 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white" 
+                size="lg"
+                onClick={() => navigate('/business/founder')}
+              >
                 Join Founder Program
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -167,7 +173,11 @@ const BusinessTiers = () => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full bg-[#FFB800] hover:bg-[#FFB800]/90 text-black font-semibold" size="lg">
+              <Button 
+                className="w-full bg-[#FFB800] hover:bg-[#FFB800]/90 text-black font-semibold" 
+                size="lg"
+                onClick={() => navigate('/business/done-for-you')}
+              >
                 Apply for DFY Service
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -186,7 +196,17 @@ const BusinessTiers = () => {
                 See Full Comparison
               </Button>
             </Link>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+            <Button 
+              className="bg-blue-600 hover:bg-blue-700 text-white" 
+              size="lg"
+              onClick={() => {
+                navigate('/');
+                setTimeout(() => {
+                  const chatSection = document.getElementById('chat-leo');
+                  chatSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }}
+            >
               Ask Leo to Recommend
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
