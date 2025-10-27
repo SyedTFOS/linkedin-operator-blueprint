@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Package, Target, FileText, Users, Lock, Building2, Link2, CheckCircle2, Crown, LockKeyhole, ArrowRight, Briefcase, TrendingUp, MessageSquare, FileCheck, Phone, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import frameworkDashboard from "@/assets/framework-dashboard.png";
 import masterDocument from "@/assets/master-document.png";
 import coachingEvent from "@/assets/coaching-event.png";
@@ -8,6 +9,7 @@ import guidesTemplates from "@/assets/guides-templates.png";
 import communityChat from "@/assets/community-chat.png";
 import masterClasses from "@/assets/master-classes.png";
 const WhatsInsideSection = () => {
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<"all" | "compare">("all");
   const [activePath, setActivePath] = useState<'lia' | 'b2b'>('lia');
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -313,7 +315,16 @@ const WhatsInsideSection = () => {
                           </div>}
 
                         {/* Premium CTA */}
-                        <Button className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-bold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                        <Button 
+                          className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white font-bold py-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                          onClick={() => {
+                            if ('isDFY' in card && card.isDFY && activePath === 'b2b' && card.id === 6) {
+                              navigate('/business/done-for-you');
+                            } else {
+                              navigate('/agency/secrets');
+                            }
+                          }}
+                        >
                           <LockKeyhole className="w-5 h-5 mr-2" />
                           {'isDFY' in card && card.isDFY && activePath === 'b2b' && card.id === 5 ? '🔓 Unlock DFY + Secrets' : 'isDFY' in card && card.isDFY && activePath === 'b2b' && card.id === 6 ? '📞 Book Strategy Call' : 'Unlock High Ticket Access'}
                         </Button>
@@ -725,7 +736,10 @@ const WhatsInsideSection = () => {
                   </div>
 
                   {/* CTA */}
-                  <Button className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold"
+                    onClick={() => navigate(activePath === 'lia' ? '/agency/secrets' : '/business/done-for-you')}
+                  >
                     {activePath === 'lia' ? 'Apply For Secrets' : 'Apply For DFY'}
                   </Button>
                   <p className="text-center text-xs text-amber-700 mt-3 font-medium">

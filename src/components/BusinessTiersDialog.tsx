@@ -8,6 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 interface BusinessTiersDialogProps {
   open: boolean;
@@ -15,6 +16,8 @@ interface BusinessTiersDialogProps {
 }
 
 const BusinessTiersDialog = ({ open, onOpenChange }: BusinessTiersDialogProps) => {
+  const navigate = useNavigate();
+  
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
@@ -83,7 +86,11 @@ const BusinessTiersDialog = ({ open, onOpenChange }: BusinessTiersDialogProps) =
               </div>
 
               {/* CTA */}
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" size="lg">
+              <Button 
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white" 
+                size="lg"
+                onClick={() => navigate('/business/founder')}
+              >
                 Join Founder Program
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -169,7 +176,11 @@ const BusinessTiersDialog = ({ open, onOpenChange }: BusinessTiersDialogProps) =
               </div>
 
               {/* CTA */}
-              <Button className="w-full bg-[#FFB800] hover:bg-[#FFB800]/90 text-black font-semibold" size="lg">
+              <Button 
+                className="w-full bg-[#FFB800] hover:bg-[#FFB800]/90 text-black font-semibold" 
+                size="lg"
+                onClick={() => navigate('/business/done-for-you')}
+              >
                 Apply for DFY Service
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

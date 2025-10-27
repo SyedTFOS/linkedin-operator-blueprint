@@ -8,6 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 interface AgencyTiersDialogProps {
   open: boolean;
@@ -15,6 +16,8 @@ interface AgencyTiersDialogProps {
 }
 
 const AgencyTiersDialog = ({ open, onOpenChange }: AgencyTiersDialogProps) => {
+  const navigate = useNavigate();
+  
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
@@ -83,7 +86,12 @@ const AgencyTiersDialog = ({ open, onOpenChange }: AgencyTiersDialogProps) => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full" size="lg" variant="hero">
+              <Button 
+                className="w-full" 
+                size="lg" 
+                variant="hero"
+                onClick={() => navigate('/agency/academy')}
+              >
                 Join Academy
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -169,7 +177,12 @@ const AgencyTiersDialog = ({ open, onOpenChange }: AgencyTiersDialogProps) => {
               </div>
 
               {/* CTA */}
-              <Button className="w-full" size="lg" variant="hero">
+              <Button 
+                className="w-full" 
+                size="lg" 
+                variant="hero"
+                onClick={() => navigate('/agency/secrets')}
+              >
                 Apply for Secrets
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
