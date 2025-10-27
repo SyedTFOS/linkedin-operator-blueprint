@@ -163,10 +163,16 @@ const Hero = () => {
                   <DropdownMenuContent className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm" onMouseEnter={() => setIsPathDropdownOpen(true)} onMouseLeave={() => setIsPathDropdownOpen(false)}>
                     <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200 mb-1.5" onClick={() => {
                     const programsSection = document.getElementById('about-programs');
-                    programsSection?.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
+                    // Set the active path to LIA (agency)
+                    const liaButton = document.querySelector('[data-path="lia"]') as HTMLButtonElement;
+                    liaButton?.click();
+                    // Scroll to the section
+                    setTimeout(() => {
+                      programsSection?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }, 100);
                     setIsPathDropdownOpen(false);
                   }}>
                       <div className="flex flex-col gap-1">
@@ -176,10 +182,16 @@ const Hero = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-primary/10 focus:bg-primary/10 transition-all duration-200" onClick={() => {
                     const programsSection = document.getElementById('about-programs');
-                    programsSection?.scrollIntoView({
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
+                    // Set the active path to B2B (business)
+                    const b2bButton = document.querySelector('[data-path="b2b"]') as HTMLButtonElement;
+                    b2bButton?.click();
+                    // Scroll to the section
+                    setTimeout(() => {
+                      programsSection?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                      });
+                    }, 100);
                     setIsPathDropdownOpen(false);
                   }}>
                       <div className="flex flex-col gap-1">
@@ -198,8 +210,8 @@ const Hero = () => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-64 bg-card border border-border/50 shadow-2xl rounded-xl p-2 z-[100] backdrop-blur-sm" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
                     <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200 mb-1.5" onClick={() => {
-                    const businessSection = document.getElementById('business-results-section');
-                    businessSection?.scrollIntoView({
+                    const proofSection = document.getElementById('proof');
+                    proofSection?.scrollIntoView({
                       behavior: 'smooth',
                       block: 'start'
                     });
@@ -211,8 +223,8 @@ const Hero = () => {
                       </div>
                     </DropdownMenuItem>
                     <DropdownMenuItem className="cursor-pointer rounded-lg p-4 hover:bg-accent/10 focus:bg-accent/10 transition-all duration-200" onClick={() => {
-                    const agencySection = document.getElementById('agency-results-section');
-                    agencySection?.scrollIntoView({
+                    const experimentSection = document.getElementById('experiment');
+                    experimentSection?.scrollIntoView({
                       behavior: 'smooth',
                       block: 'start'
                     });

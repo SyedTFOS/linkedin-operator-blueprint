@@ -193,7 +193,11 @@ const WhatsInsideSection = () => {
         {/* Path Selector Tabs */}
         <div className="max-w-2xl mx-auto mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-2 bg-card/50 rounded-xl border border-border/50">
-            <button onClick={() => setActivePath('lia')} className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${activePath === 'lia' ? 'bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg scale-105' : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}>
+            <button 
+              data-path="lia"
+              onClick={() => setActivePath('lia')} 
+              className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${activePath === 'lia' ? 'bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg scale-105' : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}
+            >
               <div className="flex flex-col items-center gap-2">
                 <div className="flex items-center gap-2">
                   <Briefcase className="w-5 h-5" />
@@ -214,7 +218,11 @@ const WhatsInsideSection = () => {
                 </div>
               </div>
             </button>
-            <button onClick={() => setActivePath('b2b')} className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${activePath === 'b2b' ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg scale-105' : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}>
+            <button 
+              data-path="b2b"
+              onClick={() => setActivePath('b2b')} 
+              className={`px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${activePath === 'b2b' ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg scale-105' : 'bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}
+            >
               <div className="flex flex-col items-center gap-2">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-5 h-5" />

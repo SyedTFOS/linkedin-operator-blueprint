@@ -10,8 +10,13 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const WhopWidget = () => {
   const isMobile = useIsMobile();
-  const [isVisible, setIsVisible] = useState(!isMobile);
+  const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState(4 * 60 * 60 + 10 * 60 + 57); // 4:10:57 in seconds
+
+  // Set initial visibility based on mobile state after mount
+  useEffect(() => {
+    setIsVisible(!isMobile);
+  }, [isMobile]);
 
   useEffect(() => {
     const timer = setInterval(() => {
