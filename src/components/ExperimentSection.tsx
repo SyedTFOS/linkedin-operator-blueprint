@@ -166,25 +166,25 @@ const ExperimentSection = () => {
             </div>
 
             {/* Your Turn CTA Card */}
-            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-3xl p-12 text-center hover:shadow-2xl transition-all group">
-              <div className="max-w-md mx-auto space-y-6">
+            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-2xl p-8 text-center hover:shadow-xl transition-all group">
+              <div className="max-w-sm mx-auto space-y-4">
                 <div className="relative inline-block">
-                  <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-4 border-white/30 group-hover:scale-110 transition-transform">
-                    <HelpCircle className="w-12 h-12 text-white" />
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-2 border-white/30 group-hover:scale-110 transition-transform">
+                    <HelpCircle className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <p className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                  <p className="text-white/90 text-xs font-semibold tracking-wide uppercase">
                     Next Success Story
                   </p>
-                  <h3 className="text-5xl font-bold text-white">
+                  <h3 className="text-3xl font-bold text-white">
                     You
                   </h3>
-                  <p className="text-3xl font-bold text-white">
+                  <p className="text-xl font-bold text-white">
                     Your Turn
                   </p>
-                  <p className="text-white/90 text-lg">
+                  <p className="text-white/90 text-sm">
                     to write your story
                   </p>
                 </div>
@@ -192,9 +192,10 @@ const ExperimentSection = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto group-hover:scale-105 transition-transform"
+                  className="bg-white text-primary hover:bg-white/90 font-bold px-8 py-3 group-hover:scale-105 transition-transform"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                  Join us today! 🔥
+                  Start Your Journey
                 </Button>
               </div>
             </div>
@@ -336,25 +337,25 @@ const ExperimentSection = () => {
             </div>
 
             {/* Your Turn CTA Card */}
-            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-3xl p-12 text-center hover:shadow-2xl transition-all group">
-              <div className="max-w-md mx-auto space-y-6">
+            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-2xl p-8 text-center hover:shadow-xl transition-all group">
+              <div className="max-w-sm mx-auto space-y-4">
                 <div className="relative inline-block">
-                  <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-4 border-white/30 group-hover:scale-110 transition-transform">
-                    <HelpCircle className="w-12 h-12 text-white" />
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-2 border-white/30 group-hover:scale-110 transition-transform">
+                    <HelpCircle className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <p className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                  <p className="text-white/90 text-xs font-semibold tracking-wide uppercase">
                     Next Success Story
                   </p>
-                  <h3 className="text-5xl font-bold text-white">
+                  <h3 className="text-3xl font-bold text-white">
                     You
                   </h3>
-                  <p className="text-3xl font-bold text-white">
+                  <p className="text-xl font-bold text-white">
                     Your Turn
                   </p>
-                  <p className="text-white/90 text-lg">
+                  <p className="text-white/90 text-sm">
                     to write your story
                   </p>
                 </div>
@@ -362,9 +363,10 @@ const ExperimentSection = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto group-hover:scale-105 transition-transform"
+                  className="bg-white text-primary hover:bg-white/90 font-bold px-8 py-3 group-hover:scale-105 transition-transform"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                  Join us today! 🔥
+                  Start Your Journey
                 </Button>
               </div>
             </div>
@@ -501,25 +503,25 @@ const ExperimentSection = () => {
             </div>
 
             {/* Your Turn CTA Card */}
-            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-3xl p-12 text-center hover:shadow-2xl transition-all group">
-              <div className="max-w-md mx-auto space-y-6">
+            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-2xl p-8 text-center hover:shadow-xl transition-all group">
+              <div className="max-w-sm mx-auto space-y-4">
                 <div className="relative inline-block">
-                  <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-4 border-white/30 group-hover:scale-110 transition-transform">
-                    <HelpCircle className="w-12 h-12 text-white" />
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-2 border-white/30 group-hover:scale-110 transition-transform">
+                    <HelpCircle className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <p className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                  <p className="text-white/90 text-xs font-semibold tracking-wide uppercase">
                     Next Success Story
                   </p>
-                  <h3 className="text-5xl font-bold text-white">
+                  <h3 className="text-3xl font-bold text-white">
                     You
                   </h3>
-                  <p className="text-3xl font-bold text-white">
+                  <p className="text-xl font-bold text-white">
                     Your Turn
                   </p>
-                  <p className="text-white/90 text-lg">
+                  <p className="text-white/90 text-sm">
                     to write your story
                   </p>
                 </div>
@@ -527,9 +529,10 @@ const ExperimentSection = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto group-hover:scale-105 transition-transform"
+                  className="bg-white text-primary hover:bg-white/90 font-bold px-8 py-3 group-hover:scale-105 transition-transform"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                  Join us today! 🔥
+                  Start Your Journey
                 </Button>
               </div>
             </div>
