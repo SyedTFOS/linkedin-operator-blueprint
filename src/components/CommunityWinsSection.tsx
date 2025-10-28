@@ -128,20 +128,6 @@ export const CommunityWinsSection = () => {
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="text-center pt-12">
-            <div className="bg-card border border-border rounded-2xl p-8 inline-block">
-              <h3 className="text-2xl font-bold mb-4">CHECK OUT MORE RESULTS</h3>
-              <p className="text-muted-foreground mb-6">
-                Over 500+ operators from 50+ countries<br />
-                have joined LinkedIn Operator.
-              </p>
-              <Button size="lg" className="group">
-                See All Results
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

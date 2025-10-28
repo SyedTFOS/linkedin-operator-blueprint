@@ -210,15 +210,6 @@ const Academy = () => {
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </button>
                 
-                <button onClick={() => {
-                  navigate('/');
-                  setTimeout(() => {
-                    const element = document.getElementById('chat-leo');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }} className="px-10 py-5 bg-card hover:bg-card/80 border-2 border-border hover:border-primary/50 text-foreground rounded-xl font-semibold text-lg transition-all duration-300">
-                  Talk to Leo First
-                </button>
               </div>
               
               <p className="text-sm text-muted-foreground">
