@@ -401,7 +401,7 @@ export default function Checkout() {
 
                 {step === 2 && (
                   <>
-                    <div className="bg-muted/50 rounded-lg p-4 space-y-2">
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-2 mb-4">
                       <div className="flex justify-between items-center">
                         <span className="text-muted-foreground">LinkedIn Agency Academy</span>
                         <span className="font-bold text-foreground">$497.00</span>
@@ -416,37 +416,26 @@ export default function Checkout() {
                       </div>
                     </div>
 
-                    <div className="space-y-4">
-                      <p className="text-center text-sm sm:text-base text-foreground font-semibold">
-                        Click below to complete your order
-                      </p>
-                      
-                      <Button 
-                        size="lg" 
-                        className="w-full text-base sm:text-lg font-bold"
-                        onClick={() => {
-                          window.location.href = 'https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn';
-                        }}
+                    <div className="text-center mb-4">
+                      <button
+                        onClick={() => setStep(1)}
+                        className="text-sm text-muted-foreground hover:text-foreground underline"
                       >
-                        <Lock className="w-5 h-5 mr-2" />
-                        Complete Secure Checkout
-                      </Button>
-
-                      <div className="text-center">
-                        <button
-                          onClick={() => setStep(1)}
-                          className="text-sm text-muted-foreground hover:text-foreground underline"
-                        >
-                          ← Back to Step 1
-                        </button>
-                      </div>
+                        ← Back to Step 1
+                      </button>
                     </div>
 
-                    <div className="space-y-3 text-xs sm:text-sm">
-                      <p className="text-center text-muted-foreground">
-                        Or pay in 2 installments of <span className="font-bold text-foreground">$249</span>
-                      </p>
-                      
+                    {/* Embedded Fanbasis Checkout */}
+                    <div className="w-full">
+                      <iframe
+                        src={`https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn?email=${encodeURIComponent(formData.email)}&firstName=${encodeURIComponent(formData.firstName)}&lastName=${encodeURIComponent(formData.lastName)}`}
+                        className="w-full h-[600px] border-0 rounded-lg"
+                        title="Checkout"
+                        allow="payment"
+                      />
+                    </div>
+
+                    <div className="space-y-3 text-xs sm:text-sm mt-4">
                       <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3 sm:p-4 space-y-2">
                         <div className="flex items-center gap-2 text-green-600 font-bold text-sm sm:text-base">
                           <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -463,8 +452,7 @@ export default function Checkout() {
 
                     <div className="flex items-center justify-center gap-2 text-sm">
                       <Shield className="w-5 h-5 text-green-500" />
-                      <span className="text-muted-foreground">Secure Checkout With</span>
-                      <span className="font-bold text-foreground">Stripe</span>
+                      <span className="text-muted-foreground">Secure Checkout</span>
                     </div>
                   </>
                 )}
