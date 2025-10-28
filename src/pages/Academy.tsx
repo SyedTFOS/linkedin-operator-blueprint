@@ -315,6 +315,411 @@ const Academy = () => {
           </div>
         </div>
       </div>
+
+      {/* Why LinkedIn Agencies Section - Comparison */}
+      <div className="py-20 md:py-32 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+              <span className="text-sm font-medium text-foreground uppercase tracking-wide">
+                💎 REALITY CHECK
+              </span>
+            </div>
+          </div>
+
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Why <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agencies</span> Are Different
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              Unlike other business models, this actually works for beginners
+            </p>
+          </div>
+
+          {/* Comparison Table */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Other Models */}
+              <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-6 text-muted-foreground">Other Models</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-destructive text-sm">✗</span>
+                    </div>
+                    <p className="text-foreground/80">Takes 6–12 months to see $$</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-destructive text-sm">✗</span>
+                    </div>
+                    <p className="text-foreground/80">Needs audience/followers</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-destructive text-sm">✗</span>
+                    </div>
+                    <p className="text-foreground/80">Competes on price</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-destructive text-sm">✗</span>
+                    </div>
+                    <p className="text-foreground/80">Unsure offer + unclear niche</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-destructive text-sm">✗</span>
+                    </div>
+                    <p className="text-foreground/80">High churn & burnout</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* LinkedIn Agency */}
+              <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background backdrop-blur-sm border border-primary/30 rounded-2xl p-8 shadow-xl shadow-primary/10">
+                <h3 className="text-2xl font-bold mb-6 text-primary">LinkedIn Agency</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary text-sm">✓</span>
+                    </div>
+                    <p className="text-foreground">Land your first client in 30–60 days</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary text-sm">✓</span>
+                    </div>
+                    <p className="text-foreground">Zero following required</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary text-sm">✓</span>
+                    </div>
+                    <p className="text-foreground">Charge $3K–$50K/client</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary text-sm">✓</span>
+                    </div>
+                    <p className="text-foreground">Offers built on real client demand</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary text-sm">✓</span>
+                    </div>
+                    <p className="text-foreground">3–5 clients = full-time income</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Statement */}
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              This is not theory. It's a <span className="text-primary">repeatable system.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Real Results Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-background to-background relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Real <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">Operators</span>, Real Results
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              Students starting from zero — now running profitable agencies
+            </p>
+          </div>
+
+          {/* Results Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+            {/* Result 1 */}
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  E
+                </div>
+                <div>
+                  <div className="font-bold text-foreground">Ethan</div>
+                  <div className="text-sm text-muted-foreground">Agency Owner</div>
+                </div>
+              </div>
+              <p className="text-foreground mb-2">
+                <span className="text-muted-foreground">$1K/month</span> → <span className="text-primary font-bold text-2xl">$27K/month</span>
+              </p>
+              <p className="text-sm text-muted-foreground">in 6 months</p>
+            </div>
+
+            {/* Result 2 */}
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  J
+                </div>
+                <div>
+                  <div className="font-bold text-foreground">Jessica</div>
+                  <div className="text-sm text-muted-foreground">Resume Agency</div>
+                </div>
+              </div>
+              <p className="text-foreground mb-2">
+                <span className="text-primary font-bold text-2xl">$100K/month</span>
+              </p>
+              <p className="text-sm text-muted-foreground">using our content system</p>
+            </div>
+
+            {/* Result 3 */}
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  R
+                </div>
+                <div>
+                  <div className="font-bold text-foreground">Rubaiyat</div>
+                  <div className="text-sm text-muted-foreground">SaaS Founder</div>
+                </div>
+              </div>
+              <p className="text-foreground mb-2">
+                <span className="text-primary font-bold text-2xl">$7.7M ARR</span>
+              </p>
+              <p className="text-sm text-muted-foreground">pipeline from LinkedIn alone</p>
+            </div>
+
+            {/* Result 4 */}
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  V
+                </div>
+                <div>
+                  <div className="font-bold text-foreground">Vasilije</div>
+                  <div className="text-sm text-muted-foreground">Started From Scratch</div>
+                </div>
+              </div>
+              <p className="text-foreground mb-2">
+                <span className="text-primary font-bold text-2xl">$25K/month</span>
+              </p>
+              <p className="text-sm text-muted-foreground">agency in first year</p>
+            </div>
+
+            {/* Result 5 */}
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  S
+                </div>
+                <div>
+                  <div className="font-bold text-foreground">Sam</div>
+                  <div className="text-sm text-muted-foreground">Creator Pivot</div>
+                </div>
+              </div>
+              <p className="text-foreground mb-2">
+                <span className="text-primary font-bold text-2xl">3,000+ waitlist</span>
+              </p>
+              <p className="text-sm text-muted-foreground">in 21 days after pivot</p>
+            </div>
+
+            {/* Result 6 */}
+            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background backdrop-blur-sm border border-primary/30 rounded-2xl p-6 shadow-xl shadow-primary/10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl">
+                  ?
+                </div>
+                <div>
+                  <div className="font-bold text-foreground">You</div>
+                  <div className="text-sm text-muted-foreground">Next Success Story</div>
+                </div>
+              </div>
+              <p className="text-foreground mb-2">
+                <span className="text-primary font-bold text-2xl">Your Turn</span>
+              </p>
+              <p className="text-sm text-muted-foreground">Join them today</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* How You Get Paid Section */}
+      <div className="py-20 md:py-32 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              How You <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">Get Paid</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              You charge monthly retainers
+            </p>
+            <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent mb-6">
+              $3K–$50K/month
+            </div>
+            <p className="text-xl text-foreground/80">per client</p>
+          </div>
+
+          {/* Pricing Examples */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 md:p-12">
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 text-center">
+                Most of our students manage <span className="text-primary font-bold">3–10 clients</span>
+              </p>
+              
+              <div className="space-y-6">
+                {/* Example 1 */}
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 bg-gradient-to-r from-primary/5 to-transparent rounded-xl border border-primary/20">
+                  <div className="text-center md:text-left">
+                    <div className="text-lg font-semibold text-foreground mb-1">
+                      3 clients @ $3,500
+                    </div>
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary">
+                    = $10,500/month
+                  </div>
+                </div>
+
+                {/* Example 2 */}
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-6 bg-gradient-to-r from-primary/10 to-transparent rounded-xl border border-primary/30">
+                  <div className="text-center md:text-left">
+                    <div className="text-lg font-semibold text-foreground mb-1">
+                      5 clients @ $5,000
+                    </div>
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary">
+                    = $25,000/month
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xl md:text-2xl font-bold text-center text-foreground mt-8">
+                Just a few clients = <span className="text-primary">full-time income</span>
+              </p>
+            </div>
+          </div>
+
+          {/* What Clients Get */}
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">What Clients Get:</h3>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-bold">✓</span>
+                </div>
+                <p className="text-lg text-foreground">10–20 qualified sales calls/month</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-bold">✓</span>
+                </div>
+                <p className="text-lg text-foreground">Premium LinkedIn profile that converts</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-bold">✓</span>
+                </div>
+                <p className="text-lg text-foreground">Consistent inbound pipeline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Final CTA Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+              Start With <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">3 Clients</span>.
+              <br />
+              Scale to $20K–$50K/Month.
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              LinkedIn Operator Academy is a <span className="font-semibold text-foreground">complete step-by-step system</span> to help you:
+            </p>
+
+            <div className="space-y-4 mb-12 text-left max-w-2xl mx-auto">
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-primary text-sm">✓</span>
+                </div>
+                <p className="text-lg text-foreground">Sign your first (or next) high-ticket client</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-primary text-sm">✓</span>
+                </div>
+                <p className="text-lg text-foreground">Close retainers of <span className="font-bold text-primary">$3K–$50K/month</span></p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-primary text-sm">✓</span>
+                </div>
+                <p className="text-lg text-foreground">Deliver results using <span className="font-semibold">our done-for-you templates & SOPs</span></p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span className="text-primary text-sm">✓</span>
+                </div>
+                <p className="text-lg text-foreground">Scale into a 6-figure agency — without burnout or churn</p>
+              </div>
+            </div>
+
+            <div className="bg-background/80 backdrop-blur-sm border border-primary/30 rounded-2xl p-8 md:p-12 mb-12">
+              <p className="text-xl md:text-2xl font-bold text-foreground mb-6">
+                It's already working for:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 text-left">
+                <div className="flex items-start gap-3">
+                  <span className="text-primary">→</span>
+                  <p className="text-foreground">Beginners with <span className="font-semibold">zero LinkedIn presence</span></p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary">→</span>
+                  <p className="text-foreground">Ex-agency owners stuck under $5K/month</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary">→</span>
+                  <p className="text-foreground">Coaches & experts pivoting from other platforms</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-primary">→</span>
+                  <p className="text-foreground">Creators tired of "playing the content game"</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-lg md:text-xl text-foreground/80 mb-8">
+              And it works across industries:<br />
+              <span className="font-semibold text-foreground">AI. SaaS. Med-Tech. Finance. Real Estate. You name it.</span>
+            </p>
+
+            {/* CTA Button */}
+            <button 
+              onClick={() => navigate('/')}
+              className="group relative px-10 py-5 bg-primary text-primary-foreground rounded-xl font-bold text-xl shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all duration-300 mb-6"
+            >
+              Get Instant Access Now
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+            </button>
+
+            <p className="text-sm text-muted-foreground">
+              Join <span className="font-semibold text-foreground">2,000+ members</span> building profitable LinkedIn agencies
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
