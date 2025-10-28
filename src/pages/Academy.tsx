@@ -899,6 +899,769 @@ const Academy = () => {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 3.5: THE SYSTEM - Roadmap + Modules + Bonuses + CTA */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+
+      {/* The System - Hero Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-primary/50 bg-primary/10 backdrop-blur-sm">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                📦 THE SYSTEM
+              </span>
+            </div>
+          </div>
+
+          {/* Main Headline */}
+          <div className="text-center mb-12 max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+              Everything You Need To Build A{" "}
+              <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">
+                $20K+/Month LinkedIn Agency
+              </span>
+            </h2>
+            <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+              In just 7 weeks, you'll go from complete beginner to landing your first premium client—with the exact system that signed Fortune 500s.
+            </p>
+          </div>
+
+          {/* Product Mockup Visual - Placeholder for now, can add actual image later */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="relative">
+              <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl p-12 border-2 border-primary/30 backdrop-blur-sm shadow-2xl">
+                <div className="aspect-video bg-gradient-to-br from-[#0f0728] to-[#1a0b2e] rounded-xl flex items-center justify-center border border-primary/20">
+                  <div className="text-center">
+                    <div className="text-7xl mb-4">🎯</div>
+                    <p className="text-2xl font-bold text-white mb-2">The Complete System</p>
+                    <p className="text-white/60">Everything you need in one place</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* What you're getting */}
+          <div className="text-center">
+            <p className="text-xl font-semibold text-white/90 mb-4">
+              💎 What you're getting instant access to:
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* 7-Week Roadmap Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Your 7-Week Roadmap To <span className="text-primary">$20K+/Month</span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Step-by-step modules that take you from zero to signing premium clients
+            </p>
+          </div>
+
+          {/* Module Grid */}
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {/* Week 1 */}
+            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
+                  🎯
+                </div>
+                <div>
+                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 1</div>
+                  <h3 className="text-xl font-bold text-white">Fundamentals</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Operator mindset & business setup</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Offer creation & pricing strategy</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Niche selection framework</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Essential tech stack setup</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm italic">Build your foundation and choose your niche</p>
+            </div>
+
+            {/* Week 2 */}
+            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
+                  🎨
+                </div>
+                <div>
+                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 2</div>
+                  <h3 className="text-xl font-bold text-white">LinkedIn Branding</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Profile optimization & VSL scripting</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Authority positioning strategies</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Profile psychology & conversion</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Personal brand blueprint</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm italic">Position yourself as the go-to expert</p>
+            </div>
+
+            {/* Week 3 */}
+            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
+                  📝
+                </div>
+                <div>
+                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 3</div>
+                  <h3 className="text-xl font-bold text-white">Content Mastery</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Algorithm mastery & virality</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Hook psychology & templates</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Lead magnet systems</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Content calendar frameworks</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm italic">Attract ideal clients with strategic content</p>
+            </div>
+
+            {/* Week 4 */}
+            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
+                  💬
+                </div>
+                <div>
+                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 4</div>
+                  <h3 className="text-xl font-bold text-white">LinkedIn Outbound</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>DM frameworks & sequences</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Lead list building strategies</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Scaling to 200+ DMs/day</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Automation & AI tools</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm italic">Fill your calendar with qualified calls</p>
+            </div>
+
+            {/* Week 5 */}
+            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
+                  💰
+                </div>
+                <div>
+                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 5</div>
+                  <h3 className="text-xl font-bold text-white">Sales & Closing</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>High-ticket closing frameworks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Discovery call scripts</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Proposal creation & pricing</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Objection handling mastery</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm italic">Close $5K-$50K deals with confidence</p>
+            </div>
+
+            {/* Week 6 */}
+            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
+                  ⚡
+                </div>
+                <div>
+                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 6</div>
+                  <h3 className="text-xl font-bold text-white">Fulfillment</h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Service delivery & onboarding</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Content creation systems</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Outbound at scale for clients</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Client retention strategies</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm italic">Deliver results that keep clients paying</p>
+            </div>
+
+            {/* Week 7 - Centered */}
+            <div className="md:col-span-2 lg:col-span-3 max-w-md mx-auto w-full">
+              <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-[#FF6B35]/50 hover:border-[#FF6B35] transition-all hover:scale-105 duration-300 shadow-2xl shadow-[#FF6B35]/20">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-xl bg-[#FF6B35]/20 flex items-center justify-center text-3xl">
+                    🚀
+                  </div>
+                  <div>
+                    <div className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wide">WEEK 7</div>
+                    <h3 className="text-xl font-bold text-white">Advanced Secrets</h3>
+                  </div>
+                </div>
+                <ul className="space-y-3 text-white/80 text-sm mb-6">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#FF6B35]">•</span>
+                    <span>Brand equity building & authority</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#FF6B35]">•</span>
+                    <span>AI automation & scaling systems</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#FF6B35]">•</span>
+                    <span>Competitive domination strategies</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#FF6B35]">•</span>
+                    <span>Secret module (unlocked inside)</span>
+                  </li>
+                </ul>
+                <p className="text-white/60 text-sm italic">Scale to $50K+/month and beyond</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Badge */}
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground">
+              <span className="font-semibold text-foreground">50+ Video Modules</span> • Lifetime Access • Updated Monthly
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* What's Included Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-primary/50 bg-primary/5 backdrop-blur-sm">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                📦 INCLUDED
+              </span>
+            </div>
+          </div>
+
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              When You Join LinkedIn Operator Academy,<br />
+              <span className="text-primary">Here's Everything You Get:</span>
+            </h2>
+          </div>
+
+          {/* Included Items */}
+          <div className="max-w-5xl mx-auto space-y-6">
+            {/* Item 1 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✅</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">The Complete 7-Week Framework</h3>
+                  <p className="text-muted-foreground mb-4">
+                    50+ video modules covering everything from fundamentals to advanced scaling strategies. Step-by-step, beginner-friendly, over-the-shoulder training.
+                  </p>
+                  <p className="text-primary font-semibold text-lg">VALUE: $3,000</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✅</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">Templates & SOP Library</h3>
+                  <div className="grid md:grid-cols-2 gap-3 mb-4 text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">•</span>
+                      <span>50+ Content Templates</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">•</span>
+                      <span>DM & Outreach Scripts</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">•</span>
+                      <span>Proposal Templates ($5K-$50K)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">•</span>
+                      <span>Onboarding SOPs</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">•</span>
+                      <span>Fulfillment Playbooks</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">•</span>
+                      <span>Automation Workflows</span>
+                    </div>
+                  </div>
+                  <p className="text-primary font-semibold text-lg">VALUE: $2,000</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✅</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">Weekly Group Coaching Calls</h3>
+                  <p className="text-muted-foreground mb-2">
+                    Live strategy sessions, Q&A, and hot seats with Syed & Freddie. Get your questions answered, troubleshoot challenges, and stay on track.
+                  </p>
+                  <p className="text-sm text-muted-foreground italic mb-4">
+                    (First 30 days included free, then $97/month)
+                  </p>
+                  <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 4 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✅</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">Private Operator Community</h3>
+                  <p className="text-muted-foreground mb-2">
+                    Connect with 500+ operators building LinkedIn agencies. Share wins, get feedback, collaborate, and build your network.
+                  </p>
+                  <p className="text-sm text-muted-foreground italic mb-4">
+                    (30 days included free, then $97/month)
+                  </p>
+                  <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 5 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✅</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">Industry Playbooks</h3>
+                  <p className="text-muted-foreground mb-4">
+                    8+ niche-specific playbooks for AI, SaaS, Finance, Real Estate, Med-Tech, E-commerce, Agencies, and more. Includes positioning guides, ICP mapping, vertical templates, and case studies.
+                  </p>
+                  <p className="text-primary font-semibold text-lg">VALUE: $1,500</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 6 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✅</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">Lifetime Course Access</h3>
+                  <p className="text-muted-foreground mb-4">
+                    All updates, new modules, and improvements—forever. No recurring fees for course access.
+                  </p>
+                  <p className="text-primary font-semibold text-lg">VALUE: Priceless</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Total Value */}
+          <div className="max-w-5xl mx-auto mt-12">
+            <div className="bg-gradient-to-r from-primary/10 to-[#FF6B35]/10 border-2 border-primary/30 rounded-2xl p-8 text-center">
+              <p className="text-2xl md:text-3xl font-bold">
+                TOTAL VALUE: <span className="text-primary">$8,900+</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bonuses Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+              🎁 4+ Bonuses To <span className="text-[#FF6B35] italic">Fast-Track</span> Your Success
+            </h2>
+            <p className="text-xl text-white/80">
+              When you join today, you also get these bonuses designed to skip the trial & error we went through:
+            </p>
+          </div>
+
+          {/* Bonus Grid */}
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Bonus 1 */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
+                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #1</p>
+              </div>
+              <div className="p-6">
+                <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border border-primary/20">
+                  <div className="text-6xl">📦</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Your First Funnel: Done-For-You</h3>
+                <p className="text-white/70 text-sm mb-4">
+                  A pre-built, ready-to-launch funnel you don't have to build yourself. Just install & customize.
+                </p>
+                <p className="text-[#FFD700] font-semibold">VALUE: $500</p>
+              </div>
+            </div>
+
+            {/* Bonus 2 */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
+                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #2</p>
+              </div>
+              <div className="p-6">
+                <div className="w-full aspect-square bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-xl flex items-center justify-center mb-4 border border-green-500/20">
+                  <div className="text-6xl">💵</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Zero-To-One: Get Your First Client</h3>
+                <p className="text-white/70 text-sm mb-4">
+                  A step by step checklist that walks you through our entire strategy for getting new clients
+                </p>
+                <p className="text-[#FFD700] font-semibold">VALUE: $300</p>
+              </div>
+            </div>
+
+            {/* Bonus 3 */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
+                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #3</p>
+              </div>
+              <div className="p-6">
+                <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-purple-500/10 rounded-xl flex items-center justify-center mb-4 border border-primary/20">
+                  <div className="text-6xl">📊</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Best-Selling Funnel Blueprints</h3>
+                <p className="text-white/70 text-sm mb-4">
+                  Multiple funnel types working in the market. Broken down for your niche.
+                </p>
+                <p className="text-[#FFD700] font-semibold">VALUE: $400</p>
+              </div>
+            </div>
+
+            {/* Bonus 4 */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
+                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #4</p>
+              </div>
+              <div className="p-6">
+                <div className="w-full aspect-square bg-gradient-to-br from-red-500/20 to-pink-500/10 rounded-xl flex items-center justify-center mb-4 border border-red-500/20">
+                  <div className="text-6xl">👥</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Private Community Access</h3>
+                <p className="text-white/70 text-sm mb-4">
+                  Get support, feedback and connect with other builders working for clients or themselves.
+                </p>
+                <p className="text-[#FFD700] font-semibold">VALUE: $1,200</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Total Bonus Value */}
+          <div className="text-center">
+            <p className="text-2xl font-bold text-white">
+              TOTAL BONUS VALUE: <span className="text-[#FFD700]">$2,400</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Value Stack + Pricing Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Here's What You're <span className="text-primary">Actually Getting:</span>
+            </h2>
+          </div>
+
+          {/* Value Stack */}
+          <div className="max-w-3xl mx-auto space-y-3 mb-12">
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">7-Week Framework (50+ modules)</span>
+              <span className="text-xl font-bold text-primary">$3,000</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">Templates & SOP Library</span>
+              <span className="text-xl font-bold text-primary">$2,000</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">Weekly Coaching Calls (1 year)</span>
+              <span className="text-xl font-bold text-primary">$1,200</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">Private Community (1 year)</span>
+              <span className="text-xl font-bold text-primary">$1,200</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">Industry Playbooks (8+ niches)</span>
+              <span className="text-xl font-bold text-primary">$1,500</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">BONUS #1: Done-For-You Funnel</span>
+              <span className="text-xl font-bold text-[#FFD700]">$500</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">BONUS #2: Zero-To-One Checklist</span>
+              <span className="text-xl font-bold text-[#FFD700]">$300</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">BONUS #3: Funnel Blueprints</span>
+              <span className="text-xl font-bold text-[#FFD700]">$400</span>
+            </div>
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
+              <span className="text-lg font-medium">BONUS #4: Community Access</span>
+              <span className="text-xl font-bold text-[#FFD700]">$1,200</span>
+            </div>
+
+            {/* Total */}
+            <div className="bg-gradient-to-r from-primary/20 to-[#FF6B35]/20 border-2 border-primary/50 rounded-xl p-8 mt-6">
+              <div className="flex items-center justify-between">
+                <span className="text-2xl font-bold">TOTAL VALUE:</span>
+                <span className="text-4xl font-extrabold text-primary">$11,300</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Pricing Box */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm border-4 border-primary/50 rounded-3xl p-12 shadow-2xl">
+              <div className="text-center mb-8">
+                <p className="text-lg text-muted-foreground mb-2">YOUR INVESTMENT TODAY:</p>
+                <div className="text-6xl md:text-7xl font-extrabold text-primary mb-4">
+                  $497
+                </div>
+                <p className="text-muted-foreground">
+                  (Then $97/month for community access after first 30 days)
+                </p>
+              </div>
+
+              <div className="bg-[#FF6B35]/10 border border-[#FF6B35]/30 rounded-2xl p-6 mb-8">
+                <p className="text-center text-lg font-semibold">
+                  That's <span className="text-[#FF6B35] text-2xl font-bold">95% off</span> the total value.
+                </p>
+              </div>
+
+              <p className="text-center text-muted-foreground mb-4">
+                You're getting <span className="font-bold text-foreground">$11,300 worth</span> of training, templates, coaching, and community for a one-time payment of $497.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Final CTA + Guarantee Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Main Headline */}
+          <div className="text-center mb-12 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">
+              Ready To Build Your LinkedIn Agency?
+            </h2>
+          </div>
+
+          {/* CTA Button */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <button
+              onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
+              className="w-full bg-gradient-to-r from-primary to-[#FF6B35] hover:from-primary/90 hover:to-[#FF6B35]/90 text-white font-bold text-xl md:text-2xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 mb-6"
+            >
+              START YOUR AGENCY TODAY →
+              <div className="text-sm font-normal mt-2 opacity-90">
+                Complete System + 30 Days Free Community
+              </div>
+            </button>
+
+            <div className="text-center text-white/80 space-y-2 mb-8">
+              <p className="text-xl">
+                One-Time: <span className="font-bold text-primary">$497</span> • Then $97/month
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+                <span className="flex items-center gap-2">
+                  <span className="text-green-400">✅</span> Instant Access to All Modules
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="text-green-400">✅</span> 30-Day Money-Back Guarantee
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="text-green-400">✅</span> Join 500+ Operators
+                </span>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <button
+                onClick={() => navigate('/book')}
+                className="text-white/60 hover:text-white underline transition-colors"
+              >
+                Talk to Support First →
+              </button>
+            </div>
+          </div>
+
+          {/* Guarantee Badge */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-5xl border-4 border-[#FFD700]/50">
+                    🛡️
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">30-Day Money-Back Guarantee</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    If for any reason you're not satisfied with your purchase, simply email{" "}
+                    <span className="text-[#FFD700]">support@linkedinoperator.com</span> within 30 days for a full refund.
+                  </p>
+                  <p className="text-white/80 font-semibold mt-2">No questions asked.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-6 text-white/70 text-sm mb-12">
+            <span className="flex items-center gap-2">
+              <span>💳</span> Secure Checkout
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-2">
+              <span>🔒</span> SSL Encrypted
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-2">
+              <span>✅</span> Instant Access
+            </span>
+            <span>•</span>
+            <span className="flex items-center gap-2">
+              <span>🛡️</span> 30-Day Guarantee
+            </span>
+          </div>
+
+          {/* Testimonial */}
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+              <div className="flex justify-center gap-1 text-[#FFD700] text-2xl mb-3">
+                ⭐⭐⭐⭐⭐
+              </div>
+              <p className="text-white/90 text-lg italic mb-3">
+                "Best investment I've made in my business. Hit $10K in my first month."
+              </p>
+              <p className="text-white/60 text-sm">— Ethan C., Academy Member</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 4: VERIFICATION - Student Wins + Social Proof */}
       {/* ═══════════════════════════════════════════════════════════ */}
 
