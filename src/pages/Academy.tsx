@@ -1,7 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import { X, Menu, User, FileText, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-text.png";
+import courseSystemMockup from "@/assets/course-system-mockup.png";
+import week1Icon from "@/assets/module-week1-fundamentals.png";
+import week2Icon from "@/assets/module-week2-branding.png";
+import week3Icon from "@/assets/module-week3-content.png";
+import week4Icon from "@/assets/module-week4-outbound.png";
+import week5Icon from "@/assets/module-week5-sales.png";
+import week6Icon from "@/assets/module-week6-fulfillment.png";
+import week7Icon from "@/assets/module-week7-advanced.png";
+import bonusFunnel from "@/assets/bonus-funnel.png";
+import bonusChecklist from "@/assets/bonus-checklist.png";
+import bonusBlueprints from "@/assets/bonus-blueprints.png";
+import bonusCommunity from "@/assets/bonus-community.png";
+import guaranteeBadge from "@/assets/guarantee-badge.png";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
@@ -930,18 +944,14 @@ const Academy = () => {
             </p>
           </div>
 
-          {/* Product Mockup Visual - Placeholder for now, can add actual image later */}
+          {/* Product Mockup Visual */}
           <div className="max-w-5xl mx-auto mb-16">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl p-12 border-2 border-primary/30 backdrop-blur-sm shadow-2xl">
-                <div className="aspect-video bg-gradient-to-br from-[#0f0728] to-[#1a0b2e] rounded-xl flex items-center justify-center border border-primary/20">
-                  <div className="text-center">
-                    <div className="text-7xl mb-4">🎯</div>
-                    <p className="text-2xl font-bold text-white mb-2">The Complete System</p>
-                    <p className="text-white/60">Everything you need in one place</p>
-                  </div>
-                </div>
-              </div>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden">
+              <img 
+                src={courseSystemMockup} 
+                alt="LinkedIn Operator Academy Course System" 
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 
@@ -973,17 +983,15 @@ const Academy = () => {
           {/* Module Grid */}
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Week 1 */}
-            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
-                  🎯
-                </div>
-                <div>
-                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 1</div>
-                  <h3 className="text-xl font-bold text-white">Fundamentals</h3>
-                </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
+              <div className="w-20 h-20 mb-4 mx-auto">
+                <img src={week1Icon} alt="Week 1 - Fundamentals" className="w-full h-full object-contain" />
               </div>
-              <ul className="space-y-3 text-white/80 text-sm mb-6">
+              <div className="text-center mb-4">
+                <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 1</div>
+                <h3 className="text-xl font-bold">Fundamentals</h3>
+              </div>
+              <ul className="space-y-2 text-sm mb-4">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>Operator mindset & business setup</span>
@@ -1001,21 +1009,19 @@ const Academy = () => {
                   <span>Essential tech stack setup</span>
                 </li>
               </ul>
-              <p className="text-white/60 text-sm italic">Build your foundation and choose your niche</p>
+              <p className="text-muted-foreground text-sm italic text-center">Build your foundation and choose your niche</p>
             </div>
 
             {/* Week 2 */}
-            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
-                  🎨
-                </div>
-                <div>
-                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 2</div>
-                  <h3 className="text-xl font-bold text-white">LinkedIn Branding</h3>
-                </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
+              <div className="w-20 h-20 mb-4 mx-auto">
+                <img src={week2Icon} alt="Week 2 - LinkedIn Branding" className="w-full h-full object-contain" />
               </div>
-              <ul className="space-y-3 text-white/80 text-sm mb-6">
+              <div className="text-center mb-4">
+                <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 2</div>
+                <h3 className="text-xl font-bold">LinkedIn Branding</h3>
+              </div>
+              <ul className="space-y-2 text-sm mb-4">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>Profile optimization & VSL scripting</span>
@@ -1033,21 +1039,19 @@ const Academy = () => {
                   <span>Personal brand blueprint</span>
                 </li>
               </ul>
-              <p className="text-white/60 text-sm italic">Position yourself as the go-to expert</p>
+              <p className="text-muted-foreground text-sm italic text-center">Position yourself as the go-to expert</p>
             </div>
 
             {/* Week 3 */}
-            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
-                  📝
-                </div>
-                <div>
-                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 3</div>
-                  <h3 className="text-xl font-bold text-white">Content Mastery</h3>
-                </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
+              <div className="w-20 h-20 mb-4 mx-auto">
+                <img src={week3Icon} alt="Week 3 - Content Mastery" className="w-full h-full object-contain" />
               </div>
-              <ul className="space-y-3 text-white/80 text-sm mb-6">
+              <div className="text-center mb-4">
+                <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 3</div>
+                <h3 className="text-xl font-bold">Content Mastery</h3>
+              </div>
+              <ul className="space-y-2 text-sm mb-4">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>Algorithm mastery & virality</span>
@@ -1065,21 +1069,19 @@ const Academy = () => {
                   <span>Content calendar frameworks</span>
                 </li>
               </ul>
-              <p className="text-white/60 text-sm italic">Attract ideal clients with strategic content</p>
+              <p className="text-muted-foreground text-sm italic text-center">Attract ideal clients with strategic content</p>
             </div>
 
             {/* Week 4 */}
-            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
-                  💬
-                </div>
-                <div>
-                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 4</div>
-                  <h3 className="text-xl font-bold text-white">LinkedIn Outbound</h3>
-                </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
+              <div className="w-20 h-20 mb-4 mx-auto">
+                <img src={week4Icon} alt="Week 4 - LinkedIn Outbound" className="w-full h-full object-contain" />
               </div>
-              <ul className="space-y-3 text-white/80 text-sm mb-6">
+              <div className="text-center mb-4">
+                <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 4</div>
+                <h3 className="text-xl font-bold">LinkedIn Outbound</h3>
+              </div>
+              <ul className="space-y-2 text-sm mb-4">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>DM frameworks & sequences</span>
@@ -1097,21 +1099,19 @@ const Academy = () => {
                   <span>Automation & AI tools</span>
                 </li>
               </ul>
-              <p className="text-white/60 text-sm italic">Fill your calendar with qualified calls</p>
+              <p className="text-muted-foreground text-sm italic text-center">Fill your calendar with qualified calls</p>
             </div>
 
             {/* Week 5 */}
-            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
-                  💰
-                </div>
-                <div>
-                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 5</div>
-                  <h3 className="text-xl font-bold text-white">Sales & Closing</h3>
-                </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
+              <div className="w-20 h-20 mb-4 mx-auto">
+                <img src={week5Icon} alt="Week 5 - Sales & Closing" className="w-full h-full object-contain" />
               </div>
-              <ul className="space-y-3 text-white/80 text-sm mb-6">
+              <div className="text-center mb-4">
+                <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 5</div>
+                <h3 className="text-xl font-bold">Sales & Closing</h3>
+              </div>
+              <ul className="space-y-2 text-sm mb-4">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>High-ticket closing frameworks</span>
@@ -1129,21 +1129,19 @@ const Academy = () => {
                   <span>Objection handling mastery</span>
                 </li>
               </ul>
-              <p className="text-white/60 text-sm italic">Close $5K-$50K deals with confidence</p>
+              <p className="text-muted-foreground text-sm italic text-center">Close $5K-$50K deals with confidence</p>
             </div>
 
             {/* Week 6 */}
-            <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/50 transition-all hover:scale-105 duration-300">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center text-3xl">
-                  ⚡
-                </div>
-                <div>
-                  <div className="text-primary text-sm font-semibold uppercase tracking-wide">WEEK 6</div>
-                  <h3 className="text-xl font-bold text-white">Fulfillment</h3>
-                </div>
+            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
+              <div className="w-20 h-20 mb-4 mx-auto">
+                <img src={week6Icon} alt="Week 6 - Fulfillment" className="w-full h-full object-contain" />
               </div>
-              <ul className="space-y-3 text-white/80 text-sm mb-6">
+              <div className="text-center mb-4">
+                <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 6</div>
+                <h3 className="text-xl font-bold">Fulfillment</h3>
+              </div>
+              <ul className="space-y-2 text-sm mb-4">
                 <li className="flex items-start gap-2">
                   <span className="text-primary">•</span>
                   <span>Service delivery & onboarding</span>
@@ -1161,7 +1159,7 @@ const Academy = () => {
                   <span>Client retention strategies</span>
                 </li>
               </ul>
-              <p className="text-white/60 text-sm italic">Deliver results that keep clients paying</p>
+              <p className="text-muted-foreground text-sm italic text-center">Deliver results that keep clients paying</p>
             </div>
 
             {/* Week 7 - Centered */}
@@ -1394,8 +1392,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #1</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-4 border border-primary/20">
-                  <div className="text-6xl">📦</div>
+                <div className="w-full aspect-square mb-4">
+                  <img src={bonusFunnel} alt="Done-For-You Funnel" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Your First Funnel: Done-For-You</h3>
                 <p className="text-white/70 text-sm mb-4">
@@ -1411,8 +1409,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #2</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-xl flex items-center justify-center mb-4 border border-green-500/20">
-                  <div className="text-6xl">💵</div>
+                <div className="w-full aspect-square mb-4">
+                  <img src={bonusChecklist} alt="Zero-To-One Checklist" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Zero-To-One: Get Your First Client</h3>
                 <p className="text-white/70 text-sm mb-4">
@@ -1428,8 +1426,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #3</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-purple-500/10 rounded-xl flex items-center justify-center mb-4 border border-primary/20">
-                  <div className="text-6xl">📊</div>
+                <div className="w-full aspect-square mb-4">
+                  <img src={bonusBlueprints} alt="Funnel Blueprints" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Best-Selling Funnel Blueprints</h3>
                 <p className="text-white/70 text-sm mb-4">
@@ -1445,8 +1443,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #4</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square bg-gradient-to-br from-red-500/20 to-pink-500/10 rounded-xl flex items-center justify-center mb-4 border border-red-500/20">
-                  <div className="text-6xl">👥</div>
+                <div className="w-full aspect-square mb-4">
+                  <img src={bonusCommunity} alt="Private Community Access" className="w-full h-full object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Private Community Access</h3>
                 <p className="text-white/70 text-sm mb-4">
