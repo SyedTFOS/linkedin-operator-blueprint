@@ -15,7 +15,7 @@ import lifestylePool from "@/assets/lifestyle-pool.png";
 import lifestyleBeach from "@/assets/lifestyle-beach.png";
 import lifestyleOffice from "@/assets/lifestyle-office.png";
 import trainingSystemCard from "@/assets/training-system-card.png";
-import featureCards from "@/assets/feature-cards.png";
+
 import operatorExecutionOS from "@/assets/operator-execution-os.png";
 import founderOperatingSystem from "@/assets/founder-operating-system.png";
 import acquisitionOperatingSystem from "@/assets/acquisition-operating-system.png";
@@ -178,14 +178,10 @@ const Academy = () => {
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            <div className="grid grid-cols-3 gap-4 mb-16">
               <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-4xl font-bold text-primary mb-2">500+</div>
                 <div className="text-sm text-muted-foreground">Active Students</div>
-              </div>
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-4xl font-bold text-primary mb-2">1,400+</div>
-                <div className="text-sm text-muted-foreground">Success Stories</div>
               </div>
               <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-4xl font-bold text-primary mb-2">$20K</div>
@@ -197,62 +193,6 @@ const Academy = () => {
               </div>
             </div>
 
-            {/* What You Get */}
-            <div className="bg-card backdrop-blur-sm border border-border rounded-2xl p-10 mb-12">
-              <h3 className="text-2xl font-bold text-foreground text-center mb-8">
-                What You Get Inside The Academy
-              </h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    Complete Training
-                  </h4>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>7-week structured curriculum</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Step-by-step video lessons</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Live Q&A sessions</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Weekly implementation calls</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                    <Target className="w-5 h-5 text-primary" />
-                    Ready-To-Use Systems
-                  </h4>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Done-for-you templates</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Proven outreach scripts</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Client fulfillment frameworks</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1 text-lg">•</span>
-                      <span>Private community access</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
 
             {/* CTA Section */}
             <div className="text-center">
@@ -1043,10 +983,6 @@ const Academy = () => {
             <img src={trainingSystemCard} alt="Complete Training System" className="w-full rounded-2xl shadow-2xl shadow-black/30" />
           </div>
 
-          {/* Feature Cards Visual */}
-          <div className="max-w-5xl mx-auto mb-12">
-            <img src={featureCards} alt="Training Features" className="w-full rounded-xl" />
-          </div>
 
           {/* What you're getting */}
           <div className="text-center">
