@@ -1139,13 +1139,13 @@ const Academy = () => {
 
             {/* Week 7 - Centered */}
             <div className="md:col-span-2 lg:col-span-3 max-w-md mx-auto w-full">
-              <div className="bg-gradient-to-br from-[#1a0b2e] to-[#2d1b4e] rounded-2xl p-8 border-2 border-[#FF6B35]/50 hover:border-[#FF6B35] transition-all hover:scale-105 duration-300 shadow-2xl shadow-[#FF6B35]/20">
+              <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 rounded-2xl p-8 border-2 border-orange-500/50 hover:border-orange-500 transition-all hover:scale-105 duration-300 shadow-2xl shadow-orange-500/30">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-xl bg-[#FF6B35]/20 flex items-center justify-center text-3xl">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-3xl shadow-lg">
                     🚀
                   </div>
                   <div>
-                    <div className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wide">WEEK 7</div>
+                    <div className="text-orange-500 text-sm font-semibold uppercase tracking-wide">WEEK 7</div>
                     <h3 className="text-xl font-bold text-white">Advanced Secrets</h3>
                   </div>
                 </div>
@@ -1362,70 +1362,70 @@ const Academy = () => {
           {/* Bonus Grid */}
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Bonus 1 */}
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
-                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #1</p>
+            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+                <p className="text-white font-bold text-center">🎁 BONUS #1</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
-                  <Filter className="w-20 h-20 text-[#EA580C]" />
+                <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
+                  <Filter className="w-20 h-20 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Your First Funnel: Done-For-You</h3>
                 <p className="text-white/70 text-sm mb-4">
                   A pre-built, ready-to-launch funnel you don't have to build yourself. Just install & customize.
                 </p>
-                <p className="text-[#FFD700] font-semibold">VALUE: $500</p>
+                <p className="text-orange-500 font-semibold">VALUE: $500</p>
               </div>
             </div>
 
             {/* Bonus 2 */}
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
-                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #2</p>
+            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+                <p className="text-white font-bold text-center">🎁 BONUS #2</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
-                  <ClipboardCheck className="w-20 h-20 text-[#EA580C]" />
+                <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
+                  <ClipboardCheck className="w-20 h-20 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Zero-To-One: Get Your First Client</h3>
                 <p className="text-white/70 text-sm mb-4">
                   A step by step checklist that walks you through our entire strategy for getting new clients
                 </p>
-                <p className="text-[#FFD700] font-semibold">VALUE: $300</p>
+                <p className="text-orange-500 font-semibold">VALUE: $300</p>
               </div>
             </div>
 
             {/* Bonus 3 */}
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
-                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #3</p>
+            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+                <p className="text-white font-bold text-center">🎁 BONUS #3</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
-                  <FileText className="w-20 h-20 text-[#EA580C]" />
+                <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
+                  <FileText className="w-20 h-20 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Best-Selling Funnel Blueprints</h3>
                 <p className="text-white/70 text-sm mb-4">
                   Multiple funnel types working in the market. Broken down for your niche.
                 </p>
-                <p className="text-[#FFD700] font-semibold">VALUE: $400</p>
+                <p className="text-orange-500 font-semibold">VALUE: $400</p>
               </div>
             </div>
 
             {/* Bonus 4 */}
-            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-4 border-b border-[#FFD700]/30">
-                <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #4</p>
+            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+                <p className="text-white font-bold text-center">🎁 BONUS #4</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
-                  <Users className="w-20 h-20 text-[#EA580C]" />
+                <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
+                  <Users className="w-20 h-20 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Private Community Access</h3>
                 <p className="text-white/70 text-sm mb-4">
                   Get support, feedback and connect with other builders working for clients or themselves.
                 </p>
-                <p className="text-[#FFD700] font-semibold">VALUE: $1,200</p>
+                <p className="text-orange-500 font-semibold">VALUE: $1,200</p>
               </div>
             </div>
           </div>
@@ -1433,7 +1433,7 @@ const Academy = () => {
           {/* Total Bonus Value */}
           <div className="text-center">
             <p className="text-2xl font-bold text-white">
-              TOTAL BONUS VALUE: <span className="text-[#FFD700]">$2,400</span>
+              TOTAL BONUS VALUE: <span className="text-orange-500">$2,400</span>
             </p>
           </div>
         </div>
