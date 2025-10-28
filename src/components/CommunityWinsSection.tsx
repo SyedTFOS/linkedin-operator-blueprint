@@ -1,56 +1,88 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import robertoLuna from "@/assets/roberto-luna.png";
+import craigCecilio from "@/assets/craig-cecilio.png";
+import benAlistor from "@/assets/ben-alistor.png";
+import jessicaGreen from "@/assets/jessica-green.png";
+import samArami from "@/assets/sam-arami-photo.png";
+import ethanClouser from "@/assets/ethan-clouser.png";
+import walterChung from "@/assets/walter-chung.png";
+import komailGillani from "@/assets/komail-gillani.png";
+import vasilijeSimic from "@/assets/vasilije-simic.png";
+import aryanShah from "@/assets/aryan-shah.png";
 
 export const CommunityWinsSection = () => {
-  const wins = [
+  const testimonials = [
     {
-      name: "Jakub",
-      message: "Another $4,000 payment team!",
-      details: "Back again here with another win. Keep pushing guys and let's change some lives.",
-      amount: "+ 4,323.97 USD",
-      reactions: "🔥 9  💬 4  ❤️ 1"
+      name: "Roberto H. Luna",
+      role: "Founder, Lunivate • Featured in Forbes",
+      image: robertoLuna,
+      quote: "Within 120 days of implementing their system, I was featured in Forbes, hit 50,000 followers, and generated over $500K in revenue. The content framework generated 15M+ views.",
+      results: "Featured in Forbes • 15M+ views • $500K revenue"
     },
     {
-      name: "Rasmus",
-      message: "I'm speechless, guys... I've been working full-time on my agency for just 10 days and have already signed clients for $8,500! This is insane! 🔥🔥",
-      details: "I'm still waiting on the \"go\" from a prospect for a $4,500 deal. If he says yes, I'll have made $13,000 in 10 days... Have 3 new sales calls next week. This is gonna be massive. LINKEDIN OPERATOR IS GOATED. 25% profit share on all of them",
-      reactions: "👍 59  🚀 18  ⚡ 5"
+      name: "Ethan Clouser",
+      role: "Ex-Agency Owner",
+      image: ethanClouser,
+      quote: "I was stuck at $1K/month running LinkedIn ads. Hit $10K/month in 4 weeks. Scaled to $27K/month in 6 months. Exited for a healthy 5-figure deal.",
+      results: "⭐⭐⭐⭐⭐ Hit $10K in the first month"
     },
     {
-      name: "Oliver",
-      message: "Client signed the contract with $5000 setup-fee + 25% net-income share today.",
-      details: "It's gonna be a banger case!",
-      reactions: "👍 26  🔥 14  😊"
+      name: "Craig Cecilio",
+      role: "CEO, DiversyFund • $1B+ Raised",
+      image: craigCecilio,
+      quote: "They don't just manage your LinkedIn—they turn it into a lead generation machine. Our LinkedIn strategy directly contributed to raising $1B+ and our 300% annual growth rate.",
+      results: "$1B+ raised • 40K+ investors • 300% growth"
     },
     {
-      name: "Victor 🇩🇰",
-      message: "First client closed!",
-      details: "$4,500 setup-fee\n45% profit share",
-      reactions: "❤️ 16  🚀 8  😊"
+      name: "Walter Chung",
+      role: "Ex-Agency Owner",
+      image: walterChung,
+      quote: "Failing business. Joined 3 months ago. Now doing $15K/month with 1M impressions in 90 days on a brand new account.",
+      results: "$15K/month • 1M impressions • 90 days"
     },
     {
-      name: "Victor 🇩🇰",
-      message: "Just closed my 3rd client guys! 🔥",
-      details: "7,200$ setup fee\n45% profitshare\n\nHe is in the stocks and investment niche and has 19k followers.\n\nKeep pushing guys 💪",
-      reactions: "🔥 39  🚀 31  ⚡ 24  🙌 12"
+      name: "Sam Arami",
+      role: "Founder, Arami AI • 2x Exited Founder",
+      image: samArami,
+      quote: "LinkedIn Operator helped me build a 7-figure agency in 6 months. From 800 to 7,000 followers in 21 days. 3,000+ waitlist signups. Now serving top AI companies.",
+      results: "$40K/month • 15 clients • 7-figure agency"
     },
     {
-      name: "Gustav",
-      message: "7th client closed",
-      details: "35% profit share + €5k setup which will be spent on ads to create a higher return.\n\nThis is gonna be one of the biggest cases I'll have. Shits crazy...",
-      reactions: "🔥 19  😊"
+      name: "Komail Gillani",
+      role: "Complete Beginner",
+      image: komailGillani,
+      quote: "Zero online business experience. Corporate recruiting background. Closed a $14K deal in my first 3 weeks. Now an established coach with authority built from scratch.",
+      results: "$14K deal in 3 weeks • Complete beginner"
     },
     {
-      name: "Jakub",
-      message: "Signed yesterday a fitness influencer with 130K followers for $5.8K + 10% of the revenue.",
-      details: "It all happens slowly and then it all happens all at once.\n\nYou are only 5-10 NOs away from your next big payday.\n\nTrust the process.\n\n[Payment: $5,800.00 USD Succeeded ✓]",
-      reactions: "🔥 24  ⚡ 4  ❤️ 2"
+      name: "Jessica M. Green",
+      role: "Founder, Simply Done Resume",
+      image: jessicaGreen,
+      quote: "They helped me build a $2.5M+ pipeline and close $300K in deals. I went from 'just another resume writer' to THE authority in my niche. Now doing $100K/month on autopilot.",
+      results: "$2.5M+ pipeline • $300K closed • $100K/month"
     },
     {
-      name: "Jacob",
-      message: "$3.5k/mo retainer client closed 🚀 no %",
-      reactions: "🔥 5  😊"
+      name: "Vasilije Simic",
+      role: "Complete Beginner",
+      image: vasilijeSimic,
+      quote: "Started with zero experience. Built a $25K/month LinkedIn agency with 20+ active clients and 7,800 followers. Now dominating Agencies & SaaS space.",
+      results: "$25K/month • 20+ clients • Zero to hero"
+    },
+    {
+      name: "Ben Alistor",
+      role: "Creator Coach • 58K Instagram Following",
+      image: benAlistor,
+      quote: "I had 58K followers on Instagram but struggled to monetize. Now I get 30-50 qualified leads per month on autopilot. I went from chasing clients to clients chasing me.",
+      results: "30-50 leads/month • 7-figure business"
+    },
+    {
+      name: "Aryan Shah",
+      role: "Tech Expert • Previously Exited",
+      image: aryanShah,
+      quote: "Previously exited for multi-5 figures. LinkedIn Operator helped me productize my service and scale to 5,500 followers. Now building AI LinkedIn companion with investor interest.",
+      results: "5,500 followers • Productized • Investor talks"
     }
   ];
 
@@ -69,30 +101,29 @@ export const CommunityWinsSection = () => {
 
           {/* Masonry Grid */}
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mb-12">
-            {wins.map((win, index) => (
+            {testimonials.map((testimonial, index) => (
               <div key={index} className="break-inside-avoid">
-                <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-colors">
+                <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all hover:shadow-lg">
                   <div className="flex items-start gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Badge variant="secondary" className="text-xs bg-primary text-primary-foreground">
-                        LO
-                      </Badge>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-foreground mb-2">{win.name}</h3>
-                      <p className="text-foreground mb-3">{win.message}</p>
-                      {win.details && (
-                        <p className="text-sm text-muted-foreground whitespace-pre-line mb-3">
-                          {win.details}
-                        </p>
-                      )}
-                      {win.amount && (
-                        <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 mb-3">
-                          <p className="text-primary font-bold text-lg">{win.amount}</p>
-                          <p className="text-xs text-primary/70">💰 Money added</p>
-                        </div>
-                      )}
-                      <p className="text-sm text-muted-foreground">{win.reactions}</p>
+                    <Badge variant="secondary" className="text-xs bg-orange-500 hover:bg-orange-600 text-white shrink-0 rounded-full w-10 h-10 flex items-center justify-center font-bold">
+                      LO
+                    </Badge>
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-primary/20 shrink-0"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-1">{testimonial.name}</h3>
+                    <p className="text-xs text-muted-foreground mb-3">{testimonial.role}</p>
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                      "{testimonial.quote}"
+                    </p>
+                    <div className="bg-primary/10 border border-primary/20 rounded-lg p-3">
+                      <p className="text-sm font-semibold text-primary">
+                        🔥 {testimonial.results}
+                      </p>
                     </div>
                   </div>
                 </div>
