@@ -102,23 +102,23 @@ const Academy = () => {
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50"></div>
               </div>
               
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-8">
-                <span className="block text-foreground mb-3">Build Your</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8">
+                <span className="block text-foreground mb-2 sm:mb-3">Build Your</span>
                 <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-4">
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-3 sm:mb-4">
                 The complete 7-week training program that takes you from
               </p>
-              <p className="text-2xl md:text-3xl font-bold text-foreground">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                 <span className="text-muted-foreground">zero experience to</span> <span className="text-primary">$20K/month</span>
               </p>
             </div>
 
             {/* Journey Path */}
-            <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               {/* Starting Point */}
-              <div className="relative bg-card backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
+              <div className="relative bg-card backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8 hover:border-primary/30 transition-all duration-300">
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                     <User className="w-10 h-10 text-primary" />
@@ -137,7 +137,7 @@ const Academy = () => {
               </div>
 
               {/* The Academy */}
-              <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/40 rounded-2xl p-8">
+              <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/40 rounded-2xl p-6 sm:p-8">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary rounded-full">
                   <span className="text-xs text-white font-bold uppercase">The Academy</span>
                 </div>
@@ -160,7 +160,7 @@ const Academy = () => {
               </div>
 
               {/* The Result */}
-              <div className="relative bg-card backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
+              <div className="relative bg-card backdrop-blur-sm border border-green-500/30 rounded-2xl p-6 sm:p-8 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-green-500/10 border border-green-500/30 flex items-center justify-center">
                     <Crown className="w-10 h-10 text-green-500" />
@@ -177,18 +177,18 @@ const Academy = () => {
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-4 mb-16">
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-sm text-muted-foreground">Active Students</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">500+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Active Students</div>
               </div>
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-4xl font-bold text-primary mb-2">$20K</div>
-                <div className="text-sm text-muted-foreground">Avg. Monthly Revenue</div>
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">$20K</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Avg. Monthly Revenue</div>
               </div>
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-4xl font-bold text-primary mb-2">7 Weeks</div>
-                <div className="text-sm text-muted-foreground">To First Client</div>
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">7 Weeks</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">To First Client</div>
               </div>
             </div>
 
@@ -201,8 +201,8 @@ const Academy = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <button onClick={() => navigate('/')} className="group relative px-10 py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
-                  <span className="relative z-10 flex items-center gap-2">
+                <button onClick={() => navigate('/')} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
                     Join The Academy Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -256,41 +256,41 @@ const Academy = () => {
 
           {/* Main Headline */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-tight">
               Ever Felt Like Doing Business Online Means...
             </h2>
           </div>
 
           {/* Problems List */}
           <div className="max-w-3xl mx-auto mb-16 space-y-4">
-            <div className="flex items-start gap-4 text-white/90 text-lg">
-              <span className="text-red-500 font-bold text-xl flex-shrink-0">✗</span>
+            <div className="flex items-start gap-3 sm:gap-4 text-white/90 text-base sm:text-lg">
+              <span className="text-red-500 font-bold text-lg sm:text-xl flex-shrink-0">✗</span>
               <p>Business models that require <span className="font-bold text-white">huge upfront costs...</span></p>
             </div>
-            <div className="flex items-start gap-4 text-white/90 text-lg">
-              <span className="text-red-500 font-bold text-xl flex-shrink-0">✗</span>
+            <div className="flex items-start gap-3 sm:gap-4 text-white/90 text-base sm:text-lg">
+              <span className="text-red-500 font-bold text-lg sm:text-xl flex-shrink-0">✗</span>
               <p>Waiting <span className="font-bold text-white">months</span> <span className="italic text-white/60">(or years)</span> to see <span className="font-bold text-white">results...</span></p>
             </div>
-            <div className="flex items-start gap-4 text-white/90 text-lg">
-              <span className="text-red-500 font-bold text-xl flex-shrink-0">✗</span>
+            <div className="flex items-start gap-3 sm:gap-4 text-white/90 text-base sm:text-lg">
+              <span className="text-red-500 font-bold text-lg sm:text-xl flex-shrink-0">✗</span>
               <p>Needing an <span className="font-bold text-white">audience</span> and being stuck on the <span className="italic text-white/60">content hamster wheel...</span></p>
             </div>
           </div>
 
-          <div className="text-center mb-20">
-            <p className="text-xl text-white/80 mb-2">Then keep reading—because</p>
-            <p className="text-3xl md:text-4xl font-bold text-white">
+          <div className="text-center mb-16 sm:mb-20">
+            <p className="text-lg sm:text-xl text-white/80 mb-2">Then keep reading—because</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
               <span className="text-primary">this skill</span> changes everything.
             </p>
           </div>
 
           {/* Why Many Struggle Section */}
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl md:text-5xl font-bold text-white text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-12">
               Why Many People <span className="text-red-400">Struggle</span> to Build an Online Business
             </h3>
             
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12 mb-12">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 mb-12">
               <p className="text-lg text-white/80 mb-6">
                 Building an online business isn't hard because there aren't opportunities—<span className="italic text-white">it's hard because:</span>
               </p>
@@ -339,17 +339,17 @@ const Academy = () => {
 
           {/* Main Headline */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8">
               What Is a <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency?</span>
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium">
               Imagine getting paid to help businesses get leads and close clients — using LinkedIn.
             </p>
           </div>
 
           {/* Simple 3-Step */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-3xl p-8 md:p-12">
+          <div className="max-w-4xl mx-auto mb-16 sm:mb-20">
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-3xl p-6 sm:p-8 md:p-12">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -391,15 +391,15 @@ const Academy = () => {
           {/* What Makes This Different */}
           <div className="max-w-5xl mx-auto mb-16">
             <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 🌊 Why LinkedIn Agencies Are the <span className="text-primary">Best Business Model</span> Right Now
               </h3>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
                 Here's what makes this different than every other "online biz opportunity" out there:
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-12">
               <div className="flex items-center gap-3 bg-primary/5 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                   <span className="text-primary font-bold">✓</span>
@@ -426,11 +426,11 @@ const Academy = () => {
               </div>
             </div>
 
-            <div className="text-center bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 backdrop-blur-sm border border-primary/30 rounded-2xl p-8 md:p-12">
-              <p className="text-xl md:text-2xl font-semibold text-foreground mb-4">
+            <div className="text-center bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 backdrop-blur-sm border border-primary/30 rounded-2xl p-6 sm:p-8 md:p-12">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-3 sm:mb-4">
                 Just one platform... One skill stack... One system
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 that's already been proven by <span className="font-bold text-primary">500+ members</span> and <span className="font-bold text-primary">billion-dollar clients.</span>
               </p>
             </div>
@@ -454,15 +454,15 @@ const Academy = () => {
           </div>
 
           {/* Headline */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-8 leading-tight">
+          <div className="text-center mb-12 sm:mb-16 max-w-4xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white mb-6 sm:mb-8 leading-tight">
               This Isn't Dropshipping. It's Not Crypto. It's Not "TikTok Fame."
             </h2>
           </div>
 
           {/* Comparison Table - Old Way vs New Way */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-5xl mx-auto mb-12 sm:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {/* OLD WAY */}
               <div className="space-y-4">
                 <div className="bg-yellow-500/10 backdrop-blur-sm border-2 border-yellow-500/30 rounded-2xl p-6">
@@ -534,21 +534,21 @@ const Academy = () => {
 
           {/* Bottom Statement */}
           <div className="text-center max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12">
-              <p className="text-2xl md:text-3xl font-bold text-white mb-6">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6">
                 The LIA Way: <span className="text-primary">Simple. Profitable. Results-Driven.</span>
               </p>
-              <p className="text-lg text-white/80 mb-4">
+              <p className="text-base sm:text-lg text-white/80 mb-4">
                 This is a skill you can learn in <span className="font-bold text-white">30–60 days</span>, start landing clients, and scale to <span className="font-bold text-primary">5–6 figures/month</span> — without ever turning on a funnel or running a single ad.
               </p>
-              <p className="text-xl font-semibold text-white">
+              <p className="text-lg sm:text-xl font-semibold text-white">
                 This isn't hype. It's how we built an agency that landed Mastercard, Forbes founders, and $25K/month retainers using one strategy on one platform.
               </p>
             </div>
 
-            <div className="mt-12">
-              <p className="text-2xl font-bold text-white mb-2">No more "overnight" nonsense.</p>
-              <p className="text-xl text-white/80">Just a <span className="text-primary font-semibold">real, repeatable, scalable system.</span></p>
+            <div className="mt-8 sm:mt-12">
+              <p className="text-xl sm:text-2xl font-bold text-white mb-2">No more "overnight" nonsense.</p>
+              <p className="text-lg sm:text-xl text-white/80">Just a <span className="text-primary font-semibold">real, repeatable, scalable system.</span></p>
             </div>
           </div>
         </div>
