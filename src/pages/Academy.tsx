@@ -14,6 +14,11 @@ import lifestyleCity from "@/assets/lifestyle-city.png";
 import lifestylePool from "@/assets/lifestyle-pool.png";
 import lifestyleBeach from "@/assets/lifestyle-beach.png";
 import lifestyleOffice from "@/assets/lifestyle-office.png";
+import trainingSystemCard from "@/assets/training-system-card.png";
+import featureCards from "@/assets/feature-cards.png";
+import operatorExecutionOS from "@/assets/operator-execution-os.png";
+import founderOperatingSystem from "@/assets/founder-operating-system.png";
+import acquisitionOperatingSystem from "@/assets/acquisition-operating-system.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { VerificationHero } from "@/components/VerificationHero";
 import ExperimentSection from "@/components/ExperimentSection";
@@ -1035,17 +1040,12 @@ const Academy = () => {
 
           {/* Product Mockup Visual */}
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-white/95 rounded-2xl p-12 border-2 border-orange-700 shadow-2xl shadow-black/30">
-              <div className="flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl flex items-center justify-center border-2 border-orange-500 shadow-lg">
-                    <Package className="w-16 h-16 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Complete Training System</h3>
-                  <p className="text-gray-700">50+ Modules • Templates • Community • Coaching</p>
-                </div>
-              </div>
-            </div>
+            <img src={trainingSystemCard} alt="Complete Training System" className="w-full rounded-2xl shadow-2xl shadow-black/30" />
+          </div>
+
+          {/* Feature Cards Visual */}
+          <div className="max-w-5xl mx-auto mb-12">
+            <img src={featureCards} alt="Training Features" className="w-full rounded-xl" />
           </div>
 
           {/* What you're getting */}
@@ -1374,7 +1374,13 @@ const Academy = () => {
                       <span>Automation Workflows</span>
                     </div>
                   </div>
-                  <p className="text-primary font-semibold text-lg">VALUE: $2,000</p>
+                  {/* Operating System Visuals */}
+                  <div className="mt-6 space-y-4">
+                    <div className="bg-background rounded-xl overflow-hidden border border-border/50">
+                      <img src={operatorExecutionOS} alt="LinkedIn Operator Execution OS" className="w-full" />
+                    </div>
+                  </div>
+                  <p className="text-primary font-semibold text-lg mt-4">VALUE: $2,000</p>
                 </div>
               </div>
             </div>
@@ -1424,11 +1430,22 @@ const Academy = () => {
                   <span className="text-primary text-xl">✅</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Industry Playbooks</h3>
+                  <h3 className="text-2xl font-bold mb-3">Operating System Frameworks</h3>
                   <p className="text-muted-foreground mb-4">
-                    8+ niche-specific playbooks for AI, SaaS, Finance, Real Estate, Med-Tech, E-commerce, Agencies, and more. Includes positioning guides, ICP mapping, vertical templates, and case studies.
+                    Complete visual frameworks showing the exact day-by-day processes for both founders and acquisition teams.
                   </p>
-                  <p className="text-primary font-semibold text-lg">VALUE: $1,500</p>
+                  
+                  {/* Operating System Diagrams */}
+                  <div className="space-y-4 mt-6">
+                    <div className="bg-background rounded-xl overflow-hidden border border-border/50">
+                      <img src={founderOperatingSystem} alt="Founder Operating System" className="w-full" />
+                    </div>
+                    <div className="bg-background rounded-xl overflow-hidden border border-border/50">
+                      <img src={acquisitionOperatingSystem} alt="Acquisition Operating System" className="w-full" />
+                    </div>
+                  </div>
+                  
+                  <p className="text-primary font-semibold text-lg mt-4">VALUE: $1,500</p>
                 </div>
               </div>
             </div>
