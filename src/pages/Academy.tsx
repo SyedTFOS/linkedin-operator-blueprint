@@ -2,6 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu, User, FileText, MessageSquare, Lightbulb, Target, Zap, Send, DollarSign, CheckCircle, Crown, Filter, ClipboardCheck, Users, Shield, CreditCard, Package, Star, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { VerificationHero } from "@/components/VerificationHero";
+import { TestimonialsVideoSection } from "@/components/TestimonialsVideoSection";
+import ExperimentSection from "@/components/ExperimentSection";
+import { ProofWallSection } from "@/components/ProofWallSection";
+import { CommunityWinsSection } from "@/components/CommunityWinsSection";
+import { SkillsSection } from "@/components/SkillsSection";
 import logo from "@/assets/logo-text.png";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
@@ -884,6 +890,17 @@ const Academy = () => {
           </div>
         </div>
       </div>
+
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* VERIFICATION SECTION 1 - Student Results & Social Proof */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+
+      <VerificationHero />
+      <TestimonialsVideoSection />
+      <ExperimentSection />
+      <ProofWallSection />
+      <CommunityWinsSection />
+      <SkillsSection />
 
       {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 3.5: THE SYSTEM - Roadmap + Modules + Bonuses + CTA */}
