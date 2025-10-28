@@ -211,6 +211,11 @@ const Academy = () => {
                 
               </div>
               
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <Shield className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-semibold text-green-600">30-Day Money-Back Guarantee</span>
+              </div>
+              
               <p className="text-sm text-muted-foreground">
                 <span className="line-through text-muted-foreground/60">$2,497</span> → Now $497 (Save $2,000!) • Offer ends in: <CountdownTimer className="inline text-primary font-bold" />
               </p>
@@ -857,7 +862,11 @@ const Academy = () => {
                 <span>Start Your Agency Today</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
-              <p className="mt-4 text-sm text-muted-foreground">
+              <div className="flex items-center justify-center gap-2 mt-4 mb-2">
+                <Shield className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-semibold text-green-600">30-Day Money-Back Guarantee</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
                 <span className="line-through text-muted-foreground/60">$2,497</span> → Now $497 (Save $2,000!) • Only 9 spots left • <CountdownTimer className="inline text-primary font-bold" />
               </p>
             </div>
@@ -1515,7 +1524,7 @@ const Academy = () => {
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">30-day money-back guarantee</p>
+                  <p className="text-white text-lg"><span className="font-semibold">30-Day Money-Back Guarantee</span> - No questions asked</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
@@ -1645,13 +1654,13 @@ const Academy = () => {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-6 text-base mt-4">
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> Instant Lifetime Access
+                  <CheckCircle className="w-5 h-5 text-green-400" /> Instant Lifetime Access
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> 30 Days Coaching FREE
+                  <CheckCircle className="w-5 h-5 text-green-400" /> 30 Days Coaching FREE
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> 30-Day Money-Back
+                  <Shield className="w-5 h-5 text-green-400" /> 30-Day Money-Back
                 </span>
               </div>
             </div>
@@ -1675,10 +1684,10 @@ const Academy = () => {
                 <div className="text-center md:text-left flex-1">
                   <h3 className="text-3xl md:text-4xl font-black text-white mb-4">30-Day Money-Back Guarantee</h3>
                   <p className="text-white text-lg leading-relaxed mb-3">
-                    If for any reason you're not satisfied with your purchase, simply email{" "}
+                    If for any reason you&apos;re not satisfied with your purchase, simply email{" "}
                     <span className="font-bold text-white underline">support@linkedinoperator.com</span> within 30 days for a full refund.
                   </p>
-                  <p className="text-white text-xl font-bold">No questions asked.</p>
+                  <p className="text-white text-xl font-bold">No questions asked. Zero risk.</p>
                 </div>
               </div>
             </div>
