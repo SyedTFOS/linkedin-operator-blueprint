@@ -13,8 +13,7 @@ export default function Checkout() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    email: '',
-    phone: ''
+    email: ''
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -368,18 +367,6 @@ export default function Checkout() {
                         {errors.email && (
                           <p className="text-sm text-destructive">{errors.email}</p>
                         )}
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number (Optional)</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                          placeholder="+1 (555) 000-0000"
-                        />
                       </div>
                     </div>
 
