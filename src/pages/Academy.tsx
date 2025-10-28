@@ -2,10 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu, User, FileText, MessageSquare, Lightbulb, Target, Zap, Send, DollarSign, CheckCircle, Crown, Filter, ClipboardCheck, Users, Shield, CreditCard, Package, Star, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import ExperimentSection from "@/components/ExperimentSection";
-import { ProofWallSection } from "@/components/ProofWallSection";
-import { CommunityWinsSection } from "@/components/CommunityWinsSection";
-import { SkillsSection } from "@/components/SkillsSection";
 import logo from "@/assets/logo-text.png";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
@@ -890,15 +886,6 @@ const Academy = () => {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════ */}
-      {/* VERIFICATION SECTION 1 - Student Results & Social Proof */}
-      {/* ═══════════════════════════════════════════════════════════ */}
-
-      <ExperimentSection />
-      <ProofWallSection />
-      <CommunityWinsSection />
-      <SkillsSection />
-
-      {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 3.5: THE SYSTEM - Roadmap + Modules + Bonuses + CTA */}
       {/* ═══════════════════════════════════════════════════════════ */}
 
@@ -1661,19 +1648,7 @@ const Academy = () => {
           </div>
 
           {/* Section Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Real <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">Operators</span>, Real Results
-            </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Students starting from zero — now running profitable agencies
-            </p>
-            <div className="mt-6 inline-block">
-              <p className="text-lg font-semibold text-foreground px-6 py-3 bg-gradient-to-r from-[#FFF7ED] to-[#FFE4CC] rounded-full border-2 border-[#FF6B35]/30">
-                These aren't fake screenshots. These are real people.
-              </p>
-            </div>
-          </div>
+          
 
           {/* Results Grid - Polaroid Style */}
           <div className="max-w-6xl mx-auto mb-16">
