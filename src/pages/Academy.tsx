@@ -15,6 +15,9 @@ import lifestylePool from "@/assets/lifestyle-pool.png";
 import lifestyleBeach from "@/assets/lifestyle-beach.png";
 import lifestyleOffice from "@/assets/lifestyle-office.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
+import { VerificationHero } from "@/components/VerificationHero";
+import ExperimentSection from "@/components/ExperimentSection";
+import { CommunityWinsSection } from "@/components/CommunityWinsSection";
 const Academy = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -1803,7 +1806,9 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* Real Results Section - Enhanced with Proof */}
-      
+      <VerificationHero />
+      <ExperimentSection />
+      <CommunityWinsSection />
 
       {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 5: VALIDATION - Guarantee + Risk Reversal */}
