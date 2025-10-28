@@ -76,7 +76,7 @@ const Academy = () => {
       </div>
 
       {/* Hero Section - Academy Framework */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-[#FF6B35]/10">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-[#FF6B35]/10 pt-8 pb-16">
         {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         
@@ -90,7 +90,7 @@ const Academy = () => {
                 <span className="text-sm text-foreground/70 uppercase tracking-wider">Limited Enrollment Open</span>
               </div>
               <div className="w-px h-4 bg-border"></div>
-              <span className="text-sm font-semibold text-primary">147 joined • 53 spots left</span>
+              <span className="text-sm font-semibold text-primary">Only 9 Spots Remaining</span>
             </div>
           </div>
 
@@ -198,7 +198,7 @@ const Academy = () => {
             <div className="text-center">
               <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                <span className="text-sm text-red-600 font-medium">Only 53 founding member spots remaining</span>
+                <span className="text-sm text-red-600 font-medium">Only 9 spots remaining at this price</span>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -241,7 +241,7 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* Reality Check Section */}
-      <div className="py-20 md:py-32 bg-[#0A0A0A] relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-[#0A0A0A] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -324,7 +324,7 @@ const Academy = () => {
       </div>
 
       {/* What Is a LinkedIn Agency - Simple Explanation */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
@@ -440,7 +440,7 @@ const Academy = () => {
       </div>
 
       {/* The Problem With Every Other Business Model */}
-      <div className="py-20 md:py-32 bg-[#0A0A0A] relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-[#0A0A0A] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -560,7 +560,7 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* Founder Discovery Story Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
@@ -932,6 +932,20 @@ const Academy = () => {
               <p className="text-lg font-semibold text-foreground">— Freddie Poticarry</p>
               <p className="text-muted-foreground">Co-Founder, LinkedIn Operator</p>
             </div>
+
+            {/* CTA Button */}
+            <div className="mt-16 text-center">
+              <button 
+                onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
+                className="group inline-flex items-center gap-3 px-10 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+              >
+                <span>Start Your Agency Today</span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Only 9 spots left • Offer ends in <CountdownTimer className="inline text-primary font-bold" />
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -944,7 +958,7 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* The System - Hero Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -985,7 +999,7 @@ const Academy = () => {
       </div>
 
       {/* 7-Week Roadmap Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
@@ -1227,7 +1241,7 @@ const Academy = () => {
       </div>
 
       {/* What's Included Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
@@ -1319,12 +1333,9 @@ const Academy = () => {
                   <span className="text-primary text-xl">✅</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Weekly Group Coaching Calls</h3>
-                  <p className="text-muted-foreground mb-2">
-                    Live strategy sessions, Q&A, and hot seats with Syed & Freddie. Get your questions answered, troubleshoot challenges, and stay on track.
-                  </p>
-                  <p className="text-sm text-muted-foreground italic mb-4">
-                    (First 30 days included free, then $97/month)
+                  <h3 className="text-2xl font-bold mb-3">Access to Private Operator Community</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Connect with 500+ operators building LinkedIn agencies. Share wins, get feedback, collaborate, and build your network. Lifetime access included.
                   </p>
                   <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
                 </div>
@@ -1332,19 +1343,28 @@ const Academy = () => {
             </div>
 
             {/* Item 4 */}
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/50 rounded-2xl p-8 hover:border-primary transition-all shadow-lg">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✅</span>
+                  <span className="text-primary text-xl">✨</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Private Operator Community</h3>
-                  <p className="text-muted-foreground mb-2">
-                    Connect with 500+ operators building LinkedIn agencies. Share wins, get feedback, collaborate, and build your network.
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="text-2xl font-bold">Weekly Live Coaching Calls</h3>
+                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase">Optional Add-On</span>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Get live coaching, strategy sessions, Q&A, and hot seats with the founders. Perfect for personalized guidance and accelerated growth.
                   </p>
-                  <p className="text-sm text-muted-foreground italic mb-4">
-                    (30 days included free, then $97/month)
-                  </p>
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
+                    <p className="text-sm font-semibold text-foreground mb-2">Want live coaching?</p>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      Add weekly coaching calls for <span className="font-bold text-foreground">$97/month</span>
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      • Add anytime after joining • Cancel anytime • Not required for course access
+                    </p>
+                  </div>
                   <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
                 </div>
               </div>
@@ -1406,7 +1426,7 @@ const Academy = () => {
       </div>
 
       {/* Bonuses Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -1493,16 +1513,28 @@ const Academy = () => {
           </div>
 
           {/* Total Bonus Value */}
-          <div className="text-center">
-            <p className="text-2xl font-bold text-white">
-              TOTAL BONUS VALUE: <span className="text-orange-500">$2,400</span>
+          <div className="text-center mb-12">
+            <p className="text-2xl font-bold text-white mb-8">
+              TOTAL BONUS VALUE: <span className="text-yellow-300">$2,400</span>
+            </p>
+            
+            {/* CTA Button */}
+            <button 
+              onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
+              className="group inline-flex items-center gap-3 px-12 py-6 bg-white hover:bg-white/90 text-orange-600 rounded-2xl font-black text-2xl shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              <span>Claim Your Bonuses Now</span>
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <p className="mt-4 text-sm text-white/80">
+              Only 9 spots remaining • Offer ends in <CountdownTimer className="inline text-yellow-300 font-bold" />
             </p>
           </div>
         </div>
       </div>
 
       {/* Value Stack + Pricing Section */}
-      <div className="py-20 md:py-32 bg-[#0F0F0F] relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -1510,13 +1542,12 @@ const Academy = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-block px-6 py-3 bg-primary/10 border border-primary/30 rounded-full mb-6">
-              <span className="text-sm font-bold text-white uppercase tracking-wider">OCTOBER OFFER</span>
+              <span className="text-sm font-bold text-white uppercase tracking-wider">LIMITED TIME OFFER</span>
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
-              ACCESS FOR <span className="text-primary">$497</span>{" "}
-              <span className="text-white/40 line-through">$2500</span>
+              GET FULL ACCESS FOR <span className="text-primary">$497</span>
             </h2>
-            <p className="text-xl text-white/60">(LIMITED SPOTS)</p>
+            <p className="text-xl text-white/60">Or 2 payments of $249 • Only 9 Spots Left</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -1524,12 +1555,12 @@ const Academy = () => {
             <div className="bg-[#1A1A1A] border-2 border-white/10 rounded-3xl p-8 md:p-12 mb-8">
               {/* Price Display */}
               <div className="text-center mb-8 pb-8 border-b border-white/10">
-                <p className="text-white/60 text-lg mb-3">Full Access Today:</p>
+                <p className="text-white/60 text-lg mb-3">Get Instant Access:</p>
                 <div className="text-7xl md:text-8xl font-black text-white mb-4">
-                  Only $497
+                  $497
                 </div>
                 <p className="text-white/60 text-lg">
-                  Normally $2500 <span className="text-green-400 font-semibold">(save $1660)</span>
+                  Or split it: <span className="text-primary font-semibold">2 payments of $249</span>
                 </p>
               </div>
 
@@ -1539,43 +1570,40 @@ const Academy = () => {
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">Full Access To The IPGA Masterclass Course</p>
+                  <p className="text-white text-lg"><span className="font-semibold">Lifetime Access</span> to the complete LinkedIn Agency Masterclass</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">All content, All templates, All upgrades.</p>
+                  <p className="text-white text-lg">All course materials, templates, and future updates <span className="font-semibold">(Lifetime)</span></p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">Full Access To Our Global Community</p>
+                  <p className="text-white text-lg">Full access to our global community</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">Access To Weekly Q&A Calls</p>
+                  <p className="text-white text-lg">Everything needed to build a $20k+/month LinkedIn Agency</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">Everything needed to build a $20k+/m IPGA</p>
+                  <p className="text-white text-lg">30-day money-back guarantee</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                <div className="flex items-start gap-3 mt-6 pt-6 border-t border-white/10">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <p className="text-white text-lg">Normal price: $2500</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
+                  <div>
+                    <p className="text-white text-lg"><span className="font-semibold">Optional:</span> Weekly Q&A coaching calls</p>
+                    <p className="text-white/60 text-sm mt-1">Only $97/month • Choose to add later • Cancel anytime</p>
                   </div>
-                  <p className="text-white text-lg font-bold text-green-400">Today's price: $497 (Save $1660)</p>
                 </div>
               </div>
 
@@ -1585,7 +1613,7 @@ const Academy = () => {
                   onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
                   className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  GET FULL ACCESS FOR $497
+                  JOIN NOW - FULL PAYMENT $497
                 </button>
                 
                 <div className="text-center text-white/40 font-semibold">OR</div>
@@ -1594,7 +1622,7 @@ const Academy = () => {
                   onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
                   className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  FOR 2 PAYMENTS OF $480
+                  JOIN NOW - 2 PAYMENTS OF $249
                 </button>
               </div>
 
@@ -1602,43 +1630,56 @@ const Academy = () => {
               <div className="mt-10 pt-8 border-t border-white/10">
                 <div className="flex items-center justify-between text-white/60 text-sm mb-3">
                   <span className="font-semibold">
-                    <span className="text-white">50 SPOTS AT $1660 OFF</span>
+                    <span className="text-white">ONLY 9 SPOTS REMAINING</span>
                   </span>
-                  <span>Ends in <CountdownTimer className="inline text-primary font-bold" /></span>
+                  <span>Offer ends in <CountdownTimer className="inline text-red-400 font-bold" /></span>
                 </div>
-                <div className="flex items-center justify-between text-sm mb-2">
-                  <span className="text-white/60">41 claimed <span className="text-white/40">•</span> 9 left</span>
-                </div>
-                <div className="h-3 bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full" style={{ width: '82%' }}></div>
+                <div className="h-3 bg-white/10 rounded-full overflow-hidden mb-2">
+                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{ width: '18%' }}></div>
                 </div>
                 <p className="text-yellow-400 text-sm mt-3 flex items-center gap-2">
                   <Zap className="w-4 h-4" />
-                  October special, price increasing after
+                  Price increases after 9 spots are filled
                 </p>
               </div>
             </div>
 
             {/* Investment Box */}
             <div className="bg-white rounded-3xl border-4 border-primary p-8 md:p-10 mb-8">
-              <p className="text-center text-muted-foreground text-lg mb-4">YOUR INVESTMENT TODAY:</p>
+              <p className="text-center text-muted-foreground text-lg mb-4">WHAT YOU GET:</p>
               <div className="text-center mb-6">
-                <div className="text-6xl md:text-7xl font-black text-primary mb-3">
-                  $497
+                <div className="text-5xl md:text-6xl font-black text-primary mb-4">
+                  Lifetime Access
                 </div>
+                <p className="text-foreground text-xl font-semibold mb-2">
+                  Complete LinkedIn Agency Course
+                </p>
                 <p className="text-muted-foreground text-lg">
-                  (Then $97/month for community access after first 30 days)
+                  All training, templates, and future updates — yours forever
                 </p>
               </div>
 
               <div className="bg-primary/5 border-2 border-primary/30 rounded-2xl p-6 mb-6">
-                <p className="text-center text-xl font-bold">
-                  That's <span className="text-primary text-3xl">95% off</span> the total value.
+                <p className="text-center text-xl font-bold mb-3">
+                  One-Time Payment: <span className="text-primary text-3xl">$497</span>
+                </p>
+                <p className="text-center text-sm text-muted-foreground">
+                  Or split into 2 payments of $249
                 </p>
               </div>
 
-              <p className="text-center text-muted-foreground text-lg">
-                You're getting <span className="font-bold text-foreground">$11,300 worth</span> of training, templates, coaching, and community for a one-time payment of $497.
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 mb-4">
+                <p className="text-center text-lg font-semibold text-foreground mb-2">
+                  Want Live Coaching?
+                </p>
+                <p className="text-center text-muted-foreground">
+                  Add weekly Q&A calls for just <span className="font-bold text-foreground">$97/month</span><br/>
+                  <span className="text-sm">(Optional • Choose to add anytime • Cancel anytime)</span>
+                </p>
+              </div>
+
+              <p className="text-center text-muted-foreground text-sm">
+                30-day money-back guarantee • Only 9 spots left at this price
               </p>
             </div>
           </div>
@@ -1646,7 +1687,7 @@ const Academy = () => {
       </div>
 
       {/* Final CTA + Guarantee Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-primary via-[#FF8A5B] to-[#FF6B35] relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-primary via-[#FF8A5B] to-[#FF6B35] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -1661,25 +1702,25 @@ const Academy = () => {
           {/* CTA Button */}
           <div className="max-w-2xl mx-auto mb-12">
             <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="w-full bg-white hover:bg-white/90 text-primary font-black text-2xl md:text-3xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 mb-4">
-              START YOUR AGENCY TODAY →
+              CLAIM YOUR SPOT NOW →
               <div className="text-base font-normal mt-2 opacity-80">
-                Complete System + 30 Days Free Community
+                Only 9 Spots Left • Lifetime Access
               </div>
             </button>
 
             <div className="text-center text-white space-y-3 mb-6">
               <p className="text-2xl font-bold">
-                One-Time: <span className="text-white">$497</span> • Then $97/month
+                $497 one-time <span className="text-white/70">or 2 payments of $249</span>
               </p>
               <div className="flex flex-wrap items-center justify-center gap-6 text-base">
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> Instant Access to All Modules
+                  <CheckCircle className="w-5 h-5 text-white" /> Instant Lifetime Access
                 </span>
                 <span className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-white" /> 30-Day Money-Back Guarantee
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> Join 500+ Operators
+                  <CheckCircle className="w-5 h-5 text-white" /> Join 500+ Members
                 </span>
               </div>
             </div>
@@ -1761,7 +1802,7 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* Guarantee Section */}
-      <div className="py-20 md:py-32 bg-background relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-background relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         

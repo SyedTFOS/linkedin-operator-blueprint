@@ -6,8 +6,8 @@ interface CountdownTimerProps {
 
 export const CountdownTimer = ({ className = "" }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 27,
-    minutes: 0,
+    hours: 1,
+    minutes: 59,
     seconds: 0
   });
 
