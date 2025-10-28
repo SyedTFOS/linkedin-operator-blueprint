@@ -890,15 +890,15 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* The System - Hero Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] relative overflow-hidden">
+      <div className="py-20 md:py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
         {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           {/* Badge */}
           <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-primary/50 bg-primary/10 backdrop-blur-sm">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-white/50 bg-white/20 backdrop-blur-sm">
+              <span className="text-sm font-semibold text-white uppercase tracking-wide">
                 📦 THE SYSTEM
               </span>
             </div>
@@ -908,7 +908,7 @@ const Academy = () => {
           <div className="text-center mb-12 max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
               Everything You Need To Build A{" "}
-              <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">$20K - $50K / Month LinkedIn Agency</span>
+              <span className="text-yellow-300">$20K - $50K / Month LinkedIn Agency</span>
             </h2>
             <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
               In just 7 weeks, you'll go from complete beginner to landing your first premium client—with the exact system that signed Fortune 500s.
@@ -917,14 +917,14 @@ const Academy = () => {
 
           {/* Product Mockup Visual */}
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-gradient-to-br from-[#C2410C]/20 to-[#9A3412]/20 rounded-2xl p-12 border-2 border-[#EA580C]/40">
+            <div className="bg-white/95 rounded-2xl p-12 border-2 border-orange-700 shadow-2xl shadow-black/30">
               <div className="flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-[#EA580C]/30 rounded-2xl flex items-center justify-center border-2 border-[#EA580C]/60">
-                    <Package className="w-16 h-16 text-[#EA580C]" />
+                  <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl flex items-center justify-center border-2 border-orange-500 shadow-lg">
+                    <Package className="w-16 h-16 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Complete Training System</h3>
-                  <p className="text-white/70">50+ Modules • Templates • Community • Coaching</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Complete Training System</h3>
+                  <p className="text-gray-700">50+ Modules • Templates • Community • Coaching</p>
                 </div>
               </div>
             </div>
@@ -1139,35 +1139,35 @@ const Academy = () => {
 
             {/* Week 7 - Centered */}
             <div className="md:col-span-2 lg:col-span-3 max-w-md mx-auto w-full">
-              <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 rounded-2xl p-8 border-2 border-orange-500/50 hover:border-orange-500 transition-all hover:scale-105 duration-300 shadow-2xl shadow-orange-500/30">
+              <div className="bg-white/95 rounded-2xl p-8 border-2 border-orange-700 hover:border-orange-600 transition-all hover:scale-105 duration-300 shadow-2xl shadow-black/30">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-3xl shadow-lg">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-600 to-orange-700 flex items-center justify-center text-3xl shadow-lg">
                     🚀
                   </div>
                   <div>
-                    <div className="text-orange-500 text-sm font-semibold uppercase tracking-wide">WEEK 7</div>
-                    <h3 className="text-xl font-bold text-white">Advanced Secrets</h3>
+                    <div className="text-orange-600 text-sm font-semibold uppercase tracking-wide">WEEK 7</div>
+                    <h3 className="text-xl font-bold text-gray-900">Advanced Secrets</h3>
                   </div>
                 </div>
-                <ul className="space-y-3 text-white/80 text-sm mb-6">
+                <ul className="space-y-3 text-gray-700 text-sm mb-6">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#FF6B35]">•</span>
+                    <span className="text-orange-600">•</span>
                     <span>Brand equity building & authority</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#FF6B35]">•</span>
+                    <span className="text-orange-600">•</span>
                     <span>AI automation & scaling systems</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#FF6B35]">•</span>
+                    <span className="text-orange-600">•</span>
                     <span>Competitive domination strategies</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#FF6B35]">•</span>
+                    <span className="text-orange-600">•</span>
                     <span>Secret module (unlocked inside)</span>
                   </li>
                 </ul>
-                <p className="text-white/60 text-sm italic">Scale to $50K+/month and beyond</p>
+                <p className="text-gray-600 text-sm italic">Scale to $50K+/month and beyond</p>
               </div>
             </div>
           </div>
@@ -1344,15 +1344,15 @@ const Academy = () => {
       </div>
 
       {/* Bonuses Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] relative overflow-hidden">
+      <div className="py-20 md:py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
         {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-              🎁 4+ Bonuses To <span className="text-[#FF6B35] italic">Fast-Track</span> Your Success
+              🎁 4+ Bonuses To <span className="text-yellow-300 italic">Fast-Track</span> Your Success
             </h2>
             <p className="text-xl text-white/80">
               When you join today, you also get these bonuses designed to skip the trial & error we went through:
@@ -1362,16 +1362,16 @@ const Academy = () => {
           {/* Bonus Grid */}
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Bonus 1 */}
-            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+            <div className="bg-white/95 backdrop-blur-sm border-2 border-orange-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-black/30">
+              <div className="bg-gradient-to-r from-orange-700 to-orange-800 p-4 border-b border-orange-600">
                 <p className="text-white font-bold text-center">🎁 BONUS #1</p>
               </div>
               <div className="p-6">
                 <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
-                  <Filter className="w-20 h-20 text-orange-500" />
+                  <Filter className="w-20 h-20 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Your First Funnel: Done-For-You</h3>
-                <p className="text-white/70 text-sm mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Your First Funnel: Done-For-You</h3>
+                <p className="text-gray-700 text-sm mb-4">
                   A pre-built, ready-to-launch funnel you don't have to build yourself. Just install & customize.
                 </p>
                 <p className="text-orange-500 font-semibold">VALUE: $500</p>
@@ -1379,16 +1379,16 @@ const Academy = () => {
             </div>
 
             {/* Bonus 2 */}
-            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+            <div className="bg-white/95 backdrop-blur-sm border-2 border-orange-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-black/30">
+              <div className="bg-gradient-to-r from-orange-700 to-orange-800 p-4 border-b border-orange-600">
                 <p className="text-white font-bold text-center">🎁 BONUS #2</p>
               </div>
               <div className="p-6">
                 <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
-                  <ClipboardCheck className="w-20 h-20 text-orange-500" />
+                  <ClipboardCheck className="w-20 h-20 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Zero-To-One: Get Your First Client</h3>
-                <p className="text-white/70 text-sm mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Zero-To-One: Get Your First Client</h3>
+                <p className="text-gray-700 text-sm mb-4">
                   A step by step checklist that walks you through our entire strategy for getting new clients
                 </p>
                 <p className="text-orange-500 font-semibold">VALUE: $300</p>
@@ -1396,16 +1396,16 @@ const Academy = () => {
             </div>
 
             {/* Bonus 3 */}
-            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+            <div className="bg-white/95 backdrop-blur-sm border-2 border-orange-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-black/30">
+              <div className="bg-gradient-to-r from-orange-700 to-orange-800 p-4 border-b border-orange-600">
                 <p className="text-white font-bold text-center">🎁 BONUS #3</p>
               </div>
               <div className="p-6">
                 <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
-                  <FileText className="w-20 h-20 text-orange-500" />
+                  <FileText className="w-20 h-20 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Best-Selling Funnel Blueprints</h3>
-                <p className="text-white/70 text-sm mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Best-Selling Funnel Blueprints</h3>
+                <p className="text-gray-700 text-sm mb-4">
                   Multiple funnel types working in the market. Broken down for your niche.
                 </p>
                 <p className="text-orange-500 font-semibold">VALUE: $400</p>
@@ -1413,16 +1413,16 @@ const Academy = () => {
             </div>
 
             {/* Bonus 4 */}
-            <div className="bg-gradient-to-br from-orange-600/20 to-orange-500/30 backdrop-blur-sm border-2 border-orange-500/40 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-orange-500/20">
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-4 border-b border-orange-400/30">
+            <div className="bg-white/95 backdrop-blur-sm border-2 border-orange-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-black/30">
+              <div className="bg-gradient-to-r from-orange-700 to-orange-800 p-4 border-b border-orange-600">
                 <p className="text-white font-bold text-center">🎁 BONUS #4</p>
               </div>
               <div className="p-6">
                 <div className="w-full aspect-square mb-4 bg-gradient-to-br from-orange-500/30 to-orange-600/40 rounded-xl flex items-center justify-center border-2 border-orange-500/50">
-                  <Users className="w-20 h-20 text-orange-500" />
+                  <Users className="w-20 h-20 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Private Community Access</h3>
-                <p className="text-white/70 text-sm mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Private Community Access</h3>
+                <p className="text-gray-700 text-sm mb-4">
                   Get support, feedback and connect with other builders working for clients or themselves.
                 </p>
                 <p className="text-orange-500 font-semibold">VALUE: $1,200</p>
@@ -1528,9 +1528,9 @@ const Academy = () => {
       </div>
 
       {/* Final CTA + Guarantee Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] relative overflow-hidden">
+      <div className="py-20 md:py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
         {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           {/* Main Headline */}
