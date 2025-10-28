@@ -2,8 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu, User, FileText, MessageSquare, Lightbulb, Target, Zap, Send, DollarSign, CheckCircle, Crown, Filter, ClipboardCheck, Users, Shield, CreditCard, Package, Star, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { VerificationHero } from "@/components/VerificationHero";
-import { TestimonialsVideoSection } from "@/components/TestimonialsVideoSection";
 import ExperimentSection from "@/components/ExperimentSection";
 import { ProofWallSection } from "@/components/ProofWallSection";
 import { CommunityWinsSection } from "@/components/CommunityWinsSection";
@@ -895,8 +893,6 @@ const Academy = () => {
       {/* VERIFICATION SECTION 1 - Student Results & Social Proof */}
       {/* ═══════════════════════════════════════════════════════════ */}
 
-      <VerificationHero />
-      <TestimonialsVideoSection />
       <ExperimentSection />
       <ProofWallSection />
       <CommunityWinsSection />

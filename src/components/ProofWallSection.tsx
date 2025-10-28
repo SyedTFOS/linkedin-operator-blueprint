@@ -4,14 +4,32 @@ import proofRevenue27k from "@/assets/proof-revenue-27k.png";
 import proofStripeDashboard from "@/assets/proof-stripe-dashboard.png";
 import proofClientGrowth from "@/assets/proof-client-growth.png";
 import proofZellePayment from "@/assets/proof-zelle-payment.png";
+import proofDashboard1 from "@/assets/proof-dashboard-1.png";
+import proofDashboard2 from "@/assets/proof-dashboard-2.png";
+import proofSlack12calls from "@/assets/proof-slack-12calls.png";
+import proofWhatsapp5calls from "@/assets/proof-whatsapp-5calls.png";
+import proofWhatsappBooked from "@/assets/proof-whatsapp-booked.png";
+import proofColdEmail from "@/assets/proof-cold-email.png";
+import proofBookingCalls from "@/assets/proof-booking-calls.png";
+import proofDiscoveryCalls from "@/assets/proof-discovery-calls.png";
+import proofContentPerformance from "@/assets/proof-content-performance.png";
 
 export const ProofWallSection = () => {
   const proofImages = [
+    proofDashboard1,
+    proofSlack12calls,
+    proofWhatsapp5calls,
     proofLinkedInPost,
-    proofAnalytics,
     proofRevenue27k,
+    proofAnalytics,
     proofStripeDashboard,
+    proofDashboard2,
+    proofWhatsappBooked,
+    proofColdEmail,
+    proofBookingCalls,
+    proofDiscoveryCalls,
     proofClientGrowth,
+    proofContentPerformance,
     proofZellePayment
   ];
 
