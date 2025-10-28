@@ -71,9 +71,9 @@ const Academy = () => {
       </div>
 
       {/* Hero Section - Academy Framework */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A0A0A] via-[#0F0F0F] to-[#0A0A0A]">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-[#FF6B35]/10">
         {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-32">
@@ -82,9 +82,9 @@ const Academy = () => {
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-sm text-white/70 uppercase tracking-wider">Limited Enrollment Open</span>
+                <span className="text-sm text-foreground/70 uppercase tracking-wider">Limited Enrollment Open</span>
               </div>
-              <div className="w-px h-4 bg-white/20"></div>
+              <div className="w-px h-4 bg-border"></div>
               <span className="text-sm font-semibold text-primary">147 joined • 53 spots left</span>
             </div>
           </div>
@@ -99,28 +99,28 @@ const Academy = () => {
               </div>
               
               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-8">
-                <span className="block text-white mb-3">Build Your</span>
+                <span className="block text-foreground mb-3">Build Your</span>
                 <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/60 font-light max-w-3xl mx-auto mb-4">
+              <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-4">
                 The complete 7-week training program that takes you from
               </p>
-              <p className="text-2xl md:text-3xl font-bold text-white">
-                <span className="text-white/60">zero experience to</span> <span className="text-primary">$20K/month</span>
+              <p className="text-2xl md:text-3xl font-bold text-foreground">
+                <span className="text-muted-foreground">zero experience to</span> <span className="text-primary">$20K/month</span>
               </p>
             </div>
 
             {/* Journey Path */}
             <div className="grid md:grid-cols-3 gap-6 mb-16">
               {/* Starting Point */}
-              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
+              <div className="relative bg-card backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                     <User className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">You Today</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">
+                  <h3 className="text-2xl font-bold text-foreground mb-3">You Today</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     No experience<br/>
                     No audience<br/>
                     No clients<br/>
@@ -142,8 +142,8 @@ const Academy = () => {
                     <Lightbulb className="w-10 h-10 text-primary" />
                     <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary animate-pulse"></div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">7 Weeks</h3>
-                  <p className="text-white/80 text-sm font-medium leading-relaxed">
+                  <h3 className="text-2xl font-bold text-foreground mb-3">7 Weeks</h3>
+                  <p className="text-foreground/80 text-sm font-medium leading-relaxed">
                     Complete training<br/>
                     Live support<br/>
                     Templates & systems<br/>
@@ -156,13 +156,13 @@ const Academy = () => {
               </div>
 
               {/* The Result */}
-              <div className="relative bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
+              <div className="relative bg-card backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-green-500/10 border border-green-500/30 flex items-center justify-center">
                     <Crown className="w-10 h-10 text-green-500" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">You in 7 Weeks</h3>
-                  <p className="text-green-400 text-sm font-semibold leading-relaxed">
+                  <h3 className="text-2xl font-bold text-foreground mb-3">You in 7 Weeks</h3>
+                  <p className="text-green-600 text-sm font-semibold leading-relaxed">
                     $20K/month avg.<br/>
                     Multiple clients<br/>
                     Proven systems<br/>
@@ -174,36 +174,36 @@ const Academy = () => {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-sm text-white/60">Active Students</div>
+                <div className="text-sm text-muted-foreground">Active Students</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-4xl font-bold text-primary mb-2">1,400+</div>
-                <div className="text-sm text-white/60">Success Stories</div>
+                <div className="text-sm text-muted-foreground">Success Stories</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-4xl font-bold text-primary mb-2">$20K</div>
-                <div className="text-sm text-white/60">Avg. Monthly Revenue</div>
+                <div className="text-sm text-muted-foreground">Avg. Monthly Revenue</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-4xl font-bold text-primary mb-2">7 Weeks</div>
-                <div className="text-sm text-white/60">To First Client</div>
+                <div className="text-sm text-muted-foreground">To First Client</div>
               </div>
             </div>
 
             {/* What You Get */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 mb-12">
-              <h3 className="text-2xl font-bold text-white text-center mb-8">
+            <div className="bg-card backdrop-blur-sm border border-border rounded-2xl p-10 mb-12">
+              <h3 className="text-2xl font-bold text-foreground text-center mb-8">
                 What You Get Inside The Academy
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                  <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
                     Complete Training
                   </h4>
-                  <ul className="space-y-3 text-white/70">
+                  <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1 text-lg">•</span>
                       <span>7-week structured curriculum</span>
@@ -223,11 +223,11 @@ const Academy = () => {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                  <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
                     <Target className="w-5 h-5 text-primary" />
                     Ready-To-Use Systems
                   </h4>
-                  <ul className="space-y-3 text-white/70">
+                  <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1 text-lg">•</span>
                       <span>Done-for-you templates</span>
@@ -253,7 +253,7 @@ const Academy = () => {
             <div className="text-center">
               <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                <span className="text-sm text-red-400 font-medium">Only 53 founding member spots remaining</span>
+                <span className="text-sm text-red-600 font-medium">Only 53 founding member spots remaining</span>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -271,12 +271,12 @@ const Academy = () => {
                     const element = document.getElementById('chat-leo');
                     element?.scrollIntoView({ behavior: 'smooth' });
                   }, 100);
-                }} className="px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-primary/50 text-white rounded-xl font-semibold text-lg transition-all duration-300">
+                }} className="px-10 py-5 bg-card hover:bg-card/80 border-2 border-border hover:border-primary/50 text-foreground rounded-xl font-semibold text-lg transition-all duration-300">
                   Talk to Leo First
                 </button>
               </div>
               
-              <p className="text-sm text-white/50">
+              <p className="text-sm text-muted-foreground">
                 Founding member price ends in: <CountdownTimer className="inline text-primary font-bold" />
               </p>
             </div>
