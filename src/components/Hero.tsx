@@ -4,6 +4,7 @@ import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye, Menu, X } from "lu
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { FloatingNav } from "@/components/FloatingNav";
 import logo from "@/assets/logo-main.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
@@ -65,9 +66,12 @@ const Hero = () => {
     }, 4000);
     return () => clearInterval(intervalId);
   }, [businessApi, isBusinessHovered]);
-  return <section className="relative bg-background">
+  return <section id="hero" className="relative bg-background">
+      {/* Floating Navigation */}
+      <FloatingNav />
+
       {/* Desktop Navigation */}
-      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-40 bg-background/80">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-center">
             <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" />
