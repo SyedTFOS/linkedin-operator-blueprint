@@ -387,6 +387,9 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* Real Students, Real Results Section */}
+      <ExperimentSection />
+
       {/* What Is a LinkedIn Agency - Simple Explanation */}
       <div className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
@@ -1807,7 +1810,6 @@ const Academy = () => {
 
       {/* Real Results Section - Enhanced with Proof */}
       <VerificationHero />
-      <ExperimentSection />
       <CommunityWinsSection />
 
       {/* ═══════════════════════════════════════════════════════════ */}
