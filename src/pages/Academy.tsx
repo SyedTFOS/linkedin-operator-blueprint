@@ -198,6 +198,10 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 2: INTEREST - What / Why / Problem */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+
       {/* What's a LinkedIn Agency Section */}
       <div className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
@@ -430,6 +434,10 @@ const Academy = () => {
           </div>
         </div>
       </div>
+
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 3: DESIRE - Founder Story + Roadmap + Modules */}
+      {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* Founder Discovery Story Section */}
       <div className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
@@ -808,6 +816,10 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 4: VERIFICATION - Student Wins + Social Proof */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+
       {/* Real Results Section - Enhanced with Proof */}
       <div className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-background to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
@@ -971,169 +983,12 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* How You Get Paid Section - Enhanced */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 5: VALIDATION - Guarantee + Risk Reversal */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+
+      {/* Guarantee Section */}
       <div className="py-20 md:py-32 bg-background relative overflow-hidden">
-        {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Badge */}
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-primary/50 bg-primary/5 backdrop-blur-sm">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
-                💰 THE MONEY PART
-              </span>
-            </div>
-          </div>
-
-          {/* Section Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <div className="border-t-4 border-b-4 border-[#FF6B35] py-4 mb-8">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                How You <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">Get Paid</span>
-              </h2>
-            </div>
-            <p className="text-xl md:text-2xl text-foreground/80 mb-8">
-              You charge <span className="font-bold text-foreground">monthly retainers</span>
-            </p>
-            <div className="relative inline-block">
-              <div className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent mb-4">
-                $3K–$50K
-              </div>
-              <div className="text-2xl md:text-3xl font-semibold text-foreground/70">per month, per client</div>
-            </div>
-          </div>
-
-          {/* Pricing Examples - Two Column Layout */}
-          <div className="max-w-6xl mx-auto mb-16">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left - Math */}
-              <div>
-                <p className="text-xl md:text-2xl text-foreground mb-8 font-semibold">
-                  Most of our students manage <span className="text-primary font-bold">3–10 clients</span>
-                </p>
-                
-                <div className="space-y-6">
-                  {/* Example 1 */}
-                  <div className="bg-background/80 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl transition-all">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                      <div>
-                        <div className="text-2xl font-semibold text-foreground mb-1">
-                          3 clients @ $3,500
-                        </div>
-                        <div className="text-sm text-muted-foreground">Entry level pricing</div>
-                      </div>
-                      <div className="text-4xl md:text-5xl font-bold text-primary">
-                        $10,500<span className="text-xl text-muted-foreground">/mo</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Example 2 */}
-                  <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-background backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-6 shadow-xl shadow-primary/10">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                      <div>
-                        <div className="text-2xl font-semibold text-foreground mb-1">
-                          5 clients @ $5,000
-                        </div>
-                        <div className="text-sm text-muted-foreground">Standard pricing</div>
-                      </div>
-                      <div className="text-4xl md:text-5xl font-bold text-primary">
-                        $25,000<span className="text-xl text-muted-foreground">/mo</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Example 3 */}
-                  <div className="bg-background/80 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-xl transition-all">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                      <div>
-                        <div className="text-2xl font-semibold text-foreground mb-1">
-                          10 clients @ $5,000
-                        </div>
-                        <div className="text-sm text-muted-foreground">Scale mode</div>
-                      </div>
-                      <div className="text-4xl md:text-5xl font-bold text-primary">
-                        $50,000<span className="text-xl text-muted-foreground">/mo</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-6 bg-gradient-to-r from-[#FFF7ED] to-[#FFE4CC] rounded-2xl border-2 border-[#FF6B35]/30">
-                  <p className="text-xl md:text-2xl font-bold text-foreground text-center">
-                    Just a few clients = <span className="text-[#FF6B35]">full-time income</span>
-                  </p>
-                </div>
-              </div>
-
-              {/* Right - What Clients Get */}
-              <div>
-                <div className="bg-background/80 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">What Clients Get:</h3>
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-primary/5 to-transparent rounded-xl border border-primary/20">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-primary font-bold text-xl">✓</span>
-                      </div>
-                      <div>
-                        <p className="text-lg font-semibold text-foreground mb-1">10–20 qualified sales calls</p>
-                        <p className="text-sm text-muted-foreground">Every single month</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-primary/5 to-transparent rounded-xl border border-primary/20">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-primary font-bold text-xl">✓</span>
-                      </div>
-                      <div>
-                        <p className="text-lg font-semibold text-foreground mb-1">Premium LinkedIn profile</p>
-                        <p className="text-sm text-muted-foreground">That converts visitors to leads</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-primary/5 to-transparent rounded-xl border border-primary/20">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-primary font-bold text-xl">✓</span>
-                      </div>
-                      <div>
-                        <p className="text-lg font-semibold text-foreground mb-1">Consistent inbound pipeline</p>
-                        <p className="text-sm text-muted-foreground">No more feast or famine</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-primary/5 to-transparent rounded-xl border border-primary/20">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <span className="text-primary font-bold text-xl">✓</span>
-                      </div>
-                      <div>
-                        <p className="text-lg font-semibold text-foreground mb-1">Authority positioning</p>
-                        <p className="text-sm text-muted-foreground">Stand out in their industry</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-border/50">
-                    <p className="text-center text-lg font-semibold text-foreground">
-                      <span className="text-primary">This is why</span> clients pay premium prices and stay for years
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Statement */}
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              The best part? <span className="text-primary">You don't need 100 clients.</span>
-            </p>
-            <p className="text-xl text-foreground/80">
-              Just 3–5 clients paying $3K–$10K/month = life-changing income.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Final CTA Section - Enhanced */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
