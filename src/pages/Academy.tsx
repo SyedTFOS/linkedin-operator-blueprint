@@ -15,22 +15,29 @@ import lifestylePool from "@/assets/lifestyle-pool.png";
 import lifestyleBeach from "@/assets/lifestyle-beach.png";
 import lifestyleOffice from "@/assets/lifestyle-office.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
-
 const Academy = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const logos = [
-    { src: mastercardLogo, alt: "Mastercard" },
-    { src: forbes30Logo, alt: "Forbes 30 Under 30" },
-    { src: yCombinatorLogo, alt: "Y Combinator" },
-    { src: diversyfundLogo, alt: "Diversyfund" },
-    { src: playertwoLogo, alt: "Player Two" },
-    { src: forbesLogo, alt: "Forbes" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const logos = [{
+    src: mastercardLogo,
+    alt: "Mastercard"
+  }, {
+    src: forbes30Logo,
+    alt: "Forbes 30 Under 30"
+  }, {
+    src: yCombinatorLogo,
+    alt: "Y Combinator"
+  }, {
+    src: diversyfundLogo,
+    alt: "Diversyfund"
+  }, {
+    src: playertwoLogo,
+    alt: "Player Two"
+  }, {
+    src: forbesLogo,
+    alt: "Forbes"
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
@@ -43,26 +50,16 @@ const Academy = () => {
       {/* Mobile Navigation - Sliding Header */}
       <div className="md:hidden">
         {/* Mobile Header Toggle Button - Only show when menu is closed */}
-        {!isMobileMenuOpen && (
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform"
-            aria-label="Open menu"
-          >
+        {!isMobileMenuOpen && <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform" aria-label="Open menu">
             <Menu className="w-6 h-6" />
-          </button>
-        )}
+          </button>}
 
         {/* Mobile Sliding Header */}
         <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
           <div className="container mx-auto px-6 py-3 relative">
             <div className="flex items-center justify-between">
               <img src={logo} alt="LinkedIn Operator" className="h-8" />
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform"
-                aria-label="Close menu"
-              >
+              <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -97,7 +94,9 @@ const Academy = () => {
                 </div>
               </div>
               <div className="mt-4 h-2 bg-background/50 rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-primary to-primary/60 rounded-full" style={{ width: '73.5%' }}></div>
+                <div className="h-full bg-gradient-to-r from-primary to-primary/60 rounded-full" style={{
+                width: '73.5%'
+              }}></div>
               </div>
             </div>
           </div>
@@ -150,23 +149,19 @@ const Academy = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button 
-                onClick={() => navigate('/')}
-                className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-xl font-bold text-lg shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all duration-300"
-              >
+              <button onClick={() => navigate('/')} className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-xl font-bold text-lg shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all duration-300">
                 Join the Academy Now
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
               </button>
-              <button 
-                onClick={() => {
-                  navigate('/');
-                  setTimeout(() => {
-                    const element = document.getElementById('chat-leo');
-                    element?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }}
-                className="px-8 py-4 bg-background border-2 border-primary/30 text-foreground rounded-xl font-semibold text-lg hover:bg-primary/5 hover:border-primary transition-all duration-300"
-              >
+              <button onClick={() => {
+              navigate('/');
+              setTimeout(() => {
+                const element = document.getElementById('chat-leo');
+                element?.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }, 100);
+            }} className="px-8 py-4 bg-background border-2 border-primary/30 text-foreground rounded-xl font-semibold text-lg hover:bg-primary/5 hover:border-primary transition-all duration-300">
                 Talk to Leo First
               </button>
             </div>
@@ -182,18 +177,9 @@ const Academy = () => {
           </div>
           <div className="overflow-hidden">
             <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
-              {[...logos, ...logos].map((logo, index) => (
-                <div 
-                  key={index} 
-                  className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                >
-                  <img 
-                    src={logo.src} 
-                    alt={logo.alt} 
-                    className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} 
-                  />
-                </div>
-              ))}
+              {[...logos, ...logos].map((logo, index) => <div key={index} className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                  <img src={logo.src} alt={logo.alt} className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} />
+                </div>)}
             </div>
           </div>
         </div>
@@ -922,9 +908,7 @@ const Academy = () => {
           <div className="text-center mb-12 max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
               Everything You Need To Build A{" "}
-              <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">
-                $20K+/Month LinkedIn Agency
-              </span>
+              <span className="bg-gradient-to-r from-primary via-primary/80 to-[#FF6B35] bg-clip-text text-transparent">$20K - $50K / Month LinkedIn Agency</span>
             </h2>
             <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
               In just 7 weeks, you'll go from complete beginner to landing your first premium client—with the exact system that signed Fortune 500s.
@@ -1558,10 +1542,7 @@ const Academy = () => {
 
           {/* CTA Button */}
           <div className="max-w-2xl mx-auto mb-12">
-            <button
-              onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
-              className="w-full bg-gradient-to-r from-primary to-[#FF6B35] hover:from-primary/90 hover:to-[#FF6B35]/90 text-white font-bold text-xl md:text-2xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 mb-6"
-            >
+            <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="w-full bg-gradient-to-r from-primary to-[#FF6B35] hover:from-primary/90 hover:to-[#FF6B35]/90 text-white font-bold text-xl md:text-2xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 mb-6">
               START YOUR AGENCY TODAY →
               <div className="text-sm font-normal mt-2 opacity-90">
                 Complete System + 30 Days Free Community
@@ -1586,10 +1567,7 @@ const Academy = () => {
             </div>
 
             <div className="text-center">
-              <button
-                onClick={() => navigate('/book')}
-                className="text-white/60 hover:text-white underline transition-colors"
-              >
+              <button onClick={() => navigate('/book')} className="text-white/60 hover:text-white underline transition-colors">
                 Talk to Support First →
               </button>
             </div>
@@ -1951,10 +1929,7 @@ const Academy = () => {
             {/* CTA */}
             <div className="text-center">
               <div className="mb-8">
-                <button 
-                  onClick={() => navigate('/')}
-                  className="group relative px-12 py-6 bg-gradient-to-r from-primary via-primary to-[#FF6B35] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:shadow-[#FF6B35]/50 hover:scale-105 transition-all duration-300"
-                >
+                <button onClick={() => navigate('/')} className="group relative px-12 py-6 bg-gradient-to-r from-primary via-primary to-[#FF6B35] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:shadow-[#FF6B35]/50 hover:scale-105 transition-all duration-300">
                   Get Instant Access Now
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FF6B35] to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
@@ -1994,8 +1969,6 @@ const Academy = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Academy;
