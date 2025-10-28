@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle, TrendingUp, HelpCircle } from "lucide-react";
 import komailGillani from "@/assets/komail-gillani.png";
 import vasilijeSimic from "@/assets/vasilije-simic.png";
 import ethanClouser from "@/assets/ethan-clouser.png";
@@ -163,6 +164,40 @@ const ExperimentSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* Your Turn CTA Card */}
+            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-3xl p-12 text-center hover:shadow-2xl transition-all group">
+              <div className="max-w-md mx-auto space-y-6">
+                <div className="relative inline-block">
+                  <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-4 border-white/30 group-hover:scale-110 transition-transform">
+                    <HelpCircle className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <p className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                    Next Success Story
+                  </p>
+                  <h3 className="text-5xl font-bold text-white">
+                    You
+                  </h3>
+                  <p className="text-3xl font-bold text-white">
+                    Your Turn
+                  </p>
+                  <p className="text-white/90 text-lg">
+                    to write your story
+                  </p>
+                </div>
+                
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto group-hover:scale-105 transition-transform"
+                >
+                  Join us today! 🔥
+                </Button>
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="agency" className="space-y-8 animate-fade-in">
@@ -299,6 +334,40 @@ const ExperimentSection = () => {
                 </div>
               </div>
             </div>
+
+            {/* Your Turn CTA Card */}
+            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-3xl p-12 text-center hover:shadow-2xl transition-all group">
+              <div className="max-w-md mx-auto space-y-6">
+                <div className="relative inline-block">
+                  <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-4 border-white/30 group-hover:scale-110 transition-transform">
+                    <HelpCircle className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <p className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                    Next Success Story
+                  </p>
+                  <h3 className="text-5xl font-bold text-white">
+                    You
+                  </h3>
+                  <p className="text-3xl font-bold text-white">
+                    Your Turn
+                  </p>
+                  <p className="text-white/90 text-lg">
+                    to write your story
+                  </p>
+                </div>
+                
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto group-hover:scale-105 transition-transform"
+                >
+                  Join us today! 🔥
+                </Button>
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="experts" className="space-y-8 animate-fade-in">
@@ -428,6 +497,40 @@ const ExperimentSection = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Your Turn CTA Card */}
+            <div className="bg-gradient-to-br from-primary to-primary/80 border-2 border-primary rounded-3xl p-12 text-center hover:shadow-2xl transition-all group">
+              <div className="max-w-md mx-auto space-y-6">
+                <div className="relative inline-block">
+                  <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto border-4 border-white/30 group-hover:scale-110 transition-transform">
+                    <HelpCircle className="w-12 h-12 text-white" />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <p className="text-white/90 text-sm font-semibold tracking-wide uppercase">
+                    Next Success Story
+                  </p>
+                  <h3 className="text-5xl font-bold text-white">
+                    You
+                  </h3>
+                  <p className="text-3xl font-bold text-white">
+                    Your Turn
+                  </p>
+                  <p className="text-white/90 text-lg">
+                    to write your story
+                  </p>
+                </div>
+                
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-8 py-6 h-auto group-hover:scale-105 transition-transform"
+                >
+                  Join us today! 🔥
+                </Button>
               </div>
             </div>
           </TabsContent>
