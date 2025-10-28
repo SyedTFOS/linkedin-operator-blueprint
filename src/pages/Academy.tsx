@@ -15,7 +15,6 @@ import lifestylePool from "@/assets/lifestyle-pool.png";
 import lifestyleBeach from "@/assets/lifestyle-beach.png";
 import lifestyleOffice from "@/assets/lifestyle-office.png";
 import trainingSystemCard from "@/assets/training-system-card.png";
-
 import operatorExecutionOS from "@/assets/operator-execution-os.png";
 import founderOperatingSystem from "@/assets/founder-operating-system.png";
 import acquisitionOperatingSystem from "@/assets/acquisition-operating-system.png";
@@ -126,9 +125,9 @@ const Academy = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">You Today</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    No experience<br/>
-                    No audience<br/>
-                    No clients<br/>
+                    No experience<br />
+                    No audience<br />
+                    No clients<br />
                     Ready to start
                   </p>
                 </div>
@@ -149,9 +148,9 @@ const Academy = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">7 Weeks</h3>
                   <p className="text-foreground/80 text-sm font-medium leading-relaxed">
-                    Complete training<br/>
-                    Live support<br/>
-                    Templates & systems<br/>
+                    Complete training<br />
+                    Live support<br />
+                    Templates & systems<br />
                     Community access
                   </p>
                 </div>
@@ -168,9 +167,9 @@ const Academy = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">You in 7 Weeks</h3>
                   <p className="text-green-600 text-sm font-semibold leading-relaxed">
-                    $20K/month avg.<br/>
-                    Multiple clients<br/>
-                    Proven systems<br/>
+                    $20K/month avg.<br />
+                    Multiple clients<br />
+                    Proven systems<br />
                     Full autonomy
                   </p>
                 </div>
@@ -854,10 +853,7 @@ const Academy = () => {
 
             {/* CTA Button */}
             <div className="mt-16 text-center">
-              <button 
-                onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
-                className="group inline-flex items-center gap-3 px-10 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
-              >
+              <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="group inline-flex items-center gap-3 px-10 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                 <span>Start Your Agency Today</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -1438,10 +1434,7 @@ const Academy = () => {
             </p>
             
             {/* CTA Button */}
-            <button 
-              onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
-              className="group inline-flex items-center gap-3 px-12 py-6 bg-white hover:bg-white/90 text-orange-600 rounded-2xl font-black text-2xl shadow-2xl transition-all duration-300 hover:scale-105"
-            >
+            <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="group inline-flex items-center gap-3 px-12 py-6 bg-white hover:bg-white/90 text-orange-600 rounded-2xl font-black text-2xl shadow-2xl transition-all duration-300 hover:scale-105">
               <span>Claim Your Bonuses Now</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -1537,19 +1530,13 @@ const Academy = () => {
 
               {/* CTA Buttons */}
               <div className="space-y-4">
-                <button 
-                  onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
-                >
+                <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
                   JOIN NOW - FULL PAYMENT $497
                 </button>
                 
                 <div className="text-center text-white/40 font-semibold">OR</div>
                 
-                <button 
-                  onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
-                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
-                >
+                <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
                   JOIN NOW - 2 PAYMENTS OF $249
                 </button>
               </div>
@@ -1563,7 +1550,9 @@ const Academy = () => {
                   <span>Offer ends in <CountdownTimer className="inline text-red-400 font-bold" /></span>
                 </div>
                 <div className="h-3 bg-white/10 rounded-full overflow-hidden mb-2">
-                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{ width: '18%' }}></div>
+                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{
+                  width: '18%'
+                }}></div>
                 </div>
                 <p className="text-yellow-400 text-sm mt-3 flex items-center gap-2">
                   <Zap className="w-4 h-4" />
@@ -1609,7 +1598,7 @@ const Academy = () => {
                   ✅ Includes 30 Days of Live Coaching
                 </p>
                 <p className="text-center text-muted-foreground">
-                  Weekly Q&A calls included FREE for your first 30 days<br/>
+                  Weekly Q&A calls included FREE for your first 30 days<br />
                   <span className="text-sm">Then only $97/month to continue • Cancel anytime</span>
                 </p>
               </div>
@@ -1718,9 +1707,7 @@ const Academy = () => {
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-8">
               <div className="flex justify-center gap-1 text-[#FFD700] text-3xl mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-8 h-8 fill-[#FFD700]" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-8 h-8 fill-[#FFD700]" />)}
               </div>
               <p className="text-white text-xl md:text-2xl italic font-medium mb-4">
                 "Best investment I've made in my business. Hit $10K in my first month."
@@ -1736,7 +1723,7 @@ const Academy = () => {
       {/* ═══════════════════════════════════════════════════════════ */}
 
       {/* Real Results Section - Enhanced with Proof */}
-      <VerificationHero />
+      
       <CommunityWinsSection />
 
       {/* ═══════════════════════════════════════════════════════════ */}
