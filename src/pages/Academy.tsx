@@ -1466,6 +1466,9 @@ const Academy = () => {
             <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
               GET FULL ACCESS FOR <span className="text-primary">$497</span>
             </h2>
+            <p className="text-xl text-white/60 mb-2">
+              <span className="line-through text-white/40">$2,497</span> → <span className="text-green-400 font-bold">Save $2,000!</span>
+            </p>
             <p className="text-xl text-white/60">Or 2 payments of $249 • Only 9 Spots Left</p>
           </div>
 
@@ -1475,8 +1478,14 @@ const Academy = () => {
               {/* Price Display */}
               <div className="text-center mb-8 pb-8 border-b border-white/10">
                 <p className="text-white/60 text-lg mb-3">Get Instant Access:</p>
+                <div className="mb-3">
+                  <span className="text-3xl text-white/40 line-through">$2,497</span>
+                </div>
                 <div className="text-7xl md:text-8xl font-black text-white mb-4">
                   $497
+                </div>
+                <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full mb-4">
+                  <span className="text-green-400 font-bold text-lg">Save $2,000!</span>
                 </div>
                 <p className="text-white/60 text-lg">
                   Or split it: <span className="text-primary font-semibold">2 payments of $249</span>
@@ -1515,13 +1524,13 @@ const Academy = () => {
                   </div>
                   <p className="text-white text-lg">30-day money-back guarantee</p>
                 </div>
-                <div className="flex items-start gap-3 mt-6 pt-6 border-t border-white/10">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/30 flex items-center justify-center mt-1">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="text-white text-lg"><span className="font-semibold">Optional:</span> Weekly Q&A coaching calls</p>
-                    <p className="text-white/60 text-sm mt-1">Only $97/month • Choose to add later • Cancel anytime</p>
+                    <p className="text-white text-lg"><span className="font-semibold">30 days of weekly Q&A coaching calls</span> (Included FREE)</p>
+                    <p className="text-white/60 text-sm mt-1">Then $97/month to continue • Cancel anytime</p>
                   </div>
                 </div>
               </div>
@@ -1579,21 +1588,29 @@ const Academy = () => {
               </div>
 
               <div className="bg-primary/5 border-2 border-primary/30 rounded-2xl p-6 mb-6">
+                <div className="text-center mb-4">
+                  <span className="text-2xl text-muted-foreground line-through">$2,497</span>
+                </div>
                 <p className="text-center text-xl font-bold mb-3">
                   One-Time Payment: <span className="text-primary text-3xl">$497</span>
                 </p>
-                <p className="text-center text-sm text-muted-foreground">
+                <p className="text-center text-sm text-muted-foreground mb-3">
                   Or split into 2 payments of $249
                 </p>
+                <div className="text-center">
+                  <span className="inline-block px-4 py-2 bg-green-100 text-green-700 font-bold rounded-full text-sm">
+                    SAVE $2,000!
+                  </span>
+                </div>
               </div>
 
               <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 mb-4">
                 <p className="text-center text-lg font-semibold text-foreground mb-2">
-                  Want Live Coaching?
+                  ✅ Includes 30 Days of Live Coaching
                 </p>
                 <p className="text-center text-muted-foreground">
-                  Add weekly Q&A calls for just <span className="font-bold text-foreground">$97/month</span><br/>
-                  <span className="text-sm">(Optional • Choose to add anytime • Cancel anytime)</span>
+                  Weekly Q&A calls included FREE for your first 30 days<br/>
+                  <span className="text-sm">Then only $97/month to continue • Cancel anytime</span>
                 </p>
               </div>
 
