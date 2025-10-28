@@ -67,25 +67,46 @@ export default function Checkout() {
       </header>
 
       <div className="container mx-auto px-4 py-8 md:py-12">
+        {/* Limited Spots Banner - Always First on Mobile */}
+        <div className="lg:hidden mb-6">
+          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background border border-primary/20 rounded-lg p-4 sm:p-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">50 LIMITED SPOTS</h3>
+              <div className="text-xs sm:text-sm text-muted-foreground">
+                Ends in: <CountdownTimer className="font-bold text-primary" />
+              </div>
+            </div>
+            <div className="w-full bg-muted rounded-full h-3 mb-2 overflow-hidden">
+              <div className="bg-gradient-to-r from-green-500 to-primary h-full rounded-full" style={{ width: '86%' }}></div>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Zap className="w-4 h-4 text-yellow-500" />
+              <span>43 claimed • 7 spots left</span>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
           
           {/* LEFT SIDE - Offer Details */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-2 lg:order-1">
             
-            {/* Limited Spots Banner */}
-            <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background border border-primary/20 rounded-lg p-4 sm:p-6">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground">50 LIMITED SPOTS</h3>
-                <div className="text-xs sm:text-sm text-muted-foreground">
-                  Ends in: <CountdownTimer className="font-bold text-primary" />
+            {/* Limited Spots Banner - Desktop Only */}
+            <div className="hidden lg:block">
+              <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background border border-primary/20 rounded-lg p-4 sm:p-6">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground">50 LIMITED SPOTS</h3>
+                  <div className="text-xs sm:text-sm text-muted-foreground">
+                    Ends in: <CountdownTimer className="font-bold text-primary" />
+                  </div>
                 </div>
-              </div>
-              <div className="w-full bg-muted rounded-full h-3 mb-2 overflow-hidden">
-                <div className="bg-gradient-to-r from-green-500 to-primary h-full rounded-full" style={{ width: '86%' }}></div>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Zap className="w-4 h-4 text-yellow-500" />
-                <span>43 claimed • 7 spots left</span>
+                <div className="w-full bg-muted rounded-full h-3 mb-2 overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-500 to-primary h-full rounded-full" style={{ width: '86%' }}></div>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Zap className="w-4 h-4 text-yellow-500" />
+                  <span>43 claimed • 7 spots left</span>
+                </div>
               </div>
             </div>
 
@@ -267,7 +288,7 @@ export default function Checkout() {
           </div>
 
           {/* RIGHT SIDE - Checkout Form */}
-          <div className="lg:sticky lg:top-8 h-fit">
+          <div className="lg:sticky lg:top-8 h-fit order-1 lg:order-2">
             <div className="bg-card border border-border rounded-lg shadow-xl">
               
               {/* Step Indicator */}
