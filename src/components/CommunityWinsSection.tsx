@@ -105,9 +105,6 @@ export const CommunityWinsSection = () => {
               <div key={index} className="break-inside-avoid">
                 <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all hover:shadow-lg">
                   <div className="flex items-start gap-3 mb-4">
-                    <Badge variant="secondary" className="text-xs bg-orange-500 hover:bg-orange-600 text-white shrink-0 rounded-full w-10 h-10 flex items-center justify-center font-bold">
-                      LO
-                    </Badge>
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}
