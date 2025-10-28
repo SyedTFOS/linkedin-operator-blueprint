@@ -2,11 +2,26 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo-text.png";
+import mastercardLogo from "@/assets/mastercard-logo.png";
+import forbes30Logo from "@/assets/forbes-30-under-30.png";
+import yCombinatorLogo from "@/assets/y-combinator-logo.png";
+import diversyfundLogo from "@/assets/diversyfund-logo.png";
+import playertwoLogo from "@/assets/playertwo-logo.png";
+import forbesLogo from "@/assets/forbes-logo.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 
 const Academy = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const logos = [
+    { src: mastercardLogo, alt: "Mastercard" },
+    { src: forbes30Logo, alt: "Forbes 30 Under 30" },
+    { src: yCombinatorLogo, alt: "Y Combinator" },
+    { src: diversyfundLogo, alt: "Diversyfund" },
+    { src: playertwoLogo, alt: "Player Two" },
+    { src: forbesLogo, alt: "Forbes" },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -148,6 +163,31 @@ const Academy = () => {
               >
                 Talk to Leo First
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust Bar Section */}
+      <div className="bg-background border-t border-border/50 py-12">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">As Trusted By</p>
+          </div>
+          <div className="overflow-hidden">
+            <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
+              {[...logos, ...logos].map((logo, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                >
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} 
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
