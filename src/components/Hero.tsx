@@ -4,7 +4,7 @@ import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye, Menu, X } from "lu
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo-transparent-new.png";
+import logo from "@/assets/logo-main.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
 import samAramiVideo from "@/assets/sam-arami-video.mp4";

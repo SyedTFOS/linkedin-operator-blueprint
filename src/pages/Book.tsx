@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo-transparent-new.png";
+import logo from "@/assets/logo-main.png";
 
 const Book = () => {
   const navigate = useNavigate();
