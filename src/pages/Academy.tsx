@@ -67,200 +67,196 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* Hero Section - Machine Architecture */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]">
-        {/* Circuit Board Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        
-        {/* Glowing Accent Lines */}
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
-        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
+      {/* Hero Section - Academy Framework */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A0A0A] via-[#0F0F0F] to-[#0A0A0A]">
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-32">
-          {/* System Status Badge */}
+          {/* Limited Access Badge */}
           <div className="flex justify-center mb-8">
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-sm font-mono text-white/70 uppercase tracking-wider">System Online</span>
+                <span className="text-sm text-white/70 uppercase tracking-wider">Limited Enrollment Open</span>
               </div>
               <div className="w-px h-4 bg-white/20"></div>
-              <span className="text-sm font-semibold text-primary">147 Active Users</span>
+              <span className="text-sm font-semibold text-primary">147 joined • 53 spots left</span>
             </div>
           </div>
 
-          {/* Main System Architecture */}
           <div className="max-w-6xl mx-auto">
-            {/* System Name & Version */}
-            <div className="text-center mb-12">
+            {/* Main Headline */}
+            <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/50"></div>
-                <span className="text-sm font-mono text-primary uppercase tracking-widest">LO-ACADEMY-V2.0</span>
-                <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/50"></div>
+                <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50"></div>
+                <span className="text-sm text-primary uppercase tracking-widest font-semibold">LinkedIn Operator Academy</span>
+                <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50"></div>
               </div>
               
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-6">
-                <span className="block text-white">THE LINKEDIN</span>
-                <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">OPERATOR SYSTEM</span>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-8">
+                <span className="block text-white mb-3">Build Your</span>
+                <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-white/60 font-light max-w-3xl mx-auto mb-4">
-                A proven framework that transforms beginners into
+                The complete 7-week training program that takes you from
               </p>
               <p className="text-2xl md:text-3xl font-bold text-white">
-                <span className="text-primary">$20K/month</span> LinkedIn agency owners
+                <span className="text-white/60">zero experience to</span> <span className="text-primary">$20K/month</span>
               </p>
             </div>
 
-            {/* System Flow Diagram */}
-            <div className="grid md:grid-cols-3 gap-4 mb-12">
-              {/* INPUT */}
-              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 group">
-                <div className="absolute -top-3 left-6 px-3 py-1 bg-[#0A0A0A] border border-white/10 rounded-full">
-                  <span className="text-xs font-mono text-white/50 uppercase">Input</span>
-                </div>
+            {/* Journey Path */}
+            <div className="grid md:grid-cols-3 gap-6 mb-16">
+              {/* Starting Point */}
+              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <User className="w-8 h-8 text-primary" />
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                    <User className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">You</h3>
-                  <p className="text-sm text-white/60">
-                    Zero experience<br/>
+                  <h3 className="text-2xl font-bold text-white mb-3">You Today</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    No experience<br/>
                     No audience<br/>
-                    No clients
+                    No clients<br/>
+                    Ready to start
                   </p>
                 </div>
-                <div className="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 text-primary">
-                  <ArrowRight className="w-6 h-6" />
+                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">
+                  →
                 </div>
               </div>
 
-              {/* PROCESS */}
-              <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border border-primary/30 rounded-2xl p-6 glow-effect">
-                <div className="absolute -top-3 left-6 px-3 py-1 bg-[#0A0A0A] border border-primary/30 rounded-full">
-                  <span className="text-xs font-mono text-primary uppercase">Process</span>
+              {/* The Academy */}
+              <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/40 rounded-2xl p-8">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary rounded-full">
+                  <span className="text-xs text-white font-bold uppercase">The Academy</span>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center relative">
-                    <Zap className="w-8 h-8 text-primary animate-pulse" />
+                <div className="text-center pt-2">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/20 border-2 border-primary/50 flex items-center justify-center relative">
+                    <Lightbulb className="w-10 h-10 text-primary" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary animate-pulse"></div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">The System</h3>
-                  <p className="text-sm text-white/80 font-medium">
-                    7-Week Framework<br/>
-                    Step-by-Step Training<br/>
-                    Proven Templates
+                  <h3 className="text-2xl font-bold text-white mb-3">7 Weeks</h3>
+                  <p className="text-white/80 text-sm font-medium leading-relaxed">
+                    Complete training<br/>
+                    Live support<br/>
+                    Templates & systems<br/>
+                    Community access
                   </p>
                 </div>
-                <div className="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 text-primary">
-                  <ArrowRight className="w-6 h-6" />
+                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">
+                  →
                 </div>
               </div>
 
-              {/* OUTPUT */}
-              <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-green-500/30 transition-all duration-300 group">
-                <div className="absolute -top-3 left-6 px-3 py-1 bg-[#0A0A0A] border border-white/10 rounded-full">
-                  <span className="text-xs font-mono text-white/50 uppercase">Output</span>
-                </div>
+              {/* The Result */}
+              <div className="relative bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center">
-                    <Crown className="w-8 h-8 text-green-500" />
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-green-500/10 border border-green-500/30 flex items-center justify-center">
+                    <Crown className="w-10 h-10 text-green-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Pro Operator</h3>
-                  <p className="text-sm text-green-400 font-semibold">
+                  <h3 className="text-2xl font-bold text-white mb-3">You in 7 Weeks</h3>
+                  <p className="text-green-400 text-sm font-semibold leading-relaxed">
                     $20K/month avg.<br/>
                     Multiple clients<br/>
-                    Full automation
+                    Proven systems<br/>
+                    Full autonomy
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* System Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-1">2,000+</div>
-                <div className="text-xs text-white/60 uppercase tracking-wide">Active Members</div>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                <div className="text-sm text-white/60">Active Students</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-1">1,400+</div>
-                <div className="text-xs text-white/60 uppercase tracking-wide">Success Stories</div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-4xl font-bold text-primary mb-2">1,400+</div>
+                <div className="text-sm text-white/60">Success Stories</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-1">$20K</div>
-                <div className="text-xs text-white/60 uppercase tracking-wide">Avg. Monthly Rev</div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-4xl font-bold text-primary mb-2">$20K</div>
+                <div className="text-sm text-white/60">Avg. Monthly Revenue</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-1">7 Weeks</div>
-                <div className="text-xs text-white/60 uppercase tracking-wide">To First Client</div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:border-primary/30 transition-all">
+                <div className="text-4xl font-bold text-primary mb-2">7 Weeks</div>
+                <div className="text-sm text-white/60">To First Client</div>
               </div>
             </div>
 
-            {/* System Specifications */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
+            {/* What You Get */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-10 mb-12">
+              <h3 className="text-2xl font-bold text-white text-center mb-8">
+                What You Get Inside The Academy
+              </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                  <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    System Requirements
-                  </h3>
-                  <ul className="space-y-2 text-white/70">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>No prior experience needed</span>
+                    Complete Training
+                  </h4>
+                  <ul className="space-y-3 text-white/70">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>7-week structured curriculum</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>No existing audience required</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Step-by-step video lessons</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>Works in any timezone</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Live Q&A sessions</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>Can be started with $0</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Weekly implementation calls</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                  <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
                     <Target className="w-5 h-5 text-primary" />
-                    System Outputs
-                  </h3>
-                  <ul className="space-y-2 text-white/70">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>Full LinkedIn agency infrastructure</span>
+                    Ready-To-Use Systems
+                  </h4>
+                  <ul className="space-y-3 text-white/70">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Done-for-you templates</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>Client acquisition system</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Proven outreach scripts</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>Automated fulfillment processes</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Client fulfillment frameworks</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1">▸</span>
-                      <span>Scalable $20K+/month business</span>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 text-lg">•</span>
+                      <span>Private community access</span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* System Access Controls */}
+            {/* CTA Section */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
+              <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                <span className="text-sm font-mono text-red-400">LIMITED ACCESS: 53 slots remaining</span>
+                <span className="text-sm text-red-400 font-medium">Only 53 founding member spots remaining</span>
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <button onClick={() => navigate('/')} className="group relative px-10 py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                   <span className="relative z-10 flex items-center gap-2">
-                    Initialize System Access
+                    Join The Academy Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -277,8 +273,8 @@ const Academy = () => {
                 </button>
               </div>
               
-              <p className="text-sm text-white/40 font-mono">
-                FOUNDING_MEMBER_PRICE_ACTIVE | EXPIRES_IN: <CountdownTimer className="inline text-primary font-bold" />
+              <p className="text-sm text-white/50">
+                Founding member price ends in: <CountdownTimer className="inline text-primary font-bold" />
               </p>
             </div>
           </div>
@@ -497,7 +493,7 @@ const Academy = () => {
                 Just one platform... One skill stack... One system
               </p>
               <p className="text-lg text-muted-foreground">
-                that's already been proven by <span className="font-bold text-primary">2,000+ members</span> and <span className="font-bold text-primary">billion-dollar clients.</span>
+                that's already been proven by <span className="font-bold text-primary">500+ members</span> and <span className="font-bold text-primary">billion-dollar clients.</span>
               </p>
             </div>
           </div>
@@ -1893,7 +1889,7 @@ const Academy = () => {
 
               <div className="space-y-2">
                 <p className="text-lg font-semibold text-foreground">
-                  Join <span className="text-primary">2,000+ members</span> building profitable LinkedIn agencies
+                  Join <span className="text-primary">500+ members</span> building profitable LinkedIn agencies
                 </p>
                 <p className="text-sm text-muted-foreground">
                   ⚡ Limited spots at founding member price • 🔒 Secure checkout • ✅ Instant access
