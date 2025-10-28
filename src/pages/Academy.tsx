@@ -213,7 +213,7 @@ const Academy = () => {
               </div>
               
               <p className="text-sm text-muted-foreground">
-                Founding member price ends in: <CountdownTimer className="inline text-primary font-bold" />
+                <span className="line-through text-muted-foreground/60">$2,497</span> → Now $497 (Save $2,000!) • Offer ends in: <CountdownTimer className="inline text-primary font-bold" />
               </p>
             </div>
           </div>
@@ -862,7 +862,7 @@ const Academy = () => {
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
               <p className="mt-4 text-sm text-muted-foreground">
-                Only 9 spots left • Offer ends in <CountdownTimer className="inline text-primary font-bold" />
+                <span className="line-through text-muted-foreground/60">$2,497</span> → Now $497 (Save $2,000!) • Only 9 spots left • <CountdownTimer className="inline text-primary font-bold" />
               </p>
             </div>
           </div>
@@ -1262,26 +1262,26 @@ const Academy = () => {
             </div>
 
             {/* Item 4 */}
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-primary/50 rounded-2xl p-8 hover:border-primary transition-all shadow-lg">
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all shadow-lg">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✨</span>
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
+                  <span className="text-green-600 text-xl">✅</span>
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-2xl font-bold">Weekly Live Coaching Calls</h3>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase">Optional Add-On</span>
+                    <h3 className="text-2xl font-bold">30 Days of Weekly Live Coaching Calls</h3>
+                    <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full uppercase">Included FREE</span>
                   </div>
                   <p className="text-muted-foreground mb-4">
                     Get live coaching, strategy sessions, Q&A, and hot seats with the founders. Perfect for personalized guidance and accelerated growth.
                   </p>
-                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
-                    <p className="text-sm font-semibold text-foreground mb-2">Want live coaching?</p>
+                  <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
+                    <p className="text-sm font-semibold text-foreground mb-2">✅ First 30 days included FREE</p>
                     <p className="text-sm text-muted-foreground mb-2">
-                      Add weekly coaching calls for <span className="font-bold text-foreground">$97/month</span>
+                      Get full access to weekly coaching calls for your first month
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      • Add anytime after joining • Cancel anytime • Not required for course access
+                      • Then only $97/month to continue • Cancel anytime • No commitment required
                     </p>
                   </div>
                   <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
@@ -1446,7 +1446,7 @@ const Academy = () => {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
             <p className="mt-4 text-sm text-white/80">
-              Only 9 spots remaining • Offer ends in <CountdownTimer className="inline text-yellow-300 font-bold" />
+              <span className="line-through text-white/40">$2,497</span> → Now $497 (Save $2,000!) • Only 9 spots • <CountdownTimer className="inline text-yellow-300 font-bold" />
             </p>
           </div>
         </div>
@@ -1645,18 +1645,24 @@ const Academy = () => {
             </button>
 
             <div className="text-center text-white space-y-3 mb-6">
+              <div className="mb-2">
+                <span className="text-xl text-white/50 line-through">$2,497</span>
+              </div>
               <p className="text-2xl font-bold">
                 $497 one-time <span className="text-white/70">or 2 payments of $249</span>
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-6 text-base">
+              <p className="text-lg text-white/80">
+                <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300 font-semibold">Save $2,000!</span>
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-base mt-4">
                 <span className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-white" /> Instant Lifetime Access
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> 30-Day Money-Back Guarantee
+                  <CheckCircle className="w-5 h-5 text-white" /> 30 Days Coaching FREE
                 </span>
                 <span className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white" /> Join 500+ Members
+                  <CheckCircle className="w-5 h-5 text-white" /> 30-Day Money-Back
                 </span>
               </div>
             </div>
