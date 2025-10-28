@@ -932,13 +932,17 @@ const Academy = () => {
           </div>
 
           {/* Product Mockup Visual */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="relative h-[500px] rounded-2xl overflow-hidden">
-              <img 
-                src={courseSystemMockup} 
-                alt="LinkedIn Operator Academy Course System" 
-                className="w-full h-full object-contain"
-              />
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-gradient-to-br from-[#C2410C]/20 to-[#9A3412]/20 rounded-2xl p-12 border-2 border-[#EA580C]/40">
+              <div className="flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-6 bg-[#EA580C]/30 rounded-2xl flex items-center justify-center border-2 border-[#EA580C]/60">
+                    <Package className="w-16 h-16 text-[#EA580C]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Complete Training System</h3>
+                  <p className="text-white/70">50+ Modules • Templates • Community • Coaching</p>
+                </div>
+              </div>
             </div>
           </div>
 
