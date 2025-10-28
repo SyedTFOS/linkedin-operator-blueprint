@@ -417,7 +417,7 @@ export default function Checkout() {
                         size="lg" 
                         className="w-full text-base sm:text-lg font-bold"
                         onClick={() => {
-                          window.location.href = 'https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn';
+                          window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn', '_blank', 'noopener,noreferrer');
                         }}
                       >
                         <Lock className="w-5 h-5 mr-2" />
