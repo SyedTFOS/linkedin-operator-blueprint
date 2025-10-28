@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu, User, FileText, MessageSquare, Lightbulb, Target, Zap, Send, DollarSign, CheckCircle, Crown, Filter, ClipboardCheck, Users, Shield, CreditCard, Package, Star, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo-text.png";
+import logo from "@/assets/logo-transparent-new.png";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";

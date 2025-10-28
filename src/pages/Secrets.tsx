@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo-text.png";
+import logo from "@/assets/logo-transparent-new.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import ethanImage from "@/assets/ethan-clouser.png";
 import student1 from "@/assets/student-1.png";
