@@ -416,26 +416,42 @@ export default function Checkout() {
                       </div>
                     </div>
 
-                    <div className="text-center mb-4">
-                      <button
-                        onClick={() => setStep(1)}
-                        className="text-sm text-muted-foreground hover:text-foreground underline"
+                    <div className="space-y-4">
+                      <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
+                        <p className="text-sm text-muted-foreground mb-2">
+                          You're all set! Click below to complete your secure checkout.
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Your information has been saved and will be pre-filled.
+                        </p>
+                      </div>
+
+                      <Button 
+                        size="lg" 
+                        className="w-full text-base sm:text-lg font-bold"
+                        onClick={() => {
+                          window.location.href = 'https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn';
+                        }}
                       >
-                        ← Back to Step 1
-                      </button>
+                        <Lock className="w-5 h-5 mr-2" />
+                        Complete Secure Checkout ($497)
+                      </Button>
+
+                      <div className="text-center">
+                        <button
+                          onClick={() => setStep(1)}
+                          className="text-sm text-muted-foreground hover:text-foreground underline"
+                        >
+                          ← Back to Step 1
+                        </button>
+                      </div>
                     </div>
 
-                    {/* Embedded Fanbasis Checkout */}
-                    <div className="w-full">
-                      <iframe
-                        src={`https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn?email=${encodeURIComponent(formData.email)}&firstName=${encodeURIComponent(formData.firstName)}&lastName=${encodeURIComponent(formData.lastName)}`}
-                        className="w-full h-[600px] border-0 rounded-lg"
-                        title="Checkout"
-                        allow="payment"
-                      />
-                    </div>
-
-                    <div className="space-y-3 text-xs sm:text-sm mt-4">
+                    <div className="space-y-3 text-xs sm:text-sm">
+                      <p className="text-center text-muted-foreground">
+                        Or pay in 2 installments of <span className="font-bold text-foreground">$249</span>
+                      </p>
+                      
                       <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3 sm:p-4 space-y-2">
                         <div className="flex items-center gap-2 text-green-600 font-bold text-sm sm:text-base">
                           <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
