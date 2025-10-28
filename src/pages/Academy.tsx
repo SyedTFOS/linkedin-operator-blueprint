@@ -1,21 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { X, Menu, User, FileText, MessageSquare } from "lucide-react";
+import { X, Menu, User, FileText, MessageSquare, Lightbulb, Target, Zap, Send, DollarSign, CheckCircle, Crown, Filter, ClipboardCheck, Users, Shield, CreditCard, Package, Star, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo-text.png";
-import courseSystemMockup from "@/assets/course-system-mockup.png";
-import week1Icon from "@/assets/module-week1-fundamentals.png";
-import week2Icon from "@/assets/module-week2-branding.png";
-import week3Icon from "@/assets/module-week3-content.png";
-import week4Icon from "@/assets/module-week4-outbound.png";
-import week5Icon from "@/assets/module-week5-sales.png";
-import week6Icon from "@/assets/module-week6-fulfillment.png";
-import week7Icon from "@/assets/module-week7-advanced.png";
-import bonusFunnel from "@/assets/bonus-funnel.png";
-import bonusChecklist from "@/assets/bonus-checklist.png";
-import bonusBlueprints from "@/assets/bonus-blueprints.png";
-import bonusCommunity from "@/assets/bonus-community.png";
-import guaranteeBadge from "@/assets/guarantee-badge.png";
 import mastercardLogo from "@/assets/mastercard-logo.png";
 import forbes30Logo from "@/assets/forbes-30-under-30.png";
 import yCombinatorLogo from "@/assets/y-combinator-logo.png";
@@ -984,8 +971,8 @@ const Academy = () => {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Week 1 */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
-              <div className="w-20 h-20 mb-4 mx-auto">
-                <img src={week1Icon} alt="Week 1 - Fundamentals" className="w-full h-full object-contain" />
+              <div className="w-20 h-20 mb-4 mx-auto bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                <Lightbulb className="w-12 h-12 text-[#EA580C]" />
               </div>
               <div className="text-center mb-4">
                 <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 1</div>
@@ -1014,8 +1001,8 @@ const Academy = () => {
 
             {/* Week 2 */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
-              <div className="w-20 h-20 mb-4 mx-auto">
-                <img src={week2Icon} alt="Week 2 - LinkedIn Branding" className="w-full h-full object-contain" />
+              <div className="w-20 h-20 mb-4 mx-auto bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                <Target className="w-12 h-12 text-[#EA580C]" />
               </div>
               <div className="text-center mb-4">
                 <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 2</div>
@@ -1044,8 +1031,8 @@ const Academy = () => {
 
             {/* Week 3 */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
-              <div className="w-20 h-20 mb-4 mx-auto">
-                <img src={week3Icon} alt="Week 3 - Content Mastery" className="w-full h-full object-contain" />
+              <div className="w-20 h-20 mb-4 mx-auto bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                <Zap className="w-12 h-12 text-[#EA580C]" />
               </div>
               <div className="text-center mb-4">
                 <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 3</div>
@@ -1074,8 +1061,8 @@ const Academy = () => {
 
             {/* Week 4 */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
-              <div className="w-20 h-20 mb-4 mx-auto">
-                <img src={week4Icon} alt="Week 4 - LinkedIn Outbound" className="w-full h-full object-contain" />
+              <div className="w-20 h-20 mb-4 mx-auto bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                <Send className="w-12 h-12 text-[#EA580C]" />
               </div>
               <div className="text-center mb-4">
                 <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 4</div>
@@ -1104,8 +1091,8 @@ const Academy = () => {
 
             {/* Week 5 */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
-              <div className="w-20 h-20 mb-4 mx-auto">
-                <img src={week5Icon} alt="Week 5 - Sales & Closing" className="w-full h-full object-contain" />
+              <div className="w-20 h-20 mb-4 mx-auto bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                <DollarSign className="w-12 h-12 text-[#EA580C]" />
               </div>
               <div className="text-center mb-4">
                 <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 5</div>
@@ -1134,8 +1121,8 @@ const Academy = () => {
 
             {/* Week 6 */}
             <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all">
-              <div className="w-20 h-20 mb-4 mx-auto">
-                <img src={week6Icon} alt="Week 6 - Fulfillment" className="w-full h-full object-contain" />
+              <div className="w-20 h-20 mb-4 mx-auto bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                <CheckCircle className="w-12 h-12 text-[#EA580C]" />
               </div>
               <div className="text-center mb-4">
                 <div className="text-primary text-sm font-semibold uppercase tracking-wide mb-1">WEEK 6</div>
@@ -1392,8 +1379,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #1</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4">
-                  <img src={bonusFunnel} alt="Done-For-You Funnel" className="w-full h-full object-contain" />
+                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                  <Filter className="w-20 h-20 text-[#EA580C]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Your First Funnel: Done-For-You</h3>
                 <p className="text-white/70 text-sm mb-4">
@@ -1409,8 +1396,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #2</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4">
-                  <img src={bonusChecklist} alt="Zero-To-One Checklist" className="w-full h-full object-contain" />
+                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                  <ClipboardCheck className="w-20 h-20 text-[#EA580C]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Zero-To-One: Get Your First Client</h3>
                 <p className="text-white/70 text-sm mb-4">
@@ -1426,8 +1413,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #3</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4">
-                  <img src={bonusBlueprints} alt="Funnel Blueprints" className="w-full h-full object-contain" />
+                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                  <FileText className="w-20 h-20 text-[#EA580C]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Best-Selling Funnel Blueprints</h3>
                 <p className="text-white/70 text-sm mb-4">
@@ -1443,8 +1430,8 @@ const Academy = () => {
                 <p className="text-[#FFD700] font-bold text-center">🎁 BONUS #4</p>
               </div>
               <div className="p-6">
-                <div className="w-full aspect-square mb-4">
-                  <img src={bonusCommunity} alt="Private Community Access" className="w-full h-full object-contain" />
+                <div className="w-full aspect-square mb-4 bg-[#EA580C]/20 rounded-xl flex items-center justify-center border-2 border-[#EA580C]/40">
+                  <Users className="w-20 h-20 text-[#EA580C]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Private Community Access</h3>
                 <p className="text-white/70 text-sm mb-4">
