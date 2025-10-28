@@ -8,6 +8,11 @@ import yCombinatorLogo from "@/assets/y-combinator-logo.png";
 import diversyfundLogo from "@/assets/diversyfund-logo.png";
 import playertwoLogo from "@/assets/playertwo-logo.png";
 import forbesLogo from "@/assets/forbes-logo.png";
+import lifestyleCar from "@/assets/lifestyle-car.png";
+import lifestyleCity from "@/assets/lifestyle-city.png";
+import lifestylePool from "@/assets/lifestyle-pool.png";
+import lifestyleBeach from "@/assets/lifestyle-beach.png";
+import lifestyleOffice from "@/assets/lifestyle-office.png";
 import { CountdownTimer } from "@/components/CountdownTimer";
 
 const Academy = () => {
@@ -422,6 +427,383 @@ const Academy = () => {
             <p className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               This is not theory. It's a <span className="text-primary">repeatable system.</span>
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Founder Discovery Story Section */}
+      <div className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Badge */}
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-primary/50 bg-primary/5 backdrop-blur-sm">
+              <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                HOW I DISCOVERED THE LAST BLUE OCEAN
+              </span>
+            </div>
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-5 gap-12 items-start max-w-7xl mx-auto mb-16">
+            {/* Left Column - Text (60%) */}
+            <div className="lg:col-span-3 space-y-8">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  The Discovery That Let Me Sign <span className="text-[#FF6B35]">Mastercard 💼</span>
+                </h2>
+                
+                <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
+                  <p>
+                    Hey, my name's <span className="font-semibold text-foreground">Freddie</span>, and 18 months ago, I stumbled onto something that changed everything...
+                  </p>
+                  
+                  <p>
+                    I was running a regular agency, signing local businesses and doing okay. But I was stuck at $5-10K/month and working with clients who churned after 3 months.
+                  </p>
+                  
+                  <p>
+                    I felt like I'd hit a ceiling. Every other agency owner I knew was stuck in the same place—fighting for scraps, competing on price, dealing with nightmare clients.
+                  </p>
+                  
+                  <p className="font-semibold text-foreground text-xl">
+                    Then I discovered LinkedIn.
+                  </p>
+                  
+                  <p>
+                    Not the LinkedIn everyone knows—the one where you connect with your uncle's coworker.
+                  </p>
+                  
+                  <p className="font-bold text-foreground text-xl">
+                    I'm talking about the <span className="text-primary">$120 billion blue ocean</span> hiding in plain sight.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Polaroid Photos (40%) */}
+            <div className="lg:col-span-2">
+              <div className="relative grid grid-cols-2 gap-4">
+                {/* Photo 1 - Top Left */}
+                <div className="transform -rotate-3 hover:rotate-0 transition-transform duration-300 group">
+                  <div className="bg-white p-3 shadow-xl rounded-lg">
+                    <img src={lifestyleCar} alt="Luxury lifestyle" className="w-full aspect-square object-cover rounded" />
+                    <p className="text-xs font-handwriting text-gray-700 mt-2 text-center">Living the dream ✨</p>
+                  </div>
+                </div>
+
+                {/* Photo 2 - Top Right */}
+                <div className="transform rotate-2 hover:rotate-0 transition-transform duration-300 mt-8 group">
+                  <div className="bg-white p-3 shadow-xl rounded-lg">
+                    <img src={lifestyleCity} alt="City views" className="w-full aspect-square object-cover rounded" />
+                    <p className="text-xs font-handwriting text-gray-700 mt-2 text-center">Work from anywhere 🌃</p>
+                  </div>
+                </div>
+
+                {/* Photo 3 - Bottom Left */}
+                <div className="transform rotate-1 hover:rotate-0 transition-transform duration-300 group">
+                  <div className="bg-white p-3 shadow-xl rounded-lg">
+                    <img src={lifestylePool} alt="Pool office" className="w-full aspect-square object-cover rounded" />
+                    <p className="text-xs font-handwriting text-gray-700 mt-2 text-center">Pool office days 🏊</p>
+                  </div>
+                </div>
+
+                {/* Photo 4 - Bottom Right */}
+                <div className="transform -rotate-2 hover:rotate-0 transition-transform duration-300 -mt-4 group">
+                  <div className="bg-white p-3 shadow-xl rounded-lg">
+                    <img src={lifestyleBeach} alt="Beach sunset" className="w-full aspect-square object-cover rounded" />
+                    <p className="text-xs font-handwriting text-gray-700 mt-2 text-center">Team sunsets 🌅</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section: I Tested Something Crazy */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="border-t-4 border-b-4 border-[#FF6B35] py-4 mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-center">I Tested Something Crazy</h3>
+            </div>
+            
+            <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
+              <p>
+                Instead of chasing local restaurants and dentists, I started positioning myself to attract <span className="font-semibold text-foreground">Fortune 500s and Y Combinator companies</span> on LinkedIn.
+              </p>
+              
+              <p className="text-xl font-semibold text-foreground">
+                I know—it sounds insane.
+              </p>
+              
+              <p>
+                But here's what I realized: <span className="font-bold text-primary">1.2 billion people</span> are on LinkedIn. <span className="font-bold text-primary">960 million</span> of them are decision-makers with real budgets.
+              </p>
+              
+              <p className="text-xl font-bold text-foreground">
+                Yet less than 1% post consistently.
+              </p>
+              
+              <p className="text-2xl font-bold text-primary">
+                The market was completely untapped.
+              </p>
+            </div>
+
+            {/* 3 Photos in a Row */}
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-4 hover:border-primary/50 transition-all">
+                <img src={lifestyleOffice} alt="Working" className="w-full aspect-video object-cover rounded-lg mb-3" />
+                <p className="text-sm text-center text-muted-foreground">Building the system</p>
+              </div>
+              <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-4 hover:border-primary/50 transition-all">
+                <img src={lifestyleCity} alt="Success" className="w-full aspect-video object-cover rounded-lg mb-3" />
+                <p className="text-sm text-center text-muted-foreground">Scaling globally</p>
+              </div>
+              <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-4 hover:border-primary/50 transition-all">
+                <img src={lifestyleBeach} alt="Team" className="w-full aspect-video object-cover rounded-lg mb-3" />
+                <p className="text-sm text-center text-muted-foreground">Building the team</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section: Within 6 Months */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="border-t-4 border-b-4 border-[#FF6B35] py-4 mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-center">Within 6 Months, Everything Changed</h3>
+            </div>
+            
+            <div className="space-y-4 text-lg text-foreground/80 leading-relaxed mb-8">
+              <p className="text-xl font-semibold text-foreground">
+                I wasn't signing $2K/month clients anymore.
+              </p>
+              
+              <p className="text-xl font-bold text-foreground mb-4">I was signing:</p>
+              
+              <ul className="space-y-3 ml-6">
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span className="font-semibold">Mastercard</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span className="font-semibold">Forbes-featured founders</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span className="font-semibold">Y Combinator backed companies</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span className="font-semibold">$1B+ investment firms</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span className="font-semibold">Royal government contracts</span>
+                </li>
+              </ul>
+              
+              <p className="text-xl font-bold text-primary pt-6">
+                And I was charging $10K-$50K per month.
+              </p>
+              
+              <p className="text-lg">
+                The clients didn't churn. <span className="font-bold text-foreground">They stayed.</span>
+              </p>
+              
+              <p>
+                Because when you work with real businesses solving real problems, they value what you do.
+              </p>
+            </div>
+
+            {/* Large Callout Box */}
+            <div className="bg-gradient-to-r from-[#FFF7ED] to-[#FFE4CC] border-l-4 border-[#FF6B35] p-8 rounded-2xl shadow-lg">
+              <p className="text-2xl md:text-3xl font-medium italic text-foreground/90 leading-relaxed">
+                "I remember the moment it clicked: This isn't just a better way to get clients—this is a <span className="font-bold text-[#FF6B35]">completely different business model</span>."
+              </p>
+            </div>
+          </div>
+
+          {/* Section: Then I Proved It Wasn't Luck */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="border-t-4 border-b-4 border-[#FF6B35] py-4 mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-center">Then I Proved It Wasn't Luck</h3>
+            </div>
+            
+            <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
+              <p>After my own success, I started wondering:</p>
+              
+              <p className="text-xl font-semibold text-foreground italic">
+                "Can anyone do this? Or did I just get lucky?"
+              </p>
+              
+              <p className="text-xl font-bold text-foreground">So I tested it.</p>
+              
+              <p>I took:</p>
+              <ul className="space-y-2 ml-6">
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span>Agency owners stuck at $5K/month</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span>Complete beginners with no experience</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-primary text-xl">•</span>
+                  <span>Industry experts from other fields</span>
+                </li>
+              </ul>
+              
+              <p className="text-xl font-semibold text-foreground">
+                And I showed them the exact system I used.
+              </p>
+            </div>
+
+            {/* Student Results Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-12">
+              <div className="text-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-3 text-2xl font-bold text-primary-foreground">
+                  1
+                </div>
+                <p className="text-sm font-semibold text-green-600">→ $10K in 30 days</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-3 text-2xl font-bold text-primary-foreground">
+                  2
+                </div>
+                <p className="text-sm font-semibold text-green-600">→ $25K/month agency</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-3 text-2xl font-bold text-primary-foreground">
+                  3
+                </div>
+                <p className="text-sm font-semibold text-green-600">→ Signed first Fortune 500</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-3 text-2xl font-bold text-primary-foreground">
+                  4
+                </div>
+                <p className="text-sm font-semibold text-green-600">→ $40K/month in 6 months</p>
+              </div>
+            </div>
+
+            <div className="space-y-4 text-lg text-foreground/80 leading-relaxed">
+              <p className="text-xl font-bold text-foreground">
+                Within 12 months, we'd trained 500+ operators.
+              </p>
+              
+              <p>
+                They were signing the same types of clients: <span className="font-semibold text-foreground">AI companies. Med-tech startups. Investment firms. SaaS companies. Real estate empires.</span>
+              </p>
+              
+              <p className="text-2xl font-bold text-foreground">
+                It wasn't luck.
+              </p>
+              
+              <p className="text-2xl font-bold text-primary">
+                It was a system.
+              </p>
+            </div>
+          </div>
+
+          {/* Section: LinkedIn Gave Me Freedom */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="border-t-4 border-b-4 border-[#FF6B35] py-4 mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold text-center">
+                LinkedIn Didn't Just Replace My Income—<br />It Gave Me Freedom
+              </h3>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 p-6 bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl hover:border-primary/50 transition-all">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground text-lg mb-1">Freedom to work with clients I actually respect</p>
+                  <p className="text-muted-foreground">(No more tire-kickers and payment chasers)</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl hover:border-primary/50 transition-all">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground text-lg mb-1">Freedom to charge what I'm worth</p>
+                  <p className="text-muted-foreground">(Premium clients expect premium pricing)</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl hover:border-primary/50 transition-all">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground text-lg mb-1">Freedom to build real relationships</p>
+                  <p className="text-muted-foreground">(Not transactional 90-day contracts)</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-6 bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl hover:border-primary/50 transition-all">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground text-lg mb-1">Freedom from the "agency hamster wheel"</p>
+                  <p className="text-muted-foreground">(No more churn-and-burn nightmare)</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Lifestyle Photo Collage */}
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4">
+              <img src={lifestyleCar} alt="Lifestyle freedom" className="w-full aspect-square object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" />
+              <img src={lifestyleBeach} alt="Team building" className="w-full aspect-square object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" />
+              <img src={lifestylePool} alt="Work anywhere" className="w-full aspect-square object-cover rounded-xl shadow-lg hover:scale-105 transition-transform" />
+            </div>
+          </div>
+
+          {/* Final CTA Section */}
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="border-t-4 border-b-4 border-[#FF6B35] py-4 mb-8">
+              <h3 className="text-3xl md:text-4xl font-bold">
+                Now, I Want To Share The Exact System<br />So You Can:
+              </h3>
+            </div>
+            
+            <div className="space-y-4 text-lg text-foreground/80 leading-relaxed mb-8">
+              <p className="flex items-start gap-3">
+                <span className="text-primary text-xl flex-shrink-0">→</span>
+                <span>Stop competing with thousands of agencies for broke clients</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-primary text-xl flex-shrink-0">→</span>
+                <span>Start attracting Fortune 500s, YC companies, and $1B+ firms</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-primary text-xl flex-shrink-0">→</span>
+                <span>Build an agency that actually lasts (not one that churns every 3 months)</span>
+              </p>
+              <p className="flex items-start gap-3">
+                <span className="text-primary text-xl flex-shrink-0">→</span>
+                <span>Access the last $120B blue ocean before everyone else catches on</span>
+              </p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              <p className="text-2xl font-bold text-foreground">
+                The opportunity window is open.
+              </p>
+              <p className="text-xl font-semibold text-muted-foreground">
+                But it won't stay open forever.
+              </p>
+            </div>
+
+            <div className="text-right max-w-md ml-auto">
+              <p className="text-lg font-semibold text-foreground">— Freddie Poticarry</p>
+              <p className="text-muted-foreground">Co-Founder, LinkedIn Operator</p>
+            </div>
           </div>
         </div>
       </div>
