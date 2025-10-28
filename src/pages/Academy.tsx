@@ -1552,86 +1552,142 @@ const Academy = () => {
       </div>
 
       {/* Value Stack + Pricing Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
+      <div className="py-20 md:py-32 bg-[#0F0F0F] relative overflow-hidden">
         {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Here's What You're <span className="text-primary">Actually Getting:</span>
+          <div className="text-center mb-12">
+            <div className="inline-block px-6 py-3 bg-primary/10 border border-primary/30 rounded-full mb-6">
+              <span className="text-sm font-bold text-white uppercase tracking-wider">OCTOBER OFFER</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
+              ACCESS FOR <span className="text-primary">$497</span>{" "}
+              <span className="text-white/40 line-through">$2500</span>
             </h2>
+            <p className="text-xl text-white/60">(LIMITED SPOTS)</p>
           </div>
 
-          {/* Value Stack */}
-          <div className="max-w-3xl mx-auto space-y-3 mb-12">
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">7-Week Framework (50+ modules)</span>
-              <span className="text-xl font-bold text-primary">$3,000</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">Templates & SOP Library</span>
-              <span className="text-xl font-bold text-primary">$2,000</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">Weekly Coaching Calls (1 year)</span>
-              <span className="text-xl font-bold text-primary">$1,200</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">Private Community (1 year)</span>
-              <span className="text-xl font-bold text-primary">$1,200</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">Industry Playbooks (8+ niches)</span>
-              <span className="text-xl font-bold text-primary">$1,500</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">BONUS #1: Done-For-You Funnel</span>
-              <span className="text-xl font-bold text-[#FFD700]">$500</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">BONUS #2: Zero-To-One Checklist</span>
-              <span className="text-xl font-bold text-[#FFD700]">$300</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">BONUS #3: Funnel Blueprints</span>
-              <span className="text-xl font-bold text-[#FFD700]">$400</span>
-            </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 flex items-center justify-between hover:border-primary/50 transition-all">
-              <span className="text-lg font-medium">BONUS #4: Community Access</span>
-              <span className="text-xl font-bold text-[#FFD700]">$1,200</span>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            {/* Main Pricing Card */}
+            <div className="bg-[#1A1A1A] border-2 border-white/10 rounded-3xl p-8 md:p-12 mb-8">
+              {/* Price Display */}
+              <div className="text-center mb-8 pb-8 border-b border-white/10">
+                <p className="text-white/60 text-lg mb-3">Full Access Today:</p>
+                <div className="text-7xl md:text-8xl font-black text-white mb-4">
+                  Only $497
+                </div>
+                <p className="text-white/60 text-lg">
+                  Normally $2500 <span className="text-green-400 font-semibold">(save $1660)</span>
+                </p>
+              </div>
 
-            {/* Total */}
-            <div className="bg-gradient-to-r from-primary/20 to-[#FF6B35]/20 border-2 border-primary/50 rounded-xl p-8 mt-6">
-              <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold">TOTAL VALUE:</span>
-                <span className="text-4xl font-extrabold text-primary">$11,300</span>
+              {/* Features List */}
+              <div className="space-y-4 mb-10">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Full Access To The IPGA Masterclass Course</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">All content, All templates, All upgrades.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Full Access To Our Global Community</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Access To Weekly Q&A Calls</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Everything needed to build a $20k+/m IPGA</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Normal price: $2500</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg font-bold text-green-400">Today's price: $497 (Save $1660)</p>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="space-y-4">
+                <button 
+                  onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
+                >
+                  GET FULL ACCESS FOR $497
+                </button>
+                
+                <div className="text-center text-white/40 font-semibold">OR</div>
+                
+                <button 
+                  onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')}
+                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
+                >
+                  FOR 2 PAYMENTS OF $480
+                </button>
+              </div>
+
+              {/* Scarcity Bar */}
+              <div className="mt-10 pt-8 border-t border-white/10">
+                <div className="flex items-center justify-between text-white/60 text-sm mb-3">
+                  <span className="font-semibold">
+                    <span className="text-white">50 SPOTS AT $1660 OFF</span>
+                  </span>
+                  <span>Ends in <CountdownTimer className="inline text-primary font-bold" /></span>
+                </div>
+                <div className="flex items-center justify-between text-sm mb-2">
+                  <span className="text-white/60">41 claimed <span className="text-white/40">•</span> 9 left</span>
+                </div>
+                <div className="h-3 bg-white/10 rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full" style={{ width: '82%' }}></div>
+                </div>
+                <p className="text-yellow-400 text-sm mt-3 flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
+                  October special, price increasing after
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* Pricing Box */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-gradient-to-br from-card/80 to-card/50 backdrop-blur-sm border-4 border-primary/50 rounded-3xl p-12 shadow-2xl">
-              <div className="text-center mb-8">
-                <p className="text-lg text-muted-foreground mb-2">YOUR INVESTMENT TODAY:</p>
-                <div className="text-6xl md:text-7xl font-extrabold text-primary mb-4">
+            {/* Investment Box */}
+            <div className="bg-white rounded-3xl border-4 border-primary p-8 md:p-10 mb-8">
+              <p className="text-center text-muted-foreground text-lg mb-4">YOUR INVESTMENT TODAY:</p>
+              <div className="text-center mb-6">
+                <div className="text-6xl md:text-7xl font-black text-primary mb-3">
                   $497
                 </div>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground text-lg">
                   (Then $97/month for community access after first 30 days)
                 </p>
               </div>
 
-              <div className="bg-[#FF6B35]/10 border border-[#FF6B35]/30 rounded-2xl p-6 mb-8">
-                <p className="text-center text-lg font-semibold">
-                  That's <span className="text-[#FF6B35] text-2xl font-bold">95% off</span> the total value.
+              <div className="bg-primary/5 border-2 border-primary/30 rounded-2xl p-6 mb-6">
+                <p className="text-center text-xl font-bold">
+                  That's <span className="text-primary text-3xl">95% off</span> the total value.
                 </p>
               </div>
 
-              <p className="text-center text-muted-foreground mb-4">
+              <p className="text-center text-muted-foreground text-lg">
                 You're getting <span className="font-bold text-foreground">$11,300 worth</span> of training, templates, coaching, and community for a one-time payment of $497.
               </p>
             </div>
@@ -1640,101 +1696,103 @@ const Academy = () => {
       </div>
 
       {/* Final CTA + Guarantee Section */}
-      <div className="py-20 md:py-32 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
+      <div className="py-20 md:py-32 bg-gradient-to-br from-primary via-[#FF8A5B] to-[#FF6B35] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           {/* Main Headline */}
           <div className="text-center mb-12 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
               Ready To Build Your LinkedIn Agency?
             </h2>
           </div>
 
           {/* CTA Button */}
           <div className="max-w-2xl mx-auto mb-12">
-            <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="w-full bg-gradient-to-r from-primary to-[#FF6B35] hover:from-primary/90 hover:to-[#FF6B35]/90 text-white font-bold text-xl md:text-2xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 mb-6">
+            <button onClick={() => window.open('https://whop.com/linkedin-operator-academy/', '_blank')} className="w-full bg-white hover:bg-white/90 text-primary font-black text-2xl md:text-3xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 mb-4">
               START YOUR AGENCY TODAY →
-              <div className="text-sm font-normal mt-2 opacity-90">
+              <div className="text-base font-normal mt-2 opacity-80">
                 Complete System + 30 Days Free Community
               </div>
             </button>
 
-            <div className="text-center text-white/80 space-y-2 mb-8">
-              <p className="text-xl">
-                One-Time: <span className="font-bold text-primary">$497</span> • Then $97/month
+            <div className="text-center text-white space-y-3 mb-6">
+              <p className="text-2xl font-bold">
+                One-Time: <span className="text-white">$497</span> • Then $97/month
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+              <div className="flex flex-wrap items-center justify-center gap-6 text-base">
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✅</span> Instant Access to All Modules
+                  <CheckCircle className="w-5 h-5 text-white" /> Instant Access to All Modules
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✅</span> 30-Day Money-Back Guarantee
+                  <CheckCircle className="w-5 h-5 text-white" /> 30-Day Money-Back Guarantee
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✅</span> Join 500+ Operators
+                  <CheckCircle className="w-5 h-5 text-white" /> Join 500+ Operators
                 </span>
               </div>
             </div>
 
             <div className="text-center">
-              <button onClick={() => navigate('/book')} className="text-white/60 hover:text-white underline transition-colors">
+              <button onClick={() => navigate('/book')} className="text-white hover:text-white/80 underline transition-colors text-lg">
                 Talk to Support First →
               </button>
             </div>
           </div>
 
-          {/* Guarantee Badge */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="bg-white/5 backdrop-blur-sm border-2 border-[#FFD700]/30 rounded-2xl p-8">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-full bg-[#FFD700]/20 flex items-center justify-center text-5xl border-4 border-[#FFD700]/50">
-                    🛡️
+          {/* Guarantee Section */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-3xl p-10">
+              <div className="flex flex-col md:flex-row items-start gap-8">
+                <div className="flex-shrink-0 mx-auto md:mx-0">
+                  <div className="w-32 h-32 rounded-full bg-[#FFD700] flex items-center justify-center shadow-2xl">
+                    <Shield className="w-16 h-16 text-white" />
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">30-Day Money-Back Guarantee</h3>
-                  <p className="text-white/80 leading-relaxed">
+                <div className="text-center md:text-left flex-1">
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-4">30-Day Money-Back Guarantee</h3>
+                  <p className="text-white text-lg leading-relaxed mb-3">
                     If for any reason you're not satisfied with your purchase, simply email{" "}
-                    <span className="text-[#FFD700]">support@linkedinoperator.com</span> within 30 days for a full refund.
+                    <span className="font-bold text-white underline">support@linkedinoperator.com</span> within 30 days for a full refund.
                   </p>
-                  <p className="text-white/80 font-semibold mt-2">No questions asked.</p>
+                  <p className="text-white text-xl font-bold">No questions asked.</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-white/70 text-sm mb-12">
-            <span className="flex items-center gap-2">
-              <span>💳</span> Secure Checkout
+          <div className="flex flex-wrap items-center justify-center gap-8 text-white text-base mb-12">
+            <span className="flex items-center gap-2 font-semibold">
+              <CreditCard className="w-5 h-5" /> Secure Checkout
             </span>
             <span>•</span>
-            <span className="flex items-center gap-2">
-              <span>🔒</span> SSL Encrypted
+            <span className="flex items-center gap-2 font-semibold">
+              <Shield className="w-5 h-5" /> SSL Encrypted
             </span>
             <span>•</span>
-            <span className="flex items-center gap-2">
-              <span>✅</span> Instant Access
+            <span className="flex items-center gap-2 font-semibold">
+              <Zap className="w-5 h-5" /> Instant Access
             </span>
             <span>•</span>
-            <span className="flex items-center gap-2">
-              <span>🛡️</span> 30-Day Guarantee
+            <span className="flex items-center gap-2 font-semibold">
+              <Shield className="w-5 h-5" /> 30-Day Guarantee
             </span>
           </div>
 
           {/* Testimonial */}
           <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <div className="flex justify-center gap-1 text-[#FFD700] text-2xl mb-3">
-                ⭐⭐⭐⭐⭐
+            <div className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-8">
+              <div className="flex justify-center gap-1 text-[#FFD700] text-3xl mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-8 h-8 fill-[#FFD700]" />
+                ))}
               </div>
-              <p className="text-white/90 text-lg italic mb-3">
+              <p className="text-white text-xl md:text-2xl italic font-medium mb-4">
                 "Best investment I've made in my business. Hit $10K in my first month."
               </p>
-              <p className="text-white/60 text-sm">— Ethan C., Academy Member</p>
+              <p className="text-white/80 text-lg">— Ethan C., Academy Member</p>
             </div>
           </div>
         </div>
