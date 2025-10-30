@@ -678,23 +678,27 @@ const Academy = () => {
                   </p>
                   
                   <p>
-                    I was running a regular agency, signing local businesses and doing okay. But I was stuck at $5-10K/month and working with clients who churned after 3 months.
+                    18 months ago, we were running a regular agency. Signing local businesses. Making okay money. Stuck at $10-20K/month.
+                  </p>
+                  
+                  <p className="font-semibold text-foreground text-xl mt-6">
+                    Then we tried something different.
                   </p>
                   
                   <p>
-                    I felt like I'd hit a ceiling. Every other agency owner I knew was stuck in the same place—fighting for scraps, competing on price, dealing with nightmare clients.
+                    Instead of chasing restaurants and dentists, we started positioning ourselves for Fortune 500 companies on LinkedIn.
                   </p>
                   
-                  <p className="font-semibold text-foreground text-xl">
-                    Then I discovered LinkedIn.
+                  <p className="italic">
+                    I know—it sounds insane.
                   </p>
                   
                   <p>
-                    Not the LinkedIn everyone knows—the one where you connect with your uncle's coworker.
+                    But here's what we discovered: 1.2 billion people are on LinkedIn. 960 million are decision-makers with real budgets. Yet less than 1% post consistently.
                   </p>
                   
                   <p className="font-bold text-foreground text-xl">
-                    I'm talking about the <span className="text-primary">$120 billion blue ocean</span> hiding in plain sight.
+                    The market was completely untapped.
                   </p>
                 </div>
               </div>
