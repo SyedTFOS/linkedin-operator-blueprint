@@ -103,7 +103,7 @@ const Academy = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8">
-                <span className="block text-foreground mb-2 sm:mb-3">While 99% Chase Saturated Markets</span>
+                <span className="block text-foreground mb-2 sm:mb-3">The Last $120B Blue Ocean Before It Closes Forever:</span>
                 <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
