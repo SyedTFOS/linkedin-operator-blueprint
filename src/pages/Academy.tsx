@@ -98,7 +98,7 @@ const Academy = () => {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6">
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50"></div>
-                <span className="text-sm text-primary uppercase tracking-widest font-semibold">LinkedIn Operator Academy</span>
+                <span className="text-sm text-primary uppercase tracking-widest font-semibold">LINKEDIN OPERATOR ACADEMY | THE LAST $120 BILLION BLUE OCEAN</span>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50"></div>
               </div>
               
