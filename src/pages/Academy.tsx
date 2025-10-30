@@ -386,7 +386,7 @@ const Academy = () => {
           {/* Why Many People Struggle Section */}
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
-              Why Many People <span className="text-red-500">Struggle</span> <span className="text-white">to Build an Online Business</span>
+              <span className="text-white">Why Many People</span> <span className="text-red-500">Struggle</span> <span className="text-white">to Build an Online Business</span>
             </h3>
 
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12">
