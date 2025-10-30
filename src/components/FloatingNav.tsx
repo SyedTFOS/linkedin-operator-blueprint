@@ -117,13 +117,18 @@ export const FloatingNav = () => {
       <div className="bg-background/95 backdrop-blur-md border-2 border-primary/30 rounded-full shadow-[0_0_20px_rgba(255,107,53,0.15)] px-2 py-2">
         <ul className="flex items-center gap-1">
           {navItems.map((item) => (
-            <li key={item.name} className="relative">
+            <li 
+              key={item.name} 
+              className="relative group"
+              onMouseEnter={() => item.submenu && setOpenDropdown(item.name)}
+              onMouseLeave={() => item.submenu && setOpenDropdown(null)}
+            >
               <a
                 href={item.link}
                 onClick={(e) => handleNavClick(e, item)}
                 className={cn(
                   "px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-1",
-                  "hover:bg-primary/10 hover:text-primary",
+                  "hover:bg-primary/10 hover:text-primary cursor-pointer",
                   activeSection === item.section
                     ? "bg-primary text-primary-foreground shadow-lg"
                     : "text-foreground/70"
@@ -134,7 +139,7 @@ export const FloatingNav = () => {
               </a>
               
               {item.submenu && openDropdown === item.name && (
-                <div className="absolute top-full right-0 mt-2 bg-background/95 backdrop-blur-md border border-border/50 rounded-2xl shadow-2xl py-2 min-w-[200px]">
+                <div className="absolute top-full right-0 mt-2 bg-background border-2 border-primary/30 rounded-2xl shadow-[0_0_20px_rgba(255,107,53,0.2)] py-2 min-w-[200px] z-[100]">
                   {item.submenu.map((subItem) => (
                     <button
                       key={subItem.name}
