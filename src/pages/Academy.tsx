@@ -109,7 +109,7 @@ const Academy = () => {
               
               <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-3 sm:mb-4">The same system that signed Mastercard, Forbes 30 Under 30 founders, and Y Combinator companies — now available to operators who move fast.</p>
               <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-                <span className="text-muted-foreground">$20K - $50K / month with a LinkedIn Agency</span> <span className="text-primary">$20K/month</span>
+                <span className="text-muted-foreground">$0 -></span> <span className="text-primary">$20K/month</span>
               </p>
             </div>
 
