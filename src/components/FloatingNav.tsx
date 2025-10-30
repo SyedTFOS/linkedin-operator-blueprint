@@ -33,8 +33,11 @@ const navItems: NavItem[] = [
   },
   {
     name: "Results",
-    link: "#experiment",
-    section: "experiment"
+    link: "#results",
+    submenu: [
+      { name: "Business Results", link: "/business" },
+      { name: "Agency Results", link: "/agency" }
+    ]
   },
   {
     name: "Contact",
