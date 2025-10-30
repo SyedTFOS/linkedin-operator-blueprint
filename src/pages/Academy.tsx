@@ -263,64 +263,68 @@ const Academy = () => {
           {/* Main Headline */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-tight">
-              Ever Felt Like Doing Business Online Means...
+              Here&apos;s What Nobody&apos;s Telling You
             </h2>
-          </div>
-
-          {/* Problems List */}
-          <div className="max-w-3xl mx-auto mb-16 space-y-4">
-            <div className="flex items-start gap-3 sm:gap-4 text-white/90 text-base sm:text-lg">
-              <span className="text-red-500 font-bold text-lg sm:text-xl flex-shrink-0">✗</span>
-              <p>Business models that require <span className="font-bold text-white">huge upfront costs...</span></p>
-            </div>
-            <div className="flex items-start gap-3 sm:gap-4 text-white/90 text-base sm:text-lg">
-              <span className="text-red-500 font-bold text-lg sm:text-xl flex-shrink-0">✗</span>
-              <p>Waiting <span className="font-bold text-white">months</span> <span className="italic text-white/60">(or years)</span> to see <span className="font-bold text-white">results...</span></p>
-            </div>
-            <div className="flex items-start gap-3 sm:gap-4 text-white/90 text-base sm:text-lg">
-              <span className="text-red-500 font-bold text-lg sm:text-xl flex-shrink-0">✗</span>
-              <p>Needing an <span className="font-bold text-white">audience</span> and being stuck on the <span className="italic text-white/60">content hamster wheel...</span></p>
-            </div>
-          </div>
-
-          <div className="text-center mb-16 sm:mb-20">
-            <p className="text-lg sm:text-xl text-white/80 mb-2">Then keep reading—because</p>
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
-              <span className="text-primary">this skill</span> changes everything.
+            <p className="text-xl sm:text-2xl text-white/90 font-medium">
+              You&apos;ve been sold a lie.
             </p>
           </div>
 
-          {/* Why Many Struggle Section */}
+          {/* Problems List */}
+          <div className="max-w-3xl mx-auto mb-16 space-y-6">
+            <p className="text-white/90 text-base sm:text-lg">
+              They told you to start an SMMA. Chase local restaurants and dentists for $500/month. Watch your clients churn after 3 months.
+            </p>
+            <p className="text-white/90 text-base sm:text-lg">
+              They told you dropshipping was the answer. Fight over pennies on commoditized products while Facebook crushes your margins.
+            </p>
+            <p className="text-white/90 text-base sm:text-lg">
+              They told you AI agencies were the future. Now there are 10,000 of them, all saying the same thing, all racing to the bottom.
+            </p>
+          </div>
+
+          <div className="text-center mb-16 sm:mb-20 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl text-white font-bold mb-4">
+              Every "opportunity" you&apos;ve been sold has the same fatal flaw:
+            </p>
+            <p className="text-lg sm:text-xl text-white/80">
+              You&apos;re competing in red oceans with everyone else who watched the same YouTube video.
+            </p>
+          </div>
+
+          {/* LinkedIn Market Section */}
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-12">
-              Why Many People <span className="text-red-400">Struggle</span> to Build an Online Business
+              But There&apos;s A <span className="text-primary">$120 Billion Market</span> Hiding In Plain Sight
             </h3>
             
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 mb-12">
-              <p className="text-lg text-white/80 mb-6">
-                Building an online business isn't hard because there aren't opportunities—<span className="italic text-white">it's hard because:</span>
+              <p className="text-lg text-white/80 mb-8">
+                While everyone fights over scraps, there&apos;s a platform with:
               </p>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-red-500 font-bold text-xl flex-shrink-0">✗</span>
-                  <p className="text-white/90 text-lg">They don't have a <span className="italic text-primary">clear, high-value</span> skill that businesses will <span className="font-bold text-white">pay</span> for.</p>
+              <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-2">1.2B</div>
+                  <div className="text-sm sm:text-base text-white/70">Active Users</div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-500 font-bold text-xl flex-shrink-0">✗</span>
-                  <p className="text-white/90 text-lg">They get <span className="font-bold text-white">stuck</span> in <span className="italic text-white/60">"learning mode"</span> and never take <span className="font-bold text-white">action.</span></p>
+                <div className="text-center">
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-2">960M</div>
+                  <div className="text-sm sm:text-base text-white/70">Decision-Makers</div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-500 font-bold text-xl flex-shrink-0">✗</span>
-                  <p className="text-white/90 text-lg">They have <span className="italic text-white/60">no idea</span> how to get <span className="font-bold text-white">clients.</span></p>
+                <div className="text-center">
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-2">60M</div>
+                  <div className="text-sm sm:text-base text-white/70">Companies</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-2">&lt;1%</div>
+                  <div className="text-sm sm:text-base text-white/70">Post Weekly</div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-white/10">
-                <p className="text-lg text-white/80 mb-4">I know, because I was there too.</p>
-                <p className="text-lg text-white/80 mb-4">Less than two years ago, I was <span className="font-bold text-white">lost.</span></p>
-                <p className="text-lg text-white/80">
-                  I wanted to build a business online, but nothing clicked. I <span className="font-bold text-white">tried different business models</span>—<span className="italic text-white/60">affiliate marketing, eCommerce, freelancing</span>—but everything was either <span className="font-bold text-red-400">too slow</span>, <span className="font-bold text-red-400">too expensive</span>, or <span className="font-bold text-red-400">too unpredictable</span>.
+              <div className="pt-8 border-t border-white/10">
+                <p className="text-xl sm:text-2xl text-white font-bold text-center">
+                  LinkedIn is the single biggest untapped opportunity in online business right now.
                 </p>
               </div>
             </div>
