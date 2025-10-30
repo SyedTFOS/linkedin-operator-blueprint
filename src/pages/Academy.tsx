@@ -50,7 +50,7 @@ const Academy = () => {
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-center">
-            <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" />
+            <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" loading="eager" />
           </div>
         </div>
       </nav>
@@ -66,7 +66,7 @@ const Academy = () => {
         <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
           <div className="container mx-auto px-6 py-3 relative">
             <div className="flex items-center justify-between">
-              <img src={logo} alt="LinkedIn Operator" className="h-8" />
+              <img src={logo} alt="LinkedIn Operator" className="h-8" loading="eager" />
               <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
                 <X className="w-5 h-5" />
               </button>
@@ -210,7 +210,7 @@ const Academy = () => {
           <div className="overflow-hidden">
             <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
               {[...logos, ...logos].map((logo, index) => <div key={index} className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
-                  <img src={logo.src} alt={logo.alt} className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} />
+                  <img src={logo.src} alt={logo.alt} className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} loading="eager" />
                 </div>)}
             </div>
           </div>
@@ -730,7 +730,7 @@ const Academy = () => {
               {/* Discovery Photo */}
               <div className="transform hover:scale-105 transition-transform duration-300">
                 <div className="bg-white p-4 shadow-2xl rounded-2xl">
-                  <img src={lifestyleOffice} alt="Building the system" className="w-full aspect-video object-cover rounded-lg" />
+                  <img src={lifestyleOffice} alt="Building the system" className="w-full aspect-video object-cover rounded-lg" loading="eager" />
                   <p className="text-sm font-handwriting text-gray-700 mt-3 text-center">Building the system 💻</p>
                 </div>
               </div>
@@ -743,7 +743,7 @@ const Academy = () => {
               {/* Transformation Photo */}
               <div className="transform hover:scale-105 transition-transform duration-300 order-2 lg:order-1">
                 <div className="bg-white p-4 shadow-2xl rounded-2xl">
-                  <img src={lifestyleCity} alt="Scaling globally" className="w-full aspect-video object-cover rounded-lg" />
+                  <img src={lifestyleCity} alt="Scaling globally" className="w-full aspect-video object-cover rounded-lg" loading="eager" />
                   <p className="text-sm font-handwriting text-gray-700 mt-3 text-center">Scaling globally 🌎</p>
                 </div>
               </div>
@@ -799,7 +799,7 @@ const Academy = () => {
               {/* Mission Photo */}
               <div className="transform hover:scale-105 transition-transform duration-300">
                 <div className="bg-white p-4 shadow-2xl rounded-2xl">
-                  <img src={lifestyleBeach} alt="Building the team" className="w-full aspect-video object-cover rounded-lg" />
+                  <img src={lifestyleBeach} alt="Building the team" className="w-full aspect-video object-cover rounded-lg" loading="eager" />
                   <p className="text-sm font-handwriting text-gray-700 mt-3 text-center">Building the team 🤝</p>
                 </div>
               </div>
@@ -866,7 +866,7 @@ const Academy = () => {
 
           {/* Product Mockup Visual */}
           <div className="max-w-4xl mx-auto mb-16">
-            <img src={trainingSystemCard} alt="Complete Training System" className="w-full rounded-2xl shadow-2xl shadow-black/30" />
+            <img src={trainingSystemCard} alt="Complete Training System" className="w-full rounded-2xl shadow-2xl shadow-black/30" loading="eager" />
           </div>
 
 
@@ -1177,7 +1177,7 @@ const Academy = () => {
                   {/* Operating System Visuals */}
                   <div className="mt-6 space-y-4">
                     <div className="bg-background rounded-xl overflow-hidden border border-border/50">
-                      <img src={operatorExecutionOS} alt="LinkedIn Operator Execution OS" className="w-full" />
+                      <img src={operatorExecutionOS} alt="LinkedIn Operator Execution OS" className="w-full" loading="eager" />
                     </div>
                   </div>
                 </div>

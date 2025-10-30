@@ -66,18 +66,42 @@ const Hero = () => {
     }, 4000);
     return () => clearInterval(intervalId);
   }, [businessApi, isBusinessHovered]);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return <section id="hero" className="relative bg-background">
       {/* Floating Navigation */}
       <FloatingNav />
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-40 bg-background/80">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-center">
-            <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" />
-          </div>
+      <div className="hidden md:block sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50">
+        <div className="container mx-auto px-6">
+          {/* Logo - hides on scroll */}
+          {!scrolled && (
+            <div className="py-4 flex items-center justify-center border-b border-border/30">
+              <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" loading="eager" />
+            </div>
+          )}
+          
+          {/* Navigation Bar - always visible and sticks */}
+          <nav className="py-3">
+            <div className="flex items-center justify-center gap-6">
+              <a href="#about-linkedin-operator" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">About</a>
+              <a href="#what-is-linkedin-agency" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">What We Do</a>
+              <a href="#numbers" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">Numbers</a>
+              <a href="#experiment" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">Results</a>
+              <a href="#about-programs" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">Programs</a>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
 
       {/* Mobile Navigation - Sliding Header */}
       <div className="md:hidden">
@@ -90,7 +114,7 @@ const Hero = () => {
         <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
           <div className="container mx-auto px-6 py-3 relative">
             <div className="flex items-center justify-between">
-              <img src={logo} alt="LinkedIn Operator" className="h-8" />
+              <img src={logo} alt="LinkedIn Operator" className="h-8" loading="eager" />
               <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
                 <X className="w-5 h-5" />
               </button>
@@ -110,9 +134,9 @@ const Hero = () => {
                 {/* Social Proof */}
                 <div className="inline-flex items-center gap-2.5 px-3 py-2 rounded-full bg-muted/50 border border-border/50 w-fit">
                   <div className="flex -space-x-2">
-                    <img src={student1} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" />
-                    <img src={student2} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" />
-                    <img src={student3} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" />
+                    <img src={student1} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
+                    <img src={student2} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
+                    <img src={student3} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
                   </div>
                   <div className="flex items-center gap-1.5">
                     <div className="flex gap-0.5">
@@ -124,19 +148,16 @@ const Hero = () => {
               </div>
 
               <div className="space-y-3 relative">
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  The Only Business Model That Allows You To Sign Clients Like this
-                </p>
                 <p className="text-sm text-primary font-semibold uppercase tracking-wider italic">
                   For True Founders
                 </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+                <h1 className="text-5xl sm:text-6xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                   Start Your LinkedIn Agency
                 </h1>
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed font-medium">
-                Whether you're starting a LinkedIn agency or scaling your business—we have the programs, systems, and strategies to get you working with Fortune 500s, Y Combinator startups, and real companies in a blue ocean outside the saturated "online money" space.
+                Whether you're starting a LinkedIn agency or scaling your business, we have the programs, systems, and strategies to get you working with Fortune 500s, Y Combinator startups, and real companies in a blue ocean, outside the saturated "online money" space.
               </p>
 
               {/* Stats Row */}
@@ -276,11 +297,11 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
-                              <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-contain" />
+                              <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-contain" loading="eager" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
                                   <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
-                                    <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-cover" />
+                                    <img src={ethanClouserPhoto} alt="Ethan Clouser" className="w-full h-full object-cover" loading="eager" />
                                   </div>
                                   <div>
                                     <p className="font-semibold text-sm">Ethan Clouser</p>
@@ -302,11 +323,11 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
-                              <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-contain" />
+                              <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-contain" loading="eager" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
                                   <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
-                                    <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-cover" />
+                                    <img src={aryanShahPhoto} alt="Aryan Shah" className="w-full h-full object-cover" loading="eager" />
                                   </div>
                                   <div>
                                     <p className="font-semibold text-sm">Aryan Shah</p>
@@ -328,11 +349,11 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="bg-card border border-border/50 rounded-xl p-6 space-y-4">
                             <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
-                              <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-contain" />
+                              <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-contain" loading="eager" />
                               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/80 to-transparent">
                                 <div className="flex items-center gap-3">
                                   <div className="w-12 h-12 rounded-full overflow-hidden bg-muted">
-                                    <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-cover" />
+                                    <img src={walterChungPhoto} alt="Walter Chung" className="w-full h-full object-cover" loading="eager" />
                                   </div>
                                   <div>
                                     <p className="font-semibold text-sm">Walter Chung</p>
@@ -376,9 +397,7 @@ const Hero = () => {
                         {/* Roberto H. Luna */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-                            backgroundImage: `url(/src/assets/roberto-luna.png)`
-                          }} />
+                            <img src={robertoLuna} alt="Roberto Luna" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                             <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
                               <Star className="w-4 h-4 text-primary-foreground fill-current" />
@@ -433,7 +452,7 @@ const Hero = () => {
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
                             <video className="absolute inset-0 w-full h-full object-contain" autoPlay loop muted playsInline>
-                              <source src="/src/assets/sam-arami-video.mp4" type="video/mp4" />
+                              <source src={samAramiVideo} type="video/mp4" />
                             </video>
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                             <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
@@ -489,9 +508,7 @@ const Hero = () => {
                         {/* Craig Cecilio */}
                         <CarouselItem className="pt-4 basis-full">
                           <div className="group relative overflow-hidden rounded-2xl h-[500px] w-full">
-                            <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-                            backgroundImage: `url(/src/assets/craig-cecilio.png)`
-                          }} />
+                            <img src={craigCecilio} alt="Craig Cecilio" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                             <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
                               <Star className="w-4 h-4 text-primary-foreground fill-current" />
@@ -561,7 +578,7 @@ const Hero = () => {
             <div className="overflow-hidden">
               <div className="flex animate-[scroll_30s_linear_infinite] hover:pause">
                 {[...logos, ...logos].map((logo, index) => <div key={index} className="flex-shrink-0 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
-                    <img src={logo.src} alt={logo.alt} className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} />
+                    <img src={logo.src} alt={logo.alt} className={`w-auto object-contain ${logo.alt === "Player Two" ? "h-16" : "h-12"}`} loading="eager" />
                   </div>)}
               </div>
             </div>
