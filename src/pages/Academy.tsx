@@ -103,12 +103,14 @@ const Academy = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8">
-                <span className="block text-foreground mb-2 sm:mb-3">The Last $120B Blue Ocean Before It Closes Forever: </span>
+                <span className="block text-foreground mb-2 sm:mb-3">While 99% Chase Saturated Markets</span>
                 <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
               <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-3 sm:mb-4">The same system that signed Mastercard, Forbes 30 Under 30 founders, and Y Combinator companies — now available to operators who move fast.</p>
-                
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
+                  <span className="text-muted-foreground">$0 {'→'}</span> <span className="text-primary">$20K/month</span>
+                </p>
             </div>
 
             {/* Journey Path */}
@@ -176,11 +178,11 @@ const Academy = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
               <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Active Students</div>
+                
               </div>
               <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">$20K</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Avg. Monthly Revenue</div>
+                
               </div>
               <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
                 <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">7 Weeks</div>
