@@ -82,10 +82,7 @@ const Hero = () => {
   }, []);
 
   return <section id="hero" className="relative bg-background">
-      {/* Floating Navigation */}
-      <FloatingNav />
-
-      {/* Desktop Navigation */}
+      {/* Desktop Header with Logo and Nav */}
       <div className="hidden md:block sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-6">
           {/* Logo - hides on scroll */}
@@ -96,16 +93,15 @@ const Hero = () => {
           )}
           
           {/* Navigation Bar - always visible and sticks */}
-          <nav className="py-3">
-            <div className="flex items-center justify-center gap-6">
-              <a href="#about-linkedin-operator" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">About</a>
-              <a href="#what-is-linkedin-agency" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">What We Do</a>
-              <a href="#numbers" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">Numbers</a>
-              <a href="#experiment" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">Results</a>
-              <a href="#about-programs" className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">Programs</a>
-            </div>
-          </nav>
+          <div className="py-3">
+            <FloatingNav centered />
+          </div>
         </div>
+      </div>
+
+      {/* Mobile - Keep FloatingNav as floating */}
+      <div className="md:hidden">
+        <FloatingNav />
       </div>
 
       {/* Mobile Navigation - Sliding Header */}

@@ -46,7 +46,7 @@ const navItems: NavItem[] = [
   }
 ];
 
-export const FloatingNav = () => {
+export const FloatingNav = ({ centered = false }: { centered?: boolean }) => {
   const [activeSection, setActiveSection] = useState("hero");
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const navigate = useNavigate();
@@ -115,7 +115,11 @@ export const FloatingNav = () => {
   };
 
   return (
-    <nav className="fixed top-8 right-8 z-50 hidden md:block">
+    <nav className={cn(
+      centered 
+        ? "flex justify-center w-full" 
+        : "fixed top-8 right-8 z-50 hidden md:block"
+    )}>
       <div className="bg-background/95 backdrop-blur-md border-2 border-primary/30 rounded-full shadow-[0_0_20px_rgba(255,107,53,0.15)] px-2 py-2">
         <ul className="flex items-center gap-1">
           {navItems.map((item) => (
