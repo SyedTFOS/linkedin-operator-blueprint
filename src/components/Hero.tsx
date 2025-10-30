@@ -124,9 +124,7 @@ const Hero = () => {
               </div>
 
               <div className="space-y-3 relative">
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  The Only Business Model That Allows You To Sign Clients Like this
-                </p>
+                
                 <p className="text-sm text-primary font-semibold uppercase tracking-wider italic">
                   For True Founders
                 </p>
