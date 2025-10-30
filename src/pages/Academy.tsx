@@ -1543,166 +1543,204 @@ const Academy = () => {
       </div>
 
       {/* Value Stack + Pricing Section */}
-      <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
+      <div id="pricing-section" className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="inline-block px-6 py-3 bg-primary/10 border border-primary/30 rounded-full mb-6">
-              <span className="text-sm font-bold text-white uppercase tracking-wider">LIMITED TIME OFFER</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
-              GET FULL ACCESS FOR <span className="text-primary">$497</span>
+          {/* Main Headline */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Let&apos;s Talk About What This Is <span className="text-primary">Actually Worth</span>
             </h2>
-            <p className="text-xl text-white/60 mb-2">
-              <span className="line-through text-white/40">$2,497</span> → <span className="text-green-400 font-bold">Save $2,000!</span>
+            <p className="text-xl text-muted-foreground mb-8">
+              Think about what you&apos;re getting for $497:
             </p>
-            <p className="text-xl text-white/60">Or 2 payments of $249 • Only 9 Spots Left</p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            {/* Main Pricing Card */}
-            <div className="bg-[#1A1A1A] border-2 border-white/10 rounded-3xl p-8 md:p-12 mb-8">
-              {/* Price Display */}
-              <div className="text-center mb-8 pb-8 border-b border-white/10">
-                <p className="text-white/60 text-lg mb-3">Get Instant Access:</p>
-                <div className="mb-3">
-                  <span className="text-3xl text-white/40 line-through">$2,497</span>
+          {/* Value Points */}
+          <div className="max-w-4xl mx-auto space-y-4 mb-16">
+            <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+              <span className="text-primary text-2xl flex-shrink-0">✅</span>
+              <p className="text-lg">The exact system that signed Mastercard, Forbes founders, and $1B+ investment firms</p>
+            </div>
+            <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+              <span className="text-primary text-2xl flex-shrink-0">✅</span>
+              <p className="text-lg">50+ video modules worth $5,000+ if sold separately</p>
+            </div>
+            <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+              <span className="text-primary text-2xl flex-shrink-0">✅</span>
+              <p className="text-lg">Templates & SOPs that took $1M+ in trial and error to develop</p>
+            </div>
+            <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+              <span className="text-primary text-2xl flex-shrink-0">✅</span>
+              <p className="text-lg">Weekly coaching calls with operators who&apos;ve done $15M+ in client results</p>
+            </div>
+            <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+              <span className="text-primary text-2xl flex-shrink-0">✅</span>
+              <p className="text-lg">Industry playbooks that would cost $10,000+ to develop yourself</p>
+            </div>
+            <div className="flex items-start gap-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6">
+              <span className="text-primary text-2xl flex-shrink-0">✅</span>
+              <p className="text-lg">Access to the fulfillment systems that keep churn near 0%</p>
+            </div>
+          </div>
+
+          {/* ROI Section */}
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-2xl p-8 md:p-12 text-center">
+              <p className="text-2xl md:text-3xl font-bold mb-6">
+                Your first client at <span className="text-primary">$3,000/month</span> pays for this <span className="text-primary">6x over</span>.
+              </p>
+              <p className="text-2xl md:text-3xl font-bold mb-8">
+                Your first client at <span className="text-primary">$5,000/month</span> pays for this <span className="text-primary">10x over</span>.
+              </p>
+              <p className="text-xl text-muted-foreground">
+                If you can&apos;t turn $497 into $3,000+ within 60 days with this system, you&apos;re simply not implementing.
+              </p>
+            </div>
+          </div>
+
+          {/* Guarantee Section */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-card/80 backdrop-blur-sm border-2 border-border rounded-3xl p-8 md:p-12">
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <Shield className="w-16 h-16 text-primary" />
+                <h3 className="text-3xl md:text-4xl font-bold">The Operator Guarantee</h3>
+              </div>
+              
+              <p className="text-xl text-muted-foreground mb-6">
+                We&apos;re not here to collect your $497 and disappear. We&apos;re building a network of elite LinkedIn operators.
+              </p>
+              
+              <p className="text-lg mb-6">
+                Here&apos;s the truth: If you implement what&apos;s inside — all 50+ modules, all the templates, all the SOPs — and don&apos;t land your first client within 60 days, you&apos;re either:
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3 bg-muted/50 rounded-xl p-4">
+                  <span className="text-lg font-bold text-primary">1.</span>
+                  <p className="text-lg">Not following the system (in which case, we&apos;ll show you exactly where you went wrong on coaching calls)</p>
                 </div>
-                <div className="text-7xl md:text-8xl font-black text-white mb-4">
-                  $497
+                <div className="flex items-start gap-3 bg-muted/50 rounded-xl p-4">
+                  <span className="text-lg font-bold text-primary">2.</span>
+                  <p className="text-lg">Not putting in the work (in which case, nothing will help you)</p>
                 </div>
-                <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full mb-4">
-                  <span className="text-green-400 font-bold text-lg">Save $2,000!</span>
+              </div>
+              
+              <p className="text-xl font-bold text-center">
+                This system works. We&apos;ve proven it with Fortune 500 companies. We&apos;ve proven it with complete beginners. The question is: <span className="text-primary">will you do the work?</span>
+              </p>
+            </div>
+          </div>
+
+          {/* This Is For You Section */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* For You */}
+              <div className="bg-green-500/5 border-2 border-green-500/30 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-6 text-center">This Is For You If:</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You&apos;re tired of chasing local businesses for $500/month retainers</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You want to work with real companies — Fortune 500s, YC startups, $1B+ firms</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You&apos;re ready to build a legitimate business, not another guru&apos;s dropshipping/SMMA clone</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You have existing expertise from another field and want to leverage LinkedIn</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You&apos;re an agency owner looking to pivot to higher-quality clients</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You&apos;re a complete beginner willing to learn a proven system</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You understand that $497 is an investment, not an expense</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl flex-shrink-0">✅</span>
+                    <p>You&apos;re ready to operate in a $120B blue ocean before it gets crowded</p>
+                  </div>
                 </div>
-                <p className="text-white/60 text-lg">
-                  Or split it: <span className="text-primary font-semibold">2 payments of $249</span>
-                </p>
               </div>
 
-              {/* Features List */}
-              <div className="space-y-4 mb-10">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
+              {/* Not For You */}
+              <div className="bg-red-500/5 border-2 border-red-500/30 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-6 text-center">This Is NOT For You If:</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-red-500 text-xl flex-shrink-0">❌</span>
+                    <p>You&apos;re looking for a "get rich quick" scheme</p>
                   </div>
-                  <p className="text-white text-lg"><span className="font-semibold">Lifetime Access</span> to the complete LinkedIn Agency Masterclass</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-3">
+                    <span className="text-red-500 text-xl flex-shrink-0">❌</span>
+                    <p>You&apos;re not willing to implement what you learn</p>
                   </div>
-                  <p className="text-white text-lg">All course materials, templates, and future updates <span className="font-semibold">(Lifetime)</span></p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-3">
+                    <span className="text-red-500 text-xl flex-shrink-0">❌</span>
+                    <p>You expect results without putting in the work</p>
                   </div>
-                  <p className="text-white text-lg">Full access to our global community</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-3">
+                    <span className="text-red-500 text-xl flex-shrink-0">❌</span>
+                    <p>You&apos;re not serious about building a real business</p>
                   </div>
-                  <p className="text-white text-lg">Everything needed to build a $20k+/month LinkedIn Agency</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <p className="text-white text-lg"><span className="font-semibold">30-Day Money-Back Guarantee</span> - No questions asked</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-white text-lg"><span className="font-semibold">30 days of weekly Q&A coaching calls</span> (Included FREE)</p>
-                    <p className="text-white/60 text-sm mt-1">Then $97/month to continue • Cancel anytime</p>
+                  <div className="flex items-start gap-3">
+                    <span className="text-red-500 text-xl flex-shrink-0">❌</span>
+                    <p>You think $497 is "too expensive" (if so, you need this more than anyone)</p>
                   </div>
                 </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="space-y-4">
-                <button onClick={() => navigate('/agency/academy/checkout')} className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
-                  JOIN NOW - FULL PAYMENT $497
-                </button>
-                
-                <div className="text-center text-white/40 font-semibold">OR</div>
-                
-                <button onClick={() => navigate('/agency/academy/checkout')} className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
-                  JOIN NOW - 2 PAYMENTS OF $249
-                </button>
-              </div>
-
-              {/* Scarcity Bar */}
-              <div className="mt-10 pt-8 border-t border-white/10">
-                <div className="flex items-center justify-between text-white/60 text-sm mb-3">
-                  <span className="font-semibold">
-                    <span className="text-white">ONLY 9 SPOTS REMAINING</span>
-                  </span>
-                  <span>Offer ends in <CountdownTimer className="inline text-red-400 font-bold" /></span>
-                </div>
-                <div className="h-3 bg-white/10 rounded-full overflow-hidden mb-2">
-                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{
-                  width: '18%'
-                }}></div>
-                </div>
-                <p className="text-yellow-400 text-sm mt-3 flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  Price increases after 9 spots are filled
-                </p>
               </div>
             </div>
+          </div>
 
-            {/* Investment Box */}
-            <div className="bg-white rounded-3xl border-4 border-primary p-8 md:p-10 mb-8">
-              <p className="text-center text-muted-foreground text-lg mb-4">WHAT YOU GET:</p>
-              <div className="text-center mb-6">
-                <div className="text-5xl md:text-6xl font-black text-primary mb-4">
-                  Lifetime Access
-                </div>
-                <p className="text-foreground text-xl font-semibold mb-2">
-                  Complete LinkedIn Agency Course
+          {/* Urgency Section */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-orange-500/10 via-primary/10 to-red-500/10 border-2 border-primary/30 rounded-3xl p-8 md:p-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-center mb-8">
+                Why You Need To <span className="text-primary">Move Fast</span>
+              </h3>
+              
+              <div className="space-y-6 text-lg mb-8">
+                <p>
+                  Right now, less than <span className="font-bold text-primary">1%</span> of LinkedIn&apos;s <span className="font-bold">1.2 billion users</span> post consistently.
                 </p>
-                <p className="text-muted-foreground text-lg">
-                  All training, templates, and future updates — yours forever
+                <p>
+                  Right now, <span className="font-bold text-primary">virtually zero competition</span> exists for high-quality LinkedIn agencies targeting enterprise clients correctly.
+                </p>
+                <p>
+                  Right now, there&apos;s a <span className="font-bold text-primary">$120 billion blue ocean</span> that most people don&apos;t even know exists.
+                </p>
+                <p className="text-xl font-bold text-center pt-6 border-t border-border">
+                  But this window won&apos;t stay open forever.
+                </p>
+                <p>
+                  Every month that passes, more people discover this opportunity. Every month, the blue ocean gets a little more crowded. Every month, it gets harder to be the first LinkedIn operator in your vertical.
                 </p>
               </div>
-
-              <div className="bg-primary/5 border-2 border-primary/30 rounded-2xl p-6 mb-6">
-                <div className="text-center mb-4">
-                  <span className="text-2xl text-muted-foreground line-through">$2,497</span>
-                </div>
-                <p className="text-center text-xl font-bold mb-3">
-                  One-Time Payment: <span className="text-primary text-3xl">$497</span>
+              
+              <div className="bg-card/80 rounded-2xl p-6 md:p-8 text-center">
+                <p className="text-2xl md:text-3xl font-bold mb-4">
+                  The operators who move <span className="text-primary">now</span> will be the category owners who dominate for the next 5 years.
                 </p>
-                <p className="text-center text-sm text-muted-foreground mb-3">
-                  Or split into 2 payments of $249
+                <p className="text-xl text-muted-foreground">
+                  The ones who wait will be fighting for scraps in a saturated market.
                 </p>
-                <div className="text-center">
-                  <span className="inline-block px-4 py-2 bg-green-100 text-green-700 font-bold rounded-full text-sm">
-                    SAVE $2,000!
-                  </span>
-                </div>
-              </div>
-
-              <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 mb-4">
-                <p className="text-center text-lg font-semibold text-foreground mb-2">
-                  ✅ Includes 30 Days of Live Coaching
-                </p>
-                <p className="text-center text-muted-foreground">
-                  Weekly Q&A calls included FREE for your first 30 days<br />
-                  <span className="text-sm">Then only $97/month to continue • Cancel anytime</span>
+                <p className="text-2xl font-bold mt-6 text-primary">
+                  Which one will you be?
                 </p>
               </div>
-
-              <p className="text-center text-muted-foreground text-sm">
-                30-day money-back guarantee • Only 9 spots left at this price
-              </p>
             </div>
           </div>
         </div>
