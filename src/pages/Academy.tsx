@@ -191,11 +191,6 @@ const Academy = () => {
 
             {/* CTA Section */}
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
-                <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                <span className="text-sm text-red-600 font-medium">Only 9 spots remaining at this price</span>
-              </div>
-              
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
                 behavior: 'smooth',
