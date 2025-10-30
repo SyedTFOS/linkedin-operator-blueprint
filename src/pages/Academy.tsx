@@ -1542,6 +1542,123 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* Original Pricing/CTA Section */}
+      <div className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="inline-block px-6 py-3 bg-primary/10 border border-primary/30 rounded-full mb-6">
+              <span className="text-sm font-bold text-white uppercase tracking-wider">LIMITED TIME OFFER</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-4">
+              GET FULL ACCESS FOR <span className="text-primary">$497</span>
+            </h2>
+            <p className="text-xl text-white/60 mb-2">
+              <span className="line-through text-white/40">$2,497</span> → <span className="text-green-400 font-bold">Save $2,000!</span>
+            </p>
+            <p className="text-xl text-white/60">Or 2 payments of $249 • Only 9 Spots Left</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            {/* Main Pricing Card */}
+            <div className="bg-[#1A1A1A] border-2 border-white/10 rounded-3xl p-8 md:p-12 mb-8">
+              {/* Price Display */}
+              <div className="text-center mb-8 pb-8 border-b border-white/10">
+                <p className="text-white/60 text-lg mb-3">Get Instant Access:</p>
+                <div className="mb-3">
+                  <span className="text-3xl text-white/40 line-through">$2,497</span>
+                </div>
+                <div className="text-7xl md:text-8xl font-black text-white mb-4">
+                  $497
+                </div>
+                <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full mb-4">
+                  <span className="text-green-400 font-bold text-lg">Save $2,000!</span>
+                </div>
+                <p className="text-white/60 text-lg">
+                  Or split it: <span className="text-primary font-semibold">2 payments of $249</span>
+                </p>
+              </div>
+
+              {/* Features List */}
+              <div className="space-y-4 mb-10">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg"><span className="font-semibold">Lifetime Access</span> to the complete LinkedIn Agency Masterclass</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">All course materials, templates, and future updates <span className="font-semibold">(Lifetime)</span></p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Full access to our global community</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg">Everything needed to build a $20k+/month LinkedIn Agency</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-white text-lg"><span className="font-semibold">30-Day Money-Back Guarantee</span> - No questions asked</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-white text-lg"><span className="font-semibold">30 days of weekly Q&A coaching calls</span> (Included FREE)</p>
+                    <p className="text-white/60 text-sm mt-1">Then $97/month to continue • Cancel anytime</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="space-y-4">
+                <button onClick={() => navigate('/agency/academy/checkout')} className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
+                  JOIN NOW - FULL PAYMENT $497
+                </button>
+                
+                <div className="text-center text-white/40 font-semibold">OR</div>
+                
+                <button onClick={() => navigate('/agency/academy/checkout')} className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
+                  JOIN NOW - 2 PAYMENTS OF $249
+                </button>
+              </div>
+
+              {/* Scarcity Bar */}
+              <div className="mt-10 pt-8 border-t border-white/10">
+                <div className="flex items-center justify-between text-white/60 text-sm mb-3">
+                  <span className="font-semibold">
+                    <span className="text-white">ONLY 9 SPOTS REMAINING</span>
+                  </span>
+                  <span>Offer ends in <CountdownTimer className="inline text-red-400 font-bold" /></span>
+                </div>
+                <div className="h-3 bg-white/10 rounded-full overflow-hidden mb-2">
+                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{ width: '18%' }}></div>
+                </div>
+                <p className="text-yellow-400 text-sm mt-3 flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
+                  Price increases after 9 spots are filled
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Value Stack + Pricing Section */}
       <div id="pricing-section" className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
