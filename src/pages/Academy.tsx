@@ -44,7 +44,8 @@ const Academy = () => {
     src: forbesLogo,
     alt: "Forbes"
   }];
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
@@ -826,7 +827,6 @@ const Academy = () => {
             <p className="text-sm text-muted-foreground">
                 <span className="line-through text-muted-foreground/60">$2,497</span> → Now $497 (Save $2,000!) • Only 9 spots left • <CountdownTimer className="inline text-primary font-bold" />
               </p>
-            </div>
           </div>
         </div>
       </div>
