@@ -2158,6 +2158,119 @@ const Academy = () => {
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <div className="py-24 md:py-40 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          {/* FAQ Items */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">What if I&apos;ve never run an agency before?</h3>
+              <p className="text-lg text-muted-foreground">
+                Perfect. Several of our most successful students were complete beginners (like Komail who closed a $14K deal in his first 3 weeks). The system is designed to work whether you&apos;re starting from scratch or pivoting from another business model.
+              </p>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">How is this different from other LinkedIn courses?</h3>
+              <p className="text-lg text-muted-foreground">
+                Most LinkedIn courses teach you how to grow a following and become an influencer. We teach you how to build a legitimate agency that signs Fortune 500 companies. This is the actual system that landed Mastercard, not theory from someone who&apos;s never done it.
+              </p>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">Do I need a LinkedIn following to start?</h3>
+              <p className="text-lg text-muted-foreground">
+                No. Unlike other business models where you need to build an audience first, you can start getting paid from day one with LinkedIn agencies. We show you how to sign clients through outbound systems, not just inbound content.
+              </p>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">How much time do I need to dedicate?</h3>
+              <p className="text-lg text-muted-foreground">
+                Treat this like building a real business. If you can dedicate 2-4 hours per day implementing the system, you should see your first client within 30-60 days. The more time you invest, the faster you&apos;ll scale.
+              </p>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">What if I&apos;m in a competitive niche?</h3>
+              <p className="text-lg text-muted-foreground">
+                That&apos;s actually perfect. LinkedIn agencies can work in ANY industry — AI, SaaS, Med-Tech, Finance, Real Estate, etc. We provide 8+ industry-specific playbooks showing you exactly how to position yourself as the go-to operator in your vertical.
+              </p>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">Is there support after I join?</h3>
+              <p className="text-lg text-muted-foreground">
+                Yes. You get 30 days of private community access where you can ask questions and connect with other operators. You also get access to weekly GROUP coaching calls where we troubleshoot specific challenges. After 30 days, you can continue community access for $97/month (optional).
+              </p>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">What if I can&apos;t afford $497 right now?</h3>
+              <p className="text-lg text-muted-foreground">
+                If $497 feels like a lot, that&apos;s exactly why you need this more than ever. Your first client at $3K/month pays for this 6x over. If you can&apos;t see that ROI potential, you&apos;re not thinking like an operator yet — which is exactly what we&apos;ll fix inside.
+              </p>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">Do I get lifetime access?</h3>
+              <p className="text-lg text-muted-foreground">
+                Yes. You get lifetime access to all 50+ video modules, templates, SOPs, and frameworks. As we update and refine the system, you get those updates too. The 30-day community access is what becomes optional after the first month.
+              </p>
+            </div>
+
+            {/* FAQ 9 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold mb-4">What&apos;s the refund policy?</h3>
+              <p className="text-lg text-muted-foreground">
+                We&apos;re operators, not scammers. But we&apos;re also not here to babysit. If you join, get access to everything, and then decide it&apos;s "too much work" — that&apos;s on you. We&apos;ve proven this system works with Fortune 500s and complete beginners. The only variable is you.
+              </p>
+            </div>
+          </div>
+
+          {/* Final Message */}
+          <div className="max-w-3xl mx-auto mt-20 text-center">
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-8 md:p-12">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6">One Last Thing...</h3>
+              
+              <div className="space-y-4 text-lg text-muted-foreground mb-8">
+                <p>Every successful operator in our community made a decision.</p>
+                <p>They stopped chasing saturated opportunities.</p>
+                <p>They stopped listening to gurus who&apos;ve never signed a real client.</p>
+                <p>They saw the $120 billion blue ocean hiding in plain sight.</p>
+                <p className="font-bold text-foreground">And they moved.</p>
+              </div>
+              
+              <p className="text-2xl md:text-3xl font-bold text-primary mb-8">
+                The question is: will you?
+              </p>
+
+              <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105">
+                Join The Operators Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>;
 };
 export default Academy;
