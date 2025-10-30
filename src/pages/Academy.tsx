@@ -504,44 +504,50 @@ const Academy = () => {
                 🌊 Why LinkedIn Agencies Are the <span className="text-primary">Best Business Model</span> Right Now
               </h3>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-                Here's what makes this different than every other "online biz opportunity" out there:
+                And here&apos;s what makes it different from every other business model:
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-12">
-              <div className="flex items-center gap-3 bg-primary/5 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <p className="text-foreground font-medium">You don't need followers</p>
+            {/* Comparison Table */}
+            <div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-3xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      <th className="text-left p-4 sm:p-6 font-bold text-foreground text-base sm:text-lg">Factor</th>
+                      <th className="text-center p-4 sm:p-6 font-bold text-muted-foreground text-base sm:text-lg">Traditional Agencies</th>
+                      <th className="text-center p-4 sm:p-6 font-bold text-primary text-base sm:text-lg">LinkedIn Agency</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border/30">
+                      <td className="p-4 sm:p-6 font-semibold text-foreground text-sm sm:text-base">Time to First Client</td>
+                      <td className="p-4 sm:p-6 text-center text-muted-foreground text-sm sm:text-base">3-6 months building audience</td>
+                      <td className="p-4 sm:p-6 text-center text-primary font-semibold text-sm sm:text-base">30-60 days</td>
+                    </tr>
+                    <tr className="border-b border-border/30">
+                      <td className="p-4 sm:p-6 font-semibold text-foreground text-sm sm:text-base">Monthly Retainers</td>
+                      <td className="p-4 sm:p-6 text-center text-muted-foreground text-sm sm:text-base">$500-$2,000</td>
+                      <td className="p-4 sm:p-6 text-center text-primary font-semibold text-sm sm:text-base">$3,000-$50,000</td>
+                    </tr>
+                    <tr className="border-b border-border/30">
+                      <td className="p-4 sm:p-6 font-semibold text-foreground text-sm sm:text-base">Client Quality</td>
+                      <td className="p-4 sm:p-6 text-center text-muted-foreground text-sm sm:text-base">Local SMBs that churn</td>
+                      <td className="p-4 sm:p-6 text-center text-primary font-semibold text-sm sm:text-base">Fortune 500s, YC companies, $1B+ firms</td>
+                    </tr>
+                    <tr className="border-b border-border/30">
+                      <td className="p-4 sm:p-6 font-semibold text-foreground text-sm sm:text-base">Competition</td>
+                      <td className="p-4 sm:p-6 text-center text-muted-foreground text-sm sm:text-base">Saturated (100,000+ agencies)</td>
+                      <td className="p-4 sm:p-6 text-center text-primary font-semibold text-sm sm:text-base">Virtually zero (blue ocean)</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 sm:p-6 font-semibold text-foreground text-sm sm:text-base">Required Following</td>
+                      <td className="p-4 sm:p-6 text-center text-muted-foreground text-sm sm:text-base">Need 10K+ followers first</td>
+                      <td className="p-4 sm:p-6 text-center text-primary font-semibold text-sm sm:text-base">Get paid from day one</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div className="flex items-center gap-3 bg-primary/5 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <p className="text-foreground font-medium">You don't need a personal brand</p>
-              </div>
-              <div className="flex items-center gap-3 bg-primary/5 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <p className="text-foreground font-medium">You don't need complex tech</p>
-              </div>
-              <div className="flex items-center gap-3 bg-primary/5 backdrop-blur-sm border border-primary/20 rounded-xl p-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <p className="text-foreground font-medium">You don't need to learn ads, funnels, or SEO</p>
-              </div>
-            </div>
-
-            <div className="text-center bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 backdrop-blur-sm border border-primary/30 rounded-2xl p-6 sm:p-8 md:p-12">
-              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-3 sm:mb-4">
-                Just one platform... One skill stack... One system
-              </p>
-              <p className="text-base sm:text-lg text-muted-foreground">
-                that's already been proven by <span className="font-bold text-primary">500+ members</span> and <span className="font-bold text-primary">billion-dollar clients.</span>
-              </p>
             </div>
           </div>
         </div>
