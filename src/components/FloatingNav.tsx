@@ -85,6 +85,7 @@ export const FloatingNav = () => {
 
     if (item.link.startsWith('/')) {
       e.preventDefault();
+      window.scrollTo(0, 0);
       navigate(item.link);
       return;
     }
@@ -108,6 +109,7 @@ export const FloatingNav = () => {
 
   const handleSubmenuClick = (link: string, comingSoon?: boolean) => {
     if (comingSoon) return;
+    window.scrollTo(0, 0);
     navigate(link);
     setOpenDropdown(null);
   };
