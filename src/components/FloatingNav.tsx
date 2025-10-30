@@ -25,10 +25,10 @@ const navItems: NavItem[] = [
     name: "Programs",
     link: "#programs",
     submenu: [
-      { name: "Done For You", link: "/done-for-you" },
-      { name: "Founder", link: "/founder", comingSoon: true },
-      { name: "Academy", link: "/academy" },
-      { name: "Secrets", link: "/secrets" }
+      { name: "Done For You", link: "/business/done-for-you" },
+      { name: "Founder", link: "/business/founder", comingSoon: true },
+      { name: "Academy", link: "/agency/academy" },
+      { name: "Secrets", link: "/agency/secrets" }
     ]
   },
   {
