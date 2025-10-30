@@ -103,15 +103,13 @@ const Academy = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8">
-                <span className="block text-foreground mb-2 sm:mb-3">Build Your</span>
+                <span className="block text-foreground mb-2 sm:mb-3">While 99% Chase Saturated Markets</span>
                 <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-3 sm:mb-4">
-                The complete 7-week training program that takes you from
-              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-3 sm:mb-4">The same system that signed Mastercard, Forbes 30 Under 30 founders, and Y Combinator companies — now available to operators who move fast.</p>
               <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-                <span className="text-muted-foreground">zero experience to</span> <span className="text-primary">$20K/month</span>
+                <span className="text-muted-foreground">$20K/month with a LinkedIn Agency</span> <span className="text-primary">$20K/month</span>
               </p>
             </div>
 
@@ -201,7 +199,10 @@ const Academy = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
+                <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              })} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Join The Academy Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -858,7 +859,10 @@ const Academy = () => {
 
             {/* CTA Button */}
             <div className="mt-16 text-center">
-              <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="group inline-flex items-center gap-3 px-10 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
+              <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            })} className="group inline-flex items-center gap-3 px-10 py-6 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                 <span>Start Your Agency Today</span>
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -1443,7 +1447,10 @@ const Academy = () => {
             </p>
             
             {/* CTA Button */}
-            <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="group inline-flex items-center gap-3 px-12 py-6 bg-white hover:bg-white/90 text-orange-600 rounded-2xl font-black text-2xl shadow-2xl transition-all duration-300 hover:scale-105">
+            <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          })} className="group inline-flex items-center gap-3 px-12 py-6 bg-white hover:bg-white/90 text-orange-600 rounded-2xl font-black text-2xl shadow-2xl transition-all duration-300 hover:scale-105">
               <span>Claim Your Bonuses Now</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -1635,7 +1642,10 @@ const Academy = () => {
 
           {/* CTA Button */}
           <div className="max-w-2xl mx-auto mb-12">
-            <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="w-full bg-white hover:bg-white/90 text-primary font-black text-2xl md:text-3xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 mb-4">
+            <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          })} className="w-full bg-white hover:bg-white/90 text-primary font-black text-2xl md:text-3xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 mb-4">
               CLAIM YOUR SPOT NOW →
               <div className="text-base font-normal mt-2 opacity-80">
                 Only 9 Spots Left • Lifetime Access
@@ -1869,7 +1879,10 @@ const Academy = () => {
             {/* CTA */}
             <div className="text-center">
               <div className="mb-8">
-                <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="group relative px-12 py-6 bg-gradient-to-r from-primary via-primary to-[#FF6B35] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:shadow-[#FF6B35]/50 hover:scale-105 transition-all duration-300">
+                <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+              })} className="group relative px-12 py-6 bg-gradient-to-r from-primary via-primary to-[#FF6B35] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:shadow-[#FF6B35]/50 hover:scale-105 transition-all duration-300">
                   Get Instant Access Now
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FF6B35] to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
