@@ -21,6 +21,11 @@ import forbesLogo from "@/assets/forbes-logo.png";
 import student1 from "@/assets/student-1.png";
 import student2 from "@/assets/student-2.png";
 import student3 from "@/assets/student-3.png";
+import student4 from "@/assets/student-4.png";
+import student5 from "@/assets/student-5.png";
+import student6 from "@/assets/student-6.png";
+import student7 from "@/assets/student-7.png";
+import student8 from "@/assets/student-8.png";
 const Hero = () => {
   const [studentsApi, setStudentsApi] = useState<CarouselApi>();
   const [businessApi, setBusinessApi] = useState<CarouselApi>();
@@ -137,6 +142,7 @@ const Hero = () => {
                     <img src={student1} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
                     <img src={student2} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
                     <img src={student3} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
+                    <img src={student8} alt="Student" className="w-7 h-7 rounded-full border-2 border-background object-cover" loading="eager" />
                   </div>
                   <div className="flex items-center gap-1.5">
                     <div className="flex gap-0.5">

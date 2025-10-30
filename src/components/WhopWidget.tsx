@@ -5,6 +5,7 @@ import whopLogo from "@/assets/whop-logo-light.png";
 import student4 from "@/assets/student-4.png";
 import student5 from "@/assets/student-5.png";
 import student6 from "@/assets/student-6.png";
+import student8 from "@/assets/student-8.png";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -91,6 +92,7 @@ const WhopWidget = () => {
                   <img src={student4} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
                   <img src={student5} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
                   <img src={student6} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
+                  <img src={student8} alt="Active member" className="w-6 h-6 rounded-full border-2 border-card object-cover" />
                 </div>
                 <span className="text-xs text-muted-foreground font-medium">Active now</span>
               </div>
