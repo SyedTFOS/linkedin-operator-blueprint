@@ -103,7 +103,7 @@ const Academy = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8">
-                <span className="block text-foreground mb-2 sm:mb-3">While 99% Chase Saturated Markets</span>
+                <span className="block text-foreground mb-2 sm:mb-3">The Last $120B Blue Ocean Before It Closes Forever: </span>
                 <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
               </h1>
               
@@ -1543,7 +1543,7 @@ const Academy = () => {
       </div>
 
       {/* Original Pricing/CTA Section */}
-      <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -1647,7 +1647,9 @@ const Academy = () => {
                   <span>Offer ends in <CountdownTimer className="inline text-red-400 font-bold" /></span>
                 </div>
                 <div className="h-3 bg-white/10 rounded-full overflow-hidden mb-2">
-                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{ width: '18%' }}></div>
+                  <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse" style={{
+                  width: '18%'
+                }}></div>
                 </div>
                 <p className="text-yellow-400 text-sm mt-3 flex items-center gap-2">
                   <Zap className="w-4 h-4" />
@@ -1660,7 +1662,7 @@ const Academy = () => {
       </div>
 
       {/* Value Stack + Pricing Section */}
-      <div className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+      <div id="pricing-section" className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
