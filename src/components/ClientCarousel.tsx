@@ -892,14 +892,14 @@ export const ClientCarousel = () => {
                     {/* Major Win Badge */}
                     <div className="absolute top-4 right-4 px-4 py-2 bg-primary rounded-full flex items-center gap-2 shadow-lg">
                       <Briefcase className="w-4 h-4 text-primary-foreground" />
-                      <span className="text-sm font-bold text-primary-foreground">GTM Expert 🎯</span>
+                      <span className="text-sm font-bold text-primary-foreground">Creative Co-op 🎮</span>
                     </div>
                     
                     {/* Basic Info */}
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <h4 className="text-2xl font-bold text-foreground mb-1">Stevan Petrusic</h4>
-                      <p className="text-base text-primary font-semibold mb-2">Player Two</p>
-                      <p className="text-sm text-muted-foreground">LinkedIn GTM Systems 🎯 • Enterprise Setup Expert</p>
+                      <p className="text-base text-primary font-semibold mb-2">PLAYERTWO</p>
+                      <p className="text-sm text-muted-foreground">Creative Collective • Brand Strategy & Storytelling</p>
                     </div>
 
                     {/* Detailed Results - Show on Hover */}
@@ -907,11 +907,11 @@ export const ClientCarousel = () => {
                       <div className="space-y-4">
                         <div className="mb-6">
                           <h4 className="text-xl font-bold text-foreground mb-1">Stevan Petrusic</h4>
-                          <p className="text-sm text-primary font-semibold">Player Two</p>
+                          <p className="text-sm text-primary font-semibold">PLAYERTWO</p>
                         </div>
 
                         <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-3">
-                          The Expertise:
+                          The Company:
                         </p>
                         
                         <div className="space-y-3">
@@ -920,7 +920,7 @@ export const ClientCarousel = () => {
                               <Briefcase className="w-3.5 h-3.5 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <p className="text-sm font-semibold text-foreground">LinkedIn GTM Systems 🎯</p>
+                              <p className="text-sm font-semibold text-foreground">Creative collective built on Curiosity, Creativity, Collaboration, Passion & Authenticity</p>
                             </div>
                           </div>
 
@@ -929,7 +929,7 @@ export const ClientCarousel = () => {
                               <Building2 className="w-3.5 h-3.5 text-primary" />
                             </div>
                             <div className="flex-1">
-                              <p className="text-base font-bold text-primary">🔧 Enterprise Systems Setup</p>
+                              <p className="text-base font-bold text-primary">Founded 2018 • Worked with Stubbes Precast, Dominos Canada, TruLocal, Crumby & Metalex</p>
                             </div>
                           </div>
                         </div>

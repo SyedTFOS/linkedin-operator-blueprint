@@ -23,10 +23,10 @@ export const CommunityWinsSection = () => {
     },
     {
       name: "Ethan Clouser",
-      role: "Ex-Agency Owner",
+      role: "$1.2k to $27k in 3 months",
       image: ethanClouser,
-      quote: "I was stuck at $1K/month running LinkedIn ads. Hit $10K/month in 4 weeks. Scaled to $27K/month in 6 months. Exited for a healthy 5-figure deal.",
-      results: "⭐⭐⭐⭐⭐ Hit $10K in the first month"
+      quote: "Running LinkedIn ads part-time, making just $1K/month. We positioned him as a category owner and showed him how to scale with systems. Result: $27K/month in 6 months, exited for a healthy 5-figure deal with 75-80% profit margins.",
+      results: "$1.2k to $27k in 3 months • 5-figure exit"
     },
     {
       name: "Craig Cecilio",
@@ -37,9 +37,9 @@ export const CommunityWinsSection = () => {
     },
     {
       name: "Walter Chung",
-      role: "Ex-Agency Owner",
+      role: "Failing Business → $15K/Month Agency",
       image: walterChung,
-      quote: "Failing business. Joined 3 months ago. Now doing $15K/month with 1M impressions in 90 days on a brand new account.",
+      quote: "Struggling with fulfillment. Joined us 3 months ago. Now running a $15K/month agency with 1M impressions in 90 days built on a brand new account with profitable fulfillment systems in place.",
       results: "$15K/month • 1M impressions • 90 days"
     },
     {
@@ -81,8 +81,8 @@ export const CommunityWinsSection = () => {
       name: "Aryan Shah",
       role: "Tech Expert • Previously Exited",
       image: aryanShah,
-      quote: "Previously exited for multi-5 figures. LinkedIn Operator helped me productize my service and scale to 5,500 followers. Now building AI LinkedIn companion with investor interest.",
-      results: "5,500 followers • Productized • Investor talks"
+      quote: "Exited a LinkedIn Agency (Bambo). Worked with 50+ agencies and 7-figure creators. Now with 5,500 followers, he's productized his service and is building a LinkedIn AI SaaS.",
+      results: "5,500 followers • Productized • LinkedIn AI SaaS"
     }
   ];
 

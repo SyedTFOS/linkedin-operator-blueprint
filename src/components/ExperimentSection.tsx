@@ -221,55 +221,12 @@ const ExperimentSection = () => {
                 <div className="flex-1 space-y-6">
                   <div>
                     <h3 className="text-3xl font-bold mb-2">Ethan Clouser</h3>
-                    <p className="text-primary font-semibold">Ex-Agency Owner</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-destructive/30 pl-6 py-2">
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-2">The Situation:</p>
-                    <p className="text-lg text-foreground">
-                      Running LinkedIn ads part-time, making just $1K/month. He was good—but stuck.
-                    </p>
+                    <p className="text-primary font-semibold">$1.2k to $27k in 3 months</p>
                   </div>
                   
                   <div className="border-l-4 border-primary/30 pl-6 py-2 bg-primary/5 rounded-r-xl">
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-2">The Transformation:</p>
                     <p className="text-lg text-foreground">
-                      We positioned him as a category owner, built a client acquisition engine, and showed him how to scale with systems.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-4">The Results:</p>
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-2xl">🚀</span>
-                        <div>
-                          <p className="font-bold text-primary text-xl">4 Weeks: $10K/month</p>
-                          <p className="text-sm text-muted-foreground">Fully booked ghostwriting agency</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-2xl">🚀</span>
-                        <div>
-                          <p className="font-bold text-primary text-xl">6 Months: $27K/month</p>
-                          <p className="text-sm text-muted-foreground">75-80% profit margins</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-2xl">🚀</span>
-                        <p className="font-bold text-foreground">Exited for healthy 5-figure deal</p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="border-l-4 border-primary pl-6 py-4 bg-primary/5 rounded-r-xl">
-                    <div className="flex gap-1 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-primary text-xl">⭐</span>
-                      ))}
-                    </div>
-                    <p className="text-lg font-medium italic text-foreground">
-                      "I just hit the $10K/month mark in the first month"
+                      Running LinkedIn ads part-time, making just $1K/month. We positioned him as a category owner and showed him how to scale with systems. Result: $27K/month in 6 months, exited for a healthy 5-figure deal with 75-80% profit margins.
                     </p>
                   </div>
                 </div>
@@ -295,41 +252,12 @@ const ExperimentSection = () => {
                 <div className="flex-1 space-y-6">
                   <div>
                     <h3 className="text-3xl font-bold mb-2">Walter Chung</h3>
-                    <p className="text-primary font-semibold">Ex-Agency Owner</p>
+                    <p className="text-primary font-semibold">Failing Business → $15K/Month Agency</p>
                   </div>
                   
-                  <div className="border-l-4 border-destructive/30 pl-6 py-2">
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-2">The Situation:</p>
+                  <div className="border-l-4 border-primary/30 pl-6 py-2 bg-primary/5 rounded-r-xl">
                     <p className="text-lg text-foreground">
-                      Failing business. Struggling with fulfillment. Joined us 3 months ago.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-4">The Results:</p>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground font-semibold">Now: $15K/month agency</span>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">1M impressions in 90 days</span>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">Built on a brand new account</span>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">Profitable fulfillment systems</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="border-l-4 border-primary pl-6 py-4 bg-primary/5 rounded-r-xl">
-                    <p className="text-lg font-medium italic text-foreground">
-                      "Went from struggling to $15K/month in 90 days"
+                      Struggling with fulfillment. Joined us 3 months ago. Now running a $15K/month agency with 1M impressions in 90 days built on a brand new account with profitable fulfillment systems in place.
                     </p>
                   </div>
                 </div>
@@ -464,38 +392,9 @@ const ExperimentSection = () => {
                     <p className="text-primary font-semibold">Industry Expert (Tech) • Previously Exited LIA</p>
                   </div>
                   
-                  <div className="border-l-4 border-primary/30 pl-6 py-2">
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-2">The Background:</p>
+                  <div className="border-l-4 border-primary/30 pl-6 py-2 bg-primary/5 rounded-r-xl">
                     <p className="text-lg text-foreground">
-                      Previously exited LIA (Bambo) for multi 5-figures. Worked with 50+ agencies and 7-figure creators including Beehive and Smartlead.
-                    </p>
-                  </div>
-                  
-                  <div>
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-4">What He's Doing Now:</p>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">5,500 followers</span>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">Productized his service</span>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">Building first AI LinkedIn companion</span>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">In talks with investors for funding</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="border-l-4 border-primary pl-6 py-4 bg-primary/5 rounded-r-xl">
-                    <p className="text-lg font-medium italic text-foreground">
-                      "LinkedIn Operator helped me scale beyond what I thought was possible."
+                      Exited a LinkedIn Agency (Bambo). Worked with 50+ agencies and 7-figure creators. Now with 5,500 followers, he's productized his service and is building a LinkedIn AI SaaS.
                     </p>
                   </div>
                 </div>
