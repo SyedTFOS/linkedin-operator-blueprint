@@ -172,22 +172,6 @@ const Academy = () => {
               </div>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">500+</div>
-                
-              </div>
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">$20K</div>
-                
-              </div>
-              <div className="bg-card backdrop-blur-sm border border-border rounded-xl p-4 sm:p-6 text-center hover:border-primary/30 transition-all">
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">7 Weeks</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">To First Client</div>
-              </div>
-            </div>
-
 
             {/* CTA Section */}
             <div className="text-center">
