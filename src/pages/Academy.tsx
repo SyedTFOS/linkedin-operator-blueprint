@@ -248,13 +248,22 @@ const Academy = () => {
           {/* Problems List */}
           <div className="max-w-3xl mx-auto mb-16 space-y-6">
             <p className="text-white/90 text-base sm:text-lg">
-              They told you to start an SMMA. Chase local restaurants and dentists for $500/month. Watch your clients churn after 3 months.
+              18 months ago, we were running a regular agency. Signing local businesses. Making okay money. Stuck at $10-20K/month.
             </p>
             <p className="text-white/90 text-base sm:text-lg">
-              They told you dropshipping was the answer. Fight over pennies on commoditized products while Facebook crushes your margins.
+              Then we tried something different.
             </p>
             <p className="text-white/90 text-base sm:text-lg">
-              They told you AI agencies were the future. Now there are 10,000 of them, all saying the same thing, all racing to the bottom.
+              Instead of chasing restaurants and dentists, we started positioning ourselves for Fortune 500 companies on LinkedIn.
+            </p>
+            <p className="text-white/90 text-base sm:text-lg">
+              I know, it sounds insane.
+            </p>
+            <p className="text-white/90 text-base sm:text-lg">
+              But here&apos;s what we discovered: 1.2 billion people are on LinkedIn. 960 million are decision-makers with real budgets. Yet less than 1% post consistently.
+            </p>
+            <p className="text-white/90 text-base sm:text-lg">
+              The market was completely untapped.
             </p>
           </div>
 
