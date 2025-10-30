@@ -81,8 +81,8 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return <section id="hero" className="relative bg-background">
-      {/* Desktop Header with Logo and Nav */}
+  return <>
+      {/* Desktop Header with Logo and Nav - Outside hero section to stay sticky globally */}
       <div className="hidden md:block sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-6">
           {/* Logo - hides on scroll */}
@@ -103,6 +103,8 @@ const Hero = () => {
       <div className="md:hidden">
         <FloatingNav />
       </div>
+
+      <section id="hero" className="relative bg-background">
 
       {/* Mobile Navigation - Sliding Header */}
       <div className="md:hidden">
@@ -587,6 +589,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  </>;
 };
 export default Hero;
