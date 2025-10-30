@@ -1080,7 +1080,7 @@ const Academy = () => {
                   <span>Essential tech stack setup</span>
                 </li>
               </ul>
-              <p className="text-muted-foreground text-sm italic text-center">Build your foundation and choose your niche</p>
+              <p className="text-muted-foreground text-sm italic text-center">Install the operator mindset. Set up payment systems that handle $20K+ months. Tech stack that scales to $50K+. Build your offer architecture that eliminates price objections.</p>
             </div>
 
             {/* Week 2 */}
@@ -1110,7 +1110,7 @@ const Academy = () => {
                   <span>Personal brand blueprint</span>
                 </li>
               </ul>
-              <p className="text-muted-foreground text-sm italic text-center">Position yourself as the go-to expert</p>
+              <p className="text-muted-foreground text-sm italic text-center">Create funnel flows that convert at 7+ figures. Build VSLs that take prospects from "another LinkedIn coach" to "this is exactly what we need." Profile optimization that positions you above freelancers.</p>
             </div>
 
             {/* Week 3 */}
@@ -1140,7 +1140,7 @@ const Academy = () => {
                   <span>Content calendar frameworks</span>
                 </li>
               </ul>
-              <p className="text-muted-foreground text-sm italic text-center">Attract ideal clients with strategic content</p>
+              <p className="text-muted-foreground text-sm italic text-center">Master the LinkedIn algorithm. Write posts that hit 1M+ views. Create content that attracts ideal clients. Lead magnet systems that go viral. Never run out of content ideas.</p>
             </div>
 
             {/* Week 4 */}
@@ -1170,7 +1170,7 @@ const Academy = () => {
                   <span>Automation & AI tools</span>
                 </li>
               </ul>
-              <p className="text-muted-foreground text-sm italic text-center">Fill your calendar with qualified calls</p>
+              <p className="text-muted-foreground text-sm italic text-center">Build scalable DM frameworks that book qualified calls with decision-makers. Advanced prospecting beyond Sales Navigator. Message sequences that work at different prospect temperatures. Send 200+ targeted DMs per day.</p>
             </div>
 
             {/* Week 5 */}
@@ -1200,7 +1200,7 @@ const Academy = () => {
                   <span>Objection handling mastery</span>
                 </li>
               </ul>
-              <p className="text-muted-foreground text-sm italic text-center">Close $5K-$50K deals with confidence</p>
+              <p className="text-muted-foreground text-sm italic text-center">Close $5K-$50K+ contracts. Handle objections like a master. Position your offer as the obvious choice. Build hyper-specific proposals that win Fortune 500 deals.</p>
             </div>
 
             {/* Week 6 */}
@@ -1230,7 +1230,7 @@ const Academy = () => {
                   <span>Client retention strategies</span>
                 </li>
               </ul>
-              <p className="text-muted-foreground text-sm italic text-center">Deliver results that keep clients paying</p>
+              <p className="text-muted-foreground text-sm italic text-center">Build delivery systems that create raving fans. Scale fulfillment without quality loss. Profile branding for clients. Content creation that makes clients go viral. Outbound sending that books meetings.</p>
             </div>
 
             {/* Week 7 - Centered */}
@@ -1263,7 +1263,7 @@ const Academy = () => {
                     <span>Secret module (unlocked inside)</span>
                   </li>
                 </ul>
-                <p className="text-gray-600 text-sm italic">Scale to $50K+/month and beyond</p>
+                <p className="text-gray-600 text-sm italic">Advanced operator knowledge: competitive domination, account protection methods, innovation & trend creation. The methods that build $50K+/month agencies.</p>
               </div>
             </div>
           </div>
