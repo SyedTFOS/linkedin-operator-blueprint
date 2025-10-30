@@ -332,6 +332,105 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* Ever Felt Like Section */}
+      <div className="py-24 md:py-40 bg-black relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Badge */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">
+              <span className="text-sm font-semibold text-white uppercase tracking-wide">
+                REALITY CHECK
+              </span>
+            </div>
+          </div>
+
+          {/* Main Headline */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white leading-tight">
+              Ever Felt Like Doing Business Online Means...
+            </h2>
+          </div>
+
+          {/* Problems List with X marks */}
+          <div className="max-w-3xl mx-auto mb-16 space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
+              <p className="text-white/90 text-base sm:text-lg">
+                Business models that require <span className="font-bold text-white">huge upfront costs</span>...
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
+              <p className="text-white/90 text-base sm:text-lg">
+                Waiting <span className="font-bold text-white">months</span> <span className="italic text-white/70">(or years)</span> to see <span className="font-bold text-white">results</span>...
+              </p>
+            </div>
+            <div className="flex items-start gap-4">
+              <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
+              <p className="text-white/90 text-base sm:text-lg">
+                Needing an <span className="font-bold text-white">audience</span> and being stuck on the <span className="italic text-white/70">content hamster wheel</span>...
+              </p>
+            </div>
+          </div>
+
+          {/* Transition Statement */}
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 mb-2">
+              Then keep reading—because
+            </p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">
+              <span className="text-primary">this skill</span> <span className="text-white">changes everything.</span>
+            </p>
+          </div>
+
+          {/* Why Many People Struggle Section */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
+              Why Many People <span className="text-red-500">Struggle</span> <span className="text-white">to Build an Online Business</span>
+            </h3>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12">
+              <p className="text-lg text-white/90 mb-8">
+                Building an online business isn&apos;t hard because there aren&apos;t opportunities—<span className="italic">it&apos;s hard because:</span>
+              </p>
+
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
+                  <p className="text-white/90 text-base sm:text-lg">
+                    They don&apos;t have a <span className="italic text-primary">clear, high-value</span> skill that businesses will <span className="font-bold text-white">pay</span> for.
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
+                  <p className="text-white/90 text-base sm:text-lg">
+                    They get <span className="font-bold text-white">stuck</span> in <span className="italic text-white/70">"learning mode"</span> and never take <span className="font-bold text-white">action.</span>
+                  </p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
+                  <p className="text-white/90 text-base sm:text-lg">
+                    They have <span className="italic text-primary">no idea</span> how to get <span className="font-bold text-white">clients.</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-8 border-t border-white/10 space-y-4">
+                <p className="text-white/90 text-base sm:text-lg">
+                  I know, because I was there too.
+                </p>
+                <p className="text-white/90 text-base sm:text-lg">
+                  Less than two years ago, I was <span className="font-bold text-white">lost.</span>
+                </p>
+                <p className="text-white/90 text-base sm:text-lg">
+                  I wanted to build a business online, but nothing clicked. I <span className="font-bold text-white">tried different business models</span>—<span className="italic text-white/70">affiliate marketing, eCommerce, freelancing</span>—but everything was either <span className="text-red-500">too slow</span>, <span className="text-red-500">too expensive</span>, or <span className="text-red-500">too unpredictable.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* What Is a LinkedIn Agency - Simple Explanation */}
       <div className="py-24 md:py-40 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
