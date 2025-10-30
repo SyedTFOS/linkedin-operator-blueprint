@@ -1543,7 +1543,7 @@ const Academy = () => {
       </div>
 
       {/* Original Pricing/CTA Section */}
-      <div className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
+      <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
@@ -1660,7 +1660,7 @@ const Academy = () => {
       </div>
 
       {/* Value Stack + Pricing Section */}
-      <div id="pricing-section" className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
+      <div className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
