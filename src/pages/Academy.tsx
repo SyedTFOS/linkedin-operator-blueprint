@@ -1294,9 +1294,11 @@ const Academy = () => {
 
           {/* Section Header */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              When You Join LinkedIn Operator Academy,<br />
-              <span className="text-primary">Here's Everything You Get:</span>
+            <p className="text-lg md:text-xl text-muted-foreground mb-6">
+              This isn&apos;t a course. This is the complete operator system that built multi-million dollar LinkedIn agencies — distilled into a 7-week transformation framework.
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+              LinkedIn Operator Academy
             </h2>
           </div>
 
@@ -1306,14 +1308,13 @@ const Academy = () => {
             <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✅</span>
+                  <span className="text-primary text-xl">✓</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">The Complete 7-Week Framework</h3>
+                  <h3 className="text-2xl font-bold mb-3">Complete 7-Week Operator Framework</h3>
                   <p className="text-muted-foreground mb-4">
-                    50+ video modules covering everything from fundamentals to advanced scaling strategies. Step-by-step, beginner-friendly, over-the-shoulder training.
+                    50+ video modules covering client acquisition, fulfillment, sales mastery, personal branding, LinkedIn outbound systems, and competitive domination strategies. The exact playbook that signed Mastercard and Forbes founders.
                   </p>
-                  <p className="text-primary font-semibold text-lg">VALUE: $3,000</p>
                 </div>
               </div>
             </div>
@@ -1322,43 +1323,19 @@ const Academy = () => {
             <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✅</span>
+                  <span className="text-primary text-xl">✓</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-3">Templates & SOP Library</h3>
-                  <div className="grid md:grid-cols-2 gap-3 mb-4 text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">•</span>
-                      <span>50+ Content Templates</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">•</span>
-                      <span>DM & Outreach Scripts</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Proposal Templates ($5K-$50K)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Onboarding SOPs</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Fulfillment Playbooks</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">•</span>
-                      <span>Automation Workflows</span>
-                    </div>
-                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    50+ content templates (hooks, posts, lead magnets) | DM & outreach scripts | Proposal templates ($5K-$50K+ closing docs) | Onboarding SOPs | Fulfillment playbooks | Personal brand assets | Automation workflows | AI agents
+                  </p>
                   {/* Operating System Visuals */}
                   <div className="mt-6 space-y-4">
                     <div className="bg-background rounded-xl overflow-hidden border border-border/50">
                       <img src={operatorExecutionOS} alt="LinkedIn Operator Execution OS" className="w-full" />
                     </div>
                   </div>
-                  <p className="text-primary font-semibold text-lg mt-4">VALUE: $2,000</p>
                 </div>
               </div>
             </div>
@@ -1367,42 +1344,28 @@ const Academy = () => {
             <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✅</span>
+                  <span className="text-primary text-xl">✓</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Access to Private Operator Community</h3>
+                  <h3 className="text-2xl font-bold mb-3">Weekly GROUP Coaching Calls</h3>
                   <p className="text-muted-foreground mb-4">
-                    Connect with 500+ operators building LinkedIn agencies. Share wins, get feedback, collaborate, and build your network. Lifetime access included.
+                    Strategy sessions, Q&A, hot seats with the operators who built the system. Real-time troubleshooting and feedback on your client acquisition and fulfillment.
                   </p>
-                  <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
                 </div>
               </div>
             </div>
 
             {/* Item 4 */}
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all shadow-lg">
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
-                  <span className="text-green-600 text-xl">✅</span>
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-2xl font-bold">30 Days of Weekly Live Coaching Calls</h3>
-                    <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full uppercase">Included FREE</span>
-                  </div>
+                  <h3 className="text-2xl font-bold mb-3">30 Days Private Community Access</h3>
                   <p className="text-muted-foreground mb-4">
-                    Get live coaching, strategy sessions, Q&A, and hot seats with the founders. Perfect for personalized guidance and accelerated growth.
+                    Connect with other operators building LinkedIn agencies. Share strategies, collaborate on deals, get peer feedback. (Extend for $97/month after 30 days)
                   </p>
-                  <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
-                    <p className="text-sm font-semibold text-foreground mb-2">✅ First 30 days included FREE</p>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Get full access to weekly coaching calls for your first month
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      • Then only $97/month to continue • Cancel anytime • No commitment required
-                    </p>
-                  </div>
-                  <p className="text-primary font-semibold text-lg">VALUE: $1,200/year</p>
                 </div>
               </div>
             </div>
@@ -1411,25 +1374,13 @@ const Academy = () => {
             <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✅</span>
+                  <span className="text-primary text-xl">✓</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Operating System Frameworks</h3>
+                  <h3 className="text-2xl font-bold mb-3">8+ Industry Playbooks</h3>
                   <p className="text-muted-foreground mb-4">
-                    Complete visual frameworks showing the exact day-by-day processes for both founders and acquisition teams.
+                    Vertical-specific positioning strategies for AI, SaaS, Med-Tech, Finance, Real Estate, and more. ICP mapping, competitive analysis frameworks, industry case studies.
                   </p>
-                  
-                  {/* Operating System Diagrams */}
-                  <div className="space-y-4 mt-6">
-                    <div className="bg-background rounded-xl overflow-hidden border border-border/50">
-                      <img src={founderOperatingSystem} alt="Founder Operating System" className="w-full" />
-                    </div>
-                    <div className="bg-background rounded-xl overflow-hidden border border-border/50">
-                      <img src={acquisitionOperatingSystem} alt="Acquisition Operating System" className="w-full" />
-                    </div>
-                  </div>
-                  
-                  <p className="text-primary font-semibold text-lg mt-4">VALUE: $1,500</p>
                 </div>
               </div>
             </div>
@@ -1438,27 +1389,48 @@ const Academy = () => {
             <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary text-xl">✅</span>
+                  <span className="text-primary text-xl">✓</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">Lifetime Course Access</h3>
+                  <h3 className="text-2xl font-bold mb-3">The LinkedIn Secrets Module</h3>
                   <p className="text-muted-foreground mb-4">
-                    All updates, new modules, and improvements—forever. No recurring fees for course access.
+                    Advanced operator knowledge that separates $10K/month agencies from $50K+ operations: Brand equity systems, competitive domination strategies, methods never taught online.
                   </p>
-                  <p className="text-primary font-semibold text-lg">VALUE: Priceless</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 7 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">AI & Automation Mastery</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Custom AI agents for content creation and client fulfillment | Automation templates | Systems for creating 30 days of content in 6 hours | Elite-level prompts included
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Item 8 */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
+                  <span className="text-primary text-xl">✓</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3">Lifetime Access to Course Content</h3>
+                  <p className="text-muted-foreground mb-4">
+                    All 50+ video modules, templates, SOPs, and frameworks — yours forever. Updates and upgrades included as we refine the system.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Total Value */}
-          <div className="max-w-5xl mx-auto mt-12">
-            <div className="bg-gradient-to-r from-primary/10 to-[#FF6B35]/10 border-2 border-primary/30 rounded-2xl p-8 text-center">
-              <p className="text-2xl md:text-3xl font-bold">
-                TOTAL VALUE: <span className="text-primary">$8,900+</span>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
