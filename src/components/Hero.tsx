@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye, Menu, X } from "lucide-react";
+import { ArrowRight, Star, Play, ChevronUp, ChevronDown, Eye } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { FloatingNav } from "@/components/FloatingNav";
-import logo from "@/assets/logo-main.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
 import samAramiVideo from "@/assets/sam-arami-video.mp4";
@@ -26,6 +24,7 @@ import student5 from "@/assets/student-5.png";
 import student6 from "@/assets/student-6.png";
 import student7 from "@/assets/student-7.png";
 import student8 from "@/assets/student-8.png";
+
 const Hero = () => {
   const [studentsApi, setStudentsApi] = useState<CarouselApi>();
   const [businessApi, setBusinessApi] = useState<CarouselApi>();
@@ -33,7 +32,6 @@ const Hero = () => {
   const [isBusinessHovered, setIsBusinessHovered] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPathDropdownOpen, setIsPathDropdownOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const logos = [{
     src: mastercardLogo,
     alt: "Mastercard"
@@ -71,61 +69,8 @@ const Hero = () => {
     }, 4000);
     return () => clearInterval(intervalId);
   }, [businessApi, isBusinessHovered]);
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return <>
-      {/* Desktop Header with Logo and Nav - Outside hero section to stay sticky globally */}
-      <div className="hidden md:block sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50">
-        <div className="container mx-auto px-6">
-          {/* Logo - hides on scroll */}
-          {!scrolled && (
-            <div className="py-4 flex items-center justify-center border-b border-border/30">
-              <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" loading="eager" />
-            </div>
-          )}
-          
-          {/* Navigation Bar - always visible and sticks */}
-          <div className="py-3">
-            <FloatingNav centered />
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile - Keep FloatingNav as floating */}
-      <div className="md:hidden">
-        <FloatingNav />
-      </div>
-
-      <section id="hero" className="relative bg-background">
-
-      {/* Mobile Navigation - Sliding Header */}
-      <div className="md:hidden">
-        {/* Mobile Header Toggle Button - Only show when menu is closed */}
-        {!isMobileMenuOpen && <button onClick={() => setIsMobileMenuOpen(true)} className="fixed top-4 right-4 z-[100] bg-primary text-primary-foreground p-3 rounded-full shadow-2xl hover:scale-110 transition-transform" aria-label="Open menu">
-            <Menu className="w-6 h-6" />
-          </button>}
-
-        {/* Mobile Sliding Header */}
-        <div className={`fixed top-0 left-0 right-0 bg-background/98 backdrop-blur-md border-b border-border/50 shadow-xl z-[90] transition-transform duration-300 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-          <div className="container mx-auto px-6 py-3 relative">
-            <div className="flex items-center justify-between">
-              <img src={logo} alt="LinkedIn Operator" className="h-8" loading="eager" />
-              <button onClick={() => setIsMobileMenuOpen(false)} className="bg-primary text-primary-foreground p-2 rounded-full hover:scale-110 transition-transform" aria-label="Close menu">
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  return <section id="hero" className="relative bg-background">
       {/* Hero Content */}
       <div className="container mx-auto px-6 py-24">
         <div className="max-w-6xl mx-auto">
@@ -589,7 +534,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  </>;
+    </section>;
 };
+
 export default Hero;
