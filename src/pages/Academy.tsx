@@ -1878,10 +1878,7 @@ const Academy = () => {
 
           {/* CTA Button */}
           <div className="max-w-2xl mx-auto mb-12">
-            <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          })} className="w-full bg-white hover:bg-white/90 text-primary font-black text-2xl md:text-3xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 mb-4">
+            <button onClick={() => navigate('/agency/academy/checkout')} className="w-full bg-white hover:bg-white/90 text-primary font-black text-2xl md:text-3xl py-8 px-12 rounded-2xl shadow-2xl hover:shadow-black/30 transition-all duration-300 hover:scale-105 mb-4">
               CLAIM YOUR SPOT NOW →
               <div className="text-base font-normal mt-2 opacity-80">
                 Only 9 Spots Left • Lifetime Access
@@ -2115,10 +2112,7 @@ const Academy = () => {
             {/* CTA */}
             <div className="text-center">
               <div className="mb-8">
-                <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-              })} className="group relative px-12 py-6 bg-gradient-to-r from-primary via-primary to-[#FF6B35] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:shadow-[#FF6B35]/50 hover:scale-105 transition-all duration-300">
+                <button onClick={() => navigate('/agency/academy/checkout')} className="group relative px-12 py-6 bg-gradient-to-r from-primary via-primary to-[#FF6B35] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:shadow-[#FF6B35]/50 hover:scale-105 transition-all duration-300">
                   Get Instant Access Now
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FF6B35] to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
@@ -2264,7 +2258,7 @@ const Academy = () => {
                 The question is: will you?
               </p>
 
-              <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' })} className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105">
+              <button onClick={() => navigate('/agency/academy/checkout')} className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105">
                 Join The Operators Now
               </button>
             </div>
