@@ -86,14 +86,19 @@ const BusinessTiersDialog = ({ open, onOpenChange }: BusinessTiersDialogProps) =
               </div>
 
               {/* CTA */}
-              <Button 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white" 
-                size="lg"
-                onClick={() => navigate('/business/founder')}
-              >
-                Join Founder Program
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <div className="relative">
+                <Button 
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white" 
+                  size="lg"
+                  onClick={() => navigate('/business/founder')}
+                >
+                  Join Founder Program
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Badge className="absolute -top-2 -right-2 bg-[#FFB800] text-black font-semibold">
+                  COMING SOON
+                </Badge>
+              </div>
             </div>
           </Card>
 
