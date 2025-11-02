@@ -7,7 +7,7 @@ const DoneForYou = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
-      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
+      <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-40 bg-background/80">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-center">
             <img src={logo} alt="LinkedIn Operator" className="h-12 md:h-14 lg:h-16" />
@@ -53,14 +53,20 @@ const DoneForYou = () => {
           </div>
 
           {/* Calendar Embed */}
-          <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
-            <iframe src="https://os.linkedinoperator.com/widget/booking/bLcTcJ95FqgTJUYZeNoe" style={{
-            width: '100%',
-            border: 'none',
-            overflow: 'hidden',
-            minHeight: '800px',
-            height: '800px'
-          }} scrolling="no" id="bLcTcJ95FqgTJUYZeNoe_1761499154641" title="Booking Calendar" />
+          <div className="bg-card border border-border rounded-lg p-8 shadow-lg overflow-visible">
+            <iframe 
+              src="https://os.linkedinoperator.com/widget/booking/bLcTcJ95FqgTJUYZeNoe" 
+              style={{
+                width: '100%',
+                border: 'none',
+                minHeight: '1000px',
+                height: 'auto'
+              }} 
+              scrolling="yes" 
+              id="bLcTcJ95FqgTJUYZeNoe_1761499154641" 
+              title="Booking Calendar"
+              className="overflow-visible"
+            />
           </div>
         </div>
       </div>
