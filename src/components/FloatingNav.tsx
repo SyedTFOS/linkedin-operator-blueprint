@@ -49,6 +49,7 @@ const navItems: NavItem[] = [
 export const FloatingNav = ({ centered = false }: { centered?: boolean }) => {
   const [activeSection, setActiveSection] = useState("hero");
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -114,6 +115,21 @@ export const FloatingNav = ({ centered = false }: { centered?: boolean }) => {
     setOpenDropdown(null);
   };
 
+  const handleMouseEnter = (itemName: string) => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setOpenDropdown(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200);
+    setCloseTimeout(timeout);
+  };
+
   return (
     <nav className={cn(
       centered 
@@ -126,8 +142,8 @@ export const FloatingNav = ({ centered = false }: { centered?: boolean }) => {
             <li 
               key={item.name} 
               className="relative group"
-              onMouseEnter={() => item.submenu && setOpenDropdown(item.name)}
-              onMouseLeave={() => item.submenu && setOpenDropdown(null)}
+              onMouseEnter={() => item.submenu && handleMouseEnter(item.name)}
+              onMouseLeave={() => item.submenu && handleMouseLeave()}
             >
               <a
                 href={item.link}
@@ -145,7 +161,11 @@ export const FloatingNav = ({ centered = false }: { centered?: boolean }) => {
               </a>
               
               {item.submenu && openDropdown === item.name && (
-                <div className="absolute top-full right-0 mt-2 bg-background border-2 border-primary/30 rounded-2xl shadow-[0_0_20px_rgba(255,107,53,0.2)] py-2 min-w-[200px] z-[100]">
+                <div 
+                  className="absolute top-full right-0 mt-1 bg-background border-2 border-primary/30 rounded-2xl shadow-[0_0_20px_rgba(255,107,53,0.2)] py-2 min-w-[200px] z-[100]"
+                  onMouseEnter={() => handleMouseEnter(item.name)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   {item.submenu.map((subItem) => (
                     <button
                       key={subItem.name}
