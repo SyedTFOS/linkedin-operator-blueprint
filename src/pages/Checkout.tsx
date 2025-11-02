@@ -5,7 +5,17 @@ import { Label } from '@/components/ui/label';
 import { CountdownTimer } from '@/components/CountdownTimer';
 import { CheckCircle, Shield, Zap, Users, Clock, TrendingUp, Star, Lock, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 import logoTransparent from "@/assets/logo-transparent-new.png";
+
+// Helper function to get cookie value
+const getCookie = (name: string): string | undefined => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(';').shift();
+  return undefined;
+};
 
 export default function Checkout() {
   const navigate = useNavigate();
@@ -416,7 +426,34 @@ export default function Checkout() {
                       <Button 
                         size="lg" 
                         className="w-full text-base sm:text-lg font-bold"
-                        onClick={() => {
+                        onClick={async () => {
+                          // Get DataFast visitor ID from cookie
+                          const datafastVisitorId = getCookie('datafast_visitor_id');
+                          
+                          // Track checkout with DataFast
+                          try {
+                            const { data, error } = await supabase.functions.invoke('process-checkout', {
+                              body: {
+                                firstName: formData.firstName,
+                                lastName: formData.lastName,
+                                email: formData.email,
+                                datafastVisitorId,
+                              },
+                            });
+
+                            if (error) {
+                              console.error('Error tracking checkout:', error);
+                              toast.error('Something went wrong. Please try again.');
+                              return;
+                            }
+
+                            console.log('Checkout tracked successfully:', data);
+                          } catch (error) {
+                            console.error('Error calling checkout function:', error);
+                            // Continue to checkout even if tracking fails
+                          }
+                          
+                          // Redirect to external checkout
                           window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn', '_blank', 'noopener,noreferrer');
                         }}
                       >
