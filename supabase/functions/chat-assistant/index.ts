@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -83,9 +84,14 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { messages } = await req.json();
+    const { messages, sessionId } = await req.json();
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+    
+    // Initialize Supabase client
+    const supabaseUrl = Deno.env.get('SUPABASE_URL') ?? '';
+    const supabaseKey = Deno.env.get('SUPABASE_ANON_KEY') ?? '';
+    const supabase = createClient(supabaseUrl, supabaseKey);
 
     const systemPrompt = `You are Leo, the LinkedIn Operator AI Assistant. You are a friendly, knowledgeable guide helping people find the right LinkedIn Operator program.
 
@@ -319,6 +325,51 @@ Remember: You're a helpful guide, not a pushy salesperson. If someone isn't read
           console.log('Generating buttons for response:', fullResponse.substring(0, 100));
           const buttonSuggestions = generateButtons(messages, fullResponse);
           console.log('Generated buttons:', buttonSuggestions);
+          
+          // Save conversation to database
+          try {
+            // Get or create conversation
+            let conversationId;
+            const { data: existingConv } = await supabase
+              .from('chat_conversations')
+              .select('id')
+              .eq('session_id', sessionId)
+              .single();
+
+            if (existingConv) {
+              conversationId = existingConv.id;
+            } else {
+              const { data: newConv } = await supabase
+                .from('chat_conversations')
+                .insert({ session_id: sessionId })
+                .select('id')
+                .single();
+              conversationId = newConv?.id;
+            }
+
+            // Save user message
+            const userMessage = messages[messages.length - 1];
+            if (userMessage && conversationId) {
+              await supabase
+                .from('chat_messages')
+                .insert({
+                  conversation_id: conversationId,
+                  role: 'user',
+                  content: userMessage.content
+                });
+
+              // Save assistant message
+              await supabase
+                .from('chat_messages')
+                .insert({
+                  conversation_id: conversationId,
+                  role: 'assistant',
+                  content: fullResponse
+                });
+            }
+          } catch (dbError) {
+            console.error('Error saving to database:', dbError);
+          }
           
           // Send buttons as a custom event
           if (buttonSuggestions.length > 0) {
