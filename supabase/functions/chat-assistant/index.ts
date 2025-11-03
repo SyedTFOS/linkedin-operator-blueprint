@@ -6,6 +6,37 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+// Rate limiting: Track requests per session (in-memory, resets on function cold start)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 20; // messages per hour
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
+
+function checkRateLimit(sessionId: string): { allowed: boolean; remainingMinutes?: number } {
+  const now = Date.now();
+  const limit = rateLimitMap.get(sessionId);
+  
+  // Clean up expired entries
+  if (limit && now > limit.resetTime) {
+    rateLimitMap.delete(sessionId);
+  }
+  
+  const current = rateLimitMap.get(sessionId);
+  
+  if (!current) {
+    rateLimitMap.set(sessionId, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
+    return { allowed: true };
+  }
+  
+  if (current.count >= RATE_LIMIT_MAX) {
+    const remainingMs = current.resetTime - now;
+    const remainingMinutes = Math.ceil(remainingMs / 60000);
+    return { allowed: false, remainingMinutes };
+  }
+  
+  current.count++;
+  return { allowed: true };
+}
+
 function generateButtons(messages: any[], lastResponse: string): Array<{ label: string }> {
   const response = lastResponse.toLowerCase();
   const lastUserMessage = messages[messages.length - 1]?.content.toLowerCase() || '';
@@ -85,6 +116,31 @@ serve(async (req) => {
 
   try {
     const { messages, sessionId } = await req.json();
+    
+    if (!messages || !Array.isArray(messages)) {
+      throw new Error('Messages array is required');
+    }
+    
+    if (!sessionId) {
+      throw new Error('Session ID is required');
+    }
+
+    // Check rate limit
+    const rateCheck = checkRateLimit(sessionId);
+    if (!rateCheck.allowed) {
+      console.log('Rate limit exceeded for session:', sessionId);
+      return new Response(
+        JSON.stringify({
+          error: `Too many requests. Please try again in ${rateCheck.remainingMinutes} minutes.`,
+          retryAfter: rateCheck.remainingMinutes,
+        }),
+        {
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          status: 429,
+        }
+      );
+    }
+    
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
     

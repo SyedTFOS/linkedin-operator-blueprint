@@ -46,7 +46,21 @@ Deno.serve(async (req) => {
       console.log('Tracking conversion for visitor:', datafastVisitorId);
       
       // Send conversion event to DataFast
-      const datafastApiKey = 'df_4d73a3dc2ade3d9e30cc5711f6a59954c56ab38620a03416';
+      const datafastApiKey = Deno.env.get('DATAFAST_API_KEY');
+      
+      if (!datafastApiKey) {
+        console.error('DATAFAST_API_KEY not configured');
+        return new Response(
+          JSON.stringify({
+            success: false,
+            error: 'Payment tracking configuration error',
+          }),
+          {
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            status: 500,
+          }
+        );
+      }
       
       try {
         const conversionResponse = await fetch('https://datafa.st/api/conversion', {

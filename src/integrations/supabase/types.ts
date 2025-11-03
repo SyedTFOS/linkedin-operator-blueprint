@@ -20,7 +20,7 @@ export type Database = {
           last_message_at: string
           message_count: number | null
           metadata: Json | null
-          session_id: string | null
+          session_id: string
           started_at: string
           user_identifier: string | null
         }
@@ -29,7 +29,7 @@ export type Database = {
           last_message_at?: string
           message_count?: number | null
           metadata?: Json | null
-          session_id?: string | null
+          session_id: string
           started_at?: string
           user_identifier?: string | null
         }
@@ -38,7 +38,7 @@ export type Database = {
           last_message_at?: string
           message_count?: number | null
           metadata?: Json | null
-          session_id?: string | null
+          session_id?: string
           started_at?: string
           user_identifier?: string | null
         }
