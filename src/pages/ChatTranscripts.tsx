@@ -30,6 +30,31 @@ const ChatTranscripts = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+
+  const CORRECT_PASSWORD = 'LIOP@11';
+
+  useEffect(() => {
+    // Check if already authenticated in this session
+    const auth = sessionStorage.getItem('chat_transcripts_auth');
+    if (auth === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === CORRECT_PASSWORD) {
+      sessionStorage.setItem('chat_transcripts_auth', 'true');
+      setIsAuthenticated(true);
+      setPasswordError('');
+    } else {
+      setPasswordError('Incorrect password');
+      setPassword('');
+    }
+  };
 
   useEffect(() => {
     fetchConversations();
@@ -73,6 +98,38 @@ const ChatTranscripts = () => {
   const filteredConversations = conversations.filter(conv => 
     conv.session_id.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-6">
+        <Card className="w-full max-w-md p-8">
+          <div className="space-y-6">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold mb-2">LEO Chat Transcripts</h1>
+              <p className="text-muted-foreground">Enter password to access</p>
+            </div>
+            <form onSubmit={handlePasswordSubmit} className="space-y-4">
+              <div>
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className={passwordError ? 'border-red-500' : ''}
+                />
+                {passwordError && (
+                  <p className="text-sm text-red-500 mt-2">{passwordError}</p>
+                )}
+              </div>
+              <Button type="submit" className="w-full">
+                Access Transcripts
+              </Button>
+            </form>
+          </div>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background p-6">
