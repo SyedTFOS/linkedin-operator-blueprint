@@ -1,10 +1,65 @@
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { CountdownTimer } from '@/components/CountdownTimer';
-import { CheckCircle, Shield, Zap, Users, TrendingUp, Star, Lock } from 'lucide-react';
+import { CheckCircle, Shield, Zap, Users, Clock, TrendingUp, Star, Lock, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 import logoTransparent from "@/assets/logo-transparent-new.png";
+
+// Helper function to get cookie value
+const getCookie = (name: string): string | undefined => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop()?.split(';').shift();
+  return undefined;
+};
 
 export default function Checkout() {
   const navigate = useNavigate();
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: ''
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateStep1 = () => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email address';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleNextStep = () => {
+    if (validateStep1()) {
+      setStep(2);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error for this field
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -241,29 +296,207 @@ export default function Checkout() {
 
           </div>
 
-          {/* RIGHT SIDE - Embedded Checkout */}
+          {/* RIGHT SIDE - Checkout Form */}
           <div className="lg:sticky lg:top-8 h-fit order-1 lg:order-2">
-            <div className="bg-card border border-border rounded-lg shadow-xl overflow-hidden">
-              <div className="bg-primary text-primary-foreground p-4 text-center">
-                <h3 className="text-xl font-bold">Secure Checkout</h3>
-                <p className="text-sm opacity-90">Complete your purchase below</p>
-              </div>
+            <div className="bg-card border border-border rounded-lg shadow-xl">
               
-              {/* Whop Checkout Embed */}
-              <div className="w-full" style={{ minHeight: '600px' }}>
-                <iframe
-                  src="https://whop.com/checkout/plan_F61ZZgKOyK4dO?d2c=true"
-                  className="w-full border-0"
-                  style={{ height: '800px', minHeight: '600px' }}
-                  title="Secure Checkout"
-                  allow="payment"
-                />
+              {/* Step Indicator */}
+              <div className="flex border-b border-border">
+                <div className={`flex-1 p-4 text-center ${step === 1 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${step === 1 ? 'bg-primary-foreground text-primary' : 'bg-background'}`}>
+                      1
+                    </div>
+                    <div className="text-left hidden sm:block">
+                      <div className="text-xs opacity-80">STEP 1</div>
+                      <div className="font-semibold text-sm">Your Name & Email</div>
+                    </div>
+                  </div>
+                </div>
+                <div className={`flex-1 p-4 text-center ${step === 2 ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${step === 2 ? 'bg-primary-foreground text-primary' : 'bg-background'}`}>
+                      2
+                    </div>
+                    <div className="text-left hidden sm:block">
+                      <div className="text-xs opacity-80">STEP 2</div>
+                      <div className="font-semibold text-sm">Finalize & Get Access!</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="p-4 bg-muted/50 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-green-500" />
-                <Lock className="w-4 h-4 text-green-500" />
-                <span>256-bit SSL Encrypted Checkout</span>
+              {/* Form Content */}
+              <div className="p-6 space-y-6">
+                
+                {step === 1 && (
+                  <>
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="firstName">First Name *</Label>
+                          <Input
+                            id="firstName"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleInputChange}
+                            placeholder="John"
+                            className={errors.firstName ? 'border-destructive' : ''}
+                          />
+                          {errors.firstName && (
+                            <p className="text-sm text-destructive">{errors.firstName}</p>
+                          )}
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="lastName">Last Name *</Label>
+                          <Input
+                            id="lastName"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleInputChange}
+                            placeholder="Doe"
+                            className={errors.lastName ? 'border-destructive' : ''}
+                          />
+                          {errors.lastName && (
+                            <p className="text-sm text-destructive">{errors.lastName}</p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email Address *</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="john@example.com"
+                          className={errors.email ? 'border-destructive' : ''}
+                        />
+                        {errors.email && (
+                          <p className="text-sm text-destructive">{errors.email}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg">
+                      <Lock className="w-4 h-4" />
+                      <span>We respect your privacy & information.</span>
+                    </div>
+
+                    <Button 
+                      size="lg" 
+                      className="w-full text-lg font-bold"
+                      onClick={handleNextStep}
+                    >
+                      GO TO NEXT STEP
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Button>
+                  </>
+                )}
+
+                {step === 2 && (
+                  <>
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-2 mb-4">
+                      <div className="flex justify-between items-center">
+                        <span className="text-muted-foreground">LinkedIn Agency Academy</span>
+                        <span className="font-bold text-foreground">$497.00</span>
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-green-600">
+                        <span>Discount (80% OFF)</span>
+                        <span>-$2,000.00</span>
+                      </div>
+                      <div className="border-t border-border pt-2 flex justify-between items-center text-lg font-bold">
+                        <span>Order Total</span>
+                        <span className="text-2xl text-primary">$497.00</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
+                        <p className="text-sm text-muted-foreground mb-2">
+                          You're all set! Click below to complete your secure checkout.
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Your information has been saved and will be pre-filled.
+                        </p>
+                      </div>
+
+                      <Button 
+                        size="lg" 
+                        className="w-full text-base sm:text-lg font-bold"
+                        onClick={async () => {
+                          // Get DataFast visitor ID from cookie
+                          const datafastVisitorId = getCookie('datafast_visitor_id');
+                          
+                          // Track checkout with DataFast
+                          try {
+                            const { data, error } = await supabase.functions.invoke('process-checkout', {
+                              body: {
+                                firstName: formData.firstName,
+                                lastName: formData.lastName,
+                                email: formData.email,
+                                datafastVisitorId,
+                              },
+                            });
+
+                            if (error) {
+                              console.error('Error tracking checkout:', error);
+                              toast.error('Something went wrong. Please try again.');
+                              return;
+                            }
+
+                            console.log('Checkout tracked successfully:', data);
+                          } catch (error) {
+                            console.error('Error calling checkout function:', error);
+                            // Continue to checkout even if tracking fails
+                          }
+                          
+                          // Redirect to Whop checkout
+                          window.open('https://whop.com/checkout/plan_F61ZZgKOyK4dO?d2c=true', '_blank', 'noopener,noreferrer');
+                        }}
+                      >
+                        <Lock className="w-5 h-5 mr-2" />
+                        Complete Secure Checkout ($497)
+                      </Button>
+
+                      <div className="text-center">
+                        <button
+                          onClick={() => setStep(1)}
+                          className="text-sm text-muted-foreground hover:text-foreground underline"
+                        >
+                          ← Back to Step 1
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 text-xs sm:text-sm">
+                      <p className="text-center text-muted-foreground">
+                        Or pay in 2 installments of <span className="font-bold text-foreground">$249</span>
+                      </p>
+                      
+                      <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3 sm:p-4 space-y-2">
+                        <div className="flex items-center gap-2 text-green-600 font-bold text-sm sm:text-base">
+                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <span>What happens after checkout:</span>
+                        </div>
+                        <ul className="space-y-1 text-xs sm:text-sm text-foreground ml-6 sm:ml-7">
+                          <li>✓ Instant access to all 7 modules</li>
+                          <li>✓ Immediate community access</li>
+                          <li>✓ All bonuses delivered to your email</li>
+                          <li>✓ First coaching call invitation sent</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-2 text-sm">
+                      <Shield className="w-5 h-5 text-green-500" />
+                      <span className="text-muted-foreground">Secure Checkout</span>
+                    </div>
+                  </>
+                )}
+
               </div>
             </div>
           </div>
