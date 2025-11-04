@@ -453,8 +453,8 @@ export default function Checkout() {
                             // Continue to checkout even if tracking fails
                           }
                           
-                          // Redirect to external checkout
-                          window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/66KDn', '_blank', 'noopener,noreferrer');
+                          // Redirect to Whop checkout
+                          window.open('https://whop.com/checkout/plan_F61ZZgKOyK4dO?d2c=true', '_blank', 'noopener,noreferrer');
                         }}
                       >
                         <Lock className="w-5 h-5 mr-2" />
