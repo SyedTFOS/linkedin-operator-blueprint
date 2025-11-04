@@ -6,7 +6,6 @@ import ExperimentSection from "@/components/ExperimentSection";
 import WhatsInsideSection from "@/components/WhatsInsideSection";
 import ExploringSection from "@/components/ExploringSection";
 import WhopWidget from "@/components/WhopWidget";
-import { NavigationSidebar } from "@/components/NavigationSidebar";
 import { FloatingNav } from "@/components/FloatingNav";
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo-main.png";
@@ -24,8 +23,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <NavigationSidebar />
-      
       {/* Desktop Header with Logo and Nav - Sticky across entire page */}
       <div className="hidden md:block sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50">
         <div className="container mx-auto px-6">
