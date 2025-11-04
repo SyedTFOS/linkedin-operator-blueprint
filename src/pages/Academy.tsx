@@ -1387,7 +1387,7 @@ const Academy = () => {
       </div>
 
       {/* Original Pricing/CTA Section */}
-      <div className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
+      <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
         {/* Grid Pattern Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
         
