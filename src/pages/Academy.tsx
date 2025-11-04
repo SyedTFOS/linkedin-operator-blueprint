@@ -1849,6 +1849,49 @@ const Academy = () => {
                 <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">Coaching</span>
               </div>
             </div>
+
+            {/* CTA Section */}
+            <div className="text-center">
+              <div className="mb-8">
+                <button 
+                  onClick={() => navigate('/agency/academy/checkout')} 
+                  className="group relative px-12 py-6 bg-gradient-to-r from-[#E85D3F] to-[#E85D3F] hover:from-[#D14D2F] hover:to-[#D14D2F] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:scale-105 transition-all duration-300"
+                >
+                  Get Instant Access Now
+                </button>
+              </div>
+
+              <div className="space-y-2 mb-8">
+                <p className="text-lg font-semibold text-foreground">
+                  Join <span className="text-[#E85D3F] font-bold">500+ members</span> building profitable LinkedIn agencies
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  ⚡ Limited spots at founding member price • 🔒 Secure checkout • ✅ Instant access
+                </p>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-600 text-xs">✓</span>
+                  </div>
+                  <span>365-Day Guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-600 text-xs">✓</span>
+                  </div>
+                  <span>Secure Checkout</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <span className="text-green-600 text-xs">✓</span>
+                  </div>
+                  <span>Instant Access</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
