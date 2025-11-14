@@ -424,7 +424,7 @@ Remember: You're a helpful guide, not a pushy salesperson. If someone isn't read
                 });
             }
           } catch (dbError) {
-            console.error('Error saving to database:', dbError);
+            console.error('Database error (details masked for security):', dbError instanceof Error ? dbError.message : 'Unknown error');
           }
           
           // Send buttons as a custom event
