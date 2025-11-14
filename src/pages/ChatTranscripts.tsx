@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Search, MessageSquare, Calendar, ArrowLeft } from 'lucide-react';
-import { format } from 'date-fns';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import logoTransparent from "@/assets/logo-transparent-new.png";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+import type { User } from "@supabase/supabase-js";
 
 interface Conversation {
   id: string;
@@ -23,43 +24,69 @@ interface Message {
   created_at: string;
 }
 
-const ChatTranscripts = () => {
+export default function ChatTranscripts() {
   const navigate = useNavigate();
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [selectedConversation, setSelectedConversation] = useState<Conversation | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  const [user, setUser] = useState<User | null>(null);
+  const [isAdmin, setIsAdmin] = useState(false);
 
-  const CORRECT_PASSWORD = 'LIOP@11';
-
+  // Check authentication and admin status
   useEffect(() => {
-    // Check if already authenticated in this session
-    const auth = sessionStorage.getItem('chat_transcripts_auth');
-    if (auth === 'true') {
-      setIsAuthenticated(true);
-    }
-  }, []);
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        navigate("/auth");
+        return;
+      }
+      setUser(session.user);
+      checkAdminStatus(session.user.id);
+    });
 
-  const handlePasswordSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password === CORRECT_PASSWORD) {
-      sessionStorage.setItem('chat_transcripts_auth', 'true');
-      setIsAuthenticated(true);
-      setPasswordError('');
-    } else {
-      setPasswordError('Incorrect password');
-      setPassword('');
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (!session) {
+        navigate("/auth");
+      } else {
+        setUser(session.user);
+        checkAdminStatus(session.user.id);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [navigate]);
+
+  const checkAdminStatus = async (userId: string) => {
+    const { data, error } = await supabase
+      .from('user_roles')
+      .select('role')
+      .eq('user_id', userId)
+      .eq('role', 'admin')
+      .single();
+
+    if (error || !data) {
+      toast.error("You don't have permission to access this page");
+      navigate("/");
+      return;
     }
+
+    setIsAdmin(true);
   };
 
-  useEffect(() => {
-    fetchConversations();
-  }, []);
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    navigate("/auth");
+  };
 
+  // Fetch conversations when admin status is confirmed
+  useEffect(() => {
+    if (isAdmin) {
+      fetchConversations();
+    }
+  }, [isAdmin]);
+
+  // Fetch messages when a conversation is selected
   useEffect(() => {
     if (selectedConversation) {
       fetchMessages(selectedConversation.id);
@@ -75,6 +102,7 @@ const ChatTranscripts = () => {
 
     if (error) {
       console.error('Error fetching conversations:', error);
+      toast.error("Failed to load conversations");
     } else {
       setConversations(data || []);
     }
@@ -90,6 +118,7 @@ const ChatTranscripts = () => {
 
     if (error) {
       console.error('Error fetching messages:', error);
+      toast.error("Failed to load messages");
     } else {
       setMessages(data || []);
     }
@@ -99,159 +128,139 @@ const ChatTranscripts = () => {
     conv.session_id.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  if (!isAuthenticated) {
+  // Show loading state while checking authentication
+  if (!user || !isAdmin) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-6">
-        <Card className="w-full max-w-md p-8">
-          <div className="space-y-6">
-            <div className="text-center">
-              <h1 className="text-2xl font-bold mb-2">LEO Chat Transcripts</h1>
-              <p className="text-muted-foreground">Enter password to access</p>
-            </div>
-            <form onSubmit={handlePasswordSubmit} className="space-y-4">
-              <div>
-                <Input
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className={passwordError ? 'border-red-500' : ''}
-                />
-                {passwordError && (
-                  <p className="text-sm text-red-500 mt-2">{passwordError}</p>
-                )}
-              </div>
-              <Button type="submit" className="w-full">
-                Access Transcripts
-              </Button>
-            </form>
-          </div>
-        </Card>
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Checking permissions...</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-6 flex items-center gap-4">
-          <Button 
-            variant="ghost" 
-            size="icon"
+    <div className="min-h-screen bg-background">
+      <header className="border-b border-border bg-card">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+          <img 
+            src={logoTransparent} 
+            alt="LinkedIn Operator" 
+            className="h-8 sm:h-10 cursor-pointer"
             onClick={() => navigate('/')}
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </Button>
-          <div>
-            <h1 className="text-3xl font-bold">LEO Chat Transcripts</h1>
-            <p className="text-muted-foreground">View and search all chatbot conversations</p>
+          />
+          <div className="flex items-center gap-4">
+            <span className="text-sm text-muted-foreground">
+              {user?.email}
+            </span>
+            <Button variant="outline" size="sm" onClick={handleSignOut}>
+              Sign Out
+            </Button>
           </div>
         </div>
+      </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="container mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[calc(100vh-140px)]">
           {/* Conversations List */}
-          <Card className="p-4 md:col-span-1">
-            <div className="space-y-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-                <Input
-                  placeholder="Search conversations..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
-
-              <ScrollArea className="h-[calc(100vh-250px)]">
+          <Card className="lg:col-span-1">
+            <CardHeader>
+              <CardTitle className="text-lg">Conversations</CardTitle>
+              <Input
+                placeholder="Search by session ID..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="mt-2"
+              />
+            </CardHeader>
+            <CardContent className="p-0">
+              <ScrollArea className="h-[calc(100vh-280px)]">
                 {isLoading ? (
-                  <div className="text-center py-8 text-muted-foreground">Loading...</div>
+                  <div className="p-4 text-center text-muted-foreground">
+                    Loading conversations...
+                  </div>
                 ) : filteredConversations.length === 0 ? (
-                  <div className="text-center py-8 text-muted-foreground">
+                  <div className="p-4 text-center text-muted-foreground">
                     No conversations found
                   </div>
                 ) : (
-                  <div className="space-y-2">
+                  <div className="space-y-2 p-4">
                     {filteredConversations.map((conv) => (
-                      <Card
+                      <div
                         key={conv.id}
-                        className={`p-4 cursor-pointer transition-colors hover:bg-accent ${
-                          selectedConversation?.id === conv.id ? 'bg-accent' : ''
-                        }`}
                         onClick={() => setSelectedConversation(conv)}
+                        className={`p-4 rounded-lg cursor-pointer transition-colors ${
+                          selectedConversation?.id === conv.id
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-muted hover:bg-muted/80'
+                        }`}
                       >
-                        <div className="flex items-start gap-3">
-                          <MessageSquare className="h-5 w-5 text-primary mt-1" />
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium truncate">
-                              Session {conv.session_id.substring(8, 20)}
-                            </p>
-                            <div className="flex items-center gap-2 text-xs text-muted-foreground mt-1">
-                              <Calendar className="h-3 w-3" />
-                              {format(new Date(conv.last_message_at), 'MMM d, HH:mm')}
-                            </div>
-                            <p className="text-xs text-muted-foreground mt-1">
-                              {conv.message_count} messages
-                            </p>
-                          </div>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="font-mono text-sm">
+                            {conv.session_id.substring(0, 8)}...
+                          </span>
+                          <span className="text-xs opacity-75">
+                            {conv.message_count} msgs
+                          </span>
                         </div>
-                      </Card>
+                        <div className="text-xs opacity-75">
+                          {new Date(conv.last_message_at).toLocaleString()}
+                        </div>
+                      </div>
                     ))}
                   </div>
                 )}
               </ScrollArea>
-            </div>
+            </CardContent>
           </Card>
 
-          {/* Messages View */}
-          <Card className="p-6 md:col-span-2">
-            {selectedConversation ? (
-              <div className="space-y-4">
-                <div className="border-b pb-4">
-                  <h2 className="text-xl font-semibold">Conversation Details</h2>
-                  <div className="flex gap-4 mt-2 text-sm text-muted-foreground">
-                    <span>Session: {selectedConversation.session_id}</span>
-                    <span>•</span>
-                    <span>Started: {format(new Date(selectedConversation.started_at), 'MMM d, yyyy HH:mm')}</span>
-                  </div>
-                </div>
-
-                <ScrollArea className="h-[calc(100vh-300px)]">
+          {/* Messages Panel */}
+          <Card className="lg:col-span-2">
+            <CardHeader>
+              <CardTitle className="text-lg">
+                {selectedConversation 
+                  ? `Session: ${selectedConversation.session_id.substring(0, 16)}...`
+                  : 'Select a conversation'}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              {selectedConversation ? (
+                <ScrollArea className="h-[calc(100vh-280px)] p-4">
                   <div className="space-y-4">
-                    {messages.map((msg) => (
+                    {messages.map((message) => (
                       <div
-                        key={msg.id}
-                        className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                        key={message.id}
+                        className={`p-4 rounded-lg ${
+                          message.role === 'user'
+                            ? 'bg-primary text-primary-foreground ml-8'
+                            : 'bg-muted mr-8'
+                        }`}
                       >
-                        <div
-                          className={`max-w-[80%] rounded-lg p-4 ${
-                            msg.role === 'user'
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-muted'
-                          }`}
-                        >
-                          <div className="text-xs opacity-70 mb-1">
-                            {msg.role === 'user' ? 'User' : 'LEO'} • {format(new Date(msg.created_at), 'HH:mm:ss')}
-                          </div>
-                          <p className="whitespace-pre-wrap">{msg.content}</p>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-xs font-semibold">
+                            {message.role === 'user' ? 'User' : 'Assistant'}
+                          </span>
+                          <span className="text-xs opacity-75">
+                            {new Date(message.created_at).toLocaleTimeString()}
+                          </span>
+                        </div>
+                        <div className="text-sm whitespace-pre-wrap">
+                          {message.content}
                         </div>
                       </div>
                     ))}
                   </div>
                 </ScrollArea>
-              </div>
-            ) : (
-              <div className="flex items-center justify-center h-[calc(100vh-300px)] text-muted-foreground">
-                <div className="text-center">
-                  <MessageSquare className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                  <p>Select a conversation to view messages</p>
+              ) : (
+                <div className="h-[calc(100vh-280px)] flex items-center justify-center text-muted-foreground">
+                  Select a conversation to view messages
                 </div>
-              </div>
-            )}
+              )}
+            </CardContent>
           </Card>
         </div>
       </div>
     </div>
   );
-};
-
-export default ChatTranscripts;
+}

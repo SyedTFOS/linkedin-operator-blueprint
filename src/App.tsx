@@ -14,6 +14,7 @@ import Secrets from "./pages/Secrets";
 import Book from "./pages/Book";
 import Checkout from "./pages/Checkout";
 import ChatTranscripts from "./pages/ChatTranscripts";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/agency/secrets" element={<Secrets />} />
           <Route path="/agency/secrets/book" element={<Book />} />
           <Route path="/chat-transcripts" element={<ChatTranscripts />} />
+          <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
