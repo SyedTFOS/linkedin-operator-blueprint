@@ -6,8 +6,8 @@ export default function Checkout() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Open Whop checkout link immediately
-    window.open('https://whop.com/checkout/plan_F61ZZgKOyK4dO?d2c=true', '_blank');
+    // Open Fanbasis checkout link immediately
+    window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy', '_blank');
   }, []);
 
   return (
@@ -37,7 +37,7 @@ export default function Checkout() {
           
           <div className="mt-8">
             <button
-              onClick={() => window.open('https://whop.com/checkout/plan_F61ZZgKOyK4dO?d2c=true', '_blank')}
+              onClick={() => window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy', '_blank')}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
             >
               Click here if checkout didn't open
