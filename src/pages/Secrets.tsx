@@ -2,6 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import logo from "@/assets/logo-main.png";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import { z } from "zod";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import ethanImage from "@/assets/ethan-clouser.png";
 import student1 from "@/assets/student-1.png";
@@ -46,17 +49,106 @@ import proofPlayerTwoDeal from "@/assets/proof-playertwo-deal.png";
 import proof3rdClientSigned from "@/assets/proof-3rd-client-signed.png";
 import proofTopCustomers from "@/assets/proof-top-customers.png";
 import proofCustomerSpend from "@/assets/proof-customer-spend.png";
+// Form validation schema
+const applicationSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required").max(100),
+  lastName: z.string().trim().min(1, "Last name is required").max(100),
+  email: z.string().trim().email("Invalid email address").max(255),
+  phone: z.string().trim().min(1, "Phone is required").max(50),
+  currentSituation: z.string().min(1, "Please select your current situation"),
+  currentRevenue: z.string().min(1, "Please select your current revenue"),
+  revenueGoal: z.string().min(1, "Please select your revenue goal"),
+  linkedinUrl: z.string().trim().max(500).optional(),
+  biggestChallenges: z.string().trim().min(1, "Please describe your biggest challenges").max(2000),
+  whyJoin: z.string().trim().min(1, "Please tell us why you want to join").max(2000),
+  investmentReady: z.boolean(),
+  commitmentReady: z.boolean(),
+});
+
 const Secrets = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState("all");
   const [showOverlay, setShowOverlay] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    currentSituation: "",
+    currentRevenue: "$0",
+    revenueGoal: "",
+    linkedinUrl: "",
+    biggestChallenges: "",
+    whyJoin: "",
+    investmentReady: false,
+    commitmentReady: false,
+  });
 
   // Scroll to top on component mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Validate form data
+      const validatedData = applicationSchema.parse(formData);
+
+      // Submit to database
+      const { error } = await supabase
+        .from("secrets_applications")
+        .insert({
+          first_name: validatedData.firstName,
+          last_name: validatedData.lastName,
+          email: validatedData.email,
+          phone: validatedData.phone,
+          current_situation: validatedData.currentSituation,
+          current_revenue: validatedData.currentRevenue,
+          revenue_goal: validatedData.revenueGoal,
+          linkedin_url: validatedData.linkedinUrl || null,
+          biggest_challenges: validatedData.biggestChallenges,
+          why_join: validatedData.whyJoin,
+          investment_ready: validatedData.investmentReady,
+          commitment_ready: validatedData.commitmentReady,
+        });
+
+      if (error) throw error;
+
+      toast.success("Application submitted successfully! We'll review and respond within 24 hours.");
+      
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        currentSituation: "",
+        currentRevenue: "$0",
+        revenueGoal: "",
+        linkedinUrl: "",
+        biggestChallenges: "",
+        whyJoin: "",
+        investmentReady: false,
+        commitmentReady: false,
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast.error(error.errors[0].message);
+      } else {
+        toast.error("Failed to submit application. Please try again.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Define all proof images
   const allProofs = [proofLinkedInPost, proofAnalytics, proofDiscoveryCalls, proofViralPosts, proofRevenue27k, proofBookingCalls, proofClientGrowth, proofZellePayment, proofStripeDashboard, proofTestimonial, proofRahulPosts, proofDavidProfile, proofCreativeEngine, proofColdEmail, proofTopPosts, proofRobertoProfile, proofOutreachAgent, proofKnowledgeHub, proofDashboard1, proofDashboard2, proofLinkedInBlueprint, proofSyedProfile, proofContentPerformance, proofTopPerforming, proofSlackTraining, proofWhatsapp5Calls, proofSlack12Calls, proofWhatsappBooked, proofCalendarMeetings, proofEventData, proofInboundStrategy, proofPlayerTwoDeal, proof3rdClientSigned, proofTopCustomers, proofCustomerSpend];
@@ -107,7 +199,8 @@ const Secrets = () => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex, showOverlay, totalCount]);
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
         <div className="container mx-auto px-6 py-4">
@@ -405,7 +498,7 @@ const Secrets = () => {
               </p>
             </div>
 
-            <form className="premium-card-glow rounded-3xl p-12 space-y-10 bg-background">
+            <form onSubmit={handleSubmit} className="premium-card-glow rounded-3xl p-12 space-y-10 bg-background">
               {/* Your Information */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold border-b border-border pb-4">YOUR INFORMATION</h3>
@@ -413,22 +506,46 @@ const Secrets = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold">First Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                    <input 
+                      type="text" 
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({...formData, firstName: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" 
+                      required 
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold">Last Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                    <input 
+                      type="text" 
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" 
+                      required 
+                    />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Email *</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                  <input 
+                    type="email" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" 
+                    required 
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Phone *</label>
-                  <input type="tel" className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" required />
+                  <input 
+                    type="tel" 
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" 
+                    required 
+                  />
                 </div>
               </div>
 
@@ -438,15 +555,29 @@ const Secrets = () => {
 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Current situation? *</label>
-                  {["Complete beginner", "Running an agency", "Freelancer/consultant", "Other"].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
-                      <input type="radio" name="situation" className="w-5 h-5" />
+                  {["Complete beginner", "Running an agency", "Freelancer/consultant", "Other"].map(option => 
+                    <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                      <input 
+                        type="radio" 
+                        name="situation" 
+                        value={option}
+                        checked={formData.currentSituation === option}
+                        onChange={(e) => setFormData({...formData, currentSituation: e.target.value})}
+                        className="w-5 h-5" 
+                        required
+                      />
                       <span>{option}</span>
-                    </label>)}
+                    </label>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Current monthly revenue?</label>
-                  <select className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors">
+                  <select 
+                    value={formData.currentRevenue}
+                    onChange={(e) => setFormData({...formData, currentRevenue: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors"
+                  >
                     <option>$0</option>
                     <option>$1-5K</option>
                     <option>$5-10K</option>
@@ -457,20 +588,55 @@ const Secrets = () => {
 
                 <div className="space-y-3">
                   <label className="text-sm font-semibold">Monthly revenue goal? *</label>
-                  {["$10K/month", "$25K/month", "$50K+/month"].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
-                      <input type="radio" name="goal" className="w-5 h-5" />
+                  {["$10K/month", "$25K/month", "$50K+/month"].map(option => 
+                    <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                      <input 
+                        type="radio" 
+                        name="goal" 
+                        value={option}
+                        checked={formData.revenueGoal === option}
+                        onChange={(e) => setFormData({...formData, revenueGoal: e.target.value})}
+                        className="w-5 h-5" 
+                        required
+                      />
                       <span>{option}</span>
-                    </label>)}
+                    </label>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Why Secrets over Academy? *</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none" placeholder="2-3 sentences" required />
+                  <textarea 
+                    rows={4} 
+                    value={formData.whyJoin}
+                    onChange={(e) => setFormData({...formData, whyJoin: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none" 
+                    placeholder="2-3 sentences" 
+                    required 
+                  />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Biggest challenge right now? *</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none" placeholder="2-3 sentences" required />
+                  <textarea 
+                    rows={4} 
+                    value={formData.biggestChallenges}
+                    onChange={(e) => setFormData({...formData, biggestChallenges: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors resize-none" 
+                    placeholder="2-3 sentences" 
+                    required 
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold">LinkedIn Profile URL</label>
+                  <input 
+                    type="url" 
+                    value={formData.linkedinUrl}
+                    onChange={(e) => setFormData({...formData, linkedinUrl: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" 
+                    placeholder="https://linkedin.com/in/yourprofile"
+                  />
                 </div>
               </div>
 
@@ -479,47 +645,81 @@ const Secrets = () => {
                 <h3 className="text-2xl font-bold border-b border-border pb-4">INVESTMENT</h3>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-semibold">This is a minimum multi 4-figure investment, are you ready to invest that amount?</label>
-                  {["Yes, pay in full", "Yes, need payment plan", "Want to discuss first"].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
-                      <input type="radio" name="investment" className="w-5 h-5" />
-                      <span>{option}</span>
-                    </label>)}
+                  <label className="text-sm font-semibold">Are you ready to invest in yourself? *</label>
+                  <div className="flex gap-6">
+                    <label className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                      <input 
+                        type="radio" 
+                        name="investment" 
+                        checked={formData.investmentReady === true}
+                        onChange={() => setFormData({...formData, investmentReady: true})}
+                        className="w-5 h-5" 
+                        required
+                      />
+                      <span>Yes</span>
+                    </label>
+                    <label className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                      <input 
+                        type="radio" 
+                        name="investment" 
+                        checked={formData.investmentReady === false}
+                        onChange={() => setFormData({...formData, investmentReady: false})}
+                        className="w-5 h-5" 
+                        required
+                      />
+                      <span>No</span>
+                    </label>
+                  </div>
                 </div>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-semibold">When can you start? *</label>
-                  {["This week", "Next 2 weeks", "This month", "Just exploring"].map(option => <label key={option} className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
-                      <input type="radio" name="start" className="w-5 h-5" />
-                      <span>{option}</span>
-                    </label>)}
+                  <label className="text-sm font-semibold">Can you commit at least 10 hours per week? *</label>
+                  <div className="flex gap-6">
+                    <label className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                      <input 
+                        type="radio" 
+                        name="commitment" 
+                        checked={formData.commitmentReady === true}
+                        onChange={() => setFormData({...formData, commitmentReady: true})}
+                        className="w-5 h-5" 
+                        required
+                      />
+                      <span>Yes</span>
+                    </label>
+                    <label className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
+                      <input 
+                        type="radio" 
+                        name="commitment" 
+                        checked={formData.commitmentReady === false}
+                        onChange={() => setFormData({...formData, commitmentReady: false})}
+                        className="w-5 h-5" 
+                        required
+                      />
+                      <span>No</span>
+                    </label>
+                  </div>
                 </div>
               </div>
 
-              {/* Agreement */}
-              <label className="flex items-start gap-3 p-6 rounded-lg bg-secondary/50 cursor-pointer">
-                <input type="checkbox" className="w-5 h-5 mt-1" required />
-                <span className="text-sm">
-                  I understand this is an application, not enrollment. If approved, I'll be invited to a strategy call.
-                </span>
-              </label>
-
               {/* Submit Button */}
-              <button type="submit" className="group relative w-full px-12 py-6 bg-primary text-primary-foreground rounded-2xl text-xl font-bold overflow-hidden transition-all hover:scale-105 hover:shadow-2xl border-glow">
-                <span className="relative z-10 flex items-center gap-3 justify-center">
-                  Submit Application
-                  <span className="transition-transform group-hover:translate-x-2">→</span>
-                </span>
-                <div className="absolute inset-0 bg-primary-glow opacity-0 group-hover:opacity-100 transition-opacity" />
-              </button>
-
-              <p className="text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
-                <span>🔒</span>
-                Your information is secure. We'll review within 24-48 hours.
-              </p>
+              <div className="pt-6">
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-5 rounded-lg font-bold text-lg hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed premium-glow"
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Application"}
+                </button>
+                <p className="text-center text-sm text-muted-foreground mt-4">
+                  🔒 Your information is secure and will never be shared
+                </p>
+              </div>
             </form>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Secrets;
