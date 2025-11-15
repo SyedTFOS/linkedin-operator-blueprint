@@ -103,6 +103,60 @@ export type Database = {
         }
         Relationships: []
       }
+      secrets_applications: {
+        Row: {
+          biggest_challenges: string
+          commitment_ready: boolean
+          created_at: string
+          current_revenue: string
+          current_situation: string
+          email: string
+          first_name: string
+          id: string
+          investment_ready: boolean
+          last_name: string
+          linkedin_url: string | null
+          phone: string
+          revenue_goal: string
+          updated_at: string
+          why_join: string
+        }
+        Insert: {
+          biggest_challenges: string
+          commitment_ready: boolean
+          created_at?: string
+          current_revenue: string
+          current_situation: string
+          email: string
+          first_name: string
+          id?: string
+          investment_ready: boolean
+          last_name: string
+          linkedin_url?: string | null
+          phone: string
+          revenue_goal: string
+          updated_at?: string
+          why_join: string
+        }
+        Update: {
+          biggest_challenges?: string
+          commitment_ready?: boolean
+          created_at?: string
+          current_revenue?: string
+          current_situation?: string
+          email?: string
+          first_name?: string
+          id?: string
+          investment_ready?: boolean
+          last_name?: string
+          linkedin_url?: string | null
+          phone?: string
+          revenue_goal?: string
+          updated_at?: string
+          why_join?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string | null
