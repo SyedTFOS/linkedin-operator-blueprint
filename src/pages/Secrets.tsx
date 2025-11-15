@@ -102,27 +102,38 @@ const Secrets = () => {
       // Validate form data
       const validatedData = applicationSchema.parse(formData);
 
-      // Submit to database
-      const { error } = await supabase
-        .from("secrets_applications")
-        .insert({
-          first_name: validatedData.firstName,
-          last_name: validatedData.lastName,
+      // Submit via edge function with rate limiting
+      const { data, error } = await supabase.functions.invoke('submit-application', {
+        body: {
+          firstName: validatedData.firstName,
+          lastName: validatedData.lastName,
           email: validatedData.email,
           phone: validatedData.phone,
-          current_situation: validatedData.currentSituation,
-          current_revenue: validatedData.currentRevenue,
-          revenue_goal: validatedData.revenueGoal,
-          linkedin_url: validatedData.linkedinUrl || null,
-          biggest_challenges: validatedData.biggestChallenges,
-          why_join: validatedData.whyJoin,
-          investment_ready: validatedData.investmentReady,
-          commitment_ready: validatedData.commitmentReady,
-        });
+          currentSituation: validatedData.currentSituation,
+          currentRevenue: validatedData.currentRevenue,
+          revenueGoal: validatedData.revenueGoal,
+          linkedinUrl: validatedData.linkedinUrl || undefined,
+          biggestChallenges: validatedData.biggestChallenges,
+          whyJoin: validatedData.whyJoin,
+          investmentReady: validatedData.investmentReady,
+          commitmentReady: validatedData.commitmentReady,
+        }
+      });
 
-      if (error) throw error;
+      if (error) {
+        // Handle rate limiting
+        if (error.message?.includes('Too many applications')) {
+          toast.error(error.message);
+          return;
+        }
+        throw error;
+      }
 
-      toast.success("Application submitted successfully! We'll review and respond within 24 hours.");
+      if (!data?.success) {
+        throw new Error(data?.error || 'Failed to submit application');
+      }
+
+      toast.success(data.message || "Application submitted successfully! We'll review and respond within 24 hours.");
       
       // Reset form
       setFormData({
