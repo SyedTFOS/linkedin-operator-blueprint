@@ -1,10 +1,20 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3';
+import { z } from 'https://deno.land/x/zod@v3.22.4/mod.ts';
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+// Input validation schema
+const messageSchema = z.object({
+  messages: z.array(z.object({
+    role: z.enum(['user', 'assistant']),
+    content: z.string().trim().min(1, "Message cannot be empty").max(4000, "Message too long (max 4000 characters)")
+  })).min(1, "At least one message required").max(50, "Too many messages (max 50)"),
+  sessionId: z.string().trim().min(1, "Session ID required").max(100, "Session ID too long")
+});
 
 // Rate limiting: Track requests per session (in-memory, resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -115,15 +125,30 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { messages, sessionId } = await req.json();
+    const body = await req.json();
     
-    if (!messages || !Array.isArray(messages)) {
-      throw new Error('Messages array is required');
+    // Validate input
+    let validatedData;
+    try {
+      validatedData = messageSchema.parse(body);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        console.error('Validation error:', error.errors);
+        return new Response(
+          JSON.stringify({
+            error: 'Invalid input',
+            details: error.errors[0].message
+          }),
+          {
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+            status: 400,
+          }
+        );
+      }
+      throw error;
     }
-    
-    if (!sessionId) {
-      throw new Error('Session ID is required');
-    }
+
+    const { messages, sessionId } = validatedData;
 
     // Check rate limit
     const rateCheck = checkRateLimit(sessionId);
