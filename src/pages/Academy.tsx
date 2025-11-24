@@ -82,34 +82,17 @@ const Academy = () => {
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 md:py-32">
-          {/* Limited Access Badge */}
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-sm text-foreground/70 uppercase tracking-wider">Limited Enrollment Open</span>
-              </div>
-              <div className="w-px h-4 bg-border"></div>
-              <span className="text-sm font-semibold text-primary">Only 9 Spots Remaining</span>
-            </div>
-          </div>
-
           <div className="max-w-6xl mx-auto">
             {/* Main Headline */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/50"></div>
-                <span className="text-sm text-primary uppercase tracking-widest font-semibold">LINKEDIN OPERATOR ACADEMY | THE LAST $120 BILLION BLUE OCEAN</span>
-                <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/50"></div>
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8">
-                <span className="block text-foreground mb-2 sm:mb-3">The Last $120B Blue Ocean Before It Closes Forever:</span>
-                <span className="block bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] bg-clip-text text-transparent">LinkedIn Agency</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8 uppercase">
+                <span className="block text-foreground mb-2 sm:mb-3">STUCK TRYING TO BUILD AN ONLINE BUSINESS?</span>
+                <span className="block text-foreground mb-2 sm:mb-3">WHILE YOU'RE FIGHTING OVER SCRAPS...</span>
               </h1>
               
-              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto mb-3 sm:mb-4">The same system that signed Mastercard, Forbes 30 Under 30 founders, and Y Combinator companies — now available to operators who move fast.</p>
-                
+              <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium max-w-4xl mx-auto mb-3 sm:mb-4">
+                Less than 1% of 1.2 BILLION LinkedIn users are posting. This is the last $120B blue ocean before it closes forever.
+              </p>
             </div>
 
             {/* Journey Path */}
@@ -122,10 +105,10 @@ const Academy = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">You Today</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    No experience<br />
-                    No audience<br />
-                    No clients<br />
-                    Ready to start
+                    Tried dropshipping, courses, freelancing<br />
+                    Nothing clicked<br />
+                    Stuck at $0-5K/month<br />
+                    Ready for something real
                   </p>
                 </div>
                 <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">
@@ -164,9 +147,9 @@ const Academy = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-3">You in 7 Weeks</h3>
                   <p className="text-green-600 text-sm font-semibold leading-relaxed">
-                    $20K/month avg.<br />
-                    Multiple clients<br />
-                    Proven systems<br />
+                    $10K-20K/month agency<br />
+                    Multiple retainer clients<br />
+                    Fortune 500 positioning<br />
                     Full autonomy
                   </p>
                 </div>
@@ -179,7 +162,7 @@ const Academy = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <button onClick={() => navigate('/agency/academy/checkout')} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    Join The Academy Now
+                    See The Exact System
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -236,41 +219,26 @@ const Academy = () => {
           {/* Main Headline */}
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white leading-tight">
-              Here&apos;s What Nobody&apos;s Telling You
+              Here's What Nobody's Telling You About Building An Online Business
             </h2>
-            <p className="text-xl sm:text-2xl text-white/90 font-medium">
-              You&apos;ve been sold a lie.
-            </p>
           </div>
 
-          {/* Problems List */}
+          {/* Body Copy */}
           <div className="max-w-3xl mx-auto mb-16 space-y-6">
             <p className="text-white/90 text-base sm:text-lg">
-              18 months ago, we were running a regular agency. Signing local businesses. Making okay money. Stuck at $10-20K/month.
+              You've tried everything. Dropshipping. Courses. Freelancing. Info products. Maybe even coaching.
             </p>
             <p className="text-white/90 text-base sm:text-lg">
-              Then we tried something different.
+              Each one promised "financial freedom" and "6 figures in 90 days."
             </p>
             <p className="text-white/90 text-base sm:text-lg">
-              Instead of chasing restaurants and dentists, we started positioning ourselves for Fortune 500 companies on LinkedIn.
+              Each one left you broke, burnt out, or both.
+            </p>
+            <p className="text-white/90 text-base sm:text-lg font-bold">
+              Here's why: You're competing in red oceans with everyone else who watched the same YouTube video.
             </p>
             <p className="text-white/90 text-base sm:text-lg">
-              I know, it sounds insane.
-            </p>
-            <p className="text-white/90 text-base sm:text-lg">
-              But here&apos;s what we discovered: 1.2 billion people are on LinkedIn. 960 million are decision-makers with real budgets. Yet less than 1% post consistently.
-            </p>
-            <p className="text-white/90 text-base sm:text-lg">
-              The market was completely untapped.
-            </p>
-          </div>
-
-          <div className="text-center mb-16 sm:mb-20 max-w-3xl mx-auto">
-            <p className="text-xl sm:text-2xl text-white font-bold mb-4">
-              Every "opportunity" you&apos;ve been sold has the same fatal flaw:
-            </p>
-            <p className="text-lg sm:text-xl text-white/80">
-              You&apos;re competing in red oceans with everyone else who watched the same YouTube video.
+              But there's a $120 billion market hiding in plain sight.
             </p>
           </div>
 
@@ -307,105 +275,6 @@ const Academy = () => {
               <div className="pt-8 border-t border-white/10">
                 <p className="text-xl sm:text-2xl text-white font-bold text-center">
                   LinkedIn is the single biggest untapped opportunity in online business right now.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Ever Felt Like Section */}
-      <div className="py-24 md:py-40 bg-black relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Badge */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">
-              <span className="text-sm font-semibold text-white uppercase tracking-wide">
-                REALITY CHECK
-              </span>
-            </div>
-          </div>
-
-          {/* Main Headline */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-white leading-tight">
-              Ever Felt Like Doing Business Online Means...
-            </h2>
-          </div>
-
-          {/* Problems List with X marks */}
-          <div className="max-w-3xl mx-auto mb-16 space-y-6">
-            <div className="flex items-start gap-4">
-              <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
-              <p className="text-white/90 text-base sm:text-lg">
-                Business models that require <span className="font-bold text-white">huge upfront costs</span>...
-              </p>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
-              <p className="text-white/90 text-base sm:text-lg">
-                Waiting <span className="font-bold text-white">months</span> <span className="italic text-white/70">(or years)</span> to see <span className="font-bold text-white">results</span>...
-              </p>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
-              <p className="text-white/90 text-base sm:text-lg">
-                Needing an <span className="font-bold text-white">audience</span> and being stuck on the <span className="italic text-white/70">content hamster wheel</span>...
-              </p>
-            </div>
-          </div>
-
-          {/* Transition Statement */}
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <p className="text-lg sm:text-xl text-white/80 mb-2">
-              Then keep reading—because
-            </p>
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">
-              <span className="text-primary">this skill</span> <span className="text-white">changes everything.</span>
-            </p>
-          </div>
-
-          {/* Why Many People Struggle Section */}
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
-              <span className="text-white">Why Many People</span> <span className="text-red-500">Struggle</span> <span className="text-white">to Build an Online Business</span>
-            </h3>
-
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12">
-              <p className="text-lg text-white/90 mb-8">
-                Building an online business isn&apos;t hard because there aren&apos;t opportunities—<span className="italic">it&apos;s hard because:</span>
-              </p>
-
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
-                  <p className="text-white/90 text-base sm:text-lg">
-                    They don&apos;t have a <span className="italic text-primary">clear, high-value</span> skill that businesses will <span className="font-bold text-white">pay</span> for.
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
-                  <p className="text-white/90 text-base sm:text-lg">
-                    They get <span className="font-bold text-white">stuck</span> in <span className="italic text-white/70">"learning mode"</span> and never take <span className="font-bold text-white">action.</span>
-                  </p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-red-500 text-xl flex-shrink-0 mt-1">✕</span>
-                  <p className="text-white/90 text-base sm:text-lg">
-                    They have <span className="italic text-primary">no idea</span> how to get <span className="font-bold text-white">clients.</span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-8 border-t border-white/10 space-y-4">
-                <p className="text-white/90 text-base sm:text-lg">
-                  I know, because I was there too.
-                </p>
-                <p className="text-white/90 text-base sm:text-lg">
-                  Less than two years ago, I was <span className="font-bold text-white">lost.</span>
-                </p>
-                <p className="text-white/90 text-base sm:text-lg">
-                  I wanted to build a business online, but nothing clicked. I <span className="font-bold text-white">tried different business models</span>—<span className="italic text-white/70">affiliate marketing, eCommerce, freelancing</span>—but everything was either <span className="text-red-500">too slow</span>, <span className="text-red-500">too expensive</span>, or <span className="text-red-500">too unpredictable.</span>
                 </p>
               </div>
             </div>
