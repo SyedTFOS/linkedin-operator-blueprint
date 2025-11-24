@@ -8,9 +8,11 @@ import ExploringSection from "@/components/ExploringSection";
 import WhopWidget from "@/components/WhopWidget";
 import { FloatingNav } from "@/components/FloatingNav";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "@/assets/logo-main.png";
 
 const Index = () => {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -71,6 +73,23 @@ const Index = () => {
           <WhopWidget />
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-card">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+            <p>© 2025 LinkedIn Operator</p>
+            <div className="flex gap-6">
+              <button onClick={() => navigate('/terms')} className="hover:text-foreground transition-colors">
+                Terms & Conditions
+              </button>
+              <button onClick={() => navigate('/privacy')} className="hover:text-foreground transition-colors">
+                Privacy Policy
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

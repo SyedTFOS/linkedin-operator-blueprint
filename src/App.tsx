@@ -16,6 +16,8 @@ import Checkout from "./pages/Checkout";
 import ChatTranscripts from "./pages/ChatTranscripts";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +40,8 @@ const App = () => (
           <Route path="/agency/secrets/book" element={<Book />} />
           <Route path="/chat-transcripts" element={<ChatTranscripts />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
