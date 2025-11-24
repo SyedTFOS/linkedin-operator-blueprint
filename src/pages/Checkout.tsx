@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { CheckCircle2, Shield, Clock } from 'lucide-react';
-import logoTransparent from "@/assets/logo-transparent-new.png";
+import logo from "@/assets/logo-main.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -77,7 +77,7 @@ export default function Checkout() {
       <header className="border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <img 
-            src={logoTransparent} 
+            src={logo} 
             alt="LinkedIn Operator Academy" 
             className="h-8 sm:h-10 cursor-pointer"
             onClick={() => navigate('/agency/academy')}
