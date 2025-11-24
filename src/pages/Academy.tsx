@@ -505,10 +505,10 @@ const Academy = () => {
             </h2>
           </div>
 
-          {/* Story Content with Images - 400 words max */}
+          {/* Story Content with Single Image - 400 words max */}
           <div className="max-w-6xl mx-auto mb-12">
-            {/* Top Section - Intro with Photo */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            {/* Main Section with Image */}
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div className="space-y-6 text-lg text-foreground/80 leading-relaxed order-2 md:order-1">
                 <p>
                   18 months ago, I was stuck at $5K/month. Local clients. 60-hour weeks. Everyone churned in 90 days.
@@ -521,67 +521,35 @@ const Academy = () => {
                 <p>
                   Everyone was fighting over Instagram and TikTok. LinkedIn was a ghost town with Fortune 500 budgets.
                 </p>
+                
+                <p>
+                  So I repositioned. From "local agency" to "LinkedIn specialist." Built a system for Fortune 500s, not dentists.
+                </p>
+                
+                <p className="text-2xl font-bold text-primary">
+                  6 months later: Mastercard. Forbes founders. Y Combinator companies. $10K-50K/month retainers.
+                </p>
+                
+                <p>
+                  That's why I built The LinkedIn Operator Method. Not to create another course. But to share the exact system that took me from local clients to Fortune 500s.
+                </p>
+                
+                <p className="text-xl font-bold text-foreground">
+                  And if I could do it in 6 months... you can too.
+                </p>
+                
+                <div className="text-right pt-8">
+                  <p className="text-lg font-semibold text-foreground">— Freddie Poticarry</p>
+                  <p className="text-muted-foreground">Co-Founder, LinkedIn Operator</p>
+                </div>
               </div>
               
-              <div className="space-y-6 order-1 md:order-2">
+              <div className="order-1 md:order-2">
                 <img 
-                  src="/src/assets/sam-arami-photo.png" 
-                  alt="Sam Arami" 
+                  src="/src/assets/sam-founder-car.jpg" 
+                  alt="Founder working in car" 
                   className="rounded-2xl shadow-2xl w-full border-2 border-primary/20"
                 />
-                <img 
-                  src="/src/assets/sam-arami-linkedin.png" 
-                  alt="Sam Arami LinkedIn Profile" 
-                  className="rounded-2xl shadow-2xl w-full border-2 border-primary/20"
-                />
-              </div>
-            </div>
-            
-            {/* Middle Section - The Pivot */}
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-foreground/80 leading-relaxed mb-12">
-              <p>
-                So I repositioned. From "local agency" to "LinkedIn specialist." Built a system for Fortune 500s, not dentists.
-              </p>
-            </div>
-            
-            {/* Proof Images - Client Results */}
-            <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
-              <div className="bg-background/50 backdrop-blur-sm border-2 border-primary/20 rounded-xl p-4 flex items-center justify-center">
-                <img 
-                  src="/src/assets/mastercard-logo.png" 
-                  alt="Mastercard Client" 
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <img 
-                src="/src/assets/proof-playertwo-deal.png" 
-                alt="PlayerTwo Deal" 
-                className="rounded-xl shadow-xl w-full border-2 border-primary/20"
-              />
-              <img 
-                src="/src/assets/proof-dashboard-1.png" 
-                alt="Agency Dashboard" 
-                className="rounded-xl shadow-xl w-full border-2 border-primary/20"
-              />
-            </div>
-            
-            {/* Bottom Section - Results & CTA */}
-            <div className="max-w-4xl mx-auto space-y-6 text-lg text-foreground/80 leading-relaxed">
-              <p className="text-2xl font-bold text-primary text-center">
-                6 months later: Mastercard. Forbes founders. Y Combinator companies. $10K-50K/month retainers.
-              </p>
-              
-              <p>
-                That's why I built The LinkedIn Operator Method. Not to create another course. But to share the exact system that took me from local clients to Fortune 500s.
-              </p>
-              
-              <p className="text-xl font-bold text-foreground text-center">
-                And if I could do it in 6 months... you can too.
-              </p>
-              
-              <div className="text-right max-w-md ml-auto pt-8">
-                <p className="text-lg font-semibold text-foreground">— Freddie Poticarry</p>
-                <p className="text-muted-foreground">Co-Founder, LinkedIn Operator</p>
               </div>
             </div>
           </div>
