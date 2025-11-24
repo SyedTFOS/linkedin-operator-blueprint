@@ -72,9 +72,9 @@ export default function Checkout() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a]">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-white/10 bg-black/40">
+      <header className="border-b border-border/50 bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <img 
             src={logoTransparent} 
@@ -86,51 +86,56 @@ export default function Checkout() {
       </header>
 
       {/* Urgency Bar */}
-      <div className="bg-gradient-to-r from-orange-600/20 via-orange-500/20 to-orange-600/20 border-b border-orange-500/30">
+      <div className="bg-gradient-to-r from-primary/20 via-[#FF8A5B]/20 to-[#FF6B35]/20 border-b border-primary/30">
         <div className="container mx-auto px-4 py-3">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
             <div>
-              <span className="text-white font-bold text-sm sm:text-base">ONLY 9 SPOTS REMAINING</span>
+              <span className="text-foreground font-bold text-sm sm:text-base">ONLY 9 SPOTS REMAINING</span>
             </div>
-            <div className="text-white/90 text-sm">
+            <div className="text-foreground/80 text-sm">
               <span>Price increases after 9 spots are filled</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      {/* Main Content with Grid Pattern */}
+      <div className="relative bg-gradient-to-br from-background via-primary/5 to-[#FF6B35]/10 overflow-hidden">
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Left Column - Info */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Start Your LinkedIn Agency
               </h1>
               
               {/* Limited Time Offer Badge */}
-              <div className="inline-block bg-orange-600/20 border border-orange-500/50 rounded-lg px-4 py-2 mb-6">
-                <p className="text-orange-400 font-bold text-sm">LIMITED TIME OFFER</p>
+              <div className="inline-block bg-primary/10 border border-primary/30 rounded-lg px-4 py-2 mb-6">
+                <p className="text-primary font-bold text-sm">LIMITED TIME OFFER</p>
               </div>
 
               <div className="space-y-3 mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                   GET FULL ACCESS FOR $497
                 </h2>
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl text-white/60 line-through">$2,497</span>
-                  <span className="text-xl text-green-400 font-semibold">Save $2,000!</span>
+                  <span className="text-3xl text-muted-foreground line-through">$2,497</span>
+                  <span className="text-xl text-green-600 dark:text-green-400 font-semibold">Save $2,000!</span>
                 </div>
               </div>
 
-              <div className="bg-red-600/20 border border-red-500/50 rounded-lg px-4 py-3 mb-6">
-                <p className="text-red-400 font-bold text-center">Only 9 Spots Left</p>
+              <div className="bg-gradient-to-r from-red-500/10 to-red-600/10 border border-red-500/30 rounded-lg px-4 py-3 mb-6">
+                <p className="text-red-600 dark:text-red-400 font-bold text-center">Only 9 Spots Left</p>
               </div>
             </div>
 
             {/* What's Included */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white mb-4">Get Instant Access:</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Get Instant Access:</h3>
               
               <div className="space-y-3">
                 {[
@@ -142,13 +147,13 @@ export default function Checkout() {
                   '30 days of weekly Q&A coaching calls (Included FREE)',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-white/90">{item}</span>
+                    <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/90">{item}</span>
                   </div>
                 ))}
               </div>
 
-              <p className="text-white/60 text-sm mt-4 pl-8">
+              <p className="text-muted-foreground text-sm mt-4 pl-8">
                 Then $97/month to continue • Cancel anytime
               </p>
             </div>
@@ -157,11 +162,11 @@ export default function Checkout() {
             <div className="bg-gradient-to-br from-green-600/10 to-green-500/5 border border-green-600/30 rounded-xl p-6">
               <div className="flex items-start gap-4">
                 <div className="bg-green-600/20 rounded-full p-3 flex-shrink-0">
-                  <Shield className="w-8 h-8 text-green-500" />
+                  <Shield className="w-8 h-8 text-green-600 dark:text-green-400" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">14-Day Money-Back Guarantee</h4>
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <h4 className="text-xl font-bold text-foreground mb-2">14-Day Money-Back Guarantee</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     No questions asked
                   </p>
                 </div>
@@ -171,20 +176,20 @@ export default function Checkout() {
 
           {/* Right Column - Form */}
           <div className="lg:sticky lg:top-8 h-fit">
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden border border-border/50">
               {/* Steps Header */}
-              <div className="grid grid-cols-2 bg-gray-100">
+              <div className="grid grid-cols-2 bg-muted/30">
                 <div className={`py-4 px-6 text-center border-b-4 transition-colors ${
-                  step === 1 ? 'border-green-600 bg-white' : 'border-transparent'
+                  step === 1 ? 'border-primary bg-card' : 'border-transparent'
                 }`}>
-                  <div className="text-xs text-gray-500 mb-1">STEP 1</div>
-                  <div className="text-sm font-semibold text-gray-900">Your Name & Email</div>
+                  <div className="text-xs text-muted-foreground mb-1">STEP 1</div>
+                  <div className="text-sm font-semibold text-foreground">Your Name & Email</div>
                 </div>
                 <div className={`py-4 px-6 text-center border-b-4 transition-colors ${
-                  step === 2 ? 'border-green-600 bg-white' : 'border-transparent'
+                  step === 2 ? 'border-primary bg-card' : 'border-transparent'
                 }`}>
-                  <div className="text-xs text-gray-500 mb-1">STEP 2</div>
-                  <div className="text-sm font-semibold text-gray-900">Finalize & Get Access!</div>
+                  <div className="text-xs text-muted-foreground mb-1">STEP 2</div>
+                  <div className="text-sm font-semibold text-foreground">Finalize & Get Access!</div>
                 </div>
               </div>
 
@@ -193,7 +198,7 @@ export default function Checkout() {
                 {step === 1 ? (
                   <div className="space-y-6">
                     <div>
-                      <Label htmlFor="name" className="text-gray-700 mb-2 block">Your Full Name...</Label>
+                      <Label htmlFor="name" className="text-foreground mb-2 block">Your Full Name...</Label>
                       <Input
                         id="name"
                         type="text"
@@ -209,7 +214,7 @@ export default function Checkout() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="email" className="text-gray-700 mb-2 block">Your Email Address...</Label>
+                      <Label htmlFor="email" className="text-foreground mb-2 block">Your Email Address...</Label>
                       <Input
                         id="email"
                         type="email"
@@ -227,30 +232,30 @@ export default function Checkout() {
                     <Button
                       onClick={handleContinue}
                       disabled={!formData.name || !formData.email || isSubmitting}
-                      className="w-full h-14 text-lg bg-green-700 hover:bg-green-800 text-white font-semibold disabled:opacity-50"
+                      className="w-full h-14 text-lg bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold disabled:opacity-50 shadow-lg"
                     >
                       {isSubmitting ? 'Saving...' : 'Continue To Next Step'}
                     </Button>
 
-                    <p className="text-center text-sm text-gray-500 flex items-center justify-center gap-2">
+                    <p className="text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
                       <Shield className="w-4 h-4" />
                       Secure 256-Bit SSL Checkout Powered by Stripe
                     </p>
                   </div>
                 ) : (
                   <div className="text-center space-y-6 py-8">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                      <CheckCircle2 className="w-10 h-10 text-green-600" />
+                    <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto">
+                      <CheckCircle2 className="w-10 h-10 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Checkout opened!</h3>
-                      <p className="text-gray-600">
+                      <h3 className="text-2xl font-bold text-foreground mb-2">Checkout opened!</h3>
+                      <p className="text-muted-foreground">
                         Complete your purchase in the new tab to get instant access.
                       </p>
                     </div>
                     <Button
                       onClick={() => window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy', '_blank')}
-                      className="bg-green-700 hover:bg-green-800 text-white"
+                      className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white"
                     >
                       Click here if checkout didn't open
                     </Button>
@@ -260,6 +265,7 @@ export default function Checkout() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
