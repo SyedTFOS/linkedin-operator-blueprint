@@ -80,7 +80,20 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* Hero Section - Academy Framework */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* ATTENTION SECTION */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+
+      {/* Urgency Bar - Sticky */}
+      <div className="sticky top-0 z-50 bg-gradient-to-r from-red-600 via-red-500 to-red-600 border-b border-red-700">
+        <div className="container mx-auto px-4 py-3">
+          <p className="text-white text-center text-sm md:text-base font-bold">
+            🔴 LIVE ENROLLMENT: 47 Operators Joined This Week | Next Cohort Starts Feb 1st
+          </p>
+        </div>
+      </div>
+
+      {/* Hero Section */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-primary/5 to-[#FF6B35]/10 pt-8 pb-16">
         {/* Subtle Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px]"></div>
@@ -90,97 +103,135 @@ const Academy = () => {
           <div className="max-w-6xl mx-auto">
             {/* Main Headline */}
             <div className="text-center mb-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight sm:leading-none mb-6 sm:mb-8 uppercase">
-                <span className="block text-foreground mb-2 sm:mb-3">STUCK TRYING TO BUILD AN ONLINE BUSINESS?</span>
-                <span className="block text-foreground mb-2 sm:mb-3">WHILE YOU'RE FIGHTING OVER SCRAPS...</span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight mb-6">
+                Build A $20K+/Month LinkedIn Agency In 90 Days
               </h1>
               
-              <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium max-w-4xl mx-auto mb-3 sm:mb-4">
-                Less than 1% of 1.2 BILLION LinkedIn users are posting. This is the last $120B blue ocean before it closes forever.
+              <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium max-w-4xl mx-auto mb-8">
+                The complete system that signed Mastercard, Forbes founders, and Y Combinator companies. Now available as a 7-week operator framework.
               </p>
             </div>
 
-            {/* Journey Path */}
+            {/* 3-Column Transformation Visual */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-              {/* Starting Point */}
-              <div className="relative bg-card backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8 hover:border-primary/30 transition-all duration-300">
+              {/* WHERE YOU ARE */}
+              <div className="relative bg-card backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-300">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <User className="w-10 h-10 text-primary" />
+                  <h3 className="text-2xl font-bold text-foreground mb-6 uppercase">Where You Are</h3>
+                  <div className="space-y-3 text-left">
+                    <p className="text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Tried other online business models (dropshipping, SMMA, courses)</span>
+                    </p>
+                    <p className="text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Stuck at $0-5K/month or working a 9-5</span>
+                    </p>
+                    <p className="text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Tired of saturated markets and low-ticket clients</span>
+                    </p>
+                    <p className="text-muted-foreground flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Ready for a real business model with real clients</span>
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">You Today</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    Tried dropshipping, courses, freelancing<br />
-                    Nothing clicked<br />
-                    Stuck at $0-5K/month<br />
-                    Ready for something real
-                  </p>
                 </div>
-                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">
+                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold shadow-lg">
                   →
                 </div>
               </div>
 
-              {/* The Academy */}
-              <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/40 rounded-2xl p-6 sm:p-8">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary rounded-full">
+              {/* THE ACADEMY */}
+              <div className="relative bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/40 rounded-2xl p-8">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary rounded-full shadow-lg">
                   <span className="text-xs text-white font-bold uppercase">The Academy</span>
                 </div>
                 <div className="text-center pt-2">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/20 border-2 border-primary/50 flex items-center justify-center relative">
-                    <Lightbulb className="w-10 h-10 text-primary" />
-                    <div className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-primary animate-pulse"></div>
+                  <h3 className="text-2xl font-bold text-foreground mb-6 uppercase">The Academy</h3>
+                  <div className="space-y-3 text-left">
+                    <p className="text-foreground/90 flex items-start gap-2 font-medium">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>7-Week Operator Framework (50+ modules)</span>
+                    </p>
+                    <p className="text-foreground/90 flex items-start gap-2 font-medium">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Client Acquisition + Fulfillment Systems</span>
+                    </p>
+                    <p className="text-foreground/90 flex items-start gap-2 font-medium">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>Templates, SOPs, and Weekly Coaching</span>
+                    </p>
+                    <p className="text-foreground/90 flex items-start gap-2 font-medium">
+                      <span className="text-primary mt-1">✓</span>
+                      <span>8+ Industry Playbooks for any vertical</span>
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">7 Weeks</h3>
-                  <p className="text-foreground/80 text-sm font-medium leading-relaxed">
-                    Complete training<br />
-                    Live support<br />
-                    Templates & systems<br />
-                    Community access
-                  </p>
                 </div>
-                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-6 h-6 rounded-full bg-primary text-white text-xs font-bold">
+                <div className="hidden md:flex absolute -right-3 top-1/2 -translate-y-1/2 items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold shadow-lg">
                   →
                 </div>
               </div>
 
-              {/* The Result */}
-              <div className="relative bg-card backdrop-blur-sm border border-green-500/30 rounded-2xl p-6 sm:p-8 hover:border-green-500/50 transition-all duration-300">
+              {/* WHERE YOU'LL BE */}
+              <div className="relative bg-card backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-green-500/10 border border-green-500/30 flex items-center justify-center">
-                    <Crown className="w-10 h-10 text-green-500" />
+                  <h3 className="text-2xl font-bold text-foreground mb-6 uppercase">Where You'll Be <span className="text-sm text-muted-foreground">(90 Days)</span></h3>
+                  <div className="space-y-3 text-left">
+                    <p className="text-green-600 flex items-start gap-2 font-semibold">
+                      <span className="mt-1">★</span>
+                      <span>$10K-20K+/month LinkedIn agency</span>
+                    </p>
+                    <p className="text-green-600 flex items-start gap-2 font-semibold">
+                      <span className="mt-1">★</span>
+                      <span>3-5 retainer clients at $3K-10K/month</span>
+                    </p>
+                    <p className="text-green-600 flex items-start gap-2 font-semibold">
+                      <span className="mt-1">★</span>
+                      <span>Fortune 500 positioning (not local businesses)</span>
+                    </p>
+                    <p className="text-green-600 flex items-start gap-2 font-semibold">
+                      <span className="mt-1">★</span>
+                      <span>Complete business autonomy</span>
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">You in 7 Weeks</h3>
-                  <p className="text-green-600 text-sm font-semibold leading-relaxed">
-                    $10K-20K/month agency<br />
-                    Multiple retainer clients<br />
-                    Fortune 500 positioning<br />
-                    Full autonomy
-                  </p>
                 </div>
               </div>
             </div>
 
+            {/* Social Proof Logos Line */}
+            <div className="mb-12">
+              <p className="text-center text-sm text-muted-foreground mb-4 font-medium">Clients Include:</p>
+              <div className="flex flex-wrap items-center justify-center gap-8 opacity-70">
+                <span className="text-foreground font-semibold">Mastercard</span>
+                <span className="text-muted-foreground">|</span>
+                <span className="text-foreground font-semibold">Forbes</span>
+                <span className="text-muted-foreground">|</span>
+                <span className="text-foreground font-semibold">Y Combinator</span>
+                <span className="text-muted-foreground">|</span>
+                <span className="text-foreground font-semibold">Royal Government</span>
+                <span className="text-muted-foreground">|</span>
+                <span className="text-foreground font-semibold">$1B+ Funds</span>
+              </div>
+            </div>
 
             {/* CTA Section */}
             <div className="text-center">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <button onClick={() => navigate('/agency/academy/checkout')} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    See The Exact System
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                </button>
-                
-              </div>
+              <button 
+                onClick={() => navigate('/agency/academy/checkout')} 
+                className="group relative px-10 py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  See The Complete Framework
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-[#FF8A5B] to-[#FF6B35] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </button>
               
-              <div className="flex items-center justify-center gap-2 mb-3">
+              <div className="flex items-center justify-center gap-2 mt-4">
                 <Shield className="w-4 h-4 text-green-600" />
                 <span className="text-sm font-semibold text-green-600">14-Day Money-Back Guarantee</span>
               </div>
-              
-              
             </div>
           </div>
         </div>
