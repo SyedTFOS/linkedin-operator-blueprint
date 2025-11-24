@@ -43,8 +43,12 @@ export default function Checkout() {
 
     setIsSubmitting(true);
 
+    // Open Fanbasis checkout immediately after validation
+    window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy', '_blank');
+    setStep(2);
+
     try {
-      // Save to database
+      // Save to database in background
       const { error } = await supabase
         .from('checkout_submissions')
         .insert({
@@ -54,18 +58,12 @@ export default function Checkout() {
 
       if (error) {
         console.error('Error saving checkout submission:', error);
-        toast.error('Failed to save your information. Please try again.');
-        setIsSubmitting(false);
-        return;
+        toast.error('Failed to save your information, but checkout is open.');
+      } else {
+        toast.success('Information saved successfully!');
       }
-
-      // Open Fanbasis checkout
-      window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy', '_blank');
-      setStep(2);
-      toast.success('Information saved successfully!');
     } catch (error) {
       console.error('Unexpected error:', error);
-      toast.error('An unexpected error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
