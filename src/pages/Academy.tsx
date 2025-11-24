@@ -581,11 +581,6 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* Real Students, Real Results Section */}
-      <ExperimentSection />
-
-      {/* Removed - replaced with comprehensive conversion sections below */}
-
       {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 5: VALIDATION - Guarantee + Risk Reversal */}
       {/* ═══════════════════════════════════════════════════════════ */}
