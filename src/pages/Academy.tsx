@@ -277,9 +277,36 @@ const Academy = () => {
                   LinkedIn is the single biggest untapped opportunity in online business right now.
                 </p>
               </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonial - Komail */}
+      <div className="py-12 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card border-2 border-primary/30 rounded-2xl p-8 shadow-xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex gap-1 text-yellow-400">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-yellow-400" />)}
+                </div>
+              </div>
+              <p className="text-xl md:text-2xl font-semibold text-foreground mb-6 italic">
+                "Complete Beginner - Zero online business experience → $14K deal in first 3 weeks"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                  K
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Komail Gillani</p>
+                  <p className="text-sm text-muted-foreground">LinkedIn Operator Student</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       {/* The LinkedIn Operator Method - Simple Mechanism */}
@@ -622,8 +649,32 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* Real Students, Real Results Section */}
-      <ExperimentSection />
+      {/* Testimonial - Ethan */}
+      <div className="py-12 bg-gradient-to-br from-background via-background to-primary/5">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card border-2 border-primary/30 rounded-2xl p-8 shadow-xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex gap-1 text-yellow-400">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-yellow-400" />)}
+                </div>
+              </div>
+              <p className="text-xl md:text-2xl font-semibold text-foreground mb-6 italic">
+                "$1.2K to $27K in 3 months - Used this system to exit for 5-figures"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                  E
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Ethan Clouser</p>
+                  <p className="text-sm text-muted-foreground">LinkedIn Operator Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Pricing Section - Single Clean Display */}
       <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
@@ -691,9 +742,32 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* ═══════════════════════════════════════════════════════════ */}
-      {/* SECTION 5: VALIDATION - Guarantee + Risk Reversal */}
-      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* Testimonial - Craig Cecilio */}
+      <div className="py-12 bg-gradient-to-br from-background via-background to-primary/5">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card border-2 border-primary/30 rounded-2xl p-8 shadow-xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex gap-1 text-yellow-400">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-yellow-400" />)}
+                </div>
+              </div>
+              <p className="text-xl md:text-2xl font-semibold text-foreground mb-6 italic">
+                "CEO, DiversyFund - $1B+ raised using this LinkedIn strategy"
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                  C
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Craig Cecilio</p>
+                  <p className="text-sm text-muted-foreground">CEO, DiversyFund</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Guarantee Section */}
       <div className="py-24 md:py-40 bg-background relative overflow-hidden">
@@ -780,25 +854,60 @@ const Academy = () => {
           <div className="max-w-4xl mx-auto space-y-6">
             {/* FAQ 1 */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">What if I&apos;ve never run an agency before?</h3>
-              <p className="text-lg text-muted-foreground">
-                Perfect. Several of our most successful students were complete beginners (like Komail who closed a $14K deal in his first 3 weeks). The system is designed to work whether you&apos;re starting from scratch or pivoting from another business model.
+              <h3 className="text-2xl font-bold mb-4">What if I&apos;ve never run an agency or online business before?</h3>
+              <p className="text-lg text-muted-foreground mb-4">
+                Even better. You don&apos;t have bad habits to unlearn.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                Komail had ZERO online business experience. Closed a $14K deal in his first 3 weeks.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                Vasilije started with zero experience. Now running a $25K/month agency.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                The LinkedIn Operator Method works for beginners BECAUSE it&apos;s a system. Not guesswork. Step-by-step, paint-by-numbers.
+              </p>
+              <p className="text-lg font-semibold text-foreground">
+                Your lack of experience is actually an advantage.
               </p>
             </div>
 
             {/* FAQ 2 */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">How is this different from other LinkedIn courses?</h3>
+              <h3 className="text-2xl font-bold mb-4">How is this different from other courses I&apos;ve tried?</h3>
+              <p className="text-lg text-muted-foreground mb-4">
+                Most courses teach you to build an audience first, then maybe make money.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                This teaches you to get PAID from day one.
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                Most courses are theory from people who&apos;ve never done it.
+              </p>
+              <p className="text-lg font-semibold text-foreground mb-4">
+                This is the actual system that signed Mastercard, not theory from someone with a podcast.
+              </p>
               <p className="text-lg text-muted-foreground">
-                Most LinkedIn courses teach you how to grow a following and become an influencer. We teach you how to build a legitimate agency that signs Fortune 500 companies. This is the actual system that landed Mastercard, not theory from someone who&apos;s never done it.
+                You learn client acquisition, fulfillment, and sales - not &apos;post 3x a day and pray.&apos;
               </p>
             </div>
 
             {/* FAQ 3 */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Do I need a LinkedIn following to start?</h3>
-              <p className="text-lg text-muted-foreground">
-                No. Unlike other business models where you need to build an audience first, you can start getting paid from day one with LinkedIn agencies. We show you how to sign clients through outbound systems, not just inbound content.
+              <h3 className="text-2xl font-bold mb-4">Do I need community access after 30 days?</h3>
+              <p className="text-lg text-muted-foreground mb-4">
+                After your first 30 days FREE, you can continue community access for $97/month (optional).
+              </p>
+              <p className="text-lg text-muted-foreground mb-4">
+                Most students keep it because:
+              </p>
+              <ul className="space-y-2 mb-4 ml-6">
+                <li className="text-lg text-muted-foreground">• Weekly coaching calls solve problems in real-time</li>
+                <li className="text-lg text-muted-foreground">• Peer collaboration leads to joint ventures</li>
+                <li className="text-lg text-muted-foreground">• You&apos;re building alongside 500+ other operators</li>
+              </ul>
+              <p className="text-lg font-semibold text-foreground">
+                But it&apos;s optional. Your lifetime course access never expires regardless.
               </p>
             </div>
 
@@ -842,12 +951,27 @@ const Academy = () => {
               </p>
             </div>
 
-            {/* FAQ 9 */}
+            {/* FAQ 7 - Guarantee */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-4">What&apos;s the refund policy?</h3>
-              <p className="text-lg text-muted-foreground">
-                We&apos;re operators, not scammers. But we&apos;re also not here to babysit. If you join, get access to everything, and then decide it&apos;s "too much work" — that&apos;s on you. We&apos;ve proven this system works with Fortune 500s and complete beginners. The only variable is you.
-              </p>
+              <div className="space-y-4">
+                <h4 className="text-xl font-bold text-primary">The Operator Guarantee</h4>
+                <p className="text-lg text-muted-foreground">
+                  Implement all 50+ modules. Use the templates. Follow the system.
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  If you DON&apos;T land your first client in 60 days, email us for a full refund.
+                </p>
+                <p className="text-lg font-semibold text-foreground">
+                  Why can we make this guarantee? Because this system WORKS.
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  We&apos;ve proven it with Fortune 500s. We&apos;ve proven it with complete beginners.
+                </p>
+                <p className="text-lg font-semibold text-foreground">
+                  The only variable is you.
+                </p>
+              </div>
             </div>
           </div>
 
