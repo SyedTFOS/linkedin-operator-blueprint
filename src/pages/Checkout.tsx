@@ -5,17 +5,69 @@ import logoTransparent from "@/assets/logo-transparent-new.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import { z } from 'zod';
+
+const checkoutSchema = z.object({
+  name: z.string().trim().min(2, { message: "Name must be at least 2 characters" }).max(100, { message: "Name must be less than 100 characters" }),
+  email: z.string().trim().email({ message: "Invalid email address" }).max(255, { message: "Email must be less than 255 characters" }),
+});
 
 export default function Checkout() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({ name: '', email: '' });
+  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleContinue = () => {
-    if (step === 1 && formData.name && formData.email) {
-      // Open Fanbasis checkout with the form data
+  const handleContinue = async () => {
+    if (step !== 1) return;
+
+    // Validate form data
+    try {
+      checkoutSchema.parse(formData);
+      setErrors({});
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const fieldErrors: { name?: string; email?: string } = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            fieldErrors[err.path[0] as 'name' | 'email'] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+        return;
+      }
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Save to database
+      const { error } = await supabase
+        .from('checkout_submissions')
+        .insert({
+          name: formData.name.trim(),
+          email: formData.email.trim().toLowerCase(),
+        });
+
+      if (error) {
+        console.error('Error saving checkout submission:', error);
+        toast.error('Failed to save your information. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Open Fanbasis checkout
       window.open('https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy', '_blank');
       setStep(2);
+      toast.success('Information saved successfully!');
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -147,9 +199,13 @@ export default function Checkout() {
                         type="text"
                         placeholder="Your Full Name..."
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full h-12 text-base"
+                        onChange={(e) => {
+                          setFormData({ ...formData, name: e.target.value });
+                          if (errors.name) setErrors({ ...errors, name: undefined });
+                        }}
+                        className={`w-full h-12 text-base ${errors.name ? 'border-red-500' : ''}`}
                       />
+                      {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                     </div>
                     
                     <div>
@@ -159,17 +215,21 @@ export default function Checkout() {
                         type="email"
                         placeholder="Your Email Address..."
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full h-12 text-base"
+                        onChange={(e) => {
+                          setFormData({ ...formData, email: e.target.value });
+                          if (errors.email) setErrors({ ...errors, email: undefined });
+                        }}
+                        className={`w-full h-12 text-base ${errors.email ? 'border-red-500' : ''}`}
                       />
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                     </div>
 
                     <Button
                       onClick={handleContinue}
-                      disabled={!formData.name || !formData.email}
-                      className="w-full h-14 text-lg bg-green-700 hover:bg-green-800 text-white font-semibold"
+                      disabled={!formData.name || !formData.email || isSubmitting}
+                      className="w-full h-14 text-lg bg-green-700 hover:bg-green-800 text-white font-semibold disabled:opacity-50"
                     >
-                      Continue To Next Step
+                      {isSubmitting ? 'Saving...' : 'Continue To Next Step'}
                     </Button>
 
                     <p className="text-center text-sm text-gray-500 flex items-center justify-center gap-2">
