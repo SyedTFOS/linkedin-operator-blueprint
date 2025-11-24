@@ -55,6 +55,7 @@ const applicationSchema = z.object({
   lastName: z.string().trim().min(1, "Last name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
   phone: z.string().trim().min(1, "Phone is required").max(50),
+  whatsapp: z.string().trim().min(1, "WhatsApp/Telegram is required").max(50),
   currentSituation: z.string().min(1, "Please select your current situation"),
   currentRevenue: z.string().min(1, "Please select your current revenue"),
   revenueGoal: z.string().min(1, "Please select your revenue goal"),
@@ -79,6 +80,7 @@ const Secrets = () => {
     lastName: "",
     email: "",
     phone: "",
+    whatsapp: "",
     currentSituation: "",
     currentRevenue: "$0",
     revenueGoal: "",
@@ -109,6 +111,7 @@ const Secrets = () => {
           lastName: validatedData.lastName,
           email: validatedData.email,
           phone: validatedData.phone,
+          whatsapp: validatedData.whatsapp,
           currentSituation: validatedData.currentSituation,
           currentRevenue: validatedData.currentRevenue,
           revenueGoal: validatedData.revenueGoal,
@@ -144,8 +147,9 @@ const Secrets = () => {
         lastName: "",
         email: "",
         phone: "",
+        whatsapp: "",
         currentSituation: "",
-        currentRevenue: "${0}",
+        currentRevenue: "$0",
         revenueGoal: "",
         linkedinUrl: "",
         biggestChallenges: "",
@@ -561,6 +565,18 @@ const Secrets = () => {
                     required 
                   />
                 </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold">WhatsApp / Telegram *</label>
+                  <input 
+                    type="text" 
+                    value={formData.whatsapp}
+                    onChange={(e) => setFormData({...formData, whatsapp: e.target.value})}
+                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary outline-none transition-colors" 
+                    placeholder="Your WhatsApp or Telegram username"
+                    required 
+                  />
+                </div>
               </div>
 
               {/* About You */}
@@ -659,7 +675,7 @@ const Secrets = () => {
                 <h3 className="text-2xl font-bold border-b border-border pb-4">INVESTMENT</h3>
 
                 <div className="space-y-3">
-                  <label className="text-sm font-semibold">Are you ready to invest in yourself? *</label>
+                  <label className="text-sm font-semibold">Are you ready to invest in yourself? (This is a multiple 4 figure investment) *</label>
                   <div className="flex gap-6">
                     <label className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 cursor-pointer transition-colors">
                       <input 
