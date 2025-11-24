@@ -177,10 +177,7 @@ const Academy = () => {
             {/* CTA Section */}
             <div className="text-center">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <button onClick={() => document.getElementById('pricing-section')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-              })} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
+                <button onClick={() => navigate('/agency/academy/checkout')} className="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-base sm:text-lg shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105">
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Join The Academy Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
