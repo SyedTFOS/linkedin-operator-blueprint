@@ -38,12 +38,10 @@ export default function Checkout() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
             <div>
-              <span className="text-white font-bold text-sm sm:text-base">50 SPOTS AT $2400 OFF</span>
-              <span className="text-white/70 text-sm ml-2">41 claimed • 9 left</span>
+              <span className="text-white font-bold text-sm sm:text-base">ONLY 9 SPOTS REMAINING</span>
             </div>
-            <div className="flex items-center gap-2 text-white/90 text-sm">
-              <Clock className="w-4 h-4" />
-              <span>November special, price increasing after</span>
+            <div className="text-white/90 text-sm">
+              <span>Price increases after 9 spots are filled</span>
             </div>
           </div>
         </div>
@@ -55,41 +53,41 @@ export default function Checkout() {
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Get Access To Start Building!
+                Start Your LinkedIn Agency
               </h1>
               
-              <div className="space-y-2 mb-6">
-                <div className="flex items-baseline gap-3">
-                  <span className="text-white/60">Normally the price is:</span>
-                  <span className="text-2xl text-white/60 line-through">$3000</span>
-                </div>
-                <div className="flex items-baseline gap-3">
-                  <span className="text-white font-semibold text-xl">Today's price:</span>
-                  <span className="text-4xl font-bold text-white">$600</span>
-                  <span className="text-lg text-green-400">(save $2400)</span>
+              {/* Limited Time Offer Badge */}
+              <div className="inline-block bg-orange-600/20 border border-orange-500/50 rounded-lg px-4 py-2 mb-6">
+                <p className="text-orange-400 font-bold text-sm">LIMITED TIME OFFER</p>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  GET FULL ACCESS FOR $497
+                </h2>
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl text-white/60 line-through">$2,497</span>
+                  <span className="text-xl text-green-400 font-semibold">Save $2,000!</span>
                 </div>
               </div>
 
-              <p className="text-white/70 text-sm">
-                Prefer paying in 2 installments?{' '}
-                <a href="https://www.fanbasis.com/agency-checkout/linkedinoperator/pgWKy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                  Click here.
-                </a>
-              </p>
+              <div className="bg-red-600/20 border border-red-500/50 rounded-lg px-4 py-3 mb-6">
+                <p className="text-red-400 font-bold text-center">Only 9 Spots Left</p>
+              </div>
             </div>
 
             {/* What's Included */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-white mb-4">Join & get instant access to:</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Get Instant Access:</h3>
               
               <div className="space-y-3">
                 {[
-                  'The IPGA Masterclass course.',
-                  'All content, All templates, All upgrades.',
-                  'Our Private IPGA Mastermind community.',
-                  'Access To Weekly Q&A Calls with Sander.',
-                  'Everything you need to get to $10k+/m.',
-                  '2200+ members • 1400+ wins'
+                  'Lifetime Access to the complete LinkedIn Agency Masterclass',
+                  'All course materials, templates, and future updates (Lifetime)',
+                  'Full access to our global community',
+                  'Everything needed to build a $20k+/month LinkedIn Agency',
+                  '14-Day Money-Back Guarantee - No questions asked',
+                  '30 days of weekly Q&A coaching calls (Included FREE)',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -97,18 +95,22 @@ export default function Checkout() {
                   </div>
                 ))}
               </div>
+
+              <p className="text-white/60 text-sm mt-4 pl-8">
+                Then $97/month to continue • Cancel anytime
+              </p>
             </div>
 
             {/* Money Back Guarantee */}
-            <div className="bg-gradient-to-br from-yellow-600/10 to-yellow-500/5 border border-yellow-600/30 rounded-xl p-6">
+            <div className="bg-gradient-to-br from-green-600/10 to-green-500/5 border border-green-600/30 rounded-xl p-6">
               <div className="flex items-start gap-4">
-                <div className="bg-yellow-600/20 rounded-full p-3 flex-shrink-0">
-                  <Shield className="w-8 h-8 text-yellow-500" />
+                <div className="bg-green-600/20 rounded-full p-3 flex-shrink-0">
+                  <Shield className="w-8 h-8 text-green-500" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">14-DAY MONEY BACK GUARANTEE</h4>
+                  <h4 className="text-xl font-bold text-white mb-2">14-Day Money-Back Guarantee</h4>
                   <p className="text-white/70 text-sm leading-relaxed">
-                    If you're not completely satisfied within 14 days, simply let us know and we'll refund you in full — no questions asked. We're confident you'll see results.
+                    No questions asked
                   </p>
                 </div>
               </div>
