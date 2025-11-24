@@ -119,6 +119,7 @@ export type Database = {
           phone: string
           revenue_goal: string
           updated_at: string
+          whatsapp: string
           why_join: string
         }
         Insert: {
@@ -136,6 +137,7 @@ export type Database = {
           phone: string
           revenue_goal: string
           updated_at?: string
+          whatsapp?: string
           why_join: string
         }
         Update: {
@@ -153,6 +155,7 @@ export type Database = {
           phone?: string
           revenue_goal?: string
           updated_at?: string
+          whatsapp?: string
           why_join?: string
         }
         Relationships: []
