@@ -29,6 +29,7 @@ import { BonusResourcesSection } from "@/components/BonusResourcesSection";
 import { OperatorProofSection } from "@/components/OperatorProofSection";
 import { ValidationSection } from "@/components/ValidationSection";
 import { ActionSection } from "@/components/ActionSection";
+import { FAQSection } from "@/components/FAQSection";
 const Academy = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -654,7 +655,7 @@ const Academy = () => {
       <OperatorProofSection />
 
       {/* ═══════════════════════════════════════════════════════════ */}
-      {/* SECTION 5: VALIDATION - Who It's For + Guarantee + FAQ */}
+      {/* SECTION 5: VALIDATION - Who It's For + Guarantee */}
       {/* ═══════════════════════════════════════════════════════════ */}
       <ValidationSection />
 
@@ -662,6 +663,11 @@ const Academy = () => {
       {/* SECTION 6: ACTION - Pricing + Final Close + CTA */}
       {/* ═══════════════════════════════════════════════════════════ */}
       <ActionSection />
+
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 7: FAQ - Frequently Asked Questions */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <FAQSection />
     </div>
   );
 };
