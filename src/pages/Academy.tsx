@@ -22,6 +22,11 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 import { VerificationHero } from "@/components/VerificationHero";
 import ExperimentSection from "@/components/ExperimentSection";
 import { CommunityWinsSection } from "@/components/CommunityWinsSection";
+import { TestimonialCard } from "@/components/TestimonialCard";
+import komailGillani from "@/assets/komail-gillani.png";
+import ethanClouser from "@/assets/ethan-clouser.png";
+import vasilijeSimic from "@/assets/vasilije-simic.png";
+import craigCecilio from "@/assets/craig-cecilio.png";
 const Academy = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -282,6 +287,18 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* Testimonial Card 1 - Komail - After Reality Check */}
+      <div className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <TestimonialCard
+            name="Komail Gillani"
+            image={komailGillani}
+            quote="Complete Beginner - Zero online business experience"
+            result="$14K deal in first 3 weeks"
+          />
+        </div>
+      </div>
+
       {/* The LinkedIn Operator Method - Simple Mechanism */}
       <div className="py-24 md:py-40 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Grid Pattern Background */}
@@ -526,6 +543,18 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* Testimonial Card 2 - Ethan - After Founder Story */}
+      <div className="py-16 bg-[#0A0A0A]">
+        <div className="container mx-auto px-6">
+          <TestimonialCard
+            name="Ethan Clouser"
+            image={ethanClouser}
+            quote="$1.2K to $27K in 3 months"
+            result="Used this system to exit for 5-figures"
+          />
+        </div>
+      </div>
+
       {/* Value Stack - Simplified 3 Buckets */}
       <div className="py-24 md:py-40 bg-gradient-to-br from-background via-background to-primary/5 relative overflow-hidden">
         {/* Grid Pattern Background */}
@@ -625,6 +654,18 @@ const Academy = () => {
       {/* Real Students, Real Results Section */}
       <ExperimentSection />
 
+      {/* Testimonial Card 3 - Vasilije - Before Pricing */}
+      <div className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <TestimonialCard
+            name="Vasilije Simic"
+            image={vasilijeSimic}
+            quote="Started with zero experience"
+            result="$25K/month agency with 20+ clients"
+          />
+        </div>
+      </div>
+
       {/* Pricing Section - Single Clean Display */}
       <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
         {/* Grid Pattern Background */}
@@ -691,6 +732,18 @@ const Academy = () => {
         </div>
       </div>
 
+      {/* Testimonial Card 4 - Craig - After Pricing */}
+      <div className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <TestimonialCard
+            name="Craig Cecilio"
+            image={craigCecilio}
+            quote="CEO, DiversyFund"
+            result="$1B+ raised using this LinkedIn strategy"
+          />
+        </div>
+      </div>
+
       {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 5: VALIDATION - Guarantee + Risk Reversal */}
       {/* ═══════════════════════════════════════════════════════════ */}
@@ -701,64 +754,55 @@ const Academy = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Industries */}
-            <div className="text-center mb-12">
-              <p className="text-lg md:text-xl text-foreground/80 mb-3">
-                And it works across <span className="font-bold text-foreground">every industry:</span>
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-primary/50 bg-primary/5 backdrop-blur-sm">
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                  THE GUARANTEE
+                </span>
+              </div>
+            </div>
+
+            {/* Headline */}
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              The Operator Guarantee
+            </h2>
+
+            {/* Body */}
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-2xl p-8 md:p-12 mb-12 space-y-6 text-lg text-foreground/80">
+              <p>
+                Implement all 50+ modules. Use the templates. Follow the system.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
-                <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">AI</span>
-                <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">SaaS</span>
-                <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">Med-Tech</span>
-                <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">Finance</span>
-                <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">Real Estate</span>
-                <span className="px-4 py-2 bg-background/80 border border-border/50 rounded-full text-foreground font-semibold">Coaching</span>
-              </div>
+              
+              <p className="font-bold text-primary text-xl">
+                If you DON'T land your first client in 60 days, email us for a full refund.
+              </p>
+              
+              <p>
+                Why can we make this guarantee? Because this system WORKS.
+              </p>
+              
+              <p>
+                We've proven it with Fortune 500s. We've proven it with complete beginners.
+              </p>
+              
+              <p className="font-bold text-foreground text-xl">
+                The only variable is you.
+              </p>
             </div>
 
-            {/* CTA Section */}
-            <div className="text-center">
-              <div className="mb-8">
-                <button 
-                  onClick={() => navigate('/agency/academy/checkout')} 
-                  className="group relative px-12 py-6 bg-gradient-to-r from-[#E85D3F] to-[#E85D3F] hover:from-[#D14D2F] hover:to-[#D14D2F] text-white rounded-2xl font-bold text-2xl shadow-2xl hover:scale-105 transition-all duration-300"
-                >
-                  Get Instant Access Now
-                </button>
-              </div>
-
-              <div className="space-y-2 mb-8">
-                <p className="text-lg font-semibold text-foreground">
-                  Join <span className="text-[#E85D3F] font-bold">500+ members</span> building profitable LinkedIn agencies
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  ⚡ Limited spots at founding member price • 🔒 Secure checkout • ✅ Instant access
-                </p>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <span className="text-green-600 text-xs">✓</span>
-                  </div>
-                  <span>365-Day Guarantee</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <span className="text-green-600 text-xs">✓</span>
-                  </div>
-                  <span>Secure Checkout</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <span className="text-green-600 text-xs">✓</span>
-                  </div>
-                  <span>Instant Access</span>
-                </div>
-              </div>
-            </div>
+            {/* CTA Button */}
+            <button 
+              onClick={() => navigate('/agency/academy/checkout')} 
+              className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105 mb-4"
+            >
+              Get Instant Access - $497
+            </button>
+            
+            <p className="text-muted-foreground">
+              ✓ 14-day guarantee ✓ Instant access ✓ 500+ members
+            </p>
           </div>
         </div>
       </div>
@@ -778,20 +822,36 @@ const Academy = () => {
 
           {/* FAQ Items */}
           <div className="max-w-4xl mx-auto space-y-6">
-            {/* FAQ 1 */}
+            {/* FAQ 1 - REWRITTEN */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">What if I&apos;ve never run an agency before?</h3>
-              <p className="text-lg text-muted-foreground">
-                Perfect. Several of our most successful students were complete beginners (like Komail who closed a $14K deal in his first 3 weeks). The system is designed to work whether you&apos;re starting from scratch or pivoting from another business model.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">What if I&apos;ve never run an agency or online business before?</h3>
+              <div className="text-lg text-muted-foreground space-y-4">
+                <p>Even better. You don't have bad habits to unlearn.</p>
+                
+                <p>Komail had ZERO online business experience. Closed a $14K deal in his first 3 weeks.</p>
+                
+                <p>Vasilije started with zero experience. Now running a $25K/month agency.</p>
+                
+                <p>The LinkedIn Operator Method works for beginners BECAUSE it&apos;s a system. Not guesswork. Step-by-step, paint-by-numbers.</p>
+                
+                <p className="font-bold text-foreground">Your lack of experience is actually an advantage.</p>
+              </div>
             </div>
 
-            {/* FAQ 2 */}
+            {/* FAQ 2 - REWRITTEN */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">How is this different from other LinkedIn courses?</h3>
-              <p className="text-lg text-muted-foreground">
-                Most LinkedIn courses teach you how to grow a following and become an influencer. We teach you how to build a legitimate agency that signs Fortune 500 companies. This is the actual system that landed Mastercard, not theory from someone who&apos;s never done it.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">How is this different from other courses I&apos;ve tried?</h3>
+              <div className="text-lg text-muted-foreground space-y-4">
+                <p>Most courses teach you to build an audience first, then maybe make money.</p>
+                
+                <p className="font-bold text-foreground">This teaches you to get PAID from day one.</p>
+                
+                <p>Most courses are theory from people who&apos;ve never done it.</p>
+                
+                <p>This is the actual system that signed Mastercard, not theory from someone with a podcast.</p>
+                
+                <p>You learn client acquisition, fulfillment, and sales - not "post 3x a day and pray."</p>
+              </div>
             </div>
 
             {/* FAQ 3 */}
@@ -818,12 +878,21 @@ const Academy = () => {
               </p>
             </div>
 
-            {/* FAQ 6 */}
+            {/* FAQ 6 - REWRITTEN */}
             <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Is there support after I join?</h3>
-              <p className="text-lg text-muted-foreground">
-                Yes. You get 30 days of private community access where you can ask questions and connect with other operators. You also get access to weekly GROUP coaching calls where we troubleshoot specific challenges. After 30 days, you can continue community access for $97/month (optional).
-              </p>
+              <h3 className="text-2xl font-bold mb-4">Do I need community access after 30 days?</h3>
+              <div className="text-lg text-muted-foreground space-y-4">
+                <p>After your first 30 days FREE, you can continue community access for $97/month (optional).</p>
+                
+                <p>Most students keep it because:</p>
+                <ul className="list-none space-y-2 ml-4">
+                  <li>• Weekly coaching calls solve problems in real-time</li>
+                  <li>• Peer collaboration leads to joint ventures</li>
+                  <li>• You&apos;re building alongside 500+ other operators</li>
+                </ul>
+                
+                <p className="font-bold text-foreground">But it&apos;s optional. Your lifetime course access never expires regardless.</p>
+              </div>
             </div>
 
             {/* FAQ 7 */}
@@ -851,26 +920,32 @@ const Academy = () => {
             </div>
           </div>
 
-          {/* Final Message */}
+          {/* Final Close - SIMPLIFIED */}
           <div className="max-w-3xl mx-auto mt-20 text-center">
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-8 md:p-12">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">One Last Thing...</h3>
+              <h3 className="text-3xl md:text-4xl font-bold mb-8">Every Successful Operator Made A Decision</h3>
               
-              <div className="space-y-4 text-lg text-muted-foreground mb-8">
-                <p>Every successful operator in our community made a decision.</p>
+              <div className="space-y-3 text-lg text-foreground/80 mb-8">
                 <p>They stopped chasing saturated opportunities.</p>
                 <p>They stopped listening to gurus who&apos;ve never signed a real client.</p>
                 <p>They saw the $120 billion blue ocean hiding in plain sight.</p>
-                <p className="font-bold text-foreground">And they moved.</p>
+                <p className="font-bold text-foreground text-xl">And they moved.</p>
               </div>
               
-              <p className="text-2xl md:text-3xl font-bold text-primary mb-8">
+              <p className="text-2xl md:text-3xl font-bold text-foreground mb-8">
                 The question is: will you?
               </p>
 
-              <button onClick={() => navigate('/agency/academy/checkout')} className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105">
-                Join The Operators Now
+              <button 
+                onClick={() => navigate('/agency/academy/checkout')} 
+                className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105 mb-4"
+              >
+                Join The Operators Now - $497
               </button>
+              
+              <p className="text-muted-foreground text-sm">
+                ✓ 14-day guarantee ✓ Instant access ✓ 500+ members
+              </p>
             </div>
           </div>
         </div>
