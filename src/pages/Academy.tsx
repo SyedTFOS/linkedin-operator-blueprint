@@ -26,7 +26,6 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { FounderStorySection } from "@/components/FounderStorySection";
 import { WeeklyFrameworkSection } from "@/components/WeeklyFrameworkSection";
 import { BonusResourcesSection } from "@/components/BonusResourcesSection";
-import { OperatorProofSection } from "@/components/OperatorProofSection";
 import { ValidationSection } from "@/components/ValidationSection";
 import { ActionSection } from "@/components/ActionSection";
 const Academy = () => {
@@ -649,17 +648,12 @@ const Academy = () => {
       </div>
 
       {/* ═══════════════════════════════════════════════════════════ */}
-      {/* SECTION 4: VERIFICATION - Operator Proof + Client Results */}
-      {/* ═══════════════════════════════════════════════════════════ */}
-      <OperatorProofSection />
-
-      {/* ═══════════════════════════════════════════════════════════ */}
-      {/* SECTION 5: VALIDATION - Who It's For + Guarantee + FAQ */}
+      {/* SECTION 4: VALIDATION - Who It's For + Guarantee + FAQ */}
       {/* ═══════════════════════════════════════════════════════════ */}
       <ValidationSection />
 
       {/* ═══════════════════════════════════════════════════════════ */}
-      {/* SECTION 6: ACTION - Pricing + Final Close + CTA */}
+      {/* SECTION 5: ACTION - Pricing + Final Close + CTA */}
       {/* ═══════════════════════════════════════════════════════════ */}
       <ActionSection />
     </div>
