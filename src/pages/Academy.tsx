@@ -26,10 +26,9 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { FounderStorySection } from "@/components/FounderStorySection";
 import { WeeklyFrameworkSection } from "@/components/WeeklyFrameworkSection";
 import { BonusResourcesSection } from "@/components/BonusResourcesSection";
-import komailGillani from "@/assets/komail-gillani.png";
-import ethanClouser from "@/assets/ethan-clouser.png";
-import vasilijeSimic from "@/assets/vasilije-simic.png";
-import craigCecilio from "@/assets/craig-cecilio.png";
+import { OperatorProofSection } from "@/components/OperatorProofSection";
+import { ValidationSection } from "@/components/ValidationSection";
+import { ActionSection } from "@/components/ActionSection";
 const Academy = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -290,17 +289,7 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* Testimonial Card 1 - Komail - After Reality Check */}
-      <div className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <TestimonialCard
-            name="Komail Gillani"
-            image={komailGillani}
-            quote="Complete Beginner - Zero online business experience"
-            result="$14K deal in first 3 weeks"
-          />
-        </div>
-      </div>
+      {/* Removed - testimonials now in OperatorProofSection */}
 
       {/* The LinkedIn Operator Method - Simple Mechanism */}
       <div className="py-24 md:py-40 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
@@ -594,95 +583,7 @@ const Academy = () => {
       {/* Real Students, Real Results Section */}
       <ExperimentSection />
 
-      {/* Testimonial Card 3 - Vasilije - Before Pricing */}
-      <div className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <TestimonialCard
-            name="Vasilije Simic"
-            image={vasilijeSimic}
-            quote="Started with zero experience"
-            result="$25K/month agency with 20+ clients"
-          />
-        </div>
-      </div>
-
-      {/* Pricing Section - Single Clean Display */}
-      <div id="pricing-section" className="py-24 md:py-40 bg-[#0F0F0F] relative overflow-hidden">
-        {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-8">
-              Get Started Today
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            {/* Main Pricing Card */}
-            <div className="bg-[#1A1A1A] border-2 border-white/10 rounded-3xl p-8 md:p-12 mb-8">
-              {/* Price Display */}
-              <div className="text-center mb-8 pb-8 border-b border-white/10">
-                <div className="text-7xl md:text-8xl font-black text-white mb-4">
-                  $497
-                </div>
-                <p className="text-white/60 text-lg">One-Time Payment</p>
-              </div>
-
-              {/* Features List */}
-              <div className="space-y-4 mb-10">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <p className="text-white text-lg">Lifetime course access</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <p className="text-white text-lg">30 days coaching FREE</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <p className="text-white text-lg">All templates & systems</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <p className="text-white text-lg">14-day money-back guarantee</p>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="space-y-4">
-                <button onClick={() => navigate('/agency/academy/checkout')} className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105">
-                  Get Instant Access - $497
-                </button>
-                <p className="text-center text-white/60 text-sm">
-                  Join 500+ operators building LinkedIn agencies
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Testimonial Card 4 - Craig - After Pricing */}
-      <div className="py-16 bg-background">
-        <div className="container mx-auto px-6">
-          <TestimonialCard
-            name="Craig Cecilio"
-            image={craigCecilio}
-            quote="CEO, DiversyFund"
-            result="$1B+ raised using this LinkedIn strategy"
-          />
-        </div>
-      </div>
+      {/* Removed - replaced with comprehensive conversion sections below */}
 
       {/* ═══════════════════════════════════════════════════════════ */}
       {/* SECTION 5: VALIDATION - Guarantee + Risk Reversal */}
@@ -747,149 +648,20 @@ const Academy = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="py-24 md:py-40 bg-gradient-to-br from-muted/30 via-background to-background relative overflow-hidden">
-        {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 4: VERIFICATION - Operator Proof + Client Results */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <OperatorProofSection />
 
-          {/* FAQ Items */}
-          <div className="max-w-4xl mx-auto space-y-6">
-            {/* FAQ 1 - REWRITTEN */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">What if I&apos;ve never run an agency or online business before?</h3>
-              <div className="text-lg text-muted-foreground space-y-4">
-                <p>Even better. You don't have bad habits to unlearn.</p>
-                
-                <p>Komail had ZERO online business experience. Closed a $14K deal in his first 3 weeks.</p>
-                
-                <p>Vasilije started with zero experience. Now running a $25K/month agency.</p>
-                
-                <p>The LinkedIn Operator Method works for beginners BECAUSE it&apos;s a system. Not guesswork. Step-by-step, paint-by-numbers.</p>
-                
-                <p className="font-bold text-foreground">Your lack of experience is actually an advantage.</p>
-              </div>
-            </div>
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 5: VALIDATION - Who It's For + Guarantee + FAQ */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <ValidationSection />
 
-            {/* FAQ 2 - REWRITTEN */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">How is this different from other courses I&apos;ve tried?</h3>
-              <div className="text-lg text-muted-foreground space-y-4">
-                <p>Most courses teach you to build an audience first, then maybe make money.</p>
-                
-                <p className="font-bold text-foreground">This teaches you to get PAID from day one.</p>
-                
-                <p>Most courses are theory from people who&apos;ve never done it.</p>
-                
-                <p>This is the actual system that signed Mastercard, not theory from someone with a podcast.</p>
-                
-                <p>You learn client acquisition, fulfillment, and sales - not "post 3x a day and pray."</p>
-              </div>
-            </div>
-
-            {/* FAQ 3 */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Do I need a LinkedIn following to start?</h3>
-              <p className="text-lg text-muted-foreground">
-                No. Unlike other business models where you need to build an audience first, you can start getting paid from day one with LinkedIn agencies. We show you how to sign clients through outbound systems, not just inbound content.
-              </p>
-            </div>
-
-            {/* FAQ 4 */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">How much time do I need to dedicate?</h3>
-              <p className="text-lg text-muted-foreground">
-                Treat this like building a real business. If you can dedicate 2-4 hours per day implementing the system, you should see your first client within 30-60 days. The more time you invest, the faster you&apos;ll scale.
-              </p>
-            </div>
-
-            {/* FAQ 5 */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">What if I&apos;m in a competitive niche?</h3>
-              <p className="text-lg text-muted-foreground">
-                That&apos;s actually perfect. LinkedIn agencies can work in ANY industry — AI, SaaS, Med-Tech, Finance, Real Estate, etc. We provide 8+ industry-specific playbooks showing you exactly how to position yourself as the go-to operator in your vertical.
-              </p>
-            </div>
-
-            {/* FAQ 6 - REWRITTEN */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Do I need community access after 30 days?</h3>
-              <div className="text-lg text-muted-foreground space-y-4">
-                <p>After your first 30 days FREE, you can continue community access for $97/month (optional).</p>
-                
-                <p>Most students keep it because:</p>
-                <ul className="list-none space-y-2 ml-4">
-                  <li>• Weekly coaching calls solve problems in real-time</li>
-                  <li>• Peer collaboration leads to joint ventures</li>
-                  <li>• You&apos;re building alongside 500+ other operators</li>
-                </ul>
-                
-                <p className="font-bold text-foreground">But it&apos;s optional. Your lifetime course access never expires regardless.</p>
-              </div>
-            </div>
-
-            {/* FAQ 7 */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">What if I can&apos;t afford $497 right now?</h3>
-              <p className="text-lg text-muted-foreground">
-                If $497 feels like a lot, that&apos;s exactly why you need this more than ever. Your first client at $3K/month pays for this 6x over. If you can&apos;t see that ROI potential, you&apos;re not thinking like an operator yet — which is exactly what we&apos;ll fix inside.
-              </p>
-            </div>
-
-            {/* FAQ 8 */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Do I get lifetime access?</h3>
-              <p className="text-lg text-muted-foreground">
-                Yes. You get lifetime access to all 50+ video modules, templates, SOPs, and frameworks. As we update and refine the system, you get those updates too. The 30-day community access is what becomes optional after the first month.
-              </p>
-            </div>
-
-            {/* FAQ 9 */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-4">What&apos;s the refund policy?</h3>
-              <p className="text-lg text-muted-foreground">
-                We&apos;re operators, not scammers. But we&apos;re also not here to babysit. If you join, get access to everything, and then decide it&apos;s "too much work" — that&apos;s on you. We&apos;ve proven this system works with Fortune 500s and complete beginners. The only variable is you.
-              </p>
-            </div>
-          </div>
-
-          {/* Final Close - SIMPLIFIED */}
-          <div className="max-w-3xl mx-auto mt-20 text-center">
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-8 md:p-12">
-              <h3 className="text-3xl md:text-4xl font-bold mb-8">Every Successful Operator Made A Decision</h3>
-              
-              <div className="space-y-3 text-lg text-foreground/80 mb-8">
-                <p>They stopped chasing saturated opportunities.</p>
-                <p>They stopped listening to gurus who&apos;ve never signed a real client.</p>
-                <p>They saw the $120 billion blue ocean hiding in plain sight.</p>
-                <p className="font-bold text-foreground text-xl">And they moved.</p>
-              </div>
-              
-              <p className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-                The question is: will you?
-              </p>
-
-              <button 
-                onClick={() => navigate('/agency/academy/checkout')} 
-                className="px-12 py-6 bg-primary hover:bg-primary/90 text-white rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:scale-105 mb-4"
-              >
-                Join The Operators Now - $497
-              </button>
-              
-              <p className="text-muted-foreground text-sm">
-                ✓ 14-day guarantee ✓ Instant access ✓ 500+ members
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* SECTION 6: ACTION - Pricing + Final Close + CTA */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <ActionSection />
     </div>
   );
 };
