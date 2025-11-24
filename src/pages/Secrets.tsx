@@ -135,6 +135,9 @@ const Secrets = () => {
 
       toast.success(data.message || "Application submitted successfully! We'll review and respond within 24 hours.");
       
+      // Redirect to booking call page
+      navigate("/agency/secrets/book");
+      
       // Reset form
       setFormData({
         firstName: "",
@@ -142,7 +145,7 @@ const Secrets = () => {
         email: "",
         phone: "",
         currentSituation: "",
-        currentRevenue: "$0",
+        currentRevenue: "${0}",
         revenueGoal: "",
         linkedinUrl: "",
         biggestChallenges: "",
