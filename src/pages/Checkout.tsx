@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { CheckCircle2, Shield, Clock } from 'lucide-react';
+import { CheckCircle2, Shield, Clock, ChevronDown } from 'lucide-react';
 import logo from "@/assets/logo-main.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -262,6 +262,148 @@ export default function Checkout() {
                   </div>
                 )}
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="relative bg-muted/30 py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-muted-foreground">
+                Further questions? Please email us at{' '}
+                <a href="mailto:Support@linkedinoperator.com" className="text-primary hover:underline">
+                  Support@linkedinoperator.com
+                </a>
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">What if I've never run an agency before?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Perfect. Several of our most successful students were complete beginners (like Komail who closed a $14K deal in his first 3 weeks). The system is designed to work whether you're starting from scratch or pivoting from another business model.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">How is this different from other LinkedIn courses?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Most LinkedIn courses teach you how to grow a following and become an influencer. We teach you how to build a legitimate agency that signs Fortune 500 companies. This is the actual system that landed Mastercard, not theory from someone who's never done it.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">Do I need a LinkedIn following to start?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    No. Unlike other business models where you need to build an audience first, you can start getting paid from day one with LinkedIn agencies. We show you how to sign clients through outbound systems, not just inbound content.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">How much time do I need to dedicate?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Treat this like building a real business. If you can dedicate 2-4 hours per day implementing the system, you should see your first client within 30-60 days. The more time you invest, the faster you'll scale.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">What if I'm in a competitive niche?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    That's actually perfect. LinkedIn agencies can work in ANY industry — AI, SaaS, Med-Tech, Finance, Real Estate, etc. We provide 8+ industry-specific playbooks showing you exactly how to position yourself as the go-to operator in your vertical.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">Is there support after I join?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes. You get 30 days of private community access where you can ask questions and connect with other operators. You also get access to weekly GROUP coaching calls where we troubleshoot specific challenges. After 30 days, you can continue community access for $97/month (optional).
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">What if I can't afford $497 right now?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    If $497 feels like a lot, that's exactly why you need this more than ever. Your first client at $3K/month pays for this 6x over. If you can't see that ROI potential, you're not thinking like an operator yet — which is exactly what we'll fix inside.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">Do I get lifetime access?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Yes. You get lifetime access to all 50+ video modules, templates, SOPs, and frameworks. As we update and refine the system, you get those updates too. The 30-day community access is what becomes optional after the first month.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group bg-card border border-border rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between px-6 py-5 cursor-pointer hover:bg-muted/50 transition-colors">
+                  <span className="font-semibold text-foreground text-lg">What's the refund policy?</span>
+                  <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
+                </summary>
+                <div className="px-6 py-4 bg-background border-t border-border">
+                  <p className="text-muted-foreground leading-relaxed">
+                    We're operators, not scammers. But we're also not here to babysit. If you join, get access to everything, and then decide it's "too much work" — that's on you. We've proven this system works with Fortune 500s and complete beginners. The only variable is you.
+                  </p>
+                </div>
+              </details>
+            </div>
+
+            {/* Final CTA */}
+            <div className="mt-12">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-xl py-6 px-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105"
+              >
+                Get Full Access for 80% Off
+                <div className="text-sm font-normal mt-1 opacity-90">
+                  Normally $2,497 - Today $497 - Save $2,000!
+                </div>
+              </button>
             </div>
           </div>
         </div>
