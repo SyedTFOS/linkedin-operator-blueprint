@@ -61,7 +61,7 @@ export const ActionSection = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold">60 Days Community Access</p>
+                    <p className="font-bold">90 Days Community Access</p>
                     <p className="text-sm text-muted-foreground">FREE, then $97/month optional</p>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export const ActionSection = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold">60-Day Operator Guarantee</p>
+                    <p className="font-bold">90-Day Operator Guarantee</p>
                     <p className="text-sm text-muted-foreground">Full refund if you don't land a client</p>
                   </div>
                 </div>
@@ -97,10 +97,10 @@ export const ActionSection = () => {
                 <p className="text-xl font-bold">What You Get:</p>
                 <div className="space-y-2 text-muted-foreground">
                   <p>→ Lifetime access to complete framework</p>
-                  <p>→ 60 days coaching FREE</p>
+                  <p>→ 90 days coaching FREE</p>
                   <p>→ All templates, SOPs, playbooks</p>
                   <p>→ Future updates included</p>
-                  <p>→ 60-day money-back guarantee</p>
+                  <p>→ 90-day money-back guarantee</p>
                 </div>
               </div>
 
@@ -112,7 +112,7 @@ export const ActionSection = () => {
               </Button>
 
               <p className="text-center text-sm text-muted-foreground mt-4">
-                ✓ Instant access ✓ 500+ active operators ✓ 60-day guarantee
+                ✓ Instant access ✓ 800+ operators in training ✓ 90-day guarantee
               </p>
 
               <div className="flex items-center justify-center gap-2 mt-6 text-sm text-muted-foreground">
@@ -231,7 +231,7 @@ export const ActionSection = () => {
 
             <div className="space-y-1 text-sm text-muted-foreground">
               <p>🔴 NEXT COHORT STARTING DECEMBER 1st, 2025</p>
-              <p>✓ 60-day guarantee ✓ Instant access ✓ Lifetime updates</p>
+              <p>✓ 90-day guarantee ✓ Instant access ✓ Lifetime updates</p>
             </div>
           </div>
         </div>
