@@ -230,7 +230,7 @@ export const ActionSection = () => {
             </Button>
 
             <div className="space-y-1 text-sm text-muted-foreground">
-              <p>🔴 Next cohort starts February 1st</p>
+              <p>🔴 NEXT COHORT STARTING DECEMBER 1st, 2025</p>
               <p>✓ 60-day guarantee ✓ Instant access ✓ Lifetime updates</p>
             </div>
           </div>
