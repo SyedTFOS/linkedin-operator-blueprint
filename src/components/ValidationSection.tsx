@@ -90,7 +90,7 @@ export const ValidationSection = () => {
           <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-3xl p-8 md:p-12">
             <div className="flex items-center justify-center gap-3 mb-8">
               <Shield className="w-12 h-12 text-primary" />
-              <h2 className="text-3xl md:text-4xl font-bold">The 60-Day Operator Guarantee</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">The 90-Day Operator Guarantee</h2>
             </div>
 
             <div className="space-y-6 text-lg text-foreground mb-8">
@@ -101,7 +101,7 @@ export const ValidationSection = () => {
                 Send 200+ targeted DMs. Implement the profile optimization. Create content with our frameworks.
               </p>
               <p className="text-xl font-bold">
-                If you DON'T land your first client in 60 days...
+                If you DON'T land your first client in 90 days...
               </p>
               <p className="text-2xl font-bold text-primary">
                 Email us for a full refund. No questions asked.
@@ -131,7 +131,7 @@ export const ValidationSection = () => {
                 <p className="text-sm text-muted-foreground">Client Revenue</p>
               </div>
               <div className="text-center">
-                <p className="text-3xl font-bold text-primary mb-2">60-Day</p>
+                <p className="text-3xl font-bold text-primary mb-2">90-Day</p>
                 <p className="text-sm text-muted-foreground">Money-Back</p>
               </div>
               <div className="text-center">

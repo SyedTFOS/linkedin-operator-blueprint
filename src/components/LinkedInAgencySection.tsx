@@ -250,7 +250,7 @@ const LinkedInAgencySection = () => {
                     <Check className="w-4 h-4 md:w-5 md:h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <p className="font-bold text-base md:text-lg mb-1">Takes 30-60 days</p>
+                    <p className="font-bold text-base md:text-lg mb-1">Takes 30-90 days</p>
                     <p className="text-xs md:text-sm text-muted-foreground">Land your first client within weeks</p>
                   </div>
                 </div>

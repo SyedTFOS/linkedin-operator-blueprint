@@ -49,10 +49,10 @@ export const FAQSection = () => {
 
             <AccordionItem value="item-3" className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl px-8">
               <AccordionTrigger className="text-lg md:text-xl font-bold hover:no-underline py-6">
-                Do I need community access after 60 days?
+                Do I need community access after 90 days?
               </AccordionTrigger>
               <AccordionContent className="text-lg text-muted-foreground pb-6">
-                <p className="mb-4">After your first 60 days FREE, you can continue for $97/month (optional).</p>
+                <p className="mb-4">After your first 90 days FREE, you can continue for $97/month (optional).</p>
                 <p className="mb-4">Most operators keep it because:</p>
                 <ul className="space-y-2 mb-4 ml-6">
                   <li>→ Weekly coaching calls solve problems in real-time</li>
@@ -129,7 +129,7 @@ export const FAQSection = () => {
               <AccordionContent className="text-lg text-muted-foreground pb-6">
                 <p className="mb-4">Yes. You get lifetime access to all 50+ video modules, templates, SOPs, and frameworks.</p>
                 <p className="mb-4">As we update and refine the system, you get those updates too.</p>
-                <p className="font-bold text-foreground">The 60-day community access is what becomes optional after the first period.</p>
+                <p className="font-bold text-foreground">The 90-day community access is what becomes optional after the first period.</p>
               </AccordionContent>
             </AccordionItem>
 
@@ -138,8 +138,8 @@ export const FAQSection = () => {
                 What's the refund policy?
               </AccordionTrigger>
               <AccordionContent className="text-lg text-muted-foreground pb-6">
-                <p className="mb-4">60-day money-back guarantee.</p>
-                <p className="mb-4">Go through the modules, implement the system, and if you don't land your first client in 60 days - we'll refund you.</p>
+                <p className="mb-4">90-day money-back guarantee.</p>
+                <p className="mb-4">Go through the modules, implement the system, and if you don't land your first client in 90 days - we'll refund you.</p>
                 <p className="font-bold text-foreground">We're operators, not scammers. We've proven this system works with Fortune 500s and complete beginners. The only variable is you.</p>
               </AccordionContent>
             </AccordionItem>

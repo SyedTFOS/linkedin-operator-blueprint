@@ -119,7 +119,7 @@ export const BonusResourcesSection = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary flex-shrink-0 mt-0.5">✓</span>
-                <span>60 Days Community Access</span>
+                <span>90 Days Community Access</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary flex-shrink-0 mt-0.5">✓</span>

@@ -457,7 +457,7 @@ const Academy = () => {
                 The LIA Way: <span className="text-primary">Simple. Profitable. Results-Driven.</span>
               </p>
               <p className="text-base sm:text-lg text-white/80 mb-4">
-                This is a skill you can learn in <span className="font-bold text-white">30–60 days</span>, start landing clients, and scale to <span className="font-bold text-primary">5–6 figures/month</span> — without ever turning on a funnel or running a single ad.
+                This is a skill you can learn in <span className="font-bold text-white">30–90 days</span>, start landing clients, and scale to <span className="font-bold text-primary">5–6 figures/month</span> — without ever turning on a funnel or running a single ad.
               </p>
               <p className="text-lg sm:text-xl font-semibold text-white">
                 This isn't hype. It's how we built an agency that landed Mastercard, Forbes founders, and $25K/month retainers using one strategy on one platform.
@@ -613,7 +613,7 @@ const Academy = () => {
               </p>
               
               <p className="font-bold text-primary text-xl">
-                If you DON'T land your first client in 60 days, email us for a full refund.
+                If you DON'T land your first client in 90 days, email us for a full refund.
               </p>
               
               <p>

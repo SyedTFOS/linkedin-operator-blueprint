@@ -42,7 +42,7 @@ const WhatsInsideSection = () => {
     title: "Coaching & Operator Community",
     image: coachingEvent,
     shortDescription: "",
-    midTicket: ["Weekly GROUP Coaching Calls (strategy, Q&A, hot seats)", "60 Days Community Access", "Peer Network (collaborate & share strategies)", "Option to extend: $97/month (LIA) or $127/month (B2B)"],
+    midTicket: ["Weekly GROUP Coaching Calls (strategy, Q&A, hot seats)", "90 Days Community Access", "Peer Network (collaborate & share strategies)", "Option to extend: $97/month (LIA) or $127/month (B2B)"],
     highTicket: ["Everything in Academy PLUS:", "1-on-1 Coaching with Founders (personal guidance)", "Access to Group Calls Too (2X support)", "Lifetime Community (never expires)", "DM Access with Founders (6 months)", "In-Person Events (exclusive operator meetups)"]
   }, {
     id: 4,
@@ -106,7 +106,7 @@ const WhatsInsideSection = () => {
     title: "LinkedIn Founder Community",
     image: coachingEvent,
     shortDescription: "",
-    midTicket: ["Weekly GROUP Coaching Calls (with other founders)", "60 Days Community Access", "Founder Peer Network", "Extend for $127/month"],
+    midTicket: ["Weekly GROUP Coaching Calls (with other founders)", "90 Days Community Access", "Founder Peer Network", "Extend for $127/month"],
     highTicket: ["Everything in Founder PLUS:", "Lifetime Community Access (never expires)", "White-Glove DFY Support", "Dedicated Account Manager", "Priority Support & Direct Access"]
   }, {
     id: 4,

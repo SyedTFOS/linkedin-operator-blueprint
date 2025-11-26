@@ -106,7 +106,7 @@ export const OperatorProofSection = () => {
                       </p>
                       <p className="flex items-start gap-3">
                         <span className="text-primary font-bold">→</span>
-                        <span>Guarantees booked meetings in 60 days</span>
+                        <span>Guarantees booked meetings in 90 days</span>
                       </p>
                     </div>
                   </div>
