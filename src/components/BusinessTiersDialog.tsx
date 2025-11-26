@@ -159,7 +159,7 @@ const BusinessTiersDialog = ({ open, onOpenChange }: BusinessTiersDialogProps) =
                 {/* Feature 4 */}
                 <div className="bg-[#FFB800]/5 border border-[#FFB800]/20 rounded-lg p-4 text-center space-y-2">
                   <Zap className="h-12 w-12 mx-auto text-[#FFB800]" />
-                  <div className="font-bold text-sm">RESULTS IN 60 DAYS</div>
+                  <div className="font-bold text-sm">RESULTS IN 90 DAYS</div>
                   <div className="text-xs text-muted-foreground">Top industry voice positioning</div>
                 </div>
               </div>

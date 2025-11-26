@@ -64,14 +64,14 @@ const AgencyTiers = () => {
                 {/* Feature 3 */}
                 <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
                   <Clock className="h-12 w-12 mx-auto text-primary" />
-                  <div className="font-bold text-sm">60-DAY ACCESS</div>
+                  <div className="font-bold text-sm">90-DAY ACCESS</div>
                   <div className="text-xs text-muted-foreground">Community + support</div>
                 </div>
 
                 {/* Feature 4 */}
                 <div className="bg-muted/30 rounded-lg p-4 text-center space-y-2">
                   <Target className="h-12 w-12 mx-auto text-primary" />
-                  <div className="font-bold text-sm">FIRST CLIENT IN 60 DAYS</div>
+                  <div className="font-bold text-sm">FIRST CLIENT IN 90 DAYS</div>
                   <div className="text-xs text-muted-foreground">$10K/month by day 90</div>
                 </div>
               </div>

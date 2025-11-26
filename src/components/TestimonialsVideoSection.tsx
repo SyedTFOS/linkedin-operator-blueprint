@@ -10,7 +10,7 @@ export const TestimonialsVideoSection = () => {
     },
     {
       thumbnail: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop",
-      quote: "Signed 3 clients in 60 days",
+      quote: "Signed 3 clients in 90 days",
       name: "Walter C."
     },
     {

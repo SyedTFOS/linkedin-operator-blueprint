@@ -90,7 +90,7 @@ const ExploringSection = () => {
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-xs md:text-sm text-foreground">First Client: 30-60 days (avg. $3K-$8K contract)</span>
+                  <span className="text-xs md:text-sm text-foreground">First Client: 30-90 days (avg. $3K-$8K contract)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
@@ -186,7 +186,7 @@ const ExploringSection = () => {
               <div className="grid grid-cols-1 gap-2">
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-xs md:text-sm text-foreground">60 Days: 10-20 inbound inquiries/month from qualified prospects</span>
+                  <span className="text-xs md:text-sm text-foreground">90 Days: 10-20 inbound inquiries/month from qualified prospects</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />

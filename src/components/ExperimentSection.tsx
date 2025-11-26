@@ -151,7 +151,7 @@ const ExperimentSection = () => {
                       </div>
                       <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
                         <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-foreground">Guarantees booked meetings in 60 days</span>
+                        <span className="text-foreground">Guarantees booked meetings in 90 days</span>
                       </div>
                     </div>
                   </div>

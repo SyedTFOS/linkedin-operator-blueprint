@@ -330,7 +330,7 @@ export default function Checkout() {
                 </summary>
                 <div className="px-6 py-4 bg-background border-t border-border">
                   <p className="text-muted-foreground leading-relaxed">
-                    Treat this like building a real business. If you can dedicate 2-4 hours per day implementing the system, you should see your first client within 30-60 days. The more time you invest, the faster you'll scale.
+                    Treat this like building a real business. If you can dedicate 2-4 hours per day implementing the system, you should see your first client within 30-90 days. The more time you invest, the faster you'll scale.
                   </p>
                 </div>
               </details>
