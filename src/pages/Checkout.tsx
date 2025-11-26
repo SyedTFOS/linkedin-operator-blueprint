@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { z } from 'zod';
+import { CountdownTimer } from "@/components/CountdownTimer";
 
 const checkoutSchema = z.object({
   name: z.string().trim().min(2, { message: "Name must be at least 2 characters" }).max(100, { message: "Name must be less than 100 characters" }),
@@ -86,9 +87,13 @@ export default function Checkout() {
       {/* Urgency Bar */}
       <div className="bg-gradient-to-r from-primary/20 via-[#FF8A5B]/20 to-[#FF6B35]/20 border-b border-primary/30">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <div>
               <span className="text-foreground font-bold text-sm sm:text-base">ONLY 9 SPOTS REMAINING</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-foreground/80" />
+              <CountdownTimer className="text-foreground/80 text-sm font-semibold" />
             </div>
             <div className="text-foreground/80 text-sm">
               <span>Price increases after 9 spots are filled</span>
