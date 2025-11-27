@@ -90,7 +90,6 @@ export const ActionSection = () => {
                 <p className="text-xl text-muted-foreground mb-2">Your Investment Today:</p>
                 <p className="text-6xl font-black text-primary mb-4">$497</p>
                 <p className="text-muted-foreground mb-8">One-Time Payment</p>
-                <p className="text-lg text-muted-foreground">Or 3 payments of <span className="font-bold text-foreground">$197</span></p>
               </div>
 
               <div className="border-t border-border/50 pt-8 space-y-4 mb-8">
