@@ -1,49 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { X, Menu } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "@/assets/logo-main.png";
-
-// Declare Cal.com types
-declare global {
-  interface Window {
-    Cal: any;
-  }
-}
 const DoneForYou = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    // Load Cal.com embed script
-    const script = document.createElement('script');
-    script.src = 'https://app.cal.com/embed/embed.js';
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      // Initialize Cal.com after script loads
-      if (window.Cal) {
-        window.Cal("init", "linked-operator-business", {origin:"https://app.cal.com"});
-        window.Cal.ns["linked-operator-business"]("inline", {
-          elementOrSelector:"#my-cal-inline-linked-operator-business",
-          config: {"layout":"month_view"},
-          calLink: "linkedoperator/linked-operator-business",
-        });
-        window.Cal.ns["linked-operator-business"]("ui", {
-          "cssVarsPerTheme":{"light":{"cal-brand":"#ff7800"}},
-          "hideEventTypeDetails":false,
-          "layout":"month_view"
-        });
-      }
-    };
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
   return <div className="min-h-screen bg-background">
       {/* Desktop Navigation */}
       <nav className="hidden md:block border-b border-border/50 backdrop-blur-sm sticky top-0 z-40 bg-background/80">
@@ -92,8 +53,13 @@ const DoneForYou = () => {
           </div>
 
           {/* Calendar Embed */}
-          <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
-            <div style={{width: '100%', minHeight: '700px', overflow: 'auto'}} id="my-cal-inline-linked-operator-business"></div>
+          <div className="bg-card border border-border rounded-lg p-0 shadow-lg overflow-hidden">
+            <iframe
+              src="https://cal.com/linkedoperator/linked-operator-business?embed=true"
+              style={{ width: "100%", height: "900px", border: "0" }}
+              title="LinkedOperator Strategy Call"
+              allow="camera; microphone; autoplay; encrypted-media;"
+            />
           </div>
         </div>
       </div>
