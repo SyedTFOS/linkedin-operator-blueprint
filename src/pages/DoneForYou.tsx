@@ -54,25 +54,21 @@ const DoneForYou = () => {
 
           {/* Calendar Embed */}
           <div className="bg-card border border-border rounded-lg p-8 shadow-lg overflow-visible">
-            <iframe 
-              src="https://os.linkedinoperator.com/widget/booking/bLcTcJ95FqgTJUYZeNoe" 
-              style={{
-                width: '100%',
-                border: 'none',
-                minHeight: '1000px',
-                height: 'auto'
-              }} 
-              scrolling="yes" 
-              id="bLcTcJ95FqgTJUYZeNoe_1761499154641" 
-              title="Booking Calendar"
-              className="overflow-visible"
-            />
+            <div style={{width: '100%', height: '100%', overflow: 'scroll'}} id="my-cal-inline-linked-operator-business"></div>
+            <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
+              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+              Cal("init", "linked-operator-business", {origin:"https://app.cal.com"});
+              Cal.ns["linked-operator-business"]("inline", {
+                elementOrSelector:"#my-cal-inline-linked-operator-business",
+                config: {"layout":"month_view"},
+                calLink: "linkedoperator/linked-operator-business",
+              });
+              Cal.ns["linked-operator-business"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#ff7800"}},"hideEventTypeDetails":false,"layout":"month_view"});
+            `}} />
           </div>
         </div>
       </div>
 
-      {/* Calendar Script */}
-      <script src="https://os.linkedinoperator.com/js/form_embed.js" type="text/javascript"></script>
     </div>;
 };
 export default DoneForYou;
