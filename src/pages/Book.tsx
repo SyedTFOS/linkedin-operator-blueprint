@@ -68,26 +68,17 @@ const Book = () => {
           </div>
 
           {/* Calendar Embed */}
-          <div className="bg-card border border-border rounded-lg p-8 shadow-lg overflow-visible">
-            <iframe 
-              src="https://os.linkedinoperator.com/widget/booking/BFjTWz9wLiIwfnMKaOYD" 
-              style={{ 
-                width: '100%', 
-                border: 'none', 
-                minHeight: '1000px', 
-                height: 'auto' 
-              }} 
-              scrolling="yes" 
-              id="BFjTWz9wLiIwfnMKaOYD_1761497987766"
-              title="Booking Calendar"
-              className="overflow-visible"
+          <div className="bg-card border border-border rounded-lg p-0 shadow-lg overflow-hidden">
+            <iframe
+              src="https://cal.com/linkedoperator/linked-operator-secrets?embed=true"
+              style={{ width: "100%", height: "900px", border: "0" }}
+              title="LinkedOperator Secrets Strategy Call"
+              allow="camera; microphone; autoplay; encrypted-media;"
             />
           </div>
         </div>
       </div>
 
-      {/* Calendar Script */}
-      <script src="https://os.linkedinoperator.com/js/form_embed.js" type="text/javascript"></script>
     </div>
   );
 };
