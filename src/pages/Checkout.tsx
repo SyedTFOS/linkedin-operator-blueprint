@@ -242,7 +242,7 @@ export default function Checkout() {
 
                     <p className="text-center text-sm text-muted-foreground flex items-center justify-center gap-2">
                       <Shield className="w-4 h-4" />
-                      Secure 256-Bit SSL Checkout Powered by Stripe
+                      Secure 256-Bit SSL Checkout Powered by Fan Basis
                     </p>
                   </div>
                 ) : (

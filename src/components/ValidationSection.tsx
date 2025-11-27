@@ -136,7 +136,7 @@ export const ValidationSection = () => {
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-primary mb-2">✓</p>
-                <p className="text-sm text-muted-foreground">Stripe Verified</p>
+                <p className="text-sm text-muted-foreground">Fan Basis Verified</p>
               </div>
             </div>
           </div>
