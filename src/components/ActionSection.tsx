@@ -116,7 +116,7 @@ export const ActionSection = () => {
 
               <div className="flex items-center justify-center gap-2 mt-6 text-sm text-muted-foreground">
                 <CreditCard className="w-4 h-4" />
-                <span>Secure checkout via Stripe | All major credit cards accepted</span>
+                <span>Secure checkout via Fan Basis | All major credit cards accepted</span>
               </div>
             </div>
           </div>
