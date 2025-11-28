@@ -72,13 +72,6 @@ const ExperimentSection = () => {
                     <p className="text-primary font-semibold">Complete Beginner</p>
                   </div>
                   
-                  <div className="border-l-4 border-primary/30 pl-6 py-2">
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-2">The Situation:</p>
-                    <p className="text-lg text-foreground">
-                      Zero online business experience. Corporate recruiting background. Came to us 4 months ago.
-                    </p>
-                  </div>
-                  
                   <div>
                     <p className="font-bold text-sm text-muted-foreground uppercase mb-4">The Results:</p>
                     <div className="grid md:grid-cols-2 gap-3">
@@ -223,12 +216,6 @@ const ExperimentSection = () => {
                     <h3 className="text-3xl font-bold mb-2">Ethan Clouser</h3>
                     <p className="text-primary font-semibold">$1.2k to $27k in 3 months</p>
                   </div>
-                  
-                  <div className="border-l-4 border-primary/30 pl-6 py-2 bg-primary/5 rounded-r-xl">
-                    <p className="text-lg text-foreground">
-                      Running LinkedIn ads part-time, making just $1K/month. We positioned him as a category owner and showed him how to scale with systems. Result: $27K/month in 6 months, exited for a healthy 5-figure deal with 75-80% profit margins.
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -253,12 +240,6 @@ const ExperimentSection = () => {
                   <div>
                     <h3 className="text-3xl font-bold mb-2">Walter Chung</h3>
                     <p className="text-primary font-semibold">Failing Business → $15K/Month Agency</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-primary/30 pl-6 py-2 bg-primary/5 rounded-r-xl">
-                    <p className="text-lg text-foreground">
-                      Struggling with fulfillment. Joined us 3 months ago. Now running a $15K/month agency with 1M impressions in 90 days built on a brand new account with profitable fulfillment systems in place.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -323,13 +304,6 @@ const ExperimentSection = () => {
                     <p className="text-primary font-semibold">Industry Expert (AI) • 2x Exited Founder</p>
                   </div>
                   
-                  <div className="border-l-4 border-primary/30 pl-6 py-2">
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-2">The Background:</p>
-                    <p className="text-lg text-foreground">
-                      2x exited founder. Knew AI inside and out. Wanted to build a LinkedIn business.
-                    </p>
-                  </div>
-                  
                   <div>
                     <p className="font-bold text-sm text-muted-foreground uppercase mb-4">The Results:</p>
                     <div className="space-y-3">
@@ -390,12 +364,6 @@ const ExperimentSection = () => {
                   <div>
                     <h3 className="text-3xl font-bold mb-2">Aryan Shah</h3>
                     <p className="text-primary font-semibold">Industry Expert (Tech) • Previously Exited LIA</p>
-                  </div>
-                  
-                  <div className="border-l-4 border-primary/30 pl-6 py-2 bg-primary/5 rounded-r-xl">
-                    <p className="text-lg text-foreground">
-                      Exited a LinkedIn Agency (Bambo). Worked with 50+ agencies and 7-figure creators. Now with 5,500 followers, he's productized his service and is building a LinkedIn AI SaaS.
-                    </p>
                   </div>
                 </div>
               </div>
