@@ -37,21 +37,6 @@ const LinkedInAgencySection = () => {
               <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/AVkV4OLi2vk" title="The High Ticket Agency Model for 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
             </div>
           </Card>
-
-          <div className="grid grid-cols-3 gap-3 md:gap-4">
-            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">7:00</div>
-              <p className="text-xs md:text-sm text-muted-foreground">Minutes</p>
-            </Card>
-            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">100%</div>
-              <p className="text-xs md:text-sm text-muted-foreground">Transparent</p>
-            </Card>
-            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">Free</div>
-              <p className="text-xs md:text-sm text-muted-foreground">No credit card</p>
-            </Card>
-          </div>
         </div>
   }, {
     id: 1,
