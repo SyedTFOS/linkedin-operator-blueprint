@@ -6,6 +6,55 @@ const LinkedInAgencySection = () => {
   const [activeStep, setActiveStep] = useState(0);
   const steps = [{
     id: 0,
+    icon: Play,
+    title: "Watch The Full Explanation",
+    subtitle: "7-minute deep dive",
+    content: <div className="space-y-6 md:space-y-8">
+          <div className="text-center mb-6 md:mb-8">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-3 md:mb-4 px-2">
+              See the complete system explained in detail
+            </p>
+            <div className="flex items-center justify-center gap-2 md:gap-4 flex-wrap px-2">
+              <div className="flex items-center gap-1.5 md:gap-2 bg-muted px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
+                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                <span className="text-xs md:text-sm font-medium">Real examples</span>
+              </div>
+              <div className="flex items-center gap-1.5 md:gap-2 bg-muted px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
+                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                <span className="text-xs md:text-sm font-medium">Client case studies</span>
+              </div>
+              <div className="flex items-center gap-1.5 md:gap-2 bg-muted px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
+                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                <span className="text-xs md:text-sm font-medium">Step-by-step breakdown</span>
+              </div>
+            </div>
+          </div>
+
+          <Card className="p-3 md:p-4 bg-gradient-to-br from-background to-muted/20 border-2 border-primary/20 shadow-xl">
+            <div className="relative w-full rounded-lg md:rounded-xl overflow-hidden shadow-2xl" style={{
+          paddingBottom: '56.25%'
+        }}>
+              <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/AVkV4OLi2vk" title="The High Ticket Agency Model for 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+            </div>
+          </Card>
+
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
+            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">7:00</div>
+              <p className="text-xs md:text-sm text-muted-foreground">Minutes</p>
+            </Card>
+            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">100%</div>
+              <p className="text-xs md:text-sm text-muted-foreground">Transparent</p>
+            </Card>
+            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">Free</div>
+              <p className="text-xs md:text-sm text-muted-foreground">No credit card</p>
+            </Card>
+          </div>
+        </div>
+  }, {
+    id: 1,
     icon: Target,
     title: "Think of it like this...",
     subtitle: "A simple analogy",
@@ -37,7 +86,7 @@ const LinkedInAgencySection = () => {
           </div>
         </div>
   }, {
-    id: 1,
+    id: 2,
     icon: Zap,
     title: "What You Actually Do",
     subtitle: "3 simple services",
@@ -107,7 +156,7 @@ const LinkedInAgencySection = () => {
           </div>
         </div>
   }, {
-    id: 2,
+    id: 3,
     icon: DollarSign,
     title: "How You Get Paid",
     subtitle: "The money part",
@@ -186,7 +235,7 @@ const LinkedInAgencySection = () => {
           </div>
         </div>
   }, {
-    id: 3,
+    id: 4,
     icon: Award,
     title: "Why This Is Special",
     subtitle: "Better than other online businesses",
@@ -276,55 +325,6 @@ const LinkedInAgencySection = () => {
               You can start earning <span className="font-bold text-primary">real money way faster</span> with a LinkedIn agency than almost any other online business model.
             </p>
           </Card>
-        </div>
-  }, {
-    id: 4,
-    icon: Play,
-    title: "Watch The Full Explanation",
-    subtitle: "7-minute deep dive",
-    content: <div className="space-y-6 md:space-y-8">
-          <div className="text-center mb-6 md:mb-8">
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-3 md:mb-4 px-2">
-              See the complete system explained in detail
-            </p>
-            <div className="flex items-center justify-center gap-2 md:gap-4 flex-wrap px-2">
-              <div className="flex items-center gap-1.5 md:gap-2 bg-muted px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
-                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                <span className="text-xs md:text-sm font-medium">Real examples</span>
-              </div>
-              <div className="flex items-center gap-1.5 md:gap-2 bg-muted px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
-                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                <span className="text-xs md:text-sm font-medium">Client case studies</span>
-              </div>
-              <div className="flex items-center gap-1.5 md:gap-2 bg-muted px-3 py-1.5 md:px-4 md:py-2 rounded-lg">
-                <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                <span className="text-xs md:text-sm font-medium">Step-by-step breakdown</span>
-              </div>
-            </div>
-          </div>
-
-          <Card className="p-3 md:p-4 bg-gradient-to-br from-background to-muted/20 border-2 border-primary/20 shadow-xl">
-            <div className="relative w-full rounded-lg md:rounded-xl overflow-hidden shadow-2xl" style={{
-          paddingBottom: '56.25%'
-        }}>
-              <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/AVkV4OLi2vk" title="The High Ticket Agency Model for 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
-            </div>
-          </Card>
-
-          <div className="grid grid-cols-3 gap-3 md:gap-4">
-            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">7:00</div>
-              <p className="text-xs md:text-sm text-muted-foreground">Minutes</p>
-            </Card>
-            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">100%</div>
-              <p className="text-xs md:text-sm text-muted-foreground">Transparent</p>
-            </Card>
-            <Card className="p-4 md:p-6 text-center border-2 hover:border-primary/30 transition-all">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1 md:mb-2">Free</div>
-              <p className="text-xs md:text-sm text-muted-foreground">No credit card</p>
-            </Card>
-          </div>
         </div>
   }];
   return <section className="py-12 md:py-20 px-4 bg-background">
