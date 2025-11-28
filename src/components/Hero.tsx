@@ -259,6 +259,12 @@ const Hero = () => {
                                 </div>
                               </div>
                             </div>
+                            <div className="space-y-2">
+                              <h4 className="font-bold text-lg">From $1K to $27K/Month → 5-Figure Exit</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed">
+                                Running LinkedIn ads part-time, making just $1K/month. We positioned him as a category owner and showed him how to scale with systems. Result: <span className="text-primary font-semibold">$27K/month in 6 months</span>, exited for a healthy 5-figure deal with <span className="text-primary font-semibold">75-80% profit margins</span>.
+                              </p>
+                            </div>
                           </div>
                         </CarouselItem>
 
@@ -279,6 +285,12 @@ const Hero = () => {
                                 </div>
                               </div>
                             </div>
+                            <div className="space-y-2">
+                              <h4 className="font-bold text-lg">Exited Founder → AI LinkedIn Companion</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed">
+                                Previously exited LIA (Bambo) for multi 5-figures. Worked with 50+ agencies and 7-figure creators. Now with <span className="text-primary font-semibold">5,500 followers</span>, he's productized his service and is <span className="text-primary font-semibold">building the first AI LinkedIn companion</span> with investor backing.
+                              </p>
+                            </div>
                           </div>
                         </CarouselItem>
 
@@ -298,6 +310,12 @@ const Hero = () => {
                                   </div>
                                 </div>
                               </div>
+                            </div>
+                            <div className="space-y-2">
+                              <h4 className="font-bold text-lg">Failing Business → $15K/Month Agency</h4>
+                              <p className="text-sm text-muted-foreground leading-relaxed">
+                                Struggling with fulfillment. Joined us 3 months ago. Now running a <span className="text-primary font-semibold">$15K/month agency</span> with <span className="text-primary font-semibold">1M impressions in 90 days</span> built on a brand new account with profitable fulfillment systems in place.
+                              </p>
                             </div>
                           </div>
                         </CarouselItem>
