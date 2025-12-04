@@ -1,7 +1,7 @@
 import { ArrowRight, X, ChevronUp, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import whopLogo from "@/assets/whop-logo-light.png";
+import skoolLogo from "@/assets/skool-logo.png";
 import student4 from "@/assets/student-4.png";
 import student5 from "@/assets/student-5.png";
 import student6 from "@/assets/student-6.png";
@@ -40,16 +40,16 @@ const WhopWidget = () => {
       {isVisible ? (
         <div className="relative group animate-scale-in">
           <a
-            href="https://whop.com/linkedin-operator/"
+            href="https://www.skool.com/linkedinoperatorhub"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
           >
             <div className="bg-card/95 border-2 border-primary/30 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 p-4 sm:p-5 w-[280px] sm:w-[300px] backdrop-blur-md relative overflow-hidden">
               
-              {/* Header with Whop branding */}
+              {/* Header with Skool branding */}
               <div className="flex items-center gap-2 mb-3">
-                <img src={whopLogo} alt="Whop" className="h-6" />
+                <img src={skoolLogo} alt="Skool" className="h-6" />
               </div>
               
               {/* Urgency Timer Section */}
@@ -74,10 +74,10 @@ const WhopWidget = () => {
 
               {/* Main message */}
               <p className="text-foreground font-medium mb-1 leading-snug">
-                #1 LinkedIn Agency Community on Whop
+                #1 LinkedIn Agency Community on Skool
               </p>
               <p className="text-sm text-muted-foreground mb-4">
-                Join <span className="text-primary font-bold">500 others</span> starting their agency
+                Join <span className="text-primary font-bold">1000 others</span> starting their LinkedIn journey
               </p>
               
               {/* CTA Button */}
@@ -117,7 +117,7 @@ const WhopWidget = () => {
           className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-scale-in font-semibold"
           aria-label="Show widget"
         >
-          {isMobile ? "Join Our Free Whop" : <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />}
+          {isMobile ? "Join Our Free Skool" : <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />}
         </Button>
       )}
     </div>
