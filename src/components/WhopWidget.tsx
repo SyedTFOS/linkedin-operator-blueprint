@@ -31,7 +31,7 @@ const WhopWidget = () => {
               
               {/* Header with Skool branding */}
               <div className="flex items-center justify-center mb-4">
-                <img src={skoolLogo} alt="Skool" className="h-10" />
+                <img src={skoolLogo} alt="Skool" className="h-16" />
               </div>
 
               {/* Main message */}
