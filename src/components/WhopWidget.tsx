@@ -1,6 +1,5 @@
-import { ArrowRight, X, ChevronUp, Clock } from "lucide-react";
+import { ArrowRight, X, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import skoolLogo from "@/assets/skool-logo.png";
 import student4 from "@/assets/student-4.png";
 import student5 from "@/assets/student-5.png";
@@ -12,28 +11,11 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const WhopWidget = () => {
   const isMobile = useIsMobile();
   const [isVisible, setIsVisible] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(4 * 60 * 60 + 10 * 60 + 57); // 4:10:57 in seconds
 
   // Set initial visibility based on mobile state after mount
   useEffect(() => {
     setIsVisible(!isMobile);
   }, [isMobile]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const hours = Math.floor(timeLeft / 3600);
-  const minutes = Math.floor((timeLeft % 3600) / 60);
-  const seconds = timeLeft % 60;
-
-  const claimed = 473;
-  const spotsLeft = 27;
-  const total = claimed + spotsLeft;
-  const progressValue = (claimed / total) * 100;
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999]">
@@ -48,35 +30,15 @@ const WhopWidget = () => {
             <div className="bg-card/95 border-2 border-primary/30 rounded-2xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 p-4 sm:p-5 w-[280px] sm:w-[300px] backdrop-blur-md relative overflow-hidden">
               
               {/* Header with Skool branding */}
-              <div className="flex items-center gap-2 mb-3">
-                <img src={skoolLogo} alt="Skool" className="h-6" />
-              </div>
-              
-              {/* Urgency Timer Section */}
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 mb-3">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-xs font-semibold text-foreground">Ends in</span>
-                  </div>
-                  <span className="text-sm font-bold text-primary tabular-nums">
-                    {String(hours).padStart(2, '0')}:{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
-                  </span>
-                </div>
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground">{claimed} claimed</span>
-                    <span className="font-bold text-destructive">{spotsLeft} spots left</span>
-                  </div>
-                  <Progress value={progressValue} className="h-1.5" />
-                </div>
+              <div className="flex items-center justify-center mb-4">
+                <img src={skoolLogo} alt="Skool" className="h-10" />
               </div>
 
               {/* Main message */}
-              <p className="text-foreground font-medium mb-1 leading-snug">
+              <p className="text-foreground font-medium mb-1 leading-snug text-center">
                 #1 LinkedIn Agency Community on Skool
               </p>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground mb-4 text-center">
                 Join <span className="text-primary font-bold">1000 others</span> starting their LinkedIn journey
               </p>
               
