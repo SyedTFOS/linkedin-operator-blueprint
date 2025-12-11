@@ -2,7 +2,6 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import walterChung from "@/assets/walter-chung.png";
 import jessicaGreen from "@/assets/jessica-green.png";
 import ethanClouser from "@/assets/ethan-clouser.png";
-import samArami from "@/assets/sam-arami-photo.png";
 
 export const FounderStorySection = () => {
   return (
@@ -133,25 +132,6 @@ export const FounderStorySection = () => {
             </p>
           </div>
 
-          <div className="bg-card/50 backdrop-blur-sm border border-primary/30 rounded-2xl p-6">
-            <div className="flex items-start gap-4 mb-4">
-              <img 
-                src={samArami} 
-                alt="Sam Arami"
-                className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
-              />
-              <div>
-                <p className="font-bold text-foreground">Sam Arami</p>
-                <p className="text-sm text-muted-foreground">Agency Owner</p>
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground mb-3 italic">
-              "Pivoted from Instagram to LinkedIn"
-            </p>
-            <p className="text-lg font-bold text-primary">
-              Built 7-figure LinkedIn agency
-            </p>
-          </div>
         </div>
 
         {/* Closing Statement */}

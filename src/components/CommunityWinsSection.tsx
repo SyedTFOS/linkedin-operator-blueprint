@@ -5,7 +5,6 @@ import robertoLuna from "@/assets/roberto-luna.png";
 import craigCecilio from "@/assets/craig-cecilio.png";
 import benAlistor from "@/assets/ben-alistor.png";
 import jessicaGreen from "@/assets/jessica-green.png";
-import samArami from "@/assets/sam-arami-photo.png";
 import ethanClouser from "@/assets/ethan-clouser.png";
 import walterChung from "@/assets/walter-chung.png";
 import komailGillani from "@/assets/komail-gillani.png";
@@ -41,13 +40,6 @@ export const CommunityWinsSection = () => {
       image: walterChung,
       quote: "Struggling with fulfillment. Joined us 3 months ago. Now running a $15K/month agency with 1M impressions in 90 days built on a brand new account with profitable fulfillment systems in place.",
       results: "$15K/month • 1M impressions • 90 days"
-    },
-    {
-      name: "Sam Arami",
-      role: "Founder, Arami AI • 2x Exited Founder",
-      image: samArami,
-      quote: "LinkedIn Operator helped me build a 7-figure agency in 6 months. From 800 to 7,000 followers in 21 days. 3,000+ waitlist signups. Now serving top AI companies.",
-      results: "$40K/month • 15 clients • 7-figure agency"
     },
     {
       name: "Komail Gillani",
