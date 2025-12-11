@@ -6,7 +6,6 @@ import vasilijeSimic from "@/assets/vasilije-simic.png";
 import ethanClouser from "@/assets/ethan-clouser.png";
 import walterChung from "@/assets/walter-chung.png";
 import samBeck from "@/assets/sam-beck.png";
-import samArami from "@/assets/sam-arami-photo.png";
 import aryanShah from "@/assets/aryan-shah.png";
 import robertoLuna from "@/assets/roberto-luna.png";
 import rubaiyatHossain from "@/assets/rubaiyat-hossain.png";
@@ -211,38 +210,6 @@ export const OperatorProofSection = () => {
 
             {/* TAB 3: Industry Experts */}
             <TabsContent value="experts" className="space-y-8">
-              <Card className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8">
-                <div className="flex flex-col md:flex-row items-start gap-6">
-                  <img 
-                    src={samArami} 
-                    alt="Sam Arami"
-                    className="w-24 h-24 rounded-full object-cover border-2 border-primary/30 flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">Sam Arami</h3>
-                    <p className="text-muted-foreground mb-4 italic">HELPLESS Audience - 2x Exited Founder</p>
-                    <div className="space-y-3 text-lg">
-                      <p className="flex items-start gap-3">
-                        <span className="text-primary font-bold">→</span>
-                        <span>2x exited founder, needed new revenue stream</span>
-                      </p>
-                      <p className="flex items-start gap-3">
-                        <span className="text-primary font-bold">→</span>
-                        <span className="font-bold">$40K/month in 6 months</span>
-                      </p>
-                      <p className="flex items-start gap-3">
-                        <span className="text-primary font-bold">→</span>
-                        <span>15 active clients, 7-figure agency</span>
-                      </p>
-                      <p className="flex items-start gap-3">
-                        <span className="text-primary font-bold">→</span>
-                        <span>3,000+ waitlist built in 21 days</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
               <Card className="bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-8">
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <img 

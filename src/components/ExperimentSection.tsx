@@ -6,7 +6,6 @@ import komailGillani from "@/assets/komail-gillani.png";
 import vasilijeSimic from "@/assets/vasilije-simic.png";
 import ethanClouser from "@/assets/ethan-clouser.png";
 import walterChung from "@/assets/walter-chung.png";
-import samArami from "@/assets/sam-arami-photo.png";
 import aryanShah from "@/assets/aryan-shah.png";
 
 const ExperimentSection = () => {
@@ -282,68 +281,6 @@ const ExperimentSection = () => {
           </TabsContent>
 
           <TabsContent value="experts" className="space-y-8 animate-fade-in">
-            {/* Sam Arami */}
-            <div className="bg-gradient-to-br from-card via-card to-primary/5 border border-border rounded-3xl p-8 md:p-12 hover:border-primary/50 transition-all hover:shadow-xl group">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="relative">
-                    <img 
-                      src={samArami} 
-                      alt="Sam Arami" 
-                      className="w-32 h-32 rounded-2xl object-cover border-4 border-primary/20 group-hover:border-primary/40 transition-colors"
-                    />
-                    <div className="absolute -bottom-3 -right-3 bg-primary text-primary-foreground rounded-full p-2">
-                      <TrendingUp className="w-5 h-5" />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex-1 space-y-6">
-                  <div>
-                    <h3 className="text-3xl font-bold mb-2">Sam Arami</h3>
-                    <p className="text-primary font-semibold">Industry Expert (AI) • 2x Exited Founder</p>
-                  </div>
-                  
-                  <div>
-                    <p className="font-bold text-sm text-muted-foreground uppercase mb-4">The Results:</p>
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-2xl">💰</span>
-                        <div>
-                          <p className="font-bold text-primary text-2xl">$40K/month in 6 months</p>
-                          <p className="text-sm text-muted-foreground">15 active clients</p>
-                        </div>
-                      </div>
-                      <div className="grid md:grid-cols-2 gap-3">
-                        <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                          <span className="text-xl">💰</span>
-                          <span className="text-foreground">Built 7-figure agency</span>
-                        </div>
-                        <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                          <span className="text-xl">💰</span>
-                          <span className="text-foreground">Dominates AI Agency niche</span>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 p-4 bg-primary/5 rounded-xl border border-primary/10">
-                        <span className="text-xl">💰</span>
-                        <span className="text-foreground">Now provides content services for top AI companies</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <a 
-                    href="https://www.linkedin.com/in/sam-arami/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-semibold group/link"
-                  >
-                    View Full LinkedIn Profile
-                    <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
             {/* Aryan Shah */}
             <div className="bg-card border border-border rounded-3xl p-8 md:p-12 hover:border-primary/50 transition-all hover:shadow-xl group">
               <div className="flex flex-col md:flex-row gap-8 items-start">
